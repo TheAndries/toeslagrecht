@@ -1,6 +1,6 @@
 # ROUTINE.md — the scheduled run
 
-**Status: NOT YET CREATED** (Ask 2).
+**Status: CREATED AND ENABLED** (2026-10-06, Ask 2). See *As created* below.
 
 ## Configuration to create
 
@@ -20,6 +20,25 @@
 UI; every change through the API in an owner-initiated session, with the whole stored config
 read back afterwards. Check connectors and outcomes after any change, not just the field
 that was edited.
+
+## As created
+
+| Field | Value |
+|-------|-------|
+| Routine ID | `trig_012xyD5r5rxFDCjfHbZ58Kib` |
+| URL | https://claude.ai/code/routines/trig_012xyD5r5rxFDCjfHbZ58Kib |
+| Created | 2026-10-06 12:12:21 UTC, through the API (`created_via: http_api`), in the owner-initiated founding session |
+| Connectors cleared | 2026-10-06 12:12:59 UTC. Creation attached three account defaults (Google_Calendar, Claude_Docs, Claude_Code_Remote) unasked; cleared with `clear_mcp_connections: true`; read back as `mcp_connections: []` on the update response and on an independent `get` |
+| First scheduled run | 2026-10-07 05:56 UTC = **07:56 Europe/Amsterdam** (CEST). The cron is fixed in UTC, so from 2026-10-25 (end of summer time) the run is at 06:56 local. |
+| Model as actually set | `claude-fable-5-1` (both `session_context.model` and `derived_state.model`) |
+| Repository as stored | `https://github.com/TheAndries/toeslagrecht` |
+| Tools as stored | `Bash`, `Read`, `Write`, `Edit`, `Glob`, `Grep`, `WebSearch`, `WebFetch` |
+| Outcomes as stored | `outcomes: []` (none) |
+| Environment | `env_01Qz9JZFH3Aho6k888eZzxdK` (Default, Anthropic cloud) |
+| Prompt check | stored prompt diffed character by character against the fenced block below: identical, 1,949 characters |
+
+The planned first run (2026-10-06 07:56) was missed: the repository and GitHub App access
+arrived on 2026-10-06 at 12:09 UTC, after that slot. Nothing was altered to catch up.
 
 ## The prompt
 
