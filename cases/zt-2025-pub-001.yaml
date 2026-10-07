@@ -1,0 +1,19 @@
+id: zt-2025-pub-001
+toeslag: zorgtoeslag
+jaar: 2025
+bron:
+  type: published
+  publicatie: "Dienst Toeslagen, Berekening zorgtoeslag 2025 (TG 082 - 1Z51FD), februari 2025, rekenvoorbeeld 1"
+  url: https://download.belastingdienst.nl/toeslagen/docs/berekening_zorgtoeslag_tg0821z51fd.pdf
+  opgehaald: 2026-10-07
+verified: false
+invoer:
+  partner: false
+  toetsingsinkomen_aanvrager: "19000"
+  rendementsgrondslag: null
+verwacht:
+  normpremie: "538.58"
+  aanspraak_jaar: "1573.42"
+  aanspraak_maand: "131.12"
+  aanspraak_maand_afgerond_praktijk: 131
+opmerking: "De Dienst rekent met drempelinkomen € 28.406 (afgerond); de wet geeft € 28.405,728. Zie DISCREPANCIES.md #1."

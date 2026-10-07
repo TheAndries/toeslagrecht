@@ -1,0 +1,24 @@
+# Awir — gedeelde parameters berekeningsjaar 2026. Nog niet door enige zorgtoeslag-regel gebruikt:
+# de zorgtoeslag heeft eigen vermogensgrenzen (Wzt art. 3 lid 1 wijkt af van Awir art. 7 lid 3).
+jaar: 2026
+status: draft
+geraadpleegd: 2026-10-07
+
+vermogensgrens_algemeen:
+  waarde: "38479"
+  artikel: "Awir art. 7 lid 3 (rendementsgrondslag belanghebbende, begin berekeningsjaar)"
+  bron: "BWBR0018472, geldend van 01-01-2026 t/m 30-09-2026; ongewijzigd in de versie van 01-10-2026"
+  url: https://wetten.overheid.nl/BWBR0018472/2026-01-01
+  opmerking: "Geldt alleen voor regelingen die de aanspraak van het vermogen afhankelijk stellen zonder eigen grens; niet voor de zorgtoeslag."
+
+vermogensgrens_algemeen_met_partner:
+  waarde: "76958"
+  artikel: "Awir art. 7 lid 3"
+  bron: "BWBR0018472, geldend van 01-01-2026 t/m 30-09-2026"
+  url: https://wetten.overheid.nl/BWBR0018472/2026-01-01
+
+medebewoner_vrijstelling_onder_23:
+  waarde: "6218"
+  artikel: "Awir art. 7 lid 6"
+  bron: "BWBR0018472, geldend van 01-01-2026 t/m 30-09-2026 (samengevat gelezen, niet letterlijk; voor huurtoeslag)"
+  url: https://wetten.overheid.nl/BWBR0018472/2026-01-01

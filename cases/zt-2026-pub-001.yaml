@@ -1,0 +1,16 @@
+id: zt-2026-pub-001
+toeslag: zorgtoeslag
+jaar: 2026
+bron:
+  type: published
+  publicatie: "Belastingdienst, 'Hoeveel zorgtoeslag krijg ik?', tabel 2026 zonder toeslagpartner, rij 'tot € 29.500'; 'De bedragen per maand zijn afgerond'"
+  url: https://www.belastingdienst.nl/wps/wcm/connect/nl/zorgtoeslag/content/hoeveel-zorgtoeslag
+  opgehaald: 2026-10-07
+verified: false
+invoer:
+  partner: false
+  toetsingsinkomen_aanvrager: "29500"
+  rendementsgrondslag: null
+verwacht:
+  aanspraak_maand_afgerond_praktijk: 129
+opmerking: "Tabelrij; alleen het afgeronde maandbedrag is gepubliceerd. De rij geldt 'tot' € 29.500; de bovengrens van de rij is als invoer genomen."

@@ -1,0 +1,69 @@
+# Zorgtoeslag — parameters berekeningsjaar 2026. Elk getal met zijn bron (CHARTER.md P1).
+# Bedragen in euro als string, zodat de code met Decimal rekent. Percentages als string, in procenten.
+jaar: 2026
+status: draft
+geraadpleegd: 2026-10-07
+
+standaardpremie:
+  waarde: "2119"
+  artikel: "Wet op de zorgtoeslag art. 4 jo. Regeling vaststelling standaardpremie en bestuursrechtelijke premies 2026, art. 1"
+  bron: "Stcrt. 2025, 40022 (ondertekend 17-11-2025, gepubliceerd 25-11-2025)"
+  url: https://zoek.officielebekendmakingen.nl/stcrt-2025-40022.html
+  geldig_van: 2026-01-01
+  tekst: "De standaardpremie, bedoeld in de Wet op de zorgtoeslag, bedraagt voor het berekeningsjaar 2026 € 2.119,–."
+
+wml_maandbedrag_januari:
+  waarde: "2294.40"
+  artikel: "Wet minimumloon en minimumvakantiebijslag art. 8 lid 1 onder b, bedrag per 1 januari 2026"
+  bron: "Regeling indexatie wettelijk minimumloon per 1 januari 2026, Stcrt. 2025, 34131; redactionele noot bij WML art. 8 op wetten.overheid.nl (BWBR0002638/2026-01-01)"
+  url: https://wetten.overheid.nl/BWBR0002638/2026-01-01
+  geldig_van: 2026-01-01
+  opmerking: "Primaire Staatscourant-tekst nog niet geopend (law/SOURCES.md)."
+
+drempelinkomen_factor:
+  waarde: "108"
+  eenheid: procent
+  artikel: "Wet op de zorgtoeslag art. 1 lid 1 onder f"
+  bron: "BWBR0018451, geldend van 01-01-2026"
+  url: https://wetten.overheid.nl/BWBR0018451/2026-01-01
+  tekst: "drempelinkomen: 108% van het twaalfvoud van het voor de maand januari van het berekeningsjaar geldende in artikel 8, eerste lid, onderdeel b, van de Wet minimumloon en minimumvakantiebijslag bedoelde bedrag per maand"
+
+normpremie_percentage_drempel_zonder_partner:
+  waarde: "1.912"
+  eenheid: procent
+  artikel: "Wet op de zorgtoeslag art. 2 lid 3"
+  bron: "BWBR0018451, geldend van 01-01-2026"
+  url: https://wetten.overheid.nl/BWBR0018451/2026-01-01
+
+normpremie_percentage_drempel_met_partner:
+  waarde: "4.289"
+  eenheid: procent
+  artikel: "Wet op de zorgtoeslag art. 2 lid 3"
+  bron: "BWBR0018451, geldend van 01-01-2026"
+  url: https://wetten.overheid.nl/BWBR0018451/2026-01-01
+
+normpremie_percentage_boven_drempel:
+  waarde: "13.730"
+  eenheid: procent
+  artikel: "Wet op de zorgtoeslag art. 2 lid 3 (gelijk met en zonder partner)"
+  bron: "BWBR0018451, geldend van 01-01-2026"
+  url: https://wetten.overheid.nl/BWBR0018451/2026-01-01
+
+aandeel_partner_niet_verzekerd:
+  waarde: "50"
+  eenheid: procent
+  artikel: "Wet op de zorgtoeslag art. 2 lid 4"
+  bron: "BWBR0018451, geldend van 01-01-2026"
+  url: https://wetten.overheid.nl/BWBR0018451/2026-01-01
+
+vermogensgrens_zonder_partner:
+  waarde: "146011"
+  artikel: "Wet op de zorgtoeslag art. 3 lid 1 (rendementsgrondslag, art. 5.3 Wet IB 2001, begin berekeningsjaar; vrijstelling art. 5.13 Wet IB 2001 telt niet)"
+  bron: "BWBR0018451, geldend van 01-01-2026"
+  url: https://wetten.overheid.nl/BWBR0018451/2026-01-01
+
+vermogensgrens_met_partner:
+  waarde: "184633"
+  artikel: "Wet op de zorgtoeslag art. 3 lid 1 (gezamenlijke rendementsgrondslag; alleen bij het gehele berekeningsjaar dezelfde partner)"
+  bron: "BWBR0018451, geldend van 01-01-2026"
+  url: https://wetten.overheid.nl/BWBR0018451/2026-01-01

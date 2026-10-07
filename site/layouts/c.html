@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Layout C: de brief — toeslagrecht</title><style>
+:root{--ink:#1a1a1a;--paper:#fff;--rule:#bbb;--law:#444;--muted:#555;--mark:#f4f1ea}
+@media (prefers-color-scheme:dark){:root{--ink:#eee;--paper:#161616;--rule:#555;--law:#ccc;--muted:#aaa;--mark:#242220}}
+*{box-sizing:border-box}html{font-size:112.5%}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.55}
+main{max-width:40rem;margin:0 auto;padding:1.25rem 1rem 3rem}
+h1{font-size:1.5rem;line-height:1.25;margin:.5rem 0 1rem}h2{font-size:1.15rem;margin:1.75rem 0 .5rem}
+p{margin:.6rem 0}a{color:inherit}
+.law{font-family:Georgia,"Times New Roman",serif;color:var(--law)}
+.status{font-variant:small-caps;letter-spacing:.03em;color:var(--muted)}
+.eerlijk{border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:.6rem 0;margin:1.25rem 0}
+.res{font-size:1.6rem;font-weight:600;margin:.25rem 0}
+.klein{font-size:.9rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;margin:.75rem 0}th,td{text-align:left;vertical-align:top;padding:.45rem .4rem;border-bottom:1px solid var(--rule)}
+th{font-weight:600}td.n,th.n{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
+ol.stappen{padding-left:1.25rem}ol.stappen li{margin:.9rem 0}ol.stappen .bedrag{font-variant-numeric:tabular-nums}
+aside.wet{margin:.3rem 0 0;padding-left:.75rem;border-left:3px solid var(--rule)}
+.brief{border:1px solid var(--rule);padding:.9rem;margin:.75rem 0;background:var(--mark)}
+.brief dl{display:grid;grid-template-columns:1fr auto;gap:.3rem .75rem;margin:0}.brief dd{margin:0;text-align:right;font-variant-numeric:tabular-nums}
+nav.layouts a{margin-right:1rem}
+:focus-visible{outline:3px solid currentColor;outline-offset:2px}
+@media (max-width:30rem){table,thead,tbody,tr,td,th{display:block}thead{position:absolute;left:-9999px}td{border:0;padding:.15rem 0}td.n{text-align:left}tr{border-bottom:1px solid var(--rule);padding:.5rem 0}td::before{content:attr(data-h) " ";color:var(--muted)}}
+</style></head>
+<body><main>
+<p class="klein">toeslagrecht · zorgtoeslag · 2026 · <span class="status">alle regels: draft</span></p>
+<h1>Naast uw brief gelegd</h1><h2>Wat is ingevuld</h2><p>Een rekenvoorbeeld. Jaar 2026. Geen toeslagpartner. Toetsingsinkomen € 32.000. Vermogen niet opgegeven.</p><p>Zorgtoeslag per maand, volgens de wet:</p><p class="res">€ 103,29</p><p class="klein">Per jaar € 1.239,53. Dienst Toeslagen rondt het maandbedrag in haar voorbeelden naar beneden af op hele euro's: € 103. Waar dat afronden in de wet staat, hebben wij nog niet gevonden.</p><div class="eerlijk"><p>Dit berekent wat de wet zegt voor wat u hier invulde. Het is geen advies en het kent uw hele situatie niet. Aanvragen doet u op <a href="https://www.toeslagen.nl">toeslagen.nl</a>.</p></div>
+<h2>Dezelfde regels als op de beschikking</h2>
+<p>Op de brief van Dienst Toeslagen staan meestal deze vier regels. Hier staan ze zoals de wet ze berekent, met het artikel erbij.</p>
+<div class="brief" aria-label="Zoals het op de brief staat"><dl>
+<dt>Standaardpremie 2026</dt><dd>€ 2.119,00</dd>
+<dt>Normpremie</dt><dd>€ 879,47</dd>
+<dt>Zorgtoeslag per jaar</dt><dd>€ 1.239,53</dd>
+<dt>Per maand</dt><dd>€ 103,29</dd></dl></div>
+<h2>Waar elk getal vandaan komt</h2>
+<p class="law">Standaardpremie — Wzt art. 2 lid 1 (BWBR0018451, geldend van 01-01-2026); Wet op de zorgtoeslag art. 4 jo. Regeling vaststelling standaardpremie en bestuursrechtelijke premies 2026, art. 1. <span class="status">draft</span></p>
+<p class="law">Drempelinkomen € 29.735,42 — Wzt art. 1 lid 1 onder f; WML art. 8 lid 1 onder b: 108% × 12 × 2294.40. <span class="status">draft</span></p>
+<p class="law">Normpremie — Wzt art. 2 lid 2 en 3 (BWBR0018451, geldend van 01-01-2026): 1.912% × 29735.424 + 13.730% × max(0, 32000 − 29735.424) = 568.541 + 310.926. <span class="status">draft</span></p>
+<p class="law">Zorgtoeslag — Wzt art. 2 lid 1 (BWBR0018451, geldend van 01-01-2026); Wet op de zorgtoeslag art. 4 jo. Regeling vaststelling standaardpremie en bestuursrechtelijke premies 2026, art. 1: 2119 − 879.468; per maand: 1239.532 / 12 (Wzt art. 2 lid 5 (BWBR0018451, geldend van 01-01-2026)). <span class="status">draft</span></p>
+<p class="law">Vermogen — Wzt art. 3 lid 1 (BWBR0018451, geldend van 01-01-2026): Geen vermogen opgegeven; de vermogenstoets is niet uitgevoerd. <span class="status">draft</span></p>
+<p class="klein">Layout C — <em>de brief</em>: eerst de vier regels zoals ze op de beschikking staan, daaronder de herkomst van elk getal. Voor wie een brief heeft en wil weten of die klopt.</p>
+<nav class="layouts" aria-label="Andere layouts"><a href="a.html">A</a><a href="b.html">B</a><a href="c.html" aria-current="page">C</a><a href="../index.html">terug</a></nav>
+<p class="klein">Niets van wat u invult verlaat uw telefoon of computer. Deze pagina slaat niets op.</p>
+<p class="klein">Bron: <a href="https://github.com/TheAndries/toeslagrecht">de open encoding en het dossier</a> (MIT / CC BY-SA 4.0). Gebouwd 2026-10-07.</p>
+</main></body></html>

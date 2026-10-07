@@ -1,0 +1,65 @@
+# Zorgtoeslag — parameters berekeningsjaar 2025. Elk getal met zijn bron (CHARTER.md P1).
+jaar: 2025
+status: draft
+geraadpleegd: 2026-10-07
+
+standaardpremie:
+  waarde: "2112"
+  artikel: "Wet op de zorgtoeslag art. 4 jo. Regeling vaststelling standaardpremie en bestuursrechtelijke premies 2025, art. 1"
+  bron: "Stcrt. 2024, 38887 (gepubliceerd 28-11-2024); gelezen via taxlive.nl (V-N Vandaag) en bevestigd door Dienst Toeslagen, Berekening zorgtoeslag 2025, stap 1"
+  geldig_van: 2025-01-01
+  opmerking: "Primaire Staatscourant-tekst nog niet geopend (law/SOURCES.md)."
+
+wml_maandbedrag_januari:
+  waarde: "2191.80"
+  artikel: "Wet minimumloon en minimumvakantiebijslag art. 8 lid 1 onder b, bedrag per 1 januari 2025"
+  bron: "Regeling indexatie wettelijk minimumloon per 1 januari 2025 (Stcrt. gepubliceerd 17-10-2024); gelezen via secundaire bronnen; consistent met het drempelinkomen € 28.406 dat Dienst Toeslagen noemt (108% x 12 x 2.191,80 = 28.405,73)"
+  geldig_van: 2025-01-01
+  opmerking: "Primaire Staatscourant-tekst nog niet geopend (law/SOURCES.md)."
+
+drempelinkomen_factor:
+  waarde: "108"
+  eenheid: procent
+  artikel: "Wet op de zorgtoeslag art. 1 lid 1 onder f"
+  bron: "BWBR0018451, geldend van 01-01-2025 t/m 31-12-2025"
+  url: https://wetten.overheid.nl/BWBR0018451/2025-01-01
+
+normpremie_percentage_drempel_zonder_partner:
+  waarde: "1.896"
+  eenheid: procent
+  artikel: "Wet op de zorgtoeslag art. 2 lid 3"
+  bron: "BWBR0018451, geldend van 01-01-2025 t/m 31-12-2025"
+  url: https://wetten.overheid.nl/BWBR0018451/2025-01-01
+
+normpremie_percentage_drempel_met_partner:
+  waarde: "4.273"
+  eenheid: procent
+  artikel: "Wet op de zorgtoeslag art. 2 lid 3"
+  bron: "BWBR0018451, geldend van 01-01-2025 t/m 31-12-2025"
+  url: https://wetten.overheid.nl/BWBR0018451/2025-01-01
+
+normpremie_percentage_boven_drempel:
+  waarde: "13.700"
+  eenheid: procent
+  artikel: "Wet op de zorgtoeslag art. 2 lid 3"
+  bron: "BWBR0018451, geldend van 01-01-2025 t/m 31-12-2025"
+  url: https://wetten.overheid.nl/BWBR0018451/2025-01-01
+
+aandeel_partner_niet_verzekerd:
+  waarde: "50"
+  eenheid: procent
+  artikel: "Wet op de zorgtoeslag art. 2 lid 4"
+  bron: "BWBR0018451, geldend van 01-01-2025 t/m 31-12-2025 (tekst van lid 4 in de 2025-versie niet apart gelezen; de 2026-tekst is gebruikt en de 2025-leaflet past hem ook toe)"
+  url: https://wetten.overheid.nl/BWBR0018451/2025-01-01
+
+vermogensgrens_zonder_partner:
+  waarde: "141896"
+  artikel: "Wet op de zorgtoeslag art. 3 lid 1"
+  bron: "BWBR0018451, geldend van 01-01-2025 t/m 31-12-2025"
+  url: https://wetten.overheid.nl/BWBR0018451/2025-01-01
+
+vermogensgrens_met_partner:
+  waarde: "179429"
+  artikel: "Wet op de zorgtoeslag art. 3 lid 1"
+  bron: "BWBR0018451, geldend van 01-01-2025 t/m 31-12-2025"
+  url: https://wetten.overheid.nl/BWBR0018451/2025-01-01

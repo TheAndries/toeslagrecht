@@ -1,0 +1,16 @@
+id: zt-2026-pub-006
+toeslag: zorgtoeslag
+jaar: 2026
+bron:
+  type: published
+  publicatie: "Belastingdienst, 'Hoeveel inkomen mag ik hebben voor zorgtoeslag?': 'U kunt in 2026 zorgtoeslag krijgen als uw jaarinkomen niet boven de grens van € 40.857 uitkomt.' Een euro daarboven, volgens de Dienst: geen zorgtoeslag."
+  url: https://www.belastingdienst.nl/wps/wcm/connect/nl/zorgtoeslag/content/maximaal-inkomen-voor-zorgtoeslag
+  opgehaald: 2026-10-07
+verified: false
+invoer:
+  partner: false
+  toetsingsinkomen_aanvrager: "40858"
+  rendementsgrondslag: null
+verwacht:
+  aanspraak_jaar: "0"
+opmerking: "Toetst de gepubliceerde inkomensgrens tegen de formule. Zie DISCREPANCIES.md #2."

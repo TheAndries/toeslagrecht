@@ -1,0 +1,23 @@
+id: zt-2025-pub-003
+toeslag: zorgtoeslag
+jaar: 2025
+bron:
+  type: published
+  publicatie: "Dienst Toeslagen, Berekening zorgtoeslag 2025 (TG 082 - 1Z51FD), februari 2025, rekenvoorbeeld 3 (verdragsgerechtigde in België met partner die geen verzekerde is; woonlandfactor 0,7981)"
+  url: https://download.belastingdienst.nl/toeslagen/docs/berekening_zorgtoeslag_tg0821z51fd.pdf
+  opgehaald: 2026-10-07
+verified: false
+invoer:
+  partner: true
+  partner_verzekerd: false
+  toetsingsinkomen_aanvrager: "9000"
+  toetsingsinkomen_partner: "11000"
+  woonland: BE
+  woonlandfactor: "0.7981"
+  rendementsgrondslag: null
+verwacht:
+  normpremie: "1213.79"
+  aanspraak_jaar: "1078.69"
+  aanspraak_maand: "89.89"
+  aanspraak_maand_afgerond_praktijk: 89
+niet_gecodeerd: "woonlandfactor — wettelijke grondslag nog niet getraceerd (law/SOURCES.md open item 3). Deze case wordt overgeslagen tot de regel gecodeerd is."

@@ -21,7 +21,10 @@ project becomes the thing that audits it.
 not the project. Every run must add to the record — a case, a dated amendment, a discrepancy,
 a dispute — or it has not done the project.
 
-**Phase:** founding. Nothing is built. First target: zorgtoeslag. See `PLAN.md`.
+**Phase:** 0 → 1. The pipeline exists (`tools/build.py`: `law/` + `cases/` → tests → `site/`); the
+zorgtoeslag rules for 2026 and 2025 are encoded as `draft` with their articles (`law/zorgtoeslag/`);
+nine published cases are checks, none verified; the discrepancy log has its first two entries; the
+result page awaits the owner's choice (Ask 3). See `PLAN.md` and `CHANGELOG.md`.
 
 **Licences** (`CHARTER.md` P9): code under the MIT licence (`LICENSE`); the encoding, the parameters,
 the case corpus and the discrepancy log — `law/`, `cases/` and `DISCREPANCIES.md` — under
@@ -47,4 +50,7 @@ CC BY-SA 4.0 (`LICENSE-DATA`).
 | [ROUTINE.md](ROUTINE.md) | The scheduled run's exact configuration. |
 | [SETUP.md](SETUP.md) | The founding-session brief. |
 | [DISCREPANCIES.md](DISCREPANCIES.md) | The discrepancy log, newest first (`CASES.md`). |
+| [law/SOURCES.md](law/SOURCES.md) | Dated index of every legal text consulted, with version and retrieval date. |
+| [law/CHANGES.md](law/CHANGES.md) | Every amendment encoded, newest first. |
+| [tools/build.py](tools/build.py) | The pipeline: `check` runs the cases, `build` renders the site. |
 | [LICENSE](LICENSE), [LICENSE-DATA](LICENSE-DATA) | MIT for code; CC BY-SA 4.0 for the record. |
