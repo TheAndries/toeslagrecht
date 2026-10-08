@@ -3,10 +3,11 @@
 Elke regel: een vaste id, het artikel en de versie, de regel in gewoon Nederlands, de
 status (`LAW.md`), en wat de regel doet waar de wet ruimte laat. De code staat in
 `rules.py`; de bedragen per jaar in `parameters/<jaar>.yaml`. Alles hier is **draft**:
-door niemand nagelezen tegen het artikel. Geraadpleegd 2026-10-07.
+door niemand nagelezen tegen het artikel. Geraadpleegd 2026-10-07 en 2026-10-08.
 
-Wat de encoding nu kan: een verzekerde, met of zonder partner, met het hele jaar dezelfde
-situatie. Wat zij nog niet kan staat onderaan onder *Niet gecodeerd*.
+Wat de encoding nu kan: een verzekerde of verdragsgerechtigde, met of zonder partner, met het
+hele jaar dezelfde situatie, tot en met de afronding en het minimumbedrag van de Awir
+(`../awir/rules.md`). Wat zij nog niet kan staat onderaan onder *Niet gecodeerd*.
 
 ---
 
@@ -22,9 +23,12 @@ hoogste zorgtoeslag.
 **Code:** `drempelinkomen(jaar)` = 108/100 × 12 × `wml_maandbedrag_januari`. 2026:
 108% × 12 × € 2.294,40 = € 29.735,424. 2025: € 28.405,728.
 **Discretie:** De wet zegt niets over afronden. De encoding rondt niet af. De Dienst
-Toeslagen rekent met een op hele euro's afgerond drempelinkomen (€ 28.406 in 2025, zie
-`DISCREPANCIES.md` #1). Tot een tekst voor dat afronden gevonden is, laat de encoding de
-onafgeronde waarde staan en toont het verschil.
+Toeslagen rekent met een naar boven op hele euro's afgerond drempelinkomen ("vastgesteld op"
+€ 28.406 in 2025, € 29.736 in 2026). Geen afrondingsbepaling gevonden in de Wzt, de Awir
+(alleen art. 14 lid 4, dat het eindbedrag afrondt) of de Uitvoeringsregeling Awir, alle
+volledig doorzocht op 2026-10-08. Daarom `DISCREPANCIES.md` #1, status `government`. Effect:
+centen in de normpremie, en in 2026 één euro inkomen aan de bovengrens (€ 40.856 volgens de
+tekst, € 40.857 volgens de Dienst; case `zt-2026-pub-010`).
 
 ## zt-2026-art2-2 — normpremie
 
@@ -46,8 +50,9 @@ nul als het toetsingsinkomen onder het drempelinkomen ligt ("voor zover ... te b
 **Gewoon Nederlands:** Is uw normpremie lager dan de standaardpremie, dan is uw zorgtoeslag
 het verschil. Hebt u een partner, dan telt de standaardpremie twee keer en hebben u en uw
 partner samen één aanspraak.
-**Code:** `aanspraak_jaar` = (2 × standaardpremie als partner, anders 1 ×) − normpremie, en
-nul als dat negatief is.
+**Code:** `aanspraak_jaar` = (standaardpremie van u, plus die van uw partner als u er een
+hebt; zie `zt-2026-art4` en `-art4a`) − normpremie, en nul als dat negatief is. Dit is het
+berekende bedrag; het toegekende bedrag volgt uit `awir-2026-art14-4` en `-art14-5`.
 **Discretie:** geen.
 
 ## zt-2026-art2-4 — partner die geen verzekerde is
@@ -68,11 +73,14 @@ encoding niet; het is invoer.
 **Gewoon Nederlands:** De zorgtoeslag wordt voor elke maand apart bepaald.
 **Code:** Voor een situatie die het hele jaar gelijk blijft: `aanspraak_maand` =
 `aanspraak_jaar` / 12, onafgerond.
-**Discretie:** De wet zegt niet hoe het maandbedrag wordt afgerond. De Dienst Toeslagen
-rondt in haar rekenvoorbeelden naar beneden af op hele euro's (131,12 → 131; 98,06 → 98;
-89,89 → 89). De encoding toont het onafgeronde bedrag en zegt erbij dat de Dienst zo afrondt
-en dat de wettelijke grondslag daarvoor nog niet gevonden is. Een jaar met wijzigingen
-(partner erbij, 18 worden, overlijden; Awir art. 5) codeert de encoding nog niet.
+**Discretie:** De wet rondt het jaarbedrag van de tegemoetkoming af (Awir art. 14 lid 4,
+`../awir/rules.md`), niet het maandbedrag. De Dienst Toeslagen rondt in haar rekenvoorbeelden
+het maandbedrag naar beneden af op hele euro's (2025: 131,12 → 131; 98,06 → 98; 89,89 → 89;
+2026: 129,20 → 129; 103,02 → 103; 91,04 → 91). Geen grondslag gevonden in Wzt, Awir of
+Uitvoeringsregeling Awir (2026-10-08); het maandbedrag is een voorschot (Awir art. 16) en
+hoe dat in termijnen wordt gesplitst, staat niet in de gelezen teksten. De encoding toont het
+onafgeronde maandbedrag en de praktijk apart. Een jaar met wijzigingen (partner erbij, 18
+worden, overlijden; Awir art. 5) codeert de encoding nog niet.
 
 ## zt-2026-art3-1 — vermogenstoets
 
@@ -97,6 +105,33 @@ premies (2026: Stcrt. 2025, 40022, art. 1; 2025: Stcrt. 2024, 38887).
 gemiddeld kost in dat jaar, premie plus verplicht eigen risico. 2026: € 2.119. 2025: € 2.112.
 **Code:** parameter.
 
+## zt-2026-art4a — standaardpremie voor verdragsgerechtigden: de woonlandfactor
+
+**Artikel:** Wzt art. 4a lid 1–4 (BWBR0018451, geldend van 01-01-2026; dezelfde tekst in de versie
+van 01-01-2025); het verhoudingsgetal per land: Regeling zorgverzekering art. 6.3.1 lid 9 en
+bijlage 4 (BWBR0018715, versies 01-01-2025 en 01-01-2026), in `parameters/<jaar>.yaml` onder
+`woonlandfactoren`. Op 2026-10-07 gemist: de vorige run las art. 1–5 en zocht een art. 2a;
+art. 4a staat tussen art. 4 en 5.
+**Status:** draft.
+**Gewoon Nederlands:** Woont u buiten Nederland en bent u via het CAK verzekerd voor zorg ten
+laste van Nederland (een "verdragsgerechtigde", Zvw art. 69), dan telt voor u niet de gewone
+standaardpremie, maar de standaardpremie maal de woonlandfactor van uw land: de verhouding
+tussen wat zorg daar gemiddeld kost en wat zij in Nederland kost. Voor uw partner geldt
+hetzelfde, behalve als uw partner gewoon in Nederland verzekerd is (lid 4). Bent u zelf in
+Nederland verzekerd en is uw partner verdragsgerechtigd, dan geldt de woonlandfactor alleen
+voor de standaardpremie van uw partner (lid 3).
+**Code:** `standaardpremies(...)`: standaardpremie van de aanvrager × woonlandfactor als de
+aanvrager verdragsgerechtigd is (lid 1); van de partner × woonlandfactor als de aanvrager
+verdragsgerechtigd is en de partner geen Zvw-verzekerde (lid 4), of als de partner zelf
+verdragsgerechtigd is (lid 3). De som gaat `zt-2026-art2-1` in. Invoer:
+`aanvrager_verdragsgerechtigd`, `partner_verdragsgerechtigd`, `partner_verzekerd`, `woonland`.
+**Discretie:** Wie verdragsgerechtigd is (Zvw art. 69) codeert de encoding niet; invoer. De
+rekenregel van de Dienst Toeslagen (Berekening zorgtoeslag 2026, stap 5) past bij een
+*verzekerde* aanvrager met een partner die noch verzekerde noch verdragsgerechtigde is, de
+woonlandfactor toe op de standaardpremie van die partner; lid 4 doet dat alleen bij een partner
+van een verdragsgerechtigde. De encoding volgt de tekst en geeft 2 × standaardpremie; zie
+`DISCREPANCIES.md` #3 en case `zt-2026-syn-001`.
+
 ---
 
 ## Niet gecodeerd (de encoding zegt dit expliciet)
@@ -105,11 +140,10 @@ gemiddeld kost in dat jaar, premie plus verplicht eigen risico. 2026: € 2.119.
 - **Wie partner is** (Awir art. 3, AWR art. 5a): invoer; zie `../awir/rules.md`.
 - **Wat het toetsingsinkomen is** (Awir art. 8): invoer, het inkomensgegeven of het
   wereldinkomen; zie `../awir/rules.md`.
-- **Woonlandfactor** voor verdragsgerechtigden buiten Nederland (Dienst Toeslagen,
-  Berekening zorgtoeslag 2025, stap 5): de wettelijke grondslag is nog niet getraceerd; niet
-  gecodeerd, zie `../SOURCES.md` open item 3. Case `zt-2025-pub-003` wacht hierop.
+- **Wie verdragsgerechtigd is** (Zvw art. 69): invoer. De woonlandfactor zelf is sinds
+  2026-10-08 gecodeerd (`zt-2026-art4a`).
 - **Wijzigingen in het jaar** (Awir art. 5): niet gecodeerd.
 - **Verblijfsstatus** (Awir art. 9): niet gecodeerd.
-- **Een minimumbedrag** waaronder geen toeslag wordt toegekend of uitbetaald: in de gelezen
-  tekst niet gevonden; de Dienst Toeslagen publiceert een inkomensgrens die lager ligt dan
-  waar de formule op nul uitkomt (`DISCREPANCIES.md` #2).
+- **Afronding van het maandbedrag / de voorschotten** (Awir art. 16): geen tekst gevonden;
+  zie `zt-2026-art2-5`. Het minimumbedrag en de afronding van het jaarbedrag zijn sinds
+  2026-10-08 wel gecodeerd (`../awir/rules.md`, art. 14 lid 4–5; `DISCREPANCIES.md` #2).

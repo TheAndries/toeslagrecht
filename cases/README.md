@@ -5,4 +5,4 @@ inputs the law needs and nothing else, the expected outcome and its source type
 (`official`, `ruling`, `published`, `synthetic`). Verified cases become the tests the
 encoding must pass. Format, verification and the absolute privacy rule (no name, BSN,
 address, kenmerk or partner's name, ever) are defined in [`CASES.md`](../CASES.md).
-Licence: CC BY-SA 4.0 ([`LICENSE-DATA`](../LICENSE-DATA)). Nine `published` cases so far (Dienst Toeslagen leaflet 2025, Belastingdienst tables 2026); none verified.
+Licence: CC BY-SA 4.0 ([`LICENSE-DATA`](../LICENSE-DATA)). Seventeen `published` cases (Dienst Toeslagen leaflets 2025 and 2026, Belastingdienst tables and income ceilings) and one `synthetic`; none verified.

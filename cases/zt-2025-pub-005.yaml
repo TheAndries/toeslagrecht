@@ -1,0 +1,16 @@
+id: zt-2025-pub-005
+toeslag: zorgtoeslag
+jaar: 2025
+bron:
+  type: published
+  publicatie: "Dienst Toeslagen, Berekening zorgtoeslag 2025, stap 2: geen recht boven € 39.719; Belastingdienst, 'Hoeveel inkomen mag ik hebben voor zorgtoeslag?' (2025: € 39.719 / € 50.206)."
+  url: https://www.belastingdienst.nl/wps/wcm/connect/nl/zorgtoeslag/content/maximaal-inkomen-voor-zorgtoeslag
+  opgehaald: 2026-10-08
+verified: false
+invoer:
+  partner: false
+  toetsingsinkomen_aanvrager: "39720"
+  rendementsgrondslag: null
+verwacht:
+  tegemoetkoming: "0"
+opmerking: "Een euro boven de grens 2025: € 23,37 → € 23 → niet toegekend (Awir art. 14 lid 5)."

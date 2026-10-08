@@ -10,14 +10,15 @@ verified: false
 invoer:
   partner: true
   partner_verzekerd: false
+  partner_verdragsgerechtigd: false
+  aanvrager_verdragsgerechtigd: true
   toetsingsinkomen_aanvrager: "9000"
   toetsingsinkomen_partner: "11000"
   woonland: BE
-  woonlandfactor: "0.7981"
   rendementsgrondslag: null
 verwacht:
   normpremie: "1213.79"
   aanspraak_jaar: "1078.69"
   aanspraak_maand: "89.89"
   aanspraak_maand_afgerond_praktijk: 89
-niet_gecodeerd: "woonlandfactor — wettelijke grondslag nog niet getraceerd (law/SOURCES.md open item 3). Deze case wordt overgeslagen tot de regel gecodeerd is."
+opmerking: "Rekenvoorbeeld 3: aanvrager verdragsgerechtigd (Zvw art. 69) in België, partner noch verzekerde noch verdragsgerechtigde. Wzt art. 4a lid 1 en 4, art. 2 lid 4. Overgeslagen tot 2026-10-08 (grondslag toen nog niet getraceerd); de woonlandfactor 0,7981 staat in parameters/2025.yaml. Normpremie en jaarbedrag verschillen door DISCREPANCIES.md #1."

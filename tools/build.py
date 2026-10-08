@@ -37,8 +37,18 @@ def load_params(toeslag: str, jaar: int) -> dict:
     p = ROOT / "law" / toeslag / "parameters" / f"{jaar}.yaml"
     with open(p, encoding="utf-8") as f:
         par = yaml.safe_load(f)
-    par["_versie"] = f"BWBR0018451, geldend van 01-01-{jaar}"
+    if toeslag == "zorgtoeslag":
+        par["_versie"] = f"BWBR0018451, geldend van 01-01-{jaar}"
     return par
+
+
+def load_awir(jaar: int) -> dict:
+    """The Awir shared layer's parameters for the year (art. 14 lid 4-5 among them); {} if none."""
+    p = ROOT / "law" / "awir" / "parameters" / f"{jaar}.yaml"
+    if not p.exists():
+        return {}
+    with open(p, encoding="utf-8") as f:
+        return yaml.safe_load(f)
 
 
 def load_cases() -> list[dict]:
@@ -70,10 +80,16 @@ def run_case(c: dict, rules) -> dict:
         partner_verzekerd=inv.get("partner_verzekerd"),
         rendementsgrondslag=dec(inv.get("rendementsgrondslag")),
         hele_jaar_dezelfde_partner=inv.get("hele_jaar_dezelfde_partner"),
+        awir=load_awir(c["jaar"]),
+        aanvrager_verdragsgerechtigd=bool(inv.get("aanvrager_verdragsgerechtigd")),
+        partner_verdragsgerechtigd=inv.get("partner_verdragsgerechtigd"),
+        woonland=inv.get("woonland"),
     )
     got = {
         "normpremie": next((s.uitkomst for s in u.stappen if s.regel == "zt-2026-art2-2"), None),
+        "standaardpremie_totaal": next((s.uitkomst for s in u.stappen if s.regel == "zt-2026-art4a"), None),
         "aanspraak_jaar": u.aanspraak_jaar,
+        "tegemoetkoming": u.tegemoetkoming,
         "aanspraak_maand": u.aanspraak_maand,
         "aanspraak_maand_afgerond_praktijk": u.aanspraak_maand_afgerond_praktijk,
     }
@@ -187,10 +203,11 @@ INVOER = ("<h2>Wat is ingevuld</h2><p>Een rekenvoorbeeld. Jaar 2026. Geen toesla
 
 
 def kop(u) -> str:
-    return (f"<p>Zorgtoeslag per maand, volgens de wet:</p><p class=\"res\">{eur(u.aanspraak_maand)}</p>"
-            f"<p class=\"klein\">Per jaar {eur(u.aanspraak_jaar)}. Dienst Toeslagen rondt het maandbedrag in haar "
-            f"voorbeelden naar beneden af op hele euro's: € {u.aanspraak_maand_afgerond_praktijk}. Waar dat afronden in de "
-            f"wet staat, hebben wij nog niet gevonden.</p>")
+    return (f"<p>Zorgtoeslag per jaar, volgens de wet:</p><p class=\"res\">{eur(u.tegemoetkoming)}</p>"
+            f"<p class=\"klein\">Berekend {eur(u.aanspraak_jaar)} per jaar, afgerond op hele euro's (Awir art. 14 lid 4). "
+            f"Per maand is dat {eur(u.aanspraak_maand)}; Dienst Toeslagen rondt het maandbedrag in haar voorbeelden naar "
+            f"beneden af op hele euro's: € {u.aanspraak_maand_afgerond_praktijk}. Waar dat afronden per maand in de wet "
+            f"staat, hebben wij niet gevonden.</p>")
 
 
 def layout_a(u) -> str:
@@ -217,7 +234,7 @@ def layout_b(u) -> str:
         f"<span class=\"klein\">{html.escape(s.berekening)}</span></p></aside></li>"
         for s in u.stappen)
     body = f"""<h1>Hoe de wet bij uw bedrag komt</h1>{INVOER}{kop(u)}{EERLIJK}
-<h2>In zes stappen</h2>
+<h2>Stap voor stap</h2>
 <ol class="stappen">{items}</ol>
 <p class="klein">Layout B — <em>het verhaal</em>: elke stap één zin in gewoon Nederlands, de wet er in een kantlijn naast. Voor wie het eerst wil begrijpen.</p>
 <nav class="layouts" aria-label="Andere layouts"><a href="a.html">A</a><a href="b.html" aria-current="page">B</a><a href="c.html">C</a><a href="../index.html">terug</a></nav>"""
@@ -230,7 +247,7 @@ def layout_c(u) -> str:
     brief = f"""<div class="brief" aria-label="Zoals het op de brief staat"><dl>
 <dt>Standaardpremie 2026</dt><dd>€ 2.119,00</dd>
 <dt>Normpremie</dt><dd>{eur(norm.uitkomst)}</dd>
-<dt>Zorgtoeslag per jaar</dt><dd>{eur(u.aanspraak_jaar)}</dd>
+<dt>Zorgtoeslag per jaar</dt><dd>{eur(u.tegemoetkoming)}</dd>
 <dt>Per maand</dt><dd>{eur(u.aanspraak_maand)}</dd></dl></div>"""
     body = f"""<h1>Naast uw brief gelegd</h1>{INVOER}{kop(u)}{EERLIJK}
 <h2>Dezelfde regels als op de beschikking</h2>
@@ -241,6 +258,7 @@ def layout_c(u) -> str:
 <p class="law">Drempelinkomen {eur(dr.uitkomst)} — {html.escape(dr.artikel)}: {html.escape(dr.berekening)}. <span class="status">draft</span></p>
 <p class="law">Normpremie — {html.escape(norm.artikel)}: {html.escape(norm.berekening)}. <span class="status">draft</span></p>
 <p class="law">Zorgtoeslag — {html.escape(sp.artikel)}: {html.escape(sp.berekening)}; per maand: {html.escape(by["zt-2026-art2-5"].berekening)} ({html.escape(by["zt-2026-art2-5"].artikel)}). <span class="status">draft</span></p>
+<p class="law">Afronding en minimum — {html.escape(by["awir-2026-art14-4"].artikel)}: {html.escape(by["awir-2026-art14-4"].berekening)} {eur(by["awir-2026-art14-4"].uitkomst)}; {html.escape(by["awir-2026-art14-5"].artikel)}: {html.escape(by["awir-2026-art14-5"].omschrijving)} <span class="status">draft</span></p>
 <p class="law">Vermogen — {html.escape(by["zt-2026-art3-1"].artikel)}: {html.escape(by["zt-2026-art3-1"].berekening)} <span class="status">draft</span></p>
 <p class="klein">Layout C — <em>de brief</em>: eerst de vier regels zoals ze op de beschikking staan, daaronder de herkomst van elk getal. Voor wie een brief heeft en wil weten of die klopt.</p>
 <nav class="layouts" aria-label="Andere layouts"><a href="a.html">A</a><a href="b.html">B</a><a href="c.html" aria-current="page">C</a><a href="../index.html">terug</a></nav>"""
@@ -250,7 +268,7 @@ def layout_c(u) -> str:
 def build() -> None:
     rules = load_rules("zorgtoeslag")
     par = load_params("zorgtoeslag", 2026)
-    u = rules.bereken(2026, par, toetsingsinkomen_aanvrager=D(32000), partner=False)
+    u = rules.bereken(2026, par, toetsingsinkomen_aanvrager=D(32000), partner=False, awir=load_awir(2026))
     out = ROOT / "site" / "layouts"
     out.mkdir(parents=True, exist_ok=True)
     (out / "a.html").write_text(layout_a(u), encoding="utf-8")
@@ -260,7 +278,7 @@ def build() -> None:
 <p>Dutch benefit law as open, dated, testable code, with the record behind it. Nothing here is finished:
 every rule is <span class="status">draft</span>, no case is verified, and the result page has not been chosen.</p>
 <h2>Three layouts of one computation (Ask 3)</h2>
-<p>Zorgtoeslag 2026, zonder partner, toetsingsinkomen € 32.000. The same six steps, three ways:</p>
+<p>Zorgtoeslag 2026, zonder partner, toetsingsinkomen € 32.000. The same steps, three ways:</p>
 <ul><li><a href="layouts/a.html">A — de tabel</a></li><li><a href="layouts/b.html">B — het verhaal</a></li><li><a href="layouts/c.html">C — de brief</a></li></ul>
 <h2>The record</h2>
 <ul><li><a href="https://github.com/TheAndries/toeslagrecht/blob/main/law/zorgtoeslag/rules.md">Rules, with articles</a></li>

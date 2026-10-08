@@ -1,0 +1,19 @@
+id: zt-2026-pub-007
+toeslag: zorgtoeslag
+jaar: 2026
+bron:
+  type: published
+  publicatie: "Dienst Toeslagen, Berekening zorgtoeslag 2026 (TG 082 - 1Z61FD), januari 2026, rekenvoorbeeld 1"
+  url: https://download.belastingdienst.nl/toeslagen/docs/berekening_zorgtoeslag_tg0821z61fd.pdf
+  opgehaald: 2026-10-08
+verified: false
+invoer:
+  partner: false
+  toetsingsinkomen_aanvrager: "19000"
+  rendementsgrondslag: null
+verwacht:
+  normpremie: "568.55"
+  aanspraak_jaar: "1550.45"
+  aanspraak_maand: "129.20"
+  aanspraak_maand_afgerond_praktijk: 129
+opmerking: "De Dienst rekent met drempelinkomen € 29.736 ('vastgesteld op'); de wet geeft € 29.735,424. Zie DISCREPANCIES.md #1. De leaflet noemt dit ook de maximale zorgtoeslag 2026 zonder partner (€ 1.550)."

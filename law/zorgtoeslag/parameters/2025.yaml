@@ -1,21 +1,23 @@
 # Zorgtoeslag — parameters berekeningsjaar 2025. Elk getal met zijn bron (CHARTER.md P1).
 jaar: 2025
 status: draft
-geraadpleegd: 2026-10-07
+geraadpleegd: 2026-10-08
 
 standaardpremie:
   waarde: "2112"
   artikel: "Wet op de zorgtoeslag art. 4 jo. Regeling vaststelling standaardpremie en bestuursrechtelijke premies 2025, art. 1"
-  bron: "Stcrt. 2024, 38887 (gepubliceerd 28-11-2024); gelezen via taxlive.nl (V-N Vandaag) en bevestigd door Dienst Toeslagen, Berekening zorgtoeslag 2025, stap 1"
+  bron: "Regeling van de Minister van VWS van 19 november 2024, kenmerk 3973534-1072564-Z, Stcrt. 2024, 38887 (gepubliceerd 28-11-2024), art. 1 (primaire tekst gelezen 2026-10-08)"
+  url: https://zoek.officielebekendmakingen.nl/stcrt-2024-38887.html
   geldig_van: 2025-01-01
-  opmerking: "Primaire Staatscourant-tekst nog niet geopend (law/SOURCES.md)."
+  tekst: "De standaardpremie, bedoeld in de Wet op de zorgtoeslag, bedraagt voor het berekeningsjaar 2025 € 2.112,–."
 
 wml_maandbedrag_januari:
   waarde: "2191.80"
   artikel: "Wet minimumloon en minimumvakantiebijslag art. 8 lid 1 onder b, bedrag per 1 januari 2025"
-  bron: "Regeling indexatie wettelijk minimumloon per 1 januari 2025 (Stcrt. gepubliceerd 17-10-2024); gelezen via secundaire bronnen; consistent met het drempelinkomen € 28.406 dat Dienst Toeslagen noemt (108% x 12 x 2.191,80 = 28.405,73)"
+  bron: "Regeling van de Minister van SZW van 10 oktober 2024, nr. 2024-0000675332, tot indexatie van het wettelijk minimumloon per 1 januari 2025, Stcrt. 2024, 33625 (gepubliceerd 17-10-2024), art. 1 onder b (primaire tekst gelezen 2026-10-08)"
+  url: https://zoek.officielebekendmakingen.nl/stcrt-2024-33625.html
   geldig_van: 2025-01-01
-  opmerking: "Primaire Staatscourant-tekst nog niet geopend (law/SOURCES.md)."
+  tekst: "a. € 14,06; b. € 2.191,80."
 
 drempelinkomen_factor:
   waarde: "108"
@@ -27,22 +29,22 @@ drempelinkomen_factor:
 normpremie_percentage_drempel_zonder_partner:
   waarde: "1.896"
   eenheid: procent
-  artikel: "Wet op de zorgtoeslag art. 2 lid 3"
-  bron: "BWBR0018451, geldend van 01-01-2025 t/m 31-12-2025"
+  artikel: "Wet op de zorgtoeslag art. 2 lid 3 jo. Besluit percentages drempel- en toetsingsinkomen zorgtoeslag art. 1 (berekeningsjaar 2025)"
+  bron: "BWBR0018451, geldend van 01-01-2025 t/m 31-12-2025; Stb. 2024, 351 (besluit van 14 november 2024)"
   url: https://wetten.overheid.nl/BWBR0018451/2025-01-01
 
 normpremie_percentage_drempel_met_partner:
   waarde: "4.273"
   eenheid: procent
-  artikel: "Wet op de zorgtoeslag art. 2 lid 3"
-  bron: "BWBR0018451, geldend van 01-01-2025 t/m 31-12-2025"
+  artikel: "Wet op de zorgtoeslag art. 2 lid 3 jo. Besluit percentages drempel- en toetsingsinkomen zorgtoeslag art. 1 (berekeningsjaar 2025)"
+  bron: "BWBR0018451, geldend van 01-01-2025 t/m 31-12-2025; Stb. 2024, 351 (besluit van 14 november 2024)"
   url: https://wetten.overheid.nl/BWBR0018451/2025-01-01
 
 normpremie_percentage_boven_drempel:
   waarde: "13.700"
   eenheid: procent
-  artikel: "Wet op de zorgtoeslag art. 2 lid 3"
-  bron: "BWBR0018451, geldend van 01-01-2025 t/m 31-12-2025"
+  artikel: "Wet op de zorgtoeslag art. 2 lid 3 jo. Besluit percentages drempel- en toetsingsinkomen zorgtoeslag art. 1 (berekeningsjaar 2025)"
+  bron: "BWBR0018451, geldend van 01-01-2025 t/m 31-12-2025; Stb. 2024, 351 (besluit van 14 november 2024)"
   url: https://wetten.overheid.nl/BWBR0018451/2025-01-01
 
 aandeel_partner_niet_verzekerd:
@@ -55,11 +57,58 @@ aandeel_partner_niet_verzekerd:
 vermogensgrens_zonder_partner:
   waarde: "141896"
   artikel: "Wet op de zorgtoeslag art. 3 lid 1"
-  bron: "BWBR0018451, geldend van 01-01-2025 t/m 31-12-2025"
+  bron: "BWBR0018451, geldend van 01-01-2025 t/m 31-12-2025; gewijzigd bij herstelregeling van 12 november 2024, Stcrt. 2024, 37672 (tabelcorrectiefactor 1,012%; trok Stcrt. 2024, 33447 in)"
   url: https://wetten.overheid.nl/BWBR0018451/2025-01-01
 
 vermogensgrens_met_partner:
   waarde: "179429"
   artikel: "Wet op de zorgtoeslag art. 3 lid 1"
-  bron: "BWBR0018451, geldend van 01-01-2025 t/m 31-12-2025"
+  bron: "BWBR0018451, geldend van 01-01-2025 t/m 31-12-2025; Stcrt. 2024, 37672"
   url: https://wetten.overheid.nl/BWBR0018451/2025-01-01
+
+woonlandfactoren:
+  artikel: "Wet op de zorgtoeslag art. 4a lid 1 en 2 jo. Regeling zorgverzekering art. 6.3.1 lid 9 en bijlage 4"
+  bron: "Regeling zorgverzekering (BWBR0018715), bijlage 4, geldend van 01-01-2025 t/m 10-01-2025; dezelfde getallen in Dienst Toeslagen, Berekening zorgtoeslag 2025, tabel woonlandfactor"
+  url: https://wetten.overheid.nl/BWBR0018715/2025-01-01
+  geldig_van: 2025-01-01
+  opmerking: "Landcodes ISO 3166-1 alpha-2, toegevoegd door het project; de bijlage noemt alleen de landnaam. De bijlage schrijft Kaapverdië, Noord-Macedonië en Verenigd Koninkrijk; de Dienst schrijft Kaap-Verdië, Republiek Noord-Macedonië en Groot-Brittannië. Staatscourant-nummer van de wijzigingsregeling nog niet vastgelegd (law/SOURCES.md)."
+  landen:
+    BE: "0.7981"   # België
+    BA: "0.0844"   # Bosnië-Herzegovina
+    BG: "0.1224"   # Bulgarije
+    CY: "0.4272"   # Cyprus
+    DK: "1.0000"   # Denemarken
+    DE: "1.0000"   # Duitsland
+    EE: "0.2900"   # Estland
+    FI: "0.7791"   # Finland
+    FR: "0.8251"   # Frankrijk
+    GR: "0.2144"   # Griekenland
+    HU: "0.1783"   # Hongarije
+    IS: "1.0000"   # IJsland
+    IE: "0.9682"   # Ierland
+    IT: "0.4685"   # Italië
+    CV: "0.0308"   # Kaapverdië
+    HR: "0.3925"   # Kroatië
+    LV: "0.2054"   # Letland
+    LI: "1.0000"   # Liechtenstein
+    LT: "0.2308"   # Litouwen
+    LU: "0.8338"   # Luxemburg
+    MT: "0.4182"   # Malta
+    MA: "0.0205"   # Marokko
+    ME: "0.1069"   # Montenegro
+    MK: "0.0577"   # Noord-Macedonië
+    NO: "1.0000"   # Noorwegen
+    AT: "0.8998"   # Oostenrijk
+    PL: "0.1649"   # Polen
+    PT: "0.3147"   # Portugal
+    RO: "0.1374"   # Roemenië
+    RS: "0.1000"   # Servië
+    SI: "0.3792"   # Slovenië
+    SK: "0.2530"   # Slowakije
+    ES: "0.4398"   # Spanje
+    CZ: "0.4078"   # Tsjechië
+    TN: "0.0300"   # Tunesië
+    TR: "0.0623"   # Turkije
+    GB: "0.8467"   # Verenigd Koninkrijk
+    SE: "1.0000"   # Zweden
+    CH: "1.0000"   # Zwitserland

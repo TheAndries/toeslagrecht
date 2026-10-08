@@ -1,0 +1,21 @@
+id: zt-2026-syn-001
+toeslag: zorgtoeslag
+jaar: 2026
+bron:
+  type: synthetic
+  publicatie: "Geconstrueerd door de operator naar de formule in Dienst Toeslagen, Berekening zorgtoeslag 2026, stap 5: 'Uw klant is een verzekerde en de toeslagpartner is geen verdragsgerechtigde en geen verzekerde: (standaardpremie + standaardpremie x woonlandfactor - normpremie) x 50%'. Verwachte uitkomst = die formule met woonlandfactor België 0,8165; geen door de Dienst gepubliceerd getal."
+  url: https://download.belastingdienst.nl/toeslagen/docs/berekening_zorgtoeslag_tg0821z61fd.pdf
+  opgehaald: 2026-10-08
+verified: false
+invoer:
+  partner: true
+  partner_verzekerd: false
+  partner_verdragsgerechtigd: false
+  aanvrager_verdragsgerechtigd: false
+  woonland: BE
+  toetsingsinkomen_aanvrager: "20000"
+  toetsingsinkomen_partner: "5000"
+  rendementsgrondslag: null
+verwacht:
+  aanspraak_jaar: "1296.11"
+opmerking: "Formule van de Dienst: (2.119 + 2.119 × 0,8165 − 1.275,37) × 50% = € 1.296,11 (met drempelinkomen € 29.736; met € 29.735,424 wordt het € 1.296,12). Wzt art. 4a lid 4 past de woonlandfactor alleen toe op de partner van een verdragsgerechtigde; de aanvrager is hier een gewone verzekerde, zodat de tekst 2 × € 2.119 geeft: (4.238 − 1.275,35) × 50% = € 1.481,32. Een synthetische case telt nooit als verificatie (CASES.md). Zie DISCREPANCIES.md #3."

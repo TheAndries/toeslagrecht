@@ -1,9 +1,10 @@
 # Awir — de gedeelde regels
 
 Algemene wet inkomensafhankelijke regelingen (BWBR0018472), versie geldend van 01-01-2026
-t/m 30-09-2026, geraadpleegd 2026-10-07. Een nieuwe versie geldt vanaf 01-10-2026
-(Stb. 2025, 431); wat daarin veranderde is nog niet vastgesteld (`../SOURCES.md`). Alles
-**draft**.
+t/m 30-09-2026, geraadpleegd 2026-10-07 en (volledige tekst) 2026-10-08. De versie van
+01-10-2026 (Stb. 2025, 431, inwerkingtreding Stb. 2026, 293) wijzigt alleen art. 13 en 13a
+(berichtenverkeer met de Dienst Toeslagen: de belanghebbende kiest tussen papier en
+elektronisch); geen rekenregel verandert (`../CHANGES.md`). Alles **draft**.
 
 ## awir-2026-art7-1 — draagkracht: het inkomen van beiden telt
 
@@ -45,3 +46,36 @@ eerste dag van een maand voordoet, telt vanaf de eerste dag van de volgende maan
 **Gewoon Nederlands:** Verandert er iets halverwege een maand, dan geldt dat pas vanaf de
 maand erna.
 **Code:** nog niet gecodeerd; de encoding rekent alleen een onveranderd jaar.
+
+## awir-2026-art14-4 — afronding van de tegemoetkoming
+
+**Artikel:** Awir art. 14 lid 4: "Het bedrag van de tegemoetkoming wordt rekenkundig afgerond
+op hele euro's." (BWBR0018472, geldend van 01-01-2026; dezelfde tekst in de versie van
+01-01-2025, verbatim gelezen 2026-10-08.)
+**Status:** draft.
+**Gewoon Nederlands:** Het jaarbedrag van uw toeslag wordt afgerond op hele euro's, op de
+gewone manier: vijftig cent of meer gaat omhoog.
+**Code:** `rond_tegemoetkoming(bedrag, awir)`: `quantize(1, ROUND_HALF_UP)` op het jaarbedrag
+dat de toeslagwet geeft (voor de zorgtoeslag: `zt-2026-art2-1`, na `-art2-4`).
+**Discretie:** "Rekenkundig" leest de encoding als half-omhoog. Het artikel rondt het bedrag
+van de tegemoetkoming (per berekeningsjaar) af, niet een maandbedrag of een tussenstap; de
+Dienst Toeslagen rondt ook het drempelinkomen (zie `../zorgtoeslag/rules.md`,
+`zt-2026-art1-1f`) en het maandbedrag (`zt-2026-art2-5`), waarvoor hier geen grondslag staat.
+
+## awir-2026-art14-5 — minimumbedrag
+
+**Artikel:** Awir art. 14 lid 5: "Een tegemoetkoming wordt niet toegekend indien deze minder
+dan € 24 zou bedragen." (BWBR0018472, geldend van 01-01-2026; dezelfde tekst in de versie van
+01-01-2025.) Bedrag in `parameters/<jaar>.yaml`, `minimum_tegemoetkoming`.
+**Status:** draft.
+**Gewoon Nederlands:** Komt uw toeslag uit onder € 24 per jaar (€ 2 per maand), dan krijgt u
+niets. Hierdoor ligt de inkomensgrens die de Belastingdienst publiceert (2026: € 40.857 zonder,
+€ 51.142 met partner) lager dan het punt waar de formule op nul uitkomt.
+**Code:** na `awir-2026-art14-4`: is het afgeronde bedrag kleiner dan € 24, dan `tegemoetkoming`
+= 0. Volgorde: eerst afronden, dan toetsen — de volgorde van lid 4 en 5, en de volgorde die de
+gepubliceerde grenzen reproduceert (€ 23,5x wordt € 24 en wordt toegekend; `zt-2026-pub-011`,
+`zt-2025-pub-004`).
+**Discretie:** Of "zou bedragen" het afgeronde of het onafgeronde bedrag bedoelt, zegt de tekst
+niet uitdrukkelijk; de encoding kiest het afgeronde bedrag op de twee gronden hierboven en
+noemt dat hier. Bij een andere lezing verschuift de grens 2026 met partner van € 51.142 naar
+€ 51.138 en zonder partner van € 40.856 naar € 40.852.

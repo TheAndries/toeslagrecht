@@ -1,13 +1,14 @@
 """Zorgtoeslag — executable rules. Pure functions, no I/O. Decimal arithmetic.
 
-Every function names the rule id from rules.md it implements. Parameters come from
-parameters/<jaar>.yaml (loaded by the caller); each carries its own article there.
+Every function names the rule id from rules.md (or ../awir/rules.md) it implements.
+Parameters come from parameters/<jaar>.yaml and ../awir/parameters/<jaar>.yaml (loaded by
+the caller); each carries its own article there.
 Status of every rule: draft (LAW.md). Licence: CC BY-SA 4.0 (LICENSE-DATA).
 """
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from decimal import Decimal, ROUND_FLOOR
+from decimal import Decimal, ROUND_FLOOR, ROUND_HALF_UP
 
 D = Decimal
 
@@ -40,25 +41,28 @@ class Stap:
 class Uitkomst:
     jaar: int
     stappen: list[Stap] = field(default_factory=list)
-    aanspraak_jaar: Decimal | None = None
-    aanspraak_maand: Decimal | None = None
+    aanspraak_jaar: Decimal | None = None        # Wzt art. 2 (and 4a): the computed amount, unrounded
+    tegemoetkoming: Decimal | None = None        # Awir art. 14 lid 4-5: whole euros, 0 if under € 24
+    aanspraak_maand: Decimal | None = None       # aanspraak_jaar / 12, unrounded
     aanspraak_maand_afgerond_praktijk: int | None = None  # how Dienst Toeslagen rounds, not law
     vermogen: str = "niet_getoetst"
     onbepaald: list[str] = field(default_factory=list)   # 'undetermined' items with article
 
     def als_dict(self) -> dict:
+        def s(v):
+            return None if v is None else str(v)
         return {
             "jaar": self.jaar,
-            "aanspraak_jaar": None if self.aanspraak_jaar is None else str(self.aanspraak_jaar),
-            "aanspraak_maand": None if self.aanspraak_maand is None else str(self.aanspraak_maand),
+            "aanspraak_jaar": s(self.aanspraak_jaar),
+            "tegemoetkoming": s(self.tegemoetkoming),
+            "aanspraak_maand": s(self.aanspraak_maand),
             "aanspraak_maand_afgerond_praktijk": self.aanspraak_maand_afgerond_praktijk,
             "vermogen": self.vermogen,
             "onbepaald": list(self.onbepaald),
             "stappen": [
-                {"regel": s.regel, "artikel": s.artikel, "omschrijving": s.omschrijving,
-                 "berekening": s.berekening,
-                 "uitkomst": None if s.uitkomst is None else str(s.uitkomst), "status": s.status}
-                for s in self.stappen
+                {"regel": x.regel, "artikel": x.artikel, "omschrijving": x.omschrijving,
+                 "berekening": x.berekening, "uitkomst": s(x.uitkomst), "status": x.status}
+                for x in self.stappen
             ],
         }
 
@@ -66,7 +70,7 @@ class Uitkomst:
 def drempelinkomen(par: dict) -> Decimal:
     """zt-2026-art1-1f — Wzt art. 1 lid 1 onder f: 108% van het twaalfvoud van het
     WML-maandbedrag (WML art. 8 lid 1 onder b) voor januari van het berekeningsjaar.
-    No rounding: the text has none."""
+    No rounding: the text has none (DISCREPANCIES.md #1)."""
     factor = pct(D(par["drempelinkomen_factor"]["waarde"]))
     maand = D(par["wml_maandbedrag_januari"]["waarde"])
     return factor * D(12) * maand
@@ -104,13 +108,65 @@ def vermogenstoets(rendementsgrondslag: Decimal | None, partner: bool,
             "dezelfde partner heeft; welke grens anders geldt, bepaalt de tekst niet uitdrukkelijk.")
 
 
+def woonlandfactor(woonland: str | None, par: dict) -> Decimal | None:
+    """zt-2026-art4a — Wzt art. 4a lid 1-2: het verhoudingsgetal per land, vastgesteld bij
+    ministeriële regeling (Regeling zorgverzekering art. 6.3.1 lid 9 en bijlage 4)."""
+    if not woonland:
+        return None
+    tabel = par.get("woonlandfactoren", {}).get("landen", {})
+    w = tabel.get(woonland.upper())
+    return None if w is None else D(str(w))
+
+
+def standaardpremies(par: dict, partner: bool, aanvrager_verdragsgerechtigd: bool,
+                     partner_verzekerd: bool | None, partner_verdragsgerechtigd: bool | None,
+                     woonland: str | None) -> tuple[Decimal, Decimal | None, Decimal | None, list[str], str]:
+    """zt-2026-art4 / zt-2026-art4a — the standaardpremie per person.
+    Returns (sp_aanvrager, sp_partner | None, woonlandfactor | None, undetermined notes, tekst)."""
+    sp = D(par["standaardpremie"]["waarde"])
+    noot: list[str] = []
+    wlf = woonlandfactor(woonland, par) if (aanvrager_verdragsgerechtigd or partner_verdragsgerechtigd) else None
+    if (aanvrager_verdragsgerechtigd or partner_verdragsgerechtigd) and wlf is None:
+        noot.append("zt-2026-art4a: verdragsgerechtigde zonder (bekend) woonland; woonlandfactor niet toegepast "
+                    "(Wzt art. 4a lid 1-2).")
+    sp_a = sp * wlf if (aanvrager_verdragsgerechtigd and wlf is not None) else sp
+    if not partner:
+        return sp_a, None, wlf, noot, f"{t(sp)}" + (f" × {t(wlf)}" if aanvrager_verdragsgerechtigd and wlf is not None else "")
+    # partner's standaardpremie
+    if aanvrager_verdragsgerechtigd and wlf is not None:
+        # art. 4a lid 4: partner of an art. 69 Zvw person: × woonlandfactor, unless the partner is
+        # a Zvw art. 1 onder f verzekerde
+        sp_p = sp if partner_verzekerd else sp * wlf
+    elif partner_verdragsgerechtigd and wlf is not None:
+        # art. 4a lid 3: verzekerde with a partner who is an art. 69 Zvw person
+        sp_p = sp * wlf
+    else:
+        sp_p = sp
+    tekst = f"{t(sp_a)} + {t(sp_p)}"
+    return sp_a, sp_p, wlf, noot, tekst
+
+
+def rond_tegemoetkoming(bedrag: Decimal, awir: dict) -> tuple[Decimal, Decimal]:
+    """awir-2026-art14-4 en -5 — Awir art. 14 lid 4: rekenkundig afgerond op hele euro's;
+    lid 5: niet toegekend indien minder dan het minimumbedrag. Returns (afgerond, toegekend)."""
+    afgerond = bedrag.quantize(D(1), rounding=ROUND_HALF_UP)
+    minimum = D(awir["minimum_tegemoetkoming"]["waarde"])
+    toegekend = D(0) if afgerond < minimum else afgerond
+    return afgerond, toegekend
+
+
 def bereken(jaar: int, par: dict, toetsingsinkomen_aanvrager: Decimal, partner: bool,
             toetsingsinkomen_partner: Decimal | None = None, partner_verzekerd: bool | None = None,
             rendementsgrondslag: Decimal | None = None,
-            hele_jaar_dezelfde_partner: bool | None = None) -> Uitkomst:
+            hele_jaar_dezelfde_partner: bool | None = None,
+            awir: dict | None = None,
+            aanvrager_verdragsgerechtigd: bool = False,
+            partner_verdragsgerechtigd: bool | None = None,
+            woonland: str | None = None) -> Uitkomst:
     """The whole computation for one unchanged calendar year. Every step cites its article."""
     u = Uitkomst(jaar=jaar)
     artv = par.get("_versie", f"BWBR0018451, geldend van 01-01-{jaar}")
+    awir = awir or {}
 
     # awir-2026-art7-1
     ti = toetsingsinkomen_aanvrager + (toetsingsinkomen_partner or D(0)) if partner else toetsingsinkomen_aanvrager
@@ -130,13 +186,14 @@ def bereken(jaar: int, par: dict, toetsingsinkomen_aanvrager: Decimal, partner: 
         u.onbepaald.append("zt-2026-art3-1: " + toel)
     if verm == "geen_aanspraak":
         u.aanspraak_jaar = D(0)
+        u.tegemoetkoming = D(0)
         u.aanspraak_maand = D(0)
         u.aanspraak_maand_afgerond_praktijk = 0
         return u
 
     # zt-2026-art1-1f
     drempel = drempelinkomen(par)
-    u.stappen.append(Stap("zt-2026-art1-1f", f"Wzt art. 1 lid 1 onder f; WML art. 8 lid 1 onder b",
+    u.stappen.append(Stap("zt-2026-art1-1f", "Wzt art. 1 lid 1 onder f; WML art. 8 lid 1 onder b",
                           "Het drempelinkomen: 108% van twaalf keer het minimumloon per maand van januari.",
                           f"108% × 12 × {par['wml_maandbedrag_januari']['waarde']}", drempel))
 
@@ -148,16 +205,28 @@ def bereken(jaar: int, par: dict, toetsingsinkomen_aanvrager: Decimal, partner: 
                           "De normpremie: wat u volgens de wet zelf aan premie kunt dragen.",
                           f"{p_d}% × {t(drempel)} + {p_b}% × max(0, {t(ti)} − {t(drempel)}) = {t(deel_d)} + {t(deel_b)}", norm))
 
+    # zt-2026-art4 / zt-2026-art4a — standaardpremie per person
+    sp_a, sp_p, wlf, noot, sp_tekst = standaardpremies(par, partner, aanvrager_verdragsgerechtigd,
+                                                       partner_verzekerd, partner_verdragsgerechtigd, woonland)
+    u.onbepaald.extend(noot)
+    if wlf is not None:
+        u.stappen.append(Stap("zt-2026-art4a", f"Wzt art. 4a lid 1, 2{', 3' if partner_verdragsgerechtigd and not aanvrager_verdragsgerechtigd else ''}"
+                              f"{', 4' if partner and aanvrager_verdragsgerechtigd else ''} ({artv}); "
+                              f"{par['woonlandfactoren']['artikel']}",
+                              "Woont u als verdragsgerechtigde buiten Nederland, dan telt de standaardpremie "
+                              "vermenigvuldigd met de woonlandfactor van uw woonland.",
+                              f"woonlandfactor {woonland.upper()} {jaar} = {t(wlf)}; standaardpremie(s): {sp_tekst}",
+                              sp_a + (sp_p or D(0))))
+
     # zt-2026-art2-1
-    sp = D(par["standaardpremie"]["waarde"])
-    basis = sp * (2 if partner else 1)
+    basis = sp_a + (sp_p or D(0))
     aanspraak = basis - norm
     if aanspraak < 0:
         aanspraak = D(0)
     u.stappen.append(Stap("zt-2026-art2-1", f"Wzt art. 2 lid 1 ({artv}); {par['standaardpremie']['artikel']}",
                           ("Twee keer de standaardpremie min de normpremie; u en uw partner hebben samen één aanspraak."
                            if partner else "De standaardpremie min de normpremie."),
-                          f"{'2 × ' if partner else ''}{t(sp)} − {t(norm)}", aanspraak))
+                          f"{sp_tekst if wlf is None else t(basis)} − {t(norm)}", aanspraak))
 
     # zt-2026-art2-4
     if partner and partner_verzekerd is False:
@@ -169,16 +238,32 @@ def bereken(jaar: int, par: dict, toetsingsinkomen_aanvrager: Decimal, partner: 
     elif partner and partner_verzekerd is None:
         u.onbepaald.append("zt-2026-art2-4: niet opgegeven of de partner verzekerde is (Wzt art. 1 lid 1 onder c); "
                            "gerekend alsof wel.")
+    u.aanspraak_jaar = aanspraak
+
+    # awir-2026-art14-4 / awir-2026-art14-5
+    if awir.get("minimum_tegemoetkoming"):
+        afgerond, toegekend = rond_tegemoetkoming(aanspraak, awir)
+        u.stappen.append(Stap("awir-2026-art14-4", awir["afronding_tegemoetkoming"]["artikel"],
+                              "Het bedrag van de zorgtoeslag wordt afgerond op hele euro's.",
+                              f"{t(aanspraak)} → afgerond", afgerond))
+        minimum = awir["minimum_tegemoetkoming"]["waarde"]
+        u.stappen.append(Stap("awir-2026-art14-5", awir["minimum_tegemoetkoming"]["artikel"],
+                              f"Is de zorgtoeslag minder dan € {minimum} per jaar, dan wordt zij niet toegekend.",
+                              (f"{t(afgerond)} < {minimum}: niet toegekend" if toegekend == 0 and afgerond > 0
+                               else f"{t(afgerond)} ≥ {minimum}" if afgerond > 0 else "0"), toegekend))
+        u.tegemoetkoming = toegekend
+    else:
+        u.onbepaald.append("Awir art. 14 lid 4-5 (afronding, minimumbedrag): geen Awir-parameters geladen; niet toegepast.")
 
     # zt-2026-art2-5
     maand = aanspraak / D(12)
     u.stappen.append(Stap("zt-2026-art2-5", f"Wzt art. 2 lid 5 ({artv})",
                           "Per kalendermaand, bij een heel jaar zonder wijzigingen: het jaarbedrag gedeeld door twaalf.",
                           f"{t(aanspraak)} / 12", maand))
-    u.aanspraak_jaar = aanspraak
     u.aanspraak_maand = maand
-    # Not law: how Dienst Toeslagen rounds in its published examples (down to whole euros).
+    # Not law: how Dienst Toeslagen rounds the monthly amount in its published examples (down to whole euros).
     u.aanspraak_maand_afgerond_praktijk = int(maand.quantize(D(1), rounding=ROUND_FLOOR))
-    u.onbepaald.append("afronding maandbedrag: de wet zegt niets; Dienst Toeslagen rondt in haar rekenvoorbeelden "
-                       "naar beneden af op hele euro's (grondslag nog niet gevonden).")
+    u.onbepaald.append("afronding maandbedrag: de wet rondt het jaarbedrag af (Awir art. 14 lid 4), niet het "
+                       "maandbedrag; Dienst Toeslagen rondt in haar rekenvoorbeelden het maandbedrag naar beneden "
+                       "af op hele euro's (grondslag niet gevonden in Awir, Wzt of Uitvoeringsregeling Awir).")
     return u

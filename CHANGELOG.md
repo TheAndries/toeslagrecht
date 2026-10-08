@@ -2,6 +2,99 @@
 
 Newest first. What was done, decided, and got wrong.
 
+## 2026-10-08 — second run: the missing texts found, two discrepancies closed, two opened, eight new cases
+
+Second run of routine `trig_012xyD5r5rxFDCjfHbZ58Kib`. Model as served: `claude-fable-5-1`, the same
+as the previous entry; no handover note needed. Steps 1–3 found nothing: no ask newly marked done,
+`INBOX.md` empty, no open motion. Ask 3 (the layout choice) is still waiting for the owner.
+
+**Done (Phase 1).**
+- *The two texts the first run could not find.* **Awir art. 14 lid 4**: "Het bedrag van de
+  tegemoetkoming wordt rekenkundig afgerond op hele euro's." **Lid 5**: "Een tegemoetkoming wordt
+  niet toegekend indien deze minder dan € 24 zou bedragen." Both in the versions of 01-01-2025 and
+  01-01-2026. Encoded as `awir-2026-art14-4` and `-art14-5` (`law/awir/rules.md`,
+  `law/awir/parameters/2025.yaml`, `2026.yaml`), applied after the Wzt art. 2 computation. The
+  result now has two amounts: the computed `aanspraak_jaar` and the `tegemoetkoming` the law grants.
+- *Wzt art. 4a*, the woonlandfactor for verdragsgerechtigden, encoded as `zt-2026-art4a` with the 39
+  factors per country for 2025 and 2026 from Regeling zorgverzekering bijlage 4 (art. 6.3.1 lid 9).
+  Case `zt-2025-pub-003` is no longer skipped.
+- *Primary sources opened* for everything that was secondary: Stcrt. 2024, 38887 (standaardpremie
+  2025), Stcrt. 2025, 34131 and Stcrt. 2024, 33625 (WML 2026 and 2025). *Instruments identified*
+  for the 2025→2026 changes: Stb. 2025, 412 and Stb. 2024, 351 (percentages; the 2026 row was revised
+  from 1,911% / 4,288% to 1,912% / 4,289% a month before it took effect), Stcrt. 2025, 38110 and
+  Stcrt. 2024, 37672 (vermogensgrenzen), Stcrt. 2025, 40487 (Awir amounts). *The Awir change of
+  01-10-2026* identified by diffing the two consolidated versions: art. 13 and 13a only, the choice
+  between paper and electronic post; no computation rule. All in `law/SOURCES.md` and `law/CHANGES.md`.
+- *Eight new cases* (`cases/`): the three rekenvoorbeelden of the Dienst's *Berekening zorgtoeslag
+  2026* (January 2026, found by the leaflet URL pattern), the 2026 and 2025 income ceilings on the
+  boundary euro, both sides, and one synthetic case for the art. 4a reading. 18 cases run: 10 pass,
+  8 fail, 0 blocking, 0 skipped. Every failure is in the log.
+- The three layouts rebuilt from the new encoding: the headline is now the granted year amount
+  (whole euros, Awir art. 14), with the computed amount, the month and the Dienst's practice under it.
+
+**The discrepancies, and how they are classified.**
+- *#2 (income ceiling) → `encoding`.* The first run read Wzt art. 1–5 and Awir art. 2–9 and 26a and
+  did not find a minimum; it is in Awir art. 14. With lid 4 and 5 the formula reproduces the
+  published ceilings: at € 51.142 with partner the amount is € 23,5x → € 24 → granted, at € 51.143
+  it is € 23 → nothing; 2025 likewise at € 39.719 / € 39.720. Fixed in this commit.
+- *#1 (drempelinkomen rounding) → `government`.* Searched in full on 2026-10-08: the Wzt, the Awir
+  and the Uitvoeringsregeling Awir contain no rounding of the drempelinkomen; the only rounding
+  provision is art. 14 lid 4, which rounds the final amount. The Dienst's 2026 leaflet says the
+  drempelinkomen is "vastgesteld op € 29.736"; the text gives € 29.735,424, so the Dienst rounds up.
+  The effect is cents in every intermediate figure and, in 2026 alone, one euro of income at the
+  ceiling: at toetsingsinkomen € 40.857 the Dienst grants € 24 and the text grants nothing
+  (`zt-2026-pub-010`); the text's ceiling is € 40.856. Classified `government` under `CASES.md`: the
+  encoding follows the text, the published method does not, both are cited, and the project does
+  not speculate why. Ask 5(a) stays open in case the owner knows a text the search missed; a text
+  would re-classify the entry, not delete it.
+- *#3 (new, `open`).* The 2026 leaflet's step 5 applies the woonlandfactor to the partner's
+  standaardpremie when a *verzekerde* has a partner who is neither verzekerde nor verdragsgerechtigde.
+  Wzt art. 4a lid 4 does that only for the partner of a verdragsgerechtigde. No published figure
+  exists, so a synthetic case (`zt-2026-syn-001`, never verification) shows the difference: € 1.296,11
+  by the leaflet, € 1.481,32 by the text. `open` until a decision or a better reading appears; the
+  encoding follows the text.
+- *#4 (new, `withdrawn`).* The 2026 leaflet's rekenvoorbeeld 2 prints "€ 1.243,51 per jaar, € 103,02
+  per maand"; € 1.243,51 / 12 is € 103,63, and the Dienst's own rounded € 103 matches the latter. A
+  misprint in the source, kept as published and marked.
+
+**What was wrong and why.**
+- The first run missed Wzt art. 4a and Awir art. 14 because it read articles through WebFetch
+  summaries, article by article, and looked for an "art. 2a". This run downloaded the full
+  consolidated texts with `curl --http1.1` and searched them; that is now the method (`memory.md`,
+  Lessons). The record was not wrong, but `law/SOURCES.md` claimed "art. 1–5 read" as if the law
+  ended there; corrected.
+- A parameter-update script failed on a mistyped assertion after writing one file; the file was
+  restored from git and the script rerun from the scratchpad. Two case files had the publication
+  string closed too early and broke the YAML parser; fixed before the check ran.
+- `zt-2026-pub-006` compared the formula amount with the published ceiling; the right quantity is
+  the granted amount. Its expected field was changed from `aanspraak_jaar` to `tegemoetkoming`, with
+  the change noted in the case file.
+- Stcrt. 2025, 38110 amends "artikel 3a" of the Wzt, which does not exist; wetten.overheid.nl
+  consolidated it into art. 3 lid 1. Recorded in `CHANGES.md` and the parameter file; not a
+  discrepancy, since the amounts are not in doubt.
+- Not done: the Belastingdienst table sweep and Nibud cases (item 1 for the next run); the Stcrt.
+  numbers of the woonlandfactor regelingen; the history of Awir art. 14. `PLAN.md` unchanged: the
+  strategy holds and Phase 1 is ahead of its pace.
+
+**Dropped from memory.** The first run's detailed search plan for the two discrepancies (resolved),
+the "WebFetch returns summaries" lesson (superseded by the curl method), and the per-URL notes on the
+Belastingdienst 404. Nothing else was held.
+
+**Effort.** Roughly 190,000 of the 300,000-token ceiling: about 45,000 reading the files, about
+70,000 on downloads and the full-text searches (the Awir, the Wzt, the Regeling zorgverzekering and
+nine Staatsblad/Staatscourant texts), the rest writing the encoding, the cases and these records.
+
+**Record under the ten-year rule.** This run added to the record: two discrepancy classifications
+with the texts that decide them (#1 `government`, #2 `encoding`) and two new entries (#3, #4), one of
+them a documented misprint in the Dienst's own 2026 leaflet; eight published cases carrying the
+Dienst's method and figures as they stood in January 2026 and the published income ceilings of two
+years on the boundary euro; the dated woonlandfactor tables for 2025 and 2026 (78 values with their
+regeling); seven dated amendment rows with their instruments, including the pre-effect revision of
+the 2026 percentages and the 2027 percentages already in the Staatsblad, and the finding that the
+Awir change of 01-10-2026 touches no computation rule; the primary Staatscourant texts for four
+figures previously taken from secondary sources. The encoding of art. 4a and art. 14 is regenerable
+and is not counted. Still no verified case: that needs a human and a document (`CASES.md`).
+
 ## 2026-10-07 — first scheduled run: pipeline, sources, zorgtoeslag draft, three layouts
 
 First run of routine `trig_012xyD5r5rxFDCjfHbZ58Kib`. Model as served: `claude-fable-5-1`, the

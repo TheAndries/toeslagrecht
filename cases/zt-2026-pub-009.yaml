@@ -1,0 +1,25 @@
+id: zt-2026-pub-009
+toeslag: zorgtoeslag
+jaar: 2026
+bron:
+  type: published
+  publicatie: "Dienst Toeslagen, Berekening zorgtoeslag 2026 (TG 082 - 1Z61FD), januari 2026, rekenvoorbeeld 3 (verdragsgerechtigde in België met partner die noch verzekerde noch verdragsgerechtigde is; woonlandfactor 0,8165)"
+  url: https://download.belastingdienst.nl/toeslagen/docs/berekening_zorgtoeslag_tg0821z61fd.pdf
+  opgehaald: 2026-10-08
+verified: false
+invoer:
+  partner: true
+  partner_verzekerd: false
+  partner_verdragsgerechtigd: false
+  aanvrager_verdragsgerechtigd: true
+  woonland: BE
+  toetsingsinkomen_aanvrager: "12000"
+  toetsingsinkomen_partner: "11000"
+  rendementsgrondslag: null
+verwacht:
+  standaardpremie_totaal: "3460.33"
+  normpremie: "1275.37"
+  aanspraak_jaar: "1092.48"
+  aanspraak_maand: "91.04"
+  aanspraak_maand_afgerond_praktijk: 91
+opmerking: "Wzt art. 4a lid 1 en 4 (standaardpremie van beiden × woonlandfactor), art. 2 lid 4 (50%). Zie DISCREPANCIES.md #1 voor de normpremie."

@@ -1,0 +1,20 @@
+# Awir — gedeelde parameters berekeningsjaar 2025. De zorgtoeslag gebruikt hieruit art. 14 lid 4-5.
+# Alleen wat de zorgtoeslag nodig heeft; de vermogensgrenzen van art. 7 lid 3 voor 2025 zijn nog niet vastgelegd.
+jaar: 2025
+status: draft
+geraadpleegd: 2026-10-08
+
+afronding_tegemoetkoming:
+  waarde: "1"
+  eenheid: euro
+  artikel: "Awir art. 14 lid 4"
+  bron: "BWBR0018472, geldend van 01-01-2025 t/m 30-06-2025 (art. 14 lid 4 en 5 verbatim gelezen; latere 2025-versies niet apart gelezen)"
+  url: https://wetten.overheid.nl/BWBR0018472/2025-01-01
+  tekst: "Het bedrag van de tegemoetkoming wordt rekenkundig afgerond op hele euro's."
+
+minimum_tegemoetkoming:
+  waarde: "24"
+  artikel: "Awir art. 14 lid 5"
+  bron: "BWBR0018472, geldend van 01-01-2025 t/m 30-06-2025 (art. 14 lid 4 en 5 verbatim gelezen; latere 2025-versies niet apart gelezen)"
+  url: https://wetten.overheid.nl/BWBR0018472/2025-01-01
+  tekst: "Een tegemoetkoming wordt niet toegekend indien deze minder dan € 24 zou bedragen."

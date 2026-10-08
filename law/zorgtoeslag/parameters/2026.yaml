@@ -2,7 +2,7 @@
 # Bedragen in euro als string, zodat de code met Decimal rekent. Percentages als string, in procenten.
 jaar: 2026
 status: draft
-geraadpleegd: 2026-10-07
+geraadpleegd: 2026-10-08
 
 standaardpremie:
   waarde: "2119"
@@ -15,10 +15,10 @@ standaardpremie:
 wml_maandbedrag_januari:
   waarde: "2294.40"
   artikel: "Wet minimumloon en minimumvakantiebijslag art. 8 lid 1 onder b, bedrag per 1 januari 2026"
-  bron: "Regeling indexatie wettelijk minimumloon per 1 januari 2026, Stcrt. 2025, 34131; redactionele noot bij WML art. 8 op wetten.overheid.nl (BWBR0002638/2026-01-01)"
-  url: https://wetten.overheid.nl/BWBR0002638/2026-01-01
+  bron: "Regeling van de Minister van SZW van 1 oktober 2025, nr. 2025-0000213859, tot indexatie van het wettelijk minimumloon per 1 januari 2026, Stcrt. 2025, 34131, art. 1 onder b (primaire tekst gelezen 2026-10-08)"
+  url: https://zoek.officielebekendmakingen.nl/stcrt-2025-34131.html
   geldig_van: 2026-01-01
-  opmerking: "Primaire Staatscourant-tekst nog niet geopend (law/SOURCES.md)."
+  tekst: "De bedragen, genoemd in artikel 8, eerste lid, onder a en b, van de Wet minimumloon en minimum vakantiebijslag worden met ingang van 1 januari 2026 onderscheidenlijk als volgt vastgesteld: a. € 14,71; b. € 2.294,40."
 
 drempelinkomen_factor:
   waarde: "108"
@@ -31,22 +31,22 @@ drempelinkomen_factor:
 normpremie_percentage_drempel_zonder_partner:
   waarde: "1.912"
   eenheid: procent
-  artikel: "Wet op de zorgtoeslag art. 2 lid 3"
-  bron: "BWBR0018451, geldend van 01-01-2026"
+  artikel: "Wet op de zorgtoeslag art. 2 lid 3 jo. Besluit percentages drempel- en toetsingsinkomen zorgtoeslag art. 1 (berekeningsjaar 2026)"
+  bron: "BWBR0018451, geldend van 01-01-2026; Stb. 2025, 412 (besluit van 4 december 2025; verving het eerder voor 2026 vastgestelde 1,911% uit Stb. 2024, 351)"
   url: https://wetten.overheid.nl/BWBR0018451/2026-01-01
 
 normpremie_percentage_drempel_met_partner:
   waarde: "4.289"
   eenheid: procent
-  artikel: "Wet op de zorgtoeslag art. 2 lid 3"
-  bron: "BWBR0018451, geldend van 01-01-2026"
+  artikel: "Wet op de zorgtoeslag art. 2 lid 3 jo. Besluit percentages drempel- en toetsingsinkomen zorgtoeslag art. 1 (berekeningsjaar 2026)"
+  bron: "BWBR0018451, geldend van 01-01-2026; Stb. 2025, 412 (verving het eerder voor 2026 vastgestelde 4,288% uit Stb. 2024, 351)"
   url: https://wetten.overheid.nl/BWBR0018451/2026-01-01
 
 normpremie_percentage_boven_drempel:
   waarde: "13.730"
   eenheid: procent
-  artikel: "Wet op de zorgtoeslag art. 2 lid 3 (gelijk met en zonder partner)"
-  bron: "BWBR0018451, geldend van 01-01-2026"
+  artikel: "Wet op de zorgtoeslag art. 2 lid 3 (gelijk met en zonder partner) jo. Besluit percentages drempel- en toetsingsinkomen zorgtoeslag art. 1"
+  bron: "BWBR0018451, geldend van 01-01-2026; Stb. 2025, 412 (ongewijzigd ten opzichte van Stb. 2024, 351)"
   url: https://wetten.overheid.nl/BWBR0018451/2026-01-01
 
 aandeel_partner_niet_verzekerd:
@@ -59,11 +59,58 @@ aandeel_partner_niet_verzekerd:
 vermogensgrens_zonder_partner:
   waarde: "146011"
   artikel: "Wet op de zorgtoeslag art. 3 lid 1 (rendementsgrondslag, art. 5.3 Wet IB 2001, begin berekeningsjaar; vrijstelling art. 5.13 Wet IB 2001 telt niet)"
-  bron: "BWBR0018451, geldend van 01-01-2026"
+  bron: "BWBR0018451, geldend van 01-01-2026; gewijzigd bij Regeling van 4 november 2025, Stcrt. 2025, 38110 (tabelcorrectiefactor 2,9%; de regeling noemt 'artikel 3a', de wet kent alleen artikel 3)"
   url: https://wetten.overheid.nl/BWBR0018451/2026-01-01
 
 vermogensgrens_met_partner:
   waarde: "184633"
   artikel: "Wet op de zorgtoeslag art. 3 lid 1 (gezamenlijke rendementsgrondslag; alleen bij het gehele berekeningsjaar dezelfde partner)"
-  bron: "BWBR0018451, geldend van 01-01-2026"
+  bron: "BWBR0018451, geldend van 01-01-2026; Stcrt. 2025, 38110"
   url: https://wetten.overheid.nl/BWBR0018451/2026-01-01
+
+woonlandfactoren:
+  artikel: "Wet op de zorgtoeslag art. 4a lid 1 en 2 jo. Regeling zorgverzekering art. 6.3.1 lid 9 en bijlage 4"
+  bron: "Regeling zorgverzekering (BWBR0018715), bijlage 4, geldend van 01-01-2026 t/m 31-01-2026; dezelfde getallen in Dienst Toeslagen, Berekening zorgtoeslag 2026, tabel woonlandfactor"
+  url: https://wetten.overheid.nl/BWBR0018715/2026-01-01
+  geldig_van: 2026-01-01
+  opmerking: "Landcodes ISO 3166-1 alpha-2, toegevoegd door het project; de bijlage noemt alleen de landnaam. De bijlage schrijft Kaapverdië, Noord-Macedonië en Verenigd Koninkrijk; de Dienst schrijft Kaap-Verdië, Republiek Noord-Macedonië en Groot-Brittannië. Staatscourant-nummer van de wijzigingsregeling nog niet vastgelegd (law/SOURCES.md)."
+  landen:
+    BE: "0.8165"   # België
+    BA: "0.0881"   # Bosnië-Herzegovina
+    BG: "0.1363"   # Bulgarije
+    CY: "0.4498"   # Cyprus
+    DK: "1.0000"   # Denemarken
+    DE: "1.0000"   # Duitsland
+    EE: "0.3057"   # Estland
+    FI: "0.8148"   # Finland
+    FR: "0.8304"   # Frankrijk
+    GR: "0.2206"   # Griekenland
+    HU: "0.1887"   # Hongarije
+    IS: "1.0000"   # IJsland
+    IE: "0.9789"   # Ierland
+    IT: "0.4641"   # Italië
+    CV: "0.0346"   # Kaapverdië
+    HR: "0.3201"   # Kroatië
+    LV: "0.2110"   # Letland
+    LI: "1.0000"   # Liechtenstein
+    LT: "0.2459"   # Litouwen
+    LU: "0.8430"   # Luxemburg
+    MT: "0.4370"   # Malta
+    MA: "0.0212"   # Marokko
+    ME: "0.1202"   # Montenegro
+    MK: "0.0599"   # Noord-Macedonië
+    NO: "1.0000"   # Noorwegen
+    AT: "0.9177"   # Oostenrijk
+    PL: "0.1940"   # Polen
+    PT: "0.3205"   # Portugal
+    RO: "0.1453"   # Roemenië
+    RS: "0.1118"   # Servië
+    SI: "0.4029"   # Slovenië
+    SK: "0.2684"   # Slowakije
+    ES: "0.4408"   # Spanje
+    CZ: "0.4257"   # Tsjechië
+    TN: "0.0306"   # Tunesië
+    TR: "0.0682"   # Turkije
+    GB: "0.8498"   # Verenigd Koninkrijk
+    SE: "1.0000"   # Zweden
+    CH: "1.0000"   # Zwitserland

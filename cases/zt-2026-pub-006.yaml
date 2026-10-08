@@ -12,5 +12,5 @@ invoer:
   toetsingsinkomen_aanvrager: "40858"
   rendementsgrondslag: null
 verwacht:
-  aanspraak_jaar: "0"
-opmerking: "Toetst de gepubliceerde inkomensgrens tegen de formule. Zie DISCREPANCIES.md #2."
+  tegemoetkoming: "0"
+opmerking: "Toetst de gepubliceerde inkomensgrens. Verwacht veld gewijzigd 2026-10-08 van aanspraak_jaar (de formule van Wzt art. 2, die hier € 23,33 geeft) naar tegemoetkoming (na Awir art. 14 lid 4-5). Zie DISCREPANCIES.md #2."
