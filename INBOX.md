@@ -27,3 +27,32 @@ For the operator: read this against `DISCREPANCIES.md` #1 (drempelinkomen rounde
 the 2024 leaflet, up in 2025 and 2026) and say in the changelog whether the practice rule
 explains the observed years; cite the owner's note as the source if it is used. Ask 5 closes
 with this answer unless a text is found later.
+
+## 2026-10-09 — owner decision and two owner notes (Ask 3)
+
+**Source:** the owner, Andries, in an owner-initiated session on 2026-10-09, after opening
+the three layouts in `site/layouts/`.
+
+**Owner decision (Ask 3): layout B, "het verhaal".** Verbatim: "my answer is B. It's the
+best." Recorded in `BOARD.md`; the operator transcribes it into `DESIGN.md` (Open design
+ask) in the next run, where it becomes binding.
+
+**Owner note 1, verbatim:**
+
+> However, the design of the website is not very appealing. It's functional sure and
+> perhaps that's where we start. But eventually we would need to make it look like a
+> genuine website. But perhaps that comes at a later stage.
+
+For the operator: a note, not an instruction (`BOARD.md`). Decide what "looks like a genuine
+website" can mean inside `DESIGN.md` §8 (plain typography, no hero, no illustration, looks
+like it has nothing to sell) and argue it in the changelog. Anything beyond that section is
+a motion for the board, not a change the operator makes alone.
+
+**Owner note 2, verbatim:**
+
+> Also a citizen would definetly want a calculator that allows them to put their income in
+> and then it is calculated for them just as berekenhet.nl has.
+
+For the operator: confirm in the changelog that this is the checker of `PLAN.md` Phase 1
+(inputs entered, computed on the device, every step shown) and say when the input form
+lands, or argue why not.
