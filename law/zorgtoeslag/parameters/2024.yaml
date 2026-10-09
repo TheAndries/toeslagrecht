@@ -1,0 +1,125 @@
+# Zorgtoeslag — parameters berekeningsjaar 2024. Elk getal met zijn bron (CHARTER.md P1).
+# Bedragen in euro als string, zodat de code met Decimal rekent. Percentages als string, in procenten.
+# Let op de artikelnummering van 2024: de vermogenstoets stond in art. 2a en de woonlandfactor in art. 3.
+# Per 06-11-2024 (Stb. 2024, 291, art. XIX; inwerkingtreding Stb. 2024, 322) is art. 2a vernummerd tot
+# art. 3 en art. 3 tot art. 4a, met een nieuw lid 3 in art. 4a. Geen bedrag of percentage veranderde.
+jaar: 2024
+status: draft
+geraadpleegd: 2026-10-09
+versie: "BWBR0018451, geldend van 01-01-2024 t/m 05-11-2024; vanaf 06-11-2024 t/m 31-12-2024 vernummerd (art. 2a → 3, art. 3 → 4a), bedragen gelijk"
+artikel_vermogenstoets: "Wzt art. 2a lid 1 (tekst t/m 05-11-2024; daarna art. 3 lid 1)"
+artikel_woonlandfactor: "Wzt art. 3 (tekst t/m 05-11-2024; daarna art. 4a)"
+art4a_lid3_aanwezig: false
+art4a_lid3_opmerking: "Het huidige art. 4a lid 3 (verzekerde aanvrager met een verdragsgerechtigde partner) is ingevoegd per 06-11-2024 (Stb. 2024, 291, art. XIX onder C). Vóór die datum regelde de tekst dat geval niet; de encoding geeft dan 'undetermined'."
+
+standaardpremie:
+  waarde: "1987"
+  artikel: "Wet op de zorgtoeslag art. 4 jo. Regeling vaststelling standaardpremie en bestuursrechtelijke premies 2024, art. 1"
+  bron: "Regeling van de Minister van VWS van 20 november 2023, kenmerk 3704792-1055150-Z, Stcrt. 2023, 32413 (primaire tekst gelezen 2026-10-09); geconsolideerd BWBR0049005"
+  url: https://zoek.officielebekendmakingen.nl/stcrt-2023-32413.html
+  geldig_van: 2024-01-01
+  tekst: "De standaardpremie, bedoeld in artikel 1, onderdeel g, van de Wet op de zorgtoeslag, bedraagt voor het berekeningsjaar 2024 € 1.987."
+
+wml_maandbedrag_januari:
+  waarde: "2069.40"
+  artikel: "Wet minimumloon en minimumvakantiebijslag art. 8 lid 1 onder b, bedrag per 1 januari 2024 (het referentiemaandloon; sinds 01-01-2024 geldt voor werknemers een minimumuurloon, onder a)"
+  bron: "Regeling van de Minister van SZW van 9 oktober 2023, nr. 2023-0000522401, tot indexatie van het wettelijk minimumloon en bekendmaking van het wettelijk minimumuurloon per 1 januari 2024, Stcrt. 2023, 28170, art. 1 onder b (primaire tekst gelezen 2026-10-09); redactionele noot bij WML art. 8 (BWBR0002638, geldend van 01-01-2024): 'per 1 januari 2024 € 2.069,40'"
+  url: https://zoek.officielebekendmakingen.nl/stcrt-2023-28170.html
+  geldig_van: 2024-01-01
+  tekst: "a. € 13,27; b. € 2.069,40."
+
+drempelinkomen_factor:
+  waarde: "108"
+  eenheid: procent
+  artikel: "Wet op de zorgtoeslag art. 1 lid 1 onder f"
+  bron: "BWBR0018451, geldend van 01-01-2024 t/m 05-11-2024 (zelfde tekst als 2025 en 2026)"
+  url: https://wetten.overheid.nl/BWBR0018451/2024-01-01
+  tekst: "drempelinkomen: 108% van het twaalfvoud van het voor de maand januari van het berekeningsjaar geldende in artikel 8, eerste lid, onderdeel b, van de Wet minimumloon en minimumvakantiebijslag bedoelde bedrag per maand"
+  opmerking: "108% × 12 × € 2.069,40 = € 26.819,424. Dienst Toeslagen, Berekening zorgtoeslag 2024: 'vastgesteld op € 26.819' (hier naar beneden; in 2025 en 2026 rondde de Dienst naar boven). Zie DISCREPANCIES.md #1."
+
+normpremie_percentage_drempel_zonder_partner:
+  waarde: "1.879"
+  eenheid: procent
+  artikel: "Wet op de zorgtoeslag art. 2 lid 3 (tekst 2024: 'voor een verzekerde zonder partner op 1,879% van het drempelinkomen'), zoals gewijzigd bij Besluit percentages drempel- en toetsingsinkomen zorgtoeslag art. 1, rij 2024"
+  bron: "BWBR0018451, geldend van 01-01-2024 t/m 05-11-2024 (verbatim); Stb. 2022, 472 (besluit van 24 november 2022, schema 2023–2040, rij 2024; primaire tekst gelezen 2026-10-09)"
+  url: https://wetten.overheid.nl/BWBR0018451/2024-01-01
+
+normpremie_percentage_drempel_met_partner:
+  waarde: "4.256"
+  eenheid: procent
+  artikel: "Wet op de zorgtoeslag art. 2 lid 3 (tekst 2024: 'voor verzekerden met een partner vastgesteld op 4,256% van het drempelinkomen') jo. Besluit percentages drempel- en toetsingsinkomen zorgtoeslag art. 1, rij 2024"
+  bron: "BWBR0018451, geldend van 01-01-2024 t/m 05-11-2024 (verbatim); Stb. 2022, 472"
+  url: https://wetten.overheid.nl/BWBR0018451/2024-01-01
+
+normpremie_percentage_boven_drempel:
+  waarde: "13.670"
+  eenheid: procent
+  artikel: "Wet op de zorgtoeslag art. 2 lid 3 (tekst 2024: 'vermeerderd met 13,670% van het toetsingsinkomen voor zover dat boven het drempelinkomen uitgaat', gelijk met en zonder partner) jo. Besluit percentages drempel- en toetsingsinkomen zorgtoeslag art. 1, rij 2024"
+  bron: "BWBR0018451, geldend van 01-01-2024 t/m 05-11-2024 (verbatim); Stb. 2022, 472"
+  url: https://wetten.overheid.nl/BWBR0018451/2024-01-01
+
+aandeel_partner_niet_verzekerd:
+  waarde: "50"
+  eenheid: procent
+  artikel: "Wet op de zorgtoeslag art. 2 lid 4"
+  bron: "BWBR0018451, geldend van 01-01-2024 t/m 05-11-2024 (verbatim, zelfde tekst als 2026)"
+  url: https://wetten.overheid.nl/BWBR0018451/2024-01-01
+
+vermogensgrens_zonder_partner:
+  waarde: "140213"
+  artikel: "Wet op de zorgtoeslag art. 2a lid 1 (tekst 2024; vanaf 06-11-2024 art. 3 lid 1) (rendementsgrondslag, art. 5.3 Wet IB 2001, begin berekeningsjaar; vrijstelling art. 5.13 Wet IB 2001 telt niet)"
+  bron: "BWBR0018451, geldend van 01-01-2024 t/m 05-11-2024 (verbatim); gewijzigd bij Regeling van de Minister van VWS van 17 oktober 2023, Stcrt. 2023, 29706 (van € 127.582; tabelcorrectiefactor; primaire tekst gelezen 2026-10-09)"
+  url: https://wetten.overheid.nl/BWBR0018451/2024-01-01
+
+vermogensgrens_met_partner:
+  waarde: "177301"
+  artikel: "Wet op de zorgtoeslag art. 2a lid 1 (tekst 2024; vanaf 06-11-2024 art. 3 lid 1) (gezamenlijke rendementsgrondslag; alleen bij het gehele berekeningsjaar dezelfde partner)"
+  bron: "BWBR0018451, geldend van 01-01-2024 t/m 05-11-2024 (verbatim); Stcrt. 2023, 29706 (van € 161.329)"
+  url: https://wetten.overheid.nl/BWBR0018451/2024-01-01
+
+woonlandfactoren:
+  artikel: "Wet op de zorgtoeslag art. 3 lid 1 en 2 (tekst 2024; vanaf 06-11-2024 art. 4a lid 1 en 2) jo. Regeling zorgverzekering art. 6.3.1 lid 9 en bijlage 4"
+  bron: "Regeling zorgverzekering (BWBR0018715), bijlage 4, geldend van 01-01-2024 t/m 04-01-2024 (verbatim, 2026-10-09); vastgesteld bij Regeling van de Minister van VWS van 24 oktober 2023, Stcrt. 2023, 29907, art. I (in werking 01-01-2024); dezelfde getallen in Dienst Toeslagen, Berekening zorgtoeslag 2024, tabel woonlandfactor"
+  url: https://wetten.overheid.nl/BWBR0018715/2024-01-01
+  geldig_van: 2024-01-01
+  opmerking: "Landcodes ISO 3166-1 alpha-2, toegevoegd door het project; de bijlage noemt alleen de landnaam. De Dienst schrijft in 2024 Bondsrepubliek Duitsland, Grootbrittannië, Macedonië en Kaap-Verdië; de bijlage Duitsland, Verenigd Koninkrijk, Noord-Macedonië en Kaapverdië."
+  landen:
+    BE: "0.7663"   # België
+    BA: "0.0795"   # Bosnië-Herzegovina
+    BG: "0.1067"   # Bulgarije
+    CY: "0.3193"   # Cyprus
+    DK: "1.0000"   # Denemarken
+    DE: "0.9485"   # Duitsland
+    EE: "0.2780"   # Estland
+    FI: "0.7342"   # Finland
+    FR: "0.8365"   # Frankrijk
+    GR: "0.2146"   # Griekenland
+    HU: "0.1667"   # Hongarije
+    IS: "1.0000"   # IJsland
+    IE: "0.9386"   # Ierland
+    IT: "0.4825"   # Italië
+    CV: "0.0250"   # Kaapverdië
+    HR: "0.3783"   # Kroatië
+    LV: "0.1734"   # Letland
+    LI: "1.0000"   # Liechtenstein
+    LT: "0.2422"   # Litouwen
+    LU: "0.7980"   # Luxemburg
+    MT: "0.4034"   # Malta
+    MA: "0.0219"   # Marokko
+    ME: "0.0980"   # Montenegro
+    MK: "0.0580"   # Noord-Macedonië
+    NO: "1.0000"   # Noorwegen
+    AT: "0.8145"   # Oostenrijk
+    PL: "0.1613"   # Polen
+    PT: "0.2955"   # Portugal
+    RO: "0.1263"   # Roemenië
+    RS: "0.0919"   # Servië
+    SI: "0.3619"   # Slovenië
+    SK: "0.2452"   # Slowakije
+    ES: "0.4268"   # Spanje
+    CZ: "0.3649"   # Tsjechië
+    TN: "0.0289"   # Tunesië
+    TR: "0.0633"   # Turkije
+    GB: "0.7692"   # Verenigd Koninkrijk
+    SE: "0.9596"   # Zweden
+    CH: "1.0000"   # Zwitserland

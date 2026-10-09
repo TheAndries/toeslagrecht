@@ -1,0 +1,16 @@
+id: zt-2026-tab-zp-41000-en-meer
+toeslag: zorgtoeslag
+jaar: 2026
+bron:
+  type: published
+  publicatie: "Belastingdienst, 'Hoeveel zorgtoeslag krijg ik?', tabel zorgtoeslag per maand 2026 zonder toeslagpartner, laatste rij '€ 41.000 en meer' → 'U krijgt geen zorgtoeslag'"
+  url: https://www.belastingdienst.nl/wps/wcm/connect/nl/zorgtoeslag/content/hoeveel-zorgtoeslag
+  opgehaald: 2026-10-09
+verified: false
+invoer:
+  partner: false
+  toetsingsinkomen_aanvrager: "41000"
+  rendementsgrondslag: null
+verwacht:
+  tegemoetkoming: "0"
+opmerking: "Laatste rij van de tabel, op het genoemde inkomen zelf ('en meer' sluit het in)."

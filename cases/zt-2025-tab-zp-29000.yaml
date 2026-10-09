@@ -1,0 +1,16 @@
+id: zt-2025-tab-zp-29000
+toeslag: zorgtoeslag
+jaar: 2025
+bron:
+  type: published
+  publicatie: "Belastingdienst, 'Hoeveel zorgtoeslag krijg ik?', tabel zorgtoeslag per maand 2025 zonder toeslagpartner, rij 'tot € 29.000' → '€ 124'; 'De bedragen per maand zijn afgerond'"
+  url: https://www.belastingdienst.nl/wps/wcm/connect/nl/zorgtoeslag/content/hoeveel-zorgtoeslag
+  opgehaald: 2026-10-09
+verified: false
+invoer:
+  partner: false
+  toetsingsinkomen_aanvrager: "29000"
+  rendementsgrondslag: null
+verwacht:
+  aanspraak_maand_afgerond_praktijk: 124
+opmerking: "Tabelrij uit de volledige tabel (sweep 2026-10-09); alleen het afgeronde maandbedrag is gepubliceerd. De rij geldt 'tot' het genoemde inkomen; de bovengrens van de rij is als invoer genomen, zoals bij zt-2026-pub-001..005."

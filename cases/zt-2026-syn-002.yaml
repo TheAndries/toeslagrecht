@@ -1,0 +1,16 @@
+id: zt-2026-syn-002
+toeslag: zorgtoeslag
+jaar: 2026
+bron:
+  type: synthetic
+  publicatie: "Geconstrueerd door de operator: rendementsgrondslag één euro boven / precies op de grens van Wzt art. 3 lid 1 (2026: € 146.011). Geen gepubliceerd getal."
+  url: https://wetten.overheid.nl/BWBR0018451/2026-01-01
+  opgehaald: 2026-10-09
+verified: false
+invoer:
+  partner: false
+  toetsingsinkomen_aanvrager: "20000"
+  rendementsgrondslag: "146012"
+verwacht:
+  tegemoetkoming: "0"
+opmerking: "'meer bedraagt dan € 146.011': € 146.012 is erboven, het hele jaar geen aanspraak. Synthetisch; telt nooit als verificatie (CASES.md)."

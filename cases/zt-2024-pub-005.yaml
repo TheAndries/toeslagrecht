@@ -1,0 +1,16 @@
+id: zt-2024-pub-005
+toeslag: zorgtoeslag
+jaar: 2024
+bron:
+  type: published
+  publicatie: "Dienst Toeslagen, Berekening zorgtoeslag 2024, stap 2: 'Uw klant heeft geen recht op zorgtoeslag als het toetsingsinkomen hoger is dan € 37.496 (aanvrager zonder toeslagpartner), € 47.368 (aanvrager met toeslagpartner)'"
+  url: https://download.belastingdienst.nl/toeslagen/docs/berekening_zorgtoeslag_tg0821z41fd.pdf
+  opgehaald: 2026-10-09
+verified: false
+invoer:
+  partner: false
+  toetsingsinkomen_aanvrager: "37497"
+  rendementsgrondslag: null
+verwacht:
+  tegemoetkoming: "0"
+opmerking: "Eén euro boven de grens: geen recht (≈ € 23,4 → € 23 < € 24)."

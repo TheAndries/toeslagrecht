@@ -38,7 +38,7 @@ def load_params(toeslag: str, jaar: int) -> dict:
     with open(p, encoding="utf-8") as f:
         par = yaml.safe_load(f)
     if toeslag == "zorgtoeslag":
-        par["_versie"] = f"BWBR0018451, geldend van 01-01-{jaar}"
+        par.setdefault("versie", f"BWBR0018451, geldend van 01-01-{jaar}")
     return par
 
 

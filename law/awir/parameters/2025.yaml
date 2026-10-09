@@ -1,8 +1,26 @@
 # Awir — gedeelde parameters berekeningsjaar 2025. De zorgtoeslag gebruikt hieruit art. 14 lid 4-5.
-# Alleen wat de zorgtoeslag nodig heeft; de vermogensgrenzen van art. 7 lid 3 voor 2025 zijn nog niet vastgelegd.
 jaar: 2025
 status: draft
-geraadpleegd: 2026-10-08
+geraadpleegd: 2026-10-09
+
+vermogensgrens_algemeen:
+  waarde: "37395"
+  artikel: "Awir art. 7 lid 3 (rendementsgrondslag belanghebbende, begin berekeningsjaar)"
+  bron: "BWBR0018472, geldend van 01-01-2025 t/m 30-06-2025 (verbatim); van € 36.952 bij Bijstellingsregeling directe belastingen 2025, Stcrt. 2024, 38492, art. V onder A (primaire tekst gelezen 2026-10-09)"
+  url: https://wetten.overheid.nl/BWBR0018472/2025-01-01
+  opmerking: "Geldt alleen voor regelingen zonder eigen grens; niet voor de zorgtoeslag."
+
+vermogensgrens_algemeen_met_partner:
+  waarde: "74790"
+  artikel: "Awir art. 7 lid 3"
+  bron: "Stcrt. 2024, 38492, art. V onder A ('€ 73.904' vervangen door '€ 74.790')"
+  url: https://zoek.officielebekendmakingen.nl/stcrt-2024-38492.html
+
+medebewoner_vrijstelling_onder_23:
+  waarde: "6042"
+  artikel: "Awir art. 7 lid 6"
+  bron: "BWBR0018472, geldend van 01-01-2025 t/m 30-06-2025 (verbatim); van € 5.970 bij Stcrt. 2024, 38492, art. V onder A"
+  url: https://wetten.overheid.nl/BWBR0018472/2025-01-01
 
 afronding_tegemoetkoming:
   waarde: "1"

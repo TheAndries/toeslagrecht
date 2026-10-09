@@ -1,0 +1,21 @@
+id: zt-2024-pub-002
+toeslag: zorgtoeslag
+jaar: 2024
+bron:
+  type: published
+  publicatie: "Dienst Toeslagen, Berekening zorgtoeslag 2024 (TG 082 - 1Z41FD, januari 2024), rekenvoorbeeld 2: gehuwd, aanvrager € 7.000, partner € 26.200, partner geen verzekerde (militair); normpremie € 2.013,70; subtotaal € 1.960,30; 50%: € 980,15 per jaar; per maand € 81,68 (na afronding € 81)"
+  url: https://download.belastingdienst.nl/toeslagen/docs/berekening_zorgtoeslag_tg0821z41fd.pdf
+  opgehaald: 2026-10-09
+verified: false
+invoer:
+  partner: true
+  partner_verzekerd: false
+  toetsingsinkomen_aanvrager: "7000"
+  toetsingsinkomen_partner: "26200"
+  rendementsgrondslag: null
+verwacht:
+  normpremie: "2013.70"
+  aanspraak_jaar: "980.15"
+  aanspraak_maand: "81.68"
+  aanspraak_maand_afgerond_praktijk: 81
+opmerking: "Zelfde constructie als het voorbeeld van 2025 en 2026 (Wzt art. 2 lid 4). Dienst rekent met drempelinkomen € 26.819; DISCREPANCIES.md #1."

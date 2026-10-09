@@ -50,8 +50,11 @@ maand erna.
 ## awir-2026-art14-4 — afronding van de tegemoetkoming
 
 **Artikel:** Awir art. 14 lid 4: "Het bedrag van de tegemoetkoming wordt rekenkundig afgerond
-op hele euro's." (BWBR0018472, geldend van 01-01-2026; dezelfde tekst in de versie van
-01-01-2025, verbatim gelezen 2026-10-08.)
+op hele euro's." (BWBR0018472, geldend van 01-01-2026; dezelfde tekst in de versies van
+01-01-2025 en 01-01-2024, verbatim gelezen 2026-10-08 en 2026-10-09. De wetstechnische informatie
+van art. 14 vermeldt geen enkele wijziging van het artikel, geraadpleegd 2026-10-09.) De bedragen
+van art. 7 lid 3, 4 en 6 en art. 26a per jaar staan in `parameters/<jaar>.yaml` (2024, 2025:
+Stcrt. 2024, 38492; 2026: Stcrt. 2025, 40487); de zorgtoeslag gebruikt ze niet (Wzt art. 3 lid 1).
 **Status:** draft.
 **Gewoon Nederlands:** Het jaarbedrag van uw toeslag wordt afgerond op hele euro's, op de
 gewone manier: vijftig cent of meer gaat omhoog.

@@ -1,0 +1,17 @@
+id: zt-2026-tab-mp-44000
+toeslag: zorgtoeslag
+jaar: 2026
+bron:
+  type: published
+  publicatie: "Belastingdienst, 'Hoeveel zorgtoeslag krijg ik?', tabel zorgtoeslag per maand 2026 met toeslagpartner, rij 'tot € 44.000' → '€ 83'; 'De bedragen per maand zijn afgerond'"
+  url: https://www.belastingdienst.nl/wps/wcm/connect/nl/zorgtoeslag/content/hoeveel-zorgtoeslag
+  opgehaald: 2026-10-09
+verified: false
+invoer:
+  partner: true
+  toetsingsinkomen_aanvrager: "44000"
+  toetsingsinkomen_partner: "0"
+  rendementsgrondslag: null
+verwacht:
+  aanspraak_maand_afgerond_praktijk: 83
+opmerking: "Tabelrij uit de volledige tabel (sweep 2026-10-09); alleen het afgeronde maandbedrag is gepubliceerd. De rij geldt 'tot' het genoemde inkomen; de bovengrens van de rij is als invoer genomen, zoals bij zt-2026-pub-001..005. Het gezamenlijke toetsingsinkomen is wat telt (Awir art. 7 lid 1); het is hier geheel aan de aanvrager toegerekend."

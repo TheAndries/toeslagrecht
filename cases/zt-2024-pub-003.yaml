@@ -1,0 +1,25 @@
+id: zt-2024-pub-003
+toeslag: zorgtoeslag
+jaar: 2024
+bron:
+  type: published
+  publicatie: "Dienst Toeslagen, Berekening zorgtoeslag 2024 (TG 082 - 1Z41FD, januari 2024), rekenvoorbeeld 3: gehuwd, wonend in Duitsland; aanvrager verdragsgerechtigd (CAK) met AOW € 9.000, partner in Duitsland verzekerd met € 11.000; standaardpremie € 3.974 × 0,9485 = € 3.769,34; normpremie € 1.141,42; subtotaal € 2.627,92; 50%: € 1.313,96 per jaar; per maand € 109,50 (na afronding € 109)"
+  url: https://download.belastingdienst.nl/toeslagen/docs/berekening_zorgtoeslag_tg0821z41fd.pdf
+  opgehaald: 2026-10-09
+verified: false
+invoer:
+  partner: true
+  partner_verzekerd: false
+  partner_verdragsgerechtigd: false
+  aanvrager_verdragsgerechtigd: true
+  woonland: DE
+  toetsingsinkomen_aanvrager: "9000"
+  toetsingsinkomen_partner: "11000"
+  rendementsgrondslag: null
+verwacht:
+  standaardpremie_totaal: "3769.34"
+  normpremie: "1141.42"
+  aanspraak_jaar: "1313.96"
+  aanspraak_maand: "109.50"
+  aanspraak_maand_afgerond_praktijk: 109
+opmerking: "Woonlandfactor Duitsland 2024 0,9485 (Rzv bijlage 4, Stcrt. 2023, 29907). In 2024 heet het artikel art. 3 (per 06-11-2024 art. 4a). Dienst rekent met drempelinkomen € 26.819; DISCREPANCIES.md #1."

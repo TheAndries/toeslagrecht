@@ -1,0 +1,39 @@
+# Awir — gedeelde parameters berekeningsjaar 2024. De zorgtoeslag gebruikt hieruit art. 14 lid 4-5 (afronding,
+# minimumbedrag); zij heeft eigen vermogensgrenzen (Wzt art. 2a lid 1 in 2024 wijkt af van Awir art. 7 lid 3).
+jaar: 2024
+status: draft
+geraadpleegd: 2026-10-09
+
+vermogensgrens_algemeen:
+  waarde: "36952"
+  artikel: "Awir art. 7 lid 3 (rendementsgrondslag belanghebbende, begin berekeningsjaar)"
+  bron: "BWBR0018472, geldend van 01-01-2024 t/m 05-11-2024 (verbatim); vervangen per 01-01-2025 door € 37.395 (Bijstellingsregeling directe belastingen 2025, Stcrt. 2024, 38492, art. V onder A)"
+  url: https://wetten.overheid.nl/BWBR0018472/2024-01-01
+  opmerking: "Geldt alleen voor regelingen zonder eigen grens; niet voor de zorgtoeslag."
+
+vermogensgrens_algemeen_met_partner:
+  waarde: "73904"
+  artikel: "Awir art. 7 lid 3"
+  bron: "Stcrt. 2024, 38492, art. V onder A ('€ 73.904' vervangen door '€ 74.790' per 01-01-2025); het bedrag 2024 is uit die vervanging afgeleid en in de geconsolideerde tekst van 01-01-2024 (art. 7 lid 3, tweede zin) niet apart nagelezen"
+  url: https://zoek.officielebekendmakingen.nl/stcrt-2024-38492.html
+
+medebewoner_vrijstelling_onder_23:
+  waarde: "5970"
+  artikel: "Awir art. 7 lid 6"
+  bron: "BWBR0018472, geldend van 01-01-2024 t/m 05-11-2024 (verbatim); vervangen per 01-01-2025 door € 6.042 (Stcrt. 2024, 38492)"
+  url: https://wetten.overheid.nl/BWBR0018472/2024-01-01
+
+afronding_tegemoetkoming:
+  waarde: "1"
+  eenheid: euro
+  artikel: "Awir art. 14 lid 4"
+  bron: "BWBR0018472, geldend van 01-01-2024 t/m 05-11-2024 (verbatim gelezen 2026-10-09); dezelfde tekst in 2025 en 2026; de wetstechnische informatie van art. 14 (geraadpleegd 2026-10-09) vermeldt geen wijziging van het artikel"
+  url: https://wetten.overheid.nl/BWBR0018472/2024-01-01
+  tekst: "Het bedrag van de tegemoetkoming wordt rekenkundig afgerond op hele euro's."
+
+minimum_tegemoetkoming:
+  waarde: "24"
+  artikel: "Awir art. 14 lid 5"
+  bron: "BWBR0018472, geldend van 01-01-2024 t/m 05-11-2024 (verbatim gelezen 2026-10-09)"
+  url: https://wetten.overheid.nl/BWBR0018472/2024-01-01
+  tekst: "Een tegemoetkoming wordt niet toegekend indien deze minder dan € 24 zou bedragen."

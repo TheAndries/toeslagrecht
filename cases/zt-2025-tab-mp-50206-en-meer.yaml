@@ -1,0 +1,17 @@
+id: zt-2025-tab-mp-50206-en-meer
+toeslag: zorgtoeslag
+jaar: 2025
+bron:
+  type: published
+  publicatie: "Belastingdienst, 'Hoeveel zorgtoeslag krijg ik?', tabel zorgtoeslag per maand 2025 met toeslagpartner, laatste rij '€ 50.206 en meer' → 'U krijgt geen zorgtoeslag'"
+  url: https://www.belastingdienst.nl/wps/wcm/connect/nl/zorgtoeslag/content/hoeveel-zorgtoeslag
+  opgehaald: 2026-10-09
+verified: false
+invoer:
+  partner: true
+  toetsingsinkomen_aanvrager: "50206"
+  toetsingsinkomen_partner: "0"
+  rendementsgrondslag: null
+verwacht:
+  tegemoetkoming: "0"
+opmerking: "Laatste rij van de tabel, op het genoemde inkomen zelf ('en meer' sluit het in). Let op: dezelfde Belastingdienst publiceert op 'Hoeveel inkomen mag ik hebben voor zorgtoeslag?' € 50.206 als grens waarop nog wél recht bestaat ('niet boven de grens van' / 'niet meer dan'), en het rekenvoorbeeld van de Dienst geeft op dit inkomen € 24 per jaar. De tabelrij spreekt de grenspagina tegen op precies deze euro."
