@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Index — toeslagrecht</title><style>
+<title>Start — toeslagrecht</title><style>
 :root{--ink:#1a1a1a;--paper:#fff;--rule:#bbb;--law:#444;--muted:#555;--mark:#f4f1ea}
 @media (prefers-color-scheme:dark){:root{--ink:#eee;--paper:#161616;--rule:#555;--law:#ccc;--muted:#aaa;--mark:#242220}}
 *{box-sizing:border-box}html{font-size:112.5%}
@@ -20,22 +20,44 @@ aside.wet{margin:.3rem 0 0;padding-left:.75rem;border-left:3px solid var(--rule)
 .brief{border:1px solid var(--rule);padding:.9rem;margin:.75rem 0;background:var(--mark)}
 .brief dl{display:grid;grid-template-columns:1fr auto;gap:.3rem .75rem;margin:0}.brief dd{margin:0;text-align:right;font-variant-numeric:tabular-nums}
 nav.layouts a{margin-right:1rem}
+header.kop{border-bottom:1px solid var(--rule);margin-bottom:.75rem}header.kop p{margin:.4rem 0}
+fieldset{border:1px solid var(--rule);padding:.75rem 1rem 1rem;margin:1rem 0}legend{font-weight:600;padding:0 .3rem}
+.veld{margin:.9rem 0}.veld label,.veld .label{display:block;font-weight:600;margin:0 0 .3rem}
+.keuzes label{display:inline-block;font-weight:400;margin:.2rem 1.25rem .2rem 0;min-height:2.75rem;line-height:2.75rem}
+.keuzes input{width:1.3rem;height:1.3rem;vertical-align:middle;margin:0 .35rem 0 0}
+input[type=text],select{font:inherit;color:inherit;background:var(--paper);border:1px solid var(--law);border-radius:3px;padding:.5rem .6rem;min-height:2.75rem;width:100%;max-width:18rem}
+.hint{font-size:.9rem;color:var(--muted);margin:.3rem 0 0}
+details.meer{border:1px solid var(--rule);padding:.5rem 1rem;margin:1rem 0}details.meer summary{font-weight:600;cursor:pointer;min-height:2rem;line-height:2rem}
+.knop{font:inherit;font-weight:600;color:var(--paper);background:var(--ink);border:0;border-radius:3px;padding:.75rem 1.5rem;min-height:2.75rem;cursor:pointer}
+.fout{border-left:3px solid var(--ink);padding-left:.75rem;font-weight:600}
+section#uitkomst{margin-top:2rem;padding-top:1rem;border-top:2px solid var(--ink)}section#uitkomst:focus{outline:none}
+footer.voet{margin-top:2.5rem;border-top:1px solid var(--rule);padding-top:.5rem}
+ul.dossier,ul.onbepaald{padding-left:1.25rem}ul.dossier li,ul.onbepaald li{margin:.35rem 0}
 :focus-visible{outline:3px solid currentColor;outline-offset:2px}
 @media (max-width:30rem){table,thead,tbody,tr,td,th{display:block}thead{position:absolute;left:-9999px}td{border:0;padding:.15rem 0}td.n{text-align:left}tr{border-bottom:1px solid var(--rule);padding:.5rem 0}td::before{content:attr(data-h) " ";color:var(--muted)}}
 </style></head>
 <body><main>
 <p class="klein">toeslagrecht · zorgtoeslag · 2026 · <span class="status">alle regels: draft</span></p>
+<header class="kop"><p class="klein">toeslagrecht · <span class="status">alle regels: draft</span></p></header>
 <h1>toeslagrecht</h1>
-<p>Dutch benefit law as open, dated, testable code, with the record behind it. Nothing here is finished:
-every rule is <span class="status">draft</span>, no case is verified, and the result page has not been chosen.</p>
-<h2>Three layouts of one computation (Ask 3)</h2>
-<p>Zorgtoeslag 2026, zonder partner, toetsingsinkomen € 32.000. The same steps, three ways:</p>
-<ul><li><a href="layouts/a.html">A — de tabel</a></li><li><a href="layouts/b.html">B — het verhaal</a></li><li><a href="layouts/c.html">C — de brief</a></li></ul>
-<h2>The record</h2>
-<ul><li><a href="https://github.com/TheAndries/toeslagrecht/blob/main/law/zorgtoeslag/rules.md">Rules, with articles</a></li>
-<li><a href="https://github.com/TheAndries/toeslagrecht/blob/main/law/CHANGES.md">Dated amendments</a></li>
-<li><a href="https://github.com/TheAndries/toeslagrecht/tree/main/cases">Cases</a> · <a href="https://github.com/TheAndries/toeslagrecht/blob/main/law/zorgtoeslag/tests/report.md">Test report</a></li>
-<li><a href="https://github.com/TheAndries/toeslagrecht/blob/main/DISCREPANCIES.md">Discrepancy log</a></li></ul>
+<p>Hier staat de Nederlandse toeslagenwet als open, controleerbare rekenregels, met bij elk getal het artikel
+waar het vandaan komt. U kunt uw zorgtoeslag narekenen en zien hoe de wet bij het bedrag komt. Daarachter ligt
+het dossier: de wet zoals zij elk jaar gold, de gepubliceerde rekenvoorbeelden, en elk verschil tussen de
+wettekst en wat Dienst Toeslagen doet.</p>
+<h2>Narekenen</h2>
+<ul><li><a href="zorgtoeslag.html">Zorgtoeslag narekenen</a> — 2026, 2025 en 2024, stap voor stap, op uw eigen apparaat.</li></ul>
+<p class="klein">Nog niets hier is af. Elke regel heeft de status <span class="status">draft</span>: door niemand met
+vakkennis nagelezen. Geen enkele case is geverifieerd aan een echte beschikking. Dit is een controle, geen advies;
+aanvragen doet u op <a href="https://www.toeslagen.nl">toeslagen.nl</a>. De huurtoeslag komt later.</p>
+<h2>Het dossier</h2>
+<ul><li><a href="https://github.com/TheAndries/toeslagrecht/blob/main/law/zorgtoeslag/rules.md">De regels, met hun artikelen en status</a></li>
+<li><a href="https://github.com/TheAndries/toeslagrecht/blob/main/law/CHANGES.md">De wijzigingen in de wet, per datum, met het Staatsblad of de Staatscourant</a></li>
+<li><a href="https://github.com/TheAndries/toeslagrecht/tree/main/cases">De cases</a> · <a href="https://github.com/TheAndries/toeslagrecht/blob/main/law/zorgtoeslag/tests/report.md">de controle van de regels tegen de cases</a></li>
+<li><a href="https://github.com/TheAndries/toeslagrecht/blob/main/DISCREPANCIES.md">Waar de wettekst en Dienst Toeslagen verschillen</a></li>
+<li><a href="https://github.com/TheAndries/toeslagrecht/blob/main/DISPUTES.md">Iets betwisten</a> · <a href="https://github.com/TheAndries/toeslagrecht/blob/main/CASES.md">een echte beschikking insturen, anoniem</a></li></ul>
+<h2>Hoe de pagina gekozen is</h2>
+<p class="klein">Op 2026-10-09 koos de eigenaar uit drie opzetten van dezelfde berekening voor <a href="layouts/b.html">B, het verhaal</a>
+(<a href="layouts/a.html">A, de tabel</a> en <a href="layouts/c.html">C, de brief</a> blijven staan als dossier; <code>BOARD.md</code>).</p>
 <p class="klein">Niets van wat u invult verlaat uw telefoon of computer. Deze pagina slaat niets op.</p>
-<p class="klein">Bron: <a href="https://github.com/TheAndries/toeslagrecht">de open encoding en het dossier</a> (MIT / CC BY-SA 4.0). Gebouwd 2026-10-09.</p>
+<p class="klein">Bron: <a href="https://github.com/TheAndries/toeslagrecht">de open encoding en het dossier</a> (MIT / CC BY-SA 4.0). Gebouwd 2026-10-10.</p>
 </main></body></html>

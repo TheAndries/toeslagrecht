@@ -1,0 +1,20 @@
+id: zt-2026-syn-004
+toeslag: zorgtoeslag
+jaar: 2026
+bron:
+  type: synthetic
+  publicatie: "Geconstrueerd door de operator op 2026-10-10 om de woonlandfactor van Noorwegen te oefenen: de landcode NO werd door de YAML-lezer als 'onwaar' gelezen, zodat de factor van Noorwegen in de encoding onbereikbaar was (gevonden bij het bouwen van de rekenpagina; hersteld door de sleutel te quoten). Verwachte uitkomst: woonlandfactor Noorwegen 2026 = 1,0000 (Regeling zorgverzekering bijlage 4, Stcrt. 2025, 38064), dus dezelfde aanspraak als een verzekerde in Nederland: € 2.119 − normpremie bij € 25.000 (1,912% × 29.735,424 = 568,54) = € 1.550,46."
+  url: https://wetten.overheid.nl/BWBR0018715/2026-01-01
+  opgehaald: 2026-10-10
+verified: false
+invoer:
+  partner: false
+  aanvrager_verdragsgerechtigd: true
+  woonland: "NO"
+  toetsingsinkomen_aanvrager: "25000"
+  rendementsgrondslag: null
+verwacht:
+  standaardpremie_totaal: "2119.00"
+  aanspraak_jaar: "1550.46"
+  tegemoetkoming: "1550"
+opmerking: "Synthetisch; telt nooit als verificatie (CASES.md). Zonder de fix gaf de encoding geen woonlandfactor-stap en een onbepaald-noot 'verdragsgerechtigde zonder (bekend) woonland'."

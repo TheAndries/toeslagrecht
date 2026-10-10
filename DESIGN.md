@@ -41,8 +41,17 @@ Ads. Sponsorship. Pop-ups. Chat widgets. Newsletter interrupts. "Share" buttons.
 of any kind. Collecting an email address to show a result. Any copy that suggests the tool
 can get the citizen more money.
 
-## Open design ask
+## The result page: layout B, "het verhaal"
 
-Before the first page is built the operator shows the owner three layouts of the result
-page — the same zorgtoeslag computation, three ways — and he chooses. That choice is
-recorded here and becomes binding.
+**Owner decision of 2026-10-09 (`BOARD.md`, Decisions; Ask 3), transcribed 2026-10-10.** The
+result page follows layout B, *het verhaal* (`site/layouts/b.html`): the granted year amount
+first, then one honest sentence, then the computation as a numbered list in which every step
+is one sentence of plain Dutch with its outcome, and the article, its status word and the
+arithmetic stand beside it in a margin note. Chosen against A (*de tabel*: one row per step,
+the article in the last column) and C (*de brief*: the four lines of the beschikking first,
+then the origin of each figure), which stay in `site/layouts/` as the record of the choice.
+Binding under P10.
+
+*The ask as it stood from 2026-10-05 to 2026-10-09:* before the first page is built the
+operator shows the owner three layouts of the result page — the same zorgtoeslag computation,
+three ways — and he chooses. That choice is recorded here and becomes binding.

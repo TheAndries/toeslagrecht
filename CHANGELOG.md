@@ -2,6 +2,113 @@
 
 Newest first. What was done, decided, and got wrong.
 
+## 2026-10-10 — fourth run: the layout decision transcribed, the checker built and proved against the Python encoding, Ask 5 closed, a hidden Norway defect fixed
+
+Fourth run of routine `trig_012xyD5r5rxFDCjfHbZ58Kib`. Model as served: `claude-fable-5-1`, the same as
+the previous entry; no handover note needed. Step 1: no ask newly marked done, but two were answered in
+`INBOX.md` on 2026-10-09 (Ask 3, Ask 5) and both are closed below. Step 3: no open motion.
+
+**Step 2 — the inbox (three entries of 2026-10-09, all from the owner, Andries, in an owner-initiated
+session; moved here, `INBOX.md` emptied).**
+- *Owner decision, Ask 3: layout B, "het verhaal".* Recorded in `BOARD.md` on 2026-10-09; **transcribed into
+  `DESIGN.md`** this run (the "Open design ask" section is now the decision, with the original ask kept as
+  history) — the one kind of change to `DESIGN.md` the operator may make. Ask 3 done.
+- *Owner note 1 ("the design of the website is not very appealing … eventually we would need to make it
+  look like a genuine website").* **Accepted in part.** What the owner saw were three layout stubs of one
+  fixed computation, not a site. Within `DESIGN.md` §8 (plain typography, generous spacing, no hero, no
+  illustration, looks like it has nothing to sell) a great deal of "genuine" is available and this run used
+  some of it: a real front page in Dutch, a header and footer that frame every page, a form designed like a
+  good government form (one question per field, a hint under each, large touch targets, visible focus), the
+  law in a serif, status in words. The rest of §8's room — a self-hosted text serif for the law, finer
+  spacing and type scale, a print stylesheet — is work for later runs and needs no decision. What §8 does
+  *not* allow — a hero, illustration, stock imagery, a brand look, anything that resembles a fintech — is
+  not the operator's to add: changing §8 is a motion for the board (`BOARD.md`, "the design rules"), and the
+  operator does not file one, because the reference points (a well-made government form, a court's own
+  website) were chosen at founding for the citizen this is for: worried about money and distrustful of
+  websites. If the owner wants those reference points changed, he files the motion and the operator
+  responds in its next run. The look should now be judged on `site/zorgtoeslag.html`, not on the stubs.
+- *Owner note 2 ("a citizen would definitely want a calculator that allows them to put their income in …
+  just as berekenhet.nl has").* **Confirmed and done.** This is the checker of `PLAN.md` Phase 1 — inputs
+  entered, computed on the device, every step shown — and it was always the next item once the layout was
+  chosen. It landed this run (below). Unlike berekenhet.nl it shows the article beside every step, says
+  what the law leaves undetermined, and sends nothing anywhere.
+- *Owner note, Ask 5(a) (the rounding practice).* Verbatim: "Rounding rule is not written (so far I know)
+  but it is as follow if you have to pay it is rounded down. If you get money from the government it is
+  rounded up." And: "Threshholds arent rounded up or down, they are as they are down to 2 numbers behind
+  the comma, so 0,485 becomes 0,49." Treated as a dated practitioner's statement, evidence not authority
+  (`BOARD.md`), and **recorded in `DISCREPANCIES.md` #1** with this reading: the drempelinkomen is a
+  threshold, yet the Dienst rounds it to whole euros, not two decimals — down in 2024, up in 2025 and 2026;
+  the monthly amount is money the citizen receives, yet the Dienst rounds it *down* (#5); the year amount
+  is rounded arithmetically by a written rule (Awir art. 14 lid 4). So the practice rule as stated explains
+  none of the three roundings in the record. No text was named; **#1 stays `government`; Ask 5 closed.**
+  Not used for any encoding — the encoding follows the text, as `BOARD.md` requires.
+
+**Step 4 — done (Phase 1: the checker; `PLAN.md` item 4 of `memory.md`).**
+- *The rules in the browser:* `site/zorgtoeslag-regels.js`, a line-by-line port of `rules.py` with the same
+  rule ids, computing in exact BigInt arithmetic (ten decimals) so that € 23,50 rounds to € 24 in the
+  browser exactly as in Python. `tools/build.py check` now runs every case through both encodings
+  (`tools/parity.js`, node) and compares the four amounts to the cent, the practice month, the vermogen
+  outcome, every step's rule id and outcome, and the count of undetermined notes; **any difference blocks
+  the commit** like a failing verified case. Result: 163 cases, 163 identical.
+- *The parameters exported:* `site/zorgtoeslag-parameters.js`, generated from the yaml files with every
+  number's article, source and URL, plus the GitHub anchor of every rule in `rules.md` so each step links
+  to its rule (`DESIGN.md` §9).
+- *The checker:* `site/zorgtoeslag.html` from `tools/zorgtoeslag.template.html`, layout B. Years 2026,
+  2025, 2024; partner; both incomes; partner verzekerd (ja / nee / weet niet → `undetermined`, computed as
+  if yes and said so); vermogen with the whole-year-partner question under a `<details>`; verdragsgerechtigde
+  and woonland (39 countries) under another. The result: granted year amount first, the computed amount,
+  the month, the Dienst's practice and the one honest sentence; then every step with its outcome, the
+  article linked to the rule, the status as a word ("concept: door niemand nagelezen"), and the arithmetic;
+  then what the law leaves undetermined; then the dossier links (rules, the year's parameters, the Wzt as it
+  stood on 1 January of that year, the standaardpremie regeling, the discrepancy log, the test report,
+  disputes). Nothing is sent, stored or tracked; the page says so once. Without JavaScript the form shows
+  and a line says the computation needs it and where the rules can be read. Rendered in headless Chromium
+  with a prefilled form to confirm it computes (2026, partner € 12.000 not verzekerd, € 32.000: € 502).
+- *The front page* `site/index.html` is now Dutch, for the citizen, with the checker first and the record
+  under it; the three layouts stay as the record of the choice.
+- *One synthetic case* `zt-2026-syn-004` (Norway) for the defect below. 163 cases: 149 pass, 14 fail, 0
+  blocking — the same fourteen as yesterday, every one in the log.
+
+**What was wrong and why.**
+- *A hidden defect since 2026-10-08:* YAML 1.1 reads the bare key `NO` as the boolean false, so the
+  woonlandfactor of **Noorwegen** was stored under `False` in all three parameter files and unreachable:
+  a verdragsgerechtigde in Norway would have been computed without a factor and told "woonland onbekend".
+  Found only because the JSON export of the parameters turned the key into `"false"`. Fixed by quoting the
+  key (`"NO"`) in 2024, 2025 and 2026; the same trap bit the new case file (`woonland: NO`) and is now a
+  lesson in `memory.md`. No published figure was affected (Norway's factor is 1,0000 and no case used it);
+  not a discrepancy, since no government outcome differed — an encoding defect, logged here.
+- The browser port's header comment contained `law/*/parameters`, which closes a JavaScript block comment;
+  node refused the file on the first run. Fixed; the parity check would have caught any silent variant.
+- The first render printed the vermogen outcome as the code `niet_getoetst`; outcome codes are now plain
+  Dutch words on the page (`DESIGN.md` §1).
+- The Dienst's 2023 leaflet does not exist at the URL the pattern predicts (`tg0821z31fd`: 404 on
+  2026-10-10); the 2023 history waits for a search next run. Nothing else attempted for 2023.
+- `PLAN.md` unchanged: the strategy holds; Phase 1 is complete except Checkpoint 1, which is now the
+  owner's (Ask 6). No checkpoint missed.
+
+**Step 8 — asks.** Ask 6: Checkpoint 1 (twenty situations in both the checker and the official rekenhulp,
+pairs pasted into `INBOX.md`, the "worried relative" sentence in `BOARD.md`). Ask 7: publish the site
+(GitHub Pages from `main`/`site`, DNS at TransIP) — repository settings and DNS are the owner's. Both open.
+
+**Dropped from memory.** The "Ask 3 waiting since 2026-10-07" state and the layout descriptions (decided,
+transcribed); the "no input form until Ask 3" rule (done); the per-step notes on how the three layouts were
+rendered. Nothing else was held.
+
+**Effort.** Roughly 205,000 of the 300,000-token ceiling: about 110,000 reading the files and the encoding
+(more than earlier runs, because the checker needed every rule's text and the parameter structure in
+context), about 60,000 writing the browser port, the harness, the template and the build changes and
+running the checks, about 5,000 on one failed download, the rest on the governance edits and these records.
+
+**Record under the ten-year rule.** This run added to the record two dated things that cannot be
+regenerated: the board's layout decision as binding design text in `DESIGN.md` with the ask it closed, and
+a named practitioner's statement of the Dienst's rounding practice, dated, verbatim, read against three
+observed roundings in `DISCREPANCIES.md` #1 and found not to explain them — the first piece of practice
+evidence in the log. That is thin, and it is said so plainly: the checker, the browser port, the parity
+harness, the Norway fix and the synthetic case are all regenerable and are not counted. No case, amendment
+or verified outcome was added. The run spent its budget on the checker because Checkpoint 1 — the first
+time the owner compares twenty real situations with the official rekenhulp, each difference a discrepancy
+for the log — cannot happen without it, and that is where the next real additions to the record come from.
+
 ## 2026-10-09 — third run: 2024 encoded, the full tables swept, two discrepancies found, the Wzt renumbering dated
 
 Third run of routine `trig_012xyD5r5rxFDCjfHbZ58Kib`. Model as served: `claude-fable-5-1`, the same as

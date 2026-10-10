@@ -1,4 +1,4 @@
-# Zorgtoeslag — test report, generated 2026-10-09 by tools/build.py
+# Zorgtoeslag — test report, generated 2026-10-10 by tools/build.py
 
 Generated file; do not edit. Verified cases are tests (blocking); published and synthetic
 cases are checks (reported). Every failing check is a discrepancy in `DISCREPANCIES.md`.
@@ -1006,6 +1006,18 @@ Source: Geconstrueerd door de operator: rendementsgrondslag één euro boven / p
 
 Note: Precies op de grens is niet 'meer dan': aanspraak. € 2.119 − 1,912% × € 29.735,424 = € 1.550,46 → € 1.550 (Awir art. 14 lid 4). Synthetisch; telt nooit als verificatie.
 
+## zt-2026-syn-004 — PASS — check (synthetic)
+
+Source: Geconstrueerd door de operator op 2026-10-10 om de woonlandfactor van Noorwegen te oefenen: de landcode NO werd door de YAML-lezer als 'onwaar' gelezen, zodat de factor van Noorwegen in de encoding onbereikbaar was (gevonden bij het bouwen van de rekenpagina; hersteld door de sleutel te quoten). Verwachte uitkomst: woonlandfactor Noorwegen 2026 = 1,0000 (Regeling zorgverzekering bijlage 4, Stcrt. 2025, 38064), dus dezelfde aanspraak als een verzekerde in Nederland: € 2.119 − normpremie bij € 25.000 (1,912% × 29.735,424 = 568,54) = € 1.550,46.
+
+| field | expected | encoding | match |
+|---|---|---|---|
+| standaardpremie_totaal | 2119.00 | 2119.00 (exact 2119.0000) | yes |
+| aanspraak_jaar | 1550.46 | 1550.46 (exact 1550.458693120) | yes |
+| tegemoetkoming | 1550.00 | 1550.00 (exact 1550) | yes |
+
+Note: Synthetisch; telt nooit als verificatie (CASES.md). Zonder de fix gaf de encoding geen woonlandfactor-stap en een onbepaald-noot 'verdragsgerechtigde zonder (bekend) woonland'.
+
 ## zt-2026-tab-mp-30000 — PASS — check (published)
 
 Source: Belastingdienst, 'Hoeveel zorgtoeslag krijg ik?', tabel zorgtoeslag per maand 2026 met toeslagpartner, rij 'tot € 30.000' → '€ 243'; 'De bedragen per maand zijn afgerond'
@@ -1648,4 +1660,8 @@ Note: Laatste rij van de tabel, op het genoemde inkomen zelf ('en meer' sluit he
 
 ---
 
-Cases run: 162, passed: 148, failed: 14, skipped: 0. Verified cases: 0. Blocking failures: 0.
+Browser encoding (`site/zorgtoeslag-regels.js`, node v22.22.0): 163 cases compared with the Python encoding, 163 identical, 0 different.
+
+---
+
+Cases run: 163, passed: 149, failed: 14, skipped: 0. Verified cases: 0. Blocking failures: 0. Browser/Python differences: 0 (blocking: the two encodings must agree).

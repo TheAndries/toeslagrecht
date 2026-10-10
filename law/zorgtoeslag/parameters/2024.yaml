@@ -108,7 +108,7 @@ woonlandfactoren:
     MA: "0.0219"   # Marokko
     ME: "0.0980"   # Montenegro
     MK: "0.0580"   # Noord-Macedonië
-    NO: "1.0000"   # Noorwegen
+    "NO": "1.0000"   # Noorwegen
     AT: "0.8145"   # Oostenrijk
     PL: "0.1613"   # Polen
     PT: "0.2955"   # Portugal
