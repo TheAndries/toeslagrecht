@@ -1,0 +1,19 @@
+id: zt-2023-pub-001
+toeslag: zorgtoeslag
+jaar: 2023
+bron:
+  type: published
+  publicatie: "Dienst Toeslagen, Berekening zorgtoeslag 2023 (TG 082 - 1Z32FD, januari 2023), rekenvoorbeeld 1: alleenstaande, jaarinkomen € 19.000; normpremie € 30,84; zorgtoeslag per jaar € 1.858,16; per maand € 154,84 (na afronding € 154)"
+  url: https://download.belastingdienst.nl/toeslagen/docs/berekening_zorgtoeslag_tg0821z32fd.pdf
+  opgehaald: 2026-10-11
+verified: false
+invoer:
+  partner: false
+  toetsingsinkomen_aanvrager: "19000"
+  rendementsgrondslag: null
+verwacht:
+  normpremie: "30.84"
+  aanspraak_jaar: "1858.16"
+  aanspraak_maand: "154.84"
+  aanspraak_maand_afgerond_praktijk: 154
+opmerking: "Dienst rekent met drempelinkomen 'vastgesteld op € 25.070'; de tekst geeft € 25.069,824 (DISCREPANCIES.md #1). Hier valt 0,123% van beide op dezelfde cent (€ 30,84), dus geen verschil verwacht. Het maximum van 2023 zonder partner (leaflet: € 1.858)."

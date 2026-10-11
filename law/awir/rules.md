@@ -54,7 +54,8 @@ op hele euro's." (BWBR0018472, geldend van 01-01-2026; dezelfde tekst in de vers
 01-01-2025 en 01-01-2024, verbatim gelezen 2026-10-08 en 2026-10-09. De wetstechnische informatie
 van art. 14 vermeldt geen enkele wijziging van het artikel, geraadpleegd 2026-10-09.) De bedragen
 van art. 7 lid 3, 4 en 6 en art. 26a per jaar staan in `parameters/<jaar>.yaml` (2024, 2025:
-Stcrt. 2024, 38492; 2026: Stcrt. 2025, 40487); de zorgtoeslag gebruikt ze niet (Wzt art. 3 lid 1).
+Stcrt. 2024, 38492; 2026: Stcrt. 2025, 40487; 2023: tekst van 01-01-2023, verbatim gelezen 2026-10-11, ontstaan
+uit Stcrt. 2022, 32674); de zorgtoeslag gebruikt ze niet (Wzt art. 3 lid 1; in 2023 art. 2a lid 1).
 **Status:** draft.
 **Gewoon Nederlands:** Het jaarbedrag van uw toeslag wordt afgerond op hele euro's, op de
 gewone manier: vijftig cent of meer gaat omhoog.

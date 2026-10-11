@@ -5,7 +5,7 @@ status (`LAW.md`), en wat de regel doet waar de wet ruimte laat. De code staat i
 `rules.py`; de bedragen per jaar in `parameters/<jaar>.yaml`. Alles hier is **draft**:
 door niemand nagelezen tegen het artikel. Geraadpleegd 2026-10-07, 2026-10-08 en 2026-10-09.
 
-**Jaren en artikelnummers.** Gecodeerd: 2026, 2025 en 2024. De regel-id's dragen de nummering van 2026.
+**Jaren en artikelnummers.** Gecodeerd: 2026, 2025, 2024 en 2023 (2023 sinds 2026-10-11). De regel-id's dragen de nummering van 2026.
 In de tekst van 2024 (geldend t/m 05-11-2024) heette de vermogenstoets **art. 2a** en de woonlandfactor
 **art. 3**; per 06-11-2024 (Stb. 2024, 291, art. XIX) zijn zij art. 3 en art. 4a geworden en is art. 4a
 lid 3 ingevoegd. De stappen citeren per jaar het artikelnummer van dat jaar (`parameters/2024.yaml`,
@@ -28,6 +28,9 @@ dat in januari van het jaar geldt. Verdient u minder dan dit bedrag, dan krijgt 
 hoogste zorgtoeslag.
 **Code:** `drempelinkomen(jaar)` = 108/100 × 12 × `wml_maandbedrag_januari`. 2026:
 108% × 12 × € 2.294,40 = € 29.735,424. 2025: € 28.405,728. 2024: 108% × 12 × € 2.069,40 = € 26.819,424.
+2023: 108% × 12 × € 1.934,40 = € 25.069,824 (Stb. 2022, 381). In 2023 verwees onder f naar WML art. 8 lid 1
+onderdeel **a**; per 01-01-2024 is dat onderdeel b (Wet invoering minimumuurloon, Stb. 2023, 168, art. XXXI),
+omdat onderdeel a sindsdien het minimumuurloon is. `parameters/2023.yaml` zegt dat met `artikel_wml_onderdeel`.
 **Discretie:** De wet zegt niets over afronden. De encoding rondt niet af. De Dienst
 Toeslagen rekent met een op hele euro's afgerond drempelinkomen ("vastgesteld op" € 26.819 in 2024 —
 naar beneden —, € 28.406 in 2025 en € 29.736 in 2026 — naar boven, in 2026 ook waar rekenkundig
@@ -46,7 +49,8 @@ jaar in `parameters/`).
 Zonder partner: 1,912% van het drempelinkomen. Met partner: 4,289% van het drempelinkomen.
 Daarbovenop, voor beiden: 13,730% van het deel van uw (gezamenlijke) toetsingsinkomen dat
 boven het drempelinkomen uitkomt. (Percentages 2026; 2025: 1,896% / 4,273% / 13,700%; 2024: 1,879% /
-4,256% / 13,670%, in 2024 nog in de wettekst van lid 3 zelf. Bron: Besluit percentages drempel- en
+4,256% / 13,670%, in 2024 nog in de wettekst van lid 3 zelf; 2023: 0,123% / 2,378% / 13,640%, de eenmalige
+verlaging van Stb. 2022, 472 voor dat ene jaar, eveneens in de wettekst. Bron: Besluit percentages drempel- en
 toetsingsinkomen zorgtoeslag, Stb. 2022, 472 → Stb. 2024, 351 → Stb. 2025, 412.)
 **Code:** `normpremie(toetsingsinkomen, partner, jaar)`. Het deel boven het drempelinkomen is
 nul als het toetsingsinkomen onder het drempelinkomen ligt ("voor zover ... te boven gaat").
@@ -103,7 +107,7 @@ per 06-11-2024), in afwijking van Awir art. 7 lid 3; rendementsgrondslag: Wet IB
 **Gewoon Nederlands:** Is uw vermogen op 1 januari hoger dan € 146.011 (2026), of samen met
 uw partner — als dat het hele jaar dezelfde partner is — hoger dan € 184.633, dan krijgt u
 het hele jaar geen zorgtoeslag. Groene beleggingen tellen hier gewoon mee. (2025: € 141.896 /
-€ 179.429; 2024: € 140.213 / € 177.301.)
+€ 179.429; 2024: € 140.213 / € 177.301; 2023, art. 2a: € 127.582 / € 161.329, Stcrt. 2022, 28997.)
 **Code:** `vermogenstoets(rendementsgrondslag, partner, hele_jaar_dezelfde_partner, jaar)`
 geeft `geen_aanspraak`, `aanspraak` of `niet_getoetst` (geen vermogen opgegeven).
 **Discretie:** Welke grens geldt bij een partner die niet het hele jaar partner was, zegt lid
@@ -112,20 +116,21 @@ geeft `geen_aanspraak`, `aanspraak` of `niet_getoetst` (geen vermogen opgegeven)
 ## zt-2026-art4 — standaardpremie
 
 **Artikel:** Wzt art. 4; jaarlijkse Regeling vaststelling standaardpremie en bestuursrechtelijke
-premies (2026: Stcrt. 2025, 40022, art. 1; 2025: Stcrt. 2024, 38887; 2024: Stcrt. 2023, 32413).
+premies (2026: Stcrt. 2025, 40022, art. 1; 2025: Stcrt. 2024, 38887; 2024: Stcrt. 2023, 32413; 2023: Stcrt. 2022, 32017).
 **Status:** draft.
 **Gewoon Nederlands:** De standaardpremie is wat een zorgverzekering volgens de minister
-gemiddeld kost in dat jaar, premie plus verplicht eigen risico. 2026: € 2.119. 2025: € 2.112. 2024: € 1.987.
+gemiddeld kost in dat jaar, premie plus verplicht eigen risico. 2026: € 2.119. 2025: € 2.112. 2024: € 1.987. 2023: € 1.889.
 **Code:** parameter.
 
 ## zt-2026-art4a — standaardpremie voor verdragsgerechtigden: de woonlandfactor
 
 **Artikel:** Wzt art. 4a lid 1–4 (BWBR0018451, geldend van 01-01-2026; dezelfde tekst in de versie
-van 01-01-2025). In 2024 was dit **art. 3, lid 1–3**, zonder het huidige lid 3: dat lid (verzekerde
+van 01-01-2025). In 2024 en 2023 was dit **art. 3, lid 1–3**, zonder het huidige lid 3: dat lid (verzekerde
 aanvrager met een verdragsgerechtigde partner) is per 06-11-2024 ingevoegd (Stb. 2024, 291, art. XIX
-onder C); voor 2024 geeft de encoding in dat geval `undetermined`. Het verhoudingsgetal per land:
+onder C); voor 2024 en 2023 geeft de encoding in dat geval `undetermined`. Het verhoudingsgetal per land:
 Regeling zorgverzekering art. 6.3.1 lid 9 en bijlage 4 (BWBR0018715, versies 01-01-2024, 01-01-2025 en
-01-01-2026; vastgesteld bij Stcrt. 2023, 29907, Stcrt. 2024, 35698 en Stcrt. 2025, 38064), in
+01-01-2026; vastgesteld bij Stcrt. 2023, 29907, Stcrt. 2024, 35698 en Stcrt. 2025, 38064; 2023: Stcrt. 2022,
+29339, voor vier landen gerectificeerd bij Stcrt. 2022, 32002 vóór de inwerkingtreding), in
 `parameters/<jaar>.yaml` onder `woonlandfactoren`. Op 2026-10-07 gemist: de vorige run las art. 1–5 en zocht een art. 2a;
 art. 4a staat tussen art. 4 en 5.
 **Status:** draft.
@@ -146,8 +151,8 @@ rekenregel van de Dienst Toeslagen (Berekening zorgtoeslag 2026, stap 5) past bi
 *verzekerde* aanvrager met een partner die noch verzekerde noch verdragsgerechtigde is, de
 woonlandfactor toe op de standaardpremie van die partner; lid 4 doet dat alleen bij een partner
 van een verdragsgerechtigde. De rekenregel van 2024 (stap 5 onder c) deed het nog anders: op beide
-standaardpremies. De encoding volgt de tekst en geeft 2 × standaardpremie; zie `DISCREPANCIES.md` #3
-en case `zt-2026-syn-001`.
+standaardpremies; die van 2023 (stap 5 onder c) was gelijk aan die van 2024. De encoding volgt de tekst en
+geeft 2 × standaardpremie; zie `DISCREPANCIES.md` #3 en case `zt-2026-syn-001`.
 
 ---
 

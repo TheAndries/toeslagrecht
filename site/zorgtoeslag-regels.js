@@ -74,7 +74,7 @@
   }
 
   // zt-2026-art1-1f — Wzt art. 1 lid 1 onder f: 108% van het twaalfvoud van het WML-maandbedrag
-  // van januari (WML art. 8 lid 1 onder b). Geen afronding: de tekst heeft die niet (DISCREPANCIES.md #1).
+  // van januari (WML art. 8 lid 1 onder b; t/m 2023 onder a). Geen afronding: de tekst heeft die niet (DISCREPANCIES.md #1).
   function drempelinkomen(par) {
     return mul(mul(pct(par.drempelinkomen_factor.waarde), 12n * SCALE), P(par.wml_maandbedrag_januari.waarde));
   }
@@ -204,7 +204,9 @@
 
     // zt-2026-art1-1f
     const drempel = drempelinkomen(par);
-    u.stappen.push(stap("zt-2026-art1-1f", "Wzt art. 1 lid 1 onder f; WML art. 8 lid 1 onder b",
+    // WML art. 8 lid 1: maandbedrag onderdeel a t/m 2023, onderdeel b sinds 01-01-2024 (Stb. 2023, 168, art. XXXI)
+    const wmlOnderdeel = par.artikel_wml_onderdeel || "b";
+    u.stappen.push(stap("zt-2026-art1-1f", "Wzt art. 1 lid 1 onder f; WML art. 8 lid 1 onder " + wmlOnderdeel,
       "Het drempelinkomen: 108% van twaalf keer het minimumloon per maand van januari.",
       "108% × 12 × " + par.wml_maandbedrag_januari.waarde, drempel));
 

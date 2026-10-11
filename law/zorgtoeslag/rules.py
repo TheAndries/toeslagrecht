@@ -69,7 +69,7 @@ class Uitkomst:
 
 def drempelinkomen(par: dict) -> Decimal:
     """zt-2026-art1-1f — Wzt art. 1 lid 1 onder f: 108% van het twaalfvoud van het
-    WML-maandbedrag (WML art. 8 lid 1 onder b) voor januari van het berekeningsjaar.
+    WML-maandbedrag (WML art. 8 lid 1 onder b; t/m 2023 onder a) voor januari van het berekeningsjaar.
     No rounding: the text has none (DISCREPANCIES.md #1)."""
     factor = pct(D(par["drempelinkomen_factor"]["waarde"]))
     maand = D(par["wml_maandbedrag_januari"]["waarde"])
@@ -200,7 +200,10 @@ def bereken(jaar: int, par: dict, toetsingsinkomen_aanvrager: Decimal, partner: 
 
     # zt-2026-art1-1f
     drempel = drempelinkomen(par)
-    u.stappen.append(Stap("zt-2026-art1-1f", "Wzt art. 1 lid 1 onder f; WML art. 8 lid 1 onder b",
+    # WML art. 8 lid 1: the monthly amount was onderdeel a until 2023 and is onderdeel b since
+    # 01-01-2024 (Wet invoering minimumuurloon, Stb. 2023, 168, art. XXXI); the year's file says which.
+    wml_onderdeel = par.get("artikel_wml_onderdeel", "b")
+    u.stappen.append(Stap("zt-2026-art1-1f", f"Wzt art. 1 lid 1 onder f; WML art. 8 lid 1 onder {wml_onderdeel}",
                           "Het drempelinkomen: 108% van twaalf keer het minimumloon per maand van januari.",
                           f"108% × 12 × {par['wml_maandbedrag_januari']['waarde']}", drempel))
 

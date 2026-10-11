@@ -1,7 +1,87 @@
-# Zorgtoeslag — test report, generated 2026-10-10 by tools/build.py
+# Zorgtoeslag — test report, generated 2026-10-11 by tools/build.py
 
 Generated file; do not edit. Verified cases are tests (blocking); published and synthetic
 cases are checks (reported). Every failing check is a discrepancy in `DISCREPANCIES.md`.
+
+## zt-2023-pub-001 — FAIL — check (published)
+
+Source: Dienst Toeslagen, Berekening zorgtoeslag 2023 (TG 082 - 1Z32FD, januari 2023), rekenvoorbeeld 1: alleenstaande, jaarinkomen € 19.000; normpremie € 30,84; zorgtoeslag per jaar € 1.858,16; per maand € 154,84 (na afronding € 154)
+
+| field | expected | encoding | match |
+|---|---|---|---|
+| normpremie | 30.84 | 30.84 (exact 30.835883520) | yes |
+| aanspraak_jaar | 1858.16 | 1858.16 (exact 1858.164116480) | yes |
+| aanspraak_maand | 154.84 | 154.85 (exact 154.8470097066666666666666667) | NO |
+| aanspraak_maand_afgerond_praktijk | 154 | 154 | yes |
+
+Note: Dienst rekent met drempelinkomen 'vastgesteld op € 25.070'; de tekst geeft € 25.069,824 (DISCREPANCIES.md #1). Hier valt 0,123% van beide op dezelfde cent (€ 30,84), dus geen verschil verwacht. Het maximum van 2023 zonder partner (leaflet: € 1.858).
+
+## zt-2023-pub-002 — FAIL — check (published)
+
+Source: Dienst Toeslagen, Berekening zorgtoeslag 2023 (TG 082 - 1Z32FD, januari 2023), rekenvoorbeeld 2: gehuwd, aanvrager € 7.000, partner € 26.200, partner geen verzekerde (militair); normpremie € 1.705,09; subtotaal € 2.072,91; 50%: € 1.036,45 per jaar; per maand € 86,37 (na afronding € 86)
+
+| field | expected | encoding | match |
+|---|---|---|---|
+| normpremie | 1705.09 | 1705.12 (exact 1705.116421120) | NO |
+| aanspraak_jaar | 1036.45 | 1036.44 (exact 1036.4417894400) | NO |
+| aanspraak_maand | 86.37 | 86.37 (exact 86.3701491200) | yes |
+| aanspraak_maand_afgerond_praktijk | 86 | 86 | yes |
+
+Note: Zelfde constructie als het voorbeeld van 2024–2026 (Wzt art. 2 lid 4). Dienst rekent met drempelinkomen € 25.070; met € 25.069,824 geeft de tekst normpremie € 1.705,12 (drie cent; DISCREPANCIES.md #1).
+
+## zt-2023-pub-003 — FAIL — check (published)
+
+Source: Dienst Toeslagen, Berekening zorgtoeslag 2023 (TG 082 - 1Z32FD, januari 2023), rekenvoorbeeld 3: gehuwd, wonend in Duitsland; aanvrager verdragsgerechtigd (CAK) met AOW € 9.000, partner in Duitsland verzekerd met € 11.000; standaardpremie € 3.778 × 0,8814 = € 3.329,92; normpremie € 596,16; subtotaal € 2.733,76; 50%: € 1.366,88 per jaar; per maand € 113,90 (na afronding € 113)
+
+| field | expected | encoding | match |
+|---|---|---|---|
+| standaardpremie_totaal | 3329.92 | 3329.93 (exact 3329.9292) | NO |
+| normpremie | 596.16 | 596.16 (exact 596.160414720) | yes |
+| aanspraak_jaar | 1366.88 | 1366.88 (exact 1366.8843926400) | yes |
+| aanspraak_maand | 113.90 | 113.91 (exact 113.9070327200) | NO |
+| aanspraak_maand_afgerond_praktijk | 113 | 113 | yes |
+
+Note: Woonlandfactor Duitsland 2023 0,8814 (Rzv bijlage 4, Stcrt. 2022, 29339). In 2023 heet het artikel art. 3 (per 06-11-2024 art. 4a). Inkomen onder het drempelinkomen: 2,378% × € 25.069,824 = € 596,16, gelijk aan de Dienst. De Dienst past de woonlandfactor op beide standaardpremies toe (stap 5 onder c), zoals in 2024; zie DISCREPANCIES.md #3.
+
+## zt-2023-pub-004 — PASS — check (published)
+
+Source: Dienst Toeslagen, Berekening zorgtoeslag 2023, stap 2: 'Uw klant heeft geen recht op zorgtoeslag als het toetsingsinkomen hoger is dan € 38.520 (aanvrager zonder toeslagpartner), € 48.224 (aanvrager met toeslagpartner)'
+
+| field | expected | encoding | match |
+|---|---|---|---|
+| tegemoetkoming | 24.00 | 24.00 (exact 24) | yes |
+
+Note: Op de grens zelf: recht. Aanspraak ≈ € 23,5 → € 24 (Awir art. 14 lid 4-5), met beide drempelinkomens.
+
+## zt-2023-pub-005 — PASS — check (published)
+
+Source: Dienst Toeslagen, Berekening zorgtoeslag 2023, stap 2: geen recht boven € 38.520 (zonder toeslagpartner)
+
+| field | expected | encoding | match |
+|---|---|---|---|
+| tegemoetkoming | 0.00 | 0.00 (exact 0) | yes |
+
+Note: Eén euro boven de grens: geen recht (aanspraak < € 23,50 → € 23 → niet toegekend, Awir art. 14 lid 5).
+
+## zt-2023-pub-006 — PASS — check (published)
+
+Source: Dienst Toeslagen, Berekening zorgtoeslag 2023, stap 2: 'Uw klant heeft geen recht op zorgtoeslag als het toetsingsinkomen hoger is dan € 38.520 (aanvrager zonder toeslagpartner), € 48.224 (aanvrager met toeslagpartner)'
+
+| field | expected | encoding | match |
+|---|---|---|---|
+| tegemoetkoming | 24.00 | 24.00 (exact 24) | yes |
+
+Note: Op de grens met partner: recht (≈ € 23,6 → € 24).
+
+## zt-2023-pub-007 — PASS — check (published)
+
+Source: Dienst Toeslagen, Berekening zorgtoeslag 2023, stap 2: geen recht boven € 48.224 (met toeslagpartner)
+
+| field | expected | encoding | match |
+|---|---|---|---|
+| tegemoetkoming | 0.00 | 0.00 (exact 0) | yes |
+
+Note: Eén euro boven de grens met partner: geen recht (Awir art. 14 lid 5).
 
 ## zt-2024-pub-001 — FAIL — check (published)
 
@@ -1660,8 +1740,8 @@ Note: Laatste rij van de tabel, op het genoemde inkomen zelf ('en meer' sluit he
 
 ---
 
-Browser encoding (`site/zorgtoeslag-regels.js`, node v22.22.0): 163 cases compared with the Python encoding, 163 identical, 0 different.
+Browser encoding (`site/zorgtoeslag-regels.js`, node v22.22.0): 170 cases compared with the Python encoding, 170 identical, 0 different.
 
 ---
 
-Cases run: 163, passed: 149, failed: 14, skipped: 0. Verified cases: 0. Blocking failures: 0. Browser/Python differences: 0 (blocking: the two encodings must agree).
+Cases run: 170, passed: 153, failed: 17, skipped: 0. Verified cases: 0. Blocking failures: 0. Browser/Python differences: 0 (blocking: the two encodings must agree).

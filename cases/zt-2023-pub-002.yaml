@@ -1,0 +1,21 @@
+id: zt-2023-pub-002
+toeslag: zorgtoeslag
+jaar: 2023
+bron:
+  type: published
+  publicatie: "Dienst Toeslagen, Berekening zorgtoeslag 2023 (TG 082 - 1Z32FD, januari 2023), rekenvoorbeeld 2: gehuwd, aanvrager € 7.000, partner € 26.200, partner geen verzekerde (militair); normpremie € 1.705,09; subtotaal € 2.072,91; 50%: € 1.036,45 per jaar; per maand € 86,37 (na afronding € 86)"
+  url: https://download.belastingdienst.nl/toeslagen/docs/berekening_zorgtoeslag_tg0821z32fd.pdf
+  opgehaald: 2026-10-11
+verified: false
+invoer:
+  partner: true
+  partner_verzekerd: false
+  toetsingsinkomen_aanvrager: "7000"
+  toetsingsinkomen_partner: "26200"
+  rendementsgrondslag: null
+verwacht:
+  normpremie: "1705.09"
+  aanspraak_jaar: "1036.45"
+  aanspraak_maand: "86.37"
+  aanspraak_maand_afgerond_praktijk: 86
+opmerking: "Zelfde constructie als het voorbeeld van 2024–2026 (Wzt art. 2 lid 4). Dienst rekent met drempelinkomen € 25.070; met € 25.069,824 geeft de tekst normpremie € 1.705,12 (drie cent; DISCREPANCIES.md #1)."

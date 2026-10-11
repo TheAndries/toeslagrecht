@@ -1,7 +1,132 @@
-/* Gegenereerd door tools/build.py op 2026-10-10 uit law/zorgtoeslag/parameters/*.yaml en law/awir/parameters/*.yaml. Niet bewerken: de yaml-bestanden zijn de bron en dragen bij elk getal zijn artikel. Licentie: CC BY-SA 4.0 (LICENSE-DATA). */
+/* Gegenereerd door tools/build.py op 2026-10-11 uit law/zorgtoeslag/parameters/*.yaml en law/awir/parameters/*.yaml. Niet bewerken: de yaml-bestanden zijn de bron en dragen bij elk getal zijn artikel. Licentie: CC BY-SA 4.0 (LICENSE-DATA). */
 var PARAMETERS = {
- "gegenereerd": "2026-10-10",
+ "gegenereerd": "2026-10-11",
  "zorgtoeslag": {
+  "2023": {
+   "jaar": 2023,
+   "status": "draft",
+   "geraadpleegd": "2026-10-11",
+   "versie": "BWBR0018451, geldend van 01-01-2023 t/m 31-12-2023 (verbatim gelezen 2026-10-11)",
+   "artikel_vermogenstoets": "Wzt art. 2a lid 1 (tekst 2023)",
+   "artikel_woonlandfactor": "Wzt art. 3 (tekst 2023)",
+   "artikel_wml_onderdeel": "a",
+   "art4a_lid3_aanwezig": false,
+   "art4a_lid3_opmerking": "Het huidige art. 4a lid 3 (verzekerde aanvrager met een verdragsgerechtigde partner) is ingevoegd per 06-11-2024 (Stb. 2024, 291, art. XIX onder C). In 2023 regelde de tekst (art. 3) dat geval niet; de encoding geeft dan 'undetermined'.",
+   "standaardpremie": {
+    "waarde": "1889",
+    "artikel": "Wet op de zorgtoeslag art. 4 jo. Regeling vaststelling standaardpremie en bestuursrechtelijke premies 2023, art. 1",
+    "bron": "Regeling van de Minister van VWS van 21 november 2022, kenmerk 3442101-1036920-Z, Stcrt. 2022, 32017 (primaire tekst gelezen 2026-10-11); geconsolideerd BWBR0047542. Toelichting: geraamde gemiddelde nominale premie € 1.657 plus geraamd gemiddeld verplicht eigen risico € 232",
+    "url": "https://zoek.officielebekendmakingen.nl/stcrt-2022-32017.html",
+    "geldig_van": "2023-01-01",
+    "tekst": "De standaardpremie, bedoeld in artikel 1, onderdeel g, van de Wet op de zorgtoeslag, bedraagt voor het berekeningsjaar 2023 € 1.889."
+   },
+   "wml_maandbedrag_januari": {
+    "waarde": "1934.40",
+    "artikel": "Wet minimumloon en minimumvakantiebijslag art. 8 lid 1 onder a, bedrag per 1 januari 2023 (in 2023 was het maandbedrag onderdeel a; sinds 01-01-2024 onderdeel b)",
+    "bron": "Besluit van 3 oktober 2022 tot vaststelling van het wettelijk minimumloon met ingang van 1 januari 2023 (bijzondere verhoging van 8,05% plus de halfjaarlijkse indexatie; in totaal 10,15%), Stb. 2022, 381, art. I onderdeel a (primaire tekst gelezen 2026-10-11). De geconsolideerde WML-tekst van 01-01-2023 (BWBR0002638) draagt het bedrag als redactionele noot bij art. 8 ('per 1 januari 2023: € 1.934,40')",
+    "url": "https://zoek.officielebekendmakingen.nl/stb-2022-381.html",
+    "geldig_van": "2023-01-01",
+    "tekst": "1. Onderdeel a: € 1.934,40;"
+   },
+   "drempelinkomen_factor": {
+    "waarde": "108",
+    "eenheid": "procent",
+    "artikel": "Wet op de zorgtoeslag art. 1 lid 1 onder f",
+    "bron": "BWBR0018451, geldend van 01-01-2023 t/m 31-12-2023 (verbatim)",
+    "url": "https://wetten.overheid.nl/BWBR0018451/2023-01-01",
+    "tekst": "drempelinkomen: 108% van het twaalfvoud van het voor de maand januari van het berekeningsjaar geldende in artikel 8, eerste lid, onderdeel a, van de Wet minimumloon en minimumvakantiebijslag bedoelde bedrag per maand",
+    "opmerking": "108% × 12 × € 1.934,40 = € 25.069,824. Dienst Toeslagen, Berekening zorgtoeslag 2023: 'vastgesteld op € 25.070' (naar boven, zoals in 2025 en 2026; in 2024 naar beneden). Zie DISCREPANCIES.md #1."
+   },
+   "normpremie_percentage_drempel_zonder_partner": {
+    "waarde": "0.123",
+    "eenheid": "procent",
+    "artikel": "Wet op de zorgtoeslag art. 2 lid 3 (tekst 2023: 'voor een verzekerde zonder partner op 0,123% van het drempelinkomen'), zoals gewijzigd bij Besluit percentages drempel- en toetsingsinkomen zorgtoeslag art. 1, rij 2023",
+    "bron": "BWBR0018451, geldend van 01-01-2023 t/m 31-12-2023 (verbatim); Stb. 2022, 472 (besluit van 24 november 2022, schema 2023–2040, rij 2023: een eenmalige verlaging met 1,741 procentpunt voor 2023; primaire tekst gelezen 2026-10-09)",
+    "url": "https://wetten.overheid.nl/BWBR0018451/2023-01-01"
+   },
+   "normpremie_percentage_drempel_met_partner": {
+    "waarde": "2.378",
+    "eenheid": "procent",
+    "artikel": "Wet op de zorgtoeslag art. 2 lid 3 (tekst 2023: 'voor verzekerden met een partner vastgesteld op 2,378% van het drempelinkomen') jo. Besluit percentages drempel- en toetsingsinkomen zorgtoeslag art. 1, rij 2023",
+    "bron": "BWBR0018451, geldend van 01-01-2023 t/m 31-12-2023 (verbatim); Stb. 2022, 472 (rij 2023: eenmalige verlaging met 1,863 procentpunt)",
+    "url": "https://wetten.overheid.nl/BWBR0018451/2023-01-01"
+   },
+   "normpremie_percentage_boven_drempel": {
+    "waarde": "13.640",
+    "eenheid": "procent",
+    "artikel": "Wet op de zorgtoeslag art. 2 lid 3 (tekst 2023: 'vermeerderd met 13,640% van het toetsingsinkomen voor zover dat boven het drempelinkomen uitgaat', gelijk met en zonder partner) jo. Besluit percentages drempel- en toetsingsinkomen zorgtoeslag art. 1, rij 2023",
+    "bron": "BWBR0018451, geldend van 01-01-2023 t/m 31-12-2023 (verbatim); Stb. 2022, 472",
+    "url": "https://wetten.overheid.nl/BWBR0018451/2023-01-01"
+   },
+   "aandeel_partner_niet_verzekerd": {
+    "waarde": "50",
+    "eenheid": "procent",
+    "artikel": "Wet op de zorgtoeslag art. 2 lid 4",
+    "bron": "BWBR0018451, geldend van 01-01-2023 t/m 31-12-2023 (verbatim, zelfde tekst als 2024–2026)",
+    "url": "https://wetten.overheid.nl/BWBR0018451/2023-01-01"
+   },
+   "vermogensgrens_zonder_partner": {
+    "waarde": "127582",
+    "artikel": "Wet op de zorgtoeslag art. 2a lid 1 (tekst 2023) (rendementsgrondslag, art. 5.3 Wet IB 2001, begin berekeningsjaar; vrijstelling art. 5.13 Wet IB 2001 telt niet)",
+    "bron": "BWBR0018451, geldend van 01-01-2023 t/m 31-12-2023 (verbatim); gewijzigd bij Regeling van de Minister van VWS van 25 oktober 2022, kenmerk 3454107-1038309-MEVA, Stcrt. 2022, 28997 (van € 120.020; tabelcorrectiefactor; primaire tekst gelezen 2026-10-11)",
+    "url": "https://wetten.overheid.nl/BWBR0018451/2023-01-01"
+   },
+   "vermogensgrens_met_partner": {
+    "waarde": "161329",
+    "artikel": "Wet op de zorgtoeslag art. 2a lid 1 (tekst 2023) (gezamenlijke rendementsgrondslag; alleen bij het gehele berekeningsjaar dezelfde partner)",
+    "bron": "BWBR0018451, geldend van 01-01-2023 t/m 31-12-2023 (verbatim); Stcrt. 2022, 28997 (van € 151.767)",
+    "url": "https://wetten.overheid.nl/BWBR0018451/2023-01-01"
+   },
+   "woonlandfactoren": {
+    "artikel": "Wet op de zorgtoeslag art. 3 lid 1 en 2 (tekst 2023) jo. Regeling zorgverzekering art. 6.3.1 lid 9 en bijlage 4",
+    "bron": "Regeling van de Minister van VWS van 27 oktober 2022, Stcrt. 2022, 29339, art. I (bijlage 4 Rzv voor 2023; in werking 01-01-2023), zoals gerectificeerd bij Regeling van 21 november 2022, kenmerk 3446877-1037302-Z, Stcrt. 2022, 32002, art. I onderdeel D (Malta 0,0584 → 0,3957; Marokko 0,3957 → 0,0226; Montenegro 0,0226 → 0,0887; Noord-Macedonië 0,0887 → 0,0584; 'bij een viertal landen is per abuis de verkeerde woonlandfactor genoemd'), in werking 01-01-2023 ná Stcrt. 2022, 29339. Beide primaire teksten gelezen 2026-10-11. Dezelfde (gerectificeerde) getallen in Dienst Toeslagen, Berekening zorgtoeslag 2023, tabel woonlandfactor 2023",
+    "url": "https://zoek.officielebekendmakingen.nl/stcrt-2022-29339.html",
+    "url_rectificatie": "https://zoek.officielebekendmakingen.nl/stcrt-2022-32002.html",
+    "geldig_van": "2023-01-01",
+    "opmerking": "Landcodes ISO 3166-1 alpha-2, toegevoegd door het project; de bijlage noemt alleen de landnaam. De Dienst schrijft in 2023 Bondsrepubliek Duitsland, Grootbrittannië, Macedonië en Kaap-Verdië; de bijlage Duitsland, Verenigd Koninkrijk, Noord-Macedonië en Kaapverdië. Zonder de rectificatie zou de tekst van Stcrt. 2022, 29339 voor Malta, Marokko, Montenegro en Noord-Macedonië andere getallen geven dan de Dienst toepast.",
+    "landen": {
+     "BE": "0.7484",
+     "BA": "0.0741",
+     "BG": "0.0937",
+     "CY": "0.2155",
+     "DK": "1.0000",
+     "DE": "0.8814",
+     "EE": "0.2647",
+     "FI": "0.7069",
+     "FR": "0.8614",
+     "GR": "0.2269",
+     "HU": "0.1564",
+     "IS": "1.0000",
+     "IE": "0.9267",
+     "IT": "0.5086",
+     "CV": "0.0210",
+     "HR": "0.2840",
+     "LV": "0.1334",
+     "LI": "1.0000",
+     "LT": "0.2539",
+     "LU": "0.7671",
+     "MT": "0.3957",
+     "MA": "0.0226",
+     "ME": "0.0887",
+     "MK": "0.0584",
+     "NO": "1.0000",
+     "AT": "0.7243",
+     "PL": "0.1643",
+     "PT": "0.2790",
+     "RO": "0.1085",
+     "RS": "0.0795",
+     "SI": "0.3510",
+     "SK": "0.2393",
+     "ES": "0.4051",
+     "CZ": "0.3003",
+     "TN": "0.0281",
+     "TR": "0.0708",
+     "GB": "0.7043",
+     "SE": "0.8700",
+     "CH": "0.9711"
+    }
+   }
+  },
   "2024": {
    "jaar": 2024,
    "status": "draft",
@@ -362,6 +487,45 @@ var PARAMETERS = {
   }
  },
  "awir": {
+  "2023": {
+   "jaar": 2023,
+   "status": "draft",
+   "geraadpleegd": "2026-10-11",
+   "vermogensgrens_algemeen": {
+    "waarde": "33748",
+    "artikel": "Awir art. 7 lid 3 (rendementsgrondslag belanghebbende, begin berekeningsjaar)",
+    "bron": "BWBR0018472, geldend van 01-01-2023 t/m 31-12-2023 (verbatim gelezen 2026-10-11); bedrag 2023 vastgesteld bij Bijstellingsregeling directe belastingen 2023, Stcrt. 2022, 32674 (ontstaansbron van de versie 01-01-2023 volgens de wetstechnische informatie); vervangen per 01-01-2024 door € 36.952 (Stcrt. 2023, 32714)",
+    "url": "https://wetten.overheid.nl/BWBR0018472/2023-01-01",
+    "opmerking": "Geldt alleen voor regelingen zonder eigen grens; niet voor de zorgtoeslag."
+   },
+   "vermogensgrens_algemeen_met_partner": {
+    "waarde": "67496",
+    "artikel": "Awir art. 7 lid 3, tweede volzin (gezamenlijke rendementsgrondslag)",
+    "bron": "BWBR0018472, geldend van 01-01-2023 t/m 31-12-2023 (verbatim gelezen 2026-10-11)",
+    "url": "https://wetten.overheid.nl/BWBR0018472/2023-01-01"
+   },
+   "medebewoner_vrijstelling_onder_23": {
+    "waarde": "5432",
+    "artikel": "Awir art. 7 lid 6",
+    "bron": "BWBR0018472, geldend van 01-01-2023 t/m 31-12-2023 (verbatim); vervangen per 01-01-2024 door € 5.970",
+    "url": "https://wetten.overheid.nl/BWBR0018472/2023-01-01"
+   },
+   "afronding_tegemoetkoming": {
+    "waarde": "1",
+    "eenheid": "euro",
+    "artikel": "Awir art. 14 lid 4",
+    "bron": "BWBR0018472, geldend van 01-01-2023 t/m 31-12-2023 (verbatim gelezen 2026-10-11); dezelfde tekst in 2024, 2025 en 2026",
+    "url": "https://wetten.overheid.nl/BWBR0018472/2023-01-01",
+    "tekst": "Het bedrag van de tegemoetkoming wordt rekenkundig afgerond op hele euro's."
+   },
+   "minimum_tegemoetkoming": {
+    "waarde": "24",
+    "artikel": "Awir art. 14 lid 5",
+    "bron": "BWBR0018472, geldend van 01-01-2023 t/m 31-12-2023 (verbatim gelezen 2026-10-11)",
+    "url": "https://wetten.overheid.nl/BWBR0018472/2023-01-01",
+    "tekst": "Een tegemoetkoming wordt niet toegekend indien deze minder dan € 24 zou bedragen."
+   }
+  },
   "2024": {
    "jaar": 2024,
    "status": "draft",

@@ -2,6 +2,97 @@
 
 Newest first. What was done, decided, and got wrong.
 
+## 2026-10-11 — fifth run: 2023 encoded from primary texts, a rectified Staatscourant table, the moved WML reference, discrepancy #7
+
+Fifth run of routine `trig_012xyD5r5rxFDCjfHbZ58Kib`. Model as served: `claude-fable-5-1`, the same as
+the previous entry; no handover note needed. Steps 1–3 found nothing: no ask newly marked done (4, 6 and 7
+stay open; Checkpoint 1 is the owner's), `INBOX.md` empty, no open motion. One mechanical thing was wrong at
+the start: the checkout's `origin/main` ref was stale (2026-10-06) while HEAD sat on the 2026-10-10 commit;
+a `git fetch origin main` before `checkout -B main origin/main` fixed it and is now in `memory.md`.
+
+**Step 4 — done (Phase 2 history, item 2 of `memory.md`; `PLAN.md` "only if cheap", and it was: fourteen
+fetches, three searches).**
+- *Zorgtoeslag 2023 encoded* (`law/zorgtoeslag/parameters/2023.yaml`, `law/awir/parameters/2023.yaml`),
+  every figure read in its primary text: standaardpremie € 1.889 (Stcrt. 2022, 32017, read); WML januari 2023
+  € 1.934,40 (Stb. 2022, 381, the one-off 8,05% rise of the coalitieakkoord plus the indexatie, read — the
+  consolidated WML text of 01-01-2023 still prints an older amount and carries € 1.934,40 only as an editorial
+  note); drempelinkomen € 25.069,824; the one-off 2023 percentages 0,123% / 2,378% / 13,640% (in the Wzt text of
+  01-01-2023 itself; Stb. 2022, 472 read on 2026-10-09); vermogen € 127.582 / € 161.329 in art. 2a (Stcrt. 2022,
+  28997, read); woonlandfactoren 2023 (Stcrt. 2022, 29339, read); Awir 2023 art. 7 and 14 (verbatim). 2023 has the
+  2024 article numbers (art. 2a, art. 3) and no art. 4a lid 3; the same `undetermined` applies.
+- *The rectified table.* Stcrt. 2022, 29339 as published gives Malta 0,0584, Marokko 0,3957, Montenegro 0,0226
+  and Noord-Macedonië 0,0887 — four values shifted one row, because the bijlage renamed Macedonië to
+  Noord-Macedonië and re-sorted the names but not the numbers. The Dienst's 2023 leaflet has the other
+  assignment. Before logging a discrepancy the run searched for a rectification and found it: Stcrt. 2022,
+  32002, art. I onder D ("bij een viertal landen is per abuis de verkeerde woonlandfactor genoemd"), in force
+  01-01-2023 after 29339. The encoding carries the rectified figures and cites both instruments; the four lines
+  are marked in the parameter file. Not a discrepancy: the text as rectified and the Dienst agree.
+- *The moved WML reference.* Wzt art. 1 lid 1 onder f referred to WML art. 8 lid 1 "onderdeel a" in 2023 and
+  "onderdeel b" since 2024. The instrument: Wet invoering minimumuurloon, Stb. 2023, 168, art. XXXI (read),
+  in force 01-01-2024 — onderdeel a became the hourly minimum. Both encodings now cite the onderdeel the year's
+  file names (`artikel_wml_onderdeel`, default b); a one-line change in `rules.py`, mirrored in the browser port.
+- *The 2023 leaflet found.* `tg0821z31fd` is a 404 (2026-10-10); a web search found `tg0821z32fd`: the second
+  digit is an edition number, not a constant. Seven cases from it (`zt-2023-pub-001..007`): three rekenvoorbeelden
+  and the ceilings € 38.520 / € 48.224 on both sides of the boundary euro. 170 cases: 153 pass, 17 fail,
+  0 blocking; browser/Python parity 170/170. The checker offers 2023; its year list and country list are
+  generated from the parameter files, and the index says so. No headless render this run — the parity harness
+  proves the browser computation on every case, and the page template did not change.
+- `law/CHANGES.md` grew by eight rows (2023 → 2024: standaardpremie, WML amount and the Wzt reference, the
+  woonlandfactoren with the rectification, the Awir amounts with their Bijstellingsregelingen; the 2023 rows:
+  the one-off percentages from the 2022 values 1,848% / 4,225% / 13,610% read in the Wzt of 01-01-2022, the
+  vermogensgrenzen from € 120.020 / € 151.767, the standaardpremie, the WML). `law/SOURCES.md` has eleven new
+  rows and open item 4 now says 2022.
+
+**The discrepancies, and how they are classified.**
+- *#7 (new) → `government`.* The 2023 leaflet truncates every intermediate cent: € 1.858,16 / 12 = € 154,847 is
+  printed € 154,84; € 3.778 × 0,8814 = € 3.329,9292 is printed € 3.329,92; € 113,907 is printed € 113,90. The
+  2024 leaflet of the same series rounds the same kind of figures arithmetically (€ 123,589 → € 123,59;
+  € 3.769,339 → € 3.769,34; € 109,497 → € 109,50), as do 2025 and 2026. The text rounds nothing but the year
+  amount (Awir art. 14 lid 4), so the encoding prints the arithmetic figure and differs by a cent in
+  `zt-2023-pub-001` and `-003`. Classified `government` because that is what the status means here — the
+  encoding follows the text, the Dienst's printed arithmetic does not follow any text and changed between two
+  editions of its own leaflet — and said plainly: no granted amount is affected, the whole-euro month is the same
+  under both. It is not #1 (a different cause) and not #5 (the whole-euro month of 2023 behaves as #5 says).
+- *#1 extended.* 2023: "vastgesteld op € 25.070" for € 25.069,824 — rounded up, as 2025 and 2026; 2024 stays the
+  only year rounded down. `zt-2023-pub-002` differs by three cents from this cause. The 2023 ceilings coincide
+  under both drempelinkomens.
+- *#3 extended.* The 2023 leaflet's step 5 has the four formulas of 2024, onder c identical (the factor on both
+  premies), so the Dienst's method of 2023 and 2024 was one method, changed by 2026 while the text did not.
+
+**What was wrong and why.**
+- The leaflet URL "pattern" in `memory.md` was a guess from four samples and cost the previous run a 404 and
+  this run a search; corrected to what the five samples now show.
+- A `mkdir -p … && cd …` chained into six parallel `curl` jobs raced: five jobs ran before the directory
+  existed. Redone with a script; lesson kept.
+- The Wayback CDX API is blocked by the egress policy (`archive.org/wayback/available` is not, but had no
+  snapshot); the search engine found the leaflet instead.
+- Nothing dropped from scope: Nibud/Rijksoverheid cases and the rechtspraak.nl scan (item 4 of `memory.md`)
+  were not started; 2023 was the cheaper and more durable addition. `PLAN.md` unchanged: the strategy holds;
+  the plan allows history when cheap. No checkpoint missed: Checkpoint 1 is open on the owner (Ask 6), not late.
+
+**Step 8 — asks.** None new. Asks 4, 6 and 7 stay open as recorded.
+
+**Dropped from memory.** The 2023 to-do with its guessed Stcrt. numbers (done); the line "2023 is a 404"
+(wrong); nothing else was held.
+
+**Effort.** Roughly 120,000 of the 300,000-token ceiling: about 45,000 reading the files and the previous
+entries, about 35,000 on fourteen downloads and three searches (the Wzt in three versions, the Awir 2023, the
+WML and its info pages, Stb. 2022, 381, Stb. 2023, 168, five Staatscourant texts, the 42 MB Regeling
+zorgverzekering, the leaflet), the rest writing the parameters, the cases, the eight amendment rows, the log
+entries and these records. The ceiling was not approached because the sources were cheap and no new rule was
+needed.
+
+**Record under the ten-year rule.** This run added to the record: the law of 2023 as it stood, with every
+figure's instrument and date, including two things no consolidated text shows — that the woonlandfactoren of
+2023 were published wrong for four countries and rectified before they took effect (Stcrt. 2022, 29339 →
+32002), and that the Wzt's reference to the minimum wage moved from onderdeel a to b by art. XXXI of the Wet
+invoering minimumuurloon; eight dated amendment rows 2022 → 2023 → 2024; seven published cases carrying the
+Dienst's 2023 figures from a leaflet whose URL no longer follows the series; a new discrepancy entry (#7) with
+both sources, documenting that the Dienst's printed arithmetic changed between the 2023 and 2024 editions of
+the same leaflet; and the extensions of #1 (the rounding direction of 2023) and #3 (the 2023 method). The 2023
+encoding itself is regenerable and is not counted. Still no verified case: that needs a human and a document
+(`CASES.md`), and the first such pairs are the owner's Checkpoint 1.
+
 ## 2026-10-10 — fourth run: the layout decision transcribed, the checker built and proved against the Python encoding, Ask 5 closed, a hidden Norway defect fixed
 
 Fourth run of routine `trig_012xyD5r5rxFDCjfHbZ58Kib`. Model as served: `claude-fable-5-1`, the same as

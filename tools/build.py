@@ -425,7 +425,7 @@ waar het vandaan komt. U kunt uw zorgtoeslag narekenen en zien hoe de wet bij he
 het dossier: de wet zoals zij elk jaar gold, de gepubliceerde rekenvoorbeelden, en elk verschil tussen de
 wettekst en wat Dienst Toeslagen doet.</p>
 <h2>Narekenen</h2>
-<ul><li><a href="zorgtoeslag.html">Zorgtoeslag narekenen</a> — 2026, 2025 en 2024, stap voor stap, op uw eigen apparaat.</li></ul>
+<ul><li><a href="zorgtoeslag.html">Zorgtoeslag narekenen</a> — 2026, 2025, 2024 en 2023, stap voor stap, op uw eigen apparaat.</li></ul>
 <p class="klein">Nog niets hier is af. Elke regel heeft de status <span class="status">draft</span>: door niemand met
 vakkennis nagelezen. Geen enkele case is geverifieerd aan een echte beschikking. Dit is een controle, geen advies;
 aanvragen doet u op <a href="https://www.toeslagen.nl">toeslagen.nl</a>. De huurtoeslag komt later.</p>

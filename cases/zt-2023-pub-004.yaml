@@ -1,0 +1,16 @@
+id: zt-2023-pub-004
+toeslag: zorgtoeslag
+jaar: 2023
+bron:
+  type: published
+  publicatie: "Dienst Toeslagen, Berekening zorgtoeslag 2023, stap 2: 'Uw klant heeft geen recht op zorgtoeslag als het toetsingsinkomen hoger is dan € 38.520 (aanvrager zonder toeslagpartner), € 48.224 (aanvrager met toeslagpartner)'"
+  url: https://download.belastingdienst.nl/toeslagen/docs/berekening_zorgtoeslag_tg0821z32fd.pdf
+  opgehaald: 2026-10-11
+verified: false
+invoer:
+  partner: false
+  toetsingsinkomen_aanvrager: "38520"
+  rendementsgrondslag: null
+verwacht:
+  tegemoetkoming: "24"
+opmerking: "Op de grens zelf: recht. Aanspraak ≈ € 23,5 → € 24 (Awir art. 14 lid 4-5), met beide drempelinkomens."
