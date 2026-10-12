@@ -284,10 +284,21 @@ def bereken(jaar: int, par: dict, toetsingsinkomen_aanvrager: Decimal, partner: 
     # Not law: how Dienst Toeslagen arrives at the whole-euro monthly amount it publishes. Its tables divide the
     # granted year amount (whole euros, Awir art. 14 lid 4) by twelve and round down; its leaflets print the
     # unrounded month but round down to the same euro (DISCREPANCIES.md #5, 2026-10-09).
+    # The 2022 leaflet rounds the month arithmetically (€ 44,89 → € 45; DISCREPANCIES.md #8): the year's parameter
+    # file says which practice applies (`maand_afronding_praktijk`: "naar_beneden" by default, "rekenkundig" for 2022).
     basis_maand = u.tegemoetkoming if u.tegemoetkoming is not None else aanspraak
-    u.aanspraak_maand_afgerond_praktijk = int((basis_maand / D(12)).quantize(D(1), rounding=ROUND_FLOOR))
-    u.onbepaald.append("afronding maandbedrag: de wet rondt het jaarbedrag af (Awir art. 14 lid 4), niet het "
-                       "maandbedrag; Dienst Toeslagen deelt in haar tabellen het afgeronde jaarbedrag door twaalf en "
-                       "rondt naar beneden af op hele euro's (grondslag niet gevonden in Awir, Wzt of "
-                       "Uitvoeringsregeling Awir).")
+    praktijk = par.get("maand_afronding_praktijk")
+    praktijk = praktijk.get("waarde", "naar_beneden") if isinstance(praktijk, dict) else "naar_beneden"
+    if praktijk == "rekenkundig":
+        u.aanspraak_maand_afgerond_praktijk = int((basis_maand / D(12)).quantize(D(1), rounding=ROUND_HALF_UP))
+        u.onbepaald.append("afronding maandbedrag: de wet rondt het jaarbedrag af (Awir art. 14 lid 4), niet het "
+                           "maandbedrag; Dienst Toeslagen rondde in haar rekenvoorbeeld van 2022 het maandbedrag "
+                           "rekenkundig af op hele euro's (€ 44,89 → € 45), in latere jaren naar beneden (grondslag "
+                           "niet gevonden in Awir, Wzt of Uitvoeringsregeling Awir).")
+    else:
+        u.aanspraak_maand_afgerond_praktijk = int((basis_maand / D(12)).quantize(D(1), rounding=ROUND_FLOOR))
+        u.onbepaald.append("afronding maandbedrag: de wet rondt het jaarbedrag af (Awir art. 14 lid 4), niet het "
+                           "maandbedrag; Dienst Toeslagen deelt in haar tabellen het afgeronde jaarbedrag door twaalf en "
+                           "rondt naar beneden af op hele euro's (grondslag niet gevonden in Awir, Wzt of "
+                           "Uitvoeringsregeling Awir).")
     return u

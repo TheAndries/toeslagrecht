@@ -298,13 +298,13 @@ def eur(v: Decimal | None, cents_: bool = True) -> str:
     return "€ " + s
 
 
-def page(title: str, body: str, lang_note: bool = True) -> str:
+def page(title: str, body: str, lang_note: bool = True, topline: bool = True) -> str:
+    top = '<p class="klein">toeslagrecht · zorgtoeslag · 2026 · <span class="status">alle regels: draft</span></p>\n' if topline else ""
     return f"""<!doctype html>
 <html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{html.escape(title)} — toeslagrecht</title><style>{CSS}</style></head>
 <body><main>
-<p class="klein">toeslagrecht · zorgtoeslag · 2026 · <span class="status">alle regels: draft</span></p>
-{body}
+{top}{body}
 <p class="klein">Niets van wat u invult verlaat uw telefoon of computer. Deze pagina slaat niets op.</p>
 <p class="klein">Bron: <a href="https://github.com/TheAndries/toeslagrecht">de open encoding en het dossier</a> (MIT / CC BY-SA 4.0). Gebouwd {TODAY}.</p>
 </main></body></html>
@@ -413,11 +413,16 @@ def build() -> None:
     rules = load_rules("zorgtoeslag")
     par = load_params("zorgtoeslag", 2026)
     u = rules.bereken(2026, par, toetsingsinkomen_aanvrager=D(32000), partner=False, awir=load_awir(2026))
+    # The three layouts of Ask 3 stay in the repository as the record of the choice, but are not
+    # published: internal matters never appear on the website (owner decision 2026-10-11, BOARD.md;
+    # DESIGN.md). The Pages workflow removes site/layouts/ from the deployed artifact.
     out = ROOT / "site" / "layouts"
     out.mkdir(parents=True, exist_ok=True)
     (out / "a.html").write_text(layout_a(u), encoding="utf-8")
     (out / "b.html").write_text(layout_b(u), encoding="utf-8")
     (out / "c.html").write_text(layout_c(u), encoding="utf-8")
+    jaren = sorted((int(p.stem) for p in (ROOT / "law" / "zorgtoeslag" / "parameters").glob("*.yaml")), reverse=True)
+    jaren_tekst = ", ".join(str(j) for j in jaren[:-1]) + " en " + str(jaren[-1])
     index = f"""<header class="kop"><p class="klein">toeslagrecht · <span class="status">alle regels: draft</span></p></header>
 <h1>toeslagrecht</h1>
 <p>Hier staat de Nederlandse toeslagenwet als open, controleerbare rekenregels, met bij elk getal het artikel
@@ -425,7 +430,7 @@ waar het vandaan komt. U kunt uw zorgtoeslag narekenen en zien hoe de wet bij he
 het dossier: de wet zoals zij elk jaar gold, de gepubliceerde rekenvoorbeelden, en elk verschil tussen de
 wettekst en wat Dienst Toeslagen doet.</p>
 <h2>Narekenen</h2>
-<ul><li><a href="zorgtoeslag.html">Zorgtoeslag narekenen</a> — 2026, 2025, 2024 en 2023, stap voor stap, op uw eigen apparaat.</li></ul>
+<ul><li><a href="zorgtoeslag.html">Zorgtoeslag narekenen</a> — {jaren_tekst}, stap voor stap, op uw eigen apparaat.</li></ul>
 <p class="klein">Nog niets hier is af. Elke regel heeft de status <span class="status">draft</span>: door niemand met
 vakkennis nagelezen. Geen enkele case is geverifieerd aan een echte beschikking. Dit is een controle, geen advies;
 aanvragen doet u op <a href="https://www.toeslagen.nl">toeslagen.nl</a>. De huurtoeslag komt later.</p>
@@ -435,10 +440,8 @@ aanvragen doet u op <a href="https://www.toeslagen.nl">toeslagen.nl</a>. De huur
 <li><a href="https://github.com/TheAndries/toeslagrecht/tree/main/cases">De cases</a> · <a href="https://github.com/TheAndries/toeslagrecht/blob/main/law/zorgtoeslag/tests/report.md">de controle van de regels tegen de cases</a></li>
 <li><a href="https://github.com/TheAndries/toeslagrecht/blob/main/DISCREPANCIES.md">Waar de wettekst en Dienst Toeslagen verschillen</a></li>
 <li><a href="https://github.com/TheAndries/toeslagrecht/blob/main/DISPUTES.md">Iets betwisten</a> · <a href="https://github.com/TheAndries/toeslagrecht/blob/main/CASES.md">een echte beschikking insturen, anoniem</a></li></ul>
-<h2>Hoe de pagina gekozen is</h2>
-<p class="klein">Op 2026-10-09 koos de eigenaar uit drie opzetten van dezelfde berekening voor <a href="layouts/b.html">B, het verhaal</a>
-(<a href="layouts/a.html">A, de tabel</a> en <a href="layouts/c.html">C, de brief</a> blijven staan als dossier; <code>BOARD.md</code>).</p>"""
-    (ROOT / "site" / "index.html").write_text(page("Start", index), encoding="utf-8")
+"""
+    (ROOT / "site" / "index.html").write_text(page("Start", index, topline=False), encoding="utf-8")
     print("site built:", [p.name for p in out.iterdir()], "index.html zorgtoeslag.html zorgtoeslag-parameters.js")
 
 

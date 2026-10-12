@@ -1,7 +1,138 @@
-/* Gegenereerd door tools/build.py op 2026-10-11 uit law/zorgtoeslag/parameters/*.yaml en law/awir/parameters/*.yaml. Niet bewerken: de yaml-bestanden zijn de bron en dragen bij elk getal zijn artikel. Licentie: CC BY-SA 4.0 (LICENSE-DATA). */
+/* Gegenereerd door tools/build.py op 2026-10-12 uit law/zorgtoeslag/parameters/*.yaml en law/awir/parameters/*.yaml. Niet bewerken: de yaml-bestanden zijn de bron en dragen bij elk getal zijn artikel. Licentie: CC BY-SA 4.0 (LICENSE-DATA). */
 var PARAMETERS = {
- "gegenereerd": "2026-10-11",
+ "gegenereerd": "2026-10-12",
  "zorgtoeslag": {
+  "2022": {
+   "jaar": 2022,
+   "status": "draft",
+   "geraadpleegd": "2026-10-12",
+   "versie": "BWBR0018451, geldend van 01-01-2022 t/m 31-12-2022 (verbatim gelezen 2026-10-12)",
+   "artikel_vermogenstoets": "Wzt art. 2a lid 1 (tekst 2022)",
+   "artikel_woonlandfactor": "Wzt art. 3 (tekst 2022)",
+   "artikel_wml_onderdeel": "a",
+   "art4a_lid3_aanwezig": false,
+   "maand_afronding_praktijk": {
+    "waarde": "rekenkundig",
+    "artikel": "geen — praktijk van Dienst Toeslagen, geen wettekst. Wzt art. 2 lid 5 bepaalt de aanspraak per kalendermaand zonder afronding; Awir art. 14 lid 4 rondt alleen het jaarbedrag af",
+    "bron": "Dienst Toeslagen, Berekening zorgtoeslag 2022 (TG 082 - 1Z21FD), rekenvoorbeeld 2: 'Bedrag per maand € 44,89 (na afronding € 45)' — rekenkundig, waar de leaflets 2023 en 2025 en de tabellen 2025/2026 naar beneden afronden (standaard 'naar_beneden', DISCREPANCIES.md #5). Eén voorbeeld; zie DISCREPANCIES.md #8",
+    "url": "https://download.belastingdienst.nl/toeslagen/docs/berekening_zorgtoeslag_tg0821z21fd.pdf"
+   },
+   "art4a_lid3_opmerking": "Het huidige art. 4a lid 3 (verzekerde aanvrager met een verdragsgerechtigde partner) is ingevoegd per 06-11-2024 (Stb. 2024, 291, art. XIX onder C). In 2022 regelde de tekst (art. 3) dat geval niet; de encoding geeft dan 'undetermined'.",
+   "standaardpremie": {
+    "waarde": "1749",
+    "artikel": "Wet op de zorgtoeslag art. 4 jo. Regeling vaststelling standaardpremie en bestuursrechtelijke premies 2022, art. 1",
+    "bron": "Regeling van de Minister van VWS van 23 november 2021, kenmerk 3262509-1016080-Z, Stcrt. 2021, 47872 (primaire tekst gelezen 2026-10-12); geconsolideerd BWBR0045944. Toelichting: geraamde gemiddelde nominale premie € 1.522 plus geraamd gemiddeld verplicht eigen risico € 227",
+    "url": "https://zoek.officielebekendmakingen.nl/stcrt-2021-47872.html",
+    "geldig_van": "2022-01-01",
+    "tekst": "De standaardpremie, bedoeld in artikel 1, onderdeel g, van de Wet op de zorgtoeslag, bedraagt voor het berekeningsjaar 2022 € 1.749."
+   },
+   "wml_maandbedrag_januari": {
+    "waarde": "1725.00",
+    "artikel": "Wet minimumloon en minimumvakantiebijslag art. 8 lid 1 onder a, bedrag per 1 januari 2022 (in 2022 was het maandbedrag onderdeel a; sinds 01-01-2024 onderdeel b)",
+    "bron": "Regeling van de Staatssecretaris van SZW van 12 oktober 2021, nr. 2021-0000161578, tot aanpassing van het wettelijk minimumloon per 1 januari 2022, Stcrt. 2021, 44177, art. 1 onder a (primaire tekst gelezen 2026-10-12; aanpassingspercentage 1,41%; per 1 juli 2021 was het € 1.701,00). De geconsolideerde WML-tekst van 01-01-2022 (BWBR0002638) draagt het bedrag als redactionele noot bij art. 8 ('per 1 januari 2022: € 1.725,00')",
+    "url": "https://zoek.officielebekendmakingen.nl/stcrt-2021-44177.html",
+    "geldig_van": "2022-01-01",
+    "tekst": "a. € 1.725,00;"
+   },
+   "drempelinkomen_factor": {
+    "waarde": "108",
+    "eenheid": "procent",
+    "artikel": "Wet op de zorgtoeslag art. 1 lid 1 onder f",
+    "bron": "BWBR0018451, geldend van 01-01-2022 t/m 31-12-2022 (verbatim)",
+    "url": "https://wetten.overheid.nl/BWBR0018451/2022-01-01",
+    "tekst": "drempelinkomen: 108% van het twaalfvoud van het voor de maand januari van het berekeningsjaar geldende in artikel 8, eerste lid, onderdeel a, van de Wet minimumloon en minimumvakantiebijslag bedoelde bedrag per maand",
+    "opmerking": "108% × 12 × € 1.725,00 = € 22.356,00, een rond bedrag. Dienst Toeslagen, Berekening zorgtoeslag 2022: 'vastgesteld op € 22.356' — gelijk aan de tekst; 2022 geeft dus geen bewijs over de afrondingspraktijk van DISCREPANCIES.md #1."
+   },
+   "normpremie_percentage_drempel_zonder_partner": {
+    "waarde": "1.848",
+    "eenheid": "procent",
+    "artikel": "Wet op de zorgtoeslag art. 2 lid 3 (tekst 2022: 'voor een verzekerde zonder partner op 1,848% van het drempelinkomen'), zoals gewijzigd bij Besluit percentages drempel- en toetsingsinkomen zorgtoeslag art. 1, rij 2022",
+    "bron": "BWBR0018451, geldend van 01-01-2022 t/m 31-12-2022 (verbatim); Stb. 2021, 574 (besluit van 23 november 2021, schema 2022–2040, rij 2022; nota van toelichting tabel 1: 2021 1,915%, 2022 1,848% = −0,067 procentpunt koopkrachtmaatregel +0,015 procentpunt dekking vrijwaringsgrens; primaire tekst gelezen 2026-10-12)",
+    "url": "https://wetten.overheid.nl/BWBR0018451/2022-01-01"
+   },
+   "normpremie_percentage_drempel_met_partner": {
+    "waarde": "4.225",
+    "eenheid": "procent",
+    "artikel": "Wet op de zorgtoeslag art. 2 lid 3 (tekst 2022: 'voor verzekerden met een partner vastgesteld op 4,225% van het drempelinkomen') jo. Besluit percentages drempel- en toetsingsinkomen zorgtoeslag art. 1, rij 2022",
+    "bron": "BWBR0018451, geldend van 01-01-2022 t/m 31-12-2022 (verbatim); Stb. 2021, 574 (rij 2022; tabel 1: 2021 eveneens 4,225%: 4,210% na het vorige besluit +0,015 procentpunt)",
+    "url": "https://wetten.overheid.nl/BWBR0018451/2022-01-01"
+   },
+   "normpremie_percentage_boven_drempel": {
+    "waarde": "13.610",
+    "eenheid": "procent",
+    "artikel": "Wet op de zorgtoeslag art. 2 lid 3 (tekst 2022: 'vermeerderd met 13,610% van het toetsingsinkomen voor zover dat boven het drempelinkomen uitgaat', gelijk met en zonder partner) jo. Besluit percentages drempel- en toetsingsinkomen zorgtoeslag art. 1, rij 2022",
+    "bron": "BWBR0018451, geldend van 01-01-2022 t/m 31-12-2022 (verbatim); Stb. 2021, 574 ('De afbouwpercentages ... veranderen niet')",
+    "url": "https://wetten.overheid.nl/BWBR0018451/2022-01-01"
+   },
+   "aandeel_partner_niet_verzekerd": {
+    "waarde": "50",
+    "eenheid": "procent",
+    "artikel": "Wet op de zorgtoeslag art. 2 lid 4",
+    "bron": "BWBR0018451, geldend van 01-01-2022 t/m 31-12-2022 (verbatim, zelfde tekst als 2023–2026)",
+    "url": "https://wetten.overheid.nl/BWBR0018451/2022-01-01"
+   },
+   "vermogensgrens_zonder_partner": {
+    "waarde": "120020",
+    "artikel": "Wet op de zorgtoeslag art. 2a lid 1 (tekst 2022) (rendementsgrondslag, art. 5.3 Wet IB 2001, begin berekeningsjaar; vrijstelling art. 5.13 Wet IB 2001 telt niet)",
+    "bron": "BWBR0018451, geldend van 01-01-2022 t/m 31-12-2022 (verbatim); gewijzigd bij Regeling van de Minister van VWS van 15 november 2021, kenmerk 3280145-1019366-MEVA, Stcrt. 2021, 47692 (van € 118.479; tabelcorrectiefactor; primaire tekst gelezen 2026-10-12)",
+    "url": "https://wetten.overheid.nl/BWBR0018451/2022-01-01"
+   },
+   "vermogensgrens_met_partner": {
+    "waarde": "151767",
+    "artikel": "Wet op de zorgtoeslag art. 2a lid 1 (tekst 2022) (gezamenlijke rendementsgrondslag; alleen bij het gehele berekeningsjaar dezelfde partner)",
+    "bron": "BWBR0018451, geldend van 01-01-2022 t/m 31-12-2022 (verbatim); Stcrt. 2021, 47692 (van € 149.819)",
+    "url": "https://wetten.overheid.nl/BWBR0018451/2022-01-01"
+   },
+   "woonlandfactoren": {
+    "artikel": "Wet op de zorgtoeslag art. 3 lid 1 en 2 (tekst 2022) jo. Regeling zorgverzekering art. 6.3.1 lid 9 en bijlage 4",
+    "bron": "Regeling van de Minister van VWS van 9 november 2021, Stcrt. 2021, 46565, art. I (bijlage 4 Rzv voor 2022; in werking 01-01-2022), zoals gecorrigeerd bij Regeling van 16 november 2021, kenmerk 3262512-1016081-Z, Stcrt. 2021, 47687, art. I onderdeel E (Liechtenstein 0,9229 → 0,9172; 'een inmiddels achterhaald verhoudingsgetal'), in werking 01-01-2022 ná Stcrt. 2021, 46565 (toelichting: aanwijzing 5.70). Beide primaire teksten gelezen 2026-10-12; gecontroleerd tegen de geconsolideerde bijlage 4 (BWBR0018715, geldend van 01-01-2022 t/m 31-01-2022). Dezelfde (gecorrigeerde) getallen in Dienst Toeslagen, Berekening zorgtoeslag 2022, tabel woonlandfactor 2022",
+    "url": "https://zoek.officielebekendmakingen.nl/stcrt-2021-46565.html",
+    "url_rectificatie": "https://zoek.officielebekendmakingen.nl/stcrt-2021-47687.html",
+    "geldig_van": "2022-01-01",
+    "opmerking": "Landcodes ISO 3166-1 alpha-2, toegevoegd door het project; de bijlage noemt alleen de landnaam. De Dienst schrijft in 2022 Bondsrepubliek Duitsland, Grootbrittannië, Macedonië en Kaap-Verdië; de bijlage Duitsland, Verenigd Koninkrijk, Noord-Macedonië en Kaapverdië. In 2022 liggen drie factoren boven 1 (IJsland 1,3388, Noorwegen 1,3213) of eronder waar zij in 2023 1,0000 werden (Denemarken 0,9836, Liechtenstein 0,9172): de factoren van 2022 zijn nog berekend met de oude indexeringsmethode (toelichting Stcrt. 2023, 29907).",
+    "landen": {
+     "BE": "0.7369",
+     "BA": "0.0715",
+     "BG": "0.0893",
+     "CY": "0.1504",
+     "DK": "0.9836",
+     "DE": "0.8138",
+     "EE": "0.2684",
+     "FI": "0.6716",
+     "FR": "0.8816",
+     "GR": "0.2271",
+     "HU": "0.1521",
+     "IS": "1.3388",
+     "IE": "0.9185",
+     "IT": "0.5233",
+     "CV": "0.0177",
+     "HR": "0.1945",
+     "LV": "0.1231",
+     "LI": "0.9172",
+     "LT": "0.2830",
+     "LU": "0.7491",
+     "MT": "0.3956",
+     "MA": "0.0253",
+     "ME": "0.0821",
+     "MK": "0.0567",
+     "NO": "1.3213",
+     "AT": "0.6732",
+     "PL": "0.1829",
+     "PT": "0.2727",
+     "RO": "0.1113",
+     "RS": "0.0810",
+     "SI": "0.3645",
+     "SK": "0.2471",
+     "ES": "0.4019",
+     "CZ": "0.2917",
+     "TN": "0.0258",
+     "TR": "0.0643",
+     "GB": "0.6308",
+     "SE": "0.7751",
+     "CH": "0.7145"
+    }
+   }
+  },
   "2023": {
    "jaar": 2023,
    "status": "draft",
@@ -487,6 +618,45 @@ var PARAMETERS = {
   }
  },
  "awir": {
+  "2022": {
+   "jaar": 2022,
+   "status": "draft",
+   "geraadpleegd": "2026-10-12",
+   "vermogensgrens_algemeen": {
+    "waarde": "31747",
+    "artikel": "Awir art. 7 lid 3 (rendementsgrondslag belanghebbende, begin berekeningsjaar)",
+    "bron": "BWBR0018472, geldend van 01-01-2022 t/m 31-12-2022 (verbatim gelezen 2026-10-12); bedrag 2022 vastgesteld bij Bijstellingsregeling directe belastingen 2022, Stcrt. 2021, 48308, art. V onder A (van € 31.340; primaire tekst gelezen 2026-10-12; ontstaansbron van de versie 01-01-2022 volgens de wetstechnische informatie); vervangen per 01-01-2023 door € 33.748 (Stcrt. 2022, 32674)",
+    "url": "https://wetten.overheid.nl/BWBR0018472/2022-01-01",
+    "opmerking": "Geldt alleen voor regelingen zonder eigen grens; niet voor de zorgtoeslag. De Dienst noemt dit bedrag in zijn leaflet 2022 'de vermogensvrijstelling per persoon' en het verschil tot de Wzt-grens (€ 88.273) 'een vrijstellingsbedrag'."
+   },
+   "vermogensgrens_algemeen_met_partner": {
+    "waarde": "63494",
+    "artikel": "Awir art. 7 lid 3, tweede volzin (gezamenlijke rendementsgrondslag)",
+    "bron": "BWBR0018472, geldend van 01-01-2022 t/m 31-12-2022 (verbatim gelezen 2026-10-12); Stcrt. 2021, 48308, art. V onder A (van € 62.680)",
+    "url": "https://wetten.overheid.nl/BWBR0018472/2022-01-01"
+   },
+   "medebewoner_vrijstelling_onder_23": {
+    "waarde": "5110",
+    "artikel": "Awir art. 7 lid 6",
+    "bron": "BWBR0018472, geldend van 01-01-2022 t/m 31-12-2022 (verbatim); Stcrt. 2021, 48308, art. V onder A (van € 5.044); vervangen per 01-01-2023 door € 5.432",
+    "url": "https://wetten.overheid.nl/BWBR0018472/2022-01-01"
+   },
+   "afronding_tegemoetkoming": {
+    "waarde": "1",
+    "eenheid": "euro",
+    "artikel": "Awir art. 14 lid 4",
+    "bron": "BWBR0018472, geldend van 01-01-2022 t/m 31-12-2022 (verbatim gelezen 2026-10-12); dezelfde tekst in 2023 t/m 2026",
+    "url": "https://wetten.overheid.nl/BWBR0018472/2022-01-01",
+    "tekst": "Het bedrag van de tegemoetkoming wordt rekenkundig afgerond op hele euro's."
+   },
+   "minimum_tegemoetkoming": {
+    "waarde": "24",
+    "artikel": "Awir art. 14 lid 5",
+    "bron": "BWBR0018472, geldend van 01-01-2022 t/m 31-12-2022 (verbatim gelezen 2026-10-12)",
+    "url": "https://wetten.overheid.nl/BWBR0018472/2022-01-01",
+    "tekst": "Een tegemoetkoming wordt niet toegekend indien deze minder dan € 24 zou bedragen."
+   }
+  },
   "2023": {
    "jaar": 2023,
    "status": "draft",

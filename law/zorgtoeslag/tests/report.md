@@ -1,7 +1,87 @@
-# Zorgtoeslag — test report, generated 2026-10-11 by tools/build.py
+# Zorgtoeslag — test report, generated 2026-10-12 by tools/build.py
 
 Generated file; do not edit. Verified cases are tests (blocking); published and synthetic
 cases are checks (reported). Every failing check is a discrepancy in `DISCREPANCIES.md`.
+
+## zt-2022-pub-001 — PASS — check (published)
+
+Source: Dienst Toeslagen, Berekening zorgtoeslag 2022 (TG 082 - 1Z21FD, januari 2022), rekenvoorbeeld 1: alleenstaande, jaarinkomen € 19.000; normpremie € 413,14; zorgtoeslag per jaar € 1.335,86; per maand € 111,32 (na afronding € 111)
+
+| field | expected | encoding | match |
+|---|---|---|---|
+| normpremie | 413.14 | 413.14 (exact 413.138880000) | yes |
+| aanspraak_jaar | 1335.86 | 1335.86 (exact 1335.861120000) | yes |
+| aanspraak_maand | 111.32 | 111.32 (exact 111.321760000) | yes |
+| aanspraak_maand_afgerond_praktijk | 111 | 111 | yes |
+
+Note: Drempelinkomen 2022 is exact € 22.356 (108% × 12 × € 1.725,00), dus geen verschil uit DISCREPANCIES.md #1. 1,848% × 22.356 = 413,13888 → de Dienst drukt € 413,14 (afgerond). Het maximum van 2022 zonder partner (leaflet: € 1.336).
+
+## zt-2022-pub-002 — FAIL — check (published)
+
+Source: Dienst Toeslagen, Berekening zorgtoeslag 2022 (TG 082 - 1Z21FD, januari 2022), rekenvoorbeeld 2: aanvrager met toeslagpartner die geen verzekerde is (militair), toetsingsinkomens € 7.000 + € 26.200; normpremie € 2.420,41; subtotaal € 1.077,59; zorgtoeslag per jaar € 538,80; per maand € 44,89 (na afronding € 45)
+
+| field | expected | encoding | match |
+|---|---|---|---|
+| normpremie | 2420.41 | 2420.41 (exact 2420.409400000) | yes |
+| aanspraak_jaar | 538.80 | 538.80 (exact 538.7953000000) | yes |
+| aanspraak_maand | 44.89 | 44.90 (exact 44.89960833333333333333333333) | NO |
+| aanspraak_maand_afgerond_praktijk | 45 | 45 | yes |
+
+Note: Normpremie 2.420,4094 → de Dienst drukt € 2.420,41 (afgerond); 50% van 1.077,59 = 538,795 → € 538,80 (afgerond); maand 538,795 / 12 = 44,8996 → de Dienst drukt € 44,89 (afgekapt; afgerond zou € 44,90 zijn). Zie DISCREPANCIES.md #7 (2022 uitgebreid). Het hele maandbedrag 'na afronding € 45' is rekenkundig afgerond (floor(539 / 12) zou € 44 geven, zoals 2023–2026): DISCREPANCIES.md #8; het parameterbestand 2022 draagt daarom maand_afronding_praktijk: rekenkundig.
+
+## zt-2022-pub-003 — FAIL — check (published)
+
+Source: Dienst Toeslagen, Berekening zorgtoeslag 2022 (TG 082 - 1Z21FD, januari 2022), rekenvoorbeeld 3: aanvrager verdragsgerechtigd (CAK) in Duitsland, partner in Duitsland verzekerd (geen verzekerde Wzt, geen verdragsgerechtigde), toetsingsinkomens € 9.000 + € 11.000, woonlandfactor 0,8138; standaardpremie € 3.498 × 0,8138 = € 2.846,67; normpremie € 944,54; subtotaal gedrukt '€ 1.602,13' (rekenkundig € 1.902,13); zorgtoeslag per jaar € 951,06; per maand € 79,25 (na afronding € 79)
+
+| field | expected | encoding | match |
+|---|---|---|---|
+| standaardpremie_totaal | 2846.67 | 2846.67 (exact 2846.6724) | yes |
+| normpremie | 944.54 | 944.54 (exact 944.541000000) | yes |
+| aanspraak_jaar | 951.06 | 951.07 (exact 951.0657000000) | NO |
+| aanspraak_maand | 79.25 | 79.26 (exact 79.2554750000) | NO |
+| aanspraak_maand_afgerond_praktijk | 79 | 79 | yes |
+
+Note: Stap 5 onder c van het leaflet 2022 (de factor op beide standaardpremies) is de methode van 2023 en 2024, niet die van 2026 en niet wat art. 3 lid 3 (tekst 2022) zegt: DISCREPANCIES.md #3 (2022 uitgebreid). Het gedrukte subtotaal € 1.602,13 is een zetfout voor € 1.902,13 (2.846,67 − 944,54); 50% daarvan is 951,065 → de Dienst drukt € 951,06 (afgekapt, waar rekenvoorbeeld 2 afrondt); 951,065 / 12 = 79,255 → € 79,25 (afgekapt). Zie #7.
+
+## zt-2022-pub-004 — PASS — check (published)
+
+Source: Dienst Toeslagen, Berekening zorgtoeslag 2022 (TG 082 - 1Z21FD, januari 2022), stap 2: 'Uw klant heeft geen recht op zorgtoeslag als het toetsingsinkomen hoger is dan € 31.998 (aanvrager zonder toeslagpartner), € 40.944 (aanvrager met toeslagpartner)'
+
+| field | expected | encoding | match |
+|---|---|---|---|
+| tegemoetkoming | 24.00 | 24.00 (exact 24) | yes |
+
+Note: Op de grens zelf: recht. Aanspraak 1.749 − 413,13888 − 13,61% × 9.642 = € 23,58 → € 24 (Awir art. 14 lid 4-5).
+
+## zt-2022-pub-005 — PASS — check (published)
+
+Source: Dienst Toeslagen, Berekening zorgtoeslag 2022 (TG 082 - 1Z21FD, januari 2022), stap 2: geen recht boven € 31.998 (zonder toeslagpartner)
+
+| field | expected | encoding | match |
+|---|---|---|---|
+| tegemoetkoming | 0.00 | 0.00 (exact 0) | yes |
+
+Note: Eén euro boven de grens: aanspraak € 23,44 → € 23 → niet toegekend (Awir art. 14 lid 5). De tekst en het leaflet geven dezelfde grens, omdat het drempelinkomen 2022 een rond bedrag is.
+
+## zt-2022-pub-006 — PASS — check (published)
+
+Source: Dienst Toeslagen, Berekening zorgtoeslag 2022 (TG 082 - 1Z21FD, januari 2022), stap 2: geen recht boven € 40.944 (met toeslagpartner)
+
+| field | expected | encoding | match |
+|---|---|---|---|
+| tegemoetkoming | 24.00 | 24.00 (exact 24) | yes |
+
+Note: Op de grens zelf: recht. Aanspraak 3.498 − 944,541 − 13,61% × 18.588 = € 23,63 → € 24.
+
+## zt-2022-pub-007 — PASS — check (published)
+
+Source: Dienst Toeslagen, Berekening zorgtoeslag 2022 (TG 082 - 1Z21FD, januari 2022), stap 2: geen recht boven € 40.944 (met toeslagpartner)
+
+| field | expected | encoding | match |
+|---|---|---|---|
+| tegemoetkoming | 0.00 | 0.00 (exact 0) | yes |
+
+Note: Eén euro boven de grens: aanspraak € 23,50 (exact 23,4961) → € 23 → niet toegekend.
 
 ## zt-2023-pub-001 — FAIL — check (published)
 
@@ -1740,8 +1820,8 @@ Note: Laatste rij van de tabel, op het genoemde inkomen zelf ('en meer' sluit he
 
 ---
 
-Browser encoding (`site/zorgtoeslag-regels.js`, node v22.22.0): 170 cases compared with the Python encoding, 170 identical, 0 different.
+Browser encoding (`site/zorgtoeslag-regels.js`, node v22.22.0): 177 cases compared with the Python encoding, 177 identical, 0 different.
 
 ---
 
-Cases run: 170, passed: 153, failed: 17, skipped: 0. Verified cases: 0. Blocking failures: 0. Browser/Python differences: 0 (blocking: the two encodings must agree).
+Cases run: 177, passed: 158, failed: 19, skipped: 0. Verified cases: 0. Blocking failures: 0. Browser/Python differences: 0 (blocking: the two encodings must agree).

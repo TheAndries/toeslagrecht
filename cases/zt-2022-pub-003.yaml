@@ -1,0 +1,25 @@
+id: zt-2022-pub-003
+toeslag: zorgtoeslag
+jaar: 2022
+bron:
+  type: published
+  publicatie: "Dienst Toeslagen, Berekening zorgtoeslag 2022 (TG 082 - 1Z21FD, januari 2022), rekenvoorbeeld 3: aanvrager verdragsgerechtigd (CAK) in Duitsland, partner in Duitsland verzekerd (geen verzekerde Wzt, geen verdragsgerechtigde), toetsingsinkomens € 9.000 + € 11.000, woonlandfactor 0,8138; standaardpremie € 3.498 × 0,8138 = € 2.846,67; normpremie € 944,54; subtotaal gedrukt '€ 1.602,13' (rekenkundig € 1.902,13); zorgtoeslag per jaar € 951,06; per maand € 79,25 (na afronding € 79)"
+  url: https://download.belastingdienst.nl/toeslagen/docs/berekening_zorgtoeslag_tg0821z21fd.pdf
+  opgehaald: 2026-10-12
+verified: false
+invoer:
+  partner: true
+  partner_verzekerd: false
+  aanvrager_verdragsgerechtigd: true
+  partner_verdragsgerechtigd: false
+  woonland: DE
+  toetsingsinkomen_aanvrager: "9000"
+  toetsingsinkomen_partner: "11000"
+  rendementsgrondslag: null
+verwacht:
+  standaardpremie_totaal: "2846.67"
+  normpremie: "944.54"
+  aanspraak_jaar: "951.06"
+  aanspraak_maand: "79.25"
+  aanspraak_maand_afgerond_praktijk: 79
+opmerking: "Stap 5 onder c van het leaflet 2022 (de factor op beide standaardpremies) is de methode van 2023 en 2024, niet die van 2026 en niet wat art. 3 lid 3 (tekst 2022) zegt: DISCREPANCIES.md #3 (2022 uitgebreid). Het gedrukte subtotaal € 1.602,13 is een zetfout voor € 1.902,13 (2.846,67 − 944,54); 50% daarvan is 951,065 → de Dienst drukt € 951,06 (afgekapt, waar rekenvoorbeeld 2 afrondt); 951,065 / 12 = 79,255 → € 79,25 (afgekapt). Zie #7."

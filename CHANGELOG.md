@@ -2,6 +2,134 @@
 
 Newest first. What was done, decided, and got wrong.
 
+## 2026-10-12 — sixth run: the site live and cleaned per the owner's decision, Ask 7 closed, Ask 6 narrowed, 2022 encoded from primary texts, a second corrected woonlandfactor table, discrepancy #8
+
+Sixth run of routine `trig_012xyD5r5rxFDCjfHbZ58Kib`. Model as served: `claude-fable-5-1`, the same as the
+previous entry; no handover note needed. The checkout again arrived detached with a stale `origin/main`; the fetch
+in `memory.md` handled it.
+
+**Step 1 — asks marked done.** Ask 7 (publish the site) was done by the owner on 2026-10-11. Unblocked and done this
+run: `site/CNAME` added (GitHub ignores the file for a deployment from a workflow — the domain lives in the Pages
+settings — so it is kept only as the record of the domain and against a switch back to branch deployment); HTTPS
+checked: `https://toeslagrecht.nl/` answers 200 with a valid certificate, `http://`, `www.` and
+`theandries.github.io/toeslagrecht/` all redirect to it. Ask 7 closed in `ASKS.md`.
+
+**Step 2 — the inbox (three entries of 2026-10-11, all from the owner, Andries, in an owner-initiated session;
+moved here, `INBOX.md` emptied).**
+- *Owner note, Ask 7(a).* GitHub Pages "deploy from a branch" offers only `/` and `/docs`; rather than rename
+  `site/`, the owner added `.github/workflows/pages.yml` (upload `site/` as a Pages artifact on every push to `main`
+  that touches it) and set the source to GitHub Actions. **Accepted** and recorded under Ask 7: it keeps the
+  repository layout of `LAW.md` and `site/README.md`, costs nothing, and the operator can read the workflow. One
+  consequence noted: a push that touches `site/` deploys; a run that only changes `law/` or `cases/` does not
+  (the checker's parameters are in `site/zorgtoeslag-parameters.js`, which `build.py build` regenerates, so an
+  encoding change reaches the site when the build output is committed, as this run does).
+- *Owner decision: internal matters are never published on the website.* Recorded by the owner in `BOARD.md`;
+  **transcribed into `DESIGN.md`** this run as the section "Internal matters stay in the repository" — the one kind
+  of change to `DESIGN.md` the operator may make. Applied: the section "Hoe de pagina gekozen is" removed from the
+  front page (`tools/build.py`); the `noscript` link to `layouts/b.html` removed from the checker template; and,
+  because every file under `site/` is served whether or not a page links to it, the workflow now removes
+  `site/layouts/` from the deployed artifact before upload. The three layouts stay in the repository as the record
+  of Ask 3, where `DESIGN.md` and `BOARD.md` point to them; nothing else was moved, so no reference went stale.
+  Argued rather than merely obeyed: the decision follows from `DESIGN.md` §2 and §8 as they already stood (the
+  page is the computation; it looks like it has nothing to sell), and the operator had put the section there as a
+  "record one click away" (§9) — but §9 is about the record of the *law*, not of the board. The owner is right.
+- *Owner note on Ask 6 (Checkpoint 1): "calculator is tested."* **Recorded, not accepted as closing the ask.**
+  The sentence is the owner's report that he tested the checker, and it is welcome; but Checkpoint 1 exists to
+  produce the first comparison record — twenty pairs of outcomes, each a `published` case, each difference a
+  discrepancy classified — and from the sentence alone the record gets nothing. `PLAN.md` says Phase 2 does not
+  start until every difference is explained, and no difference can be explained that was not written down. The ask
+  is **narrowed** in `ASKS.md` to the least the owner can do: paste the situations he tested, however many, with
+  both outcomes, and write the worried-relative sentence in `BOARD.md`; or, as an owner decision, let the operator
+  run the comparison itself against the public proefberekening on toeslagen.nl with situations of its own (that is
+  reading a public page, not contact, so P11 allows it; the operator does not do it on its own authority because
+  the plan deliberately gives the choosing of the situations to a human). Until one of these, huurtoeslag does not
+  start; history and sources continue, which the plan allows and which is where the record has been growing.
+
+**Step 3 — motions.** None open.
+
+**Step 4 — done (Phase 2 history, item 2 of `memory.md`; "only if cheap", and it was: seventeen fetches, five
+searches).**
+- *Zorgtoeslag 2022 encoded* (`law/zorgtoeslag/parameters/2022.yaml`, `law/awir/parameters/2022.yaml`), every
+  figure read in its primary text: standaardpremie € 1.749 (Stcrt. 2021, 47872); WML januari 2022 € 1.725,00
+  (Stcrt. 2021, 44177) → drempelinkomen € 22.356,00 exactly, the first year in the record where the text itself
+  gives a whole amount; 1,848% / 4,225% / 13,610% (Stb. 2021, 574, in the Wzt text of 01-01-2022 itself); vermogen
+  € 120.020 / € 151.767 (Stcrt. 2021, 47692, from € 118.479 / € 149.819); woonlandfactoren 2022 (Stcrt. 2021, 46565);
+  Awir 2022 art. 7 and 14 (verbatim; Stcrt. 2021, 48308). Same article numbers and `undetermined` case as 2023.
+- *A second corrected table.* Stcrt. 2021, 46565 as published gives Liechtenstein 0,9229; the Dienst's 2022 leaflet
+  has 0,9172. Per the lesson of 2026-10-11 the run searched for a correction before logging anything and found it:
+  Stcrt. 2021, 47687, art. I onderdeel E, a regeling of one week later that replaces the figure ("een inmiddels
+  achterhaald verhoudingsgetal") and whose toelichting fixes the order of entry into force (aanwijzing 5.70). The
+  consolidated bijlage 4 of 01-01-2022 carries 0,9172. Not a discrepancy; both instruments cited.
+- *A third pre-effect revision of the percentage schema.* Stb. 2021, 574 had set 2023 at 1,863% / 4,240% / 13,640%
+  and 2024 at 1,878% / 4,255% / 13,670%; Stb. 2022, 472 replaced both before they took effect. One `CHANGES.md` row.
+- *The 2022 leaflet* (`tg0821z21fd`; `z22` is a 404) gave seven cases (`zt-2022-pub-001..007`): three
+  rekenvoorbeelden and the ceilings € 31.998 / € 40.944 on both sides of the boundary euro — which here equal the
+  text's, since no drempelinkomen rounding was needed. 177 cases: 158 pass, 19 fail, 0 blocking; browser/Python
+  parity 177/177. The checker offers 2022; the front page's year list is now generated from the parameter files.
+- `law/CHANGES.md` grew by eleven rows (2022-01-01: the three percentages with their 2021 values from the besluit's
+  own table, the two vermogensgrenzen, the standaardpremie, the WML amount, the woonlandfactor table and its
+  Liechtenstein correction, the Awir amounts; 2023-01-01: the revised schema). `law/SOURCES.md` has twelve new rows
+  and open item 4 now says 2021, with a new item 5.
+
+**The discrepancies, and how they are classified.**
+- *#8 (new) → `encoding`, fixed.* The 2022 leaflet's rekenvoorbeeld 2 prints "€ 44,89 (na afronding € 45)": the
+  month rounded *up*, which no flooring model gives; the encoding's practice model, derived on 2026-10-09 from 130
+  table rows of 2025 and 2026 and applied to every year, gave € 44. The 2023 leaflet rounds the month down
+  (€ 154,84 → € 154), as do 2025 and the tables. Classified `encoding` for the same reason as #5: the practice field
+  claims to reproduce what the Dienst pays, and for 2022 the only published evidence says it rounded. Fixed by a
+  year parameter `maand_afronding_praktijk` ("rekenkundig" in 2022, "naar_beneden" by default), cited to the leaflet,
+  marked as practice in the parameter file, `rules.md` and both encodings, with the note the checker shows changed for
+  2022. Said plainly: one example out of three discriminates, so this rests on one printed figure; a 2022 voorschot
+  table or beschikking would settle it (`SOURCES.md` open item 5). Not #5 (whose model 130 rows confirm) and not #7.
+- *#7 extended.* The 2022 leaflet is mixed: it rounds the normpremie and the 50% step of example 2 (€ 538,795 →
+  € 538,80) but truncates the 50% step of example 3 (€ 951,065 → € 951,06) and the month in both examples
+  (€ 44,8996 → € 44,89; € 79,2554 → € 79,25); it also misprints example 3's subtotal (€ 1.602,13 for € 1.902,13 —
+  the 50% figure proves the intended value). Five editions, three printed methods, no text behind any. Two cases.
+- *#3 extended.* The 2022 leaflet's step 5 has the four formulas of 2023 and 2024, and its example 3 is the only
+  worked example of onder c in five leaflets; the encoding passes it, because for a *verdragsgerechtigde* aanvrager
+  the text and the Dienst agree. The entry's difference remains confined to a *verzekerde* aanvrager (`syn-001`).
+- *#1 noted.* 2022 is evidence of nothing: the drempelinkomen was a whole amount by the text.
+
+**What was wrong and why.**
+- The practice model had been written as if the Dienst's monthly method were constant across years; it was
+  constant across the years the evidence covered. The lesson is now in `memory.md` with the one about leaflets'
+  arithmetic: read every example's cents before assuming the series.
+- `pdftotext -layout` dropped the right column of the leaflet's woonlandfactor table; the numbers were taken from
+  the Staatscourant and the consolidated text instead, which is the right order of authority anyway.
+- The front page carried a duplicated top line ("toeslagrecht · zorgtoeslag · 2026 · …") above its own header since
+  2026-10-10, from the helper shared with the layout stubs; fixed while editing the index.
+- Nothing dropped from scope: Nibud/Rijksoverheid cases and the rechtspraak.nl scan were again not started; 2022
+  was cheaper and more durable. `PLAN.md` unchanged: the strategy holds, Checkpoint 1 stands as written and is now
+  narrowed in the ask rather than rewritten in the plan — rewriting the gate because the owner has not yet walked
+  through it would be the plan bending to convenience, which `CHARTER.md` forbids. No checkpoint missed: Checkpoint 1
+  is open on the owner, not late by any date the plan sets.
+
+**Step 8 — asks.** None new. Ask 6 narrowed as above; Ask 7 closed; Ask 4 stays open as recorded.
+
+**Dropped from memory.** The "not published yet" state and the Ask 7 to-do (done); the 2022 to-do with its guessed
+Stcrt. numbers (done); the "2023 to 2024 only" phrasing of the article numbering (now 2022–2024). Nothing else was
+held.
+
+**Effort.** Roughly 235,000 of the 300,000-token ceiling: about 50,000 reading the files and the previous entries,
+about 60,000 on seventeen downloads and five searches (the Wzt, Awir and WML of 2022, the 25 MB Regeling
+zorgverzekering, two wetstechnische-informatie pages, eight Staatscourant/Staatsblad texts, the leaflet), about
+40,000 on the governance edits and the site, the rest writing the parameters, the cases, the practice parameter in
+two encodings, the eleven amendment rows, the log entries and these records. Closer to the ceiling than the fifth
+run because three inbox entries and a code change came on top of a year of history.
+
+**Record under the ten-year rule.** This run added to the record: the law of 2022 as it stood, with every figure's
+instrument and date, including two things no consolidated text shows — that Liechtenstein's woonlandfactor for 2022
+was published wrong and corrected a week later before it took effect (Stcrt. 2021, 46565 → 47687), and that the
+percentage schema of Stb. 2021, 574 for 2023 and 2024 never took effect (replaced by Stb. 2022, 472), the third such
+pre-effect revision found; eleven dated amendment rows 2021 → 2022 → 2023; seven published cases carrying the
+Dienst's 2022 figures; a new discrepancy entry (#8) documenting that the Dienst's monthly rounding changed between
+its 2022 and 2023 editions while the text did not, with the one figure it rests on named as such; the extensions of
+#7 (a third printed arithmetic in the series) and #3 (the 2022 method); the owner's decision of 2026-10-11 as
+binding design text in `DESIGN.md`; the site's going live, dated, with the owner's note on how; and the owner's
+statement on Checkpoint 1, verbatim, with the operator's reasoned refusal to let it close the checkpoint. The 2022
+encoding, the practice parameter and the site changes are regenerable and are not counted. Still no verified case:
+that needs a human and a document (`CASES.md`), and the first such pairs are the owner's Checkpoint 1.
+
 ## 2026-10-11 — fifth run: 2023 encoded from primary texts, a rectified Staatscourant table, the moved WML reference, discrepancy #7
 
 Fifth run of routine `trig_012xyD5r5rxFDCjfHbZ58Kib`. Model as served: `claude-fable-5-1`, the same as

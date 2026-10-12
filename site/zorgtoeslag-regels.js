@@ -283,11 +283,20 @@
       t(aanspraak) + " / 12", maand));
     u.aanspraak_maand = maand;
     // Geen wet: hoe Dienst Toeslagen aan het hele maandbedrag komt dat zij publiceert (DISCREPANCIES.md #5).
+    // 2022: het leaflet rondt het maandbedrag rekenkundig af (DISCREPANCIES.md #8); het parameterbestand zegt welke praktijk geldt.
     const basisMaand = u.tegemoetkoming === null ? aanspraak : u.tegemoetkoming;
-    u.aanspraak_maand_afgerond_praktijk = Number(floorTo(div(basisMaand, 12n * SCALE), 0) / SCALE);
-    u.onbepaald.push("afronding maandbedrag: de wet rondt het jaarbedrag af (Awir art. 14 lid 4), niet het " +
-      "maandbedrag; Dienst Toeslagen deelt in haar tabellen het afgeronde jaarbedrag door twaalf en " +
-      "rondt naar beneden af op hele euro's (grondslag niet gevonden in Awir, Wzt of Uitvoeringsregeling Awir).");
+    const praktijk = (par.maand_afronding_praktijk && par.maand_afronding_praktijk.waarde) || "naar_beneden";
+    if (praktijk === "rekenkundig") {
+      u.aanspraak_maand_afgerond_praktijk = Number(roundHalfUp(div(basisMaand, 12n * SCALE), 0) / SCALE);
+      u.onbepaald.push("afronding maandbedrag: de wet rondt het jaarbedrag af (Awir art. 14 lid 4), niet het " +
+        "maandbedrag; Dienst Toeslagen rondde in haar rekenvoorbeeld van 2022 het maandbedrag rekenkundig af op hele " +
+        "euro's (€ 44,89 → € 45), in latere jaren naar beneden (grondslag niet gevonden in Awir, Wzt of Uitvoeringsregeling Awir).");
+    } else {
+      u.aanspraak_maand_afgerond_praktijk = Number(floorTo(div(basisMaand, 12n * SCALE), 0) / SCALE);
+      u.onbepaald.push("afronding maandbedrag: de wet rondt het jaarbedrag af (Awir art. 14 lid 4), niet het " +
+        "maandbedrag; Dienst Toeslagen deelt in haar tabellen het afgeronde jaarbedrag door twaalf en " +
+        "rondt naar beneden af op hele euro's (grondslag niet gevonden in Awir, Wzt of Uitvoeringsregeling Awir).");
+    }
     return u;
   }
 

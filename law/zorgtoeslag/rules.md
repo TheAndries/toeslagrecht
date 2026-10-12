@@ -95,7 +95,7 @@ af en ronden naar beneden (2024: 123,59 → 123; 109,50 → 109; 2025: 131,12 �
 wat met beide lezingen strookt. Geen grondslag gevonden in Wzt, Awir of Uitvoeringsregeling Awir
 (2026-10-08, 2026-10-09); het maandbedrag is een voorschot (Awir art. 16) en hoe dat in termijnen
 wordt gesplitst, staat niet in de gelezen teksten. De encoding toont het onafgeronde maandbedrag
-(`aanspraak_maand`) en de praktijk (`aanspraak_maand_afgerond_praktijk`) apart; `DISCREPANCIES.md` #5. Een jaar met wijzigingen (partner erbij, 18
+(`aanspraak_maand`) en de praktijk (`aanspraak_maand_afgerond_praktijk`) apart; `DISCREPANCIES.md` #5. Voor 2022 rondde de Dienst het maandbedrag in haar rekenvoorbeeld rekenkundig af (€ 44,89 → € 45), wat geen enkel naar-beneden-model geeft; het parameterbestand 2022 draagt daarom `maand_afronding_praktijk: rekenkundig` (één voorbeeld, als praktijk gemerkt; `DISCREPANCIES.md` #8). De praktijkregel is per jaar een parameter, geen wet. Een jaar met wijzigingen (partner erbij, 18
 worden, overlijden; Awir art. 5) codeert de encoding nog niet.
 
 ## zt-2026-art3-1 — vermogenstoets

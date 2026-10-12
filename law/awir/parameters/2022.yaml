@@ -1,0 +1,39 @@
+# Awir — gedeelde parameters berekeningsjaar 2022. De zorgtoeslag gebruikt hieruit art. 14 lid 4-5 (afronding,
+# minimumbedrag); zij heeft eigen vermogensgrenzen (Wzt art. 2a lid 1 in 2022 wijkt af van Awir art. 7 lid 3).
+jaar: 2022
+status: draft
+geraadpleegd: 2026-10-12
+
+vermogensgrens_algemeen:
+  waarde: "31747"
+  artikel: "Awir art. 7 lid 3 (rendementsgrondslag belanghebbende, begin berekeningsjaar)"
+  bron: "BWBR0018472, geldend van 01-01-2022 t/m 31-12-2022 (verbatim gelezen 2026-10-12); bedrag 2022 vastgesteld bij Bijstellingsregeling directe belastingen 2022, Stcrt. 2021, 48308, art. V onder A (van € 31.340; primaire tekst gelezen 2026-10-12; ontstaansbron van de versie 01-01-2022 volgens de wetstechnische informatie); vervangen per 01-01-2023 door € 33.748 (Stcrt. 2022, 32674)"
+  url: https://wetten.overheid.nl/BWBR0018472/2022-01-01
+  opmerking: "Geldt alleen voor regelingen zonder eigen grens; niet voor de zorgtoeslag. De Dienst noemt dit bedrag in zijn leaflet 2022 'de vermogensvrijstelling per persoon' en het verschil tot de Wzt-grens (€ 88.273) 'een vrijstellingsbedrag'."
+
+vermogensgrens_algemeen_met_partner:
+  waarde: "63494"
+  artikel: "Awir art. 7 lid 3, tweede volzin (gezamenlijke rendementsgrondslag)"
+  bron: "BWBR0018472, geldend van 01-01-2022 t/m 31-12-2022 (verbatim gelezen 2026-10-12); Stcrt. 2021, 48308, art. V onder A (van € 62.680)"
+  url: https://wetten.overheid.nl/BWBR0018472/2022-01-01
+
+medebewoner_vrijstelling_onder_23:
+  waarde: "5110"
+  artikel: "Awir art. 7 lid 6"
+  bron: "BWBR0018472, geldend van 01-01-2022 t/m 31-12-2022 (verbatim); Stcrt. 2021, 48308, art. V onder A (van € 5.044); vervangen per 01-01-2023 door € 5.432"
+  url: https://wetten.overheid.nl/BWBR0018472/2022-01-01
+
+afronding_tegemoetkoming:
+  waarde: "1"
+  eenheid: euro
+  artikel: "Awir art. 14 lid 4"
+  bron: "BWBR0018472, geldend van 01-01-2022 t/m 31-12-2022 (verbatim gelezen 2026-10-12); dezelfde tekst in 2023 t/m 2026"
+  url: https://wetten.overheid.nl/BWBR0018472/2022-01-01
+  tekst: "Het bedrag van de tegemoetkoming wordt rekenkundig afgerond op hele euro's."
+
+minimum_tegemoetkoming:
+  waarde: "24"
+  artikel: "Awir art. 14 lid 5"
+  bron: "BWBR0018472, geldend van 01-01-2022 t/m 31-12-2022 (verbatim gelezen 2026-10-12)"
+  url: https://wetten.overheid.nl/BWBR0018472/2022-01-01
+  tekst: "Een tegemoetkoming wordt niet toegekend indien deze minder dan € 24 zou bedragen."

@@ -17,6 +17,12 @@ Files:
 - `zorgtoeslag-parameters.js` — every parameter file under `law/` as one object, with each
   number's article (generated; the yaml files are the source).
 - `layouts/` — the three layouts shown for Ask 3 (A de tabel, B het verhaal, C de brief), kept
-  as the record of the choice.
+  as the record of the choice. **Not published**: the Pages workflow removes this folder from the
+  deployed artifact, and no public page links to it (owner decision 2026-10-11: internal matters —
+  board decisions, design choices, asks — live in the repository files, never on the website).
+- `CNAME` — the custom domain. GitHub ignores this file for a deployment from a workflow (the
+  domain is set in the repository's Pages settings, an owner act); it is kept so the domain is
+  recorded with the site and survives a switch back to branch deployment.
 
-Not yet published anywhere: the files work when opened from a checkout. Publishing is Ask 7.
+Published at `https://toeslagrecht.nl/` since 2026-10-11 (Ask 7) by `.github/workflows/pages.yml`,
+which uploads `site/` as a Pages artifact on every push to `main` that touches it.

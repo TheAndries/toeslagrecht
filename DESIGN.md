@@ -35,6 +35,17 @@ Everything follows from that.
    cases that test it, the discrepancies it appears in, the disputes on it. The record is
    not hidden behind the checker; the checker is the door to the record.
 
+## Internal matters stay in the repository
+
+**Owner decision of 2026-10-11 (`BOARD.md`, Decisions), transcribed 2026-10-12.** Board decisions, the
+layout choice, design choices, asks, and anything else that is for the board are never published on the
+website. They live in the repository files (`BOARD.md`, `DESIGN.md`, `CHANGELOG.md`, `ASKS.md`). The
+website shows the citizen only what helps the citizen: the checker, the law, the cases, the discrepancy
+log, the disputes, and how to submit or dispute. Consequences applied the same day: the section "Hoe de
+pagina gekozen is" and every link to `site/layouts/` were removed from the public pages; `site/layouts/`
+stays in the repository as the record of Ask 3 but is removed from the deployed site by the Pages
+workflow. Binding under P10.
+
 ## Not permitted
 
 Ads. Sponsorship. Pop-ups. Chat widgets. Newsletter interrupts. "Share" buttons. Urgency
