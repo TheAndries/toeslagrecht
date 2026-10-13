@@ -1,0 +1,16 @@
+id: zt-2021-syn-004
+toeslag: zorgtoeslag
+jaar: 2021
+bron:
+  type: synthetic
+  publicatie: "Door de operator geconstrueerd op 2026-10-13: de inkomensgrens 2021 (zonder toeslagpartner € 31.138, met toeslagpartner € 39.979) aan weerszijden van de grens-euro, berekend uit de tekst. Dezelfde twee grenzen citeert de zoekindex op 2026-10-13 uit de leaflet van Dienst Toeslagen, Berekening zorgtoeslag 2021 (tg0821z11fd), die zelf niet bereikbaar is (live 404; archiefkopie van 2024-07-18 geblokkeerd vanuit de routine) — daarom synthetic, niet published; wordt published zodra de leaflet gelezen is (ASKS.md 8)"
+  url: https://download.belastingdienst.nl/toeslagen/docs/berekening_zorgtoeslag_tg0821z11fd.pdf
+  opgehaald: 2026-10-13
+verified: false
+invoer:
+  partner: false
+  toetsingsinkomen_aanvrager: "31138"
+  rendementsgrondslag: null
+verwacht:
+  tegemoetkoming: "24"
+opmerking: "Op de grens zelf: recht. Aanspraak 1.705 − 1,915% × 21.835,008 − 13,58% × (31.138 − 21.835,008) = € 23,51 → € 24 (Awir art. 14 lid 4-5)."

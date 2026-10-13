@@ -2,6 +2,91 @@
 
 Newest first. What was done, decided, and got wrong.
 
+## 2026-10-13 — seventh run: 2021 encoded from primary texts, a wrong percentage in the record corrected, the 2021 leaflet out of reach, Ask 8
+
+Seventh run of routine `trig_012xyD5r5rxFDCjfHbZ58Kib`. Model as served: `claude-fable-5-1`, the same as the previous
+entry; no handover note needed. The checkout arrived detached with a stale `origin/main` again; the fetch in `memory.md`
+handled it.
+
+**Steps 1–3.** No ask newly marked done (4 and 6 stay open as recorded; Checkpoint 1 is the owner's). `INBOX.md` empty. No
+open motion.
+
+**Step 4 — done (Phase 2 history, item 2 of `memory.md`; nineteen fetches, three searches, four URL probes).**
+- *Zorgtoeslag 2021 encoded* (`law/zorgtoeslag/parameters/2021.yaml`, `law/awir/parameters/2021.yaml`), every figure read
+  in its primary text: standaardpremie € 1.705 (Stcrt. 2020, 62033; 2020: € 1.642); WML januari 2021 € 1.684,80 (Stcrt.
+  2020, 53099) → drempelinkomen € 21.835,008; percentages **1,915% / 4,225% / 13,580%** (the Wzt text of 01-01-2021; set by
+  Stb. 2020, 452 at 1,885% / 4,195% / 13,580% and raised by 0,030 point on the two drempel percentages before taking effect
+  by amendement Snels/Lodders in the Wet verbetering uitvoerbaarheid toeslagen, Stb. 2020, 543, art. III — the 1,885% never
+  applied); vermogen € 118.479 / € 149.819 (Stb. 2020, 546, art. IV, indexed by Stcrt. 2020, 67965); woonlandfactoren 2021
+  (Stcrt. 2020, 53972, identical on all 39 lines to the consolidated bijlage 4; no correction found); Awir 2021 art. 7
+  (€ 31.340 / € 62.680 from Stb. 2020, 546, art. III; lid 6 € 5.044 from Stcrt. 2020, 64406) and art. 14 lid 4–5 (verbatim,
+  same text). Same article numbers and `undetermined` case as 2022–2024. The checker offers 2021.
+- *Two amendments of 1 January 2021 that no later text shows.* (1) The Wet aanpassing box 3 moved the Wzt's vermogenstoets
+  from the grondslag sparen en beleggen (one amount, € 85.767 in 2020, single and joint alike) to the rendementsgrondslag
+  with two amounts, € 116.613 / € 147.459 — which are the old grens plus the heffingvrij vermogen 2020 of € 30.846 per
+  person, to the euro; the same act gave the Awir its € 31.340 / € 62.680. (2) The Wet verbetering uitvoerbaarheid
+  toeslagen struck Wzt art. 2 lid 5 (no zorgtoeslag for a verzekerde whose partner had not taken out the compulsory
+  insurance) and renumbered lid 6–8 to 5–7, so the monthly-determination rule the encoding cites as lid 5 was lid 6 in
+  2020. Both are in `law/CHANGES.md` with their texts; 2020 will need a dated rule version for each.
+- *Eleven amendment rows* in `law/CHANGES.md` (ten for 2021-01-01; one for 2022-01-01: the 2022 schema row of Stb. 2020,
+  452 — 1,900% / 4,210% — revised by Stb. 2021, 574 before taking effect, the fourth such pre-effect revision found) and
+  one corrected row (below). `law/SOURCES.md` has twelve new rows, open item 4 now says 2020 with what is already known,
+  and a new item 6.
+- *The 2021 leaflet is out of reach.* `tg0821z11fd` (which the search index still describes) is a 404 on
+  `download.belastingdienst.nl`, as are editions `z10`, `z12`–`z15`. The Wayback Machine holds a snapshot of 2024-07-18;
+  this environment cannot fetch it (403 through the proxy; WebFetch refuses the host). So 2021 has no `published` case.
+  Four `synthetic` cases (`zt-2021-syn-004..007`) hold the two inkomensgrenzen computed from the text, € 31.138 and
+  € 39.979, on both sides of the boundary euro — the same two figures the index quotes from the leaflet, which is the only
+  check 2021 has had and is said as such in the case files. 181 cases: 162 pass, 19 fail (the same nineteen, all logged),
+  0 blocking; browser/Python parity 181/181.
+
+**The discrepancies.** None opened: nothing of the Dienst's for 2021 was read. #1, #3, #5/#8 (the monthly rounding) are
+unknown for 2021 until the leaflet's examples arrive; `parameters/2021.yaml` says so, and the checker's 2021 result shows
+the default practice (rounded down) with its note.
+
+**What was wrong and why.**
+- *A wrong number in the record, for a day.* The 2022 row for the afbouwpercentage in `law/CHANGES.md` read "13,610% →
+  13,610%" and `memory.md` said 2021 was 13,610%. The sixth run took Stb. 2021, 574's "De afbouwpercentages ... veranderen
+  niet" to mean 2021 equalled 2022; it means that besluit left the 2022 row of Stb. 2020, 452 alone. The text of
+  01-01-2021 says 13,580%, and Stb. 2021, 574's own tabel 1 prints 13,58% for 2021 and 13,61% for 2022. Row corrected
+  with the correction dated and explained in the row; the lesson (read the year's text before writing an "old" column;
+  a toelichting sentence is about what that instrument changes) is in `memory.md`. No parameter file was wrong — 2022 was
+  encoded at 13,610%, correctly — so no case and no computation was affected; the error was in the record of the change,
+  which is exactly the part the ten-year rule protects, and that is why it is logged here rather than fixed quietly.
+- *An unread number nearly entered the record.* The first draft of the WML row gave the July 2020 amount from memory;
+  caught on re-reading the diff and replaced by "not yet read". Rule restated in `memory.md`.
+- *Stale year lists.* `law/zorgtoeslag/rules.md` still said "Gecodeerd: 2026, 2025, 2024 en 2023" and `law/README.md`
+  "2026 and 2025": the fifth and sixth runs added years to the parameters and the site but not to these two sentences.
+  Both now list 2026 back to 2021 and the per-year article notes in `rules.md` cover 2022 and 2021.
+- Nothing dropped from scope. Nibud/Rijksoverheid cases and the rechtspraak.nl scan were again not started; a year of
+  history was again the cheaper, more durable choice, and 2021 turned out to hold two structural amendments. `PLAN.md`
+  unchanged (strategy holds; Checkpoint 1 open on the owner, not missed by any date).
+
+**Step 8 — asks.** Ask 8 opened (not blocking): the owner opens the Wayback copy of the 2021 leaflet in a browser and
+pastes its figures into `INBOX.md`. Reading a public archive is not contact (P11); asking the owner to do it is the
+operator's only channel and costs him minutes.
+
+**Dropped from memory.** The 2021 to-do with its guessed pointers (done; one of them, 13,610%, was wrong); the "2022 to
+2024 only" phrasing of the article numbering (now 2021–2024). Nothing else was held.
+
+**Effort.** Roughly 215,000 of the 300,000-token ceiling: about 55,000 reading the files and the previous entries, about
+75,000 on nineteen downloads (the Wzt of 2021 and 2020, the Awir, the WML, the 26 MB Regeling zorgverzekering, four
+wetstechnische-informatie pages, three Staatsbladen, five Staatscouranten, two standaardpremie regelingen), three searches
+and the leaflet probes, the rest writing the two parameter files, the four cases, eleven amendment rows and a correction,
+twelve source rows, the `rules.md` updates, Ask 8 and these records.
+
+**Record under the ten-year rule.** This run added to the record: the law of 2021 as it stood, with every figure's
+instrument and date; two amendments of 1 January 2021 that the consolidated texts of later years do not show — the
+vermogenstoets moving to the rendementsgrondslag with amounts derived to the euro from the old grens and the heffingvrij
+vermogen (Stb. 2020, 546), and the lapsing of the rule that denied zorgtoeslag to a verzekerde with an uninsured partner
+(Stb. 2020, 543), with the renumbering it caused; the fact that the 2021 percentages were set twice before they took
+effect (Stb. 2020, 452 → Stb. 2020, 543) and that the 2022 schema row was revised before taking effect too; eleven dated
+amendment rows 2020 → 2021 → 2022; a correction to the record, dated and explained in place, of a percentage the previous
+run had recorded wrongly for 2021; and the dated finding that the Dienst's 2021 leaflet has vanished from its site while
+an archive copy exists. The 2021 encoding, the four synthetic cases and the site build are regenerable and are not
+counted. Still no verified case: that needs a human and a document, and the first such pairs remain the owner's
+Checkpoint 1.
+
 ## 2026-10-12 — sixth run: the site live and cleaned per the owner's decision, Ask 7 closed, Ask 6 narrowed, 2022 encoded from primary texts, a second corrected woonlandfactor table, discrepancy #8
 
 Sixth run of routine `trig_012xyD5r5rxFDCjfHbZ58Kib`. Model as served: `claude-fable-5-1`, the same as the

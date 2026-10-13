@@ -2,7 +2,7 @@
 
 Carried state for the operator. Capped at 8,000 words. Rewritten each run.
 
-## State as of 2026-10-12 (sixth scheduled run)
+## State as of 2026-10-13 (seventh scheduled run)
 
 **Identity.** Name `toeslagrecht`, domain `toeslagrecht.nl` (owner, 2026-10-06). Repository
 `https://github.com/TheAndries/toeslagrecht`, branch `main`. Routine
@@ -14,7 +14,7 @@ ref was stale (2026-10-06) while HEAD was at the 2026-10-10 commit; the fetch is
 **Phase.** 0 complete. Phase 1 complete except **Checkpoint 1** (Ask 6): the owner wrote "calculator is tested" on
 2026-10-11 without pairs; the ask was narrowed on 2026-10-12 (paste the situations tested, any number, plus the
 worried-relative sentence in `BOARD.md`; or an owner decision letting the operator run the comparison against the public
-proefberekening itself). Huurtoeslag does not start before that; history continues (2024 on 10-09, 2023 on 10-11, 2022 on 10-12).
+proefberekening itself). Huurtoeslag does not start before that; history continues (2024 on 10-09, 2023 on 10-11, 2022 on 10-12, 2021 on 10-13).
 **The site is live** at `https://toeslagrecht.nl/` (Ask 7 done 2026-10-11): `.github/workflows/pages.yml` uploads `site/` on every
 push to `main` touching it and removes `site/layouts/` first (owner decision 2026-10-11: internal matters never on the website,
 transcribed into `DESIGN.md` 2026-10-12); `site/CNAME` exists but GitHub ignores it for workflow deployments. After a push that
@@ -29,19 +29,24 @@ touches `site/`, the deploy takes a minute or two; check `https://toeslagrecht.n
   Nothing sent or stored. Rendered and checked in headless Chromium 2026-10-10. Possible later work inside `DESIGN.md` §8: self-hosted text serif, type
   scale, print stylesheet. Anything beyond §8 needs a board motion; the operator filed none (changelog
   2026-10-10 argues why).
-- Encoded (all `draft`): zorgtoeslag **2026, 2025, 2024, 2023, 2022** — `zt-2026-art1-1f`, `-art2-1`, `-art2-2`,
+- Encoded (all `draft`): zorgtoeslag **2026, 2025, 2024, 2023, 2022, 2021** — `zt-2026-art1-1f`, `-art2-1`, `-art2-2`,
   `-art2-4`, `-art2-5`, `-art3-1`, `-art4`, `-art4a`; Awir `awir-2026-art14-4`, `-art14-5`;
   `awir-2026-art7-1`, `-art8-1`, `-art3`, `-art5` as inputs/documentation. Outputs: `aanspraak_jaar`
   (unrounded), `tegemoetkoming` (Awir art. 14), `aanspraak_maand` (unrounded /12),
   `aanspraak_maand_afgerond_praktijk` (= floor(tegemoetkoming / 12), the Dienst's table practice, not law; **2022: round half up**,
   per `maand_afronding_praktijk: rekenkundig` in `parameters/2022.yaml`, one leaflet example, #8).
-- Article numbering: 2022, 2023 and 2024 texts (t/m 05-11-2024) have vermogenstoets in art. 2a and woonlandfactor in
+- Article numbering: 2021, 2022, 2023 and 2024 texts (t/m 05-11-2024) have vermogenstoets in art. 2a and woonlandfactor in
   art. 3; Stb. 2024, 291 (in force 06-11-2024, Stb. 2024, 322) renumbered them to art. 3 / art. 4a and
   inserted art. 4a lid 3 (verzekerde with verdragsgerechtigde partner). For 2022–2024 that case returns
   `undetermined`. The Wzt never had an art. 3a (the one Stcrt. 2025, 38110 names). Wzt art. 1 lid 1 onder f
   referred to WML art. 8 lid 1 onderdeel **a** through 2023 and to onderdeel b since 01-01-2024 (Wet invoering
-  minimumuurloon, Stb. 2023, 168, art. XXXI); `parameters/2022.yaml` and `2023.yaml` carry `artikel_wml_onderdeel: a`, which
-  both encodings read (default b).
+  minimumuurloon, Stb. 2023, 168, art. XXXI); `parameters/2021.yaml`, `2022.yaml` and `2023.yaml` carry `artikel_wml_onderdeel: a`, which
+  both encodings read (default b). **2020 → 2021:** Wzt art. 2 lid 5 (oud: geen aanspraak bij een partner zonder
+  zorgverzekering) vervallen and lid 6–8 → 5–7 (Stb. 2020, 543, art. III, which also raised the 2021 drempel percentages by
+  0,030 point, amendement Snels/Lodders); art. 2a moved from the grondslag sparen en beleggen (one amount, € 85.767) to the
+  rendementsgrondslag (€ 116.613 / € 147.459 = old grens + heffingvrij vermogen 2020 € 30.846 per person; Stb. 2020, 546
+  art. IV), indexed to € 118.479 / € 149.819 by Stcrt. 2020, 67965. When 2020 is encoded, lid 5 oud needs a dated rule version
+  and the vermogenstoets a different basis.
 - Not encoded, stated explicitly: who is verzekerde / verdragsgerechtigde / partner, the
   inkomensgegeven, changes within the year (Awir art. 5), verblijfsstatus, the legal basis of the
   monthly rounding (none found).
@@ -65,16 +70,23 @@ rectified figures; BE 0,7484, DE 0,8814). Awir 2023 € 33.748 / € 67.496, lid
 13,610% per its table 1); € 120.020 / € 151.767 (Stcrt. 2021, 47692, from € 118.479 / € 149.819); woonlandfactoren Stcrt. 2021,
 46565 **as corrected by Stcrt. 2021, 47687 art. I onder E** (Liechtenstein 0,9229 → 0,9172; BE 0,7369, DE 0,8138, NO 1,3213,
 IS 1,3388 — old indexation method). Awir 2022 € 31.747 / € 63.494, lid 6 € 5.110 (Stcrt. 2021, 48308, from € 31.340 / € 62.680 /
-€ 5.044). Leaflet 2022 `tg0821z21fd` (`z22` is a 404); ceilings 2022 € 31.998 / € 40.944 (= the text's). Awir art. 7 lid 3: 2024 € 36.952 / € 73.904, 2025 € 37.395 / € 74.790
+€ 5.044). **2021:** € 1.705 (Stcrt. 2020, 62033; 2020 € 1.642, BWBR0042806); WML € 1.684,80 (Stcrt. 2020, 53099) → drempelinkomen
+€ 21.835,008; **1,915% / 4,225% / 13,580%** (Stb. 2020, 452 set 1,885% / 4,195% / 13,580%, then Stb. 2020, 543 +0,030 on the
+drempel percentages; the afbouw is 13,580%, *not* 13,610% as the 10-12 run and `CHANGES.md` had it — corrected 10-13; 2020 was
+1,830% / 4,140% / 13,550%); vermogen € 118.479 / € 149.819 (above); woonlandfactoren Stcrt. 2020, 53972 (= consolidated bijlage 4
+01-01-2021, 39 lines, no correction found; BE 0,7347, DE 0,8134, NO 1,3064, IS 1,3453; the bijlage still says Macedonië). Awir 2021
+€ 31.340 / € 62.680 (Stb. 2020, 546 art. III, the first rendementsgrondslag year), lid 6 € 5.044 (Stcrt. 2020, 64406). Ceilings
+2021 from the text: € 31.138 / € 39.979, exactly what the search index quotes from the Dienst's 2021 leaflet. Leaflet 2022 `tg0821z21fd` (`z22` is a 404); ceilings 2022 € 31.998 / € 40.944 (= the text's). Awir art. 7 lid 3: 2024 € 36.952 / € 73.904, 2025 € 37.395 / € 74.790
 (Stcrt. 2024, 38492), 2026 € 38.479 / € 76.958 (Stcrt. 2025, 40487). Awir art. 14 lid 4–5 identical
-2024–2026; wetstechnische informatie lists no amendment. Published ceilings: 2022 € 31.998 / € 40.944; 2023 € 38.520 / € 48.224; 2024 € 37.496 / € 47.368;
+2024–2026; wetstechnische informatie lists no amendment. Published ceilings: 2021 € 31.138 / € 39.979 (index quote only); 2022 € 31.998 / € 40.944; 2023 € 38.520 / € 48.224; 2024 € 37.496 / € 47.368;
 2025 € 39.719 / € 50.206; 2026 € 40.857 / € 51.142. 2027 percentages already in Stb. 2025, 412.
 
-**Cases.** 177 (173 `published`, 4 `synthetic`), none verified. 2022: pub-001..003 (leaflet 2022 examples), pub-004..007
+**Cases.** 181 (173 `published`, 8 `synthetic`), none verified. 2021: syn-004..007 (the two ceilings, both sides, computed from
+the text; become `published` when the leaflet's figures arrive, Ask 8). 2022: pub-001..003 (leaflet 2022 examples), pub-004..007
 (ceilings, both sides). 2023: pub-001..003 (leaflet 2023 examples), pub-004..007 (ceilings, both sides). 2024: pub-001..003,
 pub-004..007. 2025: pub-001..005, tab-zp-28000..39500 (24 rows), tab-mp-28000..50000 (45), the two "en meer" rows. 2026:
-pub-001..012, syn-001..004 (004 = Norway), tab-zp (20 rows), tab-mp (42), two "en meer" rows. Last report: 177 run, 158 pass,
-19 fail, 0 blocking; browser/Python parity 177/177. Every failure is logged: ten are #1 (cents in seven leaflet examples incl.
+pub-001..012, syn-001..004 (004 = Norway), tab-zp (20 rows), tab-mp (42), two "en meer" rows. Last report: 181 run, 162 pass,
+19 fail, 0 blocking; browser/Python parity 181/181. Every failure is logged: ten are #1 (cents in seven leaflet examples incl.
 2023-pub-002; outcome in 2026-pub-010 and tab-mp-44500), 2023-pub-001/-003 and 2022-pub-002/-003 are #7 (cents), 2026-pub-008 is
 #4, syn-001 is #3, the two 2025 "en meer" rows are #6.
 
@@ -89,7 +101,10 @@ the month arithmetically, € 44,89 → € 45; fixed by the year parameter `maa
 voorschot table or beschikking would settle it).
 
 **Asks.** Done: 1, 2, 3, 5, 7 (2026-10-11, recorded 10-12). Open: **4** mailbox (blocks Phase 2 only); **6** Checkpoint 1,
-narrowed 10-12 (see Phase). Disputes 0, reviews 0, motions 0. `PLAN.md` unchanged (last rewritten 2026-10-05); no checkpoint
+narrowed 10-12 (see Phase); **8** (10-13, not blocking) the owner opens the Wayback copy of the 2021 leaflet
+(`web.archive.org/web/20240718180758/…tg0821z11fd.pdf`) and pastes its three rekenvoorbeelden and stap-2 grenzen into `INBOX.md`;
+when they arrive: `published` cases 2021, the 2021 monthly rounding (#5/#8) and drempelinkomen rounding (#1), the stap-5 formulas (#3),
+and syn-004..007 superseded or re-sourced. Disputes 0, reviews 0, motions 0. `PLAN.md` unchanged (last rewritten 2026-10-05); no checkpoint
 missed. `BOARD.md` has three owner decisions (layout B 10-09; independent record if a government rules-as-code appears;
 internal matters never on the website 10-11, transcribed into `DESIGN.md` 10-12).
 
@@ -99,17 +114,32 @@ internal matters never on the website 10-11, transcribed into `DESIGN.md` 10-12)
    operator may run the comparison itself: the public proefberekening on toeslagen.nl in headless Chromium, twenty situations
    varying year, partner, income, vermogen, partner not verzekerd; log each pair as a case. A real beschikking of the owner's
    own would be `official` and, confirmed by him, the first verifiable case.
-2. 2021 as the next year of history (`law/SOURCES.md` open item 4; the pointers are there: Stcrt. 2020, 67965 and Stb. 2020, 546
-   created the Wzt 01-01-2021; percentages 1,915% / 4,225% / 13,610%; Awir 2021 € 31.340 / € 62.680 / € 5.044; WML Jan 2021
-   € 1.684,80 to be read; leaflet try `tg0821z11fd`, then `z12`). Then 2020. Each year so far cost ~15 fetches and 3–5 searches.
-3. `law/SOURCES.md` open items 1–3 and 5 (monthly rounding basis, now also the 2022→2023 change; verdragsgerechtigde definition;
-   Awir 2024 second amount in the consolidated text).
+2. 2020 as the next year of history (`law/SOURCES.md` open item 4). Known: percentages 1,830% / 4,140% / 13,550% (text of
+   01-01-2020 read; besluit Stb. 2019, 386 to be read); standaardpremie € 1.642 (BWBR0042806; Stcrt. number to find); art. 2 had
+   eight leden (lid 5 oud) and art. 2a one amount € 85.767 on the grondslag sparen en beleggen — `rules.py` needs a dated
+   version for both (new parameter keys, mirrored in the JS port); the Wzt text changed on 19-03-2020 (read the versions);
+   WML January 2020 and the woonlandfactoren 2020 regeling to find (the art. 4 informatie page lists every standaardpremie
+   regeling 2006–2021 with BWBR links; the whole-regeling informatie page gives each version's Ontstaansbron); leaflet try
+   `tg0821z01fd`, `z02`. Then 2019 and earlier, cheaper each time. Each year so far cost ~15–20 fetches and 3–5 searches.
+3. `law/SOURCES.md` open items 1–3, 5 and 6 (monthly rounding basis, now also the 2022→2023 change; verdragsgerechtigde definition;
+   Awir 2024 second amount in the consolidated text; the 2021 leaflet via the owner, Ask 8).
 4. Nibud / Rijksoverheid worked examples as `published` cases; a scan of rechtspraak.nl for zorgtoeslag rulings with usable
    facts (`ruling` cases — the first that could be *verified*).
 5. Checker polish inside `DESIGN.md` §8 (serif for the law, type scale, print stylesheet); an accessibility pass by reading.
 6. Quarterly reflection ask on the last run of Q4 2026 (late December).
 
-**Lessons.** `curl --http1.1` with a browser User-Agent works for wetten.overheid.nl and
+**Lessons.** A sentence in a nota van toelichting ("de afbouwpercentages veranderen niet") is about what *that* besluit
+changes, never evidence of a year's value: read the year's consolidated text before writing an "old" column (the 2021 afbouw
+was 13,580%, not 13,610%; wrong in `CHANGES.md` for a day). Never put an unread number in an "old" column — write "not yet
+read". The Dienst's leaflets disappear from `download.belastingdienst.nl` (2021 is a 404 on all edition digits tried);
+`archive.org/wayback/available` works and reports snapshots, but fetching `web.archive.org` content is blocked (403 via curl,
+refused by WebFetch) — the owner can open it in a browser (Ask 8). A search engine's description of a vanished PDF is a hint to
+check the encoding against, never a source to store a case from. The Wzt art. 4 informatie page lists every yearly
+standaardpremie regeling with its BWBR id (`/BWBR0018451/<date>/0/Artikel4/informatie`): the cheap route to any year's
+standaardpremie. The regeling-wide informatie page's `Datum inwerkingtreding: 01-01-<year>` entries list *all* instruments behind
+a version (2021: four for the Wzt, three for the Awir); read each — one of them (Stb. 2020, 543) changed numbers another
+(Stb. 2020, 452) had set weeks earlier. The box 3 reform of 2021 explains the Wzt's vermogen amounts to the euro (old grens +
+heffingvrij vermogen per person); keep that derivation, it will recur when 2020 is encoded. `curl --http1.1` with a browser User-Agent works for wetten.overheid.nl and
 officielebekendmakingen.nl; strip tags with a small script and grep. Article histories:
 `https://wetten.overheid.nl/<BWBR>/<date>/0/Artikel<nr>/informatie` (works for `Artikel2a`, `Artikel14`;
 not for bijlagen or dotted numbers like 6.3.1); the whole regeling: `/<BWBR>/<date>/0/informatie`

@@ -1,0 +1,135 @@
+# Zorgtoeslag — parameters berekeningsjaar 2021. Elk getal met zijn bron (CHARTER.md P1).
+# Bedragen in euro als string, zodat de code met Decimal rekent. Percentages als string, in procenten.
+# Artikelnummering van 2021 (gelijk aan 2022, 2023 en 2024 t/m 05-11-2024): de vermogenstoets stond in art. 2a en
+# de woonlandfactor in art. 3; het huidige art. 4a lid 3 bestond nog niet (ingevoegd per 06-11-2024).
+# Eigen aan 2021: (1) art. 1 lid 1 onder f verwijst naar WML art. 8 lid 1 onderdeel *a* (het maandbedrag; sinds
+# 01-01-2024 onderdeel b, Wet invoering minimumuurloon, Stb. 2023, 168); (2) 2021 is het eerste jaar waarin de
+# vermogenstoets van art. 2a op de *rendementsgrondslag* (Wet IB 2001 art. 5.3) rust, met twee bedragen; t/m 2020 rustte
+# zij op de grondslag sparen en beleggen (art. 5.2) met één bedrag (Wet aanpassing box 3, Stb. 2020, 546, art. IV);
+# (3) de percentages van art. 2 lid 3 zijn in 2021 tweemaal vastgesteld: Stb. 2020, 452 (1,885% / 4,195% / 13,580%) en
+# daarna, vóór de inwerkingtreding, +0,030 procentpunt op de drempelpercentages bij amendement Snels/Lodders in de Wet
+# verbetering uitvoerbaarheid toeslagen (Stb. 2020, 543, art. III); (4) datzelfde art. III liet art. 2 lid 5 (oud:
+# geen aanspraak bij een partner die zijn verzekeringsplicht niet nakwam) vervallen en vernummerde lid 6–8 tot 5–7;
+# (5) het afbouwpercentage is 13,580%, niet 13,610% zoals CHANGES.md tot 2026-10-13 voor 2021 vermeldde.
+jaar: 2021
+status: draft
+geraadpleegd: 2026-10-13
+versie: "BWBR0018451, geldend van 01-01-2021 t/m 31-12-2021 (verbatim gelezen 2026-10-13)"
+artikel_vermogenstoets: "Wzt art. 2a lid 1 (tekst 2021)"
+artikel_woonlandfactor: "Wzt art. 3 (tekst 2021)"
+artikel_wml_onderdeel: "a"
+art4a_lid3_aanwezig: false
+art4a_lid3_opmerking: "Het huidige art. 4a lid 3 (verzekerde aanvrager met een verdragsgerechtigde partner) is ingevoegd per 06-11-2024 (Stb. 2024, 291, art. XIX onder C). In 2021 regelde de tekst (art. 3) dat geval niet; de encoding geeft dan 'undetermined'."
+maand_afronding_opmerking: "Geen parameter maand_afronding_praktijk: voor 2021 is geen rekenvoorbeeld van de Dienst gelezen (de leaflet Berekening zorgtoeslag 2021, tg0821z11fd, is op 2026-10-13 een 404; een archiefkopie bestaat maar is vanuit de routine niet bereikbaar — SOURCES.md, open item 6). De encoding gebruikt de standaard 'naar_beneden' (DISCREPANCIES.md #5) en zegt dat in het resultaat; 2022 rondde rekenkundig (#8), dus 2021 is onbekend."
+
+standaardpremie:
+  waarde: "1705"
+  artikel: "Wet op de zorgtoeslag art. 4 jo. Regeling vaststelling standaardpremie en bestuursrechtelijke premies 2021, art. 1"
+  bron: "Regeling van de Minister voor Medische Zorg van 20 november 2020, kenmerk 1757159-211906-Z, Stcrt. 2020, 62033 (primaire tekst gelezen 2026-10-13); geconsolideerd BWBR0044400. Toelichting: geraamde gemiddelde nominale premie € 1.478 plus geraamd gemiddeld verplicht eigen risico € 227. 2020: € 1.642 (Regeling vaststelling standaardpremie en bestuursrechtelijke premies 2020, BWBR0042806, gelezen 2026-10-13)"
+  url: https://zoek.officielebekendmakingen.nl/stcrt-2020-62033.html
+  geldig_van: 2021-01-01
+  tekst: "De standaardpremie, bedoeld in artikel 1, onderdeel g, van de Wet op de zorgtoeslag, bedraagt voor het berekeningsjaar 2021 € 1.705."
+
+wml_maandbedrag_januari:
+  waarde: "1684.80"
+  artikel: "Wet minimumloon en minimumvakantiebijslag art. 8 lid 1 onder a, bedrag per 1 januari 2021 (in 2021 was het maandbedrag onderdeel a; sinds 01-01-2024 onderdeel b)"
+  bron: "Regeling van de Minister van SZW van 7 oktober 2020, nr. 2020-0000133577, tot aanpassing wettelijk minimumloon per 1 januari 2021, Stcrt. 2020, 53099, art. 1 onder a (primaire tekst gelezen 2026-10-13; aanpassingspercentage 0,29% na afronding). De geconsolideerde WML-tekst van 01-01-2021 (BWBR0002638) draagt het bedrag als redactionele noot bij art. 8 ('per 1 januari 2021: € 1.684,80'); de wetstechnische informatie noemt Stcrt. 2020, 53099 als ontstaansbron van die versie"
+  url: https://zoek.officielebekendmakingen.nl/stcrt-2020-53099.html
+  geldig_van: 2021-01-01
+  tekst: "a. € 1.684,80;"
+
+drempelinkomen_factor:
+  waarde: "108"
+  eenheid: procent
+  artikel: "Wet op de zorgtoeslag art. 1 lid 1 onder f"
+  bron: "BWBR0018451, geldend van 01-01-2021 t/m 31-12-2021 (verbatim)"
+  url: https://wetten.overheid.nl/BWBR0018451/2021-01-01
+  tekst: "drempelinkomen: 108% van het twaalfvoud van het voor de maand januari van het berekeningsjaar geldende in artikel 8, eerste lid, onderdeel a, van de Wet minimumloon en minimumvakantiebijslag bedoelde bedrag per maand"
+  opmerking: "108% × 12 × € 1.684,80 = € 21.835,008. Hoe de Dienst Toeslagen dit in 2021 'vastgesteld' heeft is niet gelezen (leaflet 2021 niet bereikbaar); de inkomensgrenzen die de zoekindex uit die leaflet citeert (€ 31.138 zonder, € 39.979 met toeslagpartner) zijn precies de grenzen die de encoding uit de tekst berekent (€ 31.138,10 / € 39.979,12), zodat een afronding op € 21.835 in 2021 geen hele euro verschuift."
+
+normpremie_percentage_drempel_zonder_partner:
+  waarde: "1.915"
+  eenheid: procent
+  artikel: "Wet op de zorgtoeslag art. 2 lid 3 (tekst 2021: 'voor een verzekerde zonder partner op 1,915% van het drempelinkomen')"
+  bron: "BWBR0018451, geldend van 01-01-2021 t/m 31-12-2021 (verbatim). Tweemaal vastgesteld: Stb. 2020, 452 (besluit van 2 november 2020, Besluit percentages drempel- en toetsingsinkomen zorgtoeslag art. 1, rij 2021: 1,885%; nota van toelichting tabel 1: 2020 1,830% +0,040 procentpunt +0,015 schema-stap), daarna Stb. 2020, 543 (Wet verbetering uitvoerbaarheid toeslagen, art. III onder 1: '1,885%' vervangen door '1,915%', amendement Snels/Lodders, dekking vrijwaringsgrens kleine terugvorderingen), beide in werking 01-01-2021; beide primaire teksten gelezen 2026-10-13. Stb. 2021, 574, tabel 1, bevestigt: 2021 'na vorige besluit' 1,885%, 'na amendement Snels/Lodders' +0,030%, 'na huidige maatregelen' 1,915%"
+  url: https://wetten.overheid.nl/BWBR0018451/2021-01-01
+
+normpremie_percentage_drempel_met_partner:
+  waarde: "4.225"
+  eenheid: procent
+  artikel: "Wet op de zorgtoeslag art. 2 lid 3 (tekst 2021: 'voor verzekerden met een partner vastgesteld op 4,225% van het drempelinkomen')"
+  bron: "BWBR0018451, geldend van 01-01-2021 t/m 31-12-2021 (verbatim). Stb. 2020, 452, rij 2021: 4,195% (2020: 4,140% +0,040 +0,015); Stb. 2020, 543, art. III onder 1: '4,195%' vervangen door '4,225%'. In 2022 bleef 4,225% (Stb. 2021, 574: 4,210% schema +0,015)"
+  url: https://wetten.overheid.nl/BWBR0018451/2021-01-01
+
+normpremie_percentage_boven_drempel:
+  waarde: "13.580"
+  eenheid: procent
+  artikel: "Wet op de zorgtoeslag art. 2 lid 3 (tekst 2021: 'vermeerderd met 13,580% van het toetsingsinkomen voor zover dat boven het drempelinkomen uitgaat', gelijk met en zonder partner)"
+  bron: "BWBR0018451, geldend van 01-01-2021 t/m 31-12-2021 (verbatim); Stb. 2020, 452, art. 1, rij 2021 (nota van toelichting tabel 1: 2020 13,55%, 2021 13,58%, 2022 13,61%, jaarlijks +0,03 procentpunt volgens het schema); Stb. 2020, 543 raakte dit percentage niet. Let op: het run-verslag van 2026-10-12 en CHANGES.md noemden voor 2021 ten onrechte 13,610%; gecorrigeerd 2026-10-13 na lezing van de tekst van 01-01-2021"
+  url: https://wetten.overheid.nl/BWBR0018451/2021-01-01
+
+aandeel_partner_niet_verzekerd:
+  waarde: "50"
+  eenheid: procent
+  artikel: "Wet op de zorgtoeslag art. 2 lid 4"
+  bron: "BWBR0018451, geldend van 01-01-2021 t/m 31-12-2021 (verbatim, zelfde tekst als 2022–2026). Tot en met 2020 volgde hierop lid 5: geen aanspraak voor een verzekerde met een partner die zijn verzekeringsplicht (Zvw art. 2) niet nakwam; vervallen per 01-01-2021 (Stb. 2020, 543, art. III onder 2)"
+  url: https://wetten.overheid.nl/BWBR0018451/2021-01-01
+
+vermogensgrens_zonder_partner:
+  waarde: "118479"
+  artikel: "Wet op de zorgtoeslag art. 2a lid 1 (tekst 2021) (rendementsgrondslag, art. 5.3 Wet IB 2001, begin berekeningsjaar; vrijstelling art. 5.13 Wet IB 2001 telt niet)"
+  bron: "BWBR0018451, geldend van 01-01-2021 t/m 31-12-2021 (verbatim). Lid 1 herschreven bij Wet aanpassing box 3, Stb. 2020, 546, art. IV onder 1 (van 'grondslag sparen en beleggen ... meer dan € 85.767' naar 'rendementsgrondslag ... meer dan € 116.613 / € 147.459': de oude grens plus het heffingvrije vermogen 2020 van € 30.846 per persoon), daarna geïndexeerd bij Besluit van de Minister voor Medische Zorg van 17 december 2020, kenmerk 1797818-215820-WJZ, Stcrt. 2020, 67965 (€ 116.613 → € 118.479, tabelcorrectiefactor 1,016%; toelichting: art. IV Wet aanpassing box 3 treedt eerst in werking, deze regeling daarna). Beide primaire teksten gelezen 2026-10-13"
+  url: https://wetten.overheid.nl/BWBR0018451/2021-01-01
+
+vermogensgrens_met_partner:
+  waarde: "149819"
+  artikel: "Wet op de zorgtoeslag art. 2a lid 1 (tekst 2021) (gezamenlijke rendementsgrondslag; alleen bij het gehele berekeningsjaar dezelfde partner)"
+  bron: "BWBR0018451, geldend van 01-01-2021 t/m 31-12-2021 (verbatim); Stb. 2020, 546, art. IV onder 1 (€ 147.459 = € 85.767 + 2 × € 30.846); Stcrt. 2020, 67965 (€ 147.459 → € 149.819)"
+  url: https://wetten.overheid.nl/BWBR0018451/2021-01-01
+
+woonlandfactoren:
+  artikel: "Wet op de zorgtoeslag art. 3 lid 1 en 2 (tekst 2021) jo. Regeling zorgverzekering art. 6.3.1 lid 9 en bijlage 4"
+  bron: "Regeling van de Minister voor Medische Zorg van 12 oktober 2020, kenmerk 1748365-210596-Z, Stcrt. 2020, 53972, art. I (bijlage 4 Rzv voor 2021; in werking 01-01-2021; primaire tekst gelezen 2026-10-13); gecontroleerd tegen de geconsolideerde bijlage 4 (BWBR0018715, geldend van 01-01-2021 t/m 08-01-2021): alle 39 getallen gelijk. Toelichting: factoren van 2017/2018 bijgesteld met WHO-gegevens; 24 landen omlaag, 14 omhoog, Montenegro ongewijzigd. Niet vergeleken met de leaflet 2021 van de Dienst (niet bereikbaar)"
+  url: https://zoek.officielebekendmakingen.nl/stcrt-2020-53972.html
+  geldig_van: 2021-01-01
+  opmerking: "Landcodes ISO 3166-1 alpha-2, toegevoegd door het project; de bijlage noemt alleen de landnaam (2021: Macedonië, Kaapverdië, Verenigd Koninkrijk). Oude indexeringsmethode: IJsland 1,3453 en Noorwegen 1,3064 boven 1."
+  landen:
+    BE: "0.7347"   # België
+    BA: "0.0681"   # Bosnië-Herzegovina
+    BG: "0.0823"   # Bulgarije
+    CY: "0.1434"   # Cyprus
+    DK: "0.9982"   # Denemarken
+    DE: "0.8134"   # Duitsland
+    EE: "0.2480"   # Estland
+    FI: "0.7023"   # Finland
+    FR: "0.8918"   # Frankrijk
+    GR: "0.2446"   # Griekenland
+    HU: "0.1493"   # Hongarije
+    IE: "0.8981"   # Ierland
+    IS: "1.3453"   # IJsland
+    IT: "0.5322"   # Italië
+    CV: "0.0167"   # Kaapverdië
+    HR: "0.1871"   # Kroatië
+    LV: "0.1083"   # Letland
+    LI: "0.9923"   # Liechtenstein
+    LT: "0.2631"   # Litouwen
+    LU: "0.7384"   # Luxemburg
+    MK: "0.0599"   # Macedonië (de bijlage 2021 schrijft nog Macedonië; Noord-Macedonië sinds de bijlage 2023)
+    MT: "0.3987"   # Malta
+    MA: "0.0222"   # Marokko
+    ME: "0.0821"   # Montenegro
+    "NO": "1.3064"   # Noorwegen
+    AT: "0.6408"   # Oostenrijk
+    PL: "0.1601"   # Polen
+    PT: "0.2600"   # Portugal
+    RO: "0.0824"   # Roemenië
+    RS: "0.0682"   # Servië
+    SI: "0.3344"   # Slovenië
+    SK: "0.2445"   # Slowakije
+    ES: "0.3855"   # Spanje
+    CZ: "0.2341"   # Tsjechië
+    TN: "0.0280"   # Tunesië
+    TR: "0.0851"   # Turkije
+    GB: "0.6593"   # Verenigd Koninkrijk
+    SE: "0.7906"   # Zweden
+    CH: "0.7536"   # Zwitserland
