@@ -57,7 +57,9 @@ van art. 7 lid 3, 4 en 6 en art. 26a per jaar staan in `parameters/<jaar>.yaml` 
 Stcrt. 2024, 38492; 2026: Stcrt. 2025, 40487; 2023: tekst van 01-01-2023, verbatim gelezen 2026-10-11, ontstaan
 uit Stcrt. 2022, 32674; 2022: Stcrt. 2021, 48308; 2021: tekst van 01-01-2021, verbatim gelezen 2026-10-13 — het eerste jaar
 van de rendementsgrondslag-toets van art. 7 lid 3, Wet aanpassing box 3, Stb. 2020, 546, art. III, en lid 6 uit
-Stcrt. 2020, 64406); de zorgtoeslag gebruikt ze niet (Wzt art. 3 lid 1; in 2023 art. 2a lid 1).
+Stcrt. 2020, 64406; 2020: tekst van 01-01-2020, verbatim gelezen 2026-10-14 — art. 7 lid 3 noemde toen geen bedrag maar
+ontzegde de tegemoetkoming zodra voordeel uit sparen en beleggen in aanmerking werd genomen, lid 6 € 4.964); de zorgtoeslag
+gebruikt ze niet (Wzt art. 3 lid 1; in 2020 t/m 2024 art. 2a lid 1).
 **Status:** draft.
 **Gewoon Nederlands:** Het jaarbedrag van uw toeslag wordt afgerond op hele euro's, op de
 gewone manier: vijftig cent of meer gaat omhoog.

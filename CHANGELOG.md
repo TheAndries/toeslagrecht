@@ -2,6 +2,101 @@
 
 Newest first. What was done, decided, and got wrong.
 
+## 2026-10-14 — eighth run: 2020 encoded from primary texts, two 2020-only rules given dated versions, a misleading hint in the checker fixed, a retroactive woonlandfactor correction found, the 2020 leaflet missing
+
+Eighth run of routine `trig_012xyD5r5rxFDCjfHbZ58Kib`. Model as served: `claude-fable-5-1`, the same as the previous
+entry; no handover note needed. The checkout arrived detached at a current `origin/main`; `checkout -B main origin/main`
+as in `memory.md`.
+
+**Steps 1–3.** No ask newly marked done (4 and 6 open as recorded; Checkpoint 1 is the owner's; 8 open). `INBOX.md`
+empty. No open motion.
+
+**Step 4 — done (Phase 2 history, item 2 of `memory.md`; twenty-one fetches, three searches, two leaflet probes).**
+- *Zorgtoeslag 2020 encoded* (`law/zorgtoeslag/parameters/2020.yaml`, `law/awir/parameters/2020.yaml`), every figure read
+  in its primary text: standaardpremie € 1.642 (Stcrt. 2019, 64399: € 1.415 premie + € 227 eigen risico); WML januari 2020
+  € 1.653,60 (Stcrt. 2019, 56680) → drempelinkomen € 21.430,656; percentages 1,830% / 4,140% / 13,550% (in the Wzt text of
+  01-01-2020; set by Stb. 2019, 386, which lowered the two normpercentages structurally by 0,19 point from 2020 as a
+  koopkrachtmaatregel and left the afbouw on its +0,03 schema); vermogensgrens € 85.767 (Stcrt. 2019, 61842, from
+  € 84.416); woonlandfactoren 2020 (Stcrt. 2019, 58198, identical to the consolidated bijlage 4 on all 39 lines); Awir
+  2020 art. 7 (lid 3 then named no amount: no tegemoetkoming as soon as any voordeel uit sparen en beleggen was taken
+  into account) and art. 14 lid 4–5 (verbatim, same text). The only other 2020 version of the Wzt (19-03-2020, Stb. 2020,
+  67, art. XVIII) corrects one spelling in art. 5 lid 3. The checker offers 2020.
+- *Two rules that exist only up to 2020, encoded as dated versions.* (1) **`zt-2020-art2-5oud`**, Wzt art. 2 lid 5 as it
+  read through 2020: no zorgtoeslag for a verzekerde whose partner did not meet the Zvw art. 2 verzekeringsplicht. New
+  input `partner_verzekeringsplicht_niet_nagekomen` (ja/nee/onbekend; unknown → computed as if met, with a note), applied
+  after lid 4, active only where the year's file says `art2_lid5_oud_aanwezig: true`; the checker shows the question only
+  for such years. The monthly rule's label follows the year (`artikel_maandbepaling`: lid 6 in 2020). (2) The
+  **vermogenstoets on the grondslag sparen en beleggen**: art. 2a (2020) compared not the rendementsgrondslag but the
+  grondslag of Wet IB 2001 art. 5.2 — the rendementsgrondslag above the heffingvrij vermogen (€ 30.846, art. 5.5, read),
+  twice that for partners the whole year (art. 5.2 lid 2, read) — with one amount. The encoding keeps asking the
+  rendementsgrondslag and deducts the heffingvrij vermogen itself (`vermogenstoets_basis`, `heffingvrij_vermogen`, each
+  with its article), so that 2020's effective thresholds come out at € 116.613 / € 147.459: exactly the amounts Stb.
+  2020, 546 wrote into the Wzt for 2021, which closes the derivation recorded on 2026-10-13 from the other side. Both
+  changes mirrored in the browser port; parity 189/189.
+- *Eight synthetic cases* (`zt-2020-syn-008..015`): the two inkomensgrenzen from the text (€ 30.480 / € 38.945) on both
+  sides, the lapsed lid 5, the vermogenstoets on both sides of € 85.767 for a single person and a couple. 189 cases: 170
+  pass, 19 fail (the same nineteen, all logged), 0 blocking.
+- *Seven amendment rows* in `law/CHANGES.md` (2020-01-01: percentages, vermogensgrens, standaardpremie, WML,
+  woonlandfactoren; one completing the 2021 Awir art. 7 row — there were no "2020 amounts" to read, the test was
+  qualitative; and one for 26-10-2019: Stcrt. 2019, 58198 art. II set the German woonlandfactor for 2017, 2018 and 2019
+  anew with retroactive effect because it had been set too high, with a toelichting that says the correction applies
+  to the verdragsbijdrage only and "geen effect op de hoogte van de zorgtoeslag" — the first retroactive correction of a
+  factor found, and the first instrument found to say which of the factor's two uses a correction reaches). Eleven
+  source rows and the 2020 leaflet entry in `law/SOURCES.md`; open item 4 now says 2019 with what is known.
+- *The 2020 leaflet is missing altogether.* `tg0821z01fd` and `z02fd` are 404; a search found no copy and no archive
+  link. So 2020, like 2021, has no `published` case and no evidence of the Dienst's roundings; the parameter file says so,
+  and a dated note under Ask 8 asks the owner to look if he can.
+
+**The discrepancies.** None opened: nothing of the Dienst's for 2020 was read. One thing is pre-recorded in
+`zt-2020-syn-009`: at toetsingsinkomen € 30.481 the text gives € 23,50 → € 23 → nothing, while a drempelinkomen rounded to
+€ 21.431 (the Dienst's practice in 2023–2026, #1) would give € 23,54 → € 24. If a publication of the Dienst for 2020 ever
+puts the grens at € 30.481, that is #1 for 2020.
+
+**What was wrong and why.**
+- *A hint in the checker that could mislead a citizen, since 2026-10-10.* The vermogen field said "boven het heffingvrije
+  vermogen": it asked for the grondslag sparen en beleggen where the law since 2021 compares the full rendementsgrondslag
+  (art. 5.3) with the grens. A citizen with € 160.000 who followed the hint would have entered ≈ € 102.000 in 2026 and
+  been told "onder de grens" where the law says none. The encoding was right; the hint was not (P4, P13). Fixed in the
+  template this run: "het hele bedrag, vóór aftrek van het heffingvrije vermogen (… voor 2020 trekt de berekening het
+  heffingvrije vermogen zelf af)". Found only because 2020 forced a close reading of art. 5.2 against art. 5.3. Logged here
+  rather than in `DISCREPANCIES.md`, which is for encoding versus government outcomes; this was the page versus the law.
+- *An unread number nearly entered the record, again.* The first draft of the WML row gave the July 2019 amount from
+  memory; replaced by "not yet read" on re-reading the diff. And a case note quoted "€ 1.912,75" without computing it
+  (€ 1.913,13); fixed before commit. Rule restated in `memory.md`: a number in prose is computed or read, never recalled.
+- *A version label too long for the page.* The 2020 `versie` string carried the 19-03-2020 remark into every margin note
+  of the result page; moved to `versie_opmerking`.
+- *Parallel fetches with a relative path* ran in the wrong directory once; the helper now takes absolute paths.
+- Stale year lists: `README.md` ("2026, 2025, 2024 and 2023", "166 published cases") and `site/README.md` ("2023–2026")
+  had not been updated since 2026-10-10; both now say 2020–2026 and 173 + 16.
+- Nothing dropped from scope. Nibud/Rijksoverheid cases and the rechtspraak.nl scan not started again; 2020 was the
+  cheaper and more durable choice and carried two structural rule versions. `PLAN.md` unchanged (strategy holds;
+  Checkpoint 1 open on the owner, not missed by any date).
+
+**Step 8 — asks.** None new. A dated note under Ask 8 extends it to the 2020 leaflet if the owner can find one.
+
+**Dropped from memory.** The 2020 to-do with its pointers (done; `tg0821z01fd`/`z02` were 404 as feared); the "2021 to
+2024" phrasing of the article numbering (now 2020–2024). Nothing else was held.
+
+**Effort.** Roughly 290,000 of the 300,000-token ceiling — the closest to it yet: about 85,000 reading the files and the
+previous entries, about 70,000 on twenty-one downloads (the Wzt, Awir and WML of 2020 with three informatie pages, the
+46 MB Regeling zorgverzekering, the 4 MB Wet IB 2001, two Staatsbladen, five Staatscouranten, the standaardpremie
+regeling's informatie page) and three searches, about 90,000 writing two parameter files, two rule versions in two
+encodings, the checker form, eight cases, the amendment and source rows, the rule text and these records, the rest on
+the headless render and the build. The two rule versions, not the year, made this run expensive; 2019 should cost
+less unless its lid 5 or its vermogenstoets differs again.
+
+**Record under the ten-year rule.** This run added to the record: the law of 2020 as it stood, with every figure's
+instrument and date; two rules as they stood only through 2020, with their text and the instrument that ended them —
+the exclusion for a partner who did not insure (Wzt art. 2 lid 5 oud) and the vermogenstoets on the grondslag sparen en
+beleggen with the heffingvrij vermogen that made 2020's threshold equal, to the euro, to the rendementsgrondslag amounts
+of 2021; the structural 0,19-point lowering of the normpercentages from 2020 (Stb. 2019, 386) with the 2019 figures the
+besluit itself gives; six dated amendment rows 2019 → 2020 → 2021 and the completion of the Awir 2021 row; the dated
+finding that the German woonlandfactor for 2017–2019 was corrected retroactively with an explicit statement that the
+zorgtoeslag was not revised; the dated finding that the Dienst's 2020 leaflet is nowhere to be found; and the dated record
+of a misleading hint in the published checker, what it would have done, and its fix. The 2020 encoding, the eight
+synthetic cases and the site build are regenerable and are not counted. Still no verified case: that needs a human and
+a document, and the first such pairs remain the owner's Checkpoint 1.
+
 ## 2026-10-13 — seventh run: 2021 encoded from primary texts, a wrong percentage in the record corrected, the 2021 leaflet out of reach, Ask 8
 
 Seventh run of routine `trig_012xyD5r5rxFDCjfHbZ58Kib`. Model as served: `claude-fable-5-1`, the same as the previous

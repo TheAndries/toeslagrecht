@@ -1,0 +1,15 @@
+id: zt-2020-syn-009
+toeslag: zorgtoeslag
+jaar: 2020
+bron:
+  type: synthetic
+  publicatie: "Door de operator geconstrueerd op 2026-10-14 uit de tekst van 2020 (Wzt 01-01-2020; Stcrt. 2019, 64399; Stcrt. 2019, 56680; Stb. 2019, 386; Stcrt. 2019, 61842; Wet IB 2001 art. 5.2 en 5.5 tekst 2020). Geen publicatie van de Dienst Toeslagen voor 2020 gelezen: de leaflet Berekening zorgtoeslag 2020 is op 2026-10-14 niet gevonden (tg0821z01fd en z02fd: 404). Synthetic: een controle van de encoding tegen de tekst, geen verificatie (CASES.md)"
+  opgehaald: 2026-10-14
+verified: false
+invoer:
+  partner: false
+  toetsingsinkomen_aanvrager: "30481"
+  rendementsgrondslag: null
+verwacht:
+  tegemoetkoming: "0"
+opmerking: "Eén euro boven de grens: € 23,50 → € 23, niet toegekend (Awir art. 14 lid 5). Let op: met een op hele euro's afgerond drempelinkomen (€ 21.431, zoals de Dienst in andere jaren doet, DISCREPANCIES.md #1) zou dit € 23,54 → € 24 zijn; de tekst rondt niet. Wordt een discrepantie zodra een publicatie van de Dienst voor 2020 de grens op € 30.481 legt."

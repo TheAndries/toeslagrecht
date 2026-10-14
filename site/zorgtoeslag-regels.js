@@ -90,23 +90,44 @@
     return [deelDrempel + deelBoven, deelDrempel, deelBoven];
   }
 
-  // zt-2026-art3-1 — Wzt art. 3 lid 1 (2024: art. 2a lid 1)
+  // zt-2026-art3-1 — Wzt art. 3 lid 1 (2021–2024: art. 2a lid 1). Sinds 2021 vergelijkt de tekst de rendementsgrondslag
+  // (Wet IB 2001 art. 5.3) met twee bedragen; t/m 2020 de grondslag sparen en beleggen (art. 5.2: de rendementsgrondslag
+  // boven het heffingvrije vermogen, tweemaal bij het hele jaar dezelfde partner, art. 5.2 lid 2) met één bedrag.
+  // Het jaarbestand zegt welke (`vermogenstoets_basis`) en draagt het heffingvrije vermogen met zijn artikel.
   function vermogenstoets(rg, partner, heleJaarDezelfdePartner, par) {
     if (rg === null || rg === undefined) {
       return ["niet_getoetst", "Geen vermogen opgegeven; de vermogenstoets is niet uitgevoerd."];
     }
+    const gsb = (par.vermogenstoets_basis || "rendementsgrondslag") === "grondslag_sparen_en_beleggen";
+    let grens, grondslag, naam;
     if (!partner) {
-      const grens = P(par.vermogensgrens_zonder_partner.waarde);
-      if (rg > grens) return ["geen_aanspraak", "Rendementsgrondslag " + t(rg) + " > € " + par.vermogensgrens_zonder_partner.waarde + ": geen aanspraak."];
-      return ["aanspraak", "Rendementsgrondslag " + t(rg) + " ≤ € " + par.vermogensgrens_zonder_partner.waarde + "."];
+      grens = P(par.vermogensgrens_zonder_partner.waarde);
+      if (gsb) {
+        const hv = P(par.heffingvrij_vermogen.waarde);
+        grondslag = rg - hv; if (grondslag < 0n) grondslag = 0n;
+        naam = "Grondslag sparen en beleggen " + t(rg) + " − heffingvrij vermogen " + t(hv) +
+          " (Wet IB 2001 art. 5.2 lid 1, art. 5.5) = " + t(grondslag);
+      } else {
+        grondslag = rg; naam = "Rendementsgrondslag " + t(rg);
+      }
+      if (grondslag > grens) return ["geen_aanspraak", naam + " > € " + par.vermogensgrens_zonder_partner.waarde + ": geen aanspraak."];
+      return ["aanspraak", naam + " ≤ € " + par.vermogensgrens_zonder_partner.waarde + "."];
     }
     if (heleJaarDezelfdePartner === null || heleJaarDezelfdePartner === undefined || heleJaarDezelfdePartner) {
-      const grens = P(par.vermogensgrens_met_partner.waarde);
-      if (rg > grens) return ["geen_aanspraak", "Gezamenlijke rendementsgrondslag " + t(rg) + " > € " + par.vermogensgrens_met_partner.waarde + ": geen aanspraak."];
-      return ["aanspraak", "Gezamenlijke rendementsgrondslag " + t(rg) + " ≤ € " + par.vermogensgrens_met_partner.waarde + "."];
+      grens = P(par.vermogensgrens_met_partner.waarde);
+      if (gsb) {
+        const hv = P(par.heffingvrij_vermogen.waarde);
+        grondslag = rg - 2n * hv; if (grondslag < 0n) grondslag = 0n;
+        naam = "Gezamenlijke grondslag sparen en beleggen " + t(rg) + " − 2 × heffingvrij vermogen " + t(hv) +
+          " (Wet IB 2001 art. 5.2 lid 2, art. 5.5) = " + t(grondslag);
+      } else {
+        grondslag = rg; naam = "Gezamenlijke rendementsgrondslag " + t(rg);
+      }
+      if (grondslag > grens) return ["geen_aanspraak", naam + " > € " + par.vermogensgrens_met_partner.waarde + ": geen aanspraak."];
+      return ["aanspraak", naam + " ≤ € " + par.vermogensgrens_met_partner.waarde + "."];
     }
     return ["undetermined",
-      "Wzt art. 3 lid 1 noemt de gezamenlijke grens alleen voor wie het gehele berekeningsjaar " +
+      (par.artikel_vermogenstoets || "Wzt art. 3 lid 1") + " noemt de gezamenlijke grens alleen voor wie het gehele berekeningsjaar " +
       "dezelfde partner heeft; welke grens anders geldt, bepaalt de tekst niet uitdrukkelijk."];
   }
 
@@ -158,7 +179,8 @@
   /** De hele berekening voor één ongewijzigd kalenderjaar. Elke stap noemt haar artikel.
    *  invoer: { jaar, toetsingsinkomen_aanvrager, partner, toetsingsinkomen_partner, partner_verzekerd,
    *            rendementsgrondslag, hele_jaar_dezelfde_partner, aanvrager_verdragsgerechtigd,
-   *            partner_verdragsgerechtigd, woonland }  (bedragen als string of getal; booleans; null = niet opgegeven)
+   *            partner_verdragsgerechtigd, woonland, partner_verzekeringsplicht_niet_nagekomen }
+   *          (bedragen als string of getal; booleans; null = niet opgegeven)
    *  parameters: zorgtoeslag-parameters.js (PARAMETERS) */
   function bereken(invoer, parameters) {
     const jaar = Number(invoer.jaar);
@@ -176,11 +198,13 @@
     const aanvragerVg = !!invoer.aanvrager_verdragsgerechtigd;
     const partnerVg = invoer.partner_verdragsgerechtigd === undefined ? null : invoer.partner_verdragsgerechtigd;
     const woonland = invoer.woonland || null;
+    const plichtNiet = invoer.partner_verzekeringsplicht_niet_nagekomen === undefined ? null : invoer.partner_verzekeringsplicht_niet_nagekomen;
 
     const artv = par.versie || ("BWBR0018451, geldend van 01-01-" + jaar);
     const artVerm = par.artikel_vermogenstoets || "Wzt art. 3 lid 1";
     const artWlf = par.artikel_woonlandfactor || "Wzt art. 4a";
     const lid3 = par.art4a_lid3_aanwezig === undefined ? true : par.art4a_lid3_aanwezig;
+    const artMaand = par.artikel_maandbepaling || "Wzt art. 2 lid 5";   // 2020: lid 6
 
     const u = { jaar, stappen: [], aanspraak_jaar: null, tegemoetkoming: null, aanspraak_maand: null,
                 aanspraak_maand_afgerond_praktijk: null, vermogen: "niet_getoetst", onbepaald: [] };
@@ -259,6 +283,21 @@
     } else if (partner && partnerVerzekerd === null) {
       u.onbepaald.push("zt-2026-art2-4: niet opgegeven of de partner verzekerde is (Wzt art. 1 lid 1 onder c); gerekend alsof wel.");
     }
+
+    // zt-2020-art2-5oud — Wzt art. 2 lid 5 zoals dat t/m 2020 luidde (vervallen 01-01-2021, Stb. 2020, 543): geen zorgtoeslag
+    // voor een verzekerde met een partner die zijn verzekeringsplicht (Zvw art. 2) niet nakwam. Het jaarbestand zegt of het lid bestond.
+    if (partner && par.art2_lid5_oud_aanwezig) {
+      const lid5 = par.art2_lid5_oud;
+      if (plichtNiet === true) {
+        aanspraak = 0n;
+        u.stappen.push(stap("zt-2020-art2-5oud", lid5.artikel + " (" + artv + ")",
+          "Uw partner heeft zich niet verzekerd terwijl dat moest: dan is er in dit jaar geen zorgtoeslag.",
+          "geen aanspraak (Wzt art. 2 lid 5, tekst 2020)", aanspraak));
+      } else if (plichtNiet === null) {
+        u.onbepaald.push("zt-2020-art2-5oud: niet opgegeven of de partner zijn verzekeringsplicht (Zvw art. 2) " +
+          "is nagekomen (Wzt art. 2 lid 5, tekst 2020); gerekend alsof wel.");
+      }
+    }
     u.aanspraak_jaar = aanspraak;
 
     // awir-2026-art14-4 / awir-2026-art14-5
@@ -278,7 +317,7 @@
 
     // zt-2026-art2-5
     const maand = div(aanspraak, 12n * SCALE);
-    u.stappen.push(stap("zt-2026-art2-5", "Wzt art. 2 lid 5 (" + artv + ")",
+    u.stappen.push(stap("zt-2026-art2-5", artMaand + " (" + artv + ")",
       "Per kalendermaand, bij een heel jaar zonder wijzigingen: het jaarbedrag gedeeld door twaalf.",
       t(aanspraak) + " / 12", maand));
     u.aanspraak_maand = maand;

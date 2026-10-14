@@ -89,6 +89,7 @@ def run_case(c: dict, rules) -> dict:
         aanvrager_verdragsgerechtigd=bool(inv.get("aanvrager_verdragsgerechtigd")),
         partner_verdragsgerechtigd=inv.get("partner_verdragsgerechtigd"),
         woonland=inv.get("woonland"),
+        partner_verzekeringsplicht_niet_nagekomen=inv.get("partner_verzekeringsplicht_niet_nagekomen"),
     )
     got = {
         "normpremie": next((s.uitkomst for s in u.stappen if s.regel == "zt-2026-art2-2"), None),

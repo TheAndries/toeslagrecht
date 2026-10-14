@@ -49,7 +49,7 @@ ul.dossier,ul.onbepaald{padding-left:1.25rem}ul.dossier li,ul.onbepaald li{margi
   <fieldset>
     <legend>Het jaar</legend>
     <div class="veld"><label for="jaar">Voor welk jaar wilt u rekenen?</label>
-      <select id="jaar" name="jaar"><option value="2026" selected>2026</option><option value="2025">2025</option><option value="2024">2024</option><option value="2023">2023</option><option value="2022">2022</option><option value="2021">2021</option></select></div>
+      <select id="jaar" name="jaar"><option value="2026" selected>2026</option><option value="2025">2025</option><option value="2024">2024</option><option value="2023">2023</option><option value="2022">2022</option><option value="2021">2021</option><option value="2020">2020</option></select></div>
   </fieldset>
 
   <fieldset>
@@ -72,13 +72,20 @@ ul.dossier,ul.onbepaald{padding-left:1.25rem}ul.dossier li,ul.onbepaald li{margi
         <label><input type="radio" name="partner_verzekerd" value="onbekend"> Weet ik niet</label>
       </div>
       <p class="hint">Bijna iedereen die in Nederland woont of werkt is verzekerd. Militairen in actieve dienst en mensen die alleen in het buitenland verzekerd zijn, zijn het niet (Wzt art. 1 lid 1 onder c).</p></div>
+    <div class="veld alleen-partner alleen-lid5oud" hidden><p id="l-pp" class="label">Moest uw partner zich in Nederland verzekeren, maar deed hij of zij dat niet?</p>
+      <div class="keuzes" role="radiogroup" aria-labelledby="l-pp">
+        <label><input type="radio" name="partner_verzekeringsplicht_niet_nagekomen" value="nee" checked> Nee</label>
+        <label><input type="radio" name="partner_verzekeringsplicht_niet_nagekomen" value="ja"> Ja</label>
+        <label><input type="radio" name="partner_verzekeringsplicht_niet_nagekomen" value="onbekend"> Weet ik niet</label>
+      </div>
+      <p class="hint">Alleen voor 2020 en eerder: toen gaf de wet geen zorgtoeslag als uw partner verzekeringsplichtig was en zich niet verzekerde (Wzt art. 2 lid 5, tekst 2020; vervallen per 2021).</p></div>
   </fieldset>
 
   <details class="meer">
     <summary>Uw vermogen op 1 januari (alleen als het hoog is)</summary>
     <div class="veld"><label for="rg">Uw vermogen op 1 januari, samen met uw partner als u die hebt, in hele euro's</label>
       <input id="rg" name="rendementsgrondslag" type="text" inputmode="numeric" pattern="[0-9.]*" aria-describedby="h-rg">
-      <p class="hint" id="h-rg">Dit is de rendementsgrondslag uit box 3: spaargeld, beleggingen en een tweede huis, min schulden, boven het heffingvrije vermogen. Laat het leeg als u het niet weet; dan slaat de berekening de vermogenstoets over en zegt zij dat.</p></div>
+      <p class="hint" id="h-rg">Dit is de rendementsgrondslag uit box 3: al uw spaargeld, beleggingen en een tweede huis, min schulden, op 1 januari — het hele bedrag, vóór aftrek van het heffingvrije vermogen (de wet vergelijkt dat hele bedrag met de grens; voor 2020 trekt de berekening het heffingvrije vermogen zelf af). Laat het leeg als u het niet weet; dan slaat de berekening de vermogenstoets over en zegt zij dat.</p></div>
     <div class="veld alleen-partner" hidden><p id="l-hj" class="label">Had u het hele jaar dezelfde toeslagpartner?</p>
       <div class="keuzes" role="radiogroup" aria-labelledby="l-hj">
         <label><input type="radio" name="hele_jaar_dezelfde_partner" value="ja" checked> Ja</label>
@@ -112,7 +119,7 @@ ul.dossier,ul.onbepaald{padding-left:1.25rem}ul.dossier li,ul.onbepaald li{margi
 
 <footer class="voet">
   <p class="klein">Dit is een controle, geen advies. Aanvragen en wijzigen doet u op <a href="https://www.toeslagen.nl">toeslagen.nl</a>.</p>
-  <p class="klein">Het dossier: <a href="https://github.com/TheAndries/toeslagrecht/blob/main/law/zorgtoeslag/rules.md">de regels met hun artikelen</a> · <a href="https://github.com/TheAndries/toeslagrecht/blob/main/law/CHANGES.md">de wijzigingen per datum</a> · <a href="https://github.com/TheAndries/toeslagrecht/tree/main/cases">de cases</a> · <a href="https://github.com/TheAndries/toeslagrecht/blob/main/DISCREPANCIES.md">de verschillen met Dienst Toeslagen</a> · <a href="https://github.com/TheAndries/toeslagrecht/blob/main/DISPUTES.md">iets betwisten</a>. Open onder MIT en CC BY-SA 4.0. Gebouwd 2026-10-13.</p>
+  <p class="klein">Het dossier: <a href="https://github.com/TheAndries/toeslagrecht/blob/main/law/zorgtoeslag/rules.md">de regels met hun artikelen</a> · <a href="https://github.com/TheAndries/toeslagrecht/blob/main/law/CHANGES.md">de wijzigingen per datum</a> · <a href="https://github.com/TheAndries/toeslagrecht/tree/main/cases">de cases</a> · <a href="https://github.com/TheAndries/toeslagrecht/blob/main/DISCREPANCIES.md">de verschillen met Dienst Toeslagen</a> · <a href="https://github.com/TheAndries/toeslagrecht/blob/main/DISPUTES.md">iets betwisten</a>. Open onder MIT en CC BY-SA 4.0. Gebouwd 2026-10-14.</p>
 </footer>
 </main>
 <script src="zorgtoeslag-parameters.js"></script>
@@ -140,7 +147,9 @@ ul.dossier,ul.onbepaald{padding-left:1.25rem}ul.dossier li,ul.onbepaald li{margi
   }
   function toonPartnerVelden() {
     var p = radio("partner") === "ja";
+    var par = PARAMETERS.zorgtoeslag[Number(document.getElementById("jaar").value)] || {};
     form.querySelectorAll(".alleen-partner").forEach(function (el) { el.hidden = !p; });
+    form.querySelectorAll(".alleen-lid5oud").forEach(function (el) { el.hidden = !(p && par.art2_lid5_oud_aanwezig); });
   }
   form.addEventListener("change", toonPartnerVelden);
   toonPartnerVelden();
@@ -215,7 +224,8 @@ ul.dossier,ul.onbepaald{padding-left:1.25rem}ul.dossier li,ul.onbepaald li{margi
         hele_jaar_dezelfde_partner: partner ? jaNee(radio("hele_jaar_dezelfde_partner")) : null,
         aanvrager_verdragsgerechtigd: radio("aanvrager_verdragsgerechtigd") === "ja",
         partner_verdragsgerechtigd: partner ? radio("partner_verdragsgerechtigd") === "ja" : null,
-        woonland: document.getElementById("woonland").value || null
+        woonland: document.getElementById("woonland").value || null,
+        partner_verzekeringsplicht_niet_nagekomen: partner ? jaNee(radio("partner_verzekeringsplicht_niet_nagekomen")) : null
       };
       if ((inv.aanvrager_verdragsgerechtigd || inv.partner_verdragsgerechtigd) && !inv.woonland) {
         throw new Error("Kies het woonland: de woonlandfactor hangt ervan af (Wzt art. 4a).");

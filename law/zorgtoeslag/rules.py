@@ -90,22 +90,41 @@ def normpremie(toetsingsinkomen: Decimal, partner: bool, par: dict) -> tuple[Dec
 
 def vermogenstoets(rendementsgrondslag: Decimal | None, partner: bool,
                    hele_jaar_dezelfde_partner: bool | None, par: dict) -> tuple[str, str]:
-    """zt-2026-art3-1 — Wzt art. 3 lid 1. Returns (uitkomst, toelichting)."""
+    """zt-2026-art3-1 — Wzt art. 3 lid 1 (2021–2024: art. 2a lid 1). Returns (uitkomst, toelichting).
+    Since 2021 the text compares the rendementsgrondslag (Wet IB 2001 art. 5.3) with two amounts. Through 2020
+    (art. 2a lid 1, text 2020) it compared the grondslag sparen en beleggen (art. 5.2: the rendementsgrondslag
+    above the heffingvrij vermogen, twice that for partners the whole year, art. 5.2 lid 2) with one amount;
+    the year's file says so (`vermogenstoets_basis`) and carries the heffingvrij vermogen with its article."""
     if rendementsgrondslag is None:
         return "niet_getoetst", "Geen vermogen opgegeven; de vermogenstoets is niet uitgevoerd."
+    gsb = par.get("vermogenstoets_basis", "rendementsgrondslag") == "grondslag_sparen_en_beleggen"
     if not partner:
         grens = D(par["vermogensgrens_zonder_partner"]["waarde"])
-        if rendementsgrondslag > grens:
-            return "geen_aanspraak", f"Rendementsgrondslag {t(rendementsgrondslag)} > € {grens}: geen aanspraak."
-        return "aanspraak", f"Rendementsgrondslag {t(rendementsgrondslag)} ≤ € {grens}."
+        if gsb:
+            hv = D(par["heffingvrij_vermogen"]["waarde"])
+            grondslag = max(D(0), rendementsgrondslag - hv)
+            naam = (f"Grondslag sparen en beleggen {t(rendementsgrondslag)} − heffingvrij vermogen {t(hv)} "
+                    f"(Wet IB 2001 art. 5.2 lid 1, art. 5.5) = {t(grondslag)}")
+        else:
+            grondslag, naam = rendementsgrondslag, f"Rendementsgrondslag {t(rendementsgrondslag)}"
+        if grondslag > grens:
+            return "geen_aanspraak", f"{naam} > € {grens}: geen aanspraak."
+        return "aanspraak", f"{naam} ≤ € {grens}."
     if hele_jaar_dezelfde_partner is None or hele_jaar_dezelfde_partner:
         grens = D(par["vermogensgrens_met_partner"]["waarde"])
-        if rendementsgrondslag > grens:
-            return "geen_aanspraak", f"Gezamenlijke rendementsgrondslag {t(rendementsgrondslag)} > € {grens}: geen aanspraak."
-        return "aanspraak", f"Gezamenlijke rendementsgrondslag {t(rendementsgrondslag)} ≤ € {grens}."
+        if gsb:
+            hv = D(par["heffingvrij_vermogen"]["waarde"])
+            grondslag = max(D(0), rendementsgrondslag - D(2) * hv)
+            naam = (f"Gezamenlijke grondslag sparen en beleggen {t(rendementsgrondslag)} − 2 × heffingvrij vermogen "
+                    f"{t(hv)} (Wet IB 2001 art. 5.2 lid 2, art. 5.5) = {t(grondslag)}")
+        else:
+            grondslag, naam = rendementsgrondslag, f"Gezamenlijke rendementsgrondslag {t(rendementsgrondslag)}"
+        if grondslag > grens:
+            return "geen_aanspraak", f"{naam} > € {grens}: geen aanspraak."
+        return "aanspraak", f"{naam} ≤ € {grens}."
     return ("undetermined",
-            "Wzt art. 3 lid 1 noemt de gezamenlijke grens alleen voor wie het gehele berekeningsjaar "
-            "dezelfde partner heeft; welke grens anders geldt, bepaalt de tekst niet uitdrukkelijk.")
+            f"{par.get('artikel_vermogenstoets', 'Wzt art. 3 lid 1')} noemt de gezamenlijke grens alleen voor wie het "
+            "gehele berekeningsjaar dezelfde partner heeft; welke grens anders geldt, bepaalt de tekst niet uitdrukkelijk.")
 
 
 def woonlandfactor(woonland: str | None, par: dict) -> Decimal | None:
@@ -166,13 +185,15 @@ def bereken(jaar: int, par: dict, toetsingsinkomen_aanvrager: Decimal, partner: 
             awir: dict | None = None,
             aanvrager_verdragsgerechtigd: bool = False,
             partner_verdragsgerechtigd: bool | None = None,
-            woonland: str | None = None) -> Uitkomst:
+            woonland: str | None = None,
+            partner_verzekeringsplicht_niet_nagekomen: bool | None = None) -> Uitkomst:
     """The whole computation for one unchanged calendar year. Every step cites its article."""
     u = Uitkomst(jaar=jaar)
     artv = par.get("versie") or par.get("_versie") or f"BWBR0018451, geldend van 01-01-{jaar}"
     art_verm = par.get("artikel_vermogenstoets", "Wzt art. 3 lid 1")   # 2024: art. 2a lid 1
     art_wlf = par.get("artikel_woonlandfactor", "Wzt art. 4a")        # 2024: art. 3
     lid3 = par.get("art4a_lid3_aanwezig", True)                       # art. 4a lid 3 exists since 06-11-2024
+    art_maand = par.get("artikel_maandbepaling", "Wzt art. 2 lid 5")   # 2020: lid 6
     awir = awir or {}
 
     # awir-2026-art7-1
@@ -258,6 +279,20 @@ def bereken(jaar: int, par: dict, toetsingsinkomen_aanvrager: Decimal, partner: 
     elif partner and partner_verzekerd is None:
         u.onbepaald.append("zt-2026-art2-4: niet opgegeven of de partner verzekerde is (Wzt art. 1 lid 1 onder c); "
                            "gerekend alsof wel.")
+
+    # zt-2020-art2-5oud — Wzt art. 2 lid 5 as it read through 2020 (vervallen 01-01-2021, Stb. 2020, 543): no
+    # zorgtoeslag for a verzekerde whose partner did not meet the verzekeringsplicht (Zvw art. 2). The year's file
+    # says whether the lid existed (`art2_lid5_oud_aanwezig`) and carries its text.
+    if partner and par.get("art2_lid5_oud_aanwezig", False):
+        lid5 = par["art2_lid5_oud"]
+        if partner_verzekeringsplicht_niet_nagekomen is True:
+            aanspraak = D(0)
+            u.stappen.append(Stap("zt-2020-art2-5oud", f"{lid5['artikel']} ({artv})",
+                                  "Uw partner heeft zich niet verzekerd terwijl dat moest: dan is er in dit jaar geen zorgtoeslag.",
+                                  "geen aanspraak (Wzt art. 2 lid 5, tekst 2020)", aanspraak))
+        elif partner_verzekeringsplicht_niet_nagekomen is None:
+            u.onbepaald.append("zt-2020-art2-5oud: niet opgegeven of de partner zijn verzekeringsplicht (Zvw art. 2) "
+                               "is nagekomen (Wzt art. 2 lid 5, tekst 2020); gerekend alsof wel.")
     u.aanspraak_jaar = aanspraak
 
     # awir-2026-art14-4 / awir-2026-art14-5
@@ -277,7 +312,7 @@ def bereken(jaar: int, par: dict, toetsingsinkomen_aanvrager: Decimal, partner: 
 
     # zt-2026-art2-5
     maand = aanspraak / D(12)
-    u.stappen.append(Stap("zt-2026-art2-5", f"Wzt art. 2 lid 5 ({artv})",
+    u.stappen.append(Stap("zt-2026-art2-5", f"{art_maand} ({artv})",
                           "Per kalendermaand, bij een heel jaar zonder wijzigingen: het jaarbedrag gedeeld door twaalf.",
                           f"{t(aanspraak)} / 12", maand))
     u.aanspraak_maand = maand
