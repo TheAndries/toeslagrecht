@@ -1,0 +1,15 @@
+id: zt-2019-syn-017
+toeslag: zorgtoeslag
+jaar: 2019
+bron:
+  type: synthetic
+  publicatie: "Door de operator geconstrueerd op 2026-10-18 uit de tekst van 2019 (Wzt 01-01-2019; Stcrt. 2018, 66728; Stcrt. 2018, 59237; Stb. 2018, 431). Geen publicatie van de Dienst Toeslagen voor 2019 gelezen: de leaflet Berekening zorgtoeslag 2019 is op 2026-10-18 niet gevonden (tg0821z90fd t/m z94fd: 404). Synthetic: een controle van de encoding tegen de tekst, geen verificatie (CASES.md)"
+  opgehaald: 2026-10-18
+verified: false
+invoer:
+  partner: false
+  toetsingsinkomen_aanvrager: "29563"
+  rendementsgrondslag: null
+verwacht:
+  tegemoetkoming: "0"
+opmerking: "Eén euro boven de grens: € 23,41 → € 23, niet toegekend (Awir art. 14 lid 5). Met een op € 20.941 afgerond drempelinkomen (DISCREPANCIES.md #1) zou het € 23,43 → € 23 blijven; de grens verschuift in 2019 niet door de afronding."

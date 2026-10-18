@@ -1,7 +1,153 @@
-/* Gegenereerd door tools/build.py op 2026-10-14 uit law/zorgtoeslag/parameters/*.yaml en law/awir/parameters/*.yaml. Niet bewerken: de yaml-bestanden zijn de bron en dragen bij elk getal zijn artikel. Licentie: CC BY-SA 4.0 (LICENSE-DATA). */
+/* Gegenereerd door tools/build.py op 2026-10-18 uit law/zorgtoeslag/parameters/*.yaml en law/awir/parameters/*.yaml. Niet bewerken: de yaml-bestanden zijn de bron en dragen bij elk getal zijn artikel. Licentie: CC BY-SA 4.0 (LICENSE-DATA). */
 var PARAMETERS = {
- "gegenereerd": "2026-10-14",
+ "gegenereerd": "2026-10-18",
  "zorgtoeslag": {
+  "2019": {
+   "jaar": 2019,
+   "status": "draft",
+   "geraadpleegd": "2026-10-18",
+   "versie": "BWBR0018451, geldend van 01-01-2019 t/m 31-12-2019 (verbatim gelezen 2026-10-18)",
+   "versie_opmerking": "Eén versie in 2019. Ontstaansbronnen per 01-01-2019 (wetstechnische informatie): Stcrt. 2018, 61205 (art. 2a lid 1: € 84.416); Stb. 2018, 431 (art. 2 lid 3: de percentages 2019); Stb. 2018, 356 (Verzamelwet VWS 2018, art. XVI; per Stb. 2018, 454 trad op 01-01-2019 alleen onderdeel A sub 2 in werking: art. 1 lid 1 onder c, 'artikel 24, eerste of tweede lid' van de Zvw; onderdeel A sub 1 (art. 68 Zvw) en B (art. 5 lid 3–4) niet — de tekst van 01-01-2019 noemt art. 68 Zvw dan ook niet). Geen rekenregel veranderde in de loop van 2019.",
+   "artikel_vermogenstoets": "Wzt art. 2a lid 1 (tekst 2019)",
+   "artikel_woonlandfactor": "Wzt art. 3 (tekst 2019)",
+   "artikel_maandbepaling": "Wzt art. 2 lid 6 (tekst 2019; sinds 01-01-2021 lid 5)",
+   "artikel_wml_onderdeel": "a",
+   "art4a_lid3_aanwezig": false,
+   "art4a_lid3_opmerking": "Het huidige art. 4a lid 3 (verzekerde aanvrager met een verdragsgerechtigde partner) is ingevoegd per 06-11-2024 (Stb. 2024, 291, art. XIX onder C). In 2019 regelde de tekst (art. 3) dat geval niet; de encoding geeft dan 'undetermined'.",
+   "art2_lid5_oud_aanwezig": true,
+   "art2_lid5_oud": {
+    "artikel": "Wet op de zorgtoeslag art. 2 lid 5 (tekst 2019; vervallen per 01-01-2021)",
+    "bron": "BWBR0018451, geldend van 01-01-2019 t/m 31-12-2019 (verbatim gelezen 2026-10-18; dezelfde tekst als 2020). Vervallen bij Wet verbetering uitvoerbaarheid toeslagen, Stb. 2020, 543, art. III onder 2 (lid 6–8 vernummerd tot 5–7, onder 3)",
+    "url": "https://wetten.overheid.nl/BWBR0018451/2019-01-01",
+    "geldig_van": "2019-01-01",
+    "geldig_tot": "2019-12-31",
+    "tekst": "In afwijking van het eerste lid heeft een verzekerde met een partner die niet heeft voldaan aan de voor hem op grond van artikel 2 van de Zorgverzekeringswet geldende verplichting zich krachtens een zorgverzekering te verzekeren, geen aanspraak op een zorgtoeslag.",
+    "opmerking": "Invoer: partner_verzekeringsplicht_niet_nagekomen (ja/nee/onbekend). Of de partner verzekeringsplichtig was en die plicht niet nakwam (Zvw art. 2) codeert de encoding niet; het is invoer. Niet opgegeven: gerekend alsof nagekomen, met een noot."
+   },
+   "vermogenstoets_basis": "grondslag_sparen_en_beleggen",
+   "maand_afronding_opmerking": "Geen parameter maand_afronding_praktijk: voor 2019 is geen rekenvoorbeeld van de Dienst gelezen (de leaflet Berekening zorgtoeslag 2019 is op 2026-10-18 een 404 onder tg0821z90fd t/m z94fd; een zoekopdracht vond geen kopie; SOURCES.md). De encoding gebruikt de standaard 'naar_beneden' (DISCREPANCIES.md #5) en zegt dat in het resultaat; 2022 rondde rekenkundig (#8), dus 2019 is onbekend. De jaarbedragen van twee beschikkingen 2019 zijn wel bekend uit ECLI:NL:RVS:2023:1809 (cases zt-2019-rul-001/-002); een maandbedrag noemt de uitspraak niet.",
+   "standaardpremie": {
+    "waarde": "1609",
+    "artikel": "Wet op de zorgtoeslag art. 4 jo. Regeling vaststelling standaardpremie en bestuursrechtelijke premies 2019, art. 1",
+    "bron": "Regeling van de Minister voor Medische Zorg van 20 november 2018, kenmerk 1445257-183953-Z, Stcrt. 2018, 66728 (primaire tekst gelezen 2026-10-18); geconsolideerd BWBR0041579 (geldend van 01-01-2019; materieel uitgewerkt per 01-01-2021). Toelichting: geraamde gemiddelde nominale premie € 1.385 (berekend door de NZa) plus geraamd gemiddeld verplicht eigen risico € 224. 2020: € 1.642 (Stcrt. 2019, 64399)",
+    "url": "https://zoek.officielebekendmakingen.nl/stcrt-2018-66728.html",
+    "geldig_van": "2019-01-01",
+    "tekst": "De standaardpremie, bedoeld in artikel 1, onderdeel g, van de Wet op de zorgtoeslag, wordt voor het berekeningsjaar 2019 vastgesteld op € 1.609."
+   },
+   "wml_maandbedrag_januari": {
+    "waarde": "1615.80",
+    "artikel": "Wet minimumloon en minimumvakantiebijslag art. 8 lid 1 onder a, bedrag per 1 januari 2019 (in 2019 was het maandbedrag onderdeel a; sinds 01-01-2024 onderdeel b)",
+    "bron": "Regeling van de Minister van SZW van 15 oktober 2018, nr. 2018-0000161951, tot aanpassing wettelijk minimumloon per 1 januari 2019, Stcrt. 2018, 59237, art. 1 onder a (primaire tekst gelezen 2026-10-18). De geconsolideerde WML-tekst van 01-01-2019 (BWBR0002638) draagt het bedrag als redactionele noot bij art. 8 ('per 1 januari 2019: € 1.615,80'); de wetstechnische informatie noemt Stcrt. 2018, 59237 als ontstaansbron van die versie",
+    "url": "https://zoek.officielebekendmakingen.nl/stcrt-2018-59237.html",
+    "geldig_van": "2019-01-01",
+    "tekst": "a. € 1.615,80;"
+   },
+   "drempelinkomen_factor": {
+    "waarde": "108",
+    "eenheid": "procent",
+    "artikel": "Wet op de zorgtoeslag art. 1 lid 1 onder f",
+    "bron": "BWBR0018451, geldend van 01-01-2019 t/m 31-12-2019 (verbatim)",
+    "url": "https://wetten.overheid.nl/BWBR0018451/2019-01-01",
+    "tekst": "drempelinkomen: 108% van het twaalfvoud van het voor de maand januari van het berekeningsjaar geldende in artikel 8, eerste lid, onderdeel a, van de Wet minimumloon en minimumvakantiebijslag bedoelde bedrag per maand",
+    "opmerking": "108% × 12 × € 1.615,80 = € 20.940,768. Hoe de Dienst Toeslagen dit in 2019 'vastgesteld' heeft is niet gelezen (leaflet 2019 niet gevonden). De inkomensgrenzen uit de tekst: € 29.562 zonder en € 37.885 met toeslagpartner (laatste euro met recht, Awir art. 14 lid 4-5). De twee beschikkingen in ECLI:NL:RVS:2023:1809 (€ 1.367 bij € 27.946; € 2.314 bij € 13.314, met partner) komen met € 20.940,768, € 20.940 en € 20.941 op hetzelfde hele bedrag uit en beslissen DISCREPANCIES.md #1 voor 2019 dus niet."
+   },
+   "normpremie_percentage_drempel_zonder_partner": {
+    "waarde": "2.005",
+    "eenheid": "procent",
+    "artikel": "Wet op de zorgtoeslag art. 2 lid 3 (tekst 2019: 'voor een verzekerde zonder partner op 2,005% van het drempelinkomen')",
+    "bron": "BWBR0018451, geldend van 01-01-2019 t/m 31-12-2019 (verbatim). Vastgesteld bij Stb. 2018, 431 (besluit van 5 november 2018 tot wijziging van het Besluit percentages drempel- en toetsingsinkomen zorgtoeslag), art. I, rij 2019; nota van toelichting tabel 1: 2018 1,990%, 2019 'na vorige maatregel' 2,005%, maatregel '–', 'na huidige maatregel' 2,005% (het schema van +0,015 procentpunt per jaar, ongewijzigd); primaire tekst gelezen 2026-10-18",
+    "url": "https://wetten.overheid.nl/BWBR0018451/2019-01-01"
+   },
+   "normpremie_percentage_drempel_met_partner": {
+    "waarde": "4.315",
+    "eenheid": "procent",
+    "artikel": "Wet op de zorgtoeslag art. 2 lid 3 (tekst 2019: 'voor verzekerden met een partner vastgesteld op 4,315% van het drempelinkomen')",
+    "bron": "BWBR0018451, geldend van 01-01-2019 t/m 31-12-2019 (verbatim). Stb. 2018, 431, art. I, rij 2019; tabel 1: 2018 4,75%, 2019 'na vorige maatregel' 4,765%, maatregel −0,45 procentpunt (structureel, 'verlaging van de normpercentages voor meerpersoonshuishoudens met 0,45 procentpunt'), 'na huidige maatregel' 4,315%",
+    "url": "https://wetten.overheid.nl/BWBR0018451/2019-01-01"
+   },
+   "normpremie_percentage_boven_drempel": {
+    "waarde": "13.520",
+    "eenheid": "procent",
+    "artikel": "Wet op de zorgtoeslag art. 2 lid 3 (tekst 2019: 'vermeerderd met 13,520% van het toetsingsinkomen voor zover dat boven het drempelinkomen uitgaat', gelijk met en zonder partner)",
+    "bron": "BWBR0018451, geldend van 01-01-2019 t/m 31-12-2019 (verbatim); Stb. 2018, 431, art. I, rij 2019 (tabel 1: 2018 13,49%, 2019 13,52%, het schema van +0,03 procentpunt per jaar; maatregel '–')",
+    "url": "https://wetten.overheid.nl/BWBR0018451/2019-01-01"
+   },
+   "aandeel_partner_niet_verzekerd": {
+    "waarde": "50",
+    "eenheid": "procent",
+    "artikel": "Wet op de zorgtoeslag art. 2 lid 4",
+    "bron": "BWBR0018451, geldend van 01-01-2019 t/m 31-12-2019 (verbatim, zelfde tekst als 2020–2026). Gevolgd door lid 5 (oud), zie art2_lid5_oud",
+    "url": "https://wetten.overheid.nl/BWBR0018451/2019-01-01"
+   },
+   "heffingvrij_vermogen": {
+    "waarde": "30360",
+    "artikel": "Wet inkomstenbelasting 2001 art. 5.5 (tekst 2019); art. 5.2 lid 1 (grondslag sparen en beleggen = rendementsgrondslag op de peildatum voor zover boven het heffingvrije vermogen) en lid 2 (partners het gehele jaar: de gezamenlijke rendementsgrondslag voor zover boven het heffingvrije vermogen van de belastingplichtige en zijn partner)",
+    "bron": "BWBR0011353, geldend van 01-01-2019 t/m 31-12-2019 (verbatim gelezen 2026-10-18: 'Het heffingvrije vermogen bedraagt € 30.360.'). Nodig omdat Wzt art. 2a lid 1 (tekst 2019) op de grondslag sparen en beleggen rust; de encoding vraagt de rendementsgrondslag en trekt het heffingvrije vermogen af (éénmaal zonder partner, tweemaal met het hele jaar dezelfde partner). Effectieve grenzen 2019 op de rendementsgrondslag: € 114.776 / € 145.136. 2020: € 30.846",
+    "url": "https://wetten.overheid.nl/BWBR0011353/2019-01-01",
+    "tekst": "Het heffingvrije vermogen bedraagt € 30.360."
+   },
+   "vermogensgrens_zonder_partner": {
+    "waarde": "84416",
+    "artikel": "Wet op de zorgtoeslag art. 2a lid 1 (tekst 2019) (grondslag sparen en beleggen, art. 5.2 lid 1 Wet IB 2001, in het berekeningsjaar; vrijstelling art. 5.13 Wet IB 2001 telt niet)",
+    "bron": "BWBR0018451, geldend van 01-01-2019 t/m 31-12-2019 (verbatim). Regeling van de Minister voor Medische Zorg van 24 oktober 2018, kenmerk 1436592-183110-WJZ, Stcrt. 2018, 61205, art. I: '€ 83.415' telkens vervangen door '€ 84.416' (tabelcorrectiefactor 1,2%, Wzt art. 2a lid 2; primaire tekst gelezen 2026-10-18). 2020: € 85.767 (Stcrt. 2019, 61842)",
+    "url": "https://zoek.officielebekendmakingen.nl/stcrt-2018-61205.html",
+    "tekst": "In afwijking van artikel 7, derde lid, van de Algemene wet inkomensafhankelijke regelingen bestaat geen aanspraak op een zorgtoeslag indien de grondslag sparen en beleggen, bedoeld in artikel 5.2, eerste lid, van de Wet inkomstenbelasting 2001, van de belanghebbende in het berekeningsjaar meer bedraagt dan € 84.416, dan wel, ingeval de belanghebbende het gehele berekeningsjaar dezelfde partner heeft, de gezamenlijke grondslag sparen en beleggen, bedoeld in artikel 5.2, tweede lid, van de Wet inkomstenbelasting 2001, van de belanghebbende en zijn partner in het berekeningsjaar meer bedraagt dan € 84.416. Bij de bepaling van de grondslag, bedoeld in de vorige volzin, wordt geen rekening gehouden met de vrijstelling, bedoeld in artikel 5.13 van de Wet inkomstenbelasting 2001."
+   },
+   "vermogensgrens_met_partner": {
+    "waarde": "84416",
+    "artikel": "Wet op de zorgtoeslag art. 2a lid 1 (tekst 2019) (gezamenlijke grondslag sparen en beleggen, art. 5.2 lid 2 Wet IB 2001; alleen bij het gehele berekeningsjaar dezelfde partner; hetzelfde bedrag als zonder partner — het verschil zit in het tweemaal heffingvrije vermogen van de grondslag)",
+    "bron": "BWBR0018451, geldend van 01-01-2019 t/m 31-12-2019 (verbatim); Stcrt. 2018, 61205, art. I ('telkens')",
+    "url": "https://zoek.officielebekendmakingen.nl/stcrt-2018-61205.html"
+   },
+   "woonlandfactoren": {
+    "artikel": "Wet op de zorgtoeslag art. 3 lid 1 en 2 (tekst 2019) jo. Regeling zorgverzekering art. 6.3.1 lid 9 en bijlage 4",
+    "bron": "Regeling van de Minister voor Medische Zorg van 22 oktober 2018, kenmerk 1432459-182639, Stcrt. 2018, 60576, art. I (bijlage 4 Rzv voor 2019; in werking 01-01-2019; primaire tekst gelezen 2026-10-18); gecontroleerd tegen de geconsolideerde bijlage 4 (BWBR0018715, geldend van 01-01-2019 t/m 15-01-2019): alle 39 getallen gelijk. Toelichting: berekend door het CAK (advies 18 oktober 2018): de factoren van 2018 (basisjaar voor alle landen gelijkgetrokken naar 2015) geïndexeerd met de WHO-gegevens over de zorgkosten tot en met 2015; de toelichting drukt per land het basisjaar, de factor van het basisjaar en de indexfactor (Duitsland: 2014, 0,8372 × 1,04 = 0,8701). LET OP: het getal voor Duitsland (0,8701) is op 26-10-2019 met terugwerkende kracht tot 01-01-2019 opnieuw vastgesteld op 0,7827 (Stcrt. 2019, 58198, art. II: te hoog vastgesteld; het CAK restitueert te veel geheven verdragsbijdrage; 'geen effect op de hoogte van de zorgtoeslag', die niet ten nadele wordt herzien). Dit bestand draagt daarom het voor de zorgtoeslag gehanteerde, oorspronkelijk gepubliceerde getal 0,8701; zie CHANGES.md 2019-10-26. Niet vergeleken met de leaflet 2019 van de Dienst (niet gevonden)",
+    "url": "https://zoek.officielebekendmakingen.nl/stcrt-2018-60576.html",
+    "geldig_van": "2019-01-01",
+    "opmerking": "Landcodes ISO 3166-1 alpha-2, toegevoegd door het project; de regeling noemt alleen de landnaam (Macedonië). Oude indexeringsmethode: alleen Noorwegen 1,3729 boven 1 (Denemarken 0,9951, IJsland 0,9802, Liechtenstein 0,9720 eronder). Duitsland: 0,8701 gepubliceerd en voor de zorgtoeslag gehanteerd; 0,7827 voor de verdragsbijdrage met terugwerkende kracht (Stcrt. 2019, 58198 art. II).",
+    "landen": {
+     "BE": "0.7392",
+     "BA": "0.0672",
+     "BG": "0.0735",
+     "CY": "0.1363",
+     "DK": "0.9951",
+     "DE": "0.8701",
+     "EE": "0.2262",
+     "FI": "0.7161",
+     "FR": "0.8316",
+     "GR": "0.2490",
+     "HU": "0.1381",
+     "IE": "0.8667",
+     "IS": "0.9802",
+     "IT": "0.5470",
+     "CV": "0.0177",
+     "HR": "0.1674",
+     "LV": "0.0672",
+     "LI": "0.9720",
+     "LT": "0.2399",
+     "LU": "0.7358",
+     "MK": "0.0565",
+     "MT": "0.3574",
+     "MA": "0.0193",
+     "ME": "0.0821",
+     "NO": "1.3729",
+     "AT": "0.6632",
+     "PL": "0.1691",
+     "PT": "0.2616",
+     "RO": "0.0814",
+     "RS": "0.0714",
+     "SI": "0.3377",
+     "SK": "0.2405",
+     "ES": "0.4001",
+     "CZ": "0.2412",
+     "TN": "0.0292",
+     "TR": "0.0874",
+     "GB": "0.7741",
+     "SE": "0.8213",
+     "CH": "0.8000"
+    }
+   }
+  },
   "2020": {
    "jaar": 2020,
    "status": "draft",
@@ -889,6 +1035,39 @@ var PARAMETERS = {
   }
  },
  "awir": {
+  "2019": {
+   "jaar": 2019,
+   "status": "draft",
+   "geraadpleegd": "2026-10-18",
+   "vermogenstoets_algemeen": {
+    "artikel": "Awir art. 7 lid 3 (tekst 2019): geen bedrag; de toets is of over het berekeningsjaar voordeel uit sparen en beleggen in aanmerking wordt genomen (grondslag sparen en beleggen > 0, dus rendementsgrondslag boven het heffingvrije vermogen), de vrijstelling van art. 5.13 Wet IB 2001 weggedacht",
+    "bron": "BWBR0018472, geldend van 01-01-2019 (verbatim gelezen 2026-10-18; dezelfde tekst als 2020); lid 5 (tekst 2019): niet in Nederland belastbaar voordeel uit sparen en beleggen telt mee. Vervangen per 01-01-2021 door de rendementsgrondslag-toets met bedragen (Stb. 2020, 546, art. III)",
+    "url": "https://wetten.overheid.nl/BWBR0018472/2019-01-01",
+    "tekst": "Indien in een inkomensafhankelijke regeling de aanspraak op een tegemoetkoming mede afhankelijk is gesteld van het vermogen, bestaat geen aanspraak op een tegemoetkoming, indien bij de belanghebbende of, indien de belanghebbende het gehele berekeningsjaar dezelfde partner heeft, zijn partner over het berekeningsjaar voordeel uit sparen en beleggen als bedoeld in artikel 5.2 van de Wet inkomstenbelasting 2001 in aanmerking wordt genomen, dan wel in aanmerking zou worden genomen indien geen rekening wordt gehouden met de vrijstelling, bedoeld in artikel 5.13 van die wet.",
+    "opmerking": "Geldt alleen voor regelingen zonder eigen grens; niet voor de zorgtoeslag (Wzt art. 2a). Geen waarde: de encoding gebruikt dit niet."
+   },
+   "medebewoner_vrijstelling_onder_23": {
+    "waarde": "4885",
+    "artikel": "Awir art. 7 lid 6",
+    "bron": "BWBR0018472, geldend van 01-01-2019 (verbatim gelezen 2026-10-18); de wetstechnische informatie van de Awir noemt Stcrt. 2018, 69665 (Bijstellingsregeling directe belastingen 2019) als ontstaansbron van de versie 01-01-2019 (de regeling zelf niet gelezen); vervangen per 01-01-2020 door € 4.964 (Stcrt. 2019, 66707)",
+    "url": "https://wetten.overheid.nl/BWBR0018472/2019-01-01"
+   },
+   "afronding_tegemoetkoming": {
+    "waarde": "1",
+    "eenheid": "euro",
+    "artikel": "Awir art. 14 lid 4",
+    "bron": "BWBR0018472, geldend van 01-01-2019 (verbatim gelezen 2026-10-18); dezelfde tekst in 2020 t/m 2026",
+    "url": "https://wetten.overheid.nl/BWBR0018472/2019-01-01",
+    "tekst": "Het bedrag van de tegemoetkoming wordt rekenkundig afgerond op hele euro's."
+   },
+   "minimum_tegemoetkoming": {
+    "waarde": "24",
+    "artikel": "Awir art. 14 lid 5",
+    "bron": "BWBR0018472, geldend van 01-01-2019 (verbatim gelezen 2026-10-18)",
+    "url": "https://wetten.overheid.nl/BWBR0018472/2019-01-01",
+    "tekst": "Een tegemoetkoming wordt niet toegekend indien deze minder dan € 24 zou bedragen."
+   }
+  },
   "2020": {
    "jaar": 2020,
    "status": "draft",

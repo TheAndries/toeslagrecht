@@ -1,0 +1,17 @@
+id: zt-2019-syn-018
+toeslag: zorgtoeslag
+jaar: 2019
+bron:
+  type: synthetic
+  publicatie: "Door de operator geconstrueerd op 2026-10-18 uit de tekst van 2019 (Wzt 01-01-2019; Stcrt. 2018, 66728; Stcrt. 2018, 59237; Stb. 2018, 431). Geen publicatie van de Dienst Toeslagen voor 2019 gelezen: de leaflet Berekening zorgtoeslag 2019 is op 2026-10-18 niet gevonden (tg0821z90fd t/m z94fd: 404). Synthetic: een controle van de encoding tegen de tekst, geen verificatie (CASES.md)"
+  opgehaald: 2026-10-18
+verified: false
+invoer:
+  partner: true
+  toetsingsinkomen_aanvrager: "37885"
+  toetsingsinkomen_partner: "0"
+  partner_verzekerd: true
+  rendementsgrondslag: null
+verwacht:
+  tegemoetkoming: "24"
+opmerking: "Laatste euro met recht met toeslagpartner volgens de tekst: 2 × € 1.609 − (4,315% × € 20.940,768 + 13,52% × (€ 37.885 − € 20.940,768)) = € 23,546 → € 24 (Awir art. 14 lid 4-5)."

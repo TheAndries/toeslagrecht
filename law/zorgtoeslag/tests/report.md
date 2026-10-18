@@ -1,7 +1,67 @@
-# Zorgtoeslag — test report, generated 2026-10-14 by tools/build.py
+# Zorgtoeslag — test report, generated 2026-10-18 by tools/build.py
 
 Generated file; do not edit. Verified cases are tests (blocking); published and synthetic
 cases are checks (reported). Every failing check is a discrepancy in `DISCREPANCIES.md`.
+
+## zt-2019-rul-001 — PASS — check (ruling)
+
+Source: ABRvS 10 mei 2023, ECLI:NL:RVS:2023:1809 (zaaknr. 202202303/1/A2), r.o. 2: 'Bij het besluit van 6 november 2020, als gehandhaafd bij het besluit van 23 november 2020, heeft de Belastingdienst/Toeslagen de zorgtoeslag van [appellant] over 2019 definitief berekend en vastgesteld op € 1.367,00. Hierbij is uitgegaan van een gezamenlijk toetsingsinkomen van € 27.946,00.' R.o. 1: aanvrager en partner zijn toeslagpartners (Awir art. 3). Het hoger beroep (de eenmalige pensioenuitkering zou over meer jaren verdeeld moeten worden) is ongegrond verklaard; de definitieve berekening staat
+
+| field | expected | encoding | match |
+|---|---|---|---|
+| tegemoetkoming | 1367.00 | 1367.00 (exact 1367) | yes |
+
+Note: Eerste zaak uit de rechtspraak in het corpus. De uitspraak noemt alleen het gezamenlijke toetsingsinkomen (€ 27.946); de verdeling over beide partners doet voor Wzt art. 2 lid 2 niet ter zake, dus is het hele bedrag bij de aanvrager gezet. Dat de partner verzekerde was volgt niet met zoveel woorden uit de uitspraak, maar wel uit het bedrag: € 1.367 is 2 × € 1.609 − normpremie (€ 1.850,70) = € 1.367,30 → € 1.367 (Awir art. 14 lid 4); bij een niet-verzekerde partner zou het de helft zijn geweest. Vermogen noemt de uitspraak niet; de toeslag is toegekend, dus de vermogenstoets (art. 2a) is doorstaan. Met een op € 20.940 of € 20.941 afgerond drempelinkomen komt dezelfde € 1.367 uit: deze zaak beslist DISCREPANCIES.md #1 niet. Wordt 'verified' zodra een met naam genoemd mens (CASES.md) de invoer tegen de uitspraak heeft gelegd — ASKS.md 9.
+
+## zt-2019-rul-002 — PASS — check (ruling)
+
+Source: ABRvS 10 mei 2023, ECLI:NL:RVS:2023:1809 (zaaknr. 202202303/1/A2), r.o. 1: 'Bij besluit van 27 december 2018 heeft de Belastingdienst/Toeslagen aan [appellant] voorschotten zorgtoeslag voor 2019 toegekend ter hoogte van € 2.314,00. Het voorschot is berekend op basis van een geschat gezamenlijk toetsingsinkomen van € 13.314,00.' Een voorschot (Awir art. 16), geen definitieve berekening; dezelfde partners als zt-2019-rul-001
+
+| field | expected | encoding | match |
+|---|---|---|---|
+| tegemoetkoming | 2314.00 | 2314.00 (exact 2314) | yes |
+
+Note: Gezamenlijk toetsingsinkomen onder het drempelinkomen (€ 20.940,768): normpremie = 4,315% × drempelinkomen = € 903,59; 2 × € 1.609 − € 903,59 = € 2.314,41 → € 2.314 (Awir art. 14 lid 4) — het maximum met partner in 2019. Een voorschot op een geschat inkomen, door de Dienst zelf op 27-12-2018 berekend; het laat zien dat de voorschotberekening van de Dienst voor 2019 dezelfde formule volgde. Het verschil met zt-2019-rul-001 (€ 950 terugvordering, r.o. 2) is 2.314 − 1.367 = 947, niet 950: de uitspraak verklaart de € 3 niet (mogelijk een later herzien voorschot); hier niet als discrepantie gelogd omdat beide beschikkingsbedragen afzonderlijk kloppen met de tekst. Wordt 'verified' op dezelfde voet als rul-001 (ASKS.md 9).
+
+## zt-2019-syn-016 — PASS — check (synthetic)
+
+Source: Door de operator geconstrueerd op 2026-10-18 uit de tekst van 2019 (Wzt 01-01-2019; Stcrt. 2018, 66728; Stcrt. 2018, 59237; Stb. 2018, 431). Geen publicatie van de Dienst Toeslagen voor 2019 gelezen: de leaflet Berekening zorgtoeslag 2019 is op 2026-10-18 niet gevonden (tg0821z90fd t/m z94fd: 404). Synthetic: een controle van de encoding tegen de tekst, geen verificatie (CASES.md)
+
+| field | expected | encoding | match |
+|---|---|---|---|
+| tegemoetkoming | 24.00 | 24.00 (exact 24) | yes |
+
+Note: Laatste euro met recht zonder partner volgens de tekst: standaardpremie € 1.609 − (2,005% × € 20.940,768 + 13,52% × (€ 29.562 − € 20.940,768)) = € 23,547 → € 24 (Awir art. 14 lid 4-5). Wordt 'published' zodra een publicatie van de Dienst voor 2019 de grens noemt.
+
+## zt-2019-syn-017 — PASS — check (synthetic)
+
+Source: Door de operator geconstrueerd op 2026-10-18 uit de tekst van 2019 (Wzt 01-01-2019; Stcrt. 2018, 66728; Stcrt. 2018, 59237; Stb. 2018, 431). Geen publicatie van de Dienst Toeslagen voor 2019 gelezen: de leaflet Berekening zorgtoeslag 2019 is op 2026-10-18 niet gevonden (tg0821z90fd t/m z94fd: 404). Synthetic: een controle van de encoding tegen de tekst, geen verificatie (CASES.md)
+
+| field | expected | encoding | match |
+|---|---|---|---|
+| tegemoetkoming | 0.00 | 0.00 (exact 0) | yes |
+
+Note: Eén euro boven de grens: € 23,41 → € 23, niet toegekend (Awir art. 14 lid 5). Met een op € 20.941 afgerond drempelinkomen (DISCREPANCIES.md #1) zou het € 23,43 → € 23 blijven; de grens verschuift in 2019 niet door de afronding.
+
+## zt-2019-syn-018 — PASS — check (synthetic)
+
+Source: Door de operator geconstrueerd op 2026-10-18 uit de tekst van 2019 (Wzt 01-01-2019; Stcrt. 2018, 66728; Stcrt. 2018, 59237; Stb. 2018, 431). Geen publicatie van de Dienst Toeslagen voor 2019 gelezen: de leaflet Berekening zorgtoeslag 2019 is op 2026-10-18 niet gevonden (tg0821z90fd t/m z94fd: 404). Synthetic: een controle van de encoding tegen de tekst, geen verificatie (CASES.md)
+
+| field | expected | encoding | match |
+|---|---|---|---|
+| tegemoetkoming | 24.00 | 24.00 (exact 24) | yes |
+
+Note: Laatste euro met recht met toeslagpartner volgens de tekst: 2 × € 1.609 − (4,315% × € 20.940,768 + 13,52% × (€ 37.885 − € 20.940,768)) = € 23,546 → € 24 (Awir art. 14 lid 4-5).
+
+## zt-2019-syn-019 — PASS — check (synthetic)
+
+Source: Door de operator geconstrueerd op 2026-10-18 uit de tekst van 2019 (Wzt 01-01-2019; Stcrt. 2018, 66728; Stcrt. 2018, 59237; Stb. 2018, 431). Geen publicatie van de Dienst Toeslagen voor 2019 gelezen: de leaflet Berekening zorgtoeslag 2019 is op 2026-10-18 niet gevonden (tg0821z90fd t/m z94fd: 404). Synthetic: een controle van de encoding tegen de tekst, geen verificatie (CASES.md)
+
+| field | expected | encoding | match |
+|---|---|---|---|
+| tegemoetkoming | 0.00 | 0.00 (exact 0) | yes |
+
+Note: Eén euro boven de grens met toeslagpartner: € 23,41 → € 23, niet toegekend (Awir art. 14 lid 5). Met € 20.941 als drempelinkomen: € 23,43 → € 23; geen verschuiving.
 
 ## zt-2020-syn-008 — PASS — check (synthetic)
 
@@ -1944,8 +2004,8 @@ Note: Laatste rij van de tabel, op het genoemde inkomen zelf ('en meer' sluit he
 
 ---
 
-Browser encoding (`site/zorgtoeslag-regels.js`, node v22.22.0): 189 cases compared with the Python encoding, 189 identical, 0 different.
+Browser encoding (`site/zorgtoeslag-regels.js`, node v22.22.0): 195 cases compared with the Python encoding, 195 identical, 0 different.
 
 ---
 
-Cases run: 189, passed: 170, failed: 19, skipped: 0. Verified cases: 0. Blocking failures: 0. Browser/Python differences: 0 (blocking: the two encodings must agree).
+Cases run: 195, passed: 176, failed: 19, skipped: 0. Verified cases: 0. Blocking failures: 0. Browser/Python differences: 0 (blocking: the two encodings must agree).
