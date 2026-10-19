@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Componenten — toeslagrecht</title>
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="../static/tokens.css">
+<link rel="stylesheet" href="../static/site.css">
+</head>
+<body>
+<a class="skip" href="#inhoud">Naar de inhoud</a>
+
+<!-- 1 Header and menu -->
+<header class="kop">
+  <div class="kop-in">
+    <a class="woordmerk" href="../index.html">toeslagrecht</a>
+    <nav aria-label="Menu"><ul class="menu">
+      <li><a href="../index.html" aria-current="page">Narekenen</a></li>
+      <li><a href="../dossier/index.html">Dossier</a></li>
+      <li><a href="../wet/index.html">Wet</a></li>
+      <li><a href="../over/index.html">Over</a></li>
+    </ul></nav>
+  </div>
+</header>
+
+<main id="inhoud" class="pagina">
+<p class="klein">Specimen: de vijftien componenten van <code>site/static/site.css</code>, elk in elke toestand. Niet gelinkt vanaf de site. De wetszinnen hieronder komen uit <code>law/</code>.</p>
+
+<!-- 2 Question title -->
+<h1 class="vraag">Hoeveel zorgtoeslag krijg ik in 2026?</h1>
+<p class="lead">Vul drie dingen in. U ziet het bedrag, en stap voor stap hoe de wet daar komt, met bij elke stap het artikel.</p>
+
+<!-- 7 Privacy line -->
+<p class="privacy"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="10" width="14" height="10" rx="1"></rect><path d="M8 10V7a4 4 0 0 1 8 0v3"></path></svg>Niets van wat u invult verlaat uw telefoon of computer.</p>
+
+<h2>3 · Jaarkeuze</h2>
+<fieldset>
+  <legend>Welk jaar?</legend>
+  <div class="keuze">
+    <label class="keuze-vak gekozen"><input type="radio" name="jaar" value="2026" checked> 2026</label>
+    <label class="keuze-vak"><input type="radio" name="jaar" value="2025"> 2025</label>
+    <label class="keuze-vak"><input type="radio" name="jaar" value="2024"> 2024</label>
+    <label class="keuze-vak"><input type="radio" name="jaar" value="2023"> 2023</label>
+  </div>
+</fieldset></div>
+
+<h2>4 · Genummerd veld — leeg</h2>
+<div class="veld">
+  <label class="veld-label" for="v-leeg"><span class="veld-nr" aria-hidden="true">1</span>Uw toetsingsinkomen in 2026</label>
+  <p class="hulp" id="h-leeg">Uw inkomen zoals de Belastingdienst het voor dat jaar vaststelt, in hele euro's. Bijvoorbeeld 28000.</p>
+  <div class="euro"><span class="euro-teken" aria-hidden="true">€</span><input class="invoer" id="v-leeg" type="text" inputmode="numeric" autocomplete="off" aria-describedby="h-leeg"></div>
+</div>
+
+<h2>4 · Genummerd veld — ingevuld</h2>
+<div class="veld">
+  <label class="veld-label" for="v-vol"><span class="veld-nr" aria-hidden="true">1</span>Uw toetsingsinkomen in 2026</label>
+  <p class="hulp" id="h-vol">Uw inkomen zoals de Belastingdienst het voor dat jaar vaststelt, in hele euro's. Bijvoorbeeld 28000.</p>
+  <div class="euro"><span class="euro-teken" aria-hidden="true">€</span><input class="invoer" id="v-vol" type="text" inputmode="numeric" autocomplete="off" aria-describedby="h-vol" value="19000"></div>
+</div>
+
+<h2>4 · Genummerd veld — met focus</h2>
+<div class="veld">
+  <label class="veld-label" for="v-focus"><span class="veld-nr" aria-hidden="true">1</span>Uw toetsingsinkomen in 2026</label>
+  <p class="hulp" id="h-focus">Uw inkomen zoals de Belastingdienst het voor dat jaar vaststelt, in hele euro's. Bijvoorbeeld 28000.</p>
+  <div class="euro"><span class="euro-teken" aria-hidden="true">€</span><input class="invoer" id="v-focus" type="text" inputmode="numeric" autocomplete="off" aria-describedby="h-focus" autofocus></div>
+</div>
+
+<h2>4 + 14 · Genummerd veld — met fout</h2>
+<div class="veld in-fout">
+  <label class="veld-label" for="v-fout"><span class="veld-nr" aria-hidden="true">1</span>Uw toetsingsinkomen in 2026</label>
+  <p class="hulp" id="h-fout">Uw inkomen zoals de Belastingdienst het voor dat jaar vaststelt, in hele euro's. Bijvoorbeeld 28000.</p>
+  <p class="fout" id="f-fout">Vul een bedrag in, bijvoorbeeld 28000.</p>
+  <div class="euro"><span class="euro-teken" aria-hidden="true">€</span><input class="invoer" id="v-fout" type="text" inputmode="numeric" autocomplete="off" aria-describedby="h-fout f-fout" aria-invalid="true" value="abc"></div>
+</div>
+
+<h2>5 · Ja/nee-keuze — niets gekozen</h2>
+<div class="veld"><fieldset>
+  <legend class="veld-label"><span class="veld-nr" aria-hidden="true">2</span>Hebt u een toeslagpartner?</legend>
+  <p class="hulp">Meestal degene met wie u getrouwd bent, een geregistreerd partnerschap hebt, of samen een kind of een koophuis hebt.</p>
+  <div class="keuze">
+    <label class="keuze-vak"><input type="radio" name="partner-1" value="ja"> Ja</label>
+    <label class="keuze-vak"><input type="radio" name="partner-1" value="nee"> Nee</label>
+  </div>
+</fieldset></div>
+
+<h2>5 · Ja/nee-keuze — gekozen</h2>
+<div class="veld"><fieldset>
+  <legend class="veld-label"><span class="veld-nr" aria-hidden="true">2</span>Hebt u een toeslagpartner?</legend>
+  <p class="hulp">Meestal degene met wie u getrouwd bent, een geregistreerd partnerschap hebt, of samen een kind of een koophuis hebt.</p>
+  <div class="keuze">
+    <label class="keuze-vak"><input type="radio" name="partner-2" value="ja"> Ja</label>
+    <label class="keuze-vak gekozen"><input type="radio" name="partner-2" value="nee" checked> Nee</label>
+  </div>
+</fieldset></div>
+
+<h2>5 + 14 · Ja/nee-keuze — met fout</h2>
+<div class="veld in-fout"><fieldset aria-describedby="f-partner">
+  <legend class="veld-label"><span class="veld-nr" aria-hidden="true">2</span>Hebt u een toeslagpartner?</legend>
+  <p class="hulp">Meestal degene met wie u getrouwd bent, een geregistreerd partnerschap hebt, of samen een kind of een koophuis hebt.</p>
+  <p class="fout" id="f-partner">Kies Ja of Nee.</p>
+  <div class="keuze">
+    <label class="keuze-vak"><input type="radio" name="partner-3" value="ja" aria-invalid="true"> Ja</label>
+    <label class="keuze-vak"><input type="radio" name="partner-3" value="nee" aria-invalid="true"> Nee</label>
+  </div>
+</fieldset></div>
+
+<h2>6 · Knop</h2>
+<p class="privacy"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="10" width="14" height="10" rx="1"></rect><path d="M8 10V7a4 4 0 0 1 8 0v3"></path></svg>Niets van wat u invult verlaat uw telefoon of computer.</p>
+<p class="knop-rij"><button type="button" class="knop">Bereken mijn zorgtoeslag</button></p>
+
+<h2>8 · Bedrag, 11 · Statuswoord, 9 · Stap, 10 · Kantlijn</h2>
+<section class="uitkomst" aria-live="polite">
+  <p class="bedrag-intro">Naar de letter van de wet krijgt u in 2026</p>
+  <p class="bedrag">€ 1.858 <span class="per-jaar">per jaar</span></p>
+  <p class="eerlijk">Dit is wat de wet zegt voor wat u invulde. Het is geen advies en geen aanvraag; aanvragen doet u op <a href="https://www.toeslagen.nl">toeslagen.nl</a>.</p>
+  <p class="statusregel">Alle regels in deze berekening: <span class="status">draft</span>.</p>
+  <ol class="stappen">
+    <li class="stap">
+      <p class="stap-zin"><span class="stap-nr" aria-hidden="true">1</span><span>Het drempelinkomen: 108% van twaalf keer het minimumloon per maand van januari.</span></p>
+      <p class="kantlijn"><a href="../dossier/zorgtoeslag/zt-2026-art1-1f/index.html">Wzt art. 1 lid 1 onder f (BWBR0018451, geldend van 01-01-2026); WML art. 8 lid 1 onder b</a> · <span class="status">draft</span><span class="rekensom">108% × 12 × 2294,4 = 29735,424</span></p>
+    </li>
+    <li class="stap">
+      <p class="stap-zin"><span class="stap-nr" aria-hidden="true">2</span><span>De normpremie: wat u volgens de wet zelf aan premie kunt dragen.</span></p>
+      <p class="kantlijn"><a href="../dossier/zorgtoeslag/zt-2026-art2-2/index.html">Wzt art. 2 lid 2 en 3 (BWBR0018451, geldend van 01-01-2026)</a> · <span class="status">draft</span><span class="rekensom">1.912% × 29735,424 + 13.730% × max(0, 19000 − 29735,424) = 568,541 + 0</span></p>
+    </li>
+    <li class="stap">
+      <p class="stap-zin"><span class="stap-nr" aria-hidden="true">3</span><span>De standaardpremie min de normpremie.</span></p>
+      <p class="kantlijn"><a href="../dossier/zorgtoeslag/zt-2026-art2-1/index.html">Wzt art. 2 lid 1 (BWBR0018451, geldend van 01-01-2026); Wet op de zorgtoeslag art. 4 jo. Regeling vaststelling standaardpremie en bestuursrechtelijke premies 2026, art. 1</a> · <span class="status">draft</span><span class="rekensom">2119 − 568,541</span></p>
+    </li>
+  </ol>
+  <p class="slot klein">Klik op een artikel voor de wettekst, de versies per jaar en de voorbeelden die de regel testen.</p>
+</section>
+
+<h2>12 · Citaatblok</h2>
+<blockquote class="citaat" cite="https://wetten.overheid.nl/BWBR0018472/2026-01-01" id="art-14-4">
+  <p>Het bedrag van de tegemoetkoming wordt rekenkundig afgerond op hele euro's.</p>
+  <footer>Awir art. 14 lid 4 · 2026 · <span class="status">draft</span></footer>
+</blockquote>
+<p><strong>In gewoon Nederlands:</strong> Het jaarbedrag van uw toeslag wordt afgerond op hele euro's, op de gewone manier: vijftig cent of meer gaat omhoog.</p>
+
+<h2>13 · Inhoudslijst</h2>
+<ul class="inhoud">
+  <li><a href="../dossier/zorgtoeslag/zt-2026-art1-1f/index.html">drempelinkomen</a><span class="noot">Wzt art. 1 lid 1 onder f · <span class="status">draft</span></span></li>
+  <li><a href="../dossier/zorgtoeslag/zt-2026-art2-2/index.html">normpremie</a><span class="noot">Wzt art. 2 lid 2 en 3 · <span class="status">draft</span></span></li>
+  <li><a href="../dossier/zorgtoeslag/zt-2026-art2-1/index.html">aanspraak</a><span class="noot">Wzt art. 2 lid 1 · <span class="status">draft</span></span></li>
+</ul>
+
+<h2>Lopende tekst en koppen uit het dossier</h2>
+<div class="prose">
+<p>Een alinea in de stem van de site, met een <a href="#">link in het groen</a> en een getal: <span class="getal">€ 1.234</span>. Een wetstekst staat in de serif: <span class="wet">"voor zover dat toetsingsinkomen het drempelinkomen te boven gaat"</span>.</p>
+<h3>Een tabel</h3>
+<table><thead><tr><th>Jaar</th><th>Standaardpremie</th><th>Bron</th></tr></thead>
+<tbody><tr><td data-h="Jaar">2026</td><td data-h="Standaardpremie">€ 2.119</td><td data-h="Bron">Stcrt. 2025, 40022</td></tr>
+<tr><td data-h="Jaar">2025</td><td data-h="Standaardpremie">€ 2.112</td><td data-h="Bron">Stcrt. 2024, 38887</td></tr></tbody></table>
+</div>
+</main>
+
+<!-- 15 Footer -->
+<footer class="voet">
+  <div class="pagina">
+    <p>toeslagrecht · de toeslagenwet als rekenregels die u zelf kunt nalopen</p>
+    <p>Elke regel heeft de status <span class="status">draft</span>: door niemand met vakkennis nagelezen.</p>
+    <p class="voet-links"><a href="../dossier/index.html">Dossier</a> · <a href="../betwisten/index.html">Iets betwisten</a> · <a href="../insturen/index.html">Een beschikking insturen</a> · <a href="../over/index.html">Over</a> · <a href="https://github.com/TheAndries/toeslagrecht">Bron</a> (MIT / CC BY-SA 4.0)</p>
+  </div>
+</footer>
+</body>
+</html>

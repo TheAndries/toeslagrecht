@@ -1,0 +1,207 @@
+/* toeslagrecht — page and component styles. Every colour, size and spacing is a token from
+   tokens.css; this file names none of its own (site/DESIGN-amendment.md). Licence: MIT (LICENSE). */
+
+/* ---- fonts: self-hosted, subset, OFL (site/fonts/) ---- */
+@font-face { font-family: 'Source Sans 3'; font-style: normal; font-weight: 400; font-display: swap;
+  src: url('../fonts/SourceSans3-Regular.woff2') format('woff2'); }
+@font-face { font-family: 'Source Sans 3'; font-style: normal; font-weight: 600; font-display: swap;
+  src: url('../fonts/SourceSans3-Semibold.woff2') format('woff2'); }
+@font-face { font-family: 'Source Serif 4'; font-style: normal; font-weight: 400; font-display: swap;
+  src: url('../fonts/SourceSerif4-Regular.woff2') format('woff2'); }
+@font-face { font-family: 'Source Serif 4'; font-style: italic; font-weight: 400; font-display: swap;
+  src: url('../fonts/SourceSerif4-It.woff2') format('woff2'); }
+@font-face { font-family: 'Source Serif 4'; font-style: normal; font-weight: 600; font-display: swap;
+  src: url('../fonts/SourceSerif4-Semibold.woff2') format('woff2'); }
+
+/* ---- base ---- */
+*, *::before, *::after { box-sizing: border-box; }
+html { font-family: var(--sans); -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+body { margin: 0; background: var(--paper); color: var(--ink); font-size: var(--size-3);
+  line-height: var(--leading); hyphens: manual; overflow-wrap: break-word; }
+@media (max-width: 720px) { body { hyphens: auto; } }
+.pagina { max-width: var(--page); margin: 0 auto; padding: 0 var(--gutter); }
+main { display: block; padding: var(--s-5) 0 var(--s-4); }
+a { color: var(--green); text-decoration: underline; text-underline-offset: var(--underline-offset); }
+a:hover { color: var(--green-ink); }
+:focus-visible { outline: var(--outline) solid var(--focus); outline-offset: var(--outline-offset); }
+p, ul, ol, dl { margin: 0 0 var(--s-2); max-width: var(--measure); }
+h1 { font-size: var(--size-1); line-height: var(--leading-1); font-weight: 600; margin: 0 0 var(--s-2);
+  letter-spacing: -0.015em; overflow-wrap: anywhere; }
+h2 { font-size: var(--size-2); line-height: var(--leading-2); font-weight: 600; margin: var(--s-5) 0 var(--s-2); }
+h3 { font-size: var(--size-3); line-height: var(--leading-2); font-weight: 600; margin: var(--s-4) 0 var(--s-1); }
+h1 + p, h2 + p, h3 + p { margin-top: 0; }
+strong { font-weight: 600; }
+.wet { font-family: var(--serif); }
+.getal { font-variant-numeric: tabular-nums; }
+.klein { font-size: var(--size-4); line-height: var(--leading-4); color: var(--muted); }
+code, pre { font-family: var(--mono); font-size: 0.95em; overflow-wrap: anywhere; }
+pre { white-space: pre-wrap; margin: 0 0 var(--s-2); }
+hr { border: 0; border-top: var(--hairline) solid var(--rule); margin: var(--s-4) 0; }
+[hidden] { display: none !important; }
+.skip { position: absolute; left: -999em; top: 0; }
+.skip:focus { left: var(--gutter); top: var(--s-1); background: var(--paper); padding: var(--s-1) var(--s-2);
+  z-index: 1; color: var(--ink); }
+.visueel-verborgen { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0);
+  white-space: nowrap; }
+
+/* ---- 1 header and menu ---- */
+.kop { border-bottom: var(--hairline) solid var(--rule); }
+.kop-in { max-width: var(--page); margin: 0 auto; padding: var(--s-1) var(--gutter);
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0 var(--s-3); }
+.woordmerk { font-weight: 600; font-size: var(--size-2); color: var(--ink); text-decoration: none;
+  min-height: var(--target); display: inline-flex; align-items: center; letter-spacing: -0.01em; }
+.woordmerk:hover { color: var(--ink); text-decoration: underline; }
+.menu { display: flex; flex-wrap: wrap; gap: 0 var(--s-3); margin: 0; padding: 0; list-style: none; max-width: none; }
+.menu a { display: inline-flex; align-items: center; min-height: var(--target); color: var(--ink);
+  text-decoration: none; border-bottom: var(--border) solid transparent; }
+.menu a:hover { text-decoration: underline; color: var(--ink); }
+.menu a[aria-current="page"] { font-weight: 600; border-bottom-color: var(--green); }
+@media (max-width: 720px) { .menu { flex-basis: 100%; gap: 0 var(--s-2); } }
+
+/* ---- 2 question title and lead ---- */
+.vraag { margin-bottom: var(--s-2); }
+.lead { color: var(--ink-2); margin-bottom: var(--s-2); }
+
+/* ---- 7 privacy line ---- */
+.privacy { display: flex; gap: var(--s-1); align-items: flex-start; font-size: var(--size-4);
+  line-height: var(--leading-4); color: var(--muted); margin: 0 0 var(--s-2); }
+.privacy svg { width: var(--icon); height: var(--icon); flex: none; margin-top: 0.2em; }
+
+/* ---- 3 year choice, 5 yes/no choice ---- */
+fieldset { border: 0; margin: 0; padding: 0; min-width: 0; }
+legend { padding: 0; font-weight: 600; font-size: var(--size-2); line-height: var(--leading-2);
+  margin: 0 0 var(--s-1); max-width: var(--measure); }
+.keuze { display: flex; flex-wrap: wrap; gap: var(--s-1); margin: 0; padding: 0; list-style: none; max-width: none; }
+.keuze-vak { display: inline-flex; align-items: center; gap: var(--s-1); min-height: var(--target);
+  padding: 0 var(--s-2); border: var(--hairline) solid var(--muted); border-radius: var(--radius);
+  cursor: pointer; font-variant-numeric: tabular-nums; margin: 0; }
+.keuze-vak input { margin: 0; width: 1.1em; height: 1.1em; accent-color: var(--green); flex: none; cursor: pointer; }
+.keuze-vak.gekozen, .keuze-vak:has(input:checked) { border: var(--border) solid var(--green);
+  background: var(--green-paper); font-weight: 600; }
+.keuze-vak.gekozen input, .keuze-vak:has(input:checked) input { outline-color: var(--focus); }
+
+/* ---- 4 numbered field ---- */
+.veld { border-top: var(--hairline) solid var(--rule); padding-top: var(--s-3); margin-top: var(--s-3); }
+.veld-label, .veld > fieldset > legend { display: block; font-weight: 600; font-size: var(--size-2); line-height: var(--leading-2);
+  margin: 0 0 var(--s-1); max-width: var(--measure); }
+.veld-nr { color: var(--green); margin-right: var(--s-1); font-variant-numeric: tabular-nums; }
+.hulp { font-size: var(--size-4); line-height: var(--leading-4); color: var(--muted); margin: 0 0 var(--s-1); }
+.euro { display: flex; align-items: center; gap: var(--s-1); max-width: var(--input-max); }
+.euro-teken { color: var(--muted); flex: none; }
+.invoer { font: inherit; color: var(--ink); background: var(--paper); border: var(--hairline) solid var(--ink);
+  border-radius: var(--radius); min-height: var(--target); padding: 0 var(--s-2); width: 100%; min-width: 0;
+  font-variant-numeric: tabular-nums; }
+select.invoer { max-width: var(--input-max); }
+.in-fout .invoer { border: var(--border) solid var(--error); }
+
+/* ---- 14 error message ---- */
+.fout { color: var(--error); font-size: var(--size-4); line-height: var(--leading-4); font-weight: 600;
+  margin: var(--s-1) 0 0; }
+
+/* the rare situations fold under the three fields; the marker is the one arrow the brief allows */
+.meer { border-top: var(--hairline) solid var(--rule); padding-top: var(--s-2); margin-top: var(--s-3); }
+.meer > summary { font-weight: 600; font-size: var(--size-2); line-height: var(--leading-2); cursor: pointer;
+  min-height: var(--target); display: flex; align-items: center; gap: var(--s-1); list-style: none; }
+.meer > summary::-webkit-details-marker { display: none; }
+.meer > summary::before { content: "\25B8"; color: var(--green); flex: none; width: 1em; }
+.meer[open] > summary::before { content: "\25BE"; }
+.meer .veld:first-of-type { border-top: 0; padding-top: var(--s-1); margin-top: 0; }
+
+/* ---- 6 primary button ---- */
+.knop-rij { margin: var(--s-4) 0 0; }
+.knop { font: inherit; font-weight: 600; font-size: var(--size-3); color: var(--paper); background: var(--green);
+  border: 0; border-radius: var(--radius); min-height: var(--target); padding: 0 var(--pad-knop); cursor: pointer; }
+.knop:hover { background: var(--green-ink); }
+.nojs { margin-top: var(--s-2); font-weight: 600; }
+
+/* ---- 8 amount ---- */
+.uitkomst { border-top: var(--border) solid var(--rule-strong); margin-top: var(--s-5); padding-top: var(--s-4); }
+.uitkomst:focus { outline: none; }
+.bedrag-intro { color: var(--ink-2); margin: 0; }
+.bedrag { font-size: var(--size-1); line-height: var(--leading-1); font-weight: 600;
+  font-variant-numeric: tabular-nums; margin: var(--s-1) 0 var(--s-2); letter-spacing: -0.02em; max-width: none; }
+.bedrag .per-jaar { font-size: var(--size-2); font-weight: 400; color: var(--muted); letter-spacing: 0; }
+.eerlijk { margin: 0 0 var(--s-2); }
+
+/* ---- 11 status word ---- */
+.status { font-family: var(--sans); font-variant-caps: small-caps; letter-spacing: var(--tracking-caps);
+  font-size: var(--size-4); color: var(--ink); font-style: normal; font-weight: 400; }
+.statusregel { font-size: var(--size-4); line-height: var(--leading-4); color: var(--muted); margin: 0 0 var(--s-2); }
+
+/* ---- 9 step row, 10 margin note ---- */
+.stappen { list-style: none; margin: var(--s-4) 0 0; padding: 0; max-width: none;
+  border-bottom: var(--hairline) solid var(--rule); }
+.stap { border-top: var(--hairline) solid var(--rule); padding: var(--s-3) 0;
+  display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 2fr); gap: var(--s-3); }
+.stap-zin { margin: 0; display: flex; gap: var(--s-2); max-width: none; }
+.stap-nr { color: var(--green); font-weight: 600; flex: none; font-variant-numeric: tabular-nums; }
+.kantlijn { font-family: var(--serif); font-size: var(--size-4); line-height: var(--leading-4); color: var(--ink-2);
+  margin: 0; max-width: none; }
+.kantlijn .rekensom { display: block; font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
+.kantlijn .status { color: var(--ink); }
+@media (max-width: 720px) {
+  .stap { display: block; }
+  .kantlijn { margin: var(--s-2) 0 0 var(--s-3); padding-top: var(--s-1); border-top: var(--hairline) solid var(--rule); }
+}
+.slot { margin-top: var(--s-3); }
+
+/* ---- 12 citation block ---- */
+.citaat { margin: var(--s-3) 0; padding: var(--s-3); background: var(--paper-2);
+  border: var(--hairline) solid var(--rule); border-left: var(--accent-bar) solid var(--green);
+  font-family: var(--serif); font-size: var(--size-3); line-height: var(--leading); max-width: none; }
+.citaat p { max-width: none; }
+.citaat p:last-of-type { margin-bottom: 0; }
+.citaat footer { font-family: var(--sans); font-size: var(--size-4); line-height: var(--leading-4);
+  color: var(--muted); margin-top: var(--s-2); }
+.citaat footer .status { color: var(--ink); }
+
+/* ---- 13 contents list ---- */
+.inhoud { list-style: none; margin: var(--s-2) 0 var(--s-3); padding: 0; max-width: none;
+  border-bottom: var(--hairline) solid var(--rule); }
+.inhoud li { border-top: var(--hairline) solid var(--rule); display: flex; flex-wrap: wrap;
+  justify-content: space-between; align-items: center; gap: 0 var(--s-3); padding: var(--s-1) 0; min-height: var(--target); }
+.inhoud a { color: var(--ink); text-decoration: none; display: inline-flex; align-items: center; min-height: var(--target); }
+.inhoud a:hover { text-decoration: underline; }
+.inhoud .noot { font-size: var(--size-4); line-height: var(--leading-4); color: var(--muted); text-align: right;
+  margin-left: auto; }
+
+/* ---- rendered markdown (the dossier) ---- */
+.prose ul, .prose ol { padding-left: var(--s-3); }
+.prose li { margin: 0 0 var(--s-1); }
+.prose blockquote { margin: var(--s-2) 0; padding-left: var(--s-2); border-left: var(--accent-bar) solid var(--rule); color: var(--ink-2); }
+.prose table { border-collapse: collapse; width: 100%; font-size: var(--size-4); line-height: var(--leading-4);
+  margin: var(--s-2) 0 var(--s-3); }
+.prose th, .prose td { text-align: left; vertical-align: top; padding: var(--s-1) var(--s-2) var(--s-1) 0;
+  border-bottom: var(--hairline) solid var(--rule); }
+.prose th { font-weight: 600; }
+.prose .en { font-style: normal; }
+@media (max-width: 720px) {
+  .prose table, .prose thead, .prose tbody, .prose tr, .prose td, .prose th { display: block; }
+  .prose thead { position: absolute; left: -999em; }
+  .prose tr { border-bottom: var(--hairline) solid var(--rule); padding: var(--s-1) 0; }
+  .prose td { border: 0; padding: var(--s-1) 0 0; }
+  .prose td::before { content: attr(data-h); display: block; font-weight: 600; color: var(--muted); }
+}
+dl.feiten { display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: var(--s-1) var(--s-3); max-width: none; }
+dl.feiten dt { font-weight: 600; }
+dl.feiten dd { margin: 0; overflow-wrap: anywhere; }
+@media (max-width: 720px) { dl.feiten { grid-template-columns: minmax(0, 1fr); gap: 0; } dl.feiten dd { margin-bottom: var(--s-1); } }
+.tekstvak { font: inherit; font-family: var(--mono); font-size: var(--size-4); width: 100%; min-height: 12em;
+  border: var(--hairline) solid var(--ink); border-radius: var(--radius); padding: var(--s-2); color: var(--ink); background: var(--paper); }
+
+/* ---- 15 footer ---- */
+.voet { border-top: var(--hairline) solid var(--rule); margin-top: var(--s-5); padding: var(--s-3) 0 var(--s-5);
+  font-size: var(--size-4); line-height: var(--leading-4); color: var(--muted); }
+.voet p { margin: 0 0 var(--s-1); max-width: none; }
+.voet-links a { display: inline-flex; align-items: center; min-height: var(--target); }
+
+/* ---- print: the result with the law beside it, black on white ---- */
+@media print {
+  .kop, .voet, .skip, .knop-rij, .privacy, .nojs, .meer > summary::before { display: none; }
+  body { color: var(--ink); background: var(--paper); font-size: 11pt; }
+  .stap { display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 2fr); }
+  .kantlijn { margin: 0; padding: 0; border: 0; }
+  a { color: var(--ink); text-decoration: none; }
+  .uitkomst, .stap { break-inside: avoid; }
+  .citaat { background: var(--paper); }
+}
