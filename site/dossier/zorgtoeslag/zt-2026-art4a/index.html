@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>standaardpremie voor verdragsgerechtigden: de woonlandfactor — toeslagrecht</title>
+<meta name="description" content="Regel zt-2026-art4a: standaardpremie voor verdragsgerechtigden: de woonlandfactor, met het artikel, de status en de voorbeelden.">
+<link rel="stylesheet" href="../../../static/tokens.css">
+<link rel="stylesheet" href="../../../static/site.css">
+</head>
+<body>
+<a class="skip" href="#inhoud">Naar de inhoud</a>
+<header class="kop">
+  <div class="kop-in">
+    <a class="woordmerk" href="../../../index.html">toeslagrecht</a>
+    <nav aria-label="Menu"><ul class="menu"><li><a href="../../../index.html">Narekenen</a></li><li><a href="../../../dossier/index.html" aria-current="page">Dossier</a></li><li><a href="../../../wet/index.html">Wet</a></li><li><a href="../../../over/index.html">Over</a></li></ul></nav>
+  </div>
+</header>
+<main id="inhoud" class="pagina">
+<h1>standaardpremie voor verdragsgerechtigden: de woonlandfactor</h1>
+<p class="statusregel">Status: <span class="status">draft</span> · regel <code>zt-2026-art4a</code></p>
+<blockquote class="citaat" id="artikel"><p>Wzt art. 4a lid 1–4 (BWBR0018451, geldend van 01-01-2026; dezelfde tekst in de versie van 01-01-2025). In 2024 en 2023 was dit <strong>art. 3, lid 1–3</strong>, zonder het huidige lid 3: dat lid (verzekerde aanvrager met een verdragsgerechtigde partner) is per 06-11-2024 ingevoegd (Stb. 2024, 291, art. XIX onder C); voor 2024 en 2023 geeft de encoding in dat geval <code>undetermined</code>. Het verhoudingsgetal per land: Regeling zorgverzekering art. 6.3.1 lid 9 en bijlage 4 (BWBR0018715, versies 01-01-2024, 01-01-2025 en 01-01-2026; vastgesteld bij Stcrt. 2023, 29907, Stcrt. 2024, 35698 en Stcrt. 2025, 38064; 2023: Stcrt. 2022, 29339, voor vier landen gerectificeerd bij Stcrt. 2022, 32002 vóór de inwerkingtreding), in <code>parameters/&lt;jaar&gt;.yaml</code> onder <code>woonlandfactoren</code>. Op 2026-10-07 gemist: de vorige run las art. 1–5 en zocht een art. 2a; art. 4a staat tussen art. 4 en 5.</p><footer>Het artikel zoals de regel het aanhaalt · <span class="status">draft</span></footer></blockquote>
+<p><strong>In gewoon Nederlands:</strong> Woont u buiten Nederland en bent u via het CAK verzekerd voor zorg ten laste van Nederland (een "verdragsgerechtigde", Zvw art. 69), dan telt voor u niet de gewone standaardpremie, maar de standaardpremie maal de woonlandfactor van uw land: de verhouding tussen wat zorg daar gemiddeld kost en wat zij in Nederland kost. Voor uw partner geldt hetzelfde, behalve als uw partner gewoon in Nederland verzekerd is (lid 4). Bent u zelf in Nederland verzekerd en is uw partner verdragsgerechtigd, dan geldt de woonlandfactor alleen voor de standaardpremie van uw partner (lid 3).</p>
+<h2>De berekening</h2><p><code>standaardpremies(...)</code>: standaardpremie van de aanvrager × woonlandfactor als de aanvrager verdragsgerechtigd is (lid 1); van de partner × woonlandfactor als de aanvrager verdragsgerechtigd is en de partner geen Zvw-verzekerde (lid 4), of als de partner zelf verdragsgerechtigd is (lid 3). De som gaat <code>zt-2026-art2-1</code> in. Invoer: <code>aanvrager_verdragsgerechtigd</code>, <code>partner_verdragsgerechtigd</code>, <code>partner_verzekerd</code>, <code>woonland</code>.</p>
+<h2>Waar de wet ruimte laat</h2><p>Wie verdragsgerechtigd is (Zvw art. 69) codeert de encoding niet; invoer. De rekenregel van de Dienst Toeslagen (Berekening zorgtoeslag 2026, stap 5) past bij een <em>verzekerde</em> aanvrager met een partner die noch verzekerde noch verdragsgerechtigde is, de woonlandfactor toe op de standaardpremie van die partner; lid 4 doet dat alleen bij een partner van een verdragsgerechtigde. De rekenregel van 2024 (stap 5 onder c) deed het nog anders: op beide standaardpremies; die van 2023 (stap 5 onder c) was gelijk aan die van 2024. De encoding volgt de tekst en geeft 2 × standaardpremie; zie <code>DISCREPANCIES.md</code> #3 en case <code>zt-2026-syn-001</code>.</p>
+<h2>Versies per jaar</h2>
+<ul class="inhoud"><li><a href="../../../wet/2026/index.html">De wet in 2026</a><span class="noot"></span></li><li><a href="../../../wet/2025/index.html">De wet in 2025</a><span class="noot"></span></li><li><a href="../../../wet/2024/index.html">De wet in 2024</a><span class="noot"><span class="wet">BWBR0018451, geldend van 01-01-2024 t/m 05-11-2024; vanaf 06-11-2024 t/m 31-12-2024 vernummerd (art. 2a → 3, art. 3 → 4a), bedragen gelijk</span></span></li><li><a href="../../../wet/2023/index.html">De wet in 2023</a><span class="noot"><span class="wet">BWBR0018451, geldend van 01-01-2023 t/m 31-12-2023 (verbatim gelezen 2026-10-11)</span></span></li></ul>
+<h2>Voorbeelden die deze regel testen</h2>
+<ul class="inhoud"><li><a href="../../../dossier/voorbeelden/zt-2023-pub-003/index.html">zt-2023-pub-003</a><span class="noot">2023 · published · FAIL</span></li><li><a href="../../../dossier/voorbeelden/zt-2024-pub-003/index.html">zt-2024-pub-003</a><span class="noot">2024 · published · FAIL</span></li><li><a href="../../../dossier/voorbeelden/zt-2025-pub-003/index.html">zt-2025-pub-003</a><span class="noot">2025 · published · FAIL</span></li><li><a href="../../../dossier/voorbeelden/zt-2026-pub-009/index.html">zt-2026-pub-009</a><span class="noot">2026 · published · FAIL</span></li><li><a href="../../../dossier/voorbeelden/zt-2026-syn-004/index.html">zt-2026-syn-004</a><span class="noot">2026 · synthetic · PASS</span></li></ul>
+<h2>Verschillen en geschillen</h2>
+<ul class="inhoud"><li><a href="../../../verschillen/7/index.html">Verschil #7</a><span class="noot">2026-10-11 · <code>government</code></span></li><li><a href="../../../verschillen/3/index.html">Verschil #3</a><span class="noot">2026-10-08 · <code>open</code></span></li></ul>
+</main>
+<footer class="voet">
+  <div class="pagina">
+    <p>toeslagrecht · de toeslagenwet als rekenregels die u zelf kunt nalopen</p>
+    <p>Elke regel heeft de status <span class="status">draft</span>: door niemand met vakkennis nagelezen. Geen enkele case is geverifieerd aan een echte beschikking.</p>
+    <p class="voet-links"><a href="../../../dossier/index.html">Dossier</a> · <a href="../../../betwisten/index.html">Iets betwisten</a> · <a href="../../../insturen/index.html">Een beschikking insturen</a> · <a href="../../../over/index.html">Over</a> · <a href="https://github.com/TheAndries/toeslagrecht">Bron</a> (MIT / CC BY-SA 4.0) · Gebouwd 2026-10-19</p>
+  </div>
+</footer>
+</body>
+</html>

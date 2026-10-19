@@ -41,8 +41,6 @@ hr { border: 0; border-top: var(--hairline) solid var(--rule); margin: var(--s-4
 .skip { position: absolute; left: -999em; top: 0; }
 .skip:focus { left: var(--gutter); top: var(--s-1); background: var(--paper); padding: var(--s-1) var(--s-2);
   z-index: 1; color: var(--ink); }
-.visueel-verborgen { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0);
-  white-space: nowrap; }
 
 /* ---- 1 header and menu ---- */
 .kop { border-bottom: var(--hairline) solid var(--rule); }
@@ -174,6 +172,7 @@ select.invoer { max-width: var(--input-max); }
 .prose th, .prose td { text-align: left; vertical-align: top; padding: var(--s-1) var(--s-2) var(--s-1) 0;
   border-bottom: var(--hairline) solid var(--rule); }
 .prose th { font-weight: 600; }
+.prose td, .prose th, .prose a, .prose code { overflow-wrap: anywhere; }
 .prose .en { font-style: normal; }
 @media (max-width: 720px) {
   .prose table, .prose thead, .prose tbody, .prose tr, .prose td, .prose th { display: block; }

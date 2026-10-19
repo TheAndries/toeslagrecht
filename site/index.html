@@ -1,63 +1,234 @@
 <!doctype html>
-<html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Start — toeslagrecht</title><style>
-:root{--ink:#1a1a1a;--paper:#fff;--rule:#bbb;--law:#444;--muted:#555;--mark:#f4f1ea}
-@media (prefers-color-scheme:dark){:root{--ink:#eee;--paper:#161616;--rule:#555;--law:#ccc;--muted:#aaa;--mark:#242220}}
-*{box-sizing:border-box}html{font-size:112.5%}
-body{margin:0;background:var(--paper);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.55}
-main{max-width:40rem;margin:0 auto;padding:1.25rem 1rem 3rem}
-h1{font-size:1.5rem;line-height:1.25;margin:.5rem 0 1rem}h2{font-size:1.15rem;margin:1.75rem 0 .5rem}
-p{margin:.6rem 0}a{color:inherit}
-.law{font-family:Georgia,"Times New Roman",serif;color:var(--law)}
-.status{font-variant:small-caps;letter-spacing:.03em;color:var(--muted)}
-.eerlijk{border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:.6rem 0;margin:1.25rem 0}
-.res{font-size:1.6rem;font-weight:600;margin:.25rem 0}
-.klein{font-size:.9rem;color:var(--muted)}
-table{border-collapse:collapse;width:100%;margin:.75rem 0}th,td{text-align:left;vertical-align:top;padding:.45rem .4rem;border-bottom:1px solid var(--rule)}
-th{font-weight:600}td.n,th.n{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
-ol.stappen{padding-left:1.25rem}ol.stappen li{margin:.9rem 0}ol.stappen .bedrag{font-variant-numeric:tabular-nums}
-aside.wet{margin:.3rem 0 0;padding-left:.75rem;border-left:3px solid var(--rule)}
-.brief{border:1px solid var(--rule);padding:.9rem;margin:.75rem 0;background:var(--mark)}
-.brief dl{display:grid;grid-template-columns:1fr auto;gap:.3rem .75rem;margin:0}.brief dd{margin:0;text-align:right;font-variant-numeric:tabular-nums}
-nav.layouts a{margin-right:1rem}
-header.kop{border-bottom:1px solid var(--rule);margin-bottom:.75rem}header.kop p{margin:.4rem 0}
-fieldset{border:1px solid var(--rule);padding:.75rem 1rem 1rem;margin:1rem 0}legend{font-weight:600;padding:0 .3rem}
-.veld{margin:.9rem 0}.veld label,.veld .label{display:block;font-weight:600;margin:0 0 .3rem}
-.keuzes label{display:inline-block;font-weight:400;margin:.2rem 1.25rem .2rem 0;min-height:2.75rem;line-height:2.75rem}
-.keuzes input{width:1.3rem;height:1.3rem;vertical-align:middle;margin:0 .35rem 0 0}
-input[type=text],select{font:inherit;color:inherit;background:var(--paper);border:1px solid var(--law);border-radius:3px;padding:.5rem .6rem;min-height:2.75rem;width:100%;max-width:18rem}
-.hint{font-size:.9rem;color:var(--muted);margin:.3rem 0 0}
-details.meer{border:1px solid var(--rule);padding:.5rem 1rem;margin:1rem 0}details.meer summary{font-weight:600;cursor:pointer;min-height:2rem;line-height:2rem}
-.knop{font:inherit;font-weight:600;color:var(--paper);background:var(--ink);border:0;border-radius:3px;padding:.75rem 1.5rem;min-height:2.75rem;cursor:pointer}
-.fout{border-left:3px solid var(--ink);padding-left:.75rem;font-weight:600}
-section#uitkomst{margin-top:2rem;padding-top:1rem;border-top:2px solid var(--ink)}section#uitkomst:focus{outline:none}
-footer.voet{margin-top:2.5rem;border-top:1px solid var(--rule);padding-top:.5rem}
-ul.dossier,ul.onbepaald{padding-left:1.25rem}ul.dossier li,ul.onbepaald li{margin:.35rem 0}
-:focus-visible{outline:3px solid currentColor;outline-offset:2px}
-@media (max-width:30rem){table,thead,tbody,tr,td,th{display:block}thead{position:absolute;left:-9999px}td{border:0;padding:.15rem 0}td.n{text-align:left}tr{border-bottom:1px solid var(--rule);padding:.5rem 0}td::before{content:attr(data-h) " ";color:var(--muted)}}
-</style></head>
-<body><main>
-<p class="klein">toeslagrecht · zorgtoeslag · 2026 · <span class="status">alle regels: draft</span></p>
-<header class="kop"><p class="klein">toeslagrecht · <span class="status">alle regels: draft</span></p></header>
-<h1>toeslagrecht</h1>
-<p>Hier staat de Nederlandse toeslagenwet als open, controleerbare rekenregels, met bij elk getal het artikel
-waar het vandaan komt. U kunt uw zorgtoeslag narekenen en zien hoe de wet bij het bedrag komt. Daarachter ligt
-het dossier: de wet zoals zij elk jaar gold, de gepubliceerde rekenvoorbeelden, en elk verschil tussen de
-wettekst en wat Dienst Toeslagen doet.</p>
-<h2>Narekenen</h2>
-<ul><li><a href="zorgtoeslag.html">Zorgtoeslag narekenen</a> — 2026, 2025, 2024 en 2023, stap voor stap, op uw eigen apparaat.</li></ul>
-<p class="klein">Nog niets hier is af. Elke regel heeft de status <span class="status">draft</span>: door niemand met
-vakkennis nagelezen. Geen enkele case is geverifieerd aan een echte beschikking. Dit is een controle, geen advies;
-aanvragen doet u op <a href="https://www.toeslagen.nl">toeslagen.nl</a>. De huurtoeslag komt later.</p>
-<h2>Het dossier</h2>
-<ul><li><a href="https://github.com/TheAndries/toeslagrecht/blob/main/law/zorgtoeslag/rules.md">De regels, met hun artikelen en status</a></li>
-<li><a href="https://github.com/TheAndries/toeslagrecht/blob/main/law/CHANGES.md">De wijzigingen in de wet, per datum, met het Staatsblad of de Staatscourant</a></li>
-<li><a href="https://github.com/TheAndries/toeslagrecht/tree/main/cases">De cases</a> · <a href="https://github.com/TheAndries/toeslagrecht/blob/main/law/zorgtoeslag/tests/report.md">de controle van de regels tegen de cases</a></li>
-<li><a href="https://github.com/TheAndries/toeslagrecht/blob/main/DISCREPANCIES.md">Waar de wettekst en Dienst Toeslagen verschillen</a></li>
-<li><a href="https://github.com/TheAndries/toeslagrecht/blob/main/DISPUTES.md">Iets betwisten</a> · <a href="https://github.com/TheAndries/toeslagrecht/blob/main/CASES.md">een echte beschikking insturen, anoniem</a></li></ul>
-<h2>Hoe de pagina gekozen is</h2>
-<p class="klein">Op 2026-10-09 koos de eigenaar uit drie opzetten van dezelfde berekening voor <a href="layouts/b.html">B, het verhaal</a>
-(<a href="layouts/a.html">A, de tabel</a> en <a href="layouts/c.html">C, de brief</a> blijven staan als dossier; <code>BOARD.md</code>).</p>
-<p class="klein">Niets van wat u invult verlaat uw telefoon of computer. Deze pagina slaat niets op.</p>
-<p class="klein">Bron: <a href="https://github.com/TheAndries/toeslagrecht">de open encoding en het dossier</a> (MIT / CC BY-SA 4.0). Gebouwd 2026-10-11.</p>
-</main></body></html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Zorgtoeslag narekenen — toeslagrecht</title>
+<meta name="description" content="Reken uw zorgtoeslag na, stap voor stap, met het wetsartikel bij elke stap. Alles gebeurt op uw eigen telefoon of computer.">
+<link rel="stylesheet" href="static/tokens.css">
+<link rel="stylesheet" href="static/site.css">
+</head>
+<body>
+<a class="skip" href="#inhoud">Naar de inhoud</a>
+<header class="kop">
+  <div class="kop-in">
+    <a class="woordmerk" href="index.html">toeslagrecht</a>
+    <nav aria-label="Menu"><ul class="menu"><li><a href="index.html" aria-current="page">Narekenen</a></li><li><a href="dossier/index.html">Dossier</a></li><li><a href="wet/index.html">Wet</a></li><li><a href="over/index.html">Over</a></li></ul></nav>
+  </div>
+</header>
+<main id="inhoud" class="pagina">
+<h1 class="vraag" id="vraag">Hoeveel zorgtoeslag krijg ik in <span id="vraag-jaar">2026</span>?</h1>
+<p class="lead">Vul drie dingen in. U ziet het bedrag, en stap voor stap hoe de wet daar komt, met bij elke stap het artikel.</p>
+<p class="privacy"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="10" width="14" height="10" rx="1"></rect><path d="M8 10V7a4 4 0 0 1 8 0v3"></path></svg>Niets van wat u invult verlaat uw telefoon of computer.</p>
+<form id="invoer" autocomplete="off" novalidate action="" method="get">
+<fieldset>
+  <legend>Welk jaar?</legend>
+  <div class="keuze" id="jaren"><label class="keuze-vak gekozen"><input type="radio" name="jaar" value="2026" checked> 2026</label><label class="keuze-vak"><input type="radio" name="jaar" value="2025"> 2025</label><label class="keuze-vak"><input type="radio" name="jaar" value="2024"> 2024</label><label class="keuze-vak"><input type="radio" name="jaar" value="2023"> 2023</label></div>
+</fieldset>
+
+<div class="veld" id="veld-ti">
+  <label class="veld-label" for="ti"><span class="veld-nr" aria-hidden="true">1</span>Uw toetsingsinkomen in dat jaar, in hele euro's</label>
+  <p class="hulp" id="h-ti">Uw inkomen zoals de Belastingdienst het voor dat jaar vaststelt: meestal het verzamelinkomen uit uw aangifte, anders uw loon. Bijvoorbeeld 28000.</p>
+  <p class="fout" id="f-ti" hidden></p>
+  <div class="euro"><span class="euro-teken" aria-hidden="true">€</span><input class="invoer" id="ti" name="toetsingsinkomen_aanvrager" type="text" inputmode="numeric" autocomplete="off" aria-describedby="h-ti"></div>
+</div>
+
+<div class="veld" id="veld-partner"><fieldset>
+  <legend class="veld-label"><span class="veld-nr" aria-hidden="true">2</span>Hebt u een toeslagpartner?</legend>
+  <p class="hulp" id="h-partner">Een toeslagpartner is meestal degene met wie u getrouwd bent, een geregistreerd partnerschap hebt, of samen een kind of een koophuis hebt. Twijfelt u? Dan kijkt u op toeslagen.nl.</p>
+  <p class="fout" id="f-partner" hidden></p>
+  <div class="keuze"><label class="keuze-vak"><input type="radio" name="partner" value="ja"> Ja</label><label class="keuze-vak"><input type="radio" name="partner" value="nee"> Nee</label></div>
+</fieldset></div>
+
+<div class="veld alleen-partner" id="veld-tip" hidden>
+  <label class="veld-label" for="tip"><span class="veld-nr" aria-hidden="true">2a</span>Het toetsingsinkomen van uw partner, in hele euro's</label>
+  <p class="hulp" id="h-tip">Op dezelfde manier als uw eigen inkomen. Bijvoorbeeld 15000. Laat het leeg als uw partner geen inkomen had.</p>
+  <p class="fout" id="f-tip" hidden></p>
+  <div class="euro"><span class="euro-teken" aria-hidden="true">€</span><input class="invoer" id="tip" name="toetsingsinkomen_partner" type="text" inputmode="numeric" autocomplete="off" aria-describedby="h-tip"></div>
+</div>
+
+<div class="veld alleen-partner" id="veld-pv" hidden><fieldset>
+  <legend class="veld-label"><span class="veld-nr" aria-hidden="true">2b</span>Is uw partner in Nederland verzekerd voor zorg?</legend>
+  <p class="hulp">Bijna iedereen die in Nederland woont of werkt is verzekerd. Militairen in actieve dienst en mensen die alleen in het buitenland verzekerd zijn, zijn het niet.</p>
+  <div class="keuze"><label class="keuze-vak gekozen"><input type="radio" name="partner_verzekerd" value="ja" checked> Ja</label><label class="keuze-vak"><input type="radio" name="partner_verzekerd" value="nee"> Nee</label><label class="keuze-vak"><input type="radio" name="partner_verzekerd" value="onbekend"> Weet ik niet</label></div>
+</fieldset></div>
+
+<div class="veld" id="veld-rg">
+  <label class="veld-label" for="rg"><span class="veld-nr" aria-hidden="true">3</span>Uw vermogen op 1 januari, samen met uw partner als u die hebt, in hele euro's</label>
+  <p class="hulp" id="h-rg">De rendementsgrondslag uit box 3: spaargeld, beleggingen en een tweede huis, min schulden, boven het heffingvrije vermogen. Bijvoorbeeld 4500. Laat het leeg als u het niet weet; dan slaat de berekening de vermogenstoets over en zegt zij dat.</p>
+  <p class="fout" id="f-rg" hidden></p>
+  <div class="euro"><span class="euro-teken" aria-hidden="true">€</span><input class="invoer" id="rg" name="rendementsgrondslag" type="text" inputmode="numeric" autocomplete="off" aria-describedby="h-rg"></div>
+</div>
+
+<details class="meer" id="meer">
+  <summary>Meer situaties: niet het hele jaar dezelfde partner, of wonen buiten Nederland</summary>
+  <div class="veld alleen-partner" hidden><fieldset>
+    <legend class="veld-label">Had u het hele jaar dezelfde toeslagpartner?</legend>
+    <div class="keuze"><label class="keuze-vak gekozen"><input type="radio" name="hele_jaar_dezelfde_partner" value="ja" checked> Ja</label><label class="keuze-vak"><input type="radio" name="hele_jaar_dezelfde_partner" value="nee"> Nee</label></div>
+  </fieldset></div>
+  <div class="veld"><fieldset>
+    <legend class="veld-label">Woont u buiten Nederland en betaalt u een bijdrage aan het CAK voor zorg?</legend>
+    <p class="hulp">De wet noemt u dan een verdragsgerechtigde (Zvw art. 69). Uw standaardpremie wordt dan vermenigvuldigd met de woonlandfactor van uw land.</p>
+    <div class="keuze"><label class="keuze-vak gekozen"><input type="radio" name="aanvrager_verdragsgerechtigd" value="nee" checked> Nee</label><label class="keuze-vak"><input type="radio" name="aanvrager_verdragsgerechtigd" value="ja"> Ja</label></div>
+  </fieldset></div>
+  <div class="veld alleen-partner" hidden><fieldset>
+    <legend class="veld-label">Geldt dat voor uw partner?</legend>
+    <div class="keuze"><label class="keuze-vak gekozen"><input type="radio" name="partner_verdragsgerechtigd" value="nee" checked> Nee</label><label class="keuze-vak"><input type="radio" name="partner_verdragsgerechtigd" value="ja"> Ja</label></div>
+  </fieldset></div>
+  <div class="veld" id="veld-woonland">
+    <label class="veld-label" for="woonland">Het woonland</label>
+    <p class="fout" id="f-woonland" hidden></p>
+    <select class="invoer" id="woonland" name="woonland" aria-describedby="f-woonland"><option value="">— kies een land —</option><option value="BE">België</option><option value="BA">Bosnië-Herzegovina</option><option value="BG">Bulgarije</option><option value="CY">Cyprus</option><option value="DK">Denemarken</option><option value="DE">Duitsland</option><option value="EE">Estland</option><option value="FI">Finland</option><option value="FR">Frankrijk</option><option value="GR">Griekenland</option><option value="HU">Hongarije</option><option value="IS">IJsland</option><option value="IE">Ierland</option><option value="IT">Italië</option><option value="CV">Kaapverdië</option><option value="HR">Kroatië</option><option value="LV">Letland</option><option value="LI">Liechtenstein</option><option value="LT">Litouwen</option><option value="LU">Luxemburg</option><option value="MT">Malta</option><option value="MA">Marokko</option><option value="ME">Montenegro</option><option value="MK">Noord-Macedonië</option><option value="NO">Noorwegen</option><option value="AT">Oostenrijk</option><option value="PL">Polen</option><option value="PT">Portugal</option><option value="RO">Roemenië</option><option value="RS">Servië</option><option value="SI">Slovenië</option><option value="SK">Slowakije</option><option value="ES">Spanje</option><option value="CZ">Tsjechië</option><option value="TN">Tunesië</option><option value="TR">Turkije</option><option value="GB">Verenigd Koninkrijk</option><option value="SE">Zweden</option><option value="CH">Zwitserland</option></select>
+  </div>
+</details>
+
+<p class="privacy"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="10" width="14" height="10" rx="1"></rect><path d="M8 10V7a4 4 0 0 1 8 0v3"></path></svg>Niets van wat u invult verlaat uw telefoon of computer.</p>
+<p class="knop-rij"><button type="submit" class="knop">Bereken mijn zorgtoeslag</button></p>
+<noscript><p class="nojs">Deze berekening gebeurt op uw eigen apparaat en heeft daarvoor JavaScript nodig. Zonder JavaScript kunt u <a href="dossier/zorgtoeslag/index.html">de regels zelf lezen en narekenen</a>.</p></noscript>
+</form>
+
+<section id="uitkomst" class="uitkomst" aria-live="polite" tabindex="-1" hidden></section>
+</main>
+<footer class="voet">
+  <div class="pagina">
+    <p>toeslagrecht · de toeslagenwet als rekenregels die u zelf kunt nalopen</p>
+    <p>Elke regel heeft de status <span class="status">draft</span>: door niemand met vakkennis nagelezen. Geen enkele case is geverifieerd aan een echte beschikking.</p>
+    <p class="voet-links"><a href="dossier/index.html">Dossier</a> · <a href="betwisten/index.html">Iets betwisten</a> · <a href="insturen/index.html">Een beschikking insturen</a> · <a href="over/index.html">Over</a> · <a href="https://github.com/TheAndries/toeslagrecht">Bron</a> (MIT / CC BY-SA 4.0) · Gebouwd 2026-10-19</p>
+  </div>
+</footer>
+<script src="zorgtoeslag-parameters.js"></script>
+<script src="zorgtoeslag-regels.js"></script>
+<script>
+(function () {
+  "use strict";
+  var Z = window.toeslagrecht.zorgtoeslag;
+  var form = document.getElementById("invoer");
+  var out = document.getElementById("uitkomst");
+  var REGELPAGINA = {"zt-2026-art1-1f": "dossier/zorgtoeslag/zt-2026-art1-1f/index.html", "zt-2026-art2-2": "dossier/zorgtoeslag/zt-2026-art2-2/index.html", "zt-2026-art2-1": "dossier/zorgtoeslag/zt-2026-art2-1/index.html", "zt-2026-art2-4": "dossier/zorgtoeslag/zt-2026-art2-4/index.html", "zt-2026-art2-5": "dossier/zorgtoeslag/zt-2026-art2-5/index.html", "zt-2026-art3-1": "dossier/zorgtoeslag/zt-2026-art3-1/index.html", "zt-2026-art4": "dossier/zorgtoeslag/zt-2026-art4/index.html", "zt-2026-art4a": "dossier/zorgtoeslag/zt-2026-art4a/index.html", "awir-2026-art7-1": "dossier/awir/awir-2026-art7-1/index.html", "awir-2026-art8-1": "dossier/awir/awir-2026-art8-1/index.html", "awir-2026-art3": "dossier/awir/awir-2026-art3/index.html", "awir-2026-art5": "dossier/awir/awir-2026-art5/index.html", "awir-2026-art14-4": "dossier/awir/awir-2026-art14-4/index.html", "awir-2026-art14-5": "dossier/awir/awir-2026-art14-5/index.html"};
+  var WOORD = {"niet_getoetst": "niet getoetst, want geen vermogen opgegeven", "aanspraak": "onder de grens", "geen_aanspraak": "boven de grens: geen zorgtoeslag", "undetermined": "niet bepaald door de wet"};
+  var NBSP = "\u202f";
+
+  function esc(s) { return String(s).replace(/[&<>"']/g, function (c) {
+    return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; }); }
+  function radio(name) { var el = form.querySelector('input[name="' + name + '"]:checked'); return el ? el.value : null; }
+  function jaNee(v) { return v === "ja" ? true : v === "nee" ? false : null; }
+  function bedrag(v, hele) { return typeof v === "bigint" ? Z.eur(v, hele === false ? false : undefined).replace("€ ", "€" + NBSP) : esc(WOORD[v] || v); }
+
+  // the chosen box: a class beside the radio's own state, for browsers without :has()
+  function markeer() {
+    form.querySelectorAll(".keuze-vak").forEach(function (l) {
+      var r = l.querySelector("input"); l.classList.toggle("gekozen", !!(r && r.checked));
+    });
+    var j = radio("jaar"); if (j) document.getElementById("vraag-jaar").textContent = j;
+    var p = radio("partner") === "ja";
+    form.querySelectorAll(".alleen-partner").forEach(function (el) { el.hidden = !p; });
+  }
+  form.addEventListener("change", markeer);
+  markeer();
+
+  // errors: the field's border, a sentence under the help text, announced through aria-describedby
+  function zetFout(id, tekst) {
+    var veld = document.getElementById("veld-" + id), msg = document.getElementById("f-" + id);
+    var input = document.getElementById(id);
+    if (tekst) {
+      veld.classList.add("in-fout"); msg.textContent = tekst; msg.hidden = false;
+      if (input) { input.setAttribute("aria-invalid", "true"); input.setAttribute("aria-describedby", (document.getElementById("h-" + id) ? "h-" + id + " " : "") + "f-" + id); }
+      else veld.querySelectorAll("input").forEach(function (r) { r.setAttribute("aria-invalid", "true"); r.setAttribute("aria-describedby", "f-" + id); });
+    } else {
+      veld.classList.remove("in-fout"); msg.textContent = ""; msg.hidden = true;
+      if (input) { input.removeAttribute("aria-invalid"); input.setAttribute("aria-describedby", document.getElementById("h-" + id) ? "h-" + id : ""); }
+      else veld.querySelectorAll("input").forEach(function (r) { r.removeAttribute("aria-invalid"); r.removeAttribute("aria-describedby"); });
+    }
+  }
+  ["ti", "tip", "rg", "woonland"].forEach(function (id) {
+    document.getElementById(id).addEventListener("input", function () { zetFout(id, ""); });
+  });
+  form.querySelectorAll('input[name="partner"]').forEach(function (r) { r.addEventListener("change", function () { zetFout("partner", ""); }); });
+
+  function getal(id, verplicht, naam) {
+    var raw = document.getElementById(id).value.trim().replace(/\./g, "").replace(/\s/g, "").replace(/,.*$/, "");
+    if (raw === "") { if (verplicht) return { fout: "Vul " + naam + " in, in hele euro's. Bijvoorbeeld 28000." }; return { waarde: null }; }
+    if (!/^-?\d+$/.test(raw)) return { fout: "Vul een bedrag in hele euro's in, zonder letters. Bijvoorbeeld 28000." };
+    return { waarde: raw };
+  }
+
+  function render(u, inv) {
+    var jaar = u.jaar;
+    var h = [];
+    if (u.vermogen === "geen_aanspraak") {
+      h.push('<p class="bedrag-intro">Naar de letter van de wet krijgt u in ' + jaar + '</p><p class="bedrag">€' + NBSP + '0 <span class="per-jaar">per jaar</span></p>');
+      h.push('<p>Uw vermogen op 1 januari is hoger dan de grens van dat jaar. Dan is er volgens de wet het hele jaar geen zorgtoeslag.</p>');
+    } else if (u.tegemoetkoming === null) {
+      h.push('<p class="bedrag-intro">Naar de letter van de wet krijgt u in ' + jaar + '</p><p class="bedrag">niet bepaald door de wet</p>');
+      h.push('<p>Voor deze situatie zegt de wettekst van ' + jaar + ' niet wat de uitkomst is. Hieronder staat waar de tekst ophoudt.</p>');
+    } else {
+      h.push('<p class="bedrag-intro">Naar de letter van de wet krijgt u in ' + jaar + '</p><p class="bedrag">' + bedrag(u.tegemoetkoming, false) + ' <span class="per-jaar">per jaar</span></p>');
+      h.push('<p class="klein">Berekend ' + bedrag(u.aanspraak_jaar) + ' per jaar, afgerond op hele euro’s (Awir art. 14 lid 4). ' +
+        'Per maand is dat ' + bedrag(u.aanspraak_maand) + '. Dienst Toeslagen betaalt hele euro’s per maand en komt dan op €' + NBSP +
+        u.aanspraak_maand_afgerond_praktijk + '; waar dat afronden per maand in de wet staat, hebben wij niet gevonden.</p>');
+    }
+    h.push('<p class="eerlijk">Dit is wat de wet zegt voor wat u invulde. Het is geen advies en geen aanvraag; aanvragen doet u op <a href="https://www.toeslagen.nl">toeslagen.nl</a>.</p>');
+    var statussen = []; u.stappen.forEach(function (s) { if (statussen.indexOf(s.status) < 0) statussen.push(s.status); }); statussen.sort();
+    h.push('<p class="statusregel">Alle regels in deze berekening: ' + statussen.map(function (s) { return '<span class="status">' + esc(s) + '</span>'; }).join(", ") + '.</p>');
+    h.push('<ol class="stappen">');
+    u.stappen.forEach(function (s, i) {
+      h.push('<li class="stap"><p class="stap-zin"><span class="stap-nr" aria-hidden="true">' + (i + 1) + '</span><span>' + esc(s.omschrijving) +
+        ' <span class="getal">Uitkomst: ' + bedrag(s.uitkomst) + '.</span></span></p>' +
+        '<p class="kantlijn"><a href="' + esc(REGELPAGINA[s.regel] || "dossier/index.html") + '">' + esc(s.artikel) + '</a> · ' +
+        '<span class="status">' + esc(s.status) + '</span><span class="rekensom">' + esc(s.berekening) + '</span></p></li>');
+    });
+    h.push('</ol>');
+    if (u.onbepaald.length) {
+      h.push('<h2>Wat de wet hier niet bepaalt</h2><ul class="prose">');
+      u.onbepaald.forEach(function (n) { h.push('<li class="klein">' + esc(n) + '</li>'); });
+      h.push('</ul>');
+    }
+    h.push('<p class="slot klein">Klik op een artikel voor de wettekst, de versies per jaar en de voorbeelden die de regel testen.</p>');
+    out.innerHTML = h.join("");
+    out.hidden = false;
+    out.focus();
+  }
+
+  form.addEventListener("submit", function (ev) {
+    ev.preventDefault();
+    var eerste = null;
+    function fout(id, tekst) { zetFout(id, tekst); if (!eerste) eerste = id; }
+    ["ti", "tip", "rg", "woonland", "partner"].forEach(function (id) { zetFout(id, ""); });
+    var ti = getal("ti", true, "uw toetsingsinkomen"); if (ti.fout) fout("ti", ti.fout);
+    var partnerKeuze = radio("partner");
+    if (partnerKeuze === null) fout("partner", "Kies Ja of Nee.");
+    var partner = partnerKeuze === "ja";
+    var tip = partner ? getal("tip", false, "het inkomen van uw partner") : { waarde: null }; if (tip.fout) fout("tip", tip.fout);
+    var rg = getal("rg", false, "uw vermogen"); if (rg.fout) fout("rg", rg.fout);
+    var inv = {
+      jaar: radio("jaar"),
+      partner: partner,
+      toetsingsinkomen_aanvrager: ti.waarde,
+      toetsingsinkomen_partner: partner ? tip.waarde : null,
+      partner_verzekerd: partner ? jaNee(radio("partner_verzekerd")) : null,
+      rendementsgrondslag: rg.waarde,
+      hele_jaar_dezelfde_partner: partner ? jaNee(radio("hele_jaar_dezelfde_partner")) : null,
+      aanvrager_verdragsgerechtigd: radio("aanvrager_verdragsgerechtigd") === "ja",
+      partner_verdragsgerechtigd: partner ? radio("partner_verdragsgerechtigd") === "ja" : null,
+      woonland: document.getElementById("woonland").value || null
+    };
+    if ((inv.aanvrager_verdragsgerechtigd || inv.partner_verdragsgerechtigd) && !inv.woonland) {
+      document.getElementById("meer").open = true;
+      fout("woonland", "Kies het woonland: de woonlandfactor hangt ervan af (Wzt art. 4a).");
+    }
+    if (eerste) {
+      out.hidden = true;
+      var el = document.getElementById(eerste) || document.querySelector('#veld-' + eerste + ' input');
+      if (el) el.focus();
+      return;
+    }
+    try {
+      render(Z.bereken(inv, PARAMETERS), inv);
+    } catch (e) {
+      zetFout("ti", "Er ging iets mis bij het rekenen: " + (e.message || String(e)));
+      out.hidden = true;
+    }
+  });
+})();
+</script></body>
+</html>

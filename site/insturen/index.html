@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Een echte beschikking insturen, anoniem — toeslagrecht</title>
+<link rel="stylesheet" href="../static/tokens.css">
+<link rel="stylesheet" href="../static/site.css">
+</head>
+<body>
+<a class="skip" href="#inhoud">Naar de inhoud</a>
+<header class="kop">
+  <div class="kop-in">
+    <a class="woordmerk" href="../index.html">toeslagrecht</a>
+    <nav aria-label="Menu"><ul class="menu"><li><a href="../index.html">Narekenen</a></li><li><a href="../dossier/index.html" aria-current="page">Dossier</a></li><li><a href="../wet/index.html">Wet</a></li><li><a href="../over/index.html">Over</a></li></ul></nav>
+  </div>
+</header>
+<main id="inhoud" class="pagina">
+<h1>Een echte beschikking insturen, anoniem</h1>
+<p class="lead">Laat weg: uw naam, uw BSN, uw adres, de naam van uw partner, het kenmerk van de brief en uw geboortedatum. Het protocol hieronder is in het Engels, zoals het dossier het bijhoudt.</p>
+<div class="prose">
+<p>The case corpus and the discrepancy log. This file is the asset. <code>CHARTER.md</code> P3.</p>
+<p><strong>Status: binding under <code>CHARTER.md</code> P5, P6 and P8. Amendable only by board decision.</strong></p>
+<hr>
+<h3>The corpus</h3>
+<p>A case is one real or published situation with a known outcome, stored under <code>cases/</code>, one file each, and compiled into the encoding's tests.</p>
+<p>Each case records:</p>
+<ul><li>a stable id;</li><li>the toeslag and the year;</li><li>the inputs the law needs (household composition, incomes, assets, rent or premium, dates) — and nothing else;</li><li>the expected outcome and where it comes from;</li><li>its <strong>source type</strong>, which sets its weight:</li></ul>
+<table><thead><tr><th>Source type</th><th>What it is</th><th>Verification</th></tr></thead><tbody><tr><td data-h="Source type"><code>official</code></td><td data-h="What it is">An actual beschikking or berekening from the Belastingdienst/Toeslagen, submitted by the person it concerns or their helper, anonymised</td><td data-h="Verification">strongest; the operator checks the document is what it claims</td></tr><tr><td data-h="Source type"><code>ruling</code></td><td data-h="What it is">A court decision, by ECLI, with the facts and the outcome</td><td data-h="Verification">strong; cited</td></tr><tr><td data-h="Source type"><code>published</code></td><td data-h="What it is">A worked example published by the Belastingdienst, Rijksoverheid or Nibud, with URL and retrieval date</td><td data-h="Verification">medium; the publisher may be wrong</td></tr><tr><td data-h="Source type"><code>synthetic</code></td><td data-h="What it is">Constructed by the operator to exercise a rule</td><td data-h="Verification">weakest; never counts as verification of anything</td></tr></tbody></table>
+<p>A case is <code>verified</code> when its source is <code>official</code> or <code>ruling</code> and a named human (the submitter, the owner, or a reviewer) has confirmed the inputs match the document. Only verified cases are tests the encoding must pass; the rest are checks.</p>
+<h3>Submitting a case</h3>
+<p>Through the form on the checker (which writes to <code>INBOX.md</code> until a connector exists) or by email. The submitter gives their name and contact privately, consents to the anonymised case being published under CC BY-SA, and attaches or transcribes the decision.</p>
+<p><strong>Privacy, absolute.</strong> Before a case is stored in the repository: no name, no BSN, no address, no toeslagpartner's name, no kenmerk, no date of birth beyond the year where the law needs an age. Amounts are kept exact because the law turns on them. The submitter's identity lives only in the owner's mailbox, never in the repository, never in a run's context beyond the session that anonymises it. A case that cannot be anonymised safely is not stored. The owner's veto (<code>CHARTER.md</code> P13) covers any doubt.</p>
+<h3>The discrepancy log</h3>
+<p><code>DISCREPANCIES.md</code>, newest first. An entry is opened whenever the encoding and a government outcome differ for the same inputs — a verified case fails, or a citizen reports that the checker and their beschikking disagree.</p>
+<p>Each entry records: the case, the two outcomes, the rule(s) involved, and a status:</p>
+<table><thead><tr><th>Status</th><th>Meaning</th></tr></thead><tbody><tr><td data-h="Status"><code>open</code></td><td data-h="Meaning">Noticed, not yet investigated</td></tr><tr><td data-h="Status"><code>encoding</code></td><td data-h="Meaning">The encoding was wrong; what was fixed, in which commit</td></tr><tr><td data-h="Status"><code>government</code></td><td data-h="Meaning">The encoding follows the text; the decision does not; the article and the decision are both cited; the reader judges</td></tr><tr><td data-h="Status"><code>law</code></td><td data-h="Meaning">The text does not determine the outcome; both readings recorded; the rule now returns <code>undetermined</code></td></tr><tr><td data-h="Status"><code>withdrawn</code></td><td data-h="Meaning">The reported discrepancy was a data error; kept, with the reason</td></tr></tbody></table>
+<p>The operator classifies, and argues the classification in the changelog. A <code>government</code> classification is not an accusation; it is a documented difference between a text and a decision, stated with both sources, in the plainest language available. The project never speculates about why.</p>
+<p>Every entry is permanent. The log is published on the site in full.</p>
+<h3>Reviewers</h3>
+<p>A named human with relevant expertise — a fiscalist, a bewindvoerder, a toeslagen case worker, a lawyer, the owner — may review a rule against its article and sign off (<code>LAW.md</code> status <code>reviewed</code>). Reviewers are credited on the rule and on the site's list of contributors. A review of a contested rule counts as siding with a reading (<code>DISPUTES.md</code> step 5).</p>
+</div>
+<h2>De tekst om te sturen</h2>
+<p>Kopieer de tekst, vul de bedragen van uw beschikking in en stuur die naar het project. Hoe u het project bereikt, staat op de pagina Over.</p>
+<label class="veld-label" for="tekst">Uw tekst</label>
+<textarea class="tekstvak" id="tekst" rows="14" spellcheck="false">toeslag:
+jaar:
+invoer:
+  partner:
+  toetsingsinkomen_aanvrager:
+  toetsingsinkomen_partner:
+  partner_verzekerd:
+  rendementsgrondslag:
+verwacht (bedragen op de beschikking):
+  aanspraak_jaar:
+  aanspraak_maand:
+bron: beschikking van Dienst Toeslagen, datum:
+
+Laat weg: naam, BSN, adres, naam van de partner, kenmerk, geboortedatum.
+</textarea>
+<p class="klein">Deze pagina slaat niets op en stuurt niets. U kopieert de tekst zelf.</p>
+</main>
+<footer class="voet">
+  <div class="pagina">
+    <p>toeslagrecht · de toeslagenwet als rekenregels die u zelf kunt nalopen</p>
+    <p>Elke regel heeft de status <span class="status">draft</span>: door niemand met vakkennis nagelezen. Geen enkele case is geverifieerd aan een echte beschikking.</p>
+    <p class="voet-links"><a href="../dossier/index.html">Dossier</a> · <a href="../betwisten/index.html">Iets betwisten</a> · <a href="../insturen/index.html">Een beschikking insturen</a> · <a href="../over/index.html">Over</a> · <a href="https://github.com/TheAndries/toeslagrecht">Bron</a> (MIT / CC BY-SA 4.0) · Gebouwd 2026-10-19</p>
+  </div>
+</footer>
+</body>
+</html>
