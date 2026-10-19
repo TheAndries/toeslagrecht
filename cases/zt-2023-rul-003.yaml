@@ -1,0 +1,18 @@
+id: zt-2023-rul-003
+toeslag: zorgtoeslag
+jaar: 2023
+bron:
+  type: ruling
+  publicatie: "Rechtbank Midden-Nederland 2 juni 2026, ECLI:NL:RBMNE:2026:4437 (zaaknr. UTR 25/6130), r.o. 10: 'Op 2 februari 2024 heeft Dienst Toeslagen het voorschot voor zorgtoeslag vastgesteld op € 1.703,-. Dienst Toeslagen is bij het berekenen van deze voorschotten uitgegaan van eisers jaarinkomen van € 11.204,-.' Een herzien voorschot (Awir art. 16), na de verhuizing van 10-08-2023, voor dezelfde aanvrager als zt-2023-rul-001"
+  url: https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RBMNE:2026:4437
+  opgehaald: 2026-10-19
+verified: false
+invoer:
+  partner: false
+  partner_verzekerd: null
+  toetsingsinkomen_aanvrager: "11204"
+  toetsingsinkomen_partner: "0"
+  rendementsgrondslag: null
+verwacht:
+  tegemoetkoming: "1703"
+opmerking: "Herzien voorschot 2023 over een DEEL van het jaar, op hetzelfde geschatte inkomen als zt-2023-rul-001 (€ 11.204, vol jaar € 1.858). De encoding rekent alleen hele jaren en geeft € 1.858 (DISCREPANCIES.md #9). € 1.703 = 11/12 × € 1.858 (€ 1.703,17) of 11/12 × € 1.858,16 (€ 1.703,32) → € 1.703; de uitspraak noemt het aantal maanden niet. Samen met rul-002 (€ 992 = 11/12 × € 1.082) laat dit zien dat de Dienst bij een deel van het jaar het (afgeronde) jaarbedrag naar rato van de maanden neemt en het resultaat opnieuw afrondt. Wordt 'verified' op dezelfde voet als rul-001 (ASKS.md 9)."

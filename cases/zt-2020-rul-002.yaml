@@ -1,0 +1,18 @@
+id: zt-2020-rul-002
+toeslag: zorgtoeslag
+jaar: 2020
+bron:
+  type: ruling
+  publicatie: "ABRvS 17 december 2025, ECLI:NL:RVS:2025:6164 (zaaknr. 202401854/1/A2), r.o. 1: 'Bij besluit van 27 december 2019 heeft de Dienst Toeslagen aan [appellante] een voorschot zorgtoeslag over 2020 verleend van € 1.250,00, uitgaande van een geschat inkomen van € 12.313,00.' Een voorschot (Awir art. 16), dezelfde aanvrager als zt-2020-rul-001"
+  url: https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RVS:2025:6164
+  opgehaald: 2026-10-19
+verified: false
+invoer:
+  partner: false
+  partner_verzekerd: null
+  toetsingsinkomen_aanvrager: "12313"
+  toetsingsinkomen_partner: "0"
+  rendementsgrondslag: null
+verwacht:
+  tegemoetkoming: "1250"
+opmerking: "Voorschot 2020 op een geschat inkomen onder het drempelinkomen (€ 21.430,656): normpremie = 1,830% × € 21.430,656 = € 392,18; € 1.642 − € 392,18 = € 1.249,82 → € 1.250 — het maximum zonder partner in 2020, door de Dienst zelf op 27-12-2019 berekend. Het verschil met rul-001 is € 87, precies de terugvordering die de uitspraak noemt. Wordt 'verified' op dezelfde voet als rul-001 (ASKS.md 9)."

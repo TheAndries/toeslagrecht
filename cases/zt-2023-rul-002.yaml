@@ -1,0 +1,18 @@
+id: zt-2023-rul-002
+toeslag: zorgtoeslag
+jaar: 2023
+bron:
+  type: ruling
+  publicatie: "Rechtbank Midden-Nederland 2 juni 2026, ECLI:NL:RBMNE:2026:4437 (zaaknr. UTR 25/6130), r.o. 5 en 11: 'Met het besluit van 5 september 2025 heeft Dienst Toeslagen eisers zorgtoeslag voor het jaar 2023 definitief berekend op € 992,- en het teveel verstrekte voorschot van € 744,- teruggevorderd.' 'Dienst Toeslagen is bij de definitieve berekening uitgegaan van een definitief jaarinkomen van € 30.763,-.' R.o. 12: eiser is 'sinds 10 augustus 2023 niet meer ingeschreven in Nederland, omdat hij naar Duitsland is verhuisd'. De rechtbank: het jaarinkomen telt, ook als iemand 'alleen een deel van het jaar recht heeft op zorgtoeslag' (r.o. 14). Beroep ongegrond"
+  url: https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RBMNE:2026:4437
+  opgehaald: 2026-10-19
+verified: false
+invoer:
+  partner: false
+  partner_verzekerd: null
+  toetsingsinkomen_aanvrager: "30763"
+  toetsingsinkomen_partner: "0"
+  rendementsgrondslag: null
+verwacht:
+  tegemoetkoming: "992"
+opmerking: "Definitieve berekening 2023 over een DEEL van het jaar: de aanvrager verhuisde op 10-08-2023 naar Duitsland. De encoding rekent alleen hele jaren (Wzt art. 2 lid 5, per kalendermaand, is niet gecodeerd — DISCREPANCIES.md #9) en geeft voor € 30.763 het jaarbedrag: normpremie = 0,123% × € 25.069,824 + 13,640% × (€ 30.763 − € 25.069,824) = € 30,84 + € 776,55 = € 807,39; € 1.889 − € 807,39 = € 1.081,61 → € 1.082. De Dienst kwam op € 992. De uitspraak zegt niet over hoeveel maanden; € 992 = 11/12 van het afgeronde jaarbedrag € 1.082 (€ 991,83 → € 992), en het herziene voorschot van 02-02-2024 (zt-2023-rul-003) is eveneens 11/12 van het volle voorschot. Dit is dus geen tegenspraak met de tekst maar een niet-gecodeerde regel; de case blijft staan als het bewijs ervan en als test voor de dag dat de maandbepaling gecodeerd is. Wordt 'verified' op dezelfde voet als rul-001 (ASKS.md 9)."

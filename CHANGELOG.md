@@ -2,6 +2,115 @@
 
 Newest first. What was done, decided, and got wrong.
 
+## 2026-10-19 — tenth run: 2018 encoded from primary texts, six more cases from case law (2020 and 2023), the first part-year amounts of the Dienst and discrepancy #9, a second retroactive factor correction found
+
+Tenth run of routine `trig_012xyD5r5rxFDCjfHbZ58Kib`. Model as served: `claude-fable-5-1`, the same as the previous
+entry; no handover note needed. The checkout arrived detached at a current `origin/main`; `checkout -B main origin/main`
+as in `memory.md`. The routine fired the day after the previous run: no new gap (Ask 10 still open for the three days of
+10-15 to 10-17).
+
+**Steps 1–3.** No ask newly marked done (4, 6, 8, 9 and 10 open as recorded). `INBOX.md` empty. No open motion.
+
+**Step 4 — done (Phase 2 history, items 2 and 3 of `memory.md`; twenty-five fetches, seven searches, four leaflet probes).**
+- *Zorgtoeslag 2018 encoded* (`law/zorgtoeslag/parameters/2018.yaml`, `law/awir/parameters/2018.yaml`), every figure read in
+  its primary text: standaardpremie € 1.546 (Stcrt. 2017, 68107: € 1.312 premie + € 234 eigen risico); WML januari 2018
+  € 1.578,00 (Stcrt. 2017, 58642) → drempelinkomen € 20.450,88; percentages 1,990% / 4,750% / 13,490% (in the Wzt text of
+  01-01-2018; set by Stb. 2017, 436, the koopkrachtbesluit for 2018 that lowered the normpercentages structurally by 0,33
+  and 0,32 procentpunt and left the afbouw on its schema — the text itself says "De afbouwpercentages … veranderen niet",
+  this time truthfully, since the 2017 and 2018 afbouw rows of its own tabel 1 follow the +0,03 schema); vermogensgrens
+  € 83.415 on the grondslag sparen en beleggen (Stcrt. 2017, 65628, from € 82.752, tabelcorrectiefactor 0,8%; its
+  toelichting states the rule as "heffingvrije vermogen plus € 83.415", which is exactly the derivation the encoding uses);
+  heffingvrij vermogen 2018 € 30.000 (Wet IB 2001 art. 5.5, read) → effective thresholds € 113.415 / € 143.415;
+  woonlandfactoren 2018 (Stcrt. 2017, 66088, identical to the consolidated bijlage 4 on all 39 lines, checked by script;
+  the last table of the old method, with four factors above 1 — Denemarken, IJsland, Liechtenstein, Noorwegen — before the
+  2019 re-basing); Awir 2018 art. 7 (no amount in lid 3; lid 6 € 4.827, read in Stcrt. 2017, 70975 art. VI) and art. 14
+  lid 4–5 (same text). One Wzt version in 2018; art. 1 onder c still read "artikel 24, eerste lid". The two 2020-only rule
+  versions cover 2018 unchanged through the year file's switches: no code changed in either encoding, parity 205/205. The
+  checker offers 2018.
+- *2018 is the first year whose ceilings turn on the drempelinkomen rounding.* From the text: € 28.720 / € 35.996. With a
+  drempelinkomen rounded down to € 20.450 they would be € 28.719 / € 35.995; rounded up to € 20.451 they stay. 2019 and
+  2020 were indifferent. So a Dienst publication naming the 2018 grenzen would decide `DISCREPANCIES.md` #1 for 2018;
+  none was found (leaflet `tg0821z80fd`–`z83fd` all 404). Pre-recorded in `zt-2018-syn-020..023` (ceilings, both sides).
+- *Six more cases from case law — the deliberate pass that item 3 of `memory.md` asked for, and it paid.* Web searches for
+  zorgtoeslag rulings with amounts, the zaaknummer searched again to get the ECLI, the full text from `data.rechtspraak.nl`:
+  - **2020, zonder partner** (ABRvS 17-12-2025, ECLI:NL:RVS:2025:6164): voorschot € 1.250 on a geschat inkomen of € 12.313,
+    definitieve berekening € 1.163 on € 22.070 (an Anw-nabetaling counted). The 2020 text gives € 1.249,82 and € 1.163,19.
+    `zt-2020-rul-001`, `-002`. The € 87 terugvordering is exactly the difference.
+  - **2020, met partner** (ABRvS 27-11-2024, ECLI:NL:RVS:2024:4888): € 1.665 on a gezamenlijk toetsingsinkomen of € 26.834
+    (two small pensions bought out). The text gives € 1.664,62. `zt-2020-rul-003`. So 2020, which has no leaflet, now has
+    three outcomes of the Dienst, on both sides of the partner rule, each matching the text to the euro.
+  - **2023, zonder partner, a part of the year** (Rechtbank Midden-Nederland 02-06-2026, ECLI:NL:RBMNE:2026:4437): the
+    aanvrager moved to Germany on 10-08-2023. Voorschot of 28-12-2022 € 1.858 on € 11.204 — the whole-year maximum, text
+    € 1.858,16, `zt-2023-rul-001`, passes. Then the herzien voorschot of 02-02-2024 € 1.703 on the same income and the
+    definitieve berekening of 05-09-2025 € 992 on € 30.763: the encoding, which computes only unchanged whole years, gives
+    € 1.858 and € 1.082. Stored as `zt-2023-rul-002`, `-003`; both fail; **discrepancy #9 opened**, see below.
+  - Two rulings read and recorded without a case: ECLI:NL:RVS:2019:1346 (a 2018 voorschot for a couple in België, the
+    Dienst's € 165 replaced by the rechtbank's € 1.102 with the woonlandfactor 0,7193 — confirms the 2018 factor for
+    België in practice, but neither amount's income is stated, and the two are not consistent with one income) and
+    ECLI:NL:RVS:2023:3385 (2019, nihil on € 31.546, household not stated; consistent but undiscriminating).
+  All eight ruling cases now wait on the same ten-minute confirmation per ruling (Ask 9, extended with a dated note).
+- *Eight amendment rows* in `law/CHANGES.md` (seven for 2018-01-01 and one for the heffingvrij vermogen 2018 → 2019), and
+  five "old" or "not read" columns of the 2019 rows filled from what was read (the 2018 percentages now from the text, the
+  2018 standaardpremie, the 2018 woonlandfactor table, the Awir 2018 amount, Germany's published 2018 factor 0,9559 in the
+  retroactive-correction row). One more retroactive correction found: Stcrt. 2017, 66088 art. II set Zweden's factor for
+  2017 anew at 0,8263, retroactive to 01-01-2017 — the second single-country correction after Germany's, recorded with
+  "whether it reached the zorgtoeslag: not stated in the text read". Eleven source rows, the 2018 leaflet entry and five
+  rulings in `law/SOURCES.md`; open item 4 now says 2017 with what is known (BWBR ids, Stcrt. numbers, both retroactive
+  factors). 205 cases: 184 pass, 21 fail (the nineteen known plus the two part-year cases), 0 blocking.
+
+**The discrepancies.** **#9 opened** (`open`): the Dienst's two part-year amounts for 2023 against the encoding's whole-year
+amounts. Investigated, not a text-versus-decision conflict: Wzt art. 2 lid 5 determines the aanspraak per kalendermaand
+and the encoding states that rule but does not compute it (`LAW.md`: changes within the year not encoded). What the ruling
+adds to the record is the Dienst's method, reproduced to the euro: take the *rounded* whole-year amount (€ 1.082), multiply
+by the months of entitlement over twelve (11, inferred from both amounts — the ruling gives no count), round again
+(€ 991,83 → € 992). The unrounded year amount would give € 991. The order of month-split and rounding is something the text
+does not say; it becomes a `law` candidate if a case ever turns on it. #9 becomes `encoding` when lid 5 is encoded with a
+months-of-entitlement input and both cases pass — the next run's first encoding task, since the fix is in both encodings
+and the form. Classified `open` rather than `encoding` because `encoding` in `CASES.md` means "what was fixed, in which
+commit", and nothing is fixed yet. #1 gains its first year in which the ceilings would decide it (2018), without a Dienst
+figure to decide it with.
+
+**What was wrong and why.**
+- *A sloppy clause in a parameter file, caught before commit.* The first draft of the 2018 woonlandfactor `bron` text said
+  "vijf landen boven 1 (Denemarken, Duitsland? nee: …)" — thinking aloud written into the record. Replaced by the counted
+  fact (four). The rule holds: read every string of a parameter file back before the check runs.
+- *An article number recalled, not read.* The Awir lid 6 row first cited "art. XIII" of Stcrt. 2017, 70975; the text says
+  art. VI. Caught by grepping the heading above the sentence. Same lesson as 10-14, in a new shape: not only numbers but
+  article references are read or not written.
+- *A ruling's quoted letter is not a case.* ECLI:NL:RVS:2024:4888 quotes a Dienst letter saying the toeslag on € 11.209
+  came to "ongeveer € 862,00 per maand" — impossible for 2020 (the maximum is € 1.913 per year). Recorded in `SOURCES.md`
+  as an evident slip in the ruling's text, not stored, not a discrepancy (no inputs, no decision).
+- *The data.rechtspraak.nl search API returned zero results* for a creator/date/subject query; the working route is a web
+  search for the subject with amounts, then the zaaknummer searched once more for the ECLI (`raadvanstate.nl` is 403 to
+  curl and to WebFetch), then `data.rechtspraak.nl/uitspraken/content?id=<ECLI>`. Written into `memory.md`.
+- Nothing dropped from scope. Nibud/Rijksoverheid cases not started; the ruling pass was the better use and gave 2020 its
+  first Dienst outcomes. `PLAN.md` unchanged (strategy holds; Checkpoint 1 open on the owner, not missed by any date).
+
+**Step 8 — asks.** None new. Ask 9 extended with a dated note naming the six new ruling cases (same act, per ruling).
+
+**Dropped from memory.** The 2018 to-do with its pointers (done; its guess that 2018 "should need no new rule version"
+held, as for 2019). The ruling-pass method is kept, shortened, now that it has worked twice.
+
+**Effort.** Roughly 175,000 of the 300,000-token ceiling: about 80,000 reading the files and the previous entries, about
+40,000 on twenty-five downloads (the Wzt, Awir and WML of 2018 with five informatie pages, the 45 MB Regeling
+zorgverzekering, the 4 MB Wet IB 2001, one Staatsblad, five Staatscouranten, the standaardpremie regeling and its
+informatie page, six rulings) and seven searches, about 55,000 writing two parameter files, ten cases, eight amendment
+rows, sixteen source rows, the discrepancy, the rules text and these records. Cheaper than predicted for a year plus a
+ruling pass, because the ruling texts are small and the year needed no code.
+
+**Record under the ten-year rule.** This run added to the record: the law of 2018 as it stood, with every figure's
+instrument and date; the structural 0,33 / 0,32-point lowering of the normpercentages from 2018 (Stb. 2017, 436) with the
+2017 figures and the whole history of measures 2010–2016 its tabel 1 gives; seven dated amendment rows 2017 → 2018 →
+2019 and the heffingvrij vermogen row; the dated finding that 2018 is the first encoded year whose income ceilings turn
+on the Dienst's drempelinkomen rounding, with the four boundary cases that would decide it; the dated finding of a second
+retroactive single-country factor correction (Zweden 2017); the dated finding that the Dienst's 2018 leaflet is nowhere;
+and — the larger part — six outcomes of the Dienst Toeslagen taken from three court records, stored as `ruling` cases
+with their ECLI: three for 2020, a year with no leaflet, each matching the text to the euro on both sides of the partner
+rule, and three for 2023, of which two are the first part-year amounts in the corpus and show, to the euro, how the Dienst
+pro-rates a year — the finding that opened discrepancy #9 and set the next rule to encode. Also two rulings read and
+recorded as not usable, with the reason. The 2018 encoding, the four synthetic cases and the site build are regenerable
+and are not counted.
+
 ## 2026-10-18 — ninth run: 2019 encoded from primary texts, the first two cases from case law, three days without a run, Asks 9 and 10
 
 Ninth run of routine `trig_012xyD5r5rxFDCjfHbZ58Kib`. Model as served: `claude-fable-5-1`, the same as the previous

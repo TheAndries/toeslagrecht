@@ -5,14 +5,14 @@ status (`LAW.md`), en wat de regel doet waar de wet ruimte laat. De code staat i
 `rules.py`; de bedragen per jaar in `parameters/<jaar>.yaml`. Alles hier is **draft**:
 door niemand nagelezen tegen het artikel. Geraadpleegd 2026-10-07 t/m 2026-10-14.
 
-**Jaren en artikelnummers.** Gecodeerd: 2026, 2025, 2024, 2023 (sinds 2026-10-11), 2022 (sinds 2026-10-12), 2021 (sinds 2026-10-13), 2020 (sinds 2026-10-14) en 2019 (sinds 2026-10-18). De regel-id's dragen de nummering van 2026.
+**Jaren en artikelnummers.** Gecodeerd: 2026, 2025, 2024, 2023 (sinds 2026-10-11), 2022 (sinds 2026-10-12), 2021 (sinds 2026-10-13), 2020 (sinds 2026-10-14), 2019 (sinds 2026-10-18) en 2018 (sinds 2026-10-19). De regel-id's dragen de nummering van 2026.
 In de tekst van 2024 (geldend t/m 05-11-2024) heette de vermogenstoets **art. 2a** en de woonlandfactor
 **art. 3**; per 06-11-2024 (Stb. 2024, 291, art. XIX) zijn zij art. 3 en art. 4a geworden en is art. 4a
 lid 3 ingevoegd. De stappen citeren per jaar het artikelnummer van dat jaar (`parameters/<jaar>.yaml`,
-`artikel_vermogenstoets`, `artikel_woonlandfactor`; 2019 t/m 2024 gelijk). In 2019 en 2020 had art. 2 nog acht leden: lid 5 (oud)
+`artikel_vermogenstoets`, `artikel_woonlandfactor`; 2018 t/m 2024 gelijk). In 2018, 2019 en 2020 had art. 2 nog acht leden: lid 5 (oud)
 ontzegde de zorgtoeslag aan een verzekerde met een partner die zijn verzekeringsplicht niet nakwam (gecodeerd als
 `zt-2020-art2-5oud`; vervallen per 01-01-2021, Stb. 2020, 543), de maandbepaling stond in lid 6 (`artikel_maandbepaling`);
-en de vermogenstoets rustte op de grondslag sparen en beleggen met één bedrag, € 85.767 in 2020 en € 84.416 in 2019 (`vermogenstoets_basis`,
+en de vermogenstoets rustte op de grondslag sparen en beleggen met één bedrag, € 85.767 in 2020, € 84.416 in 2019 en € 83.415 in 2018 (`vermogenstoets_basis`,
 `heffingvrij_vermogen`); sinds 2021 op de rendementsgrondslag met twee (Stb. 2020, 546). Zie `../CHANGES.md`.
 
 Wat de encoding nu kan: een verzekerde of verdragsgerechtigde, met of zonder partner, met het
@@ -34,9 +34,9 @@ hoogste zorgtoeslag.
 108% × 12 × € 2.294,40 = € 29.735,424. 2025: € 28.405,728. 2024: 108% × 12 × € 2.069,40 = € 26.819,424.
 2023: 108% × 12 × € 1.934,40 = € 25.069,824 (Stb. 2022, 381). 2022: 108% × 12 × € 1.725,00 = € 22.356,00 (Stcrt. 2021, 44177).
 2021: 108% × 12 × € 1.684,80 = € 21.835,008 (Stcrt. 2020, 53099). 2020: 108% × 12 × € 1.653,60 = € 21.430,656 (Stcrt. 2019,
-56680). 2019: 108% × 12 × € 1.615,80 = € 20.940,768 (Stcrt. 2018, 59237). In 2019 t/m 2023 verwees onder f naar WML art. 8 lid 1
+56680). 2019: 108% × 12 × € 1.615,80 = € 20.940,768 (Stcrt. 2018, 59237). 2018: 108% × 12 × € 1.578,00 = € 20.450,88 (Stcrt. 2017, 58642). In 2018 t/m 2023 verwees onder f naar WML art. 8 lid 1
 onderdeel **a**; per 01-01-2024 is dat onderdeel b (Wet invoering minimumuurloon, Stb. 2023, 168, art. XXXI),
-omdat onderdeel a sindsdien het minimumuurloon is. `parameters/2019.yaml` t/m `2023.yaml` zeggen dat met `artikel_wml_onderdeel`.
+omdat onderdeel a sindsdien het minimumuurloon is. `parameters/2018.yaml` t/m `2023.yaml` zeggen dat met `artikel_wml_onderdeel`.
 **Discretie:** De wet zegt niets over afronden. De encoding rondt niet af. De Dienst
 Toeslagen rekent met een op hele euro's afgerond drempelinkomen ("vastgesteld op" € 26.819 in 2024 —
 naar beneden —, € 28.406 in 2025 en € 29.736 in 2026 — naar boven, in 2026 ook waar rekenkundig
@@ -61,9 +61,11 @@ verlaging van Stb. 2022, 472 voor dat ene jaar, eveneens in de wettekst; 2022: 1
 amendement Snels/Lodders, Stb. 2020, 543, art. III; 2020: 1,830% / 4,140% / 13,550% (Stb. 2019, 386: de normpercentages
 structureel 0,19 procentpunt lager dan het schema, koopkrachtbesluitvorming 2020; 2019: 2,005% / 4,315% / 13,520% (tekst van
 01-01-2019 gelezen 2026-10-18; Stb. 2018, 431, dat het normpercentage met partner met ingang van 2019 structureel 0,45
-procentpunt verlaagde, 4,765% → 4,315%, en de andere twee op hun schema liet; 2018 was 1,990% / 4,750% / 13,490% volgens
-tabel 1 van dat besluit — de tekst van 2018 is nog niet gelezen). Bron: Besluit percentages drempel- en
-toetsingsinkomen zorgtoeslag, Stb. 2018, 431 → Stb. 2019, 386 → Stb. 2020, 452 → Stb. 2021, 574 → Stb. 2022, 472 → Stb. 2024, 351 → Stb. 2025, 412.)
+procentpunt verlaagde, 4,765% → 4,315%, en de andere twee op hun schema liet; 2018: 1,990% / 4,750% / 13,490% (tekst van
+01-01-2018 gelezen 2026-10-19; Stb. 2017, 436, dat de normpercentages met ingang van 2018 structureel 0,33 en 0,32 procentpunt
+verlaagde als koopkrachtmaatregel en het afbouwpercentage op zijn schema liet; 2017 was 2,305% / 5,055% / 13,460% volgens tabel 1
+van dat besluit — de tekst van 2017 is nog niet gelezen). Bron: Besluit percentages drempel- en
+toetsingsinkomen zorgtoeslag, Stb. 2017, 436 → Stb. 2018, 431 → Stb. 2019, 386 → Stb. 2020, 452 → Stb. 2021, 574 → Stb. 2022, 472 → Stb. 2024, 351 → Stb. 2025, 412.)
 **Code:** `normpremie(toetsingsinkomen, partner, jaar)`. Het deel boven het drempelinkomen is
 nul als het toetsingsinkomen onder het drempelinkomen ligt ("voor zover ... te boven gaat").
 **Discretie:** geen.
@@ -93,7 +95,7 @@ encoding niet; het is invoer.
 
 ## zt-2026-art2-5 — per kalendermaand
 
-**Artikel:** Wzt art. 2 lid 5 (BWBR0018451, geldend van 01-01-2026; in 2019 en 2020 lid 6, vernummerd per 01-01-2021 bij
+**Artikel:** Wzt art. 2 lid 5 (BWBR0018451, geldend van 01-01-2026; in 2018 t/m 2020 lid 6, vernummerd per 01-01-2021 bij
 Stb. 2020, 543, art. III; het jaarbestand zegt het met `artikel_maandbepaling`).
 **Status:** draft.
 **Gewoon Nederlands:** De zorgtoeslag wordt voor elke maand apart bepaald.
@@ -118,9 +120,9 @@ worden, overlijden; Awir art. 5) codeert de encoding nog niet.
 op grond van artikel 2 van de Zorgverzekeringswet geldende verplichting zich krachtens een zorgverzekering te verzekeren,
 geen aanspraak op een zorgtoeslag." Vervallen per 01-01-2021 (Wet verbetering uitvoerbaarheid toeslagen, Stb. 2020, 543,
 art. III onder 2; lid 6–8 vernummerd tot 5–7). Geldig in de encoding alleen voor jaren waarvan het parameterbestand
-`art2_lid5_oud_aanwezig: true` draagt (2019, 2020).
+`art2_lid5_oud_aanwezig: true` draagt (2018, 2019, 2020).
 **Status:** draft.
-**Gewoon Nederlands:** Had uw partner zich in Nederland moeten verzekeren en deed hij of zij dat niet, dan kreeg u in 2019 en 2020
+**Gewoon Nederlands:** Had uw partner zich in Nederland moeten verzekeren en deed hij of zij dat niet, dan kreeg u in 2018, 2019 en 2020
 helemaal geen zorgtoeslag — ook niet de helft van `zt-2026-art2-4`. Sinds 2021 bestaat deze regel niet meer.
 **Code:** als `partner` en `partner_verzekeringsplicht_niet_nagekomen`: aanspraak = 0, na `zt-2026-art2-4`. Niet
 opgegeven: gerekend alsof nagekomen, met een noot onder *Wat de wet hier niet bepaalt*.
@@ -142,13 +144,15 @@ Stcrt. 2021, 47692; 2021: € 118.479 / € 149.819, Stb. 2020, 546 jo. Stcrt. 2
 rendementsgrondslag-toets.) **2020 en eerder:** art. 2a lid 1 (tekst 2020) vergeleek niet de rendementsgrondslag maar de
 *grondslag sparen en beleggen* (Wet IB 2001 art. 5.2 lid 1: de rendementsgrondslag op de peildatum voor zover boven het
 heffingvrije vermogen; lid 2: voor partners het hele jaar de gezamenlijke rendementsgrondslag boven het heffingvrije vermogen
-van beiden) met één bedrag, € 85.767 in 2020 (Stcrt. 2019, 61842) en € 84.416 in 2019 (Stcrt. 2018, 61205, van € 83.415). De
-encoding vraagt ook voor 2019 en 2020 de rendementsgrondslag en trekt zelf het heffingvrije vermogen af (€ 30.846, Wet IB 2001
-art. 5.5, tekst 2020; € 30.360, tekst 2019; tweemaal bij het hele jaar dezelfde partner), zoals `parameters/2020.yaml` en
-`2019.yaml` zeggen met `vermogenstoets_basis` en `heffingvrij_vermogen`. Zo komt 2020 op € 116.613 / € 147.459 uit — precies de
-bedragen die Stb. 2020, 546 per 2021 als rendementsgrondslag-grens invoerde — en 2019 op € 114.776 / € 145.136.
+van beiden) met één bedrag, € 85.767 in 2020 (Stcrt. 2019, 61842), € 84.416 in 2019 (Stcrt. 2018, 61205) en € 83.415 in 2018 (Stcrt.
+2017, 65628, van € 82.752). De encoding vraagt ook voor 2018 t/m 2020 de rendementsgrondslag en trekt zelf het heffingvrije vermogen
+af (€ 30.846, Wet IB 2001 art. 5.5, tekst 2020; € 30.360, tekst 2019; € 30.000, tekst 2018; tweemaal bij het hele jaar dezelfde
+partner), zoals `parameters/2020.yaml`, `2019.yaml` en `2018.yaml` zeggen met `vermogenstoets_basis` en `heffingvrij_vermogen`. Zo
+komt 2020 op € 116.613 / € 147.459 uit — precies de bedragen die Stb. 2020, 546 per 2021 als rendementsgrondslag-grens invoerde —
+2019 op € 114.776 / € 145.136 en 2018 op € 113.415 / € 143.415 (de toelichting bij Stcrt. 2017, 65628 zegt het zelf zo: 'boven het
+heffingvrije vermogen plus € 83.415').
 **Code:** `vermogenstoets(rendementsgrondslag, partner, hele_jaar_dezelfde_partner, jaar)`
-geeft `geen_aanspraak`, `aanspraak` of `niet_getoetst` (geen vermogen opgegeven); voor 2019 en 2020 eerst
+geeft `geen_aanspraak`, `aanspraak` of `niet_getoetst` (geen vermogen opgegeven); voor 2018 t/m 2020 eerst
 grondslag = max(0, rendementsgrondslag − n × heffingvrij vermogen), n = 1 of 2.
 **Discretie:** Welke grens geldt bij een partner die niet het hele jaar partner was, zegt lid
 1 niet uitdrukkelijk; de encoding geeft dan `undetermined` met het artikel.
@@ -156,7 +160,7 @@ grondslag = max(0, rendementsgrondslag − n × heffingvrij vermogen), n = 1 of 
 ## zt-2026-art4 — standaardpremie
 
 **Artikel:** Wzt art. 4; jaarlijkse Regeling vaststelling standaardpremie en bestuursrechtelijke
-premies (2026: Stcrt. 2025, 40022, art. 1; 2025: Stcrt. 2024, 38887; 2024: Stcrt. 2023, 32413; 2023: Stcrt. 2022, 32017; 2022: Stcrt. 2021, 47872; 2021: Stcrt. 2020, 62033; 2020: Stcrt. 2019, 64399; 2019: Stcrt. 2018, 66728).
+premies (2026: Stcrt. 2025, 40022, art. 1; 2025: Stcrt. 2024, 38887; 2024: Stcrt. 2023, 32413; 2023: Stcrt. 2022, 32017; 2022: Stcrt. 2021, 47872; 2021: Stcrt. 2020, 62033; 2020: Stcrt. 2019, 64399; 2019: Stcrt. 2018, 66728; 2018: Stcrt. 2017, 68107).
 **Status:** draft.
 **Gewoon Nederlands:** De standaardpremie is wat een zorgverzekering volgens de minister
 gemiddeld kost in dat jaar, premie plus verplicht eigen risico. 2026: € 2.119. 2025: € 2.112. 2024: € 1.987. 2023: € 1.889. 2022: € 1.749. 2021: € 1.705. 2020: € 1.642.
@@ -172,7 +176,8 @@ Regeling zorgverzekering art. 6.3.1 lid 9 en bijlage 4 (BWBR0018715, versies 01-
 01-01-2026; vastgesteld bij Stcrt. 2023, 29907, Stcrt. 2024, 35698 en Stcrt. 2025, 38064; 2023: Stcrt. 2022,
 29339, voor vier landen gerectificeerd bij Stcrt. 2022, 32002 vóór de inwerkingtreding; 2022: Stcrt. 2021, 46565, Liechtenstein
 gecorrigeerd bij Stcrt. 2021, 47687; 2021: Stcrt. 2020, 53972; 2020: Stcrt. 2019, 58198, waarvan art. II tegelijk de factor voor
-Duitsland voor 2017–2019 met terugwerkende kracht verlaagde, zonder effect op de zorgtoeslag), in
+Duitsland voor 2017–2019 met terugwerkende kracht verlaagde, zonder effect op de zorgtoeslag; 2019: Stcrt. 2018, 60576; 2018: Stcrt. 2017,
+66088, de laatste tabel naar de oude methode, waarvan art. II tegelijk de factor voor Zweden voor 2017 met terugwerkende kracht opnieuw vaststelde), in
 `parameters/<jaar>.yaml` onder `woonlandfactoren`. Op 2026-10-07 gemist: de vorige run las art. 1–5 en zocht een art. 2a;
 art. 4a staat tussen art. 4 en 5.
 **Status:** draft.
