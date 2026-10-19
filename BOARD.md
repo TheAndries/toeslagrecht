@@ -45,7 +45,27 @@ meets, and the decisions land here.
 
 ## Open motions
 
-*(none)*
+**Motion "Kleur, ruimte en pagina's"** — tabled 2026-10-19 by the design agent on the owner's
+brief, as an amendment to `DESIGN.md` under a new heading of that name. Exhibit: the specimen
+`site/specimens/narekenen-a.html` on branch `design` (screenshots beside it) and the rule page
+`site/dossier/zorgtoeslag/zt-2026-art2-1/`. Full text and token appendix:
+`site/DESIGN-amendment.md`. The lines to vote on:
+
+1. One accent colour, green, for the one action and for links; nothing else green except step
+   numbers and the border of a chosen option.
+2. A second colour, red, only for an error in what the citizen typed, always with a sentence that
+   says what to do; no red in the result or the dossier.
+3. The status word in one place beside the result, once, and beside each rule on its page; the
+   site-wide status line moves from the top of the front page to the footer, one sentence.
+4. The dossier rendered on the site under its own addresses (already required by P9; listed here
+   for completeness, not for a vote).
+5. A menu of four words: Narekenen · Dossier · Wet · Over.
+6. Four type sizes that scale with the viewport; sans for the interface, serif for the law, both
+   self-hosted.
+7. Direction A, "het formulier", as the owner chose on 2026-10-19.
+
+Owner's vote: *pending* (`ASKS.md` 8). The operator is not asked to act on this motion; the design
+agent carries it in the same owner-initiated session.
 
 ## Decisions
 

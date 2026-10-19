@@ -85,7 +85,9 @@ a font name or a pixel size that is not one of these.
 | `--target` | `44px` | minimum height of anything tappable | |
 
 The ratios are computed from the hex values with the WCAG 2.x relative-luminance formula
-(`tools/contrast.py`, run on 2026-10-19). Every text pair is above 4.5:1 and every border or
+(`tools/contrast.py`, run on 2026-10-19). Two sizes are not tokens because CSS cannot read a custom
+property inside a media query: the one breakpoint (720px) and the narrow-gutter threshold (400px)
+stand in `site.css` and `tokens.css` as literals, with a comment. Every text pair is above 4.5:1 and every border or
 focus indicator that carries meaning is above 3:1.
 
 ## Fonts
@@ -137,7 +139,9 @@ checkout (`file://`), from `theandries.github.io/toeslagrecht/` and from `toesla
 | --- | --- | --- |
 | `tools/build.py` (the form) | `/` (`index.html`) | 1 Narekenen |
 | the same form | `/zorgtoeslag.html` | 1 Narekenen — the old checker's address, kept; same page |
-| `law/zorgtoeslag/rules.md` preamble and "Niet gecodeerd", `law/awir/rules.md` preamble, `law/README.md` | `/dossier/` | 2 Dossier index |
+| the rule lists, the links onward | `/dossier/` | 2 Dossier index |
+| `law/zorgtoeslag/rules.md` preamble and "Niet gecodeerd" | `/dossier/zorgtoeslag/` | 2 (about the rules of one toeslag) |
+| `law/awir/rules.md` preamble | `/dossier/awir/` | 2 (about the shared rules) |
 | `law/zorgtoeslag/rules.md`, each `## <id> — <name>` section | `/dossier/zorgtoeslag/<id>/` | 2 rule page |
 | `law/awir/rules.md`, each `## <id> — <name>` section | `/dossier/awir/<id>/` | 2 rule page |
 | `cases/<id>.yaml` with its row in `law/zorgtoeslag/tests/report.md` | `/dossier/voorbeelden/<id>/` | 2 case page |
@@ -214,8 +218,41 @@ A new rule section in `rules.md`, a new parameter year, a new case file or a new
     `DESIGN-BRIEF-2026-10-19.md` and the mockup copied from the owner's Downloads folder beside
     it, so the record has both.
 
+## Sentences written for the Over page (for the owner's B1 check)
+
+The brief asks for the Over page as "a heading and a short paragraph" per section but supplies
+no words. These are the agent's, at B1, and the owner can strike any of them at the checkpoint:
+the three paragraphs under "Wat dit is, en wat niet" and "Wie dit maakt, en hoe"; the five
+one-line explanations of the status words, drawn from `LAW.md`'s definitions; the licence
+paragraph; the contact paragraph (which points to the source as an issue, because no
+e-mail address is set up yet, `ASKS.md` 4). The layouts A, B and C are not mentioned
+(decision 2). The lead sentences of the Dossier, Wet, Voorbeelden and Verschillen indexes, the
+one-line "the text follows in English" notes, and the two textarea instructions are likewise
+the agent's, at B1.
+
+## State at the specimen checkpoint (2026-10-19)
+
+Steps 1-4 of the brief are done on branch `design`; step 5 onward waits for the owner's yes and
+vote (`ASKS.md` 8). Built and measured so far:
+
+- `site/specimens/narekenen-a.html`: the front page filled from `zt-2026-pub-007`, result from
+  `rules.py`; screenshots `narekenen-a-390.png`, `narekenen-a-1280.png` beside it, and the rule page
+  `regel-zt-2026-art2-1-390.png`, `-1280.png`. No branch preview: GitHub Pages builds `main` only.
+- The form in Edge (`tools/formtest.py`): keyboard-only from the skip link to the result; an empty
+  submit gives two error sentences and moves focus to field 1; the network cut after first load, the
+  result renders; the amount equals the specimen's; eight requests, all same-origin (page, two
+  stylesheets, two scripts, three fonts).
+- Parity: 170 cases through `rules.py` and `zorgtoeslag-regels.js`, 0 differences (`build.py check`).
+- Reflow: no horizontal overflow at 320 or 1280 px on any of the thirteen page kinds checked
+  (`tools/shoot.py overflow`).
+- Weight, uncompressed: front page 160 KB with three fonts (page 19.5, tokens 2.8, site.css 13.9,
+  parameters 39.1, rules 17.6, fonts 67.1); gzip-compressed about 89 KB. A rule page 93 KB with
+  fonts (page 9.0). Both under the brief's limits (180 / 120 KB).
+- Contrast: every pair in the token table, `tools/contrast.py`, all pass.
+- Hex values and pixel sizes: none outside `tokens.css` except the two media-query literals.
+
 ## Verification (filled in at step 7)
 
-*Not yet run. Sections to be written: screenshots, the WCAG 2.2 AA audit line by line, reflow,
-offline, weight and timing, addresses, keyboard and accessibility-tree runs, the B1 check,
-the print.*
+*Not yet run in full. Sections to be written after the vote: screenshots of every page kind, the
+WCAG 2.2 AA audit line by line, 400% zoom, throttled-3G timing, every old address, the
+accessibility-tree pass, the B1 check stated as done, the print to PDF.*
