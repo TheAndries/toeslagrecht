@@ -98,3 +98,10 @@ files was changed):
 Recorded as an owner decision in `BOARD.md` (tie-break rule and decision log). The motion of
 2026-10-19 is withdrawn; `site/DESIGN-amendment.md` is the owner's design, waiting for his yes on
 the specimen (`ASKS.md` 8), after which it goes into `DESIGN.md` as an owner decision.
+
+## 2026-10-20 — owner: the specimen is a yes (Ask 8)
+
+**Source:** the owner, Andries, in the owner-initiated design session, 2026-10-20. After one
+change (the space above the page title: first wider, then "use the space between the separator and
+field 1 as a reference; that same space at the top of every page"), verbatim: "This is a yes."
+Recorded in `BOARD.md` and `DESIGN.md` ("Kleur, ruimte en pagina's"); Ask 8 done.
