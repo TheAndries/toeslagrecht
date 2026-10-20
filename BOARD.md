@@ -26,7 +26,9 @@ Disagreement goes to the tie-break and is recorded with both positions.
 
 **Tie-break.** When the seats disagree:
 - the **owner** decides matters of purpose, scope, values, public posture, money, and
-  anything that touches a funder or a public institution;
+  anything that touches a funder or a public institution; **design (colour, space, type,
+  pages, how the site looks) is the owner's alone and is not voted on** (owner decision
+  2026-10-20); the board votes on functionality;
 - the **operator** decides matters of method, encoding, test design, scheduling, the
   classification of a discrepancy, and the ruling on any single dispute.
 
@@ -45,27 +47,7 @@ meets, and the decisions land here.
 
 ## Open motions
 
-**Motion "Kleur, ruimte en pagina's"** — tabled 2026-10-19 by the design agent on the owner's
-brief, as an amendment to `DESIGN.md` under a new heading of that name. Exhibit: the specimen
-`site/specimens/narekenen-a.html` on branch `design` (screenshots beside it) and the rule page
-`site/dossier/zorgtoeslag/zt-2026-art2-1/`. Full text and token appendix:
-`site/DESIGN-amendment.md`. The lines to vote on:
-
-1. One accent colour, green, for the one action and for links; nothing else green except step
-   numbers and the border of a chosen option.
-2. A second colour, red, only for an error in what the citizen typed, always with a sentence that
-   says what to do; no red in the result or the dossier.
-3. The status word in one place beside the result, once, and beside each rule on its page; the
-   site-wide status line moves from the top of the front page to the footer, one sentence.
-4. The dossier rendered on the site under its own addresses (already required by P9; listed here
-   for completeness, not for a vote).
-5. A menu of four words: Narekenen · Dossier · Wet · Over.
-6. Four type sizes that scale with the viewport; sans for the interface, serif for the law, both
-   self-hosted.
-7. Direction A, "het formulier", as the owner chose on 2026-10-19.
-
-Owner's vote: *pending* (`ASKS.md` 8). The operator is not asked to act on this motion; the design
-agent carries it in the same owner-initiated session.
+*(none)*
 
 ## Decisions
 
@@ -76,3 +58,4 @@ agent carries it in the same owner-initiated session.
 | 2026-10-09 | **Owner decision.** Result-page layout: **B, "het verhaal"** (`site/layouts/b.html`), per Ask 3. To be transcribed into `DESIGN.md` (Open design ask) by the operator. | owner | Chosen against A ("de tabel") and C ("de brief") after viewing all three. Two owner notes on look and on the input form in `INBOX.md`. Transcribed into `DESIGN.md` by the operator 2026-10-10; the checker is built on it the same day (`CHANGELOG.md` 2026-10-10). |
 | 2026-10-11 | **Owner decision.** Internal matters — board decisions, the layout choice, design choices, asks, and anything else that is for the board — are never published on the website. They live in the repository files (`BOARD.md`, `DESIGN.md`, `CHANGELOG.md`). The website shows the citizen only what helps the citizen. To be transcribed into `DESIGN.md` by the operator; the section "Hoe de pagina gekozen is" and the links to `site/layouts/` to be removed from the public pages. | owner | Said on 2026-10-11 after opening the live site (Ask 7 done the same day). Verbatim in `INBOX.md`. The layouts stay in the repository as the record of Ask 3. |
 | 2026-10-19 | **Owner decision.** Visual direction of the site: **A, "het formulier"** — white paper, near-black text, one deep green for the one action and for links, grey rules, a numbered form, the result in layout B. Chosen from two mockups (A, het formulier; B, het dossier). The colour, type and page system that follow from it are tabled as the motion "Kleur, ruimte en pagina's" (open motions) and are not binding until voted; the dossier rendered on the site follows from `DESIGN.md` P9 and needs no vote. | owner | Said in the design brief of 2026-10-19 (`DESIGN-BRIEF-2026-10-19.md`; `INBOX.md` 2026-10-19). Built on branch `design` by the design agent in the same owner-initiated session; checkpoint and merge through `ASKS.md`. |
+| 2026-10-20 | **Owner decision.** Design is not a board matter. The board votes on functionality; design (colour, space, type, the page system, aesthetics) is decided by the owner alone. The motion "Kleur, ruimte en pagina's" of 2026-10-19 is withdrawn; its content (`site/DESIGN-amendment.md`) stands as the owner's design, pending only his yes on the specimen (`ASKS.md` 8), and then goes into `DESIGN.md` under that heading as an owner decision. | owner | Said on 2026-10-20 in the owner-initiated design session, verbatim in `INBOX.md`. |

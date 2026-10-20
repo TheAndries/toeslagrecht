@@ -87,3 +87,14 @@ files was changed):
   nagelezen" in the result. The brief says to use the repository's words in its language; the
   site now shows `draft` and explains each word once on the Over page. If the board wants a
   Dutch vocabulary, that is a `LAW.md` matter.
+
+## 2026-10-20 — owner decision: design is the owner's, not the board's
+
+**Source:** the owner, Andries, in the owner-initiated design session, 2026-10-20. Verbatim:
+
+> And the board does not vote on design, kleur ruimte or paginas. Design is fully decided by me.
+> The board only votes on functionality. Design is just aesthetics.
+
+Recorded as an owner decision in `BOARD.md` (tie-break rule and decision log). The motion of
+2026-10-19 is withdrawn; `site/DESIGN-amendment.md` is the owner's design, waiting for his yes on
+the specimen (`ASKS.md` 8), after which it goes into `DESIGN.md` as an owner decision.

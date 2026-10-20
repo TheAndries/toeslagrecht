@@ -1,13 +1,13 @@
 # site/DESIGN-amendment.md — "Kleur, ruimte en pagina's" (draft amendment to `DESIGN.md`)
 
-**Status: draft. Not binding until the owner votes (`BOARD.md`, open motions).** Written by the
+**Status: the owner's design, pending his yes on the specimen (`ASKS.md` 8). Not a board matter: design is decided by the owner alone (`BOARD.md`, owner decision 2026-10-20); the motion of 2026-10-19 is withdrawn.** Written by the
 design agent on branch `design`, owner-initiated session of 2026-10-19, under
 `DESIGN-BRIEF-2026-10-19.md`. Until the vote, `DESIGN.md` stands unchanged. When the vote is
 in, the sections marked *motion* move into `DESIGN.md` under the heading "Kleur, ruimte en
 pagina's" with the date and the decision line; the rest of this file stays here as the
 working record (token values, address map, decisions, verification).
 
-## The motion, in plain lines (what the owner votes on)
+## The design, in plain lines
 
 1. One accent colour, green, for the one action and for links. Nothing else is green except
    the step numbers and the border of a chosen option.
@@ -25,7 +25,7 @@ working record (token values, address map, decisions, verification).
 7. Direction A, "het formulier": white paper, near-black text, grey rules, a numbered form,
    the result in layout B as decided on 2026-10-09.
 
-The token values below are the appendix to the motion, not the motion.
+The token values below are the appendix.
 
 ## Principles, corrected to `DESIGN.md`'s numbering
 
