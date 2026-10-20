@@ -403,6 +403,15 @@ def amount_block(u, jaar: int, rel: str) -> str:
     elif u.tegemoetkoming is None:
         h.append(f'<p class="bedrag-intro">Naar de letter van de wet krijgt u in {jaar}</p><p class="bedrag">niet bepaald door de wet</p>')
         h.append(f'<p>Voor deze situatie zegt de wettekst van {jaar} niet wat de uitkomst is. Hieronder staat waar de tekst ophoudt.</p>')
+    elif getattr(u, "maanden_aanspraak", 12) < 12:
+        m = u.maanden_aanspraak
+        zelfde = u.tegemoetkoming_praktijk_deeljaar == u.tegemoetkoming
+        h.append(f'<p class="bedrag-intro">Naar de letter van de wet krijgt u over {m} maanden van {jaar}</p>'
+                 f'<p class="bedrag">{eur(u.tegemoetkoming, False)} <span class="per-jaar">over die maanden</span></p>')
+        h.append(f'<p class="klein">Berekend {eur(u.aanspraak_jaar)} over het hele jaar; {m}/12 daarvan is {eur(u.aanspraak_periode)}, '
+                 f'afgerond op hele euro’s (Awir art. 14 lid 4). Per maand is dat {eur(u.aanspraak_maand)}. Dienst Toeslagen rondt eerst het '
+                 f'jaarbedrag af en neemt daar {m}/12 van: {eur(u.tegemoetkoming_praktijk_deeljaar, False)}'
+                 + (', hetzelfde bedrag.' if zelfde else ', één euro anders; waar die volgorde in de wet staat, hebben wij niet gevonden.') + '</p>')
     else:
         h.append(f'<p class="bedrag-intro">Naar de letter van de wet krijgt u in {jaar}</p>'
                  f'<p class="bedrag">{eur(u.tegemoetkoming, False)} <span class="per-jaar">per jaar</span></p>')
@@ -475,6 +484,9 @@ class Site:
         hj = f.get("hele_jaar_dezelfde_partner")
         avg = f.get("aanvrager_verdragsgerechtigd")
         pvg = f.get("partner_verdragsgerechtigd")
+        pp = f.get("partner_verzekeringsplicht_niet_nagekomen")
+        pp_val = "ja" if pp is True else "nee" if pp is False else "onbekend" if "partner_verzekeringsplicht_niet_nagekomen" in f else None
+        lid5oud = bool(self.params["zorgtoeslag"].get(jaar_gekozen, {}).get("art2_lid5_oud_aanwezig"))
         js_off = ('<noscript><p class="nojs">Deze berekening gebeurt op uw eigen apparaat en heeft daarvoor JavaScript nodig. '
                   f'Zonder JavaScript kunt u <a href="{rel}dossier/zorgtoeslag/index.html">de regels zelf lezen en narekenen</a>.</p></noscript>')
         return f"""<h1 class="vraag" id="vraag">Hoeveel zorgtoeslag krijg ik in <span id="vraag-jaar">{jaar_gekozen}</span>?</h1>
@@ -513,14 +525,20 @@ class Site:
   <div class="keuze">{radio("partner_verzekerd", "ja", "Ja", pv_val in ("ja", None))}{radio("partner_verzekerd", "nee", "Nee", pv_val == "nee")}{radio("partner_verzekerd", "onbekend", "Weet ik niet", pv_val == "onbekend")}</div>
 </fieldset></div>
 
+<div class="veld alleen-partner alleen-lid5oud" id="veld-pp"{"" if (partner and lid5oud) else " hidden"}><fieldset>
+  <legend class="veld-label"><span class="veld-nr" aria-hidden="true">2c</span>Moest uw partner zich in Nederland verzekeren, maar deed hij of zij dat niet?</legend>
+  <p class="hulp">Alleen voor 2020 en eerder: toen gaf de wet geen zorgtoeslag als uw partner verzekeringsplichtig was en zich niet verzekerde (Wzt art. 2 lid 5, tekst 2020; vervallen per 2021).</p>
+  <div class="keuze">{radio("partner_verzekeringsplicht_niet_nagekomen", "nee", "Nee", pp_val in ("nee", None))}{radio("partner_verzekeringsplicht_niet_nagekomen", "ja", "Ja", pp_val == "ja")}{radio("partner_verzekeringsplicht_niet_nagekomen", "onbekend", "Weet ik niet", pp_val == "onbekend")}</div>
+</fieldset></div>
+
 <div class="veld" id="veld-rg">
   <label class="veld-label" for="rg"><span class="veld-nr" aria-hidden="true">3</span>Uw vermogen op 1 januari, samen met uw partner als u die hebt, in hele euro's</label>
-  <p class="hulp" id="h-rg">De rendementsgrondslag uit box 3: spaargeld, beleggingen en een tweede huis, min schulden, boven het heffingvrije vermogen. Bijvoorbeeld 4500. Laat het leeg als u het niet weet; dan slaat de berekening de vermogenstoets over en zegt zij dat.</p>
+  <p class="hulp" id="h-rg">De rendementsgrondslag uit box 3: al uw spaargeld, beleggingen en een tweede huis, min schulden, op 1 januari. Het hele bedrag, vóór aftrek van het heffingvrije vermogen; voor 2020 trekt de berekening dat zelf af. Bijvoorbeeld 4500. Laat het leeg als u het niet weet; dan slaat de berekening de vermogenstoets over en zegt zij dat.</p>
   <p class="fout" id="f-rg" hidden></p>
   <div class="euro"><span class="euro-teken" aria-hidden="true">€</span><input class="invoer" id="rg" name="rendementsgrondslag" type="text" inputmode="numeric" autocomplete="off" aria-describedby="h-rg"{val("rendementsgrondslag")}></div>
 </div>
 
-<details class="meer" id="meer"{" open" if (avg or pvg or hj is False) else ""}>
+<details class="meer" id="meer"{" open" if (avg or pvg or hj is False or (f.get("maanden_aanspraak") not in (None, 12))) else ""}>
   <summary>Meer situaties: niet het hele jaar dezelfde partner, of wonen buiten Nederland</summary>
   <div class="veld alleen-partner"{"" if partner else " hidden"}><fieldset>
     <legend class="veld-label">Had u het hele jaar dezelfde toeslagpartner?</legend>
@@ -535,6 +553,12 @@ class Site:
     <legend class="veld-label">Geldt dat voor uw partner?</legend>
     <div class="keuze">{radio("partner_verdragsgerechtigd", "nee", "Nee", not pvg)}{radio("partner_verdragsgerechtigd", "ja", "Ja", bool(pvg))}</div>
   </fieldset></div>
+  <div class="veld" id="veld-maanden">
+    <label class="veld-label" for="maanden">In hoeveel maanden van dat jaar had u recht op zorgtoeslag?</label>
+    <p class="hulp" id="h-maanden">Meestal het hele jaar: 12. Was u een deel van het jaar niet in Nederland verzekerd, bijvoorbeeld door een verhuizing naar het buitenland, tel dan de maanden waarin u wel recht had. De wet bepaalt de zorgtoeslag per kalendermaand (Wzt art. 2 lid 5); welke maand meetelt, zegt de tekst niet, dus de berekening neemt uw aantal over.</p>
+    <p class="fout" id="f-maanden" hidden></p>
+    <input class="invoer" id="maanden" name="maanden_aanspraak" type="text" inputmode="numeric" autocomplete="off" aria-describedby="h-maanden" value="{esc(str(f.get("maanden_aanspraak") or 12))}">
+  </div>
   <div class="veld" id="veld-woonland">
     <label class="veld-label" for="woonland">Het woonland</label>
     <p class="fout" id="f-woonland" hidden></p>
@@ -577,7 +601,15 @@ class Site:
     }});
     var j = radio("jaar"); if (j) document.getElementById("vraag-jaar").textContent = j;
     var p = radio("partner") === "ja";
+    var par = PARAMETERS.zorgtoeslag[Number(j)] || {{}};
     form.querySelectorAll(".alleen-partner").forEach(function (el) {{ el.hidden = !p; }});
+    form.querySelectorAll(".alleen-lid5oud").forEach(function (el) {{ el.hidden = !(p && par.art2_lid5_oud_aanwezig); }});
+  }}
+  function maanden() {{
+    var raw = document.getElementById("maanden").value.trim();
+    if (raw === "") return {{ waarde: 12 }};
+    if (!/^\d{{1,2}}$/.test(raw) || Number(raw) < 1 || Number(raw) > 12) return {{ fout: "Vul het aantal maanden in als een getal van 1 tot en met 12." }};
+    return {{ waarde: Number(raw) }};
   }}
   form.addEventListener("change", markeer);
   markeer();
@@ -596,7 +628,7 @@ class Site:
       else veld.querySelectorAll("input").forEach(function (r) {{ r.removeAttribute("aria-invalid"); r.removeAttribute("aria-describedby"); }});
     }}
   }}
-  ["ti", "tip", "rg", "woonland"].forEach(function (id) {{
+  ["ti", "tip", "rg", "woonland", "maanden"].forEach(function (id) {{
     document.getElementById(id).addEventListener("input", function () {{ zetFout(id, ""); }});
   }});
   form.querySelectorAll('input[name="partner"]').forEach(function (r) {{ r.addEventListener("change", function () {{ zetFout("partner", ""); }}); }});
@@ -617,6 +649,11 @@ class Site:
     }} else if (u.tegemoetkoming === null) {{
       h.push('<p class="bedrag-intro">Naar de letter van de wet krijgt u in ' + jaar + '</p><p class="bedrag">niet bepaald door de wet</p>');
       h.push('<p>Voor deze situatie zegt de wettekst van ' + jaar + ' niet wat de uitkomst is. Hieronder staat waar de tekst ophoudt.</p>');
+    }} else if (u.maanden_aanspraak < 12) {{
+      h.push('<p class="bedrag-intro">Naar de letter van de wet krijgt u over ' + u.maanden_aanspraak + ' maanden van ' + jaar + '</p><p class="bedrag">' + bedrag(u.tegemoetkoming, false) + ' <span class="per-jaar">over die maanden</span></p>');
+      h.push('<p class="klein">Berekend ' + bedrag(u.aanspraak_jaar) + ' over het hele jaar; ' + u.maanden_aanspraak + '/12 daarvan is ' + bedrag(u.aanspraak_periode) +
+        ', afgerond op hele euro’s (Awir art. 14 lid 4). Per maand is dat ' + bedrag(u.aanspraak_maand) + '. Dienst Toeslagen rondt eerst het jaarbedrag af en neemt daar ' +
+        u.maanden_aanspraak + '/12 van: ' + bedrag(u.tegemoetkoming_praktijk_deeljaar, false) + (u.tegemoetkoming_praktijk_deeljaar === u.tegemoetkoming ? ', hetzelfde bedrag.' : ', één euro anders; waar die volgorde in de wet staat, hebben wij niet gevonden.') + '</p>');
     }} else {{
       h.push('<p class="bedrag-intro">Naar de letter van de wet krijgt u in ' + jaar + '</p><p class="bedrag">' + bedrag(u.tegemoetkoming, false) + ' <span class="per-jaar">per jaar</span></p>');
       h.push('<p class="klein">Berekend ' + bedrag(u.aanspraak_jaar) + ' per jaar, afgerond op hele euro’s (Awir art. 14 lid 4). ' +
@@ -649,13 +686,14 @@ class Site:
     ev.preventDefault();
     var eerste = null;
     function fout(id, tekst) {{ zetFout(id, tekst); if (!eerste) eerste = id; }}
-    ["ti", "tip", "rg", "woonland", "partner"].forEach(function (id) {{ zetFout(id, ""); }});
+    ["ti", "tip", "rg", "woonland", "maanden", "partner"].forEach(function (id) {{ zetFout(id, ""); }});
     var ti = getal("ti", true, "uw toetsingsinkomen"); if (ti.fout) fout("ti", ti.fout);
     var partnerKeuze = radio("partner");
     if (partnerKeuze === null) fout("partner", "Kies Ja of Nee.");
     var partner = partnerKeuze === "ja";
     var tip = partner ? getal("tip", false, "het inkomen van uw partner") : {{ waarde: null }}; if (tip.fout) fout("tip", tip.fout);
     var rg = getal("rg", false, "uw vermogen"); if (rg.fout) fout("rg", rg.fout);
+    var mnd = maanden(); if (mnd.fout) {{ document.getElementById("meer").open = true; fout("maanden", mnd.fout); }}
     var inv = {{
       jaar: radio("jaar"),
       partner: partner,
@@ -666,7 +704,9 @@ class Site:
       hele_jaar_dezelfde_partner: partner ? jaNee(radio("hele_jaar_dezelfde_partner")) : null,
       aanvrager_verdragsgerechtigd: radio("aanvrager_verdragsgerechtigd") === "ja",
       partner_verdragsgerechtigd: partner ? radio("partner_verdragsgerechtigd") === "ja" : null,
-      woonland: document.getElementById("woonland").value || null
+      woonland: document.getElementById("woonland").value || null,
+      partner_verzekeringsplicht_niet_nagekomen: partner ? jaNee(radio("partner_verzekeringsplicht_niet_nagekomen")) : null,
+      maanden_aanspraak: mnd.waarde
     }};
     if ((inv.aanvrager_verdragsgerechtigd || inv.partner_verdragsgerechtigd) && !inv.woonland) {{
       document.getElementById("meer").open = true;

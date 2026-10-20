@@ -1,0 +1,18 @@
+id: zt-2020-rul-001
+toeslag: zorgtoeslag
+jaar: 2020
+bron:
+  type: ruling
+  publicatie: "ABRvS 17 december 2025, ECLI:NL:RVS:2025:6164 (zaaknr. 202401854/1/A2), procesverloop en r.o. 1: 'Bij besluit van 9 oktober 2021 heeft de Dienst Toeslagen de zorgtoeslag van [appellante] over 2020 vastgesteld op € 1.163,00 en € 87,00 teruggevorderd.' 'Op 26 mei 2021 heeft de Dienst Toeslagen een melding gekregen van de Basisregistratie Inkomensgegevens dat het inkomen van [appellante] in 2020 € 22.070,00 bedraagt. De Dienst Toeslagen heeft op basis hiervan de zorgtoeslag over 2020 definitief berekend.' De uitspraak noemt geen partner; het bedrag past alleen bij een verzekerde zonder partner. Het hoger beroep slaagde alleen op de terugvordering (vertrouwensbeginsel, r.o. 4.3); de vaststelling op € 1.163 staat (r.o. 4.2)"
+  url: https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RVS:2025:6164
+  opgehaald: 2026-10-19
+verified: false
+invoer:
+  partner: false
+  partner_verzekerd: null
+  toetsingsinkomen_aanvrager: "22070"
+  toetsingsinkomen_partner: "0"
+  rendementsgrondslag: null
+verwacht:
+  tegemoetkoming: "1163"
+opmerking: "Definitieve berekening 2020, zonder partner: normpremie = 1,830% × € 21.430,656 + 13,550% × (€ 22.070 − € 21.430,656) = € 392,18 + € 86,63 = € 478,81; € 1.642 − € 478,81 = € 1.163,19 → € 1.163 (Awir art. 14 lid 4). Dat de aanvrager geen toeslagpartner had volgt niet met zoveel woorden uit de uitspraak (zij ontving een Anw-nabetaling en de uitspraak spreekt alleen over haar inkomen), maar wel uit het bedrag: met partner zou het € 1.913 (verzekerde partner) of € 957 zijn geweest. Vermogen noemt de uitspraak niet; de toeslag is toegekend. Met een drempelinkomen van € 21.430 of € 21.431 (DISCREPANCIES.md #1) komt dezelfde € 1.163 uit. Wordt 'verified' zodra een met naam genoemd mens de invoer tegen de uitspraak heeft gelegd (CASES.md; ASKS.md 9)."

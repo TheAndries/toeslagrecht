@@ -1,0 +1,18 @@
+id: zt-2019-rul-001
+toeslag: zorgtoeslag
+jaar: 2019
+bron:
+  type: ruling
+  publicatie: "ABRvS 10 mei 2023, ECLI:NL:RVS:2023:1809 (zaaknr. 202202303/1/A2), r.o. 2: 'Bij het besluit van 6 november 2020, als gehandhaafd bij het besluit van 23 november 2020, heeft de Belastingdienst/Toeslagen de zorgtoeslag van [appellant] over 2019 definitief berekend en vastgesteld op € 1.367,00. Hierbij is uitgegaan van een gezamenlijk toetsingsinkomen van € 27.946,00.' R.o. 1: aanvrager en partner zijn toeslagpartners (Awir art. 3). Het hoger beroep (de eenmalige pensioenuitkering zou over meer jaren verdeeld moeten worden) is ongegrond verklaard; de definitieve berekening staat"
+  url: https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RVS:2023:1809
+  opgehaald: 2026-10-18
+verified: false
+invoer:
+  partner: true
+  partner_verzekerd: true
+  toetsingsinkomen_aanvrager: "27946"
+  toetsingsinkomen_partner: "0"
+  rendementsgrondslag: null
+verwacht:
+  tegemoetkoming: "1367"
+opmerking: "Eerste zaak uit de rechtspraak in het corpus. De uitspraak noemt alleen het gezamenlijke toetsingsinkomen (€ 27.946); de verdeling over beide partners doet voor Wzt art. 2 lid 2 niet ter zake, dus is het hele bedrag bij de aanvrager gezet. Dat de partner verzekerde was volgt niet met zoveel woorden uit de uitspraak, maar wel uit het bedrag: € 1.367 is 2 × € 1.609 − normpremie (€ 1.850,70) = € 1.367,30 → € 1.367 (Awir art. 14 lid 4); bij een niet-verzekerde partner zou het de helft zijn geweest. Vermogen noemt de uitspraak niet; de toeslag is toegekend, dus de vermogenstoets (art. 2a) is doorstaan. Met een op € 20.940 of € 20.941 afgerond drempelinkomen komt dezelfde € 1.367 uit: deze zaak beslist DISCREPANCIES.md #1 niet. Wordt 'verified' zodra een met naam genoemd mens (CASES.md) de invoer tegen de uitspraak heeft gelegd — ASKS.md 9."

@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Verschil #8 — toeslagrecht</title>
+<link rel="stylesheet" href="../../static/tokens.css">
+<link rel="stylesheet" href="../../static/site.css">
+</head>
+<body>
+<a class="skip" href="#inhoud">Naar de inhoud</a>
+<header class="kop">
+  <div class="kop-in">
+    <a class="woordmerk" href="../../index.html">toeslagrecht</a>
+    <nav aria-label="Menu"><ul class="menu"><li><a href="../../index.html">Narekenen</a></li><li><a href="../../dossier/index.html" aria-current="page">Dossier</a></li><li><a href="../../wet/index.html">Wet</a></li><li><a href="../../over/index.html">Over</a></li></ul></nav>
+  </div>
+</header>
+<main id="inhoud" class="pagina">
+<h1>Verschil #8</h1>
+<p class="statusregel">2026-10-12 · zorgtoeslag / 2022 · status <code>encoding</code></p>
+<p class="klein">De tekst hieronder is in het Engels, zoals het logboek het bijhoudt.</p>
+<blockquote class="citaat"><p>Wzt art. 2 lid 5 (BWBR0018451, geldend van 01-01-2026; in 2018 t/m 2020 lid 6, vernummerd per 01-01-2021 bij Stb. 2020, 543, art. III; het jaarbestand zegt het met <code>artikel_maandbepaling</code>).</p><footer><a href="../../dossier/zorgtoeslag/zt-2026-art2-5/index.html">per kalendermaand</a> · <code>zt-2026-art2-5</code> · <span class="status">draft</span></footer></blockquote>
+<dl class="feiten">
+<dt>Date</dt><dd>2026-10-12</dd>
+<dt>Case</dt><dd><code>zt-2022-pub-002</code> (practice month)</dd>
+<dt>Toeslag / year</dt><dd>zorgtoeslag / 2022</dd>
+<dt>Encoding outcome</dt><dd>Practice month as modelled from the 2025 and 2026 tables (#5): floor(whole-euro year amount / 12) = floor(€ 539 / 12) = € 44</dd>
+<dt>Government outcome</dt><dd>Dienst Toeslagen, <em>Berekening zorgtoeslag 2022</em> (TG 082 - 1Z21FD, januari 2022), rekenvoorbeeld 2: "Bedrag per maand € 44,89 (na afronding € 45)" — rounded <em>up</em>, which no flooring model gives. The same leaflet's other examples (€ 111,32 → € 111; € 79,25 → € 79) fit both models. The 2023 leaflet of the same series rounds the month <em>down</em> (€ 154,84 → € 154; € 113,90 → € 113), as do the 2025 leaflet and the 2025/2026 tables</dd>
+<dt>Rule(s)</dt><dd><code>zt-2026-art2-5</code> (the practice field <code>aanspraak_maand_afgerond_praktijk</code>, not law); the text rounds only the year amount (Awir art. 14 lid 4) and determines the month per kalendermaand without rounding (Wzt art. 2 lid 5)</dd>
+<dt>Status</dt><dd><code>encoding</code> — fixed 2026-10-12: the practice model was derived from 2025/2026 evidence and applied to every year; for 2022 the only published evidence says the Dienst rounded the month arithmetically. The 2022 parameter file now carries <code>maand_afronding_praktijk: rekenkundig</code>, cited to this leaflet and marked as practice, and both encodings apply it; 2023–2026 keep the flooring model. Said plainly: this rests on one example (one of three in the leaflet discriminates), and on the inference that the Dienst's method changed between its 2022 and 2023 editions while the text did not; a 2022 beschikking or voorschot table would settle it. Not #5 (whose model is confirmed by 130 table rows for 2025/2026) and not #7 (cents of printed intermediates, not the whole-euro month)</dd>
+<dt>Classification argued in</dt><dd><code>CHANGELOG.md</code> 2026-10-12</dd>
+</dl>
+</main>
+<footer class="voet">
+  <div class="pagina">
+    <p>toeslagrecht · de toeslagenwet als rekenregels die u zelf kunt nalopen</p>
+    <p>Elke regel heeft de status <span class="status">draft</span>: door niemand met vakkennis nagelezen. Geen enkele case is geverifieerd aan een echte beschikking.</p>
+    <p class="voet-links"><a href="../../dossier/index.html">Dossier</a> · <a href="../../betwisten/index.html">Iets betwisten</a> · <a href="../../insturen/index.html">Een beschikking insturen</a> · <a href="../../over/index.html">Over</a> · <a href="https://github.com/TheAndries/toeslagrecht">Bron</a> (MIT / CC BY-SA 4.0) · Gebouwd 2026-10-20</p>
+  </div>
+</footer>
+</body>
+</html>

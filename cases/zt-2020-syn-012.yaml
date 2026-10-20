@@ -1,0 +1,20 @@
+id: zt-2020-syn-012
+toeslag: zorgtoeslag
+jaar: 2020
+bron:
+  type: synthetic
+  publicatie: "Door de operator geconstrueerd op 2026-10-14 uit de tekst van 2020 (Wzt 01-01-2020; Stcrt. 2019, 64399; Stcrt. 2019, 56680; Stb. 2019, 386; Stcrt. 2019, 61842; Wet IB 2001 art. 5.2 en 5.5 tekst 2020). Geen publicatie van de Dienst Toeslagen voor 2020 gelezen: de leaflet Berekening zorgtoeslag 2020 is op 2026-10-14 niet gevonden (tg0821z01fd en z02fd: 404). Synthetic: een controle van de encoding tegen de tekst, geen verificatie (CASES.md)"
+  opgehaald: 2026-10-14
+verified: false
+invoer:
+  partner: true
+  toetsingsinkomen_aanvrager: "20000"
+  toetsingsinkomen_partner: "5000"
+  partner_verzekerd: true
+  rendementsgrondslag: null
+  hele_jaar_dezelfde_partner: true
+  partner_verzekeringsplicht_niet_nagekomen: true
+verwacht:
+  tegemoetkoming: "0"
+  aanspraak_jaar: "0.00"
+opmerking: "Wzt art. 2 lid 5 (tekst 2020, vervallen per 2021): de partner is verzekeringsplichtig en heeft zich niet verzekerd — geen aanspraak, hoewel de berekening van lid 1 € 1.913,13 zou geven (2 × 1.642 − 4,140% × 21.430,656 − 13,55% × (25.000 − 21.430,656)). Zonder lid 5 (2021 en later) bestaat deze uitkomst niet meer."

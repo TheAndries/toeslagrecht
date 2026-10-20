@@ -1,0 +1,18 @@
+id: zt-2020-rul-003
+toeslag: zorgtoeslag
+jaar: 2020
+bron:
+  type: ruling
+  publicatie: "ABRvS 27 november 2024, ECLI:NL:RVS:2024:4888 (zaaknr. 202305332/1/A2), procesverloop en r.o. 1: 'Bij besluit van 7 augustus 2021 heeft de Dienst Toeslagen de zorgtoeslag van [appellant] over het jaar 2020 definitief vastgesteld op € 1.665,00, en € 689,00 aan teveel uitbetaalde voorschotten teruggevorderd.' 'Op 16 juni 2021 heeft de Dienst Toeslagen een melding vanuit de Basisregistratie Inkomen ontvangen, waaruit blijkt dat het toetsingsinkomen van [appellant] en zijn toeslagpartner over 2020 voor hen samen is vastgesteld op € 26.834,00. Hierbij is de afkoopsom betrokken.' Het hoger beroep (de Dienst had moeten waarschuwen dat een afkoopsom klein pensioen meetelt) is ongegrond; de vaststelling staat"
+  url: https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RVS:2024:4888
+  opgehaald: 2026-10-19
+verified: false
+invoer:
+  partner: true
+  partner_verzekerd: true
+  toetsingsinkomen_aanvrager: "26834"
+  toetsingsinkomen_partner: "0"
+  rendementsgrondslag: null
+verwacht:
+  tegemoetkoming: "1665"
+opmerking: "Definitieve berekening 2020, met toeslagpartner: normpremie = 4,140% × € 21.430,656 + 13,550% × (€ 26.834 − € 21.430,656) = € 887,23 + € 732,15 = € 1.619,38; 2 × € 1.642 − € 1.619,38 = € 1.664,62 → € 1.665 (Awir art. 14 lid 4). De uitspraak noemt alleen het gezamenlijke toetsingsinkomen; de verdeling doet voor Wzt art. 2 lid 2 niet ter zake, dus staat het hele bedrag bij de aanvrager. Dat de partner verzekerde was volgt uit het bedrag (de helft bij een niet-verzekerde partner). Vermogen noemt de uitspraak niet. Met € 21.430 of € 21.431 als drempelinkomen (#1) komt dezelfde € 1.665 uit. Wordt 'verified' op dezelfde voet als zt-2019-rul-001 (ASKS.md 9)."

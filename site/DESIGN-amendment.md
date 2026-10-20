@@ -1,6 +1,6 @@
 # site/DESIGN-amendment.md — "Kleur, ruimte en pagina's" (draft amendment to `DESIGN.md`)
 
-**Status: the owner's design, pending his yes on the specimen (`ASKS.md` 8). Not a board matter: design is decided by the owner alone (`BOARD.md`, owner decision 2026-10-20); the motion of 2026-10-19 is withdrawn.** Written by the
+**Status: the owner's design, pending his yes on the specimen (`ASKS.md` 12). Not a board matter: design is decided by the owner alone (`BOARD.md`, owner decision 2026-10-20); the motion of 2026-10-19 is withdrawn.** Written by the
 design agent on branch `design`, owner-initiated session of 2026-10-19, under
 `DESIGN-BRIEF-2026-10-19.md`. Until the vote, `DESIGN.md` stands unchanged. When the vote is
 in, the sections marked *motion* move into `DESIGN.md` under the heading "Kleur, ruimte en
@@ -233,7 +233,7 @@ the agent's, at B1.
 ## State at the specimen checkpoint (2026-10-19)
 
 Steps 1-4 of the brief are done on branch `design`; step 5 onward waits for the owner's yes and
-vote (`ASKS.md` 8). Built and measured so far:
+vote (`ASKS.md` 12). Built and measured so far:
 
 - `site/specimens/narekenen-a.html`: the front page filled from `zt-2026-pub-007`, result from
   `rules.py`; screenshots `narekenen-a-390.png`, `narekenen-a-1280.png` beside it, and the rule page
@@ -278,7 +278,9 @@ vote (`ASKS.md` 8). Built and measured so far:
 
 ### Automated pass and the rest
 
-- **Links.** 207 addresses reached from the front page, 0 broken. Pages not reachable from any link (layouts and specimens excepted): 1: `zorgtoeslag.html`.
+*Rerun 2026-10-20 after merging `main` (the operator's runs 6–11: zorgtoeslag 2018–2022 encoded, two new inputs — `maanden_aanspraak` and the 2020-only `partner_verzekeringsplicht_niet_nagekomen` — ported into the form, the page script and the server-rendered amount block with the operator's own sentences; 253 pages, 205 cases). Compressed transfer as GitHub Pages serves it: front page about 99 KB, a rule page about 72 KB, both under the brief's limits; the uncompressed front page is over 180 KB because the parameter file now carries nine years.*
+
+- **Links.** 251 addresses reached from the front page, 0 broken. Pages not reachable from any link (layouts and specimens excepted): 1: `zorgtoeslag.html`.
 - **Old addresses.** `index.html` 200, `zorgtoeslag.html` 200, `layouts/a.html` 200, `layouts/b.html` 200, `layouts/c.html` 200, `zorgtoeslag-regels.js` 200, `zorgtoeslag-parameters.js` 200.
 - **axe-core 4.10.2 (WCAG 2.0/2.1/2.2 A+AA rules and best practice):**
   - `index.html`: 0 violations
@@ -318,11 +320,11 @@ vote (`ASKS.md` 8). Built and measured so far:
   - `betwisten/index.html`: 320px ok; 400% zoom on 1280px ok
   - `insturen/index.html`: 320px ok; 400% zoom on 1280px ok
   - `over/index.html`: 320px ok; 400% zoom on 1280px ok
-- **Screenshots** in `site/specimens/`: `narekenen-390.png` 21 KB, `narekenen-1280.png` 33 KB, `narekenen-oud-adres-390.png` 21 KB, `narekenen-oud-adres-1280.png` 33 KB, `specimen-390.png` 26 KB, `specimen-1280.png` 36 KB, `dossier-390.png` 17 KB, `dossier-1280.png` 26 KB, `dossier-toeslag-390.png` 29 KB, `dossier-toeslag-1280.png` 52 KB, `regel-390.png` 22 KB, `regel-1280.png` 33 KB, `regel-awir-390.png` 30 KB, `regel-awir-1280.png` 49 KB, `voorbeelden-390.png` 30 KB, `voorbeelden-1280.png` 48 KB, `voorbeeld-390.png` 19 KB, `voorbeeld-1280.png` 29 KB, `wet-390.png` 19 KB, `wet-1280.png` 26 KB, `wet-jaar-390.png` 21 KB, `wet-jaar-1280.png` 36 KB, `wet-wijzigingen-390.png` 22 KB, `wet-wijzigingen-1280.png` 32 KB, `wet-bronnen-390.png` 25 KB, `wet-bronnen-1280.png` 38 KB, `verschillen-390.png` 21 KB, `verschillen-1280.png` 35 KB, `verschil-390.png` 21 KB, `verschil-1280.png` 41 KB, `betwisten-390.png` 23 KB, `betwisten-1280.png` 33 KB, `insturen-390.png` 23 KB, `insturen-1280.png` 31 KB, `over-390.png` 25 KB, `over-1280.png` 39 KB.
+- **Screenshots** in `site/specimens/`: `narekenen-390.png` 20 KB, `narekenen-1280.png` 33 KB, `narekenen-oud-adres-390.png` 20 KB, `narekenen-oud-adres-1280.png` 33 KB, `specimen-390.png` 24 KB, `specimen-1280.png` 36 KB, `dossier-390.png` 18 KB, `dossier-1280.png` 27 KB, `dossier-toeslag-390.png` 31 KB, `dossier-toeslag-1280.png` 56 KB, `regel-390.png` 22 KB, `regel-1280.png` 33 KB, `regel-awir-390.png` 29 KB, `regel-awir-1280.png` 61 KB, `voorbeelden-390.png` 30 KB, `voorbeelden-1280.png` 56 KB, `voorbeeld-390.png` 19 KB, `voorbeeld-1280.png` 29 KB, `wet-390.png` 22 KB, `wet-1280.png` 30 KB, `wet-jaar-390.png` 21 KB, `wet-jaar-1280.png` 36 KB, `wet-wijzigingen-390.png` 22 KB, `wet-wijzigingen-1280.png` 37 KB, `wet-bronnen-390.png` 25 KB, `wet-bronnen-1280.png` 45 KB, `verschillen-390.png` 21 KB, `verschillen-1280.png` 35 KB, `verschil-390.png` 21 KB, `verschil-1280.png` 41 KB, `betwisten-390.png` 23 KB, `betwisten-1280.png` 33 KB, `insturen-390.png` 23 KB, `insturen-1280.png` 31 KB, `over-390.png` 25 KB, `over-1280.png` 39 KB.
 - **Weight and timing:**
-  - `index.html`: 7 requests, 130 KB uncompressed, load event 3.2 s, network idle 3.7 s (slow 3G: 400 kbit/s, 400 ms latency, cache off)
-  - `dossier/zorgtoeslag/zt-2026-art2-1/index.html`: 6 requests, 90 KB uncompressed, load event 1.2 s, network idle 3.5 s (slow 3G: 400 kbit/s, 400 ms latency, cache off)
-- **Print.** `site/specimens/narekenen-a.pdf`, 47 KB, A4, from the specimen with `@media print`.
+  - `index.html`: 7 requests, 214 KB uncompressed, load event 4.9 s, network idle 5.4 s (slow 3G: 400 kbit/s, 400 ms latency, cache off)
+  - `dossier/zorgtoeslag/zt-2026-art2-1/index.html`: 6 requests, 96 KB uncompressed, load event 3.0 s, network idle 3.5 s (slow 3G: 400 kbit/s, 400 ms latency, cache off)
+- **Print.** `site/specimens/narekenen-a.pdf`, 54 KB, A4, from the specimen with `@media print`.
 
 - **Offline.** `tools/formtest.py`: the network is cut after the first load; the form submits and the
   result renders; the amount equals the server-rendered specimen's; the requests are the page, two
@@ -361,6 +363,16 @@ vote (`ASKS.md` 8). Built and measured so far:
   - text: "2024"
   - radio "2023"
   - text: "2023"
+  - radio "2022"
+  - text: "2022"
+  - radio "2021"
+  - text: "2021"
+  - radio "2020"
+  - text: "2020"
+  - radio "2019"
+  - text: "2019"
+  - radio "2018"
+  - text: "2018"
 - text: Uw toetsingsinkomen in dat jaar, in hele euro's
 - paragraph: "Uw inkomen zoals de Belastingdienst het voor dat jaar vaststelt: meestal het verzamelinkomen uit uw aangifte, anders uw loon. Bijvoorbeeld 28000."
 - textbox "Uw toetsingsinkomen in dat jaar, in hele euro's"
@@ -372,7 +384,7 @@ vote (`ASKS.md` 8). Built and measured so far:
   - radio "Nee"
   - text: Nee
 - text: Uw vermogen op 1 januari, samen met uw partner als u die hebt, in hele euro's
-- paragraph: "De rendementsgrondslag uit box 3: spaargeld, beleggingen en een tweede huis, min schulden, boven het heffingvrije vermogen. Bijvoorbeeld 4500. Laat het leeg als u het niet weet; dan slaat de berekening de vermogenstoets over en zegt zij dat."
+- paragraph: "De rendementsgrondslag uit box 3: al uw spaargeld, beleggingen en een tweede huis, min schulden, op 1 januari. Het hele bedrag, vóór aftrek van het heffingvrije vermogen; voor 2020 trekt de berekening dat zelf af. Bijvoorbeeld 4500. Laat het leeg als u het niet weet; dan slaat de berekening de vermogenstoets over en zegt zij dat."
 - textbox "Uw vermogen op 1 januari, samen met uw partner als u die hebt, in hele euro's"
 - group: "▸ Meer situaties: niet het hele jaar dezelfde partner, of wonen buiten Nederland"
 - paragraph: Niets van wat u invult verlaat uw telefoon of computer.
@@ -473,25 +485,23 @@ vote (`ASKS.md` 8). Built and measured so far:
       - link "De wet in 2023":
         - /url: ../../../wet/2023/index.html
       - text: BWBR0018451, geldend van 01-01-2023 t/m 31-12-2023 (verbatim gelezen 2026-10-11)
-  - heading "Voorbeelden die deze regel testen" [level=2]
-  - list:
     - listitem:
-      - link "zt-2023-pub-001":
-        - /url: ../../../dossier/voorbeelden/zt-2023-pub-001/index.html
-      - text: 2023 · published · FAIL
+      - link "De wet in 2022":
+        - /url: ../../../wet/2022/index.html
+      - text: BWBR0018451, geldend van 01-01-2022 t/m 31-12-2022 (verbatim gelezen 2026-10-12)
     - listitem:
-      - link "zt-2023-pub-002":
-        - /url: ../../../dossier/voorbeelden/zt-2023-pub-002/index.html
-      - text: 2023 · published · FAIL
+      - link "De wet in 2021":
+        - /url: ../../../wet/2021/index.html
+      - text: BWBR0018451, geldend van 01-01-2021 t/m 31-12-2021 (verbatim gelezen 2026-10-13)
     - listitem:
-      - link "zt-2023-pub-003":
-        - /url: ../../../dossier/voorbeelden/zt-2023-pub-003/index.html
-      - text: 2023 · published · FAIL
+      - link "De wet in 2020":
+        - /url: ../../../wet/2020/index.html
+      - text: BWBR0018451, geldend van 01-01-2020 (verbatim gelezen 2026-10-14)
     - listitem:
-      - link "zt-2023-pub-004":
-        - /url: ../../../dossier/voorbeelden/zt-2023-pub-004/index.html
-      - text: 2023 · published · PASS
+      - link "De wet in 2019":
+        - /url: ../../../wet/2019/index.html
+      - text: BWBR0018451, geldend van 01-01-2019 t/m 31-12-2019 (verbatim gelezen 2026-10-18)
     - listitem:
-      - link "zt-2023-pub-005":
-        - /url: ../../../dossier/voorbeelden/zt-2023-pub-005/index.ht
+      - link "De wet in 2018":
+        - /url: ../../../wet/2018/ind
 ```

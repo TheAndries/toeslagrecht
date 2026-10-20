@@ -35,6 +35,17 @@ Everything follows from that.
    cases that test it, the discrepancies it appears in, the disputes on it. The record is
    not hidden behind the checker; the checker is the door to the record.
 
+## Internal matters stay in the repository
+
+**Owner decision of 2026-10-11 (`BOARD.md`, Decisions), transcribed 2026-10-12.** Board decisions, the
+layout choice, design choices, asks, and anything else that is for the board are never published on the
+website. They live in the repository files (`BOARD.md`, `DESIGN.md`, `CHANGELOG.md`, `ASKS.md`). The
+website shows the citizen only what helps the citizen: the checker, the law, the cases, the discrepancy
+log, the disputes, and how to submit or dispute. Consequences applied the same day: the section "Hoe de
+pagina gekozen is" and every link to `site/layouts/` were removed from the public pages; `site/layouts/`
+stays in the repository as the record of Ask 3 but is removed from the deployed site by the Pages
+workflow. Binding under P10.
+
 ## Not permitted
 
 Ads. Sponsorship. Pop-ups. Chat widgets. Newsletter interrupts. "Share" buttons. Urgency
@@ -58,7 +69,7 @@ three ways — and he chooses. That choice is recorded here and becomes binding.
 
 ## Kleur, ruimte en pagina's
 
-**Owner decision of 2026-10-20 (`BOARD.md`, Decisions; Ask 8), on the owner's brief of 2026-10-19
+**Owner decision of 2026-10-20 (`BOARD.md`, Decisions; Ask 12), on the owner's brief of 2026-10-19
 (`DESIGN-BRIEF-2026-10-19.md`). Design is the owner's alone; the board does not vote on it.**
 The owner saw the specimen (`site/specimens/narekenen-a.html`, the front page filled from
 `zt-2026-pub-007`, and the rule page `zt-2026-art2-1`), asked for one change (the space above the
@@ -93,14 +104,15 @@ taken in building it and the verification are in `site/DESIGN-amendment.md`, whi
 record of this section. A change to a colour, a size or a spacing is a change to `tokens.css` and a
 line here; the owner decides it.
 
-**Verification (2026-10-20, branch `design`, before the merge; the full record is in
-`site/DESIGN-amendment.md`, "Verification").** axe-core 4.10.2 with the WCAG 2.0/2.1/2.2 A and AA
-rules: 0 violations on all 18 pages checked, one of every kind. Reflow: no horizontal scroll at
-320 px or at 400% zoom on any of them. Keyboard-only run through the form to the result, with the
-network cut after first load: the result renders, the amount equals the server-rendered specimen,
-seven same-origin requests and nothing else. Slow 3G (400 kbit/s, 400 ms), cache off: front page
-130 KB in 7 requests, loaded in 3.2 s; a rule page 90 KB in 6 requests, 1.2 s. All 207 addresses
-reachable from the front page, 0 broken links; every address the site served before still answers.
-Contrast of every pair measured and passing. Every sentence in the site's own voice checked at B1.
-The result printed to PDF (`site/specimens/narekenen-a.pdf`). Screenshots of every page kind at
-390 and 1280 px in `site/specimens/`.
+**Verification (2026-10-20, branch `design`, after merging `main` and before the merge into it; the full
+record is in `site/DESIGN-amendment.md`, "Verification").** axe-core 4.10.2 with the WCAG 2.0/2.1/2.2 A and
+AA rules: 0 violations on all 18 pages checked, one of every kind. Reflow: no horizontal scroll at 320 px or
+at 400% zoom on any of them. Keyboard-only run through the form to the result, with the network cut after
+first load: the result renders, the amount equals the server-rendered specimen, seven same-origin requests
+and nothing else. Slow 3G (400 kbit/s, 400 ms), cache off: front page 214 KB uncompressed
+(about 99 KB as served, compressed) in 7 requests, loaded in 4.9 s; a rule
+page 96 KB (about 72 KB compressed) in 6 requests, 3.0 s.
+All 251 addresses reachable from the front page, 0 broken links; every address the site served before
+still answers. Both encodings agree on all 205 cases. Contrast of every pair measured and passing. Every
+sentence in the site's own voice checked at B1. The result printed to PDF
+(`site/specimens/narekenen-a.pdf`). Screenshots of every page kind at 390 and 1280 px in `site/specimens/`.

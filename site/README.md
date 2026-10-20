@@ -24,6 +24,9 @@ Source, not generated:
   with the same rule ids, exact BigInt arithmetic. `tools/build.py check` runs every case through both.
 - `static/tokens.css` (every colour, size and spacing), `static/site.css` (the components), `fonts/`
   (Source Sans 3, Source Serif 4, subset, OFL), `specimens/components.html`.
-- `layouts/` — the three layouts shown for Ask 3, kept as the record of the choice; not linked.
+- `layouts/` — the three layouts shown for Ask 3, kept as the record of the choice; not linked, and removed
+  from the deployed artifact by the Pages workflow (owner decision 2026-10-11).
+- `CNAME` — the custom domain, kept with the site (GitHub ignores it for a workflow deployment; the domain
+  is set in the Pages settings).
 
-Published by `.github/workflows/pages.yml` on every push to `main`.
+Published at `https://toeslagrecht.nl/` by `.github/workflows/pages.yml` on every push to `main` that touches `site/`.

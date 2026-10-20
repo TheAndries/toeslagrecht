@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Verschil #10 — toeslagrecht</title>
+<link rel="stylesheet" href="../../static/tokens.css">
+<link rel="stylesheet" href="../../static/site.css">
+</head>
+<body>
+<a class="skip" href="#inhoud">Naar de inhoud</a>
+<header class="kop">
+  <div class="kop-in">
+    <a class="woordmerk" href="../../index.html">toeslagrecht</a>
+    <nav aria-label="Menu"><ul class="menu"><li><a href="../../index.html">Narekenen</a></li><li><a href="../../dossier/index.html" aria-current="page">Dossier</a></li><li><a href="../../wet/index.html">Wet</a></li><li><a href="../../over/index.html">Over</a></li></ul></nav>
+  </div>
+</header>
+<main id="inhoud" class="pagina">
+<h1>Verschil #10</h1>
+<p class="statusregel">2026-10-20 · zorgtoeslag / 2023 · status <code>government</code></p>
+<p class="klein">De tekst hieronder is in het Engels, zoals het logboek het bijhoudt.</p>
+<blockquote class="citaat"><p>Wzt art. 2 lid 5 (BWBR0018451, geldend van 01-01-2026; in 2018 t/m 2020 lid 6, vernummerd per 01-01-2021 bij Stb. 2020, 543, art. III; het jaarbestand zegt het met <code>artikel_maandbepaling</code>).</p><footer><a href="../../dossier/zorgtoeslag/zt-2026-art2-5/index.html">per kalendermaand</a> · <code>zt-2026-art2-5</code> · <span class="status">draft</span></footer></blockquote>
+<blockquote class="citaat"><p>Awir art. 14 lid 4: "Het bedrag van de tegemoetkoming wordt rekenkundig afgerond op hele euro's." (BWBR0018472, geldend van 01-01-2026; dezelfde tekst in de versies van 01-01-2025 en 01-01-2024, verbatim gelezen 2026-10-08 en 2026-10-09. De wetstechnische informatie van art. 14 vermeldt geen enkele wijziging van het artikel, geraadpleegd 2026-10-09.) De bedragen van art. 7 lid 3, 4 en 6 en art. 26a per jaar staan in <code>parameters/&lt;jaar&gt;.yaml</code> (2024, 2025: Stcrt. 2024, 38492; 2026: Stcrt. 2025, 40487; 2023: tekst van 01-01-2023, verbatim gelezen 2026-10-11, ontstaan uit Stcrt. 2022, 32674; 2022: Stcrt. 2021, 48308; 2021: tekst van 01-01-2021, verbatim gelezen 2026-10-13 — het eerste jaar van de rendementsgrondslag-toets van art. 7 lid 3, Wet aanpassing box 3, Stb. 2020, 546, art. III, en lid 6 uit Stcrt. 2020, 64406; 2020: tekst van 01-01-2020, verbatim gelezen 2026-10-14 — art. 7 lid 3 noemde toen geen bedrag maar ontzegde de tegemoetkoming zodra voordeel uit sparen en beleggen in aanmerking werd genomen, lid 6 € 4.964); de zorgtoeslag gebruikt ze niet (Wzt art. 3 lid 1; in 2020 t/m 2024 art. 2a lid 1).</p><footer><a href="../../dossier/awir/awir-2026-art14-4/index.html">afronding van de tegemoetkoming</a> · <code>awir-2026-art14-4</code> · <span class="status">draft</span></footer></blockquote>
+<dl class="feiten">
+<dt>Date</dt><dd>2026-10-20</dd>
+<dt>Case</dt><dd><code>zt-2023-rul-002</code> (definitieve berekening over 11 maanden)</dd>
+<dt>Toeslag / year</dt><dd>zorgtoeslag / 2023</dd>
+<dt>Encoding outcome</dt><dd>€ 991: the year amount from the text, € 1.081,61, × 11/12 = € 991,48, rounded once as the tegemoetkoming (Awir art. 14 lid 4)</dd>
+<dt>Government outcome</dt><dd>€ 992: Dienst Toeslagen, as quoted in Rechtbank Midden-Nederland 2 juni 2026, ECLI:NL:RBMNE:2026:4437, r.o. 5 and 11 (definitieve berekening of 05-09-2025 on a jaarinkomen of € 30.763; the aanvrager left the Netherlands on 10-08-2023). Reproduced to the euro only by rounding the year amount first: € 1.082 × 11/12 = € 991,83 → € 992. The other amount of the same ruling (<code>zt-2023-rul-003</code>, € 1.703) is 11/12 of the year amount under either order and fixes the month count at 11</dd>
+<dt>Rule(s)</dt><dd><code>zt-2026-art2-5</code> (Wzt art. 2 lid 5: 'voor iedere kalendermaand afzonderlijk bepaald' — no rounding named), <code>awir-2026-art14-4</code> (Awir art. 14 lid 4: 'Het bedrag van de tegemoetkoming wordt rekenkundig afgerond op hele euro's' — the tegemoetkoming, once)</dd>
+<dt>Status</dt><dd><code>government</code></dd>
+<dt>Classification argued in</dt><dd>2026-10-20 (<code>CHANGELOG.md</code>): the text rounds the tegemoetkoming and names no rounding of the year amount before it is split into months; the Dienst's amount requires one. The same shape as #1 (the drempelinkomen, a figure the text names unrounded, rounded by the Dienst) and classified the same way, with the same caveat said plainly: one ruling, one amount, one euro. No regeling exists under Wzt art. 2 lid 6 that could prescribe the order (wetstechnische informatie of art. 2, checked 2026-10-20). The encoding gives the text's amount as <code>tegemoetkoming</code>, the Dienst's as <code>tegemoetkoming_praktijk_deeljaar</code>, and the checker says when they differ. A second part-year beschikking that turns on the order (a leaflet example, an official case) would confirm or overturn this; if the Dienst's method is found written in a beleidsregel, the entry is re-argued. <strong>How the test counts once the case is verified:</strong> the case keeps the Dienst's € 992 as its expected outcome (<code>CASES.md</code>: the government outcome is what a case records); the encoding is right to differ, under this entry; so the check treats a verified failure that <code>DISCREPANCIES.md</code> classifies <code>government</code> on exactly that field as explained, not blocking — recorded here before it can happen, so the rule is not written when it is needed.</dd>
+</dl>
+</main>
+<footer class="voet">
+  <div class="pagina">
+    <p>toeslagrecht · de toeslagenwet als rekenregels die u zelf kunt nalopen</p>
+    <p>Elke regel heeft de status <span class="status">draft</span>: door niemand met vakkennis nagelezen. Geen enkele case is geverifieerd aan een echte beschikking.</p>
+    <p class="voet-links"><a href="../../dossier/index.html">Dossier</a> · <a href="../../betwisten/index.html">Iets betwisten</a> · <a href="../../insturen/index.html">Een beschikking insturen</a> · <a href="../../over/index.html">Over</a> · <a href="https://github.com/TheAndries/toeslagrecht">Bron</a> (MIT / CC BY-SA 4.0) · Gebouwd 2026-10-20</p>
+  </div>
+</footer>
+</body>
+</html>
