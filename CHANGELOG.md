@@ -2,6 +2,40 @@
 
 Newest first. What was done, decided, and got wrong.
 
+## 2026-10-20 — owner session: the design branch merged; the site in direction A, the dossier rendered on the site
+
+Owner-initiated session with the design agent (not a scheduled run; nothing here was filed for the routine).
+On the owner's brief of 2026-10-19 (`DESIGN-BRIEF-2026-10-19.md`, filed verbatim; mockup beside it) the
+agent built branch `design` in four steps, stopped at a specimen checkpoint, and merged on the owner's yes.
+
+- **Owner decisions** (`BOARD.md`): direction A, *het formulier* (2026-10-19); design is the owner's alone
+  and is not voted on by the board, which votes on functionality (2026-10-20); the specimen is a yes after one
+  change, the space above every page title equals the space above a field (2026-10-20); merge (2026-10-20).
+  Transcribed into `DESIGN.md` under "Kleur, ruimte en pagina's" with the verification.
+- **What changed on the site.** The front page is the form (the old `zorgtoeslag.html` serves the same page);
+  the result in layout B with the article, the status word and the arithmetic in a serif margin note; one
+  green, one red (errors only), four type sizes, every value a token in `site/static/tokens.css`; self-hosted
+  Source Sans 3 and Source Serif 4, subset, 116 KB. The dossier is rendered on the site by `tools/render.py`
+  (called by `tools/build.py build`): one page per rule (`/dossier/<toeslag>/<id>/`), per case
+  (`/dossier/voorbeelden/<id>/`), per year of the law (`/wet/<jaar>/`), per discrepancy (`/verschillen/<n>/`),
+  plus `/wet/wijzigingen/`, `/wet/bronnen/`, `/betwisten/`, `/insturen/` (the protocols verbatim, in English, with
+  a textarea that sends nothing) and `/over/`. GitHub is one "Bron" link in the footer and one on the Over page.
+  The old checker template `tools/zorgtoeslag.template.html` is removed; `site/layouts/` are no longer
+  regenerated and stay as the record of Ask 3. Nothing in `law/` or the governing protocols changed.
+- **Merged from `main` before the merge:** the operator's runs 6–11 (zorgtoeslag 2018–2022, the inputs
+  `maanden_aanspraak` and `partner_verzekeringsplicht_niet_nagekomen`, the part-year result); both ported into
+  the new form with the operator's own sentences. Asks: the agent's asks renumbered 12 (specimen, done) and 13
+  (merge, done); Ask 11 (the brief) answered.
+- **Verification** (`DESIGN.md`, in full in `site/DESIGN-amendment.md`): axe-core 0 violations on 18 pages, one
+  of every kind; no horizontal scroll at 320 px or 400% zoom; keyboard-only and offline form run equal to the
+  server-rendered specimen; slow-3G timing; 251 addresses reachable, 0 broken; every old address answers; both
+  encodings agree on all 205 cases; contrast measured; B1 check; print to PDF. Tools: `tools/verify.py`,
+  `tools/formtest.py`, `tools/shoot.py`, `tools/contrast.py`.
+- **For the board** (`INBOX.md` 2026-10-19): the protocols and the discrepancy log are rendered in English;
+  `law/` holds no article-by-article act text (the Wet year pages render the parameters with their articles,
+  sources and quoted texts); the status words stay the repository's English words, explained on the Over page.
+- **Live:** checked 2026-10-20 08:54 UTC: https://toeslagrecht.nl/static/tokens.css answers 200 with the new tokens, https://toeslagrecht.nl/dossier/zorgtoeslag/zt-2026-art2-1/ answers 200 (title: aanspraak), the front page is the form, and /layouts/b.html is 404 as the workflow intends.
+
 ## 2026-10-20 — eleventh run: the part-year rule encoded from Wzt art. 2 lid 5, discrepancy #9 closed and #10 opened on the order of rounding, an owner mockup received outside the inbox, Ask 11
 
 Eleventh run of routine `trig_012xyD5r5rxFDCjfHbZ58Kib`. Model as served: `claude-fable-5-1`, the same as the previous

@@ -116,3 +116,7 @@ All 251 addresses reachable from the front page, 0 broken links; every address t
 still answers. Both encodings agree on all 205 cases. Contrast of every pair measured and passing. Every
 sentence in the site's own voice checked at B1. The result printed to PDF
 (`site/specimens/narekenen-a.pdf`). Screenshots of every page kind at 390 and 1280 px in `site/specimens/`.
+
+**Merged 2026-10-20.** The owner answered Ask 13 ("Design branch complete; verification in `DESIGN.md`.
+Merge?") with "Yes go ahead and merge." Branch `design` merged into `main` the same day (merge commit
+on `main`), after `main` (the operator's runs 6–11) was merged into it once more. Live check: checked 2026-10-20 08:54 UTC: https://toeslagrecht.nl/static/tokens.css answers 200 with the new tokens, https://toeslagrecht.nl/dossier/zorgtoeslag/zt-2026-art2-1/ answers 200 (title: aanspraak), the front page is the form, and /layouts/b.html is 404 as the workflow intends.
