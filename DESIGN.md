@@ -92,3 +92,15 @@ The token values, the fifteen components, the address map from `law/` to the sit
 taken in building it and the verification are in `site/DESIGN-amendment.md`, which is the working
 record of this section. A change to a colour, a size or a spacing is a change to `tokens.css` and a
 line here; the owner decides it.
+
+**Verification (2026-10-20, branch `design`, before the merge; the full record is in
+`site/DESIGN-amendment.md`, "Verification").** axe-core 4.10.2 with the WCAG 2.0/2.1/2.2 A and AA
+rules: 0 violations on all 18 pages checked, one of every kind. Reflow: no horizontal scroll at
+320 px or at 400% zoom on any of them. Keyboard-only run through the form to the result, with the
+network cut after first load: the result renders, the amount equals the server-rendered specimen,
+seven same-origin requests and nothing else. Slow 3G (400 kbit/s, 400 ms), cache off: front page
+130 KB in 7 requests, loaded in 3.2 s; a rule page 90 KB in 6 requests, 1.2 s. All 207 addresses
+reachable from the front page, 0 broken links; every address the site served before still answers.
+Contrast of every pair measured and passing. Every sentence in the site's own voice checked at B1.
+The result printed to PDF (`site/specimens/narekenen-a.pdf`). Screenshots of every page kind at
+390 and 1280 px in `site/specimens/`.

@@ -872,7 +872,7 @@ class Site:
                           ["| " + " | ".join(r.get(h, "") for h in self.ch_head) + " |" for r in self.ch_rows]), rel2),
              '</div>']
         self.out("wet/wijzigingen/index.html", page("De wijzigingen in de wet", "\n".join(b), rel2, "Wet", self.site_status))
-        b = ['<h1>De bronnen</h1>', '<div class="prose">', md(strip_title((ROOT / "law" / "SOURCES.md").read_text(encoding="utf-8")), rel2, shift=1), '</div>']
+        b = ['<h1>De bronnen</h1>', '<div class="prose">', md(strip_title((ROOT / "law" / "SOURCES.md").read_text(encoding="utf-8")), rel2, shift=0), '</div>']
         self.out("wet/bronnen/index.html", page("De bronnen", "\n".join(b), rel2, "Wet", self.site_status))
 
     def year_page(self, j: int) -> None:
@@ -977,7 +977,7 @@ class Site:
         rel = "../"
         text = strip_title((ROOT / src).read_text(encoding="utf-8"))
         b = [f'<h1>{esc(title)}</h1>', f'<p class="lead">{lead}</p>',
-             '<div class="prose">', md(text, rel, shift=1), '</div>',
+             '<div class="prose">', md(text, rel, shift=0), '</div>',
              '<h2>De tekst om te sturen</h2>', f'<p>{uitleg}</p>',
              f'<label class="veld-label" for="tekst">Uw tekst</label>',
              f'<textarea class="tekstvak" id="tekst" rows="14" spellcheck="false">{esc(template)}</textarea>',
