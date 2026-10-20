@@ -20,7 +20,7 @@ body { margin: 0; background: var(--paper); color: var(--ink); font-size: var(--
   line-height: var(--leading); hyphens: manual; overflow-wrap: break-word; }
 @media (max-width: 720px) { body { hyphens: auto; } }
 .pagina { max-width: var(--page); margin: 0 auto; padding: 0 var(--gutter); }
-main { display: block; padding: var(--s-5) 0 var(--s-4); }
+main.pagina { display: block; padding-top: var(--kop-ruimte); padding-bottom: var(--s-4); }
 a { color: var(--green); text-decoration: underline; text-underline-offset: var(--underline-offset); }
 a:hover { color: var(--green-ink); }
 :focus-visible { outline: var(--outline) solid var(--focus); outline-offset: var(--outline-offset); }

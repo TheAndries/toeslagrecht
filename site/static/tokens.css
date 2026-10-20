@@ -38,6 +38,7 @@
   --page-wide: 1040px;       /* dossier index pages may use it */
   --gutter: 1.5rem;          /* 1rem under 400px */
   --s-1: 0.5rem; --s-2: 1rem; --s-3: 1.5rem; --s-4: 2rem; --s-5: 3rem; --s-6: 4rem;
+  --kop-ruimte: 4.5rem;      /* the space between the menu's hairline and the page title; owner, 2026-10-20 */
   --radius: 4px;
   --target: 44px;            /* minimum height of anything tappable; WCAG 2.2 asks 24, the form gets 44 */
   --hairline: 1px;
@@ -52,4 +53,5 @@
   --pad-knop: 1.75rem;       /* the button's side padding (28px) */
   --mono: ui-monospace, 'Cascadia Mono', Consolas, monospace;   /* code in the dossier only */
 }
+@media (max-width: 720px) { :root { --kop-ruimte: 3rem; } }
 @media (max-width: 400px) { :root { --gutter: 1rem; } }
