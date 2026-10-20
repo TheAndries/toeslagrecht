@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Iets betwisten — toeslagrecht</title>
+<link rel="stylesheet" href="../static/tokens.css">
+<link rel="stylesheet" href="../static/site.css">
+</head>
+<body>
+<a class="skip" href="#inhoud">Naar de inhoud</a>
+<header class="kop">
+  <div class="kop-in">
+    <a class="woordmerk" href="../index.html">toeslagrecht</a>
+    <nav aria-label="Menu"><ul class="menu"><li><a href="../index.html">Narekenen</a></li><li><a href="../dossier/index.html" aria-current="page">Dossier</a></li><li><a href="../wet/index.html">Wet</a></li><li><a href="../over/index.html">Over</a></li></ul></nav>
+  </div>
+</header>
+<main id="inhoud" class="pagina">
+<h1>Iets betwisten</h1>
+<p class="lead">Iedereen mag een regel betwisten, onder eigen naam en met een bron. Het protocol hieronder is in het Engels, zoals het dossier het bijhoudt.</p>
+<div class="prose">
+<p>How anyone argues with an encoding.</p>
+<p><strong>Status: binding under <code>CHARTER.md</code> P7. Amendable only by board decision.</strong></p>
+<hr>
+<h2>What can be disputed</h2>
+<p>Any rule in <code>law/</code>, any parameter, any classification in the discrepancy log, any case's expected outcome. Two kinds:</p>
+<ul><li><strong>Arithmetic</strong> — the code does not compute what <code>rules.md</code> says. Checked by test first.</li><li><strong>Application</strong> — this is not what the article says, or not how it is applied; the beleidsregel, the ruling, or the practice differs. This is the kind that matters.</li></ul>
+<h2>Who may dispute</h2>
+<p>Anyone, under their real name, with role or affiliation if they wish. No credential is checked. The filter is the citation: a dispute without at least one source — an article, a beleidsregel, an ECLI, or an anonymised decision — is returned with a one-line reason and not published. Anonymous disputes are not accepted.</p>
+<h2>What a dispute contains</h2>
+<ol><li>The rule's or entry's permanent id.</li><li>What is contested, quoted.</li><li>The alternative, stated as precisely as the rule states itself — ideally as the number or condition the disputant thinks is right.</li><li>At least one source.</li><li>Optionally, a case that would show the difference.</li></ol>
+<h2>The process</h2>
+<p><strong>1. Published.</strong> Verbatim, with name and date, on the rule's page, in the next scheduled run. Permanent address.</p>
+<p><strong>2. One reply.</strong> Within three scheduled runs the operator replies, signed as the project, citing sources. Either it <strong>concedes</strong> — the rule is superseded, the old version stays, the disputant is credited as the source of the correction, every affected case is re-run and any new discrepancy logged — or it <strong>argues</strong>, stating why the encoding stands, with the text.</p>
+<p><strong>3. One counter.</strong> The disputant may reply once. The operator does not reply again.</p>
+<p><strong>4. Status.</strong> If not conceded, the rule is marked <strong>contested</strong>; the checker shows both readings and computes both outcomes where it can.</p>
+<p><strong>5. Ruling.</strong> A contested rule leaves that status when a second, independent, named reviewer with relevant expertise sides with one reading, citing the source. The operator rules on independence and records it.</p>
+<p><strong>6. Escalation.</strong> If two independent reviewers side against the operator and it still does not concede, the matter goes to <code>BOARD.md</code> as a motion and the owner decides.</p>
+<p><strong>7. Permanence.</strong> Nothing is deleted.</p>
+<h2>Conduct of the operator</h2>
+<ul><li>Replies are courteous, concrete and short. They cite; they do not lecture.</li><li>A dispute from a practitioner is treated as the most valuable thing the project can receive, in tone and in the changelog.</li><li>The operator concedes readily when the text is against it.</li><li>The operator never characterizes a disputant, their competence or their motives, and never speculates about the government's.</li><li>The operator never contacts a disputant beyond the exchange, except to answer a question they asked.</li></ul>
+</div>
+<h2>De tekst om te sturen</h2>
+<p>Kopieer de tekst, vul de vijf punten in en stuur die naar het project. Hoe u het project bereikt, staat op de pagina Over.</p>
+<label class="veld-label" for="tekst">Uw tekst</label>
+<textarea class="tekstvak" id="tekst" rows="14" spellcheck="false">1. The rule&#x27;s or entry&#x27;s permanent id:
+
+2. What is contested, quoted:
+
+3. The alternative, stated as precisely as the rule states itself:
+
+4. At least one source (an article, a beleidsregel, an ECLI, or an anonymised decision):
+
+5. Optionally, a case that would show the difference:
+
+Name (real name; role or affiliation if you wish):
+</textarea>
+<p class="klein">Deze pagina slaat niets op en stuurt niets. U kopieert de tekst zelf.</p>
+</main>
+<footer class="voet">
+  <div class="pagina">
+    <p>toeslagrecht · de toeslagenwet als rekenregels die u zelf kunt nalopen</p>
+    <p>Elke regel heeft de status <span class="status">draft</span>: door niemand met vakkennis nagelezen. Geen enkele case is geverifieerd aan een echte beschikking.</p>
+    <p class="voet-links"><a href="../dossier/index.html">Dossier</a> · <a href="../betwisten/index.html">Iets betwisten</a> · <a href="../insturen/index.html">Een beschikking insturen</a> · <a href="../over/index.html">Over</a> · <a href="https://github.com/TheAndries/toeslagrecht">Bron</a> (MIT / CC BY-SA 4.0) · Gebouwd 2026-10-20</p>
+  </div>
+</footer>
+</body>
+</html>

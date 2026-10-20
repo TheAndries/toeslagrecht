@@ -1,0 +1,18 @@
+id: zt-2018-syn-022
+toeslag: zorgtoeslag
+jaar: 2018
+bron:
+  type: synthetic
+  publicatie: "Berekend uit de tekst (zie zt-2018-syn-020): de inkomensgrens met toeslagpartner op de laatste euro met recht"
+  url: https://wetten.overheid.nl/BWBR0018451/2018-01-01
+  opgehaald: 2026-10-19
+verified: false
+invoer:
+  partner: true
+  partner_verzekerd: true
+  toetsingsinkomen_aanvrager: "35996"
+  toetsingsinkomen_partner: "0"
+  rendementsgrondslag: null
+verwacht:
+  tegemoetkoming: "24"
+opmerking: "Inkomensgrens 2018 met toeslagpartner uit de tekst: normpremie = 4,750% × € 20.450,88 + 13,490% × (€ 35.996 − € 20.450,88) = € 971,42 + € 2.097,04 = € 3.068,45; 2 × € 1.546 − € 3.068,45 = € 23,55 → € 24, net toegekend. Met een naar beneden afgerond drempelinkomen (€ 20.450) zou het € 23,46 → € 23 → niets zijn (#1); met € 20.451 blijft het € 24."

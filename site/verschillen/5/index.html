@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Verschil #5 — toeslagrecht</title>
+<link rel="stylesheet" href="../../static/tokens.css">
+<link rel="stylesheet" href="../../static/site.css">
+</head>
+<body>
+<a class="skip" href="#inhoud">Naar de inhoud</a>
+<header class="kop">
+  <div class="kop-in">
+    <a class="woordmerk" href="../../index.html">toeslagrecht</a>
+    <nav aria-label="Menu"><ul class="menu"><li><a href="../../index.html">Narekenen</a></li><li><a href="../../dossier/index.html" aria-current="page">Dossier</a></li><li><a href="../../wet/index.html">Wet</a></li><li><a href="../../over/index.html">Over</a></li></ul></nav>
+  </div>
+</header>
+<main id="inhoud" class="pagina">
+<h1>Verschil #5</h1>
+<p class="statusregel">2026-10-09 · zorgtoeslag / 2025, 2026 · status <code>encoding</code></p>
+<p class="klein">De tekst hieronder is in het Engels, zoals het logboek het bijhoudt.</p>
+<blockquote class="citaat"><p>Wzt art. 2 lid 5 (BWBR0018451, geldend van 01-01-2026; in 2018 t/m 2020 lid 6, vernummerd per 01-01-2021 bij Stb. 2020, 543, art. III; het jaarbestand zegt het met <code>artikel_maandbepaling</code>).</p><footer><a href="../../dossier/zorgtoeslag/zt-2026-art2-5/index.html">per kalendermaand</a> · <code>zt-2026-art2-5</code> · <span class="status">draft</span></footer></blockquote>
+<blockquote class="citaat"><p>Awir art. 14 lid 4: "Het bedrag van de tegemoetkoming wordt rekenkundig afgerond op hele euro's." (BWBR0018472, geldend van 01-01-2026; dezelfde tekst in de versies van 01-01-2025 en 01-01-2024, verbatim gelezen 2026-10-08 en 2026-10-09. De wetstechnische informatie van art. 14 vermeldt geen enkele wijziging van het artikel, geraadpleegd 2026-10-09.) De bedragen van art. 7 lid 3, 4 en 6 en art. 26a per jaar staan in <code>parameters/&lt;jaar&gt;.yaml</code> (2024, 2025: Stcrt. 2024, 38492; 2026: Stcrt. 2025, 40487; 2023: tekst van 01-01-2023, verbatim gelezen 2026-10-11, ontstaan uit Stcrt. 2022, 32674; 2022: Stcrt. 2021, 48308; 2021: tekst van 01-01-2021, verbatim gelezen 2026-10-13 — het eerste jaar van de rendementsgrondslag-toets van art. 7 lid 3, Wet aanpassing box 3, Stb. 2020, 546, art. III, en lid 6 uit Stcrt. 2020, 64406; 2020: tekst van 01-01-2020, verbatim gelezen 2026-10-14 — art. 7 lid 3 noemde toen geen bedrag maar ontzegde de tegemoetkoming zodra voordeel uit sparen en beleggen in aanmerking werd genomen, lid 6 € 4.964); de zorgtoeslag gebruikt ze niet (Wzt art. 3 lid 1; in 2020 t/m 2024 art. 2a lid 1).</p><footer><a href="../../dossier/awir/awir-2026-art14-4/index.html">afronding van de tegemoetkoming</a> · <code>awir-2026-art14-4</code> · <span class="status">draft</span></footer></blockquote>
+<dl class="feiten">
+<dt>Date</dt><dd>2026-10-09</dd>
+<dt>Case</dt><dd><code>zt-2025-tab-zp-33500</code>, <code>zt-2025-tab-mp-34000</code>, <code>zt-2025-tab-mp-46000</code>, <code>zt-2026-tab-zp-35000</code>, <code>zt-2026-tab-mp-32000</code></dd>
+<dt>Toeslag / year</dt><dd>zorgtoeslag / 2025, 2026</dd>
+<dt>Encoding outcome</dt><dd>Monthly amount as the encoding modelled the Dienst's practice: floor(unrounded year amount / 12) — € 72, € 186, € 49, € 68, € 220 (e.g. 2025 met partner € 34.000: € 2.243,83 / 12 = € 186,99 → € 186)</dd>
+<dt>Government outcome</dt><dd>Belastingdienst, <em>Hoeveel zorgtoeslag krijg ik?</em>, tabellen 2025 and 2026: € 73, € 187, € 50, € 69, € 221 — in all five rows the unrounded month is x,96–x,99, and the published figure equals floor(whole-euro year amount / 12): € 2.243,83 → € 2.244 (Awir art. 14 lid 4) / 12 = € 187</dd>
+<dt>Rule(s)</dt><dd><code>zt-2026-art2-5</code> (the practice field <code>aanspraak_maand_afgerond_praktijk</code>, not law); <code>awir-2026-art14-4</code></dd>
+<dt>Status</dt><dd><code>encoding</code> — fixed 2026-10-09: the practice model now divides the granted whole-euro amount (Awir art. 14 lid 4) by twelve and rounds down; all 130 table rows of both years pass except the two of #6 and the one of #1 (<code>zt-2026-tab-mp-44500</code>). The leaflets' six rekenvoorbeelden (2024–2026) are consistent with both models and did not discriminate. The law still rounds only the year amount; how the month is formed remains practice</dd>
+<dt>Classification argued in</dt><dd><code>CHANGELOG.md</code> 2026-10-09</dd>
+</dl>
+</main>
+<footer class="voet">
+  <div class="pagina">
+    <p>toeslagrecht · de toeslagenwet als rekenregels die u zelf kunt nalopen</p>
+    <p>Elke regel heeft de status <span class="status">draft</span>: door niemand met vakkennis nagelezen. Geen enkele case is geverifieerd aan een echte beschikking.</p>
+    <p class="voet-links"><a href="../../dossier/index.html">Dossier</a> · <a href="../../betwisten/index.html">Iets betwisten</a> · <a href="../../insturen/index.html">Een beschikking insturen</a> · <a href="../../over/index.html">Over</a> · <a href="https://github.com/TheAndries/toeslagrecht">Bron</a> (MIT / CC BY-SA 4.0) · Gebouwd 2026-10-20</p>
+  </div>
+</footer>
+</body>
+</html>

@@ -3,7 +3,7 @@
 
   python3 tools/build.py check   # run every case through the Python encoding AND the browser encoding
                                  # (site/zorgtoeslag-regels.js via node, if present); write law/<toeslag>/tests/report.md
-  python3 tools/build.py build   # write site/zorgtoeslag-parameters.js from law/*/parameters, render site/
+  python3 tools/build.py build   # write site/zorgtoeslag-parameters.js from law/*/parameters, render site/ (tools/render.py)
   python3 tools/build.py all
 
 Exit code 1 on `check` only if a *verified* case fails (LAW.md: the encoding is not committed
@@ -89,12 +89,17 @@ def run_case(c: dict, rules) -> dict:
         aanvrager_verdragsgerechtigd=bool(inv.get("aanvrager_verdragsgerechtigd")),
         partner_verdragsgerechtigd=inv.get("partner_verdragsgerechtigd"),
         woonland=inv.get("woonland"),
+        partner_verzekeringsplicht_niet_nagekomen=inv.get("partner_verzekeringsplicht_niet_nagekomen"),
+        maanden_aanspraak=inv.get("maanden_aanspraak"),
     )
     got = {
         "normpremie": next((s.uitkomst for s in u.stappen if s.regel == "zt-2026-art2-2"), None),
         "standaardpremie_totaal": next((s.uitkomst for s in u.stappen if s.regel == "zt-2026-art4a"), None),
         "aanspraak_jaar": u.aanspraak_jaar,
+        "aanspraak_periode": u.aanspraak_periode,
         "tegemoetkoming": u.tegemoetkoming,
+        "tegemoetkoming_jaar": u.tegemoetkoming_jaar,
+        "tegemoetkoming_praktijk_deeljaar": u.tegemoetkoming_praktijk_deeljaar,
         "aanspraak_maand": u.aanspraak_maand,
         "aanspraak_maand_afgerond_praktijk": u.aanspraak_maand_afgerond_praktijk,
     }
@@ -181,9 +186,12 @@ def parity(cases: list[dict], rules) -> tuple[list[str], int]:
             return cents(D(str(a))) == cents(D(str(b)))
 
         diffs = []
-        for k in ("aanspraak_jaar", "tegemoetkoming", "aanspraak_maand"):
+        for k in ("aanspraak_jaar", "aanspraak_periode", "tegemoetkoming", "tegemoetkoming_jaar",
+                  "tegemoetkoming_praktijk_deeljaar", "aanspraak_maand"):
             if not same(getattr(py, k), u[k]):
                 diffs.append(f"{k}: py {getattr(py, k)} js {u[k]}")
+        if py.maanden_aanspraak != u["maanden_aanspraak"]:
+            diffs.append(f"maanden: py {py.maanden_aanspraak} js {u['maanden_aanspraak']}")
         if py.aanspraak_maand_afgerond_praktijk != u["aanspraak_maand_afgerond_praktijk"]:
             diffs.append(f"praktijk: py {py.aanspraak_maand_afgerond_praktijk} js {u['aanspraak_maand_afgerond_praktijk']}")
         if py.vermogen != u["vermogen"]:
@@ -208,9 +216,19 @@ def parity(cases: list[dict], rules) -> tuple[list[str], int]:
     return [head] + lines, bad
 
 
+def discrepancy_status(nummer: int) -> str | None:
+    """The status of entry `nummer` in DISCREPANCIES.md, read from its table row (the log is the authority)."""
+    for line in (ROOT / "DISCREPANCIES.md").read_text(encoding="utf-8").splitlines():
+        if line.startswith(f"| {nummer} |"):
+            m = re.search(r"\| `(open|encoding|government|law|withdrawn)` \|", line)
+            return m.group(1) if m else None
+    return None
+
+
 def check() -> int:
     rules = load_rules("zorgtoeslag")
     cases = load_cases()
+    verified = 0
     lines = [f"# Zorgtoeslag — test report, generated {TODAY} by tools/build.py", "",
              "Generated file; do not edit. Verified cases are tests (blocking); published and synthetic",
              "cases are checks (reported). Every failing check is a discrepancy in `DISCREPANCIES.md`.", ""]
@@ -220,6 +238,7 @@ def check() -> int:
         if c["toeslag"] != "zorgtoeslag":
             continue
         kind = "TEST (verified)" if c.get("verified") else f"check ({c['bron']['type']})"
+        verified += 1 if c.get("verified") else 0
         if c.get("niet_gecodeerd"):
             counts["skip"] += 1
             lines += [f"## {c['id']} — SKIPPED — {kind}", "", f"Not run: {c['niet_gecodeerd']}", ""]
@@ -227,7 +246,14 @@ def check() -> int:
         r = run_case(c, rules)
         status = "PASS" if r["ok"] else "FAIL"
         counts["pass" if r["ok"] else "fail"] += 1
-        if not r["ok"] and c.get("verified"):
+        # A verified case whose failure DISCREPANCIES.md classifies `government` or `law` (the case carries the
+        # entry number in `discrepantie`) is explained, not blocking: the encoding follows the text, the case keeps
+        # the decision (CASES.md). Any other status, or no entry, blocks.
+        if not r["ok"] and c.get("discrepantie"):
+            st = discrepancy_status(int(c["discrepantie"]))
+            if st in ("government", "law"):
+                status = f"FAIL — explained by DISCREPANCIES.md #{c['discrepantie']} ({st})"
+        if not r["ok"] and c.get("verified") and not status.startswith("FAIL — explained"):
             blocking_fail += 1
         lines += [f"## {c['id']} — {status} — {kind}", "", f"Source: {c['bron']['publicatie']}", "",
                   "| field | expected | encoding | match |", "|---|---|---|---|"]
@@ -239,7 +265,7 @@ def check() -> int:
     par_lines, par_bad = parity(cases, rules)
     lines += ["---", ""] + par_lines + ["", "---", "",
               f"Cases run: {counts['pass'] + counts['fail']}, passed: {counts['pass']}, failed: {counts['fail']}, "
-              f"skipped: {counts['skip']}. Verified cases: 0. Blocking failures: {blocking_fail}. "
+              f"skipped: {counts['skip']}. Verified cases: {verified}. Blocking failures: {blocking_fail}. "
               f"Browser/Python differences: {par_bad} (blocking: the two encodings must agree)."]
     blocking_fail += par_bad
     out = ROOT / "law" / "zorgtoeslag" / "tests"
@@ -298,13 +324,13 @@ def eur(v: Decimal | None, cents_: bool = True) -> str:
     return "€ " + s
 
 
-def page(title: str, body: str, lang_note: bool = True) -> str:
+def page(title: str, body: str, lang_note: bool = True, topline: bool = True) -> str:
+    top = '<p class="klein">toeslagrecht · zorgtoeslag · 2026 · <span class="status">alle regels: draft</span></p>\n' if topline else ""
     return f"""<!doctype html>
 <html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{html.escape(title)} — toeslagrecht</title><style>{CSS}</style></head>
 <body><main>
-<p class="klein">toeslagrecht · zorgtoeslag · 2026 · <span class="status">alle regels: draft</span></p>
-{body}
+{top}{body}
 <p class="klein">Niets van wat u invult verlaat uw telefoon of computer. Deze pagina slaat niets op.</p>
 <p class="klein">Bron: <a href="https://github.com/TheAndries/toeslagrecht">de open encoding en het dossier</a> (MIT / CC BY-SA 4.0). Gebouwd {TODAY}.</p>
 </main></body></html>
@@ -392,54 +418,19 @@ LANDNAMEN = {
 }
 
 
-def checker() -> None:
-    """site/zorgtoeslag.html: the checker (DESIGN.md; layout B, owner decision 2026-10-09) from
-    tools/zorgtoeslag.template.html, with the years encoded and the countries of Rzv bijlage 4."""
-    jaren = sorted((int(p.stem) for p in (ROOT / "law" / "zorgtoeslag" / "parameters").glob("*.yaml")), reverse=True)
-    landen = set()
-    for j in jaren:
-        landen |= set(load_params("zorgtoeslag", j).get("woonlandfactoren", {}).get("landen", {}))
-    opties_j = "".join(f'<option value="{j}"{" selected" if i == 0 else ""}>{j}</option>' for i, j in enumerate(jaren))
-    opties_l = "".join(f'<option value="{c}">{html.escape(LANDNAMEN.get(c, c))}</option>'
-                       for c in sorted(landen, key=lambda c: LANDNAMEN.get(c, c)))
-    tpl = (ROOT / "tools" / "zorgtoeslag.template.html").read_text(encoding="utf-8")
-    out = tpl.replace("{{CSS}}", CSS).replace("{{DATUM}}", TODAY).replace("{{JAREN}}", opties_j).replace("{{LANDEN}}", opties_l)
-    (ROOT / "site" / "zorgtoeslag.html").write_text(out, encoding="utf-8")
-
-
 def build() -> None:
+    """site/: parameters for the browser and every page kind rendered from law/, cases/ and the governing
+    files by tools/render.py (DESIGN.md "Kleur, ruimte en pagina's", owner decision 2026-10-20; P9).
+    Every address the site served before 2026-10-19 still answers. site/layouts/{a,b,c}.html are the record
+    of Ask 3 and are no longer regenerated (layout_a/b/c above remain for the record of how they were made);
+    the Pages workflow keeps them out of the deployed site (owner decision 2026-10-11)."""
     export_parameters()
-    checker()
     rules = load_rules("zorgtoeslag")
-    par = load_params("zorgtoeslag", 2026)
-    u = rules.bereken(2026, par, toetsingsinkomen_aanvrager=D(32000), partner=False, awir=load_awir(2026))
-    out = ROOT / "site" / "layouts"
-    out.mkdir(parents=True, exist_ok=True)
-    (out / "a.html").write_text(layout_a(u), encoding="utf-8")
-    (out / "b.html").write_text(layout_b(u), encoding="utf-8")
-    (out / "c.html").write_text(layout_c(u), encoding="utf-8")
-    index = f"""<header class="kop"><p class="klein">toeslagrecht · <span class="status">alle regels: draft</span></p></header>
-<h1>toeslagrecht</h1>
-<p>Hier staat de Nederlandse toeslagenwet als open, controleerbare rekenregels, met bij elk getal het artikel
-waar het vandaan komt. U kunt uw zorgtoeslag narekenen en zien hoe de wet bij het bedrag komt. Daarachter ligt
-het dossier: de wet zoals zij elk jaar gold, de gepubliceerde rekenvoorbeelden, en elk verschil tussen de
-wettekst en wat Dienst Toeslagen doet.</p>
-<h2>Narekenen</h2>
-<ul><li><a href="zorgtoeslag.html">Zorgtoeslag narekenen</a> — 2026, 2025, 2024 en 2023, stap voor stap, op uw eigen apparaat.</li></ul>
-<p class="klein">Nog niets hier is af. Elke regel heeft de status <span class="status">draft</span>: door niemand met
-vakkennis nagelezen. Geen enkele case is geverifieerd aan een echte beschikking. Dit is een controle, geen advies;
-aanvragen doet u op <a href="https://www.toeslagen.nl">toeslagen.nl</a>. De huurtoeslag komt later.</p>
-<h2>Het dossier</h2>
-<ul><li><a href="https://github.com/TheAndries/toeslagrecht/blob/main/law/zorgtoeslag/rules.md">De regels, met hun artikelen en status</a></li>
-<li><a href="https://github.com/TheAndries/toeslagrecht/blob/main/law/CHANGES.md">De wijzigingen in de wet, per datum, met het Staatsblad of de Staatscourant</a></li>
-<li><a href="https://github.com/TheAndries/toeslagrecht/tree/main/cases">De cases</a> · <a href="https://github.com/TheAndries/toeslagrecht/blob/main/law/zorgtoeslag/tests/report.md">de controle van de regels tegen de cases</a></li>
-<li><a href="https://github.com/TheAndries/toeslagrecht/blob/main/DISCREPANCIES.md">Waar de wettekst en Dienst Toeslagen verschillen</a></li>
-<li><a href="https://github.com/TheAndries/toeslagrecht/blob/main/DISPUTES.md">Iets betwisten</a> · <a href="https://github.com/TheAndries/toeslagrecht/blob/main/CASES.md">een echte beschikking insturen, anoniem</a></li></ul>
-<h2>Hoe de pagina gekozen is</h2>
-<p class="klein">Op 2026-10-09 koos de eigenaar uit drie opzetten van dezelfde berekening voor <a href="layouts/b.html">B, het verhaal</a>
-(<a href="layouts/a.html">A, de tabel</a> en <a href="layouts/c.html">C, de brief</a> blijven staan als dossier; <code>BOARD.md</code>).</p>"""
-    (ROOT / "site" / "index.html").write_text(page("Start", index), encoding="utf-8")
-    print("site built:", [p.name for p in out.iterdir()], "index.html zorgtoeslag.html zorgtoeslag-parameters.js")
+    sys.path.insert(0, str(ROOT / "tools"))
+    import render
+    site = render.Site(rules, run_case, load_params, load_awir)
+    written = site.build()
+    print(f"site built: {len(written)} pages, zorgtoeslag-parameters.js")
 
 
 if __name__ == "__main__":

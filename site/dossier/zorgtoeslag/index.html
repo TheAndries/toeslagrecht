@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Zorgtoeslag: de regels — toeslagrecht</title>
+<link rel="stylesheet" href="../../static/tokens.css">
+<link rel="stylesheet" href="../../static/site.css">
+</head>
+<body>
+<a class="skip" href="#inhoud">Naar de inhoud</a>
+<header class="kop">
+  <div class="kop-in">
+    <a class="woordmerk" href="../../index.html">toeslagrecht</a>
+    <nav aria-label="Menu"><ul class="menu"><li><a href="../../index.html">Narekenen</a></li><li><a href="../../dossier/index.html" aria-current="page">Dossier</a></li><li><a href="../../wet/index.html">Wet</a></li><li><a href="../../over/index.html">Over</a></li></ul></nav>
+  </div>
+</header>
+<main id="inhoud" class="pagina">
+<h1>Zorgtoeslag: de regels</h1>
+<div class="prose">
+<p>Elke regel: een vaste id, het artikel en de versie, de regel in gewoon Nederlands, de status (<code>LAW.md</code>), en wat de regel doet waar de wet ruimte laat. De code staat in <code>rules.py</code>; de bedragen per jaar in <code>parameters/&lt;jaar&gt;.yaml</code>. Alles hier is <strong>draft</strong>: door niemand nagelezen tegen het artikel. Geraadpleegd 2026-10-07 t/m 2026-10-14.</p>
+<p><strong>Jaren en artikelnummers.</strong> Gecodeerd: 2026, 2025, 2024, 2023 (sinds 2026-10-11), 2022 (sinds 2026-10-12), 2021 (sinds 2026-10-13), 2020 (sinds 2026-10-14), 2019 (sinds 2026-10-18) en 2018 (sinds 2026-10-19). De regel-id's dragen de nummering van 2026. In de tekst van 2024 (geldend t/m 05-11-2024) heette de vermogenstoets <strong>art. 2a</strong> en de woonlandfactor <strong>art. 3</strong>; per 06-11-2024 (Stb. 2024, 291, art. XIX) zijn zij art. 3 en art. 4a geworden en is art. 4a lid 3 ingevoegd. De stappen citeren per jaar het artikelnummer van dat jaar (<code>parameters/&lt;jaar&gt;.yaml</code>, <code>artikel_vermogenstoets</code>, <code>artikel_woonlandfactor</code>; 2018 t/m 2024 gelijk). In 2018, 2019 en 2020 had art. 2 nog acht leden: lid 5 (oud) ontzegde de zorgtoeslag aan een verzekerde met een partner die zijn verzekeringsplicht niet nakwam (gecodeerd als <code>zt-2020-art2-5oud</code>; vervallen per 01-01-2021, Stb. 2020, 543), de maandbepaling stond in lid 6 (<code>artikel_maandbepaling</code>); en de vermogenstoets rustte op de grondslag sparen en beleggen met één bedrag, € 85.767 in 2020, € 84.416 in 2019 en € 83.415 in 2018 (<code>vermogenstoets_basis</code>, <code>heffingvrij_vermogen</code>); sinds 2021 op de rendementsgrondslag met twee (Stb. 2020, 546). Zie <code>../CHANGES.md</code>.</p>
+<p>Wat de encoding nu kan: een verzekerde of verdragsgerechtigde, met of zonder partner, met het hele jaar dezelfde situatie, tot en met de afronding en het minimumbedrag van de Awir (<code>../awir/rules.md</code>). Wat zij nog niet kan staat onderaan onder <em>Niet gecodeerd</em>.</p>
+</div>
+<h2>De regels</h2>
+<ul class="inhoud"><li><a href="../../dossier/zorgtoeslag/zt-2026-art1-1f/index.html">drempelinkomen</a><span class="noot"><span class="wet">Wet op de zorgtoeslag art. 1 lid 1 onder f</span> · <span class="status">draft</span></span></li><li><a href="../../dossier/zorgtoeslag/zt-2026-art2-2/index.html">normpremie</a><span class="noot"><span class="wet">Wzt art. 2 lid 2 en lid 3</span> · <span class="status">draft</span></span></li><li><a href="../../dossier/zorgtoeslag/zt-2026-art2-1/index.html">aanspraak</a><span class="noot"><span class="wet">Wzt art. 2 lid 1</span> · <span class="status">draft</span></span></li><li><a href="../../dossier/zorgtoeslag/zt-2026-art2-4/index.html">partner die geen verzekerde is</a><span class="noot"><span class="wet">Wzt art. 2 lid 4</span> · <span class="status">draft</span></span></li><li><a href="../../dossier/zorgtoeslag/zt-2026-art2-5/index.html">per kalendermaand</a><span class="noot"><span class="wet">Wzt art. 2 lid 5</span> · <span class="status">draft</span></span></li><li><a href="../../dossier/zorgtoeslag/zt-2020-art2-5oud/index.html">partner die zijn verzekeringsplicht niet nakwam (t/m 2020)</a><span class="noot"><span class="wet">Wzt art. 2 lid 5 zoals dat luidde t/m 31-12-2020</span> · <span class="status">draft</span></span></li><li><a href="../../dossier/zorgtoeslag/zt-2026-art3-1/index.html">vermogenstoets</a><span class="noot"><span class="wet">Wzt art. 3 lid 1</span> · <span class="status">draft</span></span></li><li><a href="../../dossier/zorgtoeslag/zt-2026-art4/index.html">standaardpremie</a><span class="noot"><span class="wet">Wzt art. 4</span> · <span class="status">draft</span></span></li><li><a href="../../dossier/zorgtoeslag/zt-2026-art4a/index.html">standaardpremie voor verdragsgerechtigden: de woonlandfactor</a><span class="noot"><span class="wet">Wzt art. 4a lid 1–4</span> · <span class="status">draft</span></span></li></ul>
+<div class="prose">
+<h2>Niet gecodeerd (de encoding zegt dit expliciet)</h2>
+<ul><li><strong>Wie verzekerde is</strong> (Wzt art. 1 lid 1 onder c, Zvw): invoer. Of een partner in 2020 zijn verzekeringsplicht (Zvw art. 2) niet nakwam (<code>zt-2020-art2-5oud</code>): invoer.</li><li><strong>Wie partner is</strong> (Awir art. 3, AWR art. 5a): invoer; zie <code>../awir/rules.md</code>.</li><li><strong>Wat het toetsingsinkomen is</strong> (Awir art. 8): invoer, het inkomensgegeven of het wereldinkomen; zie <code>../awir/rules.md</code>.</li><li><strong>Wie verdragsgerechtigd is</strong> (Zvw art. 69): invoer. De woonlandfactor zelf is sinds 2026-10-08 gecodeerd (<code>zt-2026-art4a</code>).</li><li><strong>Wijzigingen in het jaar</strong> (Awir art. 5): niet gecodeerd. Wel, sinds 2026-10-20: één gelijkblijvende situatie over een deel van het jaar (<code>zt-2026-art2-5</code>, invoer <code>maanden_aanspraak</code>); welke maand meetelt, is invoer.</li><li><strong>Verblijfsstatus</strong> (Awir art. 9): niet gecodeerd.</li><li><strong>Afronding van het maandbedrag / de voorschotten</strong> (Awir art. 16): geen tekst gevonden; zie <code>zt-2026-art2-5</code>. Het minimumbedrag en de afronding van het jaarbedrag zijn sinds 2026-10-08 wel gecodeerd (<code>../awir/rules.md</code>, art. 14 lid 4–5; <code>DISCREPANCIES.md</code> #2).</li></ul>
+</div>
+</main>
+<footer class="voet">
+  <div class="pagina">
+    <p>toeslagrecht · de toeslagenwet als rekenregels die u zelf kunt nalopen</p>
+    <p>Elke regel heeft de status <span class="status">draft</span>: door niemand met vakkennis nagelezen. Geen enkele case is geverifieerd aan een echte beschikking.</p>
+    <p class="voet-links"><a href="../../dossier/index.html">Dossier</a> · <a href="../../betwisten/index.html">Iets betwisten</a> · <a href="../../insturen/index.html">Een beschikking insturen</a> · <a href="../../over/index.html">Over</a> · <a href="https://github.com/TheAndries/toeslagrecht">Bron</a> (MIT / CC BY-SA 4.0) · Gebouwd 2026-10-20</p>
+  </div>
+</footer>
+</body>
+</html>

@@ -26,6 +26,10 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
+      # site/layouts/ (the three result-page layouts of Ask 3) stays in the repository as the record
+      # of that choice but is not published: internal matters never appear on the website
+      # (owner decision 2026-10-11, BOARD.md; DESIGN.md).
+      - run: rm -rf site/layouts
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:

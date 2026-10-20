@@ -1,0 +1,15 @@
+id: zt-2020-syn-014
+toeslag: zorgtoeslag
+jaar: 2020
+bron:
+  type: synthetic
+  publicatie: "Door de operator geconstrueerd op 2026-10-14 uit de tekst van 2020 (Wzt 01-01-2020; Stcrt. 2019, 64399; Stcrt. 2019, 56680; Stb. 2019, 386; Stcrt. 2019, 61842; Wet IB 2001 art. 5.2 en 5.5 tekst 2020). Geen publicatie van de Dienst Toeslagen voor 2020 gelezen: de leaflet Berekening zorgtoeslag 2020 is op 2026-10-14 niet gevonden (tg0821z01fd en z02fd: 404). Synthetic: een controle van de encoding tegen de tekst, geen verificatie (CASES.md)"
+  opgehaald: 2026-10-14
+verified: false
+invoer:
+  partner: false
+  toetsingsinkomen_aanvrager: "20000"
+  rendementsgrondslag: "116614"
+verwacht:
+  tegemoetkoming: "0"
+opmerking: "Eén euro meer: grondslag sparen en beleggen € 85.768 > € 85.767: het hele jaar geen zorgtoeslag."

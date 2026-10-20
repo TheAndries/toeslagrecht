@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Specimen: narekenen (A, het formulier) — toeslagrecht</title>
+<link rel="stylesheet" href="../static/tokens.css">
+<link rel="stylesheet" href="../static/site.css">
+<meta name="robots" content="noindex">
+</head>
+<body>
+<a class="skip" href="#inhoud">Naar de inhoud</a>
+<header class="kop">
+  <div class="kop-in">
+    <a class="woordmerk" href="../index.html">toeslagrecht</a>
+    <nav aria-label="Menu"><ul class="menu"><li><a href="../index.html" aria-current="page">Narekenen</a></li><li><a href="../dossier/index.html">Dossier</a></li><li><a href="../wet/index.html">Wet</a></li><li><a href="../over/index.html">Over</a></li></ul></nav>
+  </div>
+</header>
+<main id="inhoud" class="pagina">
+<p class="klein">Specimen van 2026-10-19: de voorpagina, ingevuld met voorbeeld <a href="../dossier/voorbeelden/zt-2026-pub-007/index.html">zt-2026-pub-007</a> (Dienst Toeslagen, Berekening zorgtoeslag 2026 (TG 082 - 1Z61FD), januari 2026, rekenvoorbeeld 1), de uitkomst gerekend met de regels van 2026. Niet gelinkt vanaf de site.</p><h1 class="vraag" id="vraag">Hoeveel zorgtoeslag krijg ik in <span id="vraag-jaar">2026</span>?</h1>
+<p class="lead">Vul drie dingen in. U ziet het bedrag, en stap voor stap hoe de wet daar komt, met bij elke stap het artikel.</p>
+<p class="privacy"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="10" width="14" height="10" rx="1"></rect><path d="M8 10V7a4 4 0 0 1 8 0v3"></path></svg>Niets van wat u invult verlaat uw telefoon of computer.</p>
+<form id="invoer" autocomplete="off" novalidate action="" method="get">
+<fieldset>
+  <legend>Welk jaar?</legend>
+  <div class="keuze" id="jaren"><label class="keuze-vak gekozen"><input type="radio" name="jaar" value="2026" checked> 2026</label><label class="keuze-vak"><input type="radio" name="jaar" value="2025"> 2025</label><label class="keuze-vak"><input type="radio" name="jaar" value="2024"> 2024</label><label class="keuze-vak"><input type="radio" name="jaar" value="2023"> 2023</label><label class="keuze-vak"><input type="radio" name="jaar" value="2022"> 2022</label><label class="keuze-vak"><input type="radio" name="jaar" value="2021"> 2021</label><label class="keuze-vak"><input type="radio" name="jaar" value="2020"> 2020</label><label class="keuze-vak"><input type="radio" name="jaar" value="2019"> 2019</label><label class="keuze-vak"><input type="radio" name="jaar" value="2018"> 2018</label></div>
+</fieldset>
+
+<div class="veld" id="veld-ti">
+  <label class="veld-label" for="ti"><span class="veld-nr" aria-hidden="true">1</span>Uw toetsingsinkomen in dat jaar, in hele euro's</label>
+  <p class="hulp" id="h-ti">Uw inkomen zoals de Belastingdienst het voor dat jaar vaststelt: meestal het verzamelinkomen uit uw aangifte, anders uw loon. Bijvoorbeeld 28000.</p>
+  <p class="fout" id="f-ti" hidden></p>
+  <div class="euro"><span class="euro-teken" aria-hidden="true">€</span><input class="invoer" id="ti" name="toetsingsinkomen_aanvrager" type="text" inputmode="numeric" autocomplete="off" aria-describedby="h-ti" value="19000"></div>
+</div>
+
+<div class="veld" id="veld-partner"><fieldset>
+  <legend class="veld-label"><span class="veld-nr" aria-hidden="true">2</span>Hebt u een toeslagpartner?</legend>
+  <p class="hulp" id="h-partner">Een toeslagpartner is meestal degene met wie u getrouwd bent, een geregistreerd partnerschap hebt, of samen een kind of een koophuis hebt. Twijfelt u? Dan kijkt u op toeslagen.nl.</p>
+  <p class="fout" id="f-partner" hidden></p>
+  <div class="keuze"><label class="keuze-vak"><input type="radio" name="partner" value="ja"> Ja</label><label class="keuze-vak gekozen"><input type="radio" name="partner" value="nee" checked> Nee</label></div>
+</fieldset></div>
+
+<div class="veld alleen-partner" id="veld-tip" hidden>
+  <label class="veld-label" for="tip"><span class="veld-nr" aria-hidden="true">2a</span>Het toetsingsinkomen van uw partner, in hele euro's</label>
+  <p class="hulp" id="h-tip">Op dezelfde manier als uw eigen inkomen. Bijvoorbeeld 15000. Laat het leeg als uw partner geen inkomen had.</p>
+  <p class="fout" id="f-tip" hidden></p>
+  <div class="euro"><span class="euro-teken" aria-hidden="true">€</span><input class="invoer" id="tip" name="toetsingsinkomen_partner" type="text" inputmode="numeric" autocomplete="off" aria-describedby="h-tip"></div>
+</div>
+
+<div class="veld alleen-partner" id="veld-pv" hidden><fieldset>
+  <legend class="veld-label"><span class="veld-nr" aria-hidden="true">2b</span>Is uw partner in Nederland verzekerd voor zorg?</legend>
+  <p class="hulp">Bijna iedereen die in Nederland woont of werkt is verzekerd. Militairen in actieve dienst en mensen die alleen in het buitenland verzekerd zijn, zijn het niet.</p>
+  <div class="keuze"><label class="keuze-vak gekozen"><input type="radio" name="partner_verzekerd" value="ja" checked> Ja</label><label class="keuze-vak"><input type="radio" name="partner_verzekerd" value="nee"> Nee</label><label class="keuze-vak"><input type="radio" name="partner_verzekerd" value="onbekend"> Weet ik niet</label></div>
+</fieldset></div>
+
+<div class="veld alleen-partner alleen-lid5oud" id="veld-pp" hidden><fieldset>
+  <legend class="veld-label"><span class="veld-nr" aria-hidden="true">2c</span>Moest uw partner zich in Nederland verzekeren, maar deed hij of zij dat niet?</legend>
+  <p class="hulp">Alleen voor 2020 en eerder: toen gaf de wet geen zorgtoeslag als uw partner verzekeringsplichtig was en zich niet verzekerde (Wzt art. 2 lid 5, tekst 2020; vervallen per 2021).</p>
+  <div class="keuze"><label class="keuze-vak gekozen"><input type="radio" name="partner_verzekeringsplicht_niet_nagekomen" value="nee" checked> Nee</label><label class="keuze-vak"><input type="radio" name="partner_verzekeringsplicht_niet_nagekomen" value="ja"> Ja</label><label class="keuze-vak"><input type="radio" name="partner_verzekeringsplicht_niet_nagekomen" value="onbekend"> Weet ik niet</label></div>
+</fieldset></div>
+
+<div class="veld" id="veld-rg">
+  <label class="veld-label" for="rg"><span class="veld-nr" aria-hidden="true">3</span>Uw vermogen op 1 januari, samen met uw partner als u die hebt, in hele euro's</label>
+  <p class="hulp" id="h-rg">De rendementsgrondslag uit box 3: al uw spaargeld, beleggingen en een tweede huis, min schulden, op 1 januari. Het hele bedrag, vóór aftrek van het heffingvrije vermogen; voor 2020 trekt de berekening dat zelf af. Bijvoorbeeld 4500. Laat het leeg als u het niet weet; dan slaat de berekening de vermogenstoets over en zegt zij dat.</p>
+  <p class="fout" id="f-rg" hidden></p>
+  <div class="euro"><span class="euro-teken" aria-hidden="true">€</span><input class="invoer" id="rg" name="rendementsgrondslag" type="text" inputmode="numeric" autocomplete="off" aria-describedby="h-rg"></div>
+</div>
+
+<details class="meer" id="meer">
+  <summary>Meer situaties: niet het hele jaar dezelfde partner, of wonen buiten Nederland</summary>
+  <div class="veld alleen-partner" hidden><fieldset>
+    <legend class="veld-label">Had u het hele jaar dezelfde toeslagpartner?</legend>
+    <div class="keuze"><label class="keuze-vak gekozen"><input type="radio" name="hele_jaar_dezelfde_partner" value="ja" checked> Ja</label><label class="keuze-vak"><input type="radio" name="hele_jaar_dezelfde_partner" value="nee"> Nee</label></div>
+  </fieldset></div>
+  <div class="veld"><fieldset>
+    <legend class="veld-label">Woont u buiten Nederland en betaalt u een bijdrage aan het CAK voor zorg?</legend>
+    <p class="hulp">De wet noemt u dan een verdragsgerechtigde (Zvw art. 69). Uw standaardpremie wordt dan vermenigvuldigd met de woonlandfactor van uw land.</p>
+    <div class="keuze"><label class="keuze-vak gekozen"><input type="radio" name="aanvrager_verdragsgerechtigd" value="nee" checked> Nee</label><label class="keuze-vak"><input type="radio" name="aanvrager_verdragsgerechtigd" value="ja"> Ja</label></div>
+  </fieldset></div>
+  <div class="veld alleen-partner" hidden><fieldset>
+    <legend class="veld-label">Geldt dat voor uw partner?</legend>
+    <div class="keuze"><label class="keuze-vak gekozen"><input type="radio" name="partner_verdragsgerechtigd" value="nee" checked> Nee</label><label class="keuze-vak"><input type="radio" name="partner_verdragsgerechtigd" value="ja"> Ja</label></div>
+  </fieldset></div>
+  <div class="veld" id="veld-maanden">
+    <label class="veld-label" for="maanden">In hoeveel maanden van dat jaar had u recht op zorgtoeslag?</label>
+    <p class="hulp" id="h-maanden">Meestal het hele jaar: 12. Was u een deel van het jaar niet in Nederland verzekerd, bijvoorbeeld door een verhuizing naar het buitenland, tel dan de maanden waarin u wel recht had. De wet bepaalt de zorgtoeslag per kalendermaand (Wzt art. 2 lid 5); welke maand meetelt, zegt de tekst niet, dus de berekening neemt uw aantal over.</p>
+    <p class="fout" id="f-maanden" hidden></p>
+    <input class="invoer" id="maanden" name="maanden_aanspraak" type="text" inputmode="numeric" autocomplete="off" aria-describedby="h-maanden" value="12">
+  </div>
+  <div class="veld" id="veld-woonland">
+    <label class="veld-label" for="woonland">Het woonland</label>
+    <p class="fout" id="f-woonland" hidden></p>
+    <select class="invoer" id="woonland" name="woonland" aria-describedby="f-woonland"><option value="">— kies een land —</option><option value="BE">België</option><option value="BA">Bosnië-Herzegovina</option><option value="BG">Bulgarije</option><option value="CY">Cyprus</option><option value="DK">Denemarken</option><option value="DE">Duitsland</option><option value="EE">Estland</option><option value="FI">Finland</option><option value="FR">Frankrijk</option><option value="GR">Griekenland</option><option value="HU">Hongarije</option><option value="IS">IJsland</option><option value="IE">Ierland</option><option value="IT">Italië</option><option value="CV">Kaapverdië</option><option value="HR">Kroatië</option><option value="LV">Letland</option><option value="LI">Liechtenstein</option><option value="LT">Litouwen</option><option value="LU">Luxemburg</option><option value="MT">Malta</option><option value="MA">Marokko</option><option value="ME">Montenegro</option><option value="MK">Noord-Macedonië</option><option value="NO">Noorwegen</option><option value="AT">Oostenrijk</option><option value="PL">Polen</option><option value="PT">Portugal</option><option value="RO">Roemenië</option><option value="RS">Servië</option><option value="SI">Slovenië</option><option value="SK">Slowakije</option><option value="ES">Spanje</option><option value="CZ">Tsjechië</option><option value="TN">Tunesië</option><option value="TR">Turkije</option><option value="GB">Verenigd Koninkrijk</option><option value="SE">Zweden</option><option value="CH">Zwitserland</option></select>
+  </div>
+</details>
+
+<p class="privacy"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="10" width="14" height="10" rx="1"></rect><path d="M8 10V7a4 4 0 0 1 8 0v3"></path></svg>Niets van wat u invult verlaat uw telefoon of computer.</p>
+<p class="knop-rij"><button type="submit" class="knop">Bereken mijn zorgtoeslag</button></p>
+<noscript><p class="nojs">Deze berekening gebeurt op uw eigen apparaat en heeft daarvoor JavaScript nodig. Zonder JavaScript kunt u <a href="../dossier/zorgtoeslag/index.html">de regels zelf lezen en narekenen</a>.</p></noscript>
+</form>
+
+<section id="uitkomst" class="uitkomst" aria-live="polite" tabindex="-1"><p class="bedrag-intro">Naar de letter van de wet krijgt u in 2026</p><p class="bedrag">€ 1.550 <span class="per-jaar">per jaar</span></p><p class="klein">Berekend € 1.550,46 per jaar, afgerond op hele euro’s (Awir art. 14 lid 4). Per maand is dat € 129,20. Dienst Toeslagen betaalt hele euro’s per maand en komt dan op € 129; waar dat afronden per maand in de wet staat, hebben wij niet gevonden.</p><p class="eerlijk">Dit is wat de wet zegt voor wat u invulde. Het is geen advies en geen aanvraag; aanvragen doet u op <a href="https://www.toeslagen.nl">toeslagen.nl</a>.</p><p class="statusregel">Alle regels in deze berekening: <span class="status">draft</span>.</p><ol class="stappen"><li class="stap"><p class="stap-zin"><span class="stap-nr" aria-hidden="true">1</span><span>Uw toetsingsinkomen telt; u hebt geen partner. <span class="getal">Uitkomst: € 19.000,00.</span></span></p><p class="kantlijn"><a href="../dossier/awir/awir-2026-art7-1/index.html">Awir art. 7 lid 1</a> · <span class="status">draft</span><span class="rekensom">19000</span></p></li><li class="stap"><p class="stap-zin"><span class="stap-nr" aria-hidden="true">2</span><span>Is het vermogen op 1 januari boven de grens, dan is er het hele jaar geen zorgtoeslag. <span class="getal">Uitkomst: niet getoetst, want geen vermogen opgegeven.</span></span></p><p class="kantlijn"><a href="../dossier/zorgtoeslag/zt-2026-art3-1/index.html">Wzt art. 3 lid 1 (BWBR0018451, geldend van 01-01-2026)</a> · <span class="status">draft</span><span class="rekensom">Geen vermogen opgegeven; de vermogenstoets is niet uitgevoerd.</span></p></li><li class="stap"><p class="stap-zin"><span class="stap-nr" aria-hidden="true">3</span><span>Het drempelinkomen: 108% van twaalf keer het minimumloon per maand van januari. <span class="getal">Uitkomst: € 29.735,42.</span></span></p><p class="kantlijn"><a href="../dossier/zorgtoeslag/zt-2026-art1-1f/index.html">Wzt art. 1 lid 1 onder f; WML art. 8 lid 1 onder b</a> · <span class="status">draft</span><span class="rekensom">108% × 12 × 2294.40</span></p></li><li class="stap"><p class="stap-zin"><span class="stap-nr" aria-hidden="true">4</span><span>De normpremie: wat u volgens de wet zelf aan premie kunt dragen. <span class="getal">Uitkomst: € 568,54.</span></span></p><p class="kantlijn"><a href="../dossier/zorgtoeslag/zt-2026-art2-2/index.html">Wzt art. 2 lid 2 en 3 (BWBR0018451, geldend van 01-01-2026)</a> · <span class="status">draft</span><span class="rekensom">1.912% × 29735.424 + 13.730% × max(0, 19000 − 29735.424) = 568.541 + 0</span></p></li><li class="stap"><p class="stap-zin"><span class="stap-nr" aria-hidden="true">5</span><span>De standaardpremie min de normpremie. <span class="getal">Uitkomst: € 1.550,46.</span></span></p><p class="kantlijn"><a href="../dossier/zorgtoeslag/zt-2026-art2-1/index.html">Wzt art. 2 lid 1 (BWBR0018451, geldend van 01-01-2026); Wet op de zorgtoeslag art. 4 jo. Regeling vaststelling standaardpremie en bestuursrechtelijke premies 2026, art. 1</a> · <span class="status">draft</span><span class="rekensom">2119 − 568.541</span></p></li><li class="stap"><p class="stap-zin"><span class="stap-nr" aria-hidden="true">6</span><span>Het bedrag van de zorgtoeslag wordt afgerond op hele euro&#x27;s. <span class="getal">Uitkomst: € 1.550,00.</span></span></p><p class="kantlijn"><a href="../dossier/awir/awir-2026-art14-4/index.html">Awir art. 14 lid 4</a> · <span class="status">draft</span><span class="rekensom">1550.459 → afgerond</span></p></li><li class="stap"><p class="stap-zin"><span class="stap-nr" aria-hidden="true">7</span><span>Is de zorgtoeslag minder dan € 24 per jaar, dan wordt zij niet toegekend. <span class="getal">Uitkomst: € 1.550,00.</span></span></p><p class="kantlijn"><a href="../dossier/awir/awir-2026-art14-5/index.html">Awir art. 14 lid 5</a> · <span class="status">draft</span><span class="rekensom">1550 ≥ 24</span></p></li><li class="stap"><p class="stap-zin"><span class="stap-nr" aria-hidden="true">8</span><span>Per kalendermaand: het jaarbedrag gedeeld door twaalf. <span class="getal">Uitkomst: € 129,20.</span></span></p><p class="kantlijn"><a href="../dossier/zorgtoeslag/zt-2026-art2-5/index.html">Wzt art. 2 lid 5 (BWBR0018451, geldend van 01-01-2026)</a> · <span class="status">draft</span><span class="rekensom">1550.459 / 12</span></p></li></ol><h2>Wat de wet hier niet bepaalt</h2><ul class="prose"><li class="klein">afronding maandbedrag: de wet rondt het jaarbedrag af (Awir art. 14 lid 4), niet het maandbedrag; Dienst Toeslagen deelt in haar tabellen het afgeronde jaarbedrag door twaalf en rondt naar beneden af op hele euro&#x27;s (grondslag niet gevonden in Awir, Wzt of Uitvoeringsregeling Awir).</li></ul><p class="slot klein">Klik op een artikel voor de wettekst, de versies per jaar en de voorbeelden die de regel testen.</p></section>
+</main>
+<footer class="voet">
+  <div class="pagina">
+    <p>toeslagrecht · de toeslagenwet als rekenregels die u zelf kunt nalopen</p>
+    <p>Elke regel heeft de status <span class="status">draft</span>: door niemand met vakkennis nagelezen. Geen enkele case is geverifieerd aan een echte beschikking.</p>
+    <p class="voet-links"><a href="../dossier/index.html">Dossier</a> · <a href="../betwisten/index.html">Iets betwisten</a> · <a href="../insturen/index.html">Een beschikking insturen</a> · <a href="../over/index.html">Over</a> · <a href="https://github.com/TheAndries/toeslagrecht">Bron</a> (MIT / CC BY-SA 4.0) · Gebouwd 2026-10-20</p>
+  </div>
+</footer>
+<script src="../zorgtoeslag-parameters.js"></script>
+<script src="../zorgtoeslag-regels.js"></script>
+<script>
+(function () {
+  "use strict";
+  var Z = window.toeslagrecht.zorgtoeslag;
+  var form = document.getElementById("invoer");
+  var out = document.getElementById("uitkomst");
+  var REGELPAGINA = {"zt-2026-art1-1f": "../dossier/zorgtoeslag/zt-2026-art1-1f/index.html", "zt-2026-art2-2": "../dossier/zorgtoeslag/zt-2026-art2-2/index.html", "zt-2026-art2-1": "../dossier/zorgtoeslag/zt-2026-art2-1/index.html", "zt-2026-art2-4": "../dossier/zorgtoeslag/zt-2026-art2-4/index.html", "zt-2026-art2-5": "../dossier/zorgtoeslag/zt-2026-art2-5/index.html", "zt-2020-art2-5oud": "../dossier/zorgtoeslag/zt-2020-art2-5oud/index.html", "zt-2026-art3-1": "../dossier/zorgtoeslag/zt-2026-art3-1/index.html", "zt-2026-art4": "../dossier/zorgtoeslag/zt-2026-art4/index.html", "zt-2026-art4a": "../dossier/zorgtoeslag/zt-2026-art4a/index.html", "awir-2026-art7-1": "../dossier/awir/awir-2026-art7-1/index.html", "awir-2026-art8-1": "../dossier/awir/awir-2026-art8-1/index.html", "awir-2026-art3": "../dossier/awir/awir-2026-art3/index.html", "awir-2026-art5": "../dossier/awir/awir-2026-art5/index.html", "awir-2026-art14-4": "../dossier/awir/awir-2026-art14-4/index.html", "awir-2026-art14-5": "../dossier/awir/awir-2026-art14-5/index.html"};
+  var WOORD = {"niet_getoetst": "niet getoetst, want geen vermogen opgegeven", "aanspraak": "onder de grens", "geen_aanspraak": "boven de grens: geen zorgtoeslag", "undetermined": "niet bepaald door de wet"};
+  var NBSP = "\u202f";
+
+  function esc(s) { return String(s).replace(/[&<>"']/g, function (c) {
+    return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; }); }
+  function radio(name) { var el = form.querySelector('input[name="' + name + '"]:checked'); return el ? el.value : null; }
+  function jaNee(v) { return v === "ja" ? true : v === "nee" ? false : null; }
+  function bedrag(v, hele) { return typeof v === "bigint" ? Z.eur(v, hele === false ? false : undefined).replace("€ ", "€" + NBSP) : esc(WOORD[v] || v); }
+
+  // the chosen box: a class beside the radio's own state, for browsers without :has()
+  function markeer() {
+    form.querySelectorAll(".keuze-vak").forEach(function (l) {
+      var r = l.querySelector("input"); l.classList.toggle("gekozen", !!(r && r.checked));
+    });
+    var j = radio("jaar"); if (j) document.getElementById("vraag-jaar").textContent = j;
+    var p = radio("partner") === "ja";
+    var par = PARAMETERS.zorgtoeslag[Number(j)] || {};
+    form.querySelectorAll(".alleen-partner").forEach(function (el) { el.hidden = !p; });
+    form.querySelectorAll(".alleen-lid5oud").forEach(function (el) { el.hidden = !(p && par.art2_lid5_oud_aanwezig); });
+  }
+  function maanden() {
+    var raw = document.getElementById("maanden").value.trim();
+    if (raw === "") return { waarde: 12 };
+    if (!/^\d{1,2}$/.test(raw) || Number(raw) < 1 || Number(raw) > 12) return { fout: "Vul het aantal maanden in als een getal van 1 tot en met 12." };
+    return { waarde: Number(raw) };
+  }
+  form.addEventListener("change", markeer);
+  markeer();
+
+  // errors: the field's border, a sentence under the help text, announced through aria-describedby
+  function zetFout(id, tekst) {
+    var veld = document.getElementById("veld-" + id), msg = document.getElementById("f-" + id);
+    var input = document.getElementById(id);
+    if (tekst) {
+      veld.classList.add("in-fout"); msg.textContent = tekst; msg.hidden = false;
+      if (input) { input.setAttribute("aria-invalid", "true"); input.setAttribute("aria-describedby", (document.getElementById("h-" + id) ? "h-" + id + " " : "") + "f-" + id); }
+      else veld.querySelectorAll("input").forEach(function (r) { r.setAttribute("aria-invalid", "true"); r.setAttribute("aria-describedby", "f-" + id); });
+    } else {
+      veld.classList.remove("in-fout"); msg.textContent = ""; msg.hidden = true;
+      if (input) { input.removeAttribute("aria-invalid"); input.setAttribute("aria-describedby", document.getElementById("h-" + id) ? "h-" + id : ""); }
+      else veld.querySelectorAll("input").forEach(function (r) { r.removeAttribute("aria-invalid"); r.removeAttribute("aria-describedby"); });
+    }
+  }
+  ["ti", "tip", "rg", "woonland", "maanden"].forEach(function (id) {
+    document.getElementById(id).addEventListener("input", function () { zetFout(id, ""); });
+  });
+  form.querySelectorAll('input[name="partner"]').forEach(function (r) { r.addEventListener("change", function () { zetFout("partner", ""); }); });
+
+  function getal(id, verplicht, naam) {
+    var raw = document.getElementById(id).value.trim().replace(/\./g, "").replace(/\s/g, "").replace(/,.*$/, "");
+    if (raw === "") { if (verplicht) return { fout: "Vul " + naam + " in, in hele euro's. Bijvoorbeeld 28000." }; return { waarde: null }; }
+    if (!/^-?\d+$/.test(raw)) return { fout: "Vul een bedrag in hele euro's in, zonder letters. Bijvoorbeeld 28000." };
+    return { waarde: raw };
+  }
+
+  function render(u, inv) {
+    var jaar = u.jaar;
+    var h = [];
+    if (u.vermogen === "geen_aanspraak") {
+      h.push('<p class="bedrag-intro">Naar de letter van de wet krijgt u in ' + jaar + '</p><p class="bedrag">€' + NBSP + '0 <span class="per-jaar">per jaar</span></p>');
+      h.push('<p>Uw vermogen op 1 januari is hoger dan de grens van dat jaar. Dan is er volgens de wet het hele jaar geen zorgtoeslag.</p>');
+    } else if (u.tegemoetkoming === null) {
+      h.push('<p class="bedrag-intro">Naar de letter van de wet krijgt u in ' + jaar + '</p><p class="bedrag">niet bepaald door de wet</p>');
+      h.push('<p>Voor deze situatie zegt de wettekst van ' + jaar + ' niet wat de uitkomst is. Hieronder staat waar de tekst ophoudt.</p>');
+    } else if (u.maanden_aanspraak < 12) {
+      h.push('<p class="bedrag-intro">Naar de letter van de wet krijgt u over ' + u.maanden_aanspraak + ' maanden van ' + jaar + '</p><p class="bedrag">' + bedrag(u.tegemoetkoming, false) + ' <span class="per-jaar">over die maanden</span></p>');
+      h.push('<p class="klein">Berekend ' + bedrag(u.aanspraak_jaar) + ' over het hele jaar; ' + u.maanden_aanspraak + '/12 daarvan is ' + bedrag(u.aanspraak_periode) +
+        ', afgerond op hele euro’s (Awir art. 14 lid 4). Per maand is dat ' + bedrag(u.aanspraak_maand) + '. Dienst Toeslagen rondt eerst het jaarbedrag af en neemt daar ' +
+        u.maanden_aanspraak + '/12 van: ' + bedrag(u.tegemoetkoming_praktijk_deeljaar, false) + (u.tegemoetkoming_praktijk_deeljaar === u.tegemoetkoming ? ', hetzelfde bedrag.' : ', één euro anders; waar die volgorde in de wet staat, hebben wij niet gevonden.') + '</p>');
+    } else {
+      h.push('<p class="bedrag-intro">Naar de letter van de wet krijgt u in ' + jaar + '</p><p class="bedrag">' + bedrag(u.tegemoetkoming, false) + ' <span class="per-jaar">per jaar</span></p>');
+      h.push('<p class="klein">Berekend ' + bedrag(u.aanspraak_jaar) + ' per jaar, afgerond op hele euro’s (Awir art. 14 lid 4). ' +
+        'Per maand is dat ' + bedrag(u.aanspraak_maand) + '. Dienst Toeslagen betaalt hele euro’s per maand en komt dan op €' + NBSP +
+        u.aanspraak_maand_afgerond_praktijk + '; waar dat afronden per maand in de wet staat, hebben wij niet gevonden.</p>');
+    }
+    h.push('<p class="eerlijk">Dit is wat de wet zegt voor wat u invulde. Het is geen advies en geen aanvraag; aanvragen doet u op <a href="https://www.toeslagen.nl">toeslagen.nl</a>.</p>');
+    var statussen = []; u.stappen.forEach(function (s) { if (statussen.indexOf(s.status) < 0) statussen.push(s.status); }); statussen.sort();
+    h.push('<p class="statusregel">Alle regels in deze berekening: ' + statussen.map(function (s) { return '<span class="status">' + esc(s) + '</span>'; }).join(", ") + '.</p>');
+    h.push('<ol class="stappen">');
+    u.stappen.forEach(function (s, i) {
+      h.push('<li class="stap"><p class="stap-zin"><span class="stap-nr" aria-hidden="true">' + (i + 1) + '</span><span>' + esc(s.omschrijving) +
+        ' <span class="getal">Uitkomst: ' + bedrag(s.uitkomst) + '.</span></span></p>' +
+        '<p class="kantlijn"><a href="' + esc(REGELPAGINA[s.regel] || "../dossier/index.html") + '">' + esc(s.artikel) + '</a> · ' +
+        '<span class="status">' + esc(s.status) + '</span><span class="rekensom">' + esc(s.berekening) + '</span></p></li>');
+    });
+    h.push('</ol>');
+    if (u.onbepaald.length) {
+      h.push('<h2>Wat de wet hier niet bepaalt</h2><ul class="prose">');
+      u.onbepaald.forEach(function (n) { h.push('<li class="klein">' + esc(n) + '</li>'); });
+      h.push('</ul>');
+    }
+    h.push('<p class="slot klein">Klik op een artikel voor de wettekst, de versies per jaar en de voorbeelden die de regel testen.</p>');
+    out.innerHTML = h.join("");
+    out.hidden = false;
+    out.focus();
+  }
+
+  form.addEventListener("submit", function (ev) {
+    ev.preventDefault();
+    var eerste = null;
+    function fout(id, tekst) { zetFout(id, tekst); if (!eerste) eerste = id; }
+    ["ti", "tip", "rg", "woonland", "maanden", "partner"].forEach(function (id) { zetFout(id, ""); });
+    var ti = getal("ti", true, "uw toetsingsinkomen"); if (ti.fout) fout("ti", ti.fout);
+    var partnerKeuze = radio("partner");
+    if (partnerKeuze === null) fout("partner", "Kies Ja of Nee.");
+    var partner = partnerKeuze === "ja";
+    var tip = partner ? getal("tip", false, "het inkomen van uw partner") : { waarde: null }; if (tip.fout) fout("tip", tip.fout);
+    var rg = getal("rg", false, "uw vermogen"); if (rg.fout) fout("rg", rg.fout);
+    var mnd = maanden(); if (mnd.fout) { document.getElementById("meer").open = true; fout("maanden", mnd.fout); }
+    var inv = {
+      jaar: radio("jaar"),
+      partner: partner,
+      toetsingsinkomen_aanvrager: ti.waarde,
+      toetsingsinkomen_partner: partner ? tip.waarde : null,
+      partner_verzekerd: partner ? jaNee(radio("partner_verzekerd")) : null,
+      rendementsgrondslag: rg.waarde,
+      hele_jaar_dezelfde_partner: partner ? jaNee(radio("hele_jaar_dezelfde_partner")) : null,
+      aanvrager_verdragsgerechtigd: radio("aanvrager_verdragsgerechtigd") === "ja",
+      partner_verdragsgerechtigd: partner ? radio("partner_verdragsgerechtigd") === "ja" : null,
+      woonland: document.getElementById("woonland").value || null,
+      partner_verzekeringsplicht_niet_nagekomen: partner ? jaNee(radio("partner_verzekeringsplicht_niet_nagekomen")) : null,
+      maanden_aanspraak: mnd.waarde
+    };
+    if ((inv.aanvrager_verdragsgerechtigd || inv.partner_verdragsgerechtigd) && !inv.woonland) {
+      document.getElementById("meer").open = true;
+      fout("woonland", "Kies het woonland: de woonlandfactor hangt ervan af (Wzt art. 4a).");
+    }
+    if (eerste) {
+      out.hidden = true;
+      var el = document.getElementById(eerste) || document.querySelector('#veld-' + eerste + ' input');
+      if (el) el.focus();
+      return;
+    }
+    try {
+      render(Z.bereken(inv, PARAMETERS), inv);
+    } catch (e) {
+      zetFout("ti", "Er ging iets mis bij het rekenen: " + (e.message || String(e)));
+      out.hidden = true;
+    }
+  });
+})();
+</script></body>
+</html>

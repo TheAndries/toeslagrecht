@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Voorbeeld zt-2023-pub-003 — toeslagrecht</title>
+<link rel="stylesheet" href="../../../static/tokens.css">
+<link rel="stylesheet" href="../../../static/site.css">
+</head>
+<body>
+<a class="skip" href="#inhoud">Naar de inhoud</a>
+<header class="kop">
+  <div class="kop-in">
+    <a class="woordmerk" href="../../../index.html">toeslagrecht</a>
+    <nav aria-label="Menu"><ul class="menu"><li><a href="../../../index.html">Narekenen</a></li><li><a href="../../../dossier/index.html" aria-current="page">Dossier</a></li><li><a href="../../../wet/index.html">Wet</a></li><li><a href="../../../over/index.html">Over</a></li></ul></nav>
+  </div>
+</header>
+<main id="inhoud" class="pagina">
+<h1>Voorbeeld zt-2023-pub-003</h1>
+<p class="statusregel">zorgtoeslag · 2023 · bron: <code>published</code> · niet geverifieerd</p>
+<h2>De bron</h2>
+<p>Dienst Toeslagen, Berekening zorgtoeslag 2023 (TG 082 - 1Z32FD, januari 2023), rekenvoorbeeld 3: gehuwd, wonend in Duitsland; aanvrager verdragsgerechtigd (CAK) met AOW € 9.000, partner in Duitsland verzekerd met € 11.000; standaardpremie € 3.778 × 0,8814 = € 3.329,92; normpremie € 596,16; subtotaal € 2.733,76; 50%: € 1.366,88 per jaar; per maand € 113,90 (na afronding € 113)</p>
+<p><a href="https://download.belastingdienst.nl/toeslagen/docs/berekening_zorgtoeslag_tg0821z32fd.pdf">https://download.belastingdienst.nl/toeslagen/docs/berekening_zorgtoeslag_tg0821z32fd.pdf</a> (opgehaald 2026-10-11)</p>
+<h2>Wat is ingevuld</h2><dl class="feiten">
+<dt>partner</dt><dd>True</dd>
+<dt>partner_verzekerd</dt><dd>False</dd>
+<dt>partner_verdragsgerechtigd</dt><dd>False</dd>
+<dt>aanvrager_verdragsgerechtigd</dt><dd>True</dd>
+<dt>woonland</dt><dd>DE</dd>
+<dt>toetsingsinkomen_aanvrager</dt><dd>9000</dd>
+<dt>toetsingsinkomen_partner</dt><dd>11000</dd>
+<dt>rendementsgrondslag</dt><dd>—</dd>
+</dl>
+<h2>Verwacht en berekend</h2>
+<div class="prose"><table><thead><tr><th>Veld</th><th>Verwacht (bron)</th><th>Berekend (wettekst)</th><th>Gelijk</th></tr></thead><tbody>
+<tr><td data-h="Veld"><code>standaardpremie_totaal</code></td><td data-h="Verwacht (bron)" class="getal">3329.92</td><td data-h="Berekend (wettekst)" class="getal">3329.93 (exact 3329.9292)</td><td data-h="Gelijk">NEE</td></tr>
+<tr><td data-h="Veld"><code>normpremie</code></td><td data-h="Verwacht (bron)" class="getal">596.16</td><td data-h="Berekend (wettekst)" class="getal">596.16 (exact 596.160414720)</td><td data-h="Gelijk">ja</td></tr>
+<tr><td data-h="Veld"><code>aanspraak_jaar</code></td><td data-h="Verwacht (bron)" class="getal">1366.88</td><td data-h="Berekend (wettekst)" class="getal">1366.88 (exact 1366.8843926400)</td><td data-h="Gelijk">ja</td></tr>
+<tr><td data-h="Veld"><code>aanspraak_maand</code></td><td data-h="Verwacht (bron)" class="getal">113.90</td><td data-h="Berekend (wettekst)" class="getal">113.91 (exact 113.9070327200)</td><td data-h="Gelijk">NEE</td></tr>
+<tr><td data-h="Veld"><code>aanspraak_maand_afgerond_praktijk</code></td><td data-h="Verwacht (bron)" class="getal">113</td><td data-h="Berekend (wettekst)" class="getal">113</td><td data-h="Gelijk">ja</td></tr>
+</tbody></table></div>
+<p>Woonlandfactor Duitsland 2023 0,8814 (Rzv bijlage 4, Stcrt. 2022, 29339). In 2023 heet het artikel art. 3 (per 06-11-2024 art. 4a). Inkomen onder het drempelinkomen: 2,378% × € 25.069,824 = € 596,16, gelijk aan de Dienst. De Dienst past de woonlandfactor op beide standaardpremies toe (stap 5 onder c), zoals in 2024; zie DISCREPANCIES.md #3.</p>
+<h2>Stap voor stap, volgens de wettekst</h2>
+<section class="uitkomst"><p class="bedrag-intro">Naar de letter van de wet krijgt u in 2023</p><p class="bedrag">€ 1.367 <span class="per-jaar">per jaar</span></p><p class="klein">Berekend € 1.366,88 per jaar, afgerond op hele euro’s (Awir art. 14 lid 4). Per maand is dat € 113,91. Dienst Toeslagen betaalt hele euro’s per maand en komt dan op € 113; waar dat afronden per maand in de wet staat, hebben wij niet gevonden.</p><p class="eerlijk">Dit is wat de wet zegt voor wat u invulde. Het is geen advies en geen aanvraag; aanvragen doet u op <a href="https://www.toeslagen.nl">toeslagen.nl</a>.</p><p class="statusregel">Alle regels in deze berekening: <span class="status">draft</span>.</p><ol class="stappen"><li class="stap"><p class="stap-zin"><span class="stap-nr" aria-hidden="true">1</span><span>Uw toetsingsinkomen en dat van uw partner tellen samen. <span class="getal">Uitkomst: € 20.000,00.</span></span></p><p class="kantlijn"><a href="../../../dossier/awir/awir-2026-art7-1/index.html">Awir art. 7 lid 1</a> · <span class="status">draft</span><span class="rekensom">9000 + 11000</span></p></li><li class="stap"><p class="stap-zin"><span class="stap-nr" aria-hidden="true">2</span><span>Is het vermogen op 1 januari boven de grens, dan is er het hele jaar geen zorgtoeslag. <span class="getal">Uitkomst: niet getoetst, want geen vermogen opgegeven.</span></span></p><p class="kantlijn"><a href="../../../dossier/zorgtoeslag/zt-2026-art3-1/index.html">Wzt art. 2a lid 1 (tekst 2023) (BWBR0018451, geldend van 01-01-2023 t/m 31-12-2023 (verbatim gelezen 2026-10-11))</a> · <span class="status">draft</span><span class="rekensom">Geen vermogen opgegeven; de vermogenstoets is niet uitgevoerd.</span></p></li><li class="stap"><p class="stap-zin"><span class="stap-nr" aria-hidden="true">3</span><span>Het drempelinkomen: 108% van twaalf keer het minimumloon per maand van januari. <span class="getal">Uitkomst: € 25.069,82.</span></span></p><p class="kantlijn"><a href="../../../dossier/zorgtoeslag/zt-2026-art1-1f/index.html">Wzt art. 1 lid 1 onder f; WML art. 8 lid 1 onder a</a> · <span class="status">draft</span><span class="rekensom">108% × 12 × 1934.40</span></p></li><li class="stap"><p class="stap-zin"><span class="stap-nr" aria-hidden="true">4</span><span>De normpremie: wat u volgens de wet zelf aan premie kunt dragen. <span class="getal">Uitkomst: € 596,16.</span></span></p><p class="kantlijn"><a href="../../../dossier/zorgtoeslag/zt-2026-art2-2/index.html">Wzt art. 2 lid 2 en 3 (BWBR0018451, geldend van 01-01-2023 t/m 31-12-2023 (verbatim gelezen 2026-10-11))</a> · <span class="status">draft</span><span class="rekensom">2.378% × 25069.824 + 13.640% × max(0, 20000 − 25069.824) = 596.16 + 0</span></p></li><li class="stap"><p class="stap-zin"><span class="stap-nr" aria-hidden="true">5</span><span>Woont u als verdragsgerechtigde buiten Nederland, dan telt de standaardpremie vermenigvuldigd met de woonlandfactor van uw woonland. <span class="getal">Uitkomst: € 3.329,93.</span></span></p><p class="kantlijn"><a href="../../../dossier/zorgtoeslag/zt-2026-art4a/index.html">Wzt art. 3 (tekst 2023) lid 1, 2, 3 (BWBR0018451, geldend van 01-01-2023 t/m 31-12-2023 (verbatim gelezen 2026-10-11)); Wet op de zorgtoeslag art. 3 lid 1 en 2 (tekst 2023) jo. Regeling zorgverzekering art. 6.3.1 lid 9 en bijlage 4</a> · <span class="status">draft</span><span class="rekensom">woonlandfactor DE 2023 = 0.881; standaardpremie(s): 1664.965 + 1664.965</span></p></li><li class="stap"><p class="stap-zin"><span class="stap-nr" aria-hidden="true">6</span><span>Twee keer de standaardpremie min de normpremie; u en uw partner hebben samen één aanspraak. <span class="getal">Uitkomst: € 2.733,77.</span></span></p><p class="kantlijn"><a href="../../../dossier/zorgtoeslag/zt-2026-art2-1/index.html">Wzt art. 2 lid 1 (BWBR0018451, geldend van 01-01-2023 t/m 31-12-2023 (verbatim gelezen 2026-10-11)); Wet op de zorgtoeslag art. 4 jo. Regeling vaststelling standaardpremie en bestuursrechtelijke premies 2023, art. 1</a> · <span class="status">draft</span><span class="rekensom">3329.929 − 596.16</span></p></li><li class="stap"><p class="stap-zin"><span class="stap-nr" aria-hidden="true">7</span><span>Uw partner is geen verzekerde voor deze wet: u krijgt de helft. <span class="getal">Uitkomst: € 1.366,88.</span></span></p><p class="kantlijn"><a href="../../../dossier/zorgtoeslag/zt-2026-art2-4/index.html">Wzt art. 2 lid 4 (BWBR0018451, geldend van 01-01-2023 t/m 31-12-2023 (verbatim gelezen 2026-10-11))</a> · <span class="status">draft</span><span class="rekensom">50% × vorige stap</span></p></li><li class="stap"><p class="stap-zin"><span class="stap-nr" aria-hidden="true">8</span><span>Het bedrag van de zorgtoeslag wordt afgerond op hele euro&#x27;s. <span class="getal">Uitkomst: € 1.367,00.</span></span></p><p class="kantlijn"><a href="../../../dossier/awir/awir-2026-art14-4/index.html">Awir art. 14 lid 4</a> · <span class="status">draft</span><span class="rekensom">1366.884 → afgerond</span></p></li><li class="stap"><p class="stap-zin"><span class="stap-nr" aria-hidden="true">9</span><span>Is de zorgtoeslag minder dan € 24 per jaar, dan wordt zij niet toegekend. <span class="getal">Uitkomst: € 1.367,00.</span></span></p><p class="kantlijn"><a href="../../../dossier/awir/awir-2026-art14-5/index.html">Awir art. 14 lid 5</a> · <span class="status">draft</span><span class="rekensom">1367 ≥ 24</span></p></li><li class="stap"><p class="stap-zin"><span class="stap-nr" aria-hidden="true">10</span><span>Per kalendermaand: het jaarbedrag gedeeld door twaalf. <span class="getal">Uitkomst: € 113,91.</span></span></p><p class="kantlijn"><a href="../../../dossier/zorgtoeslag/zt-2026-art2-5/index.html">Wzt art. 2 lid 5 (BWBR0018451, geldend van 01-01-2023 t/m 31-12-2023 (verbatim gelezen 2026-10-11))</a> · <span class="status">draft</span><span class="rekensom">1366.884 / 12</span></p></li></ol></section>
+<h2>Wat de wet hier niet bepaalt</h2><ul class="prose"><li class="klein">afronding maandbedrag: de wet rondt het jaarbedrag af (Awir art. 14 lid 4), niet het maandbedrag; Dienst Toeslagen deelt in haar tabellen het afgeronde jaarbedrag door twaalf en rondt naar beneden af op hele euro&#x27;s (grondslag niet gevonden in Awir, Wzt of Uitvoeringsregeling Awir).</li></ul>
+</main>
+<footer class="voet">
+  <div class="pagina">
+    <p>toeslagrecht · de toeslagenwet als rekenregels die u zelf kunt nalopen</p>
+    <p>Elke regel heeft de status <span class="status">draft</span>: door niemand met vakkennis nagelezen. Geen enkele case is geverifieerd aan een echte beschikking.</p>
+    <p class="voet-links"><a href="../../../dossier/index.html">Dossier</a> · <a href="../../../betwisten/index.html">Iets betwisten</a> · <a href="../../../insturen/index.html">Een beschikking insturen</a> · <a href="../../../over/index.html">Over</a> · <a href="https://github.com/TheAndries/toeslagrecht">Bron</a> (MIT / CC BY-SA 4.0) · Gebouwd 2026-10-20</p>
+  </div>
+</footer>
+</body>
+</html>
