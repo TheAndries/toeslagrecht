@@ -90,12 +90,16 @@ def run_case(c: dict, rules) -> dict:
         partner_verdragsgerechtigd=inv.get("partner_verdragsgerechtigd"),
         woonland=inv.get("woonland"),
         partner_verzekeringsplicht_niet_nagekomen=inv.get("partner_verzekeringsplicht_niet_nagekomen"),
+        maanden_aanspraak=inv.get("maanden_aanspraak"),
     )
     got = {
         "normpremie": next((s.uitkomst for s in u.stappen if s.regel == "zt-2026-art2-2"), None),
         "standaardpremie_totaal": next((s.uitkomst for s in u.stappen if s.regel == "zt-2026-art4a"), None),
         "aanspraak_jaar": u.aanspraak_jaar,
+        "aanspraak_periode": u.aanspraak_periode,
         "tegemoetkoming": u.tegemoetkoming,
+        "tegemoetkoming_jaar": u.tegemoetkoming_jaar,
+        "tegemoetkoming_praktijk_deeljaar": u.tegemoetkoming_praktijk_deeljaar,
         "aanspraak_maand": u.aanspraak_maand,
         "aanspraak_maand_afgerond_praktijk": u.aanspraak_maand_afgerond_praktijk,
     }
@@ -182,9 +186,12 @@ def parity(cases: list[dict], rules) -> tuple[list[str], int]:
             return cents(D(str(a))) == cents(D(str(b)))
 
         diffs = []
-        for k in ("aanspraak_jaar", "tegemoetkoming", "aanspraak_maand"):
+        for k in ("aanspraak_jaar", "aanspraak_periode", "tegemoetkoming", "tegemoetkoming_jaar",
+                  "tegemoetkoming_praktijk_deeljaar", "aanspraak_maand"):
             if not same(getattr(py, k), u[k]):
                 diffs.append(f"{k}: py {getattr(py, k)} js {u[k]}")
+        if py.maanden_aanspraak != u["maanden_aanspraak"]:
+            diffs.append(f"maanden: py {py.maanden_aanspraak} js {u['maanden_aanspraak']}")
         if py.aanspraak_maand_afgerond_praktijk != u["aanspraak_maand_afgerond_praktijk"]:
             diffs.append(f"praktijk: py {py.aanspraak_maand_afgerond_praktijk} js {u['aanspraak_maand_afgerond_praktijk']}")
         if py.vermogen != u["vermogen"]:
@@ -209,9 +216,19 @@ def parity(cases: list[dict], rules) -> tuple[list[str], int]:
     return [head] + lines, bad
 
 
+def discrepancy_status(nummer: int) -> str | None:
+    """The status of entry `nummer` in DISCREPANCIES.md, read from its table row (the log is the authority)."""
+    for line in (ROOT / "DISCREPANCIES.md").read_text(encoding="utf-8").splitlines():
+        if line.startswith(f"| {nummer} |"):
+            m = re.search(r"\| `(open|encoding|government|law|withdrawn)` \|", line)
+            return m.group(1) if m else None
+    return None
+
+
 def check() -> int:
     rules = load_rules("zorgtoeslag")
     cases = load_cases()
+    verified = 0
     lines = [f"# Zorgtoeslag — test report, generated {TODAY} by tools/build.py", "",
              "Generated file; do not edit. Verified cases are tests (blocking); published and synthetic",
              "cases are checks (reported). Every failing check is a discrepancy in `DISCREPANCIES.md`.", ""]
@@ -221,6 +238,7 @@ def check() -> int:
         if c["toeslag"] != "zorgtoeslag":
             continue
         kind = "TEST (verified)" if c.get("verified") else f"check ({c['bron']['type']})"
+        verified += 1 if c.get("verified") else 0
         if c.get("niet_gecodeerd"):
             counts["skip"] += 1
             lines += [f"## {c['id']} — SKIPPED — {kind}", "", f"Not run: {c['niet_gecodeerd']}", ""]
@@ -228,7 +246,14 @@ def check() -> int:
         r = run_case(c, rules)
         status = "PASS" if r["ok"] else "FAIL"
         counts["pass" if r["ok"] else "fail"] += 1
-        if not r["ok"] and c.get("verified"):
+        # A verified case whose failure DISCREPANCIES.md classifies `government` or `law` (the case carries the
+        # entry number in `discrepantie`) is explained, not blocking: the encoding follows the text, the case keeps
+        # the decision (CASES.md). Any other status, or no entry, blocks.
+        if not r["ok"] and c.get("discrepantie"):
+            st = discrepancy_status(int(c["discrepantie"]))
+            if st in ("government", "law"):
+                status = f"FAIL — explained by DISCREPANCIES.md #{c['discrepantie']} ({st})"
+        if not r["ok"] and c.get("verified") and not status.startswith("FAIL — explained"):
             blocking_fail += 1
         lines += [f"## {c['id']} — {status} — {kind}", "", f"Source: {c['bron']['publicatie']}", "",
                   "| field | expected | encoding | match |", "|---|---|---|---|"]
@@ -240,7 +265,7 @@ def check() -> int:
     par_lines, par_bad = parity(cases, rules)
     lines += ["---", ""] + par_lines + ["", "---", "",
               f"Cases run: {counts['pass'] + counts['fail']}, passed: {counts['pass']}, failed: {counts['fail']}, "
-              f"skipped: {counts['skip']}. Verified cases: 0. Blocking failures: {blocking_fail}. "
+              f"skipped: {counts['skip']}. Verified cases: {verified}. Blocking failures: {blocking_fail}. "
               f"Browser/Python differences: {par_bad} (blocking: the two encodings must agree)."]
     blocking_fail += par_bad
     out = ROOT / "law" / "zorgtoeslag" / "tests"

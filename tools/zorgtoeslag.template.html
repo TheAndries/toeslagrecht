@@ -51,6 +51,9 @@
     <div class="veld"><label for="rg">Uw vermogen op 1 januari, samen met uw partner als u die hebt, in hele euro's</label>
       <input id="rg" name="rendementsgrondslag" type="text" inputmode="numeric" pattern="[0-9.]*" aria-describedby="h-rg">
       <p class="hint" id="h-rg">Dit is de rendementsgrondslag uit box 3: al uw spaargeld, beleggingen en een tweede huis, min schulden, op 1 januari — het hele bedrag, vóór aftrek van het heffingvrije vermogen (de wet vergelijkt dat hele bedrag met de grens; voor 2020 trekt de berekening het heffingvrije vermogen zelf af). Laat het leeg als u het niet weet; dan slaat de berekening de vermogenstoets over en zegt zij dat.</p></div>
+    <div class="veld"><label for="maanden">In hoeveel maanden van dat jaar had u recht op zorgtoeslag?</label>
+      <input id="maanden" name="maanden_aanspraak" type="text" inputmode="numeric" pattern="[0-9]*" value="12" aria-describedby="h-maanden">
+      <p class="hint" id="h-maanden">Meestal het hele jaar: 12. Was u een deel van het jaar niet in Nederland verzekerd, bijvoorbeeld door een verhuizing naar het buitenland, tel dan de maanden waarin u wel recht had. De wet bepaalt de zorgtoeslag per kalendermaand (Wzt art. 2 lid 5); welke maand meetelt, zegt de tekst niet, dus de berekening neemt uw aantal over.</p></div>
     <div class="veld alleen-partner" hidden><p id="l-hj" class="label">Had u het hele jaar dezelfde toeslagpartner?</p>
       <div class="keuzes" role="radiogroup" aria-labelledby="l-hj">
         <label><input type="radio" name="hele_jaar_dezelfde_partner" value="ja" checked> Ja</label>
@@ -110,6 +113,12 @@
     if (!/^-?\d+$/.test(raw)) throw new Error("Vul een bedrag in hele euro's in, zonder letters: bijvoorbeeld 32000.");
     return raw;
   }
+  function maanden() {
+    var raw = document.getElementById("maanden").value.trim();
+    if (raw === "") return 12;
+    if (!/^\d{1,2}$/.test(raw) || Number(raw) < 1 || Number(raw) > 12) throw new Error("Vul het aantal maanden in als een getal van 1 tot en met 12.");
+    return Number(raw);
+  }
   function toonPartnerVelden() {
     var p = radio("partner") === "ja";
     var par = PARAMETERS.zorgtoeslag[Number(document.getElementById("jaar").value)] || {};
@@ -135,6 +144,7 @@
       "Toetsingsinkomen " + Z.eur(Z.P(inv.toetsingsinkomen_aanvrager), false) +
       (inv.partner && inv.toetsingsinkomen_partner ? ", partner " + Z.eur(Z.P(inv.toetsingsinkomen_partner), false) : "") + ". " +
       (inv.rendementsgrondslag ? "Vermogen " + Z.eur(Z.P(inv.rendementsgrondslag), false) + "." : "Vermogen niet opgegeven.") +
+      (u.maanden_aanspraak < 12 ? " Recht in " + u.maanden_aanspraak + " van de 12 maanden." : "") +
       (inv.aanvrager_verdragsgerechtigd || inv.partner_verdragsgerechtigd ? " Verdragsgerechtigd, woonland " + esc(inv.woonland || "niet gekozen") + "." : "");
     h.push('<h2 id="uitkomst-kop">Hoe de wet bij uw bedrag komt</h2>');
     h.push('<p class="klein">' + samenvatting + '</p>');
@@ -145,10 +155,17 @@
       h.push('<p>Zorgtoeslag per jaar, volgens de wet:</p><p class="res">niet bepaald door de wet</p>');
       h.push('<p>Voor deze situatie zegt de wettekst van ' + jaar + ' niet wat de uitkomst is. Hieronder staat waar de tekst ophoudt.</p>');
     } else {
+      if (u.maanden_aanspraak < 12) {
+        h.push('<p>Zorgtoeslag over ' + u.maanden_aanspraak + ' maanden van ' + jaar + ', volgens de wet:</p><p class="res">' + Z.eur(u.tegemoetkoming, false) + '</p>');
+        h.push('<p class="klein">Berekend ' + Z.eur(u.aanspraak_jaar) + ' over het hele jaar; ' + u.maanden_aanspraak + '/12 daarvan is ' + Z.eur(u.aanspraak_periode) +
+          ', afgerond op hele euro’s (Awir art. 14 lid 4). Per maand is dat ' + Z.eur(u.aanspraak_maand) + '. Dienst Toeslagen rondt eerst het jaarbedrag af en neemt daar ' +
+          u.maanden_aanspraak + '/12 van: ' + Z.eur(u.tegemoetkoming_praktijk_deeljaar, false) + (u.tegemoetkoming_praktijk_deeljaar === u.tegemoetkoming ? ', hetzelfde bedrag.' : ', één euro anders; waar die volgorde in de wet staat, hebben wij niet gevonden.') + '</p>');
+      } else {
       h.push('<p>Zorgtoeslag per jaar, volgens de wet:</p><p class="res">' + Z.eur(u.tegemoetkoming, false) + '</p>');
       h.push('<p class="klein">Berekend ' + Z.eur(u.aanspraak_jaar) + ' per jaar, afgerond op hele euro’s (Awir art. 14 lid 4). ' +
         'Per maand is dat ' + Z.eur(u.aanspraak_maand) + '. Dienst Toeslagen betaalt hele euro’s per maand en komt dan op € ' +
         u.aanspraak_maand_afgerond_praktijk + '; waar dat afronden per maand in de wet staat, hebben wij niet gevonden.</p>');
+      }
     }
     h.push('<div class="eerlijk"><p>Dit berekent wat de wet zegt voor wat u hier invulde. Het is geen advies en het kent uw hele situatie niet. Aanvragen doet u op <a href="https://www.toeslagen.nl">toeslagen.nl</a>.</p></div>');
     h.push('<h2>Stap voor stap</h2><ol class="stappen">');
@@ -190,7 +207,8 @@
         aanvrager_verdragsgerechtigd: radio("aanvrager_verdragsgerechtigd") === "ja",
         partner_verdragsgerechtigd: partner ? radio("partner_verdragsgerechtigd") === "ja" : null,
         woonland: document.getElementById("woonland").value || null,
-        partner_verzekeringsplicht_niet_nagekomen: partner ? jaNee(radio("partner_verzekeringsplicht_niet_nagekomen")) : null
+        partner_verzekeringsplicht_niet_nagekomen: partner ? jaNee(radio("partner_verzekeringsplicht_niet_nagekomen")) : null,
+        maanden_aanspraak: maanden()
       };
       if ((inv.aanvrager_verdragsgerechtigd || inv.partner_verdragsgerechtigd) && !inv.woonland) {
         throw new Error("Kies het woonland: de woonlandfactor hangt ervan af (Wzt art. 4a).");

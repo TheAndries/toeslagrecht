@@ -1,4 +1,4 @@
-# Zorgtoeslag — test report, generated 2026-10-19 by tools/build.py
+# Zorgtoeslag — test report, generated 2026-10-20 by tools/build.py
 
 Generated file; do not edit. Verified cases are tests (blocking); published and synthetic
 cases are checks (reported). Every failing check is a discrepancy in `DISCREPANCIES.md`.
@@ -427,25 +427,25 @@ Source: Rechtbank Midden-Nederland 2 juni 2026, ECLI:NL:RBMNE:2026:4437 (zaaknr.
 
 Note: Voorschot 2023 op een geschat inkomen onder het drempelinkomen (€ 25.069,824): normpremie = 0,123% × € 25.069,824 = € 30,84; € 1.889 − € 30,84 = € 1.858,16 → € 1.858 — het maximum zonder partner in 2023, door de Dienst zelf op 28-12-2022 berekend. Zonder partner: de uitspraak spreekt alleen over eisers inkomen en het bedrag past bij één standaardpremie. Zie zt-2023-rul-002/-003 voor de twee latere bedragen van dezelfde aanvrager, die een deel van het jaar betreffen. Wordt 'verified' zodra een met naam genoemd mens de invoer tegen de uitspraak heeft gelegd (CASES.md; ASKS.md 9).
 
-## zt-2023-rul-002 — FAIL — check (ruling)
+## zt-2023-rul-002 — FAIL — explained by DISCREPANCIES.md #10 (government) — check (ruling)
 
 Source: Rechtbank Midden-Nederland 2 juni 2026, ECLI:NL:RBMNE:2026:4437 (zaaknr. UTR 25/6130), r.o. 5 en 11: 'Met het besluit van 5 september 2025 heeft Dienst Toeslagen eisers zorgtoeslag voor het jaar 2023 definitief berekend op € 992,- en het teveel verstrekte voorschot van € 744,- teruggevorderd.' 'Dienst Toeslagen is bij de definitieve berekening uitgegaan van een definitief jaarinkomen van € 30.763,-.' R.o. 12: eiser is 'sinds 10 augustus 2023 niet meer ingeschreven in Nederland, omdat hij naar Duitsland is verhuisd'. De rechtbank: het jaarinkomen telt, ook als iemand 'alleen een deel van het jaar recht heeft op zorgtoeslag' (r.o. 14). Beroep ongegrond
 
 | field | expected | encoding | match |
 |---|---|---|---|
-| tegemoetkoming | 992.00 | 1082.00 (exact 1082) | NO |
+| tegemoetkoming | 992.00 | 991.00 (exact 991) | NO |
 
-Note: Definitieve berekening 2023 over een DEEL van het jaar: de aanvrager verhuisde op 10-08-2023 naar Duitsland. De encoding rekent alleen hele jaren (Wzt art. 2 lid 5, per kalendermaand, is niet gecodeerd — DISCREPANCIES.md #9) en geeft voor € 30.763 het jaarbedrag: normpremie = 0,123% × € 25.069,824 + 13,640% × (€ 30.763 − € 25.069,824) = € 30,84 + € 776,55 = € 807,39; € 1.889 − € 807,39 = € 1.081,61 → € 1.082. De Dienst kwam op € 992. De uitspraak zegt niet over hoeveel maanden; € 992 = 11/12 van het afgeronde jaarbedrag € 1.082 (€ 991,83 → € 992), en het herziene voorschot van 02-02-2024 (zt-2023-rul-003) is eveneens 11/12 van het volle voorschot. Dit is dus geen tegenspraak met de tekst maar een niet-gecodeerde regel; de case blijft staan als het bewijs ervan en als test voor de dag dat de maandbepaling gecodeerd is. Wordt 'verified' op dezelfde voet als rul-001 (ASKS.md 9).
+Note: Definitieve berekening 2023 over een DEEL van het jaar: de aanvrager verhuisde op 10-08-2023 naar Duitsland. De uitspraak noemt het aantal maanden niet; 11 volgt uit beide bedragen van de Dienst (dit en zt-2023-rul-003, dat onder elke lezing 11/12 van het volle voorschot is) en strookt met een verzekering die na augustus eindigt. Jaarbedrag uit de tekst van 2023: normpremie = 0,123% × € 25.069,824 + 13,640% × (€ 30.763 − € 25.069,824) = € 30,84 + € 776,55 = € 807,39; € 1.889 − € 807,39 = € 1.081,61. Sinds 2026-10-20 codeert de encoding Wzt art. 2 lid 5 (per kalendermaand, invoer maanden_aanspraak): € 1.081,61 × 11/12 = € 991,48 → € 991 (Awir art. 14 lid 4). De Dienst kwam op € 992 = 11/12 van het éérst afgeronde jaarbedrag € 1.082 (€ 991,83 → € 992). De tekst rondt het jaarbedrag niet af vóór de maandsplitsing; dat de Dienst dat doet, is DISCREPANCIES.md #10 (government). De case faalt daarom met € 1 verschil, en blijft staan als het bewijs van de werkwijze van de Dienst. Wordt 'verified' op dezelfde voet als rul-001 (ASKS.md 9); dan is het een blokkerende test die onder #10 bewust faalt — zie DISCREPANCIES.md #10 voor hoe de test dan geldt.
 
-## zt-2023-rul-003 — FAIL — check (ruling)
+## zt-2023-rul-003 — PASS — check (ruling)
 
 Source: Rechtbank Midden-Nederland 2 juni 2026, ECLI:NL:RBMNE:2026:4437 (zaaknr. UTR 25/6130), r.o. 10: 'Op 2 februari 2024 heeft Dienst Toeslagen het voorschot voor zorgtoeslag vastgesteld op € 1.703,-. Dienst Toeslagen is bij het berekenen van deze voorschotten uitgegaan van eisers jaarinkomen van € 11.204,-.' Een herzien voorschot (Awir art. 16), na de verhuizing van 10-08-2023, voor dezelfde aanvrager als zt-2023-rul-001
 
 | field | expected | encoding | match |
 |---|---|---|---|
-| tegemoetkoming | 1703.00 | 1858.00 (exact 1858) | NO |
+| tegemoetkoming | 1703.00 | 1703.00 (exact 1703) | yes |
 
-Note: Herzien voorschot 2023 over een DEEL van het jaar, op hetzelfde geschatte inkomen als zt-2023-rul-001 (€ 11.204, vol jaar € 1.858). De encoding rekent alleen hele jaren en geeft € 1.858 (DISCREPANCIES.md #9). € 1.703 = 11/12 × € 1.858 (€ 1.703,17) of 11/12 × € 1.858,16 (€ 1.703,32) → € 1.703; de uitspraak noemt het aantal maanden niet. Samen met rul-002 (€ 992 = 11/12 × € 1.082) laat dit zien dat de Dienst bij een deel van het jaar het (afgeronde) jaarbedrag naar rato van de maanden neemt en het resultaat opnieuw afrondt. Wordt 'verified' op dezelfde voet als rul-001 (ASKS.md 9).
+Note: Herzien voorschot 2023 over een DEEL van het jaar, op hetzelfde geschatte inkomen als zt-2023-rul-001 (€ 11.204, vol jaar € 1.858,16 → € 1.858). De uitspraak noemt het aantal maanden niet; € 1.703 is 11/12 van het jaarbedrag onder elke lezing (11/12 × € 1.858,16 = € 1.703,31 → € 1.703, de tekst; 11/12 × € 1.858 = € 1.703,17 → € 1.703, de Dienst), zodat 11 maanden hier vaststaat, los van de afrondingsvolgorde. Sinds 2026-10-20 codeert de encoding Wzt art. 2 lid 5 (invoer maanden_aanspraak: 11) en reproduceert dit bedrag; DISCREPANCIES.md #9 is daarmee 'encoding'. Samen met rul-002 (€ 992 = 11/12 × het éérst afgeronde € 1.082, waar de tekst € 991 geeft) laat dit zien hoe de Dienst bij een deel van het jaar rekent (#10). Wordt 'verified' op dezelfde voet als rul-001 (ASKS.md 9).
 
 ## zt-2024-pub-001 — FAIL — check (published)
 
@@ -2108,4 +2108,4 @@ Browser encoding (`site/zorgtoeslag-regels.js`, node v22.22.0): 205 cases compar
 
 ---
 
-Cases run: 205, passed: 184, failed: 21, skipped: 0. Verified cases: 0. Blocking failures: 0. Browser/Python differences: 0 (blocking: the two encodings must agree).
+Cases run: 205, passed: 185, failed: 20, skipped: 0. Verified cases: 0. Blocking failures: 0. Browser/Python differences: 0 (blocking: the two encodings must agree).

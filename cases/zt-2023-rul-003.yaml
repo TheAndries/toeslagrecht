@@ -13,6 +13,7 @@ invoer:
   toetsingsinkomen_aanvrager: "11204"
   toetsingsinkomen_partner: "0"
   rendementsgrondslag: null
+  maanden_aanspraak: 11
 verwacht:
   tegemoetkoming: "1703"
-opmerking: "Herzien voorschot 2023 over een DEEL van het jaar, op hetzelfde geschatte inkomen als zt-2023-rul-001 (€ 11.204, vol jaar € 1.858). De encoding rekent alleen hele jaren en geeft € 1.858 (DISCREPANCIES.md #9). € 1.703 = 11/12 × € 1.858 (€ 1.703,17) of 11/12 × € 1.858,16 (€ 1.703,32) → € 1.703; de uitspraak noemt het aantal maanden niet. Samen met rul-002 (€ 992 = 11/12 × € 1.082) laat dit zien dat de Dienst bij een deel van het jaar het (afgeronde) jaarbedrag naar rato van de maanden neemt en het resultaat opnieuw afrondt. Wordt 'verified' op dezelfde voet als rul-001 (ASKS.md 9)."
+opmerking: "Herzien voorschot 2023 over een DEEL van het jaar, op hetzelfde geschatte inkomen als zt-2023-rul-001 (€ 11.204, vol jaar € 1.858,16 → € 1.858). De uitspraak noemt het aantal maanden niet; € 1.703 is 11/12 van het jaarbedrag onder elke lezing (11/12 × € 1.858,16 = € 1.703,31 → € 1.703, de tekst; 11/12 × € 1.858 = € 1.703,17 → € 1.703, de Dienst), zodat 11 maanden hier vaststaat, los van de afrondingsvolgorde. Sinds 2026-10-20 codeert de encoding Wzt art. 2 lid 5 (invoer maanden_aanspraak: 11) en reproduceert dit bedrag; DISCREPANCIES.md #9 is daarmee 'encoding'. Samen met rul-002 (€ 992 = 11/12 × het éérst afgeronde € 1.082, waar de tekst € 991 geeft) laat dit zien hoe de Dienst bij een deel van het jaar rekent (#10). Wordt 'verified' op dezelfde voet als rul-001 (ASKS.md 9)."

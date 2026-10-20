@@ -176,10 +176,11 @@
     return [afgerond, toegekend];
   }
 
-  /** De hele berekening voor één ongewijzigd kalenderjaar. Elke stap noemt haar artikel.
+  /** De hele berekening voor één kalenderjaar waarin de invoer niet verandert. Elke stap noemt haar artikel.
    *  invoer: { jaar, toetsingsinkomen_aanvrager, partner, toetsingsinkomen_partner, partner_verzekerd,
    *            rendementsgrondslag, hele_jaar_dezelfde_partner, aanvrager_verdragsgerechtigd,
-   *            partner_verdragsgerechtigd, woonland, partner_verzekeringsplicht_niet_nagekomen }
+   *            partner_verdragsgerechtigd, woonland, partner_verzekeringsplicht_niet_nagekomen,
+   *            maanden_aanspraak (1–12, standaard 12: de maanden van het jaar met aanspraak, Wzt art. 2 lid 5) }
    *          (bedragen als string of getal; booleans; null = niet opgegeven)
    *  parameters: zorgtoeslag-parameters.js (PARAMETERS) */
   function bereken(invoer, parameters) {
@@ -199,6 +200,9 @@
     const partnerVg = invoer.partner_verdragsgerechtigd === undefined ? null : invoer.partner_verdragsgerechtigd;
     const woonland = invoer.woonland || null;
     const plichtNiet = invoer.partner_verzekeringsplicht_niet_nagekomen === undefined ? null : invoer.partner_verzekeringsplicht_niet_nagekomen;
+    const m = (invoer.maanden_aanspraak === null || invoer.maanden_aanspraak === undefined || invoer.maanden_aanspraak === "")
+      ? 12 : Number(invoer.maanden_aanspraak);
+    if (!Number.isInteger(m) || m < 1 || m > 12) throw new Error("maanden_aanspraak moet 1 t/m 12 zijn");
 
     const artv = par.versie || ("BWBR0018451, geldend van 01-01-" + jaar);
     const artVerm = par.artikel_vermogenstoets || "Wzt art. 3 lid 1";
@@ -206,8 +210,9 @@
     const lid3 = par.art4a_lid3_aanwezig === undefined ? true : par.art4a_lid3_aanwezig;
     const artMaand = par.artikel_maandbepaling || "Wzt art. 2 lid 5";   // 2020: lid 6
 
-    const u = { jaar, stappen: [], aanspraak_jaar: null, tegemoetkoming: null, aanspraak_maand: null,
-                aanspraak_maand_afgerond_praktijk: null, vermogen: "niet_getoetst", onbepaald: [] };
+    const u = { jaar, stappen: [], aanspraak_jaar: null, maanden_aanspraak: m, aanspraak_periode: null,
+                tegemoetkoming: null, tegemoetkoming_jaar: null, tegemoetkoming_praktijk_deeljaar: null,
+                aanspraak_maand: null, aanspraak_maand_afgerond_praktijk: null, vermogen: "niet_getoetst", onbepaald: [] };
 
     // awir-2026-art7-1
     const ti = partner ? tiA + (tiP === null ? 0n : tiP) : tiA;
@@ -222,7 +227,8 @@
       "Is het vermogen op 1 januari boven de grens, dan is er het hele jaar geen zorgtoeslag.", toel, verm));
     if (verm === "undetermined") u.onbepaald.push("zt-2026-art3-1: " + toel);
     if (verm === "geen_aanspraak") {
-      u.aanspraak_jaar = 0n; u.tegemoetkoming = 0n; u.aanspraak_maand = 0n; u.aanspraak_maand_afgerond_praktijk = 0;
+      u.aanspraak_jaar = 0n; u.aanspraak_periode = 0n; u.tegemoetkoming = 0n; u.tegemoetkoming_jaar = 0n;
+      u.aanspraak_maand = 0n; u.aanspraak_maand_afgerond_praktijk = 0;
       return u;
     }
 
@@ -300,30 +306,60 @@
     }
     u.aanspraak_jaar = aanspraak;
 
-    // awir-2026-art14-4 / awir-2026-art14-5
+    // zt-2026-art2-5 — een deel van het jaar: de aanspraak wordt per kalendermaand bepaald (Wzt art. 2 lid 5), dus bij
+    // aanspraak in m van de 12 maanden m twaalfde van het jaarbedrag. De tekst rondt vóór die splitsing niets af; de
+    // Dienst rondt het jaarbedrag eerst af (DISCREPANCIES.md #10), hieronder als praktijk getoond.
+    let periode;
+    if (m < 12) {
+      periode = div(aanspraak * BigInt(m), 12n * SCALE);
+      u.stappen.push(stap("zt-2026-art2-5", artMaand + " (" + artv + ")",
+        "U had in " + m + " van de 12 maanden recht: de aanspraak wordt per kalendermaand bepaald, dus " + m + " twaalfde van het jaarbedrag.",
+        t(aanspraak) + " × " + m + "/12", periode));
+    } else {
+      periode = aanspraak;
+    }
+    u.aanspraak_periode = periode;
+
+    // awir-2026-art14-4 / awir-2026-art14-5 — op de tegemoetkoming: het bedrag over de maanden met aanspraak
     if (awir.minimum_tegemoetkoming) {
-      const [afgerond, toegekend] = rondTegemoetkoming(aanspraak, awir);
+      const [afgerond, toegekend] = rondTegemoetkoming(periode, awir);
       u.stappen.push(stap("awir-2026-art14-4", awir.afronding_tegemoetkoming.artikel,
-        "Het bedrag van de zorgtoeslag wordt afgerond op hele euro's.", t(aanspraak) + " → afgerond", afgerond));
+        "Het bedrag van de zorgtoeslag wordt afgerond op hele euro's.", t(periode) + " → afgerond", afgerond));
       const minimum = awir.minimum_tegemoetkoming.waarde;
       u.stappen.push(stap("awir-2026-art14-5", awir.minimum_tegemoetkoming.artikel,
         "Is de zorgtoeslag minder dan € " + minimum + " per jaar, dan wordt zij niet toegekend.",
         (toegekend === 0n && afgerond > 0n) ? t(afgerond) + " < " + minimum + ": niet toegekend"
           : (afgerond > 0n ? t(afgerond) + " ≥ " + minimum : "0"), toegekend));
       u.tegemoetkoming = toegekend;
+      const toeJ = rondTegemoetkoming(aanspraak, awir)[1];
+      u.tegemoetkoming_jaar = toeJ;
+      if (m < 12) {
+        // Geen wet: Dienst Toeslagen neemt het afgeronde jaarbedrag, maal m/12, en rondt opnieuw af (tot op de euro
+        // gereproduceerd uit ECLI:NL:RBMNE:2026:4437, 2023: € 1.082 × 11/12 = € 991,83 → € 992, waar de volgorde van de
+        // tekst € 1.081,61 × 11/12 = € 991,48 → € 991 geeft; DISCREPANCIES.md #10).
+        const praktijkOnafgerond = div(toeJ * BigInt(m), 12n * SCALE);
+        const praktijkDj = roundHalfUp(praktijkOnafgerond, 0);
+        u.tegemoetkoming_praktijk_deeljaar = praktijkDj;
+        u.onbepaald.push("deel van het jaar: de wet bepaalt de aanspraak per kalendermaand (" + artMaand + ") en rondt " +
+          "het bedrag van de tegemoetkoming af (Awir art. 14 lid 4); zij zegt niet dat het jaarbedrag " +
+          "eerst wordt afgerond. Dienst Toeslagen rekent vanuit het afgeronde jaarbedrag: " + t(toeJ) + " × " +
+          m + "/12 = " + t(praktijkOnafgerond) + " → € " + t(praktijkDj) + " (ECLI:NL:RBMNE:2026:4437, 2023); de " +
+          "tekst gewoon gelezen geeft € " + t(toegekend) +
+          (praktijkDj === toegekend ? " — hetzelfde bedrag." : ". Het verschil is € 1 (DISCREPANCIES.md #10)."));
+      }
     } else {
       u.onbepaald.push("Awir art. 14 lid 4-5 (afronding, minimumbedrag): geen Awir-parameters geladen; niet toegepast.");
     }
 
-    // zt-2026-art2-5
+    // zt-2026-art2-5 — het bedrag per kalendermaand: het jaarbedrag gedeeld door twaalf
     const maand = div(aanspraak, 12n * SCALE);
     u.stappen.push(stap("zt-2026-art2-5", artMaand + " (" + artv + ")",
-      "Per kalendermaand, bij een heel jaar zonder wijzigingen: het jaarbedrag gedeeld door twaalf.",
+      "Per kalendermaand: het jaarbedrag gedeeld door twaalf.",
       t(aanspraak) + " / 12", maand));
     u.aanspraak_maand = maand;
     // Geen wet: hoe Dienst Toeslagen aan het hele maandbedrag komt dat zij publiceert (DISCREPANCIES.md #5).
     // 2022: het leaflet rondt het maandbedrag rekenkundig af (DISCREPANCIES.md #8); het parameterbestand zegt welke praktijk geldt.
-    const basisMaand = u.tegemoetkoming === null ? aanspraak : u.tegemoetkoming;
+    const basisMaand = u.tegemoetkoming_jaar === null ? aanspraak : u.tegemoetkoming_jaar;
     const praktijk = (par.maand_afronding_praktijk && par.maand_afronding_praktijk.waarde) || "naar_beneden";
     if (praktijk === "rekenkundig") {
       u.aanspraak_maand_afgerond_praktijk = Number(roundHalfUp(div(basisMaand, 12n * SCALE), 0) / SCALE);
@@ -344,7 +380,9 @@
     const u = bereken(invoer, parameters);
     const s = (v) => (typeof v === "bigint" ? toString(v) : v);
     return {
-      jaar: u.jaar, aanspraak_jaar: s(u.aanspraak_jaar), tegemoetkoming: s(u.tegemoetkoming),
+      jaar: u.jaar, aanspraak_jaar: s(u.aanspraak_jaar), maanden_aanspraak: u.maanden_aanspraak,
+      aanspraak_periode: s(u.aanspraak_periode), tegemoetkoming: s(u.tegemoetkoming),
+      tegemoetkoming_jaar: s(u.tegemoetkoming_jaar), tegemoetkoming_praktijk_deeljaar: s(u.tegemoetkoming_praktijk_deeljaar),
       aanspraak_maand: s(u.aanspraak_maand), aanspraak_maand_afgerond_praktijk: u.aanspraak_maand_afgerond_praktijk,
       vermogen: u.vermogen, onbepaald: u.onbepaald.slice(),
       stappen: u.stappen.map((x) => ({ regel: x.regel, artikel: x.artikel, omschrijving: x.omschrijving,

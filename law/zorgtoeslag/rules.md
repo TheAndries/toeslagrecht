@@ -98,10 +98,25 @@ encoding niet; het is invoer.
 **Artikel:** Wzt art. 2 lid 5 (BWBR0018451, geldend van 01-01-2026; in 2018 t/m 2020 lid 6, vernummerd per 01-01-2021 bij
 Stb. 2020, 543, art. III; het jaarbestand zegt het met `artikel_maandbepaling`).
 **Status:** draft.
-**Gewoon Nederlands:** De zorgtoeslag wordt voor elke maand apart bepaald.
-**Code:** Voor een situatie die het hele jaar gelijk blijft: `aanspraak_maand` =
-`aanspraak_jaar` / 12, onafgerond.
-**Discretie:** De wet rondt het jaarbedrag van de tegemoetkoming af (Awir art. 14 lid 4,
+**Tekst:** "De aanspraak op een zorgtoeslag wordt voor iedere kalendermaand afzonderlijk bepaald." (verbatim gelezen in de
+versies van 01-01-2023 en 01-01-2026, 2026-10-20; lid 6 laat nadere regels bij ministeriële regeling toe — de wetstechnische
+informatie van art. 2 noemt er geen, geraadpleegd 2026-10-09 en 2026-10-20).
+**Gewoon Nederlands:** De zorgtoeslag wordt voor elke maand apart bepaald. Had u maar een deel van het jaar recht,
+dan krijgt u zoveel twaalfden van het jaarbedrag als u maanden met recht had.
+**Code:** `aanspraak_maand` = `aanspraak_jaar` / 12, onafgerond. Sinds 2026-10-20 ook een deel van het jaar: invoer
+`maanden_aanspraak` (1–12, standaard 12); bij minder dan 12: `aanspraak_periode` = `aanspraak_jaar` × maanden / 12,
+onafgerond, en daarop pas Awir art. 14 lid 4 (afronding) en lid 5 (minimum) → `tegemoetkoming`. Het hele-jaarbedrag
+blijft apart beschikbaar (`tegemoetkoming_jaar`). Welke maand meetelt (de maand waarin iemand verzekerde wordt of ophoudt
+dat te zijn), bepaalt de tekst niet: het aantal is invoer en de checker zegt dat.
+**Volgorde van afronden (niet door de tekst bepaald; de encoding volgt de tekst gewoon gelezen):** de tekst rondt het
+bedrag van de tegemoetkoming af (Awir art. 14 lid 4) en zegt nergens dat het jaarbedrag eerst wordt afgerond voordat het in
+twaalfden gaat. De Dienst Toeslagen doet dat wel: zij neemt het afgeronde jaarbedrag, vermenigvuldigt met maanden/12 en rondt
+opnieuw af — tot op de euro gereproduceerd uit Rechtbank Midden-Nederland 02-06-2026, ECLI:NL:RBMNE:2026:4437 (2023,
+11 maanden: € 1.082 × 11/12 = € 991,83 → € 992, waar de tekst € 1.081,61 × 11/12 = € 991,48 → € 991 geeft; het herziene
+voorschot € 1.703 is onder beide lezingen gelijk). De encoding geeft het bedrag van de tekst als `tegemoetkoming` en dat van
+de Dienst als `tegemoetkoming_praktijk_deeljaar`, en zegt in de uitkomst wanneer zij verschillen (hoogstens € 1).
+`DISCREPANCIES.md` #9 (de regel ontbrak; `encoding`) en #10 (de volgorde; `government`), cases `zt-2023-rul-002/-003`.
+**Discretie (maandbedrag):** De wet rondt het jaarbedrag van de tegemoetkoming af (Awir art. 14 lid 4,
 `../awir/rules.md`), niet het maandbedrag. De Dienst Toeslagen publiceert hele euro's per maand.
 Haar tabellen (alle rijen 2025 en 2026, `cases/zt-*-tab-*`) laten zien hoe: het afgeronde
 jaarbedrag gedeeld door twaalf, naar beneden afgerond (2025 met partner, € 34.000: € 2.243,83 →
@@ -110,8 +125,7 @@ af en ronden naar beneden (2024: 123,59 → 123; 109,50 → 109; 2025: 131,12 �
 wat met beide lezingen strookt. Geen grondslag gevonden in Wzt, Awir of Uitvoeringsregeling Awir
 (2026-10-08, 2026-10-09); het maandbedrag is een voorschot (Awir art. 16) en hoe dat in termijnen
 wordt gesplitst, staat niet in de gelezen teksten. De encoding toont het onafgeronde maandbedrag
-(`aanspraak_maand`) en de praktijk (`aanspraak_maand_afgerond_praktijk`) apart; `DISCREPANCIES.md` #5. Voor 2022 rondde de Dienst het maandbedrag in haar rekenvoorbeeld rekenkundig af (€ 44,89 → € 45), wat geen enkel naar-beneden-model geeft; het parameterbestand 2022 draagt daarom `maand_afronding_praktijk: rekenkundig` (één voorbeeld, als praktijk gemerkt; `DISCREPANCIES.md` #8). De praktijkregel is per jaar een parameter, geen wet. Een jaar met wijzigingen (partner erbij, 18
-worden, overlijden; Awir art. 5) codeert de encoding nog niet.
+(`aanspraak_maand`) en de praktijk (`aanspraak_maand_afgerond_praktijk`, berekend uit het afgeronde hele-jaarbedrag) apart; `DISCREPANCIES.md` #5. Voor 2022 rondde de Dienst het maandbedrag in haar rekenvoorbeeld rekenkundig af (€ 44,89 → € 45), wat geen enkel naar-beneden-model geeft; het parameterbestand 2022 draagt daarom `maand_afronding_praktijk: rekenkundig` (één voorbeeld, als praktijk gemerkt; `DISCREPANCIES.md` #8). De praktijkregel is per jaar een parameter, geen wet. Een jaar waarin de invoer zelf verandert (partner erbij of weg, een ander inkomen per maand; Awir art. 5) codeert de encoding nog niet: zij rekent één situatie over het aantal maanden dat u opgeeft.
 
 ## zt-2020-art2-5oud — partner die zijn verzekeringsplicht niet nakwam (t/m 2020)
 
@@ -212,7 +226,8 @@ geeft 2 × standaardpremie; zie `DISCREPANCIES.md` #3 en case `zt-2026-syn-001`.
   wereldinkomen; zie `../awir/rules.md`.
 - **Wie verdragsgerechtigd is** (Zvw art. 69): invoer. De woonlandfactor zelf is sinds
   2026-10-08 gecodeerd (`zt-2026-art4a`).
-- **Wijzigingen in het jaar** (Awir art. 5): niet gecodeerd.
+- **Wijzigingen in het jaar** (Awir art. 5): niet gecodeerd. Wel, sinds 2026-10-20: één gelijkblijvende situatie over een
+  deel van het jaar (`zt-2026-art2-5`, invoer `maanden_aanspraak`); welke maand meetelt, is invoer.
 - **Verblijfsstatus** (Awir art. 9): niet gecodeerd.
 - **Afronding van het maandbedrag / de voorschotten** (Awir art. 16): geen tekst gevonden;
   zie `zt-2026-art2-5`. Het minimumbedrag en de afronding van het jaarbedrag zijn sinds

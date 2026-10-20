@@ -2,6 +2,131 @@
 
 Newest first. What was done, decided, and got wrong.
 
+## 2026-10-20 — eleventh run: the part-year rule encoded from Wzt art. 2 lid 5, discrepancy #9 closed and #10 opened on the order of rounding, an owner mockup received outside the inbox, Ask 11
+
+Eleventh run of routine `trig_012xyD5r5rxFDCjfHbZ58Kib`. Model as served: `claude-fable-5-1`, the same as the previous
+entry; no handover note needed. The checkout arrived on `main` at a current `origin/main`. The routine fired the day
+after the previous run: no new gap (Ask 10 still open for 10-15 to 10-17).
+
+**Step 1.** No ask newly marked done (4, 6, 8, 9 and 10 open as recorded).
+
+**Step 2 — the inbox, and a note that did not come through it.** `INBOX.md` is empty. But the repository changed between
+the runs: on 2026-10-19 at 16:31 the owner committed `toeslagrecht-mockup-a.html` to the root ("Add files via upload").
+Its header: *"Reference mockup for the toeslagrecht design brief, 2026-10-19. Direction A, 'het formulier'. A sketch
+of colour, proportion and order, not production markup. The law sentences, article numbers and status words in it are
+illustrative and must not be carried over; the real ones come from law/. The brief wins where they differ; DESIGN.md
+wins over both. Fonts load from Google here for the sketch only; production self-hosts them."* Source recorded: the
+commit `118ce32`, the owner's account. The operator reads it as an owner note under `BOARD.md` — the owner steers
+through notes, and a file dropped into the repository is a note in a different place, not an instruction — and argues
+what to do with it:
+- *What the mockup is.* A page of 760 px measure, Source Sans 3 for the interface and Source Serif 4 for the law, a
+  single green accent (#1F5C45) for links, the chosen radio and the button, a header with four plain links (Narekenen,
+  Dossier, Wet, Over), the lock line "Niets van wat u invult verlaat uw telefoon of computer", a form of year chips and
+  three numbered questions, and a result section that is layout B as `DESIGN.md` binds it: the amount, the one honest
+  sentence, numbered steps with the article, its status word and the arithmetic in a margin note. It is, in look,
+  what `DESIGN.md` §8 asks for ("a well-made government form and a court's own website") and what `memory.md` has
+  carried since 10-10 as possible polish inside §8 (self-hosted serif, type scale).
+- *Accepted in principle, applied not yet.* The typography, the accent, the measure, the lock line, the numbered form
+  and the result section fit `DESIGN.md` (§1, §2, §3, §4, §5, §8 and the layout B decision) and need no motion; the
+  operator may do them day to day. They were not applied this run, for one reason: the mockup refers to a *brief*
+  that wins over the mockup, and the brief is nowhere in the repository. Building the sketch now and the brief next
+  week would mean doing the page twice and arguing with a document the operator has not seen. That is Ask 11.
+- *Rejected, or held for the brief.* (1) Fonts from Google: the mockup itself rules them out for production, and so do
+  `DESIGN.md` §5 and §7 (a font request is a request leaving the device; static files). Self-hosting is the way, when it
+  is done. (2) "Vul drie dingen in": the sketch asks the year, the income, the partner and the vermogen. The law needs
+  more — the partner's income, whether the partner is verzekerd, the verdragsgerechtigde and the woonland, since today
+  the months — and the checker asks them. Which questions are shown first and which fold away is a design question
+  the brief should answer; the set cannot shrink below what the articles need (`CHARTER.md` P1, P4). (3) Nothing in the
+  mockup touches the public posture, the scope or the charter, so no motion is filed and none is needed.
+- The file stays where the owner put it. It is outside `site/`, so it is not published (owner decision 2026-10-11:
+  internal matters stay in the repository). If the brief arrives as a file, both belong together under `design/`.
+
+**Step 3.** No open motion.
+
+**Step 4 — done (item 2 of `memory.md`, the first encoding task; two fetches, no search).**
+- *Wzt art. 2 lid 5 encoded: a part of the year.* The text, read verbatim today in the versions of 01-01-2023 and
+  01-01-2026 and identical in both: *"De aanspraak op een zorgtoeslag wordt voor iedere kalendermaand afzonderlijk
+  bepaald."* Lid 6 allows a ministerial regeling with nadere regels; the wetstechnische informatie of art. 2 (geldend op
+  20-10-2026) lists as gedelegeerde regelgeving only the Besluit percentages and under beleidsregels "Geen" — so there is
+  no regeling, as `SOURCES.md` open item 1 already said on 10-09, now confirmed again. Encoded in `rules.py` and
+  `site/zorgtoeslag-regels.js` with the input `maanden_aanspraak` (1–12, default 12): the aanspraak over m months is
+  m twelfths of the unrounded year amount (`aanspraak_periode`), and Awir art. 14 lid 4 (rounding) and lid 5 (minimum)
+  apply to that amount, which is the tegemoetkoming. The whole-year figure stays available (`tegemoetkoming_jaar`), and
+  the Dienst's monthly practice figure is now computed from it, so every whole-year case is unchanged: 205 cases through
+  both encodings, 205 identical. Which month counts — the month in which someone becomes or stops being a verzekerde —
+  the text does not say; the number is input, and the checker says so in the hint. `rules.md` carries the text, the
+  code, the order question and the discretion. The checker (`tools/zorgtoeslag.template.html`) asks "In hoeveel maanden
+  van dat jaar had u recht op zorgtoeslag?" with 12 filled in, validates 1–12, says in the summary "Recht in 11 van de
+  12 maanden", heads the result "Zorgtoeslag over 11 maanden van 2023", and prints the Dienst's figure beside the text's
+  when they differ. Rendered and read in headless Chromium: 2023, € 30.763, 11 months → € 991, with the line "Dienst
+  Toeslagen rondt eerst het jaarbedrag af en neemt daar 11/12 van: € 992, één euro anders".
+- *The two part-year cases.* `zt-2023-rul-002` and `-003` now carry `maanden_aanspraak: 11` (the ruling gives no count;
+  rul-003's € 1.703 is 11/12 of the year amount under either order of rounding, so 11 is fixed by it alone, and it is
+  consistent with insurance ending after the move of 10-08-2023). **rul-003 passes** (€ 1.858,16 × 11/12 = € 1.703,31
+  → € 1.703). **rul-002 gives € 991 against the Dienst's € 992**: the text's order — split, then round the
+  tegemoetkoming once — gives € 1.081,61 × 11/12 = € 991,48 → € 991; the Dienst's amount needs the year amount rounded
+  first, € 1.082 × 11/12 = € 991,83 → € 992. No other plausible method reproduces € 992 (rounding the month to cents
+  first gives € 991; rounding it to whole euros gives € 990). 205 cases: 185 pass, 20 fail, 0 blocking.
+- *A rule for the day a case is verified and the encoding is right to differ.* `CASES.md` says a verified case keeps
+  the government's outcome and `LAW.md` says the encoding is not committed unless every verified case passes; when a
+  verified case fails *because* the log classifies the difference `government` or `law`, both rules cannot hold at
+  once. Decided (method, the operator's): a case may carry `discrepantie: <n>`; `build.py check` reads that entry's
+  status from `DISCREPANCIES.md` — the log stays the authority, the case cannot declare itself explained — and reports a
+  failure explained by a `government` or `law` entry as "FAIL — explained by #n", not blocking. Any other status, or
+  no entry, blocks as before. Tested by setting rul-002 to verified for one run (1 verified, 0 blocking) and back.
+  Written into `cases/README.md` and into #10 before it is needed, so that the rule is not invented under pressure.
+  The summary line now counts verified cases instead of printing 0.
+- Three source rows (the two Wzt versions, the art. 2 informatie page), `cases/README.md`, `rules.md` ("Niet
+  gecodeerd": one unchanged situation over a part of the year is now coded; Awir art. 5 changes within the year
+  still are not), the site rebuilt.
+
+**The discrepancies.** **#9 → `encoding`**: the rule that was missing is encoded and the case that turns only on it
+(rul-003) passes; what remains of rul-002 is a different question and gets its own number, because one entry with one
+status cannot say "fixed" and "the Dienst differs" at once. **#10 opened, `government`**: the text rounds the
+tegemoetkoming (Awir art. 14 lid 4, "het bedrag van de tegemoetkoming") and names no rounding of the year amount
+before it goes into twelfths (Wzt art. 2 lid 5 names none either); the Dienst's amount requires one. This is the shape of
+#1 — a figure the text names unrounded (there the drempelinkomen, here the year amount), rounded by the Dienst — and it
+is classified the same way, with the caveat said in the entry: one ruling, one amount, one euro, and no regeling under
+lid 6 that could prescribe the order. Not `law`: the text is not silent on what is rounded; it names the tegemoetkoming
+and nothing else. Not `open`: it was investigated, and the Dienst's method is reproduced exactly. The encoding gives the
+text's amount and shows the Dienst's beside it, in the checker and in `onbepaald`, so a citizen with a part-year
+beschikking sees the euro and where it comes from. A second part-year beschikking, or the Dienst's method found in
+writing, re-argues it.
+
+**What was wrong and why.**
+- *A promise written into the record before the code existed.* The first draft of #10 said the check "treats a verified
+  failure classified `government` as explained" while `build.py` did no such thing. Caught on re-reading the entry;
+  the code was written and tested before the entry was kept. The rule: a sentence in the log about what the pipeline
+  does is a number — read it off the pipeline or do not write it.
+- *An owner note found by `git log`, not by the inbox.* The routine reads `INBOX.md`; a file upload is invisible to it
+  unless the run looks at the last commit. Added to `memory.md`: read `git log -3 --stat` at the start of every run, and
+  treat any owner commit as a note.
+- Nothing dropped from scope. 2017 (item 3) and the ruling pass (item 4) not started: the encoding task was the plan's
+  first item and the discrepancy rule took the care it deserved. `PLAN.md` unchanged (strategy holds; Checkpoint 1 open
+  on the owner, not missed by any date).
+
+**Step 8 — asks.** Ask 11 (the design brief behind the mockup; not blocking). Ask 9 extended with a dated note: the
+part-year cases no longer wait on anything.
+
+**Dropped from memory.** The "Not encoded: a part of the year" paragraph and open item 2 (done; its design held, except
+that the Dienst's order was not adopted as the encoding's — the text's was, and the Dienst's is shown as practice).
+
+**Effort.** Roughly 185,000 of the 300,000-token ceiling: about 95,000 reading the files, the previous entries, both
+encodings, the pipeline and the template; about 5,000 on two fetches (the Wzt of 2023 and 2026, the art. 2 informatie
+page); about 85,000 writing and testing the two encodings, the pipeline change, the form, the rules text, two cases, two
+discrepancy entries, three source rows, the headless render, the asks and these records. The cheapest run in fetches
+and the most expensive in code since 10-14, as a rule change in both encodings is.
+
+**Record under the ten-year rule.** This run added to the record: discrepancy #10 with its classification argued — the
+dated finding, reproduced to the euro from a court's record, that the Dienst Toeslagen rounds the year amount before
+pro-rating a part of the year, where the text rounds only the tegemoetkoming, and that this moves one euro in the one
+case known; #9 closed with the date and the commit; the two part-year cases completed with their month count and the
+reasoning that fixes it; the verbatim text of Wzt art. 2 lid 5 and 6 in the versions of 2023 and 2026, dated, with the
+confirmation that no regeling exists under lid 6; the owner's mockup of 2026-10-19 recorded as a note with its source,
+the argument on it, and Ask 11; and the dated rule for how a verified case that the encoding is right to differ from
+counts in the tests. The encoding of the part-year rule, the form field and the site build are regenerable and are not
+counted.
+
 ## 2026-10-19 — tenth run: 2018 encoded from primary texts, six more cases from case law (2020 and 2023), the first part-year amounts of the Dienst and discrepancy #9, a second retroactive factor correction found
 
 Tenth run of routine `trig_012xyD5r5rxFDCjfHbZ58Kib`. Model as served: `claude-fable-5-1`, the same as the previous
