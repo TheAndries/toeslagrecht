@@ -2,6 +2,110 @@
 
 Newest first. What was done, decided, and got wrong.
 
+## 2026-10-21 — twelfth run: 2017 encoded from primary texts, the 2017 Zweden correction settled as bijdrage-only, the design session's inbox handled, the record's old columns filled
+
+Twelfth run of routine `trig_012xyD5r5rxFDCjfHbZ58Kib`. Model as configured for the session: `claude-fable-5-1`, the same as the
+previous scheduled entry (10-20) and as the owner session's agent; no handover note needed. The checkout arrived on `main` at a
+current `origin/main` (`bea3f3e`, the owner session's last commit). The routine fired the day after the previous run: no new gap.
+
+**Step 1 — asks marked done.** 11 (the design brief), 12 (the specimen) and 13 (the merge) were marked done in the owner session of
+2026-10-20. What they unblock: the restyling of the checker that `memory.md` had carried as item 2 since 10-20 is done by the design
+agent and dropped; the site is now rendered by `tools/render.py`, and a new parameter file adds its year to the form, the Wet pages and
+the dossier without a code change (used today for 2017). Asks 4, 6, 8, 9 and 10 stay open as recorded.
+
+**Step 2 — the inbox.** Three entries, all from the owner-initiated design session, all already transcribed into `BOARD.md` and
+`DESIGN.md` by that session; recorded here as handled and `INBOX.md` emptied.
+- *2026-10-19, owner note: the design brief* (source: the owner, Andries, in the owner-initiated session; the brief filed as
+  `DESIGN-BRIEF-2026-10-19.md`). Accepted as the owner's design, as `BOARD.md` 2026-10-20 settles: design is the owner's alone. The
+  design agent filed five notes for the board while reading; the operator decides each, since none changes the charter or a protocol:
+  (1) *The Over page does not describe layouts A, B and C.* Accepted: the owner decision of 2026-10-11 (internal matters never on the
+  website) governs and the owner confirmed it at the specimen (Ask 12). (2) *`site/layouts/` still sits under `site/`.* Left as it is: the
+  Pages workflow removes it from the deployment and the live check of 10-20 shows `/layouts/b.html` as 404; the record (`ASKS.md` 3,
+  `BOARD.md` 2026-10-09) points at those addresses, and moving the files would change the record to save a step the workflow already
+  takes. (3) *The protocols and the discrepancy log are rendered in English.* Accepted as work, not as a motion: `DISPUTES.md` and
+  `CASES.md` are binding and stay in English; a Dutch B1 explanation above the verbatim text on `/betwisten/` and `/insturen/`, saying
+  that the English text is the binding one, is what the checker shows and so the operator's day-to-day remit under `DESIGN.md` P1 — no
+  protocol changes, so no board motion is needed. Item 3 of `memory.md`; not done this run (the encoding came first). (4) *`law/` holds
+  no article-by-article text of the acts.* Rejected as scope: the record is the dated parameters with each article's text quoted and
+  `CHANGES.md`, not a mirror of wetten.overheid.nl; each Wet year page links the consolidated version it rests on. (5) *The status
+  words are English on the site.* Kept: `LAW.md` defines them, `DESIGN.md` P4 asks for the word in one consistent place, the Over page
+  explains each once, and the owner approved the specimen with them. A Dutch vocabulary would be a `LAW.md` change and is not
+  proposed.
+- *2026-10-20, owner decision: design is the owner's, not the board's* (source: the owner, verbatim in the entry). Recorded in
+  `BOARD.md` (tie-break rule and decision log) by the session; nothing left to do. The operator notes for its own conduct: it files no
+  design motion again; design questions go to the owner as asks.
+- *2026-10-20, owner: the specimen is a yes* (source: the owner). Recorded in `BOARD.md` and `DESIGN.md`; Ask 12 done; nothing left.
+
+**Step 3.** No open motion.
+
+**Step 4 — done (item 3 of `memory.md`: 2017, the next year of history; fourteen fetches in two parallel batches, one web search).**
+- *Zorgtoeslag 2017 encoded from the primary texts*, `parameters/2017.yaml` and `awir/parameters/2017.yaml`, status `draft`, each number
+  with its article, instrument and quoted text: standaardpremie € 1.530 (Stcrt. 2016, 64077: € 1.290 premie + € 240 eigen risico); WML
+  januari 2017 € 1.551,60 (Stcrt. 2016, 60172) → drempelinkomen € 20.108,736; percentages 2,305% / 5,055% / 13,460% (Wzt art. 2 lid 3,
+  text of 01-01-2017; Stb. 2016, 469); vermogensgrens € 82.752 on the grondslag sparen en beleggen (Stcrt. 2016, 60569, from € 82.504);
+  heffingvrij vermogen € 25.000 (Wet IB 2001 art. 5.5, versions 01-01-2017 and 01-07-2017) → effective € 107.752 / € 132.752 on the
+  rendementsgrondslag; 39 woonlandfactoren (Stcrt. 2016, 61016, identical to the consolidated bijlage 4 of 01-01-2017, generated from
+  the consolidated text by script, each line carrying the bijlage's berekeningsjaar and zorgkosten); Awir art. 7 lid 6 € 4.788 (Stcrt.
+  2016, 70381 art. VII) and art. 14 lid 4–5 unchanged. The Wzt had two versions in 2017: the diff of 01-01 and 01-07 shows only art. 1
+  onder e (the eigen risico named in the definition of zorgtoeslag) and art. 4 (22 instead of 15 days) — Stb. 2017, 146 — no rule. The
+  diff of 01-01-2016 against 01-01-2017 shows the percentages, the art. 2a amount, and art. 5 lid 2 (CAK for Zorginstituut, Stb. 2016,
+  173) — the 2016 values now stand in the 'old' columns as read, not recalled. The Awir's art. 7 and 14 are identical in its two 2017
+  versions. No code change: the 2020 switches (`art2_lid5_oud_aanwezig`, `vermogenstoets_basis`, `artikel_wml_onderdeel`) cover 2017.
+- *The Zweden question settled.* Since 10-19 the record said that Stcrt. 2017, 66088 art. II set Zweden's 2017 factor anew at 0,8263
+  and that whether this reached the zorgtoeslag was "not stated". Read today: art. II names only "het in artikel 6.3.1, eerste lid, van de
+  Regeling zorgverzekering bedoelde verhoudingsgetal" (the verdragsbijdrage), and the toelichting says in so many words "Deze wijziging
+  heeft geen effect op de hoogte van de zorgtoeslag. Deze wordt niet ten nadele van de verdragsgerechtigden gecorrigeerd." The
+  encoding keeps the published 1,0948 for the zorgtoeslag, as 2018 keeps Duitsland's published 0,9559 (Stcrt. 2019, 58198, same
+  pattern). `CHANGES.md` rows of 10-19, `parameters/2018.yaml`'s cross-reference and `memory.md` corrected.
+- *Four synthetic cases*, `zt-2017-syn-024..027`: the income ceilings from the text, € 27.857 zonder and € 35.116 met partner, each with
+  the euro above. As in 2018, the rounding of the drempelinkomen decides: rounded down to € 20.108 both ceilings move one euro down
+  (€ 23,4952 → € 23 → none), rounded up to € 20.109 neither moves. A Dienst figure for 2017 would settle `DISCREPANCIES.md` #1 for 2017;
+  the leaflet 2017 is a 404 (`tg0821z71fd`, `z72fd`), recorded in `SOURCES.md` and in Ask 8's note. Computed analytically and verified
+  on the boundary euros through the encoding. Maximum 2017 from the text: € 1.066 / € 2.044 (€ 2.043,50 rounds up under Awir art. 14
+  lid 4).
+- *Check:* 209 cases, 189 pass, 20 fail (the twenty of 10-20, every one logged), 0 blocking; both encodings agree on 209. The site
+  rebuilt: 258 pages, 2017 in the form, `/wet/2017/`, four new case pages.
+- *The record's files:* `CHANGES.md` — eight rows for 2017 (the 2017-07-01 and 2017-01-01 changes, with Stb. 2016, 469's 2018 row as
+  the seventh pre-effect revision found) and one for Wet IB art. 5.5 2017 → 2018; the 2018 rows' old columns filled from the texts read
+  today (the percentages, the standaardpremie, the woonlandfactoren table, Zweden). `SOURCES.md` — twelve rows for the 2017 instruments
+  and texts, the leaflet 2017 as not found, open item 4 resolved and rewritten for 2016. `rules.md`, `cases/README.md`, `README.md`.
+
+**What was wrong and why.**
+- *An instrument almost named without being read.* The new `CHANGES.md` row for the heffingvrij vermogen 2017 → 2018 first said
+  "Belastingplan 2018 chain" as the instrument — a plausible name, not a read one. Caught on re-reading the row; replaced by "not
+  identified". Same rule as for numbers and article references: read or not written.
+- *"Not stated" written where the text had not been read to the end.* The 10-19 run read Stcrt. 2017, 66088 for the 2018 table and
+  wrote that the effect of art. II on the zorgtoeslag was not stated; the toelichting states it. The entry was honest about what had
+  been read, but the record carried a question that the same document answered. Lesson in `memory.md`: read the toelichting before
+  writing "not stated".
+- *Two tool mistakes that cost time, not the record:* a ceiling search that ran the encoding one euro at a time from € 25.000 and
+  timed out (replaced by the analytic bound, verified on the two boundary euros); and `pkill -f` on a script name, which killed the
+  Bash call carrying that name as well.
+- Nothing dropped from scope. Items 3 (now 2016), 4 (rulings) and the Dutch B1 protocol pages not started. `PLAN.md` unchanged:
+  the strategy holds (zorgtoeslag proven against published cases, history continuing while Checkpoint 1 waits on the owner,
+  huurtoeslag not before that); no checkpoint has a date to miss.
+
+**Step 8 — asks.** None new. Ask 8 extended with a dated note (the 2017 leaflet is a 404 too).
+
+**Dropped from memory.** The owner-mockup paragraph and open item 2 (the restyle: done by the design agent), the old checker
+paragraph (template, layouts regenerated), open item 7 (checker polish inside §8: done by the design); replaced by one paragraph on
+the rendered site and its tools, the 2017 key figures, and the three new lessons.
+
+**Effort.** Roughly 265,000 of the 300,000-token ceiling: about 95,000 reading the files, the previous entries, the parameter and
+rules files and the pipeline; about 25,000 on fourteen fetches and one search (the 47 MB Regeling zorgverzekering among them, stripped
+and cut by script); about 145,000 writing and checking the two parameter files, the four cases, the records in `CHANGES.md`,
+`SOURCES.md` and `rules.md`, the memory and this entry. More than 10-19's 2018 run because the inbox carried the design session's
+three entries and five notes to decide, and because the Zweden question needed one more document.
+
+**Record under the ten-year rule.** This run added to the record: the law of 2017 as it stood, dated and sourced — every parameter
+with its instrument and quoted text, the two Wzt versions of 2017 with the diff that shows what Stb. 2017, 146 and Stb. 2016, 173
+changed, and the 2016 values read into the 'old' columns; the dated finding that Zweden's 2017 correction (Stcrt. 2017, 66088 art. II)
+was for the verdragsbijdrage only, with the toelichting's sentence, settling a question the record had carried since 10-19; the 2017
+income ceilings from the text with the proof that the drempelinkomen's rounding decides them, the second year in a row (2018, 2017)
+where it does; the seventh pre-effect revision of the percentages schema; the owner session's three inbox entries with their sources
+and the operator's decision on each of the design agent's five notes. The encoding of 2017 (no code changed), the cases' arithmetic
+and the site build are regenerable and are not counted.
+
 ## 2026-10-20 — owner session: the design branch merged; the site in direction A, the dossier rendered on the site
 
 Owner-initiated session with the design agent (not a scheduled run; nothing here was filed for the routine).

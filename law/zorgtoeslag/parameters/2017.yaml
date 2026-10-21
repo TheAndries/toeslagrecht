@@ -1,0 +1,159 @@
+# Zorgtoeslag — parameters berekeningsjaar 2017. Elk getal met zijn bron (CHARTER.md P1).
+# Bedragen in euro als string, zodat de code met Decimal rekent. Percentages als string, in procenten.
+# Artikelnummering van 2017 (gelijk aan 2018 t/m 05-11-2024): de vermogenstoets stond in art. 2a en de woonlandfactor in
+# art. 3; het huidige art. 4a lid 3 bestond nog niet (ingevoegd per 06-11-2024).
+# Structuur als 2018 t/m 2020: (1) art. 2 had acht leden; lid 5 (oud) ontzegde de zorgtoeslag aan een verzekerde met een partner
+# die zijn verzekeringsplicht (Zvw art. 2) niet nakwam; de maandbepaling stond in lid 6 (lid 5 vervallen en lid 6–8 vernummerd
+# per 01-01-2021, Stb. 2020, 543, art. III); (2) de vermogenstoets van art. 2a rustte op de *grondslag sparen en beleggen*
+# (Wet IB 2001 art. 5.2) met één bedrag, € 82.752; (3) art. 1 lid 1 onder f verwijst naar WML art. 8 lid 1 onderdeel *a*.
+# Eigen aan 2017: de percentages van art. 2 lid 3 volgen Stb. 2016, 469, dat met ingang van 2017 de normpercentages structureel
+# verlaagde met 0,35 procentpunt (zonder partner: 2,655% → 2,305%) en 0,70 procentpunt (met partner: 5,755% → 5,055%) als
+# koopkrachtmaatregel — de 'structurele verlenging van de tijdelijke verhoging van de zorgtoeslag' van 2015 en 2016; het
+# afbouwpercentage (13,460%) bleef op zijn schema van +0,03 procentpunt per jaar. De tekst van 2016 (gelezen) had 2,380% /
+# 5,220% / 13,430%.
+# Twee tekstversies van de Wzt in 2017: geldend van 01-01-2017 t/m 30-06-2017 en van 01-07-2017 t/m 31-12-2017 (Stb. 2017, 146,
+# in werking per Stb. 2017, 244): per 01-07-2017 noemt art. 1 onder e de zorgtoeslag ook een tegemoetkoming in het verplicht eigen
+# risico (Zvw art. 19) en stelt art. 4 de termijn voor de standaardpremie op 22 in plaats van 15 dagen — geen rekenregel veranderde
+# (verbatim vergeleken 2026-10-21). Art. 1 lid 1 onder c (verzekerde) noemde in 2017 nog alleen 'artikel 24, eerste lid' van de Zvw.
+jaar: 2017
+status: draft
+geraadpleegd: 2026-10-21
+versie: "BWBR0018451, geldend van 01-01-2017 t/m 30-06-2017 en van 01-07-2017 t/m 31-12-2017 (verbatim gelezen 2026-10-21)"
+versie_opmerking: "Ontstaansbronnen per 01-01-2017 (wetstechnische informatie): Stcrt. 2016, 60569 (art. 2a lid 1: € 82.752); Stb. 2016, 173 (in werking per Stb. 2016, 442: art. 5 lid 2, de uitbetaling van de bestuursrechtelijke premie aan het CAK in plaats van het Zorginstituut — geen rekenregel); Stb. 2016, 469 (art. 2 lid 3: de percentages 2017, 'samen met' Stb. 2015, 472; Stb. 2014, 488; Stb. 2012, 627; Stb. 2011, 620 — de keten van percentagebesluiten). Per 01-07-2017: Stb. 2017, 146 (art. 1 onder e en art. 4, geen rekenregel). Geen rekenregel veranderde in de loop van 2017."
+artikel_vermogenstoets: "Wzt art. 2a lid 1 (tekst 2017)"
+artikel_woonlandfactor: "Wzt art. 3 (tekst 2017)"
+artikel_maandbepaling: "Wzt art. 2 lid 6 (tekst 2017; sinds 01-01-2021 lid 5)"
+artikel_wml_onderdeel: "a"
+art4a_lid3_aanwezig: false
+art4a_lid3_opmerking: "Het huidige art. 4a lid 3 (verzekerde aanvrager met een verdragsgerechtigde partner) is ingevoegd per 06-11-2024 (Stb. 2024, 291, art. XIX onder C). In 2017 regelde de tekst (art. 3) dat geval niet; de encoding geeft dan 'undetermined'."
+art2_lid5_oud_aanwezig: true
+art2_lid5_oud:
+  artikel: "Wet op de zorgtoeslag art. 2 lid 5 (tekst 2017; vervallen per 01-01-2021)"
+  bron: "BWBR0018451, geldend van 01-01-2017 t/m 30-06-2017 (verbatim gelezen 2026-10-21; dezelfde tekst in de versie van 01-07-2017 en in 2018 t/m 2020). Vervallen bij Wet verbetering uitvoerbaarheid toeslagen, Stb. 2020, 543, art. III onder 2 (lid 6–8 vernummerd tot 5–7, onder 3)"
+  url: https://wetten.overheid.nl/BWBR0018451/2017-01-01
+  geldig_van: 2017-01-01
+  geldig_tot: 2017-12-31
+  tekst: "In afwijking van het eerste lid heeft een verzekerde met een partner die niet heeft voldaan aan de voor hem op grond van artikel 2 van de Zorgverzekeringswet geldende verplichting zich krachtens een zorgverzekering te verzekeren, geen aanspraak op een zorgtoeslag."
+  opmerking: "Invoer: partner_verzekeringsplicht_niet_nagekomen (ja/nee/onbekend). Of de partner verzekeringsplichtig was en die plicht niet nakwam (Zvw art. 2) codeert de encoding niet; het is invoer. Niet opgegeven: gerekend alsof nagekomen, met een noot."
+vermogenstoets_basis: grondslag_sparen_en_beleggen
+maand_afronding_opmerking: "Geen parameter maand_afronding_praktijk: voor 2017 is geen rekenvoorbeeld van de Dienst gelezen (de leaflet Berekening zorgtoeslag 2017 is op 2026-10-21 een 404 onder tg0821z71fd en z72fd; SOURCES.md). De encoding gebruikt de standaard 'naar_beneden' (DISCREPANCIES.md #5) en zegt dat in het resultaat; 2022 rondde rekenkundig (#8), dus 2017 is onbekend. Geen uitkomst van de Dienst voor 2017 bekend."
+
+standaardpremie:
+  waarde: "1530"
+  artikel: "Wet op de zorgtoeslag art. 4 jo. Regeling vaststelling standaardpremie en bestuursrechtelijke premies 2017, art. 1"
+  bron: "Regeling van de Minister van Volksgezondheid, Welzijn en Sport van 22 november 2016, kenmerk 1046186-158039-Z, Stcrt. 2016, 64077 (primaire tekst gelezen 2026-10-21); geconsolideerd BWBR0038756 (geldend van 01-01-2017). Toelichting: gemiddelde nominale premie 2017 € 1.290 (berekend op basis van de werkelijke nominale premies 2017) plus gemiddeld bedrag verplicht eigen risico € 240. 2018: € 1.546 (Stcrt. 2017, 68107)"
+  url: https://zoek.officielebekendmakingen.nl/stcrt-2016-64077.html
+  geldig_van: 2017-01-01
+  tekst: "De standaardpremie wordt voor het jaar 2017 vastgesteld op € 1.530."
+
+wml_maandbedrag_januari:
+  waarde: "1551.60"
+  artikel: "Wet minimumloon en minimumvakantiebijslag art. 8 lid 1 onder a, bedrag per 1 januari 2017 (in 2017 was het maandbedrag onderdeel a; sinds 01-01-2024 onderdeel b)"
+  bron: "Regeling van de Minister van Sociale Zaken en Werkgelegenheid van 4 november 2016, nr. 2016-0000236680, tot aanpassing van het wettelijk minimumloon per 1 januari 2017, Stcrt. 2016, 60172, art. 1 onder a (primaire tekst gelezen 2026-10-21). De geconsolideerde WML-tekst van 01-01-2017 (BWBR0002638, geldend t/m 30-06-2017) draagt het bedrag als redactionele noot bij art. 8 ('per 1 januari 2017: € 1.551,60'); de wetstechnische informatie noemt Stcrt. 2016, 60172 als ontstaansbron van die versie (naast Stb. 2016, 471 en Stb. 2015, 233, die het bedrag niet raken)"
+  url: https://zoek.officielebekendmakingen.nl/stcrt-2016-60172.html
+  geldig_van: 2017-01-01
+  tekst: "a. € 1.551,60;"
+
+drempelinkomen_factor:
+  waarde: "108"
+  eenheid: procent
+  artikel: "Wet op de zorgtoeslag art. 1 lid 1 onder f"
+  bron: "BWBR0018451, geldend van 01-01-2017 t/m 30-06-2017 (verbatim; gelijk in de versie van 01-07-2017)"
+  url: https://wetten.overheid.nl/BWBR0018451/2017-01-01
+  tekst: "drempelinkomen: 108% van het twaalfvoud van het voor de maand januari van het berekeningsjaar geldende in artikel 8, eerste lid, onderdeel a, van de Wet minimumloon en minimumvakantiebijslag bedoelde bedrag per maand"
+  opmerking: "108% × 12 × € 1.551,60 = € 20.108,736. Hoe de Dienst Toeslagen dit in 2017 'vastgesteld' heeft is niet gelezen (leaflet 2017 niet gevonden). De inkomensgrenzen uit de tekst staan in de cases zt-2017-syn-024..027 (laatste euro met recht, Awir art. 14 lid 4-5); of een afgerond drempelinkomen (€ 20.108 of € 20.109, DISCREPANCIES.md #1) ze verschuift staat daar."
+
+normpremie_percentage_drempel_zonder_partner:
+  waarde: "2.305"
+  eenheid: procent
+  artikel: "Wet op de zorgtoeslag art. 2 lid 3 (tekst 2017: 'voor een verzekerde zonder partner op 2,305% van het drempelinkomen')"
+  bron: "BWBR0018451, geldend van 01-01-2017 t/m 30-06-2017 (verbatim; gelijk in de versie van 01-07-2017). Vastgesteld bij Stb. 2016, 469 (besluit van 26 november 2016 tot wijziging van het Besluit percentages drempel- en toetsingsinkomen zorgtoeslag), art. I, rij 2017; nota van toelichting tabel 1: 2016 2,380%, 2017 op het pad van de eerdere besluiten 2,655%, maatregel −0,35 procentpunt (structureel; 'structurele verlenging van de tijdelijke verhoging van de zorgtoeslag', koopkrachtpakket 2017), 'na huidige maatregel' 2,305%; primaire tekst gelezen 2026-10-21. De tekst van 01-01-2016 (gelezen): 2,380%"
+  url: https://wetten.overheid.nl/BWBR0018451/2017-01-01
+
+normpremie_percentage_drempel_met_partner:
+  waarde: "5.055"
+  eenheid: procent
+  artikel: "Wet op de zorgtoeslag art. 2 lid 3 (tekst 2017: 'voor verzekerden met een partner vastgesteld op 5,055% van het drempelinkomen')"
+  bron: "BWBR0018451, geldend van 01-01-2017 t/m 30-06-2017 (verbatim; gelijk in de versie van 01-07-2017). Stb. 2016, 469, art. I, rij 2017; tabel 1: 2016 5,220%, 2017 op het pad 5,755%, maatregel −0,70 procentpunt (structureel), 'na huidige maatregel' 5,055%"
+  url: https://wetten.overheid.nl/BWBR0018451/2017-01-01
+
+normpremie_percentage_boven_drempel:
+  waarde: "13.460"
+  eenheid: procent
+  artikel: "Wet op de zorgtoeslag art. 2 lid 3 (tekst 2017: 'vermeerderd met 13,460% van het toetsingsinkomen voor zover dat boven het drempelinkomen uitgaat', gelijk met en zonder partner)"
+  bron: "BWBR0018451, geldend van 01-01-2017 t/m 30-06-2017 (verbatim; gelijk in de versie van 01-07-2017); Stb. 2016, 469, art. I, rij 2017 (tabel 1: 2016 13,43%, 2017 13,46%, het schema van +0,03 procentpunt per jaar sinds de maatregel 2014; maatregel '–'). De tekst van 01-01-2016 (gelezen): 13,430%"
+  url: https://wetten.overheid.nl/BWBR0018451/2017-01-01
+
+aandeel_partner_niet_verzekerd:
+  waarde: "50"
+  eenheid: procent
+  artikel: "Wet op de zorgtoeslag art. 2 lid 4"
+  bron: "BWBR0018451, geldend van 01-01-2017 t/m 30-06-2017 (verbatim, zelfde tekst als 2018–2026). Gevolgd door lid 5 (oud), zie art2_lid5_oud"
+  url: https://wetten.overheid.nl/BWBR0018451/2017-01-01
+
+heffingvrij_vermogen:
+  waarde: "25000"
+  artikel: "Wet inkomstenbelasting 2001 art. 5.5 (tekst 2017); art. 5.2 lid 1 (grondslag sparen en beleggen = rendementsgrondslag op de peildatum voor zover boven het heffingvrije vermogen) en lid 2 (partners het gehele jaar: de gezamenlijke rendementsgrondslag voor zover boven het heffingvrije vermogen van de belastingplichtige en zijn partner)"
+  bron: "BWBR0011353, geldend van 01-01-2017 t/m 31-03-2017 en van 01-07-2017 t/m 31-12-2017 (beide verbatim gelezen 2026-10-21: 'Het heffingvrije vermogen bedraagt € 25.000.'). Nodig omdat Wzt art. 2a lid 1 (tekst 2017) op de grondslag sparen en beleggen rust; de encoding vraagt de rendementsgrondslag en trekt het heffingvrije vermogen af (éénmaal zonder partner, tweemaal met het hele jaar dezelfde partner). Effectieve grenzen 2017 op de rendementsgrondslag: € 107.752 / € 132.752. 2018: € 30.000"
+  url: https://wetten.overheid.nl/BWBR0011353/2017-01-01
+  tekst: "Het heffingvrije vermogen bedraagt € 25.000."
+
+vermogensgrens_zonder_partner:
+  waarde: "82752"
+  artikel: "Wet op de zorgtoeslag art. 2a lid 1 (tekst 2017) (grondslag sparen en beleggen, art. 5.2 lid 1 Wet IB 2001, in het berekeningsjaar; vrijstelling art. 5.13 Wet IB 2001 telt niet)"
+  bron: "BWBR0018451, geldend van 01-01-2017 t/m 30-06-2017 (verbatim). Regeling van de Minister van Volksgezondheid, Welzijn en Sport van 7 november 2016, kenmerk 1033369-157294-WJZ, Stcrt. 2016, 60569, art. I: '€ 82.504' telkens vervangen door '€ 82.752' (tabelcorrectiefactor 0,3%, Wzt art. 2a lid 2, 'een indexatie van € 248'; toelichting: 'Verzekerden met een vermogen boven het heffingvrije vermogen plus € 82.752 hebben geen recht op de zorgtoeslag'; primaire tekst gelezen 2026-10-21). De tekst van 01-01-2016 (gelezen): € 82.504. 2018: € 83.415 (Stcrt. 2017, 65628)"
+  url: https://zoek.officielebekendmakingen.nl/stcrt-2016-60569.html
+  tekst: "In afwijking van artikel 7, derde lid, van de Algemene wet inkomensafhankelijke regelingen bestaat geen aanspraak op een zorgtoeslag indien de grondslag sparen en beleggen, bedoeld in artikel 5.2, eerste lid, van de Wet inkomstenbelasting 2001, van de belanghebbende in het berekeningsjaar meer bedraagt dan € 82.752, dan wel, ingeval de belanghebbende het gehele berekeningsjaar dezelfde partner heeft, de gezamenlijke grondslag sparen en beleggen, bedoeld in artikel 5.2, tweede lid, van de Wet inkomstenbelasting 2001, van de belanghebbende en zijn partner in het berekeningsjaar meer bedraagt dan € 82.752. Bij de bepaling van de grondslag, bedoeld in de vorige volzin, wordt geen rekening gehouden met de vrijstelling, bedoeld in artikel 5.13 van de Wet inkomstenbelasting 2001."
+
+vermogensgrens_met_partner:
+  waarde: "82752"
+  artikel: "Wet op de zorgtoeslag art. 2a lid 1 (tekst 2017) (gezamenlijke grondslag sparen en beleggen, art. 5.2 lid 2 Wet IB 2001; alleen bij het gehele berekeningsjaar dezelfde partner; hetzelfde bedrag als zonder partner — het verschil zit in het tweemaal heffingvrije vermogen van de grondslag)"
+  bron: "BWBR0018451, geldend van 01-01-2017 t/m 30-06-2017 (verbatim); Stcrt. 2016, 60569, art. I ('telkens')"
+  url: https://zoek.officielebekendmakingen.nl/stcrt-2016-60569.html
+
+woonlandfactoren:
+  artikel: "Wet op de zorgtoeslag art. 3 lid 1-2 (tekst 2017) jo. Regeling zorgverzekering art. 6.3.1 en bijlage 4 (woonlandfactoren 2017)"
+  bron: "Regeling van de Minister van Volksgezondheid, Welzijn en Sport van 9 november 2016, kenmerk 1040302-157680-Z, Stcrt. 2016, 61016, art. I (primaire tekst gelezen 2026-10-21; in werking 01-01-2017; toelichting: berekend door het Zorginstituut Nederland, advies van 18 oktober 2016); gelijk aan de geconsolideerde bijlage 4 van BWBR0018715, geldend van 01-01-2017 t/m 20-01-2017 (verbatim gelezen 2026-10-21, 39 landen, elk met berekeningsjaar, gemiddelde zorgkosten woonland en Nederland). Zweden: Stcrt. 2017, 66088 art. II stelt 'het in artikel 6.3.1, eerste lid, van de Regeling zorgverzekering bedoelde verhoudingsgetal' voor Zweden voor 2017 op 0,8263 (terugwerkend tot 01-01-2017, art. III lid 2); de toelichting: de berekening voor Zweden 'is onjuist geweest', het CAK restitueert te veel geheven verdragsbijdrage, en 'Deze wijziging heeft geen effect op de hoogte van de zorgtoeslag. Deze wordt niet ten nadele van de verdragsgerechtigden gecorrigeerd.' — de encoding houdt daarom voor de zorgtoeslag de gepubliceerde 1,0948. Duitsland: 0,8372 gepubliceerd; voor de verdragsbijdrage met terugwerkende kracht 0,7532 (Stcrt. 2019, 58198 art. II, 'zonder effect op de zorgtoeslag')"
+  url: https://zoek.officielebekendmakingen.nl/stcrt-2016-61016.html
+  geldig_van: 2017-01-01
+  opmerking: "Landcodes ISO 3166-1 alpha-2, toegevoegd door het project; de regeling noemt alleen de landnaam (Macedonië). Oude methode (verhouding van gemiddelde zorgkosten in één berekeningsjaar per land): twee factoren boven 1 (Noorwegen 1,5288, Zweden 1,0948). De kolommen berekeningsjaar en zorgkosten uit de bijlage staan per land in het commentaar."
+  landen:
+    BE: "0.7029"   # België (berekeningsjaar 2012: 2.414,85 / 3.435,32)
+    BA: "0.0645"   # Bosnië-Herzegovina (berekeningsjaar 2014: 225,38 / 3.492,83)
+    BG: "0.0743"   # Bulgarije (berekeningsjaar 2014: 259,58 / 3.492,83)
+    CY: "0.1384"   # Cyprus (berekeningsjaar 2014: 483,48 / 3.492,83)
+    DK: "0.9715"   # Denemarken (berekeningsjaar 2014: 3.393,34 / 3.492,83)
+    DE: "0.8372"   # Duitsland (gepubliceerd en voor de zorgtoeslag gehanteerd; voor de verdragsbijdrage met terugwerkende kracht 0,7532, Stcrt. 2019, 58198 art. II) (berekeningsjaar 2014: 2.924,18 / 3.492,83)
+    EE: "0.2109"   # Estland (berekeningsjaar 2014: 736,70 / 3.492,83)
+    FI: "0.6463"   # Finland (berekeningsjaar 2013: 2.259,77 / 3.496,61)
+    FR: "0.8245"   # Frankrijk (berekeningsjaar 2014: 2.879,70 / 3.492,83)
+    GR: "0.3590"   # Griekenland (berekeningsjaar 2011: 1.261,10 / 3.512,63)
+    HU: "0.1310"   # Hongarije (berekeningsjaar 2014: 457,56 / 3.492,83)
+    IE: "0.8226"   # Ierland (berekeningsjaar 2013: 2.876,19 / 3.496,61)
+    IS: "0.8594"   # IJsland (berekeningsjaar 2014: 3.001,71 / 3.492,83)
+    IT: "0.5569"   # Italië (berekeningsjaar 2012: 1.913,08 / 3.435,32)
+    CV: "0.0175"   # Kaapverdië (berekeningsjaar 2014: 61,05 / 3.492,83)
+    HR: "0.1674"   # Kroatië (berekeningsjaar 2014: 584,54 / 3.492,83)
+    LV: "0.0915"   # Letland (berekeningsjaar 2014: 319,59 / 3.492,83)
+    LI: "0.9473"   # Liechtenstein (berekeningsjaar 2014: 3.308,75 / 3.492,83)
+    LT: "0.2235"   # Litouwen (berekeningsjaar 2014: 780,70 / 3.492,83)
+    LU: "0.7497"   # Luxemburg (berekeningsjaar 2014: 2.618,68 / 3.492,83)
+    MK: "0.0529"   # Macedonië (berekeningsjaar 2014: 184,88 / 3.492,83)
+    MT: "0.3269"   # Malta (berekeningsjaar 2014: 1.141,67 / 3.492,83)
+    MA: "0.0125"   # Marokko (berekeningsjaar 2002: 30,56 / 2.448,29)
+    ME: "0.0763"   # Montenegro (berekeningsjaar 2014: 266,38 / 3.492,83)
+    "NO": "1.5288"   # Noorwegen (berekeningsjaar 2013: 5.345,50 / 3.496,61)
+    AT: "0.6476"   # Oostenrijk (berekeningsjaar 2014: 2.261,83 / 3.492,83)
+    PL: "0.1606"   # Polen (berekeningsjaar 2014: 561,02 / 3.492,83)
+    PT: "0.2510"   # Portugal (berekeningsjaar 2013: 877,74 / 3.496,61)
+    RO: "0.0630"   # Roemenië (berekeningsjaar 2012: 216,43 / 3.435,32)
+    RS: "0.0750"   # Servië (berekeningsjaar 2014: 261,82 / 3.492,83)
+    SI: "0.3243"   # Slovenië (berekeningsjaar 2014: 1.132,89 / 3.492,83)
+    SK: "0.2352"   # Slowakije (berekeningsjaar 2014: 821,59 / 3.492,83)
+    ES: "0.3767"   # Spanje (berekeningsjaar 2014: 1.315,58 / 3.492,83)
+    CZ: "0.2386"   # Tsjechië (berekeningsjaar 2014: 833,56 / 3.492,83)
+    TN: "0.0216"   # Tunesië (berekeningsjaar 2006: 62,02 / 2.874,25)
+    TR: "0.0913"   # Turkije (berekeningsjaar 2012: 313,68 / 3.435,32)
+    GB: "0.6269"   # Verenigd Koninkrijk (berekeningsjaar 2013: 2.191,90 / 3.496,61)
+    SE: "1.0948"   # Zweden (gepubliceerd; met terugwerkende kracht tot 01-01-2017 vervangen door 0,8263, Stcrt. 2017, 66088 art. II — zie opmerking) (berekeningsjaar 2013: 3.828,26 / 3.496,61)
+    CH: "0.6824"   # Zwitserland (berekeningsjaar 2014: 2.383,34 / 3.492,83)

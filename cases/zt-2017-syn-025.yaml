@@ -1,0 +1,18 @@
+id: zt-2017-syn-025
+toeslag: zorgtoeslag
+jaar: 2017
+bron:
+  type: synthetic
+  publicatie: "Berekend uit de tekst (zie zt-2017-syn-024): één euro boven de inkomensgrens zonder partner"
+  url: https://wetten.overheid.nl/BWBR0018451/2017-01-01
+  opgehaald: 2026-10-21
+verified: false
+invoer:
+  partner: false
+  partner_verzekerd: null
+  toetsingsinkomen_aanvrager: "27858"
+  toetsingsinkomen_partner: "0"
+  rendementsgrondslag: null
+verwacht:
+  tegemoetkoming: "0"
+opmerking: "€ 1.530 − (2,305% × € 20.108,736 + 13,460% × (€ 27.858 − € 20.108,736)) = € 23,44 → € 23 < € 24 → geen tegemoetkoming (Awir art. 14 lid 5). Ook met een afgerond drempelinkomen (€ 20.108 of € 20.109) niets."

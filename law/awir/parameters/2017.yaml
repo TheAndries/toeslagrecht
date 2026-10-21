@@ -1,0 +1,40 @@
+# Awir — gedeelde parameters berekeningsjaar 2017. De zorgtoeslag gebruikt hieruit art. 14 lid 4-5 (afronding,
+# minimumbedrag); zij heeft een eigen vermogenstoets (Wzt art. 2a lid 1 in 2017 wijkt af van Awir art. 7 lid 3).
+# Awir art. 7 lid 3 noemde in 2017, als in 2018 t/m 2020, geen bedrag: geen aanspraak zodra bij de belanghebbende (of zijn
+# partner van het hele jaar) voordeel uit sparen en beleggen (Wet IB 2001 art. 5.2) in aanmerking werd genomen, of zou zijn
+# genomen zonder de vrijstelling voor groene beleggingen (art. 5.13). Per 01-01-2021 rendementsgrondslag > € 31.340 / € 62.680.
+# Twee tekstversies van de Awir in 2017: geldend van 01-01-2017 t/m 30-09-2017 en van 01-10-2017 t/m 31-12-2017; art. 7 en
+# art. 14 zijn in beide woordelijk gelijk (verbatim vergeleken 2026-10-21). Ontstaansbronnen per 01-01-2017: Stcrt. 2016, 70381
+# (Bijstellingsregeling directe belastingen 2017: art. VII, art. 7 lid 6, gelezen) en Stb. 2016, 545 (niet gelezen — geen van de
+# hier gebruikte artikelen verschilt van tekst tussen 2017 en 2018).
+jaar: 2017
+status: draft
+geraadpleegd: 2026-10-21
+
+vermogenstoets_algemeen:
+  artikel: "Awir art. 7 lid 3 (tekst 2017): geen bedrag; de toets is of over het berekeningsjaar voordeel uit sparen en beleggen in aanmerking wordt genomen (grondslag sparen en beleggen > 0, dus rendementsgrondslag boven het heffingvrije vermogen), de vrijstelling van art. 5.13 Wet IB 2001 weggedacht"
+  bron: "BWBR0018472, geldend van 01-01-2017 t/m 30-09-2017 (verbatim gelezen 2026-10-21; dezelfde tekst als 2018 t/m 2020 en in de versie van 01-10-2017); lid 5 (tekst 2017): niet in Nederland belastbaar voordeel uit sparen en beleggen telt mee. Vervangen per 01-01-2021 door de rendementsgrondslag-toets met bedragen (Stb. 2020, 546, art. III)"
+  url: https://wetten.overheid.nl/BWBR0018472/2017-01-01
+  tekst: "Indien in een inkomensafhankelijke regeling de aanspraak op een tegemoetkoming mede afhankelijk is gesteld van het vermogen, bestaat geen aanspraak op een tegemoetkoming, indien bij de belanghebbende of, indien de belanghebbende het gehele berekeningsjaar dezelfde partner heeft, zijn partner over het berekeningsjaar voordeel uit sparen en beleggen als bedoeld in artikel 5.2 van de Wet inkomstenbelasting 2001 in aanmerking wordt genomen, dan wel in aanmerking zou worden genomen indien geen rekening wordt gehouden met de vrijstelling, bedoeld in artikel 5.13 van die wet."
+  opmerking: "Geldt alleen voor regelingen zonder eigen grens; niet voor de zorgtoeslag (Wzt art. 2a). Geen waarde: de encoding gebruikt dit niet."
+
+medebewoner_vrijstelling_onder_23:
+  waarde: "4788"
+  artikel: "Awir art. 7 lid 6"
+  bron: "BWBR0018472, geldend van 01-01-2017 t/m 30-09-2017 (verbatim gelezen 2026-10-21: '€ 4788'); Bijstellingsregeling directe belastingen 2017, Stcrt. 2016, 70381 (regeling van 29 december 2016, nr. 2016-0000223819), art. VII: 'In de Algemene wet inkomensafhankelijke regelingen wordt in artikel 7, zesde lid, € 4773 vervangen door: € 4788' (primaire tekst gelezen 2026-10-21); vervangen per 01-01-2018 door € 4.827 (Stcrt. 2017, 70975 art. VI)"
+  url: https://wetten.overheid.nl/BWBR0018472/2017-01-01
+
+afronding_tegemoetkoming:
+  waarde: "1"
+  eenheid: euro
+  artikel: "Awir art. 14 lid 4"
+  bron: "BWBR0018472, geldend van 01-01-2017 t/m 30-09-2017 (verbatim gelezen 2026-10-21); dezelfde tekst in de versie van 01-10-2017 en in 2018 t/m 2026"
+  url: https://wetten.overheid.nl/BWBR0018472/2017-01-01
+  tekst: "Het bedrag van de tegemoetkoming wordt rekenkundig afgerond op hele euro's."
+
+minimum_tegemoetkoming:
+  waarde: "24"
+  artikel: "Awir art. 14 lid 5"
+  bron: "BWBR0018472, geldend van 01-01-2017 t/m 30-09-2017 (verbatim gelezen 2026-10-21)"
+  url: https://wetten.overheid.nl/BWBR0018472/2017-01-01
+  tekst: "Een tegemoetkoming wordt niet toegekend indien deze minder dan € 24 zou bedragen."

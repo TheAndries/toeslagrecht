@@ -1,0 +1,18 @@
+id: zt-2017-syn-024
+toeslag: zorgtoeslag
+jaar: 2017
+bron:
+  type: synthetic
+  publicatie: "Berekend uit de tekst: Wzt art. 1 lid 1 onder f, art. 2 lid 1-3 (BWBR0018451, geldend van 01-01-2017 t/m 30-06-2017; gelijk in de versie van 01-07-2017), Awir art. 14 lid 4-5 (geldend van 01-01-2017); de inkomensgrens zonder partner op de laatste euro met recht. Geen publicatie van de Dienst voor 2017 gevonden (leaflet 2017: 404)"
+  url: https://wetten.overheid.nl/BWBR0018451/2017-01-01
+  opgehaald: 2026-10-21
+verified: false
+invoer:
+  partner: false
+  partner_verzekerd: null
+  toetsingsinkomen_aanvrager: "27857"
+  toetsingsinkomen_partner: "0"
+  rendementsgrondslag: null
+verwacht:
+  tegemoetkoming: "24"
+opmerking: "Inkomensgrens 2017 zonder toeslagpartner uit de tekst: normpremie = 2,305% × € 20.108,736 + 13,460% × (€ 27.857 − € 20.108,736) = € 463,51 + € 1.042,92 = € 1.506,42; € 1.530 − € 1.506,42 = € 23,58 → € 24 (Awir art. 14 lid 4), net toegekend (lid 5). Zie syn-025 voor de euro erboven. Met een naar beneden afgerond drempelinkomen (€ 20.108, DISCREPANCIES.md #1) zou hier € 23,50 (precies € 23,4952) → € 23 → niets uitkomen; met € 20.109 blijft het € 24: als in 2018 beslist de afronding van het drempelinkomen de grens. Wordt een published case zodra een 2017-grens van de Dienst gevonden is."

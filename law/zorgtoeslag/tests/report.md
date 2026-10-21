@@ -1,7 +1,47 @@
-# Zorgtoeslag — test report, generated 2026-10-20 by tools/build.py
+# Zorgtoeslag — test report, generated 2026-10-21 by tools/build.py
 
 Generated file; do not edit. Verified cases are tests (blocking); published and synthetic
 cases are checks (reported). Every failing check is a discrepancy in `DISCREPANCIES.md`.
+
+## zt-2017-syn-024 — PASS — check (synthetic)
+
+Source: Berekend uit de tekst: Wzt art. 1 lid 1 onder f, art. 2 lid 1-3 (BWBR0018451, geldend van 01-01-2017 t/m 30-06-2017; gelijk in de versie van 01-07-2017), Awir art. 14 lid 4-5 (geldend van 01-01-2017); de inkomensgrens zonder partner op de laatste euro met recht. Geen publicatie van de Dienst voor 2017 gevonden (leaflet 2017: 404)
+
+| field | expected | encoding | match |
+|---|---|---|---|
+| tegemoetkoming | 24.00 | 24.00 (exact 24) | yes |
+
+Note: Inkomensgrens 2017 zonder toeslagpartner uit de tekst: normpremie = 2,305% × € 20.108,736 + 13,460% × (€ 27.857 − € 20.108,736) = € 463,51 + € 1.042,92 = € 1.506,42; € 1.530 − € 1.506,42 = € 23,58 → € 24 (Awir art. 14 lid 4), net toegekend (lid 5). Zie syn-025 voor de euro erboven. Met een naar beneden afgerond drempelinkomen (€ 20.108, DISCREPANCIES.md #1) zou hier € 23,50 (precies € 23,4952) → € 23 → niets uitkomen; met € 20.109 blijft het € 24: als in 2018 beslist de afronding van het drempelinkomen de grens. Wordt een published case zodra een 2017-grens van de Dienst gevonden is.
+
+## zt-2017-syn-025 — PASS — check (synthetic)
+
+Source: Berekend uit de tekst (zie zt-2017-syn-024): één euro boven de inkomensgrens zonder partner
+
+| field | expected | encoding | match |
+|---|---|---|---|
+| tegemoetkoming | 0.00 | 0.00 (exact 0) | yes |
+
+Note: € 1.530 − (2,305% × € 20.108,736 + 13,460% × (€ 27.858 − € 20.108,736)) = € 23,44 → € 23 < € 24 → geen tegemoetkoming (Awir art. 14 lid 5). Ook met een afgerond drempelinkomen (€ 20.108 of € 20.109) niets.
+
+## zt-2017-syn-026 — PASS — check (synthetic)
+
+Source: Berekend uit de tekst: Wzt art. 1 lid 1 onder f, art. 2 lid 1-3 (BWBR0018451, geldend van 01-01-2017 t/m 30-06-2017; gelijk in de versie van 01-07-2017), Awir art. 14 lid 4-5 (geldend van 01-01-2017); de inkomensgrens met toeslagpartner op de laatste euro met recht. Geen publicatie van de Dienst voor 2017 gevonden (leaflet 2017: 404)
+
+| field | expected | encoding | match |
+|---|---|---|---|
+| tegemoetkoming | 24.00 | 24.00 (exact 24) | yes |
+
+Note: Inkomensgrens 2017 met toeslagpartner uit de tekst: normpremie = 5,055% × € 20.108,736 + 13,460% × (€ 35.116 − € 20.108,736) = € 1.016,50 + € 2.019,98 = € 3.036,47; 2 × € 1.530 − € 3.036,47 = € 23,53 → € 24, net toegekend. Met een naar beneden afgerond drempelinkomen (€ 20.108) zou het € 23,46 → € 23 → niets zijn (#1); met € 20.109 blijft het € 24.
+
+## zt-2017-syn-027 — PASS — check (synthetic)
+
+Source: Berekend uit de tekst (zie zt-2017-syn-026): één euro boven de inkomensgrens met toeslagpartner
+
+| field | expected | encoding | match |
+|---|---|---|---|
+| tegemoetkoming | 0.00 | 0.00 (exact 0) | yes |
+
+Note: 2 × € 1.530 − (5,055% × € 20.108,736 + 13,460% × (€ 35.117 − € 20.108,736)) = € 23,39 → € 23 < € 24 → geen tegemoetkoming (Awir art. 14 lid 5).
 
 ## zt-2018-syn-020 — PASS — check (synthetic)
 
@@ -2104,8 +2144,8 @@ Note: Laatste rij van de tabel, op het genoemde inkomen zelf ('en meer' sluit he
 
 ---
 
-Browser encoding (`site/zorgtoeslag-regels.js`, node v22.22.0): 205 cases compared with the Python encoding, 205 identical, 0 different.
+Browser encoding (`site/zorgtoeslag-regels.js`, node v22.22.0): 209 cases compared with the Python encoding, 209 identical, 0 different.
 
 ---
 
-Cases run: 205, passed: 185, failed: 20, skipped: 0. Verified cases: 0. Blocking failures: 0. Browser/Python differences: 0 (blocking: the two encodings must agree).
+Cases run: 209, passed: 189, failed: 20, skipped: 0. Verified cases: 0. Blocking failures: 0. Browser/Python differences: 0 (blocking: the two encodings must agree).

@@ -2,7 +2,7 @@
 
 Carried state for the operator. Capped at 8,000 words. Rewritten each run.
 
-## State as of 2026-10-20 (eleventh scheduled run; no run left a trace on 10-15, 10-16, 10-17 — Ask 10; 10-18 through 10-20 ran normally)
+## State as of 2026-10-21 (twelfth scheduled run; no run left a trace on 10-15, 10-16, 10-17 — Ask 10; 10-18 through 10-21 ran normally; an owner-initiated design session on 10-19/10-20 merged branch `design`)
 
 **Identity.** Name `toeslagrecht`, domain `toeslagrecht.nl` (owner, 2026-10-06). Repository
 `https://github.com/TheAndries/toeslagrecht`, branch `main`. Routine
@@ -16,11 +16,8 @@ that never reaches `INBOX.md`.
 **Phase.** 0 complete. Phase 1 complete except **Checkpoint 1** (Ask 6): the owner wrote "calculator is tested" on
 2026-10-11 without pairs; the ask was narrowed on 2026-10-12 (paste the situations tested, any number, plus the
 worried-relative sentence in `BOARD.md`; or an owner decision letting the operator run the comparison against the public
-proefberekening itself). Huurtoeslag does not start before that; history continues (2024 on 10-09, 2023 on 10-11, 2022 on 10-12, 2021 on 10-13, 2020 on 10-14, 2019 on 10-18, 2018 on 10-19).
-**Owner mockup (10-19, Ask 11):** `toeslagrecht-mockup-a.html` at the repository root, "direction A, het formulier", a sketch for a *design brief* that is
-not in the repository: Source Sans 3 / Source Serif 4 (self-hosted in production), green accent #1F5C45, 760 px measure, nav Narekenen/Dossier/Wet/Over,
-year chips, numbered questions, result as layout B. Accepted in principle as §8 polish, applied nothing until the brief arrives and the owner says
-whether it is a decision (changelog 10-20). Fonts from Google are out (§5, §7); the input set cannot shrink below what the articles need.
+proefberekening itself). Huurtoeslag does not start before that; history continues (2024 on 10-09, 2023 on 10-11, 2022 on 10-12, 2021 on 10-13, 2020 on 10-14, 2019 on 10-18, 2018 on 10-19, 2017 on 10-21).
+**The design is done (owner session 10-19/10-20, Asks 11, 12, 13 done):** direction A, *het formulier* (owner decisions in `BOARD.md`; design is the owner's alone, the board votes only on functionality; transcribed into `DESIGN.md` 'Kleur, ruimte en pagina's'). The site is rendered by `tools/render.py` (called by `build.py build`): the front page is the form, the result in layout B, one page per rule (`/dossier/<toeslag>/<id>/`), per case (`/dossier/voorbeelden/<id>/`), per year (`/wet/<jaar>/`), per discrepancy (`/verschillen/<n>/`), plus `/wet/wijzigingen/`, `/wet/bronnen/`, `/betwisten/`, `/insturen/`, `/over/`; the year list derives from the parameter files (a new `parameters/<jaar>.yaml` adds the year everywhere); tokens in `site/static/tokens.css`; fonts self-hosted; the old `tools/zorgtoeslag.template.html` is gone; see `site/README.md`. Verification tools: `tools/verify.py`, `formtest.py`, `shoot.py`, `contrast.py`. A build touches every rendered page (dated footer), so a commit carries ~260 site files.
 **The site is live** at `https://toeslagrecht.nl/` (Ask 7 done 2026-10-11): `.github/workflows/pages.yml` uploads `site/` on every
 push to `main` touching it and removes `site/layouts/` first (owner decision 2026-10-11: internal matters never on the website,
 transcribed into `DESIGN.md` 2026-10-12); `site/CNAME` exists but GitHub ignores it for workflow deployments. After a push that
@@ -30,26 +27,22 @@ touches `site/`, the deploy takes a minute or two; check `https://toeslagrecht.n
   writes `law/zorgtoeslag/tests/report.md`, exit 1 if a *verified* case fails or the two encodings differ.
   `build` writes `site/zorgtoeslag-parameters.js` (all yaml + rule anchors), `site/zorgtoeslag.html` (from
   `tools/zorgtoeslag.template.html`), `site/index.html`, `site/layouts/{a,b,c}.html`.
-- **The checker** `site/zorgtoeslag.html` (layout B, owner decision 2026-10-09, in `DESIGN.md` since
-  2026-10-10): years 2018–2026, partner, incomes, partner verzekerd, vermogen (the rendementsgrondslag, full amount — the hint
-  said "boven het heffingvrije vermogen" from 10-10 to 10-14, wrong, fixed), verdragsgerechtigd + woonland, and for years with
-  `art2_lid5_oud_aanwezig` the question whether the partner failed the verzekeringsplicht.
-  Nothing sent or stored. Rendered and checked in headless Chromium 2026-10-10. Possible later work inside `DESIGN.md` §8: self-hosted text serif, type
-  scale, print stylesheet. Anything beyond §8 needs a board motion; the operator filed none (changelog
-  2026-10-10 argues why).
-- Encoded (all `draft`): zorgtoeslag **2026 back to 2018** — `zt-2026-art1-1f`, `-art2-1`, `-art2-2`,
+- **The checker** (the front page; `zorgtoeslag.html` serves the same): years 2017–2026, partner, incomes, partner verzekerd, vermogen
+  (the rendementsgrondslag, full amount), verdragsgerechtigd + woonland, months, and for years with `art2_lid5_oud_aanwezig` the
+  partner's verzekeringsplicht. Nothing sent or stored.
+- Encoded (all `draft`): zorgtoeslag **2026 back to 2017** — `zt-2026-art1-1f`, `-art2-1`, `-art2-2`,
   `-art2-4`, `-art2-5`, `-art3-1`, `-art4`, `-art4a`, and `zt-2020-art2-5oud` (Wzt art. 2 lid 5 t/m 2020: no zorgtoeslag if the
   partner did not insure; input `partner_verzekeringsplicht_niet_nagekomen`; active where the year file has
-  `art2_lid5_oud_aanwezig: true` — 2018, 2019 and 2020); Awir `awir-2026-art14-4`, `-art14-5`;
+  `art2_lid5_oud_aanwezig: true` — 2017 through 2020); Awir `awir-2026-art14-4`, `-art14-5`;
   `awir-2026-art7-1`, `-art8-1`, `-art3`, `-art5` as inputs/documentation. Outputs: `aanspraak_jaar`
   (unrounded), `tegemoetkoming` (Awir art. 14), `aanspraak_maand` (unrounded /12),
   `aanspraak_maand_afgerond_praktijk` (= floor(tegemoetkoming / 12), the Dienst's table practice, not law; **2022: round half up**,
   per `maand_afronding_praktijk: rekenkundig` in `parameters/2022.yaml`, one leaflet example, #8).
 - Year-dependent parameters the encodings read: `artikel_vermogenstoets`, `artikel_woonlandfactor`, `artikel_maandbepaling` (2018–2020:
   lid 6), `artikel_wml_onderdeel` (a t/m 2023), `art4a_lid3_aanwezig`, `art2_lid5_oud_aanwezig` + `art2_lid5_oud`, `vermogenstoets_basis`
-  (2018–2020: `grondslag_sparen_en_beleggen` — the encoding deducts `heffingvrij_vermogen` (2020 € 30.846, 2019 € 30.360, 2018 € 30.000;
-  Wet IB 2001 art. 5.5) once, or twice with a whole-year partner, art. 5.2 lid 2, then compares with € 85.767 / € 84.416 / € 83.415),
-  `maand_afronding_praktijk` (2022 rekenkundig). 2019 and 2018 needed no code change: the 2020 switches covered them.
+  (2017–2020: `grondslag_sparen_en_beleggen` — the encoding deducts `heffingvrij_vermogen` (2020 € 30.846, 2019 € 30.360, 2018 € 30.000,
+  2017 € 25.000; Wet IB 2001 art. 5.5) once, or twice with a whole-year partner, art. 5.2 lid 2, then compares with € 85.767 / € 84.416 / € 83.415 / € 82.752),
+  `maand_afronding_praktijk` (2022 rekenkundig). 2019, 2018 and 2017 needed no code change: the 2020 switches covered them.
 - **A part of the year, encoded 10-20** (`zt-2026-art2-5`, Wzt art. 2 lid 5 "voor iedere kalendermaand afzonderlijk bepaald", verbatim
   2023 and 2026 identical; no regeling under lid 6): input `maanden_aanspraak` (1–12, default 12) in `rules.py`, the JS and the form;
   `aanspraak_periode` = unrounded year amount × m/12, then Awir art. 14 lid 4–5 → `tegemoetkoming`; `tegemoetkoming_jaar` (rounded whole
@@ -127,16 +120,25 @@ the sixth pre-effect revision); vermogensgrens € 83.415 on the grondslag (Stcr
 het heffingvrije vermogen plus € 83.415'), heffingvrij vermogen € 30.000 → effective € 113.415 / € 143.415; woonlandfactoren Stcrt.
 2017, 66088 (= bijlage 4 01-01-2018 t/m 15-01-2018, 39 lines, old method: DK 1,0830, IS 1,0826, LI 1,1866, NO 1,4015 above 1; BE 0,7193 —
 confirmed in practice by ECLI:NL:RVS:2019:1346; DE 0,9559 as published, reset to 0,8595 retroactively for the bijdrage by Stcrt. 2019,
-58198 art. II; art. II of 66088 itself reset Zweden 2017 to 0,8263 retroactively, effect on the zorgtoeslag not stated). Awir 2018 art. 7
+58198 art. II; art. II of 66088 itself reset Zweden 2017 to 0,8263 retroactively, for the bijdrage only — read 10-21). Awir 2018 art. 7
 lid 3 no amount, lid 6 € 4.827 (Stcrt. 2017, 70975 art. VI, read); art. 14 lid 4–5 same text. Wzt 2018: one version; art. 1 onder c still
 'artikel 24, eerste lid'. Ceilings 2018 from the text: € 28.720 / € 35.996 — **the first year where the rounding of the drempelinkomen
 decides them** (€ 20.450 → € 28.719 / € 35.995; € 20.451 → unchanged): a Dienst figure for 2018 would settle #1 for 2018 (syn-020..023).
-Leaflet 2018: `z80`–`z83` all 404. Leaflet 2022 `tg0821z21fd` (`z22` is a 404); ceilings 2022 € 31.998 / € 40.944 (= the text's). Awir art. 7 lid 3: 2024 € 36.952 / € 73.904, 2025 € 37.395 / € 74.790
+Leaflet 2018: `z80`–`z83` all 404. **2017:** € 1.530 (Stcrt. 2016, 64077; € 1.290 + € 240); WML € 1.551,60 (Stcrt. 2016, 60172) → drempelinkomen € 20.108,736;
+2,305% / 5,055% / 13,460% (Stb. 2016, 469: normpercentages −0,35 / −0,70 point structurally from 2017, the 2015–2016 temporary raise made permanent; its 2018 row
+2,320% / 5,070% / 13,490% replaced by Stb. 2017, 436 — the seventh pre-effect revision; 2016 text read: 2,380% / 5,220% / 13,430%); vermogensgrens € 82.752 on the grondslag
+(Stcrt. 2016, 60569, from € 82.504, 0,3%), heffingvrij vermogen € 25.000 → effective € 107.752 / € 132.752; woonlandfactoren Stcrt. 2016, 61016 (= bijlage 4 01-01-2017,
+39 lines, old method, each line with berekeningsjaar and zorgkosten; NO 1,5288 and SE 1,0948 above 1; BE 0,7029, DE 0,8372 as published — DE reset to 0,7532 for the bijdrage
+by Stcrt. 2019, 58198 art. II; **SE reset to 0,8263 by Stcrt. 2017, 66088 art. II for the art. 6.3.1 Rzv verhoudingsgetal only, toelichting: 'geen effect op de hoogte van de
+zorgtoeslag'** — so the zorgtoeslag keeps the published figure, settled 10-21). Awir 2017 lid 6 € 4.788 (Stcrt. 2016, 70381 art. VII, read); art. 7 and 14 identical in the
+versions 01-01 and 01-10-2017. Wzt 2017: two versions (01-07-2017, Stb. 2017, 146: art. 1 onder e eigen risico, art. 4 22 days — no rule); Stb. 2016, 173 changed art. 5 lid 2
+(CAK for Zorginstituut). Ceilings 2017 from the text: € 27.857 / € 35.116; a drempelinkomen rounded down (€ 20.108) moves both one euro down, € 20.109 moves neither
+(syn-024..027). Max 2017 € 1.066 / € 2.044 (€ 2.043,50 rounds up). Leaflet 2017: `z71`, `z72` 404. Leaflet 2022 `tg0821z21fd` (`z22` is a 404); ceilings 2022 € 31.998 / € 40.944 (= the text's). Awir art. 7 lid 3: 2024 € 36.952 / € 73.904, 2025 € 37.395 / € 74.790
 (Stcrt. 2024, 38492), 2026 € 38.479 / € 76.958 (Stcrt. 2025, 40487). Awir art. 14 lid 4–5 identical
 2024–2026; wetstechnische informatie lists no amendment. Published ceilings: 2021 € 31.138 / € 39.979 (index quote only); 2022 € 31.998 / € 40.944; 2023 € 38.520 / € 48.224; 2024 € 37.496 / € 47.368;
 2025 € 39.719 / € 50.206; 2026 € 40.857 / € 51.142. 2027 percentages already in Stb. 2025, 412.
 
-**Cases.** 205 (173 `published`, 24 `synthetic`, 8 `ruling`), none verified. Last report 10-20: 185 pass, 20 fail, 0 blocking; parity 205/205. **Ruling cases** (all under Ask 9, per ruling): 2020
+**Cases.** 209 (173 `published`, 28 `synthetic`, 8 `ruling`), none verified. Last report 10-21: 189 pass, 20 fail, 0 blocking; parity 209/209. 2017: syn-024..027 (ceilings both sides). **Ruling cases** (all under Ask 9, per ruling): 2020
 `rul-001/-002` (ECLI:NL:RVS:2025:6164, zonder partner: € 1.163 at € 22.070; voorschot € 1.250 at € 12.313), `rul-003` (ECLI:NL:RVS:2024:4888,
 met partner: € 1.665 at gezamenlijk € 26.834) — 2020's only Dienst outcomes, all reproduced; 2023 `rul-001` (ECLI:NL:RBMNE:2026:4437,
 voorschot € 1.858 at € 11.204, passes), `rul-002/-003` (11 months: € 992 at € 30.763 — the encoding gives € 991, #10 `government`; € 1.703 at
@@ -167,45 +169,46 @@ part-year amounts of ECLI:NL:RBMNE:2026:4437; fixed 10-20, rul-003 passes). **#1
 the Dienst's € 992 — the Dienst rounds the year amount before pro-rating, the text rounds only the tegemoetkoming; same shape as #1; one
 ruling, one euro; a second part-year beschikking or the method found in writing re-argues it).
 
-**Asks.** Done: 1, 2, 3, 5, 7 (2026-10-11, recorded 10-12). Open: **4** mailbox (blocks Phase 2 only); **6** Checkpoint 1,
+**Asks.** Done: 1, 2, 3, 5, 7, 11, 12, 13 (the last three in the owner session of 10-20). Open: **4** mailbox (blocks Phase 2 only); **6** Checkpoint 1,
 narrowed 10-12 (see Phase); **9** (10-18, extended 10-19 to all eight ruling cases, per ruling; 10-20: nothing waits on anything) the owner compares the case files with the ruling and writes a dated line
 in `INBOX.md`; then set `verified: true` on the confirmed ones, credit him by name in the case files and on the site's contributors list,
 rerun `build.py check` (they become blocking; rul-2023-002 is explained by #10 and does not block), and record it as the first verification;
-**11** (10-20) the design brief behind the owner's mockup, and whether the mockup is a decision; **10** (10-18) the owner reads the routine's run history for 10-15/16/17 and pastes
+**10** (10-18) the owner reads the routine's run history for 10-15/16/17 and pastes
 the status; **8** (10-13, not blocking; 10-14 extended to the 2020 leaflet, which is nowhere — `tg0821z01fd`/`z02fd`
 404, no search hit, no archive link) the owner opens the Wayback copy of the 2021 leaflet
 (`web.archive.org/web/20240718180758/…tg0821z11fd.pdf`) and pastes its three rekenvoorbeelden and stap-2 grenzen into `INBOX.md`;
 when they arrive: `published` cases 2021, the 2021 monthly rounding (#5/#8) and drempelinkomen rounding (#1), the stap-5 formulas (#3),
 and syn-004..007 superseded or re-sourced. Disputes 0, reviews 0, motions 0. `PLAN.md` unchanged (last rewritten 2026-10-05); no checkpoint
-missed. `BOARD.md` has three owner decisions (layout B 10-09; independent record if a government rules-as-code appears;
-internal matters never on the website 10-11, transcribed into `DESIGN.md` 10-12).
+missed. `BOARD.md` owner decisions: layout B 10-09; independent record if a government rules-as-code appears; internal matters never
+on the website 10-11; direction A 10-19; design is the owner's alone 10-20; the specimen and the merge 10-20. `INBOX.md` is empty
+(the 10-19/10-20 entries handled 10-21).
 
 **Open items for the next runs, in order.**
-1. Handle whatever arrives in `INBOX.md`: Ask 9 (verification of the two ruling cases, see Asks), Ask 10 (missing runs), Ask 6 (Checkpoint 1): each rekenhulp pair becomes a `published` case with
+1. Handle whatever arrives in `INBOX.md`: Ask 9 (verification of the ruling cases, see Asks), Ask 10 (missing runs), Ask 6 (Checkpoint 1): each rekenhulp pair becomes a `published` case with
    source "rekenhulp toeslagen.nl, retrieved <date> by the owner"; every difference a discrepancy. If the owner decides the
    operator may run the comparison itself: the public proefberekening on toeslagen.nl in headless Chromium, twenty situations
    varying year, partner, income, vermogen, partner not verzekerd; log each pair as a case. A real beschikking of the owner's
    own would be `official` and, confirmed by him, the first verifiable case.
-2. When the brief arrives (Ask 11) and the owner calls the mockup a decision: restyle `tools/zorgtoeslag.template.html` and the CSS in
-   `build.py` inside `DESIGN.md` §8 — self-host Source Sans 3 / Source Serif 4 under `site/fonts/` (licence files beside them), the accent,
-   the measure, the numbered questions, year chips (radios, not a select; keep 2018–2026), the lock line; keep every input the articles
-   need; render in headless Chromium and read; move the mockup and the brief to `design/`. Nothing of this before the brief.
-3. 2017 as the next year of history (`law/SOURCES.md` open item 4 has every pointer: Stb. 2016, 469 per the Wzt chain; Stcrt. 2016,
-   60569 vermogensgrens € 82.752; standaardpremie 2017 BWBR0038756; WML January 2017 regeling; Wet IB 2001 art. 5.5 of 01-01-2017;
-   woonlandfactoren 2017 regeling with Duitsland (→ 0,7532) and Zweden (→ 0,8263) both corrected retroactively later; Awir 2017 lid 6
-   € 4.788; leaflet try `tg0821z71fd`). ~20 fetches; no new rule version expected unless the 2017 text differs in structure.
+2. 2016 as the next year of history (`law/SOURCES.md` open item 4 has every pointer; the Wzt text of 01-01-2016 is already read for art. 2 lid 3,
+   2a and 5). ~20 fetches, the 10-21 method: fetch the year's Wzt, Awir, WML, Wet IB art. 5.5 (two versions), the informatie pages, the four
+   regelingen and the besluit in parallel, strip, grep; diff the Wzt against the next year's text; cut bijlage 4 from the 47 MB Rzv page and
+   generate the landen block with a script (`landen2017.py` pattern); compute the ceilings analytically and verify the boundary euros with
+   `build.run_case`, never scan euro by euro.
+3. A Dutch B1 explanation above the verbatim English protocols on `/betwisten/` and `/insturen/` (design agent's note of 10-19; argued 10-21:
+   the operator's day-to-day remit under `DESIGN.md` P1, the English text stays the binding one and the page says so; no motion needed).
+   Rendered by `tools/render.py`; read in headless Chromium.
 4. More `ruling` cases (method proven 10-18 and 10-19, eight cases from four rulings): web search for zorgtoeslag rulings with amounts
    ("vastgesteld op", "toetsingsinkomen", a year), restricted to raadvanstate.nl / uitspraken.rechtspraak.nl; when only a zaaknummer comes
    back, search the zaaknummer once more to get the ECLI; then the full text via `data.rechtspraak.nl/uitspraken/content?id=<ECLI>` (curl).
    raadvanstate.nl is 403 to curl and to WebFetch; the data.rechtspraak.nl `zoeken` API returned 0 for a creator/date/subject query.
-   Years without a Dienst outcome yet: 2018 (ECLI:NL:RVS:2019:1346 has amounts but no income), 2021, 2022, 2024, 2025, 2026.
+   Years without a Dienst outcome yet: 2017, 2018 (ECLI:NL:RVS:2019:1346 has amounts but no income), 2021, 2022, 2024, 2025, 2026.
 5. `law/SOURCES.md` open items 1–3, 5 and 6 (monthly rounding basis, now also the 2022→2023 change; verdragsgerechtigde definition;
    Awir 2024 second amount in the consolidated text; the 2021 and 2020 leaflets via the owner, Ask 8).
 6. Nibud / Rijksoverheid worked examples as `published` cases.
-7. Checker polish inside `DESIGN.md` §8 (serif for the law, type scale, print stylesheet); an accessibility pass by reading.
+7. `site/layouts/` stays under `site/` as the record of Ask 3; the Pages workflow removes it from the deployment (live 404 checked 10-20). Nothing to do unless the owner says otherwise.
 8. Quarterly reflection ask on the last run of Q4 2026 (late December).
 
-**Lessons.** A sentence in the log about what the pipeline does is a number: read it off the pipeline or do not write it (10-20: #10's
+**Lessons.** An instrument is named only when read: a plausible name ('Belastingplan 2018 chain') for the art. 5.5 change nearly entered `CHANGES.md` on 10-21 — write 'not identified'. A toelichting can settle what the article leaves open (Stcrt. 2017, 66088: 'geen effect op de hoogte van de zorgtoeslag'): read the toelichting before writing 'not stated'. `pkill -f <name>` kills the Bash call that contains the name too. A sentence in the log about what the pipeline does is a number: read it off the pipeline or do not write it (10-20: #10's
 first draft described a check that did not exist yet). An article reference is read or not written, like a number (10-19: 'art. XIII' recalled, 'art. VI' in the text). Read every
 string of a new parameter file back before the check: thinking aloud ('Duitsland? nee') nearly entered the record. A letter quoted in a
 ruling is not a decision (ECLI:NL:RVS:2024:4888's 'ongeveer € 862,00 per maand'). A `cd dir && cmd &` in one Bash line backgrounds the whole chain, so the `cd` does not hold for the next line: use absolute
