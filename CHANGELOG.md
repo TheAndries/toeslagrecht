@@ -2,6 +2,100 @@
 
 Newest first. What was done, decided, and got wrong.
 
+## 2026-10-22 — thirteenth run: 2016 encoded from primary texts, the first Dienst amounts for 2016 and 2018 found in case law, a second edition of the 2026 leaflet that corrects the #4 misprint
+
+Thirteenth run of routine `trig_012xyD5r5rxFDCjfHbZ58Kib`. Model as configured for the session: `claude-fable-5-1`, the same as the
+previous entry; no handover note needed. The checkout arrived as a detached HEAD at a current `origin/main` (`228360c`, the previous
+run's commit; `git fetch` confirmed it). The routine fired the day after the previous run: no new gap. `git log -3 --stat` shows no owner
+commit since 10-21.
+
+**Step 1 — asks marked done.** None since 10-21. Asks 4, 6, 8, 9 and 10 stay open as recorded; 8 and 9 extended today (step 8).
+
+**Step 2 — the inbox.** `INBOX.md` is empty and nothing arrived outside it. No case, dispute, review or owner note to handle.
+
+**Step 3.** No open motion.
+
+**Step 4 — done (item 2 of `memory.md`: 2016, the next year of history; twenty-four fetches in four parallel batches, four web searches).**
+- *Zorgtoeslag 2016 encoded from the primary texts*, `parameters/2016.yaml` and `awir/parameters/2016.yaml`, status `draft`, each number with
+  its article, instrument and quoted text: standaardpremie € 1.468 (Stcrt. 2015, 43794: € 1.228 premie + € 240 eigen risico; found through the
+  Wzt art. 4 informatie page, BWBR0037279); WML januari 2016 € 1.524,60 (Stcrt. 2015, 38647) → drempelinkomen € 19.758,816; percentages
+  2,380% / 5,220% / 13,430% (Wzt art. 2 lid 3, text of 01-01-2016; Stb. 2015, 472, whose nota van toelichting says the normpercentages were
+  lowered for 2016 only, by 0,26 and 0,52 procentpunt, as the 'verlenging van de tijdelijke verhoging' of the koopkrachtpakket 2016, and that
+  the afbouw stays on its schema); vermogensgrens € 82.504 on the grondslag sparen en beleggen (Stcrt. 2015, 40655, from € 82.093, 0,5%);
+  heffingvrij vermogen € 24.437 (Wet IB 2001 art. 5.5, versions 01-01-2016 and 01-07-2016; the Bijstellingsregeling 2016, Stcrt. 2015,
+  47097, set € 21.437 and its toelichting says the Belastingplan 2016 raised that to € 24.437 — the Staatsblad itself not read, written as
+  such) → effective € 106.941 / € 131.378 on the rendementsgrondslag; 39 woonlandfactoren (Stcrt. 2015, 40860, found by a search
+  restricted to `zoek.officielebekendmakingen.nl`; identical on all 39 lines to the consolidated bijlage 4 of 01-01-2016 *and* of 01-12-2016,
+  both read, so the table did not change in the year; no retroactive correction of a 2016 factor found); Awir art. 7 lid 6 € 4.773 (Stcrt.
+  2015, 47097 art. VI) and art. 14 lid 4–5 unchanged across the Awir's two 2016 versions (01-01 and 01-04-2016, Stb. 2013, 567, diffed:
+  art. 7 and 14 identical). The Wzt had one version in 2016. The diff of 01-01-2015 against 01-01-2016 shows only the percentages
+  (2,395% / 5,265% / 13,400%) and the art. 2a amount (€ 82.093) — the 2015 values now stand in the 'old' columns as read. No code change: the
+  2020 switches cover 2016. The 2017 rows' 'old' columns that were open on 10-21 (the standaardpremie 2016, the WML of July 2016, the
+  2016 woonlandfactor table) are filled from today's texts; a 2017 row for Wet IB art. 5.5 (€ 24.437 → € 25.000) added with the instrument
+  honestly 'not identified'.
+- *The first Dienst amounts for 2016, and one for 2018, from case law.* A web search for the 2016 leaflet title found none, but returned two
+  Raad van State rulings quoting 2016 amounts. ECLI:NL:RVS:2024:2798 (10-07-2024): zorgtoeslag 2016 herzien and vastgesteld op € 998;
+  zorgtoeslag 2018 first € 708, then € 1.139 on bezwaar. ECLI:NL:RVS:2022:2397 (17-08-2022, zaaknr. 202104114/1/A2, the ECLI found by a
+  second search on the zaaknummer): a couple's definitieve berekening 2016 of € 1.905, later herzien to nihil because the Basisregistratie
+  inkomen gave their gezamenlijk inkomen as € 45.149. The encoding reproduces every one of these from the text: € 998 is the 2016 maximum
+  zonder partner (€ 1.468 − 2,380% × € 19.758,816 = € 997,74 → € 998), € 1.905 the 2016 maximum met partner (€ 1.904,59 → € 1.905), € 1.139
+  the 2018 maximum zonder partner (€ 1.139,03 → € 1.139), and nihil at € 45.149 against a ceiling of € 33.765 — run through `build.run_case`
+  today, not computed by hand. Only the nihil decision carries an income, so only it is a case: **`zt-2016-rul-001`** (`ruling`, passes, under
+  Ask 9). The three maxima are recorded in `SOURCES.md` §4 and in the parameter files as corroboration: they confirm standaardpremie,
+  normpercentage and drempelinkomen together, and decide nothing on #1 (the same whole euro under any rounding of the drempelinkomen).
+  The record now has a Dienst amount for 2016 and for 2018, which had none.
+- *Four synthetic cases*, `zt-2016-syn-028..031`: the income ceilings from the text, € 27.013 zonder and € 33.765 met partner, each with the
+  euro above. As in 2018 and 2017, the rounding of the drempelinkomen decides: rounded down to € 19.758 both ceilings move one euro down
+  (€ 23,41 / € 23,49 → € 23 → none), rounded up to € 19.759 neither moves. Computed analytically and verified on the boundary euros.
+- *A second edition of the 2026 leaflet.* Trying the 2016 edition digits (`tg0821z60fd`, `z62fd`–`z64fd`), `z62fd` answered with a real PDF:
+  not 2016 but *Berekening zorgtoeslag 2026*, TG 082 - 1Z62FD, created 2026-08-25 — the edition scheme collides across decades. Diffed against
+  the first edition (1Z61FD) the record was built from: two lines differ. Rekenvoorbeeld 2's "Bedrag per maand" now reads "€ 103,62" where
+  the first edition printed "€ 103,02" — the misprint `DISCREPANCIES.md` #4 was opened on and withdrawn as a data error on 10-08; the Dienst
+  has corrected it. But € 1.243,51 / 12 = € 103,6258, so the corrected figure is truncated to the cent where the rest of the 2024–2026 series
+  rounds (#7); the whole-euro month is € 103 either way. The other line: "het gezamenlijke toetsingsinkomen" → "het toetsingsinkomen" under
+  stap 3. Every parameter and every other figure is unchanged. Recorded as a dated note in #4 (status stays `withdrawn`), a row in
+  `SOURCES.md` §3, and a note in `zt-2026-pub-008`, which keeps the first edition's figure as the source it was taken from.
+- *Check:* 214 cases, 194 pass, 20 fail (the twenty of 10-20, every one logged), 0 blocking; both encodings agree on 214. The site rebuilt:
+  264 pages, 2016 in the form, `/wet/2016/`, five new case pages, the #4 note on `/verschillen/4/`.
+- *The record's files:* `CHANGES.md` — seven rows for 2016-01-01 (Stb. 2015, 472's 2017 row, replaced by Stb. 2016, 469, as the eighth
+  pre-effect revision found, read today from the earlier side) and one for Wet IB art. 5.5 2016 → 2017; the three 2017 old columns filled.
+  `SOURCES.md` — nine rows for the 2016 instruments and texts, the leaflet 2016 as not found, the 2026 second edition, two rulings, open item
+  4 rewritten for 2015. `rules.md`, `cases/README.md`, `README.md`, `DISCREPANCIES.md` #4, `ASKS.md` 8 and 9.
+
+**What was wrong and why.**
+- *A count printed into a parameter file.* The script that generates the landen block printed its row count (`39`) to stdout before the
+  rows, and the count landed in `parameters/2016.yaml`; PyYAML refused the file and the line was removed. The check would have caught it
+  too, but the rule is older: read every string of a new parameter file back before the check (`memory.md`, 10-19). Cost: one turn.
+- *A leaflet taken for the year by its filename.* `z62fd` returned a PDF of the right size and the run nearly logged it as the 2016 leaflet
+  before reading its first page, which says 2026. Caught on reading; it became the second-edition finding above. Lesson in `memory.md`.
+- *Three calls to reach the encoding's result object.* `build.run_case` needs the rules module and a `verwacht` key and returns the outcome
+  under `uitkomst`; three attempts before the maxima were confirmed. Written into `memory.md` item 2 so the next year costs one.
+- Nothing dropped from scope. Items 3 (the Dutch B1 protocol pages) and 4 (a dedicated ruling pass) not started; today's ruling route was a
+  by-product of the leaflet search and is recorded as the cheapest one found. `PLAN.md` unchanged: the strategy holds (history continuing
+  while Checkpoint 1 waits on the owner; huurtoeslag not before that); no checkpoint has a date to miss.
+
+**Step 8 — asks.** None new. Ask 8 extended (the 2016 leaflet not found; `z62` is 2026's second edition). Ask 9 extended to the ninth ruling
+case, `zt-2016-rul-001`, same ten minutes per ruling.
+
+**Dropped from memory.** Open item 2 (2016) replaced by 2015 with the method as it worked today; the sentence "2018 has amounts but no
+income" replaced by the per-year state and the leaflet-search route. Nothing else dropped; 5,691 words.
+
+**Effort.** Roughly 245,000 of the 300,000-token ceiling: about 95,000 reading the files, the previous three entries, the parameter and
+rules files and the pipeline; about 45,000 on twenty-four fetches and four searches (two 47 MB Regeling zorgverzekering pages, both cut by
+script, and two 4 MB Wet IB texts among them); about 105,000 writing and checking the two parameter files, the five cases, the rows in
+`CHANGES.md` and `SOURCES.md`, the notes in `rules.md`, `DISCREPANCIES.md` and `ASKS.md`, the memory and this entry. Comparable to 10-21's
+2017 run; the second-edition diff and the two rulings were cheap because the leaflet search had already paid for them.
+
+**Record under the ten-year rule.** This run added to the record: the law of 2016 as it stood, dated and sourced — every parameter with its
+instrument and quoted text, the one Wzt version of 2016 with the diff against 2015 that shows what Stb. 2015, 472 and Stcrt. 2015, 40655
+changed, the two Awir versions compared, bijlage 4 read at both ends of the year, and the 2015 values read into the 'old' columns; the
+first amounts of the Dienst Toeslagen for 2016 (three) and 2018 (one) in the record, each traced to its ruling and reproduced from the
+text through the encoding, and the first 2016 case from case law; the 2016 income ceilings from the text with the proof that the
+drempelinkomen's rounding decides them, the third year in a row (2018, 2017, 2016); the eighth pre-effect revision of the percentages
+schema; and the dated finding that the Dienst issued a second edition of its 2026 leaflet in August 2026 that corrects the misprint of
+#4 with a truncated cent — a fact about the source that nothing else records. The encoding of 2016 (no code changed), the cases' arithmetic
+and the site build are regenerable and are not counted.
+
 ## 2026-10-21 — twelfth run: 2017 encoded from primary texts, the 2017 Zweden correction settled as bijdrage-only, the design session's inbox handled, the record's old columns filled
 
 Twelfth run of routine `trig_012xyD5r5rxFDCjfHbZ58Kib`. Model as configured for the session: `claude-fable-5-1`, the same as the

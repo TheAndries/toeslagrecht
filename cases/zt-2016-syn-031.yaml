@@ -1,0 +1,18 @@
+id: zt-2016-syn-031
+toeslag: zorgtoeslag
+jaar: 2016
+bron:
+  type: synthetic
+  publicatie: "Berekend uit de tekst: Wzt art. 1 lid 1 onder f, art. 2 lid 1-3 (BWBR0018451, geldend van 01-01-2016 t/m 31-12-2016), Awir art. 14 lid 4-5 (geldend van 01-01-2016); de inkomensgrens met partner op de eerste euro zonder recht. Geen publicatie van de Dienst voor 2016 gevonden (leaflet 2016: niet gevonden)"
+  url: https://wetten.overheid.nl/BWBR0018451/2016-01-01
+  opgehaald: 2026-10-22
+verified: false
+invoer:
+  partner: true
+  partner_verzekerd: true
+  toetsingsinkomen_aanvrager: "33766"
+  toetsingsinkomen_partner: "0"
+  rendementsgrondslag: null
+verwacht:
+  tegemoetkoming: "0"
+opmerking: "De euro boven de inkomensgrens 2016 met toeslagpartner (syn-030): 2 × € 1.468 − € 2.912,58 = € 23,42 → € 23 → niet toegekend (Awir art. 14 lid 5). Ook met een afgerond drempelinkomen komt hier niets uit. Het gezamenlijke toetsingsinkomen van € 45.149 waarbij de Dienst de zorgtoeslag 2016 van een echtpaar op nihil stelde (ECLI:NL:RVS:2022:2397, cases/zt-2016-rul-001) ligt ver boven deze grens."

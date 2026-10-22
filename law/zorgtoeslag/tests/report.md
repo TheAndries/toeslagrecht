@@ -1,7 +1,57 @@
-# Zorgtoeslag — test report, generated 2026-10-21 by tools/build.py
+# Zorgtoeslag — test report, generated 2026-10-22 by tools/build.py
 
 Generated file; do not edit. Verified cases are tests (blocking); published and synthetic
 cases are checks (reported). Every failing check is a discrepancy in `DISCREPANCIES.md`.
+
+## zt-2016-rul-001 — PASS — check (ruling)
+
+Source: ABRvS 17 augustus 2022, ECLI:NL:RVS:2022:2397 (zaaknr. 202104114/1/A2), r.o. 1: 'Bij besluit van 11 augustus 2017 heeft de Belastingdienst/Toeslagen de zorgtoeslag van [appellant] over 2016 definitief berekend en vastgesteld op € 1.905,00. Bij het besluit van 3 mei 2019, gehandhaafd bij het besluit van 17 maart 2020, heeft de Belastingdienst/Toeslagen deze eerdere definitieve berekening van de zorgtoeslag over 2016 aangepast en vastgesteld op nihil en het teveel ontvangen bedrag aan zorgtoeslag van € 1.905,00 en de daarover verschuldigde rente van € 140,00 teruggevorderd. Aan dit besluit heeft de dienst ten grondslag gelegd dat uit de Basisregistratie inkomen bleek dat het inkomen van [appellant] en zijn toeslagpartner was vastgesteld op € 45.149,00'. Het hoger beroep (een 'definitieve' berekening zou niet herzien mogen worden) is ongegrond verklaard (Awir art. 20 lid 1); de herziening naar nihil staat
+
+| field | expected | encoding | match |
+|---|---|---|---|
+| tegemoetkoming | 0.00 | 0.00 (exact 0) | yes |
+
+Note: Eerste zaak uit de rechtspraak voor 2016. De uitspraak noemt alleen het inkomen van aanvrager en toeslagpartner samen (€ 45.149); de verdeling doet voor Wzt art. 2 lid 2 niet ter zake, dus is het hele bedrag bij de aanvrager gezet. Uit de tekst: de inkomensgrens met partner 2016 is € 33.765 (syn-030), dus bij € 45.149 is de normpremie (€ 4.441,30) hoger dan tweemaal de standaardpremie (€ 2.936): geen aanspraak, wat de Dienst ook besliste. Of de partner verzekerde was maakt bij dit inkomen niets uit (bij de helft van niets blijft het niets); 'true' is de aanname die niets verandert. De eerdere definitieve berekening van € 1.905 is het maximum met partner uit de tekst van 2016 (2 × € 1.468 − 5,220% × € 19.758,816 = € 1.904,59 → € 1.905, Awir art. 14 lid 4) en veronderstelt een gezamenlijk inkomen tot het drempelinkomen; dat inkomen noemt de uitspraak niet, dus is die berekening geen case (SOURCES.md §4). Beide bedragen beslissen DISCREPANCIES.md #1 niet. Wordt 'verified' zodra een met naam genoemd mens (CASES.md) de invoer tegen de uitspraak heeft gelegd — ASKS.md 9.
+
+## zt-2016-syn-028 — PASS — check (synthetic)
+
+Source: Berekend uit de tekst: Wzt art. 1 lid 1 onder f, art. 2 lid 1-3 (BWBR0018451, geldend van 01-01-2016 t/m 31-12-2016), Awir art. 14 lid 4-5 (geldend van 01-01-2016); de inkomensgrens zonder partner op de laatste euro met recht. Geen publicatie van de Dienst voor 2016 gevonden (leaflet 2016: niet gevonden)
+
+| field | expected | encoding | match |
+|---|---|---|---|
+| tegemoetkoming | 24.00 | 24.00 (exact 24) | yes |
+
+Note: Inkomensgrens 2016 zonder toeslagpartner uit de tekst: normpremie = 2,380% × € 19.758,816 + 13,430% × (€ 27.013 − € 19.758,816) = € 470,26 + € 974,24 = € 1.444,50; € 1.468 − € 1.444,50 = € 23,50 (precies € 23,5033) → € 24 (Awir art. 14 lid 4), net toegekend (lid 5). Zie syn-029 voor de euro erboven. Met een naar beneden afgerond drempelinkomen (€ 19.758, DISCREPANCIES.md #1) zou hier € 23,41 → € 23 → niets uitkomen; met € 19.759 blijft het € 24: als in 2017 en 2018 beslist de afronding van het drempelinkomen de grens. Wordt een published case zodra een 2016-grens van de Dienst gevonden is.
+
+## zt-2016-syn-029 — PASS — check (synthetic)
+
+Source: Berekend uit de tekst: Wzt art. 1 lid 1 onder f, art. 2 lid 1-3 (BWBR0018451, geldend van 01-01-2016 t/m 31-12-2016), Awir art. 14 lid 4-5 (geldend van 01-01-2016); de inkomensgrens zonder partner op de eerste euro zonder recht. Geen publicatie van de Dienst voor 2016 gevonden (leaflet 2016: niet gevonden)
+
+| field | expected | encoding | match |
+|---|---|---|---|
+| tegemoetkoming | 0.00 | 0.00 (exact 0) | yes |
+
+Note: De euro boven de inkomensgrens 2016 zonder toeslagpartner (syn-028): € 1.468 − € 1.444,63 = € 23,37 → € 23 → niet toegekend (Awir art. 14 lid 5). Ook met een afgerond drempelinkomen (€ 19.758 of € 19.759) komt hier niets uit.
+
+## zt-2016-syn-030 — PASS — check (synthetic)
+
+Source: Berekend uit de tekst: Wzt art. 1 lid 1 onder f, art. 2 lid 1-3 (BWBR0018451, geldend van 01-01-2016 t/m 31-12-2016), Awir art. 14 lid 4-5 (geldend van 01-01-2016); de inkomensgrens met partner op de laatste euro met recht. Geen publicatie van de Dienst voor 2016 gevonden (leaflet 2016: niet gevonden)
+
+| field | expected | encoding | match |
+|---|---|---|---|
+| tegemoetkoming | 24.00 | 24.00 (exact 24) | yes |
+
+Note: Inkomensgrens 2016 met toeslagpartner uit de tekst (gezamenlijk toetsingsinkomen, hier geheel bij de aanvrager gezet): normpremie = 5,220% × € 19.758,816 + 13,430% × (€ 33.765 − € 19.758,816) = € 1.031,41 + € 1.881,03 = € 2.912,44; 2 × € 1.468 − € 2.912,44 = € 23,56 → € 24, net toegekend. Zie syn-031 voor de euro erboven. Met een naar beneden afgerond drempelinkomen (€ 19.758) zou hier € 23,49 → € 23 → niets uitkomen; met € 19.759 blijft het € 24 (DISCREPANCIES.md #1). Wordt een published case zodra een 2016-grens van de Dienst gevonden is.
+
+## zt-2016-syn-031 — PASS — check (synthetic)
+
+Source: Berekend uit de tekst: Wzt art. 1 lid 1 onder f, art. 2 lid 1-3 (BWBR0018451, geldend van 01-01-2016 t/m 31-12-2016), Awir art. 14 lid 4-5 (geldend van 01-01-2016); de inkomensgrens met partner op de eerste euro zonder recht. Geen publicatie van de Dienst voor 2016 gevonden (leaflet 2016: niet gevonden)
+
+| field | expected | encoding | match |
+|---|---|---|---|
+| tegemoetkoming | 0.00 | 0.00 (exact 0) | yes |
+
+Note: De euro boven de inkomensgrens 2016 met toeslagpartner (syn-030): 2 × € 1.468 − € 2.912,58 = € 23,42 → € 23 → niet toegekend (Awir art. 14 lid 5). Ook met een afgerond drempelinkomen komt hier niets uit. Het gezamenlijke toetsingsinkomen van € 45.149 waarbij de Dienst de zorgtoeslag 2016 van een echtpaar op nihil stelde (ECLI:NL:RVS:2022:2397, cases/zt-2016-rul-001) ligt ver boven deze grens.
 
 ## zt-2017-syn-024 — PASS — check (synthetic)
 
@@ -1414,7 +1464,7 @@ Source: Dienst Toeslagen, Berekening zorgtoeslag 2026 (TG 082 - 1Z61FD), januari
 | aanspraak_maand | 103.02 | 103.62 (exact 103.6233908266666666666666667) | NO |
 | aanspraak_maand_afgerond_praktijk | 103 | 103 | yes |
 
-Note: Zie DISCREPANCIES.md #1 (afronding drempelinkomen).
+Note: Zie DISCREPANCIES.md #1 (afronding drempelinkomen). Het maandbedrag € 103,02 is een drukfout van de eerste druk (DISCREPANCIES.md #4, withdrawn); de tweede druk van de leaflet (TG 082 - 1Z62FD, gevonden 2026-10-22) drukt € 103,62 (€ 1.243,51 / 12 = € 103,6258, afgekapt). De case houdt het cijfer van de eerste druk, de bron waaruit hij is opgenomen.
 
 ## zt-2026-pub-009 — FAIL — check (published)
 
@@ -2144,8 +2194,8 @@ Note: Laatste rij van de tabel, op het genoemde inkomen zelf ('en meer' sluit he
 
 ---
 
-Browser encoding (`site/zorgtoeslag-regels.js`, node v22.22.0): 209 cases compared with the Python encoding, 209 identical, 0 different.
+Browser encoding (`site/zorgtoeslag-regels.js`, node v22.22.0): 214 cases compared with the Python encoding, 214 identical, 0 different.
 
 ---
 
-Cases run: 209, passed: 189, failed: 20, skipped: 0. Verified cases: 0. Blocking failures: 0. Browser/Python differences: 0 (blocking: the two encodings must agree).
+Cases run: 214, passed: 194, failed: 20, skipped: 0. Verified cases: 0. Blocking failures: 0. Browser/Python differences: 0 (blocking: the two encodings must agree).

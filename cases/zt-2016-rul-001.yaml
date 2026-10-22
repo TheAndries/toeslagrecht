@@ -1,0 +1,18 @@
+id: zt-2016-rul-001
+toeslag: zorgtoeslag
+jaar: 2016
+bron:
+  type: ruling
+  publicatie: "ABRvS 17 augustus 2022, ECLI:NL:RVS:2022:2397 (zaaknr. 202104114/1/A2), r.o. 1: 'Bij besluit van 11 augustus 2017 heeft de Belastingdienst/Toeslagen de zorgtoeslag van [appellant] over 2016 definitief berekend en vastgesteld op € 1.905,00. Bij het besluit van 3 mei 2019, gehandhaafd bij het besluit van 17 maart 2020, heeft de Belastingdienst/Toeslagen deze eerdere definitieve berekening van de zorgtoeslag over 2016 aangepast en vastgesteld op nihil en het teveel ontvangen bedrag aan zorgtoeslag van € 1.905,00 en de daarover verschuldigde rente van € 140,00 teruggevorderd. Aan dit besluit heeft de dienst ten grondslag gelegd dat uit de Basisregistratie inkomen bleek dat het inkomen van [appellant] en zijn toeslagpartner was vastgesteld op € 45.149,00'. Het hoger beroep (een 'definitieve' berekening zou niet herzien mogen worden) is ongegrond verklaard (Awir art. 20 lid 1); de herziening naar nihil staat"
+  url: https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RVS:2022:2397
+  opgehaald: 2026-10-22
+verified: false
+invoer:
+  partner: true
+  partner_verzekerd: true
+  toetsingsinkomen_aanvrager: "45149"
+  toetsingsinkomen_partner: "0"
+  rendementsgrondslag: null
+verwacht:
+  tegemoetkoming: "0"
+opmerking: "Eerste zaak uit de rechtspraak voor 2016. De uitspraak noemt alleen het inkomen van aanvrager en toeslagpartner samen (€ 45.149); de verdeling doet voor Wzt art. 2 lid 2 niet ter zake, dus is het hele bedrag bij de aanvrager gezet. Uit de tekst: de inkomensgrens met partner 2016 is € 33.765 (syn-030), dus bij € 45.149 is de normpremie (€ 4.441,30) hoger dan tweemaal de standaardpremie (€ 2.936): geen aanspraak, wat de Dienst ook besliste. Of de partner verzekerde was maakt bij dit inkomen niets uit (bij de helft van niets blijft het niets); 'true' is de aanname die niets verandert. De eerdere definitieve berekening van € 1.905 is het maximum met partner uit de tekst van 2016 (2 × € 1.468 − 5,220% × € 19.758,816 = € 1.904,59 → € 1.905, Awir art. 14 lid 4) en veronderstelt een gezamenlijk inkomen tot het drempelinkomen; dat inkomen noemt de uitspraak niet, dus is die berekening geen case (SOURCES.md §4). Beide bedragen beslissen DISCREPANCIES.md #1 niet. Wordt 'verified' zodra een met naam genoemd mens (CASES.md) de invoer tegen de uitspraak heeft gelegd — ASKS.md 9."
