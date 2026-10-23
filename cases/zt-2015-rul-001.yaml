@@ -1,0 +1,18 @@
+id: zt-2015-rul-001
+toeslag: zorgtoeslag
+jaar: 2015
+bron:
+  type: ruling
+  publicatie: "ABRvS 13 februari 2019, ECLI:NL:RVS:2019:418 (zaaknr. 201805037/1/A2), procesverloop en r.o. 3: 'Bij besluit van 2 september 2016 heeft de Belastingdienst/Toeslagen de zorgtoeslag, het kindgebonden budget en de huurtoeslag van [appellante] over 2015 definitief berekend en de zorgtoeslag vastgesteld op € 663,00'; 'Volgens de BRI bedroeg het gezamenlijke toetsingsinkomen van [appellante] en [kind 1], haar oudste zoon, voor de bepaling van de zorgtoeslag en het kindgebonden budget in 2015 € 27.886,00.' De meerderjarige zoon, het hele jaar op hetzelfde adres ingeschreven, is de toeslagpartner (Awir art. 3 lid 2 onder e en g; r.o. 4–5.2); de Afdeling bevestigt de definitieve berekening. Het geschatte inkomen voor het voorschot was € 16.395; het voorschotbedrag noemt de uitspraak niet. Volledige tekst via data.rechtspraak.nl/uitspraken/content?id=ECLI:NL:RVS:2019:418"
+  url: https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RVS:2019:418
+  opgehaald: 2026-10-23
+verified: false
+invoer:
+  partner: true
+  partner_verzekerd: true
+  toetsingsinkomen_aanvrager: "27886"
+  toetsingsinkomen_partner: "0"
+  rendementsgrondslag: null
+verwacht:
+  tegemoetkoming: "663"
+opmerking: "De eerste uitkomst van de Dienst Toeslagen voor 2015 in het dossier, met inkomen. Het gezamenlijke toetsingsinkomen staat in één bedrag; de verdeling over aanvrager en partner doet er voor de berekening niet toe (Wzt art. 2 lid 2). Uit de tekst: normpremie = 5,265% × € 19.463,328 + 13,400% × (€ 27.886 − € 19.463,328) = € 1.024,74 + € 1.128,64 = € 2.153,38; 2 × € 1.408 − € 2.153,38 = € 662,62 → € 663 (Awir art. 14 lid 4). De uitspraak zegt niets over vermogen of over de verzekering van de partner; het bedrag bewijst dat met tweemaal de standaardpremie is gerekend (art. 2 lid 1). Met een afgerond drempelinkomen (€ 19.463 of € 19.464, DISCREPANCIES.md #1) komt hetzelfde hele bedrag uit. Wordt verified zodra een met naam genoemde mens de invoer met de uitspraak vergelijkt (CASES.md; ASKS.md 9)."

@@ -22,9 +22,9 @@ not the project. Every run must add to the record — a case, a dated amendment,
 a dispute — or it has not done the project.
 
 **Phase:** 0 → 1. The pipeline exists (`tools/build.py`: `law/` + `cases/` → tests → `site/`); the
-zorgtoeslag rules for 2026 back to 2016 are encoded as `draft` with their articles (`law/zorgtoeslag/`);
-173 published cases, thirty-two synthetic ones and nine from case law (zorgtoeslag 2016, 2019, 2020 and 2023, by ECLI) are checks, none verified yet; the discrepancy log has ten
-entries; `law/CHANGES.md` records the amendments 2016 → 2017 → 2018 → 2019 → … → 2026; the checker
+zorgtoeslag rules for 2026 back to 2015 are encoded as `draft` with their articles (`law/zorgtoeslag/`);
+173 published cases, thirty-six synthetic ones and ten from case law (zorgtoeslag 2015, 2016, 2019, 2020 and 2023, by ECLI) are checks, none verified yet; the discrepancy log has ten
+entries; `law/CHANGES.md` records the amendments 2015 → 2016 → 2017 → 2018 → 2019 → … → 2026; the checker
 (`site/zorgtoeslag.html`) follows the owner's layout decision of 2026-10-09 and awaits Checkpoint 1 (Ask 6). See `PLAN.md` and `CHANGELOG.md`.
 
 **Licences** (`CHARTER.md` P9): code under the MIT licence (`LICENSE`); the encoding, the parameters,

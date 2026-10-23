@@ -1,0 +1,18 @@
+id: zt-2015-syn-033
+toeslag: zorgtoeslag
+jaar: 2015
+bron:
+  type: synthetic
+  publicatie: "Berekend uit de tekst: Wzt art. 1 lid 1 onder f, art. 2 lid 1-3 (BWBR0018451, geldend van 01-01-2015 t/m 31-12-2015), Awir art. 14 lid 4-5 (geldend van 01-01-2015); de inkomensgrens zonder partner op de eerste euro zonder recht. Geen publicatie van de Dienst voor 2015 gevonden (leaflet 2015: niet gevonden)"
+  url: https://wetten.overheid.nl/BWBR0018451/2015-01-01
+  opgehaald: 2026-10-23
+verified: false
+invoer:
+  partner: false
+  partner_verzekerd: null
+  toetsingsinkomen_aanvrager: "26317"
+  toetsingsinkomen_partner: "0"
+  rendementsgrondslag: null
+verwacht:
+  tegemoetkoming: "0"
+opmerking: "De euro boven de inkomensgrens 2015 zonder toeslagpartner (syn-032): € 1.408 − € 1.384,54 = € 23,46 → € 23 → niet toegekend (Awir art. 14 lid 5). Met een naar beneden afgerond drempelinkomen (€ 19.463) ook niets (€ 23,43); met een naar boven afgerond drempelinkomen (€ 19.464, zoals de Dienst in 2023, 2025 en 2026 deed, DISCREPANCIES.md #1) zou hier € 23,54 → € 24 uitkomen en de grens één euro hoger liggen. Een gepubliceerde grens 2015 van de Dienst (€ 26.316 of € 26.317) zou #1 voor 2015 beslissen."

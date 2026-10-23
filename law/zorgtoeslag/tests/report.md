@@ -1,7 +1,57 @@
-# Zorgtoeslag — test report, generated 2026-10-22 by tools/build.py
+# Zorgtoeslag — test report, generated 2026-10-23 by tools/build.py
 
 Generated file; do not edit. Verified cases are tests (blocking); published and synthetic
 cases are checks (reported). Every failing check is a discrepancy in `DISCREPANCIES.md`.
+
+## zt-2015-rul-001 — PASS — check (ruling)
+
+Source: ABRvS 13 februari 2019, ECLI:NL:RVS:2019:418 (zaaknr. 201805037/1/A2), procesverloop en r.o. 3: 'Bij besluit van 2 september 2016 heeft de Belastingdienst/Toeslagen de zorgtoeslag, het kindgebonden budget en de huurtoeslag van [appellante] over 2015 definitief berekend en de zorgtoeslag vastgesteld op € 663,00'; 'Volgens de BRI bedroeg het gezamenlijke toetsingsinkomen van [appellante] en [kind 1], haar oudste zoon, voor de bepaling van de zorgtoeslag en het kindgebonden budget in 2015 € 27.886,00.' De meerderjarige zoon, het hele jaar op hetzelfde adres ingeschreven, is de toeslagpartner (Awir art. 3 lid 2 onder e en g; r.o. 4–5.2); de Afdeling bevestigt de definitieve berekening. Het geschatte inkomen voor het voorschot was € 16.395; het voorschotbedrag noemt de uitspraak niet. Volledige tekst via data.rechtspraak.nl/uitspraken/content?id=ECLI:NL:RVS:2019:418
+
+| field | expected | encoding | match |
+|---|---|---|---|
+| tegemoetkoming | 663.00 | 663.00 (exact 663) | yes |
+
+Note: De eerste uitkomst van de Dienst Toeslagen voor 2015 in het dossier, met inkomen. Het gezamenlijke toetsingsinkomen staat in één bedrag; de verdeling over aanvrager en partner doet er voor de berekening niet toe (Wzt art. 2 lid 2). Uit de tekst: normpremie = 5,265% × € 19.463,328 + 13,400% × (€ 27.886 − € 19.463,328) = € 1.024,74 + € 1.128,64 = € 2.153,38; 2 × € 1.408 − € 2.153,38 = € 662,62 → € 663 (Awir art. 14 lid 4). De uitspraak zegt niets over vermogen of over de verzekering van de partner; het bedrag bewijst dat met tweemaal de standaardpremie is gerekend (art. 2 lid 1). Met een afgerond drempelinkomen (€ 19.463 of € 19.464, DISCREPANCIES.md #1) komt hetzelfde hele bedrag uit. Wordt verified zodra een met naam genoemde mens de invoer met de uitspraak vergelijkt (CASES.md; ASKS.md 9).
+
+## zt-2015-syn-032 — PASS — check (synthetic)
+
+Source: Berekend uit de tekst: Wzt art. 1 lid 1 onder f, art. 2 lid 1-3 (BWBR0018451, geldend van 01-01-2015 t/m 31-12-2015), Awir art. 14 lid 4-5 (geldend van 01-01-2015); de inkomensgrens zonder partner op de laatste euro met recht. Geen publicatie van de Dienst voor 2015 gevonden (leaflet 2015: niet gevonden)
+
+| field | expected | encoding | match |
+|---|---|---|---|
+| tegemoetkoming | 24.00 | 24.00 (exact 24) | yes |
+
+Note: Inkomensgrens 2015 zonder toeslagpartner uit de tekst: normpremie = 2,395% × € 19.463,328 + 13,400% × (€ 26.316 − € 19.463,328) = € 466,15 + € 918,26 = € 1.384,40; € 1.408 − € 1.384,40 = € 23,60 (precies € 23,5952) → € 24 (Awir art. 14 lid 4), net toegekend (lid 5). Zie syn-033 voor de euro erboven. Met een naar beneden afgerond drempelinkomen (€ 19.463, DISCREPANCIES.md #1) blijft het € 24 (€ 23,56); met € 19.464 ook (€ 23,67) — maar dan krijgt ook € 26.317 nog € 24 (€ 23,54), zie syn-033. Het maximum 2015 zonder partner uit de tekst is € 942 (€ 941,85), het bedrag dat de ABRvS op 20 juni 2018 (zaak 201709274/1/A2) als voorschot 2015 noemt. Wordt een published case zodra een publicatie van de Dienst voor 2015 de grens noemt.
+
+## zt-2015-syn-033 — PASS — check (synthetic)
+
+Source: Berekend uit de tekst: Wzt art. 1 lid 1 onder f, art. 2 lid 1-3 (BWBR0018451, geldend van 01-01-2015 t/m 31-12-2015), Awir art. 14 lid 4-5 (geldend van 01-01-2015); de inkomensgrens zonder partner op de eerste euro zonder recht. Geen publicatie van de Dienst voor 2015 gevonden (leaflet 2015: niet gevonden)
+
+| field | expected | encoding | match |
+|---|---|---|---|
+| tegemoetkoming | 0.00 | 0.00 (exact 0) | yes |
+
+Note: De euro boven de inkomensgrens 2015 zonder toeslagpartner (syn-032): € 1.408 − € 1.384,54 = € 23,46 → € 23 → niet toegekend (Awir art. 14 lid 5). Met een naar beneden afgerond drempelinkomen (€ 19.463) ook niets (€ 23,43); met een naar boven afgerond drempelinkomen (€ 19.464, zoals de Dienst in 2023, 2025 en 2026 deed, DISCREPANCIES.md #1) zou hier € 23,54 → € 24 uitkomen en de grens één euro hoger liggen. Een gepubliceerde grens 2015 van de Dienst (€ 26.316 of € 26.317) zou #1 voor 2015 beslissen.
+
+## zt-2015-syn-034 — PASS — check (synthetic)
+
+Source: Berekend uit de tekst: Wzt art. 1 lid 1 onder f, art. 2 lid 1-3 (BWBR0018451, geldend van 01-01-2015 t/m 31-12-2015), Awir art. 14 lid 4-5 (geldend van 01-01-2015); de inkomensgrens met partner op de laatste euro met recht. Geen publicatie van de Dienst voor 2015 gevonden (leaflet 2015: niet gevonden)
+
+| field | expected | encoding | match |
+|---|---|---|---|
+| tegemoetkoming | 24.00 | 24.00 (exact 24) | yes |
+
+Note: Inkomensgrens 2015 met toeslagpartner uit de tekst: normpremie = 5,265% × € 19.463,328 + 13,400% × (€ 32.655 − € 19.463,328) = € 1.024,74 + € 1.767,68 = € 2.792,43; 2 × € 1.408 − € 2.792,43 = € 23,57 → € 24, net toegekend. Zie syn-035 voor de euro erboven. Met een afgerond drempelinkomen (€ 19.463 of € 19.464) blijft het € 24 (€ 23,54 resp. € 23,61). Het maximum 2015 met partner uit de tekst is € 1.791 (€ 1.791,26).
+
+## zt-2015-syn-035 — PASS — check (synthetic)
+
+Source: Berekend uit de tekst: Wzt art. 1 lid 1 onder f, art. 2 lid 1-3 (BWBR0018451, geldend van 01-01-2015 t/m 31-12-2015), Awir art. 14 lid 4-5 (geldend van 01-01-2015); de inkomensgrens met partner op de eerste euro zonder recht. Geen publicatie van de Dienst voor 2015 gevonden (leaflet 2015: niet gevonden)
+
+| field | expected | encoding | match |
+|---|---|---|---|
+| tegemoetkoming | 0.00 | 0.00 (exact 0) | yes |
+
+Note: De euro boven de inkomensgrens 2015 met toeslagpartner (syn-034): 2 × € 1.408 − € 2.792,56 = € 23,44 → € 23 → niet toegekend (Awir art. 14 lid 5). Ook met een afgerond drempelinkomen (€ 19.463: € 23,41; € 19.464: € 23,47) komt hier niets uit: met partner beslist de afronding van het drempelinkomen de grens 2015 niet. Het gezamenlijke toetsingsinkomen van € 27.886 waarbij de Dienst € 663 toekende (cases/zt-2015-rul-001) ligt onder deze grens.
 
 ## zt-2016-rul-001 — PASS — check (ruling)
 
@@ -2194,8 +2244,8 @@ Note: Laatste rij van de tabel, op het genoemde inkomen zelf ('en meer' sluit he
 
 ---
 
-Browser encoding (`site/zorgtoeslag-regels.js`, node v22.22.0): 214 cases compared with the Python encoding, 214 identical, 0 different.
+Browser encoding (`site/zorgtoeslag-regels.js`, node v22.22.0): 219 cases compared with the Python encoding, 219 identical, 0 different.
 
 ---
 
-Cases run: 214, passed: 194, failed: 20, skipped: 0. Verified cases: 0. Blocking failures: 0. Browser/Python differences: 0 (blocking: the two encodings must agree).
+Cases run: 219, passed: 199, failed: 20, skipped: 0. Verified cases: 0. Blocking failures: 0. Browser/Python differences: 0 (blocking: the two encodings must agree).

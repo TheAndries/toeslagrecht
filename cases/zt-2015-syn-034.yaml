@@ -1,0 +1,18 @@
+id: zt-2015-syn-034
+toeslag: zorgtoeslag
+jaar: 2015
+bron:
+  type: synthetic
+  publicatie: "Berekend uit de tekst: Wzt art. 1 lid 1 onder f, art. 2 lid 1-3 (BWBR0018451, geldend van 01-01-2015 t/m 31-12-2015), Awir art. 14 lid 4-5 (geldend van 01-01-2015); de inkomensgrens met partner op de laatste euro met recht. Geen publicatie van de Dienst voor 2015 gevonden (leaflet 2015: niet gevonden)"
+  url: https://wetten.overheid.nl/BWBR0018451/2015-01-01
+  opgehaald: 2026-10-23
+verified: false
+invoer:
+  partner: true
+  partner_verzekerd: true
+  toetsingsinkomen_aanvrager: "32655"
+  toetsingsinkomen_partner: "0"
+  rendementsgrondslag: null
+verwacht:
+  tegemoetkoming: "24"
+opmerking: "Inkomensgrens 2015 met toeslagpartner uit de tekst: normpremie = 5,265% × € 19.463,328 + 13,400% × (€ 32.655 − € 19.463,328) = € 1.024,74 + € 1.767,68 = € 2.792,43; 2 × € 1.408 − € 2.792,43 = € 23,57 → € 24, net toegekend. Zie syn-035 voor de euro erboven. Met een afgerond drempelinkomen (€ 19.463 of € 19.464) blijft het € 24 (€ 23,54 resp. € 23,61). Het maximum 2015 met partner uit de tekst is € 1.791 (€ 1.791,26)."
