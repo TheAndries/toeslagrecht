@@ -1,0 +1,18 @@
+id: zt-2014-rul-002
+toeslag: zorgtoeslag
+jaar: 2014
+bron:
+  type: ruling
+  publicatie: "Hof Den Haag 28 maart 2017, ECLI:NL:GHDHA:2017:1067 (zaaknr. BK-16/00409), r.o. 3.1 en 3.3: 'Bij beschikkingen van 14 augustus 2015 heeft de Belastingdienst/Toeslagen de aan belanghebbende toekomende zorgtoeslag en huurtoeslag voor het jaar 2014 definitief vastgesteld op € 814 respectievelijk € 1.513. Deze beschikkingen zijn gebaseerd op het toetsingsinkomen van het jaar 2014 van € 19.810.' Het toetsingsinkomen is het laatst bepaalde belastbare loon (geen aanslag IB over 2014; loongegevens r.o. 3.2 tellen op tot € 19.810); het Hof bevestigt het. Volledige tekst via data.rechtspraak.nl/uitspraken/content?id=ECLI:NL:GHDHA:2017:1067"
+  url: https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:GHDHA:2017:1067
+  opgehaald: 2026-10-24
+verified: false
+invoer:
+  partner: false
+  partner_verzekerd: null
+  toetsingsinkomen_aanvrager: "19810"
+  toetsingsinkomen_partner: "0"
+  rendementsgrondslag: null
+verwacht:
+  tegemoetkoming: "814"
+opmerking: "Definitieve berekening 2014 zonder partner, € 557 boven het drempelinkomen. Uit de tekst: normpremie = 2,410% × € 19.253,376 + 9,118% × (€ 19.810 − € 19.253,376) = € 464,01 + € 50,75 = € 514,76; € 1.329 − € 514,76 = € 814,24 → € 814 (Awir art. 14 lid 4). De uitspraak noemt geen partner en geen vermogen; het bedrag bewijst éénmaal de standaardpremie (met partner: € 1.604). Met een afgerond drempelinkomen (€ 19.253 of € 19.254, DISCREPANCIES.md #1) komt hetzelfde hele bedrag uit (€ 814,21 / € 814,27). Wordt verified zodra een met naam genoemde mens de invoer met de uitspraak vergelijkt (CASES.md; ASKS.md 9)."

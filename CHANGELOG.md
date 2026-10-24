@@ -2,6 +2,113 @@
 
 Newest first. What was done, decided, and got wrong.
 
+## 2026-10-24 — fifteenth run: 2014 encoded from primary texts, the first four Dienst outcomes for 2014 from case law, the heffingvrij vermogen frozen in 2014, the first year where the drempelinkomen rounding decides nothing
+
+Fifteenth run of routine `trig_012xyD5r5rxFDCjfHbZ58Kib`. Model as configured for the session: `claude-fable-5-1`, the same as the
+previous entry; no handover note needed. The checkout arrived on `main` at a current `origin/main` (`00b7745`, the previous run's
+commit; `git fetch` confirmed it). The routine fired the day after the previous run: no new gap. `git log -3 --stat` shows no owner
+commit since 10-23.
+
+**Step 1 — asks marked done.** None since 10-23. Asks 4, 6, 8, 9 and 10 stay open as recorded; 8 and 9 extended today (step 8).
+
+**Step 2 — the inbox.** `INBOX.md` is empty and nothing arrived outside it. No case, dispute, review or owner note to handle.
+
+**Step 3.** No open motion.
+
+**Step 4 — done (item 2 of `memory.md`: 2014, the next year of history; about thirty-five fetches in five parallel batches, nine web searches,
+seven rulings read).**
+- *Zorgtoeslag 2014 encoded from the primary texts*, `parameters/2014.yaml` and `awir/parameters/2014.yaml`, status `draft`, each number with
+  its article, instrument and quoted text: standaardpremie € 1.329 (Stcrt. 2013, 35060, found through the Wzt art. 4 informatie page as
+  BWBR0034337: € 1.101 premie + € 228 eigen risico — and the toelichting states a *beleidswijziging*: for the first time the collectieve
+  kortingen were counted in the gemiddelde premie, against the Wzt's wetsgeschiedenis, so the fall from € 1.478 (2013) is partly a method
+  change); WML januari 2014 € 1.485,60 (Stcrt. 2013, 31007 had set € 1.485,65 and Stcrt. 2013, 32425 corrected it before 1 January because the
+  rounding to a multiple of € 0,60 of WML art. 14 lid 9 had been forgotten) → drempelinkomen € 19.253,376; percentages 2,410% / 5,210% /
+  9,118% (Wzt art. 2 lid 3, text of 01-01-2014; Stb. 2012, 627, read in full: from 2013 the besluit stacked the Wul (+0,25 point on all
+  three), the compensation of the € 115 higher verplicht eigen risico (−0,60 / −1,20 norm, +0,923 afbouw) and the koopkrachtreparatiepakket
+  of the Begrotingsakkoord 2013 (−0,60 / −0,40 norm, +1,70 afbouw), and its toelichting counted 300.000 fewer households with zorgtoeslag);
+  vermogensgrens € 81.360 on the grondslag sparen en beleggen (Stcrt. 2013, 35607, from € 80.000, 1,7%); heffingvrij vermogen € 21.139 (Wet IB
+  2001 art. 5.5 in its three 2014 versions, 01-01, 06-01 and 19-07, and in 2013 — see the next point) → effective € 102.499 / € 123.638; 39
+  woonlandfactoren (Stcrt. 2013, 33704, identical on all 39 lines to the consolidated bijlage 4 of 01-01-2014 and 01-12-2014, no correction
+  article); Awir art. 7 lid 6 € 4.706 (Stcrt. 2013, 35144 art. VI) and art. 14 lid 4–5 unchanged across the Awir's two 2014 versions (01-01
+  and 06-01-2014, diffed). The Wzt had three versions in 2014: 01-04-2014 renamed the College zorgverzekeringen to Zorginstituut Nederland in
+  art. 5 lid 2 (Stb. 2013, 578), and 16-07-2014 struck the Zvw art. 118a clause from art. 4 with terugwerkende kracht to 1 January (Stb.
+  2014, 259 art. XV and XVII, read) — neither a rule; art. 1–5 of the three versions diffed verbatim. The diff of 01-01-2013 against
+  01-01-2014 shows only the percentages (2,195% / 4,695% / 8,713%) and the art. 2a amount (€ 80 000) — the 2013 values now stand in the 'old'
+  columns as read. No code change: the 2020 switches cover 2014. The 2015 rows' 'old' columns that were open on 10-23 (the standaardpremie
+  2014, the WML of July 2014, the 2014 woonlandfactor table, the 2014 text of Wet IB art. 5.5) are filled from today's texts.
+- *The heffingvrij vermogen did not move in 2014.* Wet IB art. 5.5 reads '€ 21 139' in 2013 and in all of 2014. The Bijstellingsregeling
+  directe belastingen 2014 leaves art. 5.5 alone and says why: under art. XXXIV of the Belastingplan 2014 the indexation articles 10.1 and
+  10.3 lid 2 Wet IB 'vinden voor het jaar 2014 geen toepassing', so those amounts 'worden dus voor het jaar 2014 niet geïndexeerd' (the
+  Belastingplan itself not read, written as such). The Wzt art. 2a amount, indexed by the same tabelcorrectiefactor through its own lid 2,
+  *was* raised (1,7%). Recorded as a `CHANGES.md` row with no change, so the series does not look as if a year were missing.
+- *The first Dienst outcomes for 2014, from case law — four with an income.* A web search for 2014 zorgtoeslag rulings on raadvanstate.nl and
+  uitspraken.rechtspraak.nl returned, besides Afdeling rulings, two *belastingkamer* rulings on the inkomensgegeven behind a toeslag
+  beschikking, which quote the beschikking with its income — a second cheap route, with the ECLI in the title. Seven rulings read in full.
+  Hof Den Haag ECLI:NL:GHDHA:2017:1067: voorschot 2014 € 865 at a geschat toetsingsinkomen of € 17.333 and definitieve berekening € 814 at
+  € 19.810 → **`zt-2014-rul-001`, `-002`** (the amounts prove one standaardpremie: met partner they would be € 1.655 and € 1.604). ABRvS
+  ECLI:NL:RVS:2017:659: € 567 at the verzamelinkomen € 22.518 → **`zt-2014-rul-003`** (the Afdeling's correction of the toetsingsinkomen for a
+  nabetaling is Bht art. 2b, huurtoeslag only; the rechtsgevolgen stand; the voorschot € 865 follows only from € 567 + € 298 and is not
+  stored). Hof Amsterdam ECLI:NL:GHAMS:2019:2243: nihil at € 21.113 + € 19.000 met partner → **`zt-2014-rul-004`** (the Hof later set the
+  ex-partner's inkomensgegeven at € 9.860; the herziening is not in the ruling, the text would then give € 586 — noted, not a case). All
+  four reproduced from the 2014 text through `build.run_case`, not by hand (€ 864,99 / € 814,24 / € 567,33 / −€ 247). Three more 2014
+  amounts without an income (€ 1.379 met partner, ECLI:NL:RVS:2018:2908; € 536 then nihil at € 31.166 without the household,
+  ECLI:NL:RVS:2018:334; nihil in Zweden with the woonlandfactor, ECLI:NL:RVS:2018:3727) in `SOURCES.md` §4. 2014 is now the year with the
+  most Dienst outcomes in the record after 2020 and 2023, from a year that had none this morning.
+- *Four synthetic cases*, `zt-2014-syn-036..039`: the income ceilings from the text, € 28.482 zonder and € 37.145 met partner, each with the
+  euro above — the highest ceilings of the series 2014–2026, since the afbouw was 9,118% before the 2015 jump. New: a drempelinkomen rounded
+  down (€ 19.253) or up (€ 19.254) moves *neither* ceiling (€ 23,50 / € 23,57 at the ceiling, € 23,41 / € 23,48 the euro above), the first
+  year in the series where `DISCREPANCIES.md` #1 can have no effect on an outcome; computed analytically, checked with Decimal and verified
+  on the boundary euros through the encoding. Recorded as a dated note in #1 (status unchanged, `government`).
+- *Check:* 227 cases, 207 pass, 20 fail (the twenty of 10-20, every one logged), 0 blocking; both encodings agree on 227. The site rebuilt: 279
+  pages, 2014 in the form, `/wet/2014/`, eight new case pages, the #1 note on `/verschillen/1/`.
+- *The record's files:* `CHANGES.md` — nine rows for 2014 (two for the 16-07 and 01-04 text changes, seven for 01-01-2014, one of them the
+  unchanged art. 5.5) and the four 2015 old columns filled. `SOURCES.md` — eleven rows for the 2014 instruments and texts, the leaflet 2014 as
+  not found (`z40`, `z42`–`z44` 404; `z41` is 2024), six rulings, open item 4 rewritten for 2013 with what today already read of it.
+  `rules.md` (years, drempelinkomen, percentages chain back to Stb. 2012, 627, vermogen amounts, standaardpremie and woonlandfactor lists),
+  `cases/README.md`, `README.md`, `DISCREPANCIES.md` #1, `ASKS.md` 8 and 9.
+
+**What was wrong and why.**
+- *An explanation written from intuition.* The first draft of the #1 note said the 2014 rounding decides nothing because a euro of
+  drempelinkomen 'shifts the amount by about nine cents rather than thirteen'. Computed, the shift is (afbouw − norm) × the fraction rounded
+  away: 1,5 to 4 cents in 2014 against 3 to 7 in 2015 — the sentence was wrong by a factor of two and the mechanism half right. Caught on
+  re-reading the diff; rewritten with the computed figures. A sentence that explains a number is a number (`memory.md`).
+- *A recalled instrument name with a question mark.* Open item 4's first draft named the act that inserted Wzt art. 2a as 'the Wet van
+  20 december 2012?'. Not read; the question mark does not make it less recalled. Replaced by 'to be identified from the informatie page'.
+- *Three fetches to the wrong dates.* wetten.overheid.nl answers a date that is not a version start with an 8,7 KB 'Fout' page: Wet IB at
+  2014-07-01 and 2014-06-30, Awir at 2014-12-31. The 10-23 lesson (check the size) caught them; the informatie page then gave the version
+  dates (06-01 and 19-07-2014). Lesson in `memory.md`: fetch version start dates only.
+- *A regeling the index does not surface.* The woonlandfactoren regeling for 2014 was found by none of three searches restricted to
+  officielebekendmakingen.nl nor by its SRU interface; an open search for the subject and year returned a taxlive.nl summary naming
+  Stcrt. 2013, 33704, which was then read in full. The summary is recorded as the route, the Staatscourant as the source.
+- Nothing dropped from scope. Items 3 (the Dutch B1 protocol pages) and 4 (a dedicated ruling pass) not started as such; the belastingkamer
+  route is recorded as proven. `PLAN.md` unchanged: the strategy holds (history continuing while Checkpoint 1 waits on the owner; huurtoeslag
+  not before that); no checkpoint has a date to miss.
+
+**Step 8 — asks.** None new. Ask 8 extended (the 2014 leaflet not found; `z41` is 2024). Ask 9 extended to the four 2014 ruling cases, per
+ruling, three rulings.
+
+**Dropped from memory.** Open item 2 (2014) replaced by 2013 with what is already read and the pointers; the stale pipeline sentence about the
+old template and the layouts (gone since 10-20) and a duplicated leaflet-edition sentence removed; about 6,700 words (wc) after today's additions
+(the 2014 key figures, four cases, four lessons) — under the cap, but the key-figures paragraph is the part to compress next.
+
+**Effort.** Roughly 300,000 of the 300,000-token ceiling — at the limit: about 70,000 reading the files, the previous three entries, the
+parameter and rules files and the pipeline; about 70,000 on some thirty-five fetches, nine searches and seven rulings (three 47 MB and one 28 MB
+Regeling zorgverzekering pages and five 4 MB Wet IB texts among them, all cut by script; the three wasted fetches above); about 160,000
+writing and checking the two parameter files, the eight cases, the rows in `CHANGES.md` and `SOURCES.md`, the notes in `rules.md`,
+`DISCREPANCIES.md` and `ASKS.md`, the memory and this entry. More than 10-23 because 2014 had three Wzt versions, a corrected WML regeling,
+a frozen Wet IB amount to explain and seven rulings to read.
+
+**Record under the ten-year rule.** This run added to the record: the law of 2014 as it stood, dated and sourced — every parameter with its
+instrument and quoted text, the three Wzt versions of 2014 with the diffs that show what Stb. 2013, 578 and Stb. 2014, 259 changed and the
+2013 values read into the 'old' columns; the dated finding that the standaardpremie of 2014 was the first computed with the collectieve
+kortingen, a stated change of method; the dated finding that the WML amount of January 2014 was corrected before it took effect for a
+forgotten rounding rule; the dated finding that the heffingvrij vermogen was frozen for 2014 by the Belastingplan 2014 while the Wzt's own
+amount was indexed; the tenth pre-effect revision of the percentages schema and the full decomposition of the 2013–2014 percentages by
+measure from Stb. 2012, 627's own table; the first four Dienst outcomes for 2014 with their incomes (€ 865 at € 17.333, € 814 at € 19.810,
+€ 567 at € 22.518, nihil at € 40.113) and three more amounts, each traced to its ruling; and the 2014 income ceilings from the text with the
+finding that 2014 is the first year where the rounding of the drempelinkomen moves no ceiling. The encoding of 2014 (no code changed), the
+cases' arithmetic and the site build are regenerable and are not counted.
+
 ## 2026-10-23 — fourteenth run: 2015 encoded from primary texts, the 2015 afbouw jump of Stb. 2014, 488 dated, the first Dienst outcome for 2015 from case law, a third bijdrage-only factor correction found
 
 Fourteenth run of routine `trig_012xyD5r5rxFDCjfHbZ58Kib`. Model as configured for the session: `claude-fable-5-1`, the same as the

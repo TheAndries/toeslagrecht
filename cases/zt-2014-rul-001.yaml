@@ -1,0 +1,18 @@
+id: zt-2014-rul-001
+toeslag: zorgtoeslag
+jaar: 2014
+bron:
+  type: ruling
+  publicatie: "Hof Den Haag 28 maart 2017, ECLI:NL:GHDHA:2017:1067 (zaaknr. BK-16/00409), r.o. 3.1 en 3.3: 'Bij voorschotbeschikkingen van 27 december 2013 heeft de Belastingdienst/Toeslagen de aan belanghebbende toekomende zorgtoeslag en huurtoeslag voor het jaar 2014 voorlopig vastgesteld op € 865 respectievelijk € 2.456 (hierna: de voorschotten). De voorschotten zijn gebaseerd op een schatting aan de hand van inkomensgegevens uit het jaar 2013. Het geschatte toetsingsinkomen waarvan bij de berekening van de voorschotten is uitgegaan bedraagt € 17.333.' Een belastingzaak over het inkomensgegeven (toetsingsinkomen 2014 € 19.810, zie rul-002); het Hof bevestigt het inkomensgegeven. Volledige tekst via data.rechtspraak.nl/uitspraken/content?id=ECLI:NL:GHDHA:2017:1067"
+  url: https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:GHDHA:2017:1067
+  opgehaald: 2026-10-24
+verified: false
+invoer:
+  partner: false
+  partner_verzekerd: null
+  toetsingsinkomen_aanvrager: "17333"
+  toetsingsinkomen_partner: "0"
+  rendementsgrondslag: null
+verwacht:
+  tegemoetkoming: "865"
+opmerking: "De eerste uitkomst van de Dienst Toeslagen voor 2014 in het dossier: een voorschot, bij een geschat toetsingsinkomen onder het drempelinkomen (€ 19.253,376), dus het maximum zonder partner uit de tekst: € 1.329 − 2,410% × € 19.253,376 = € 1.329 − € 464,01 = € 864,99 → € 865 (Awir art. 14 lid 4). De uitspraak noemt geen partner; het bedrag bewijst dat met éénmaal de standaardpremie is gerekend (met partner zou het voorschot € 1.655 zijn). Zelfde euro onder elke afronding van het drempelinkomen (DISCREPANCIES.md #1). Wordt verified zodra een met naam genoemde mens de invoer met de uitspraak vergelijkt (CASES.md; ASKS.md 9)."

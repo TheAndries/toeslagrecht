@@ -1,0 +1,18 @@
+id: zt-2014-syn-039
+toeslag: zorgtoeslag
+jaar: 2014
+bron:
+  type: synthetic
+  publicatie: "Berekend uit de tekst: Wzt art. 1 lid 1 onder f, art. 2 lid 1-3 (BWBR0018451, geldend van 01-01-2014), Awir art. 14 lid 4-5 (geldend van 01-01-2014); de inkomensgrens met partner, de eerste euro zonder recht. Geen publicatie van de Dienst voor 2014 gevonden"
+  url: https://wetten.overheid.nl/BWBR0018451/2014-01-01
+  opgehaald: 2026-10-24
+verified: false
+invoer:
+  partner: true
+  partner_verzekerd: true
+  toetsingsinkomen_aanvrager: "37146"
+  toetsingsinkomen_partner: "0"
+  rendementsgrondslag: null
+verwacht:
+  tegemoetkoming: "0"
+opmerking: "De euro boven syn-038: 2 × € 1.329 − (€ 1.003,10 + € 1.631,45) = € 23,45 → € 23 < € 24 → geen aanspraak (Awir art. 14 lid 5). Met een afgerond drempelinkomen (€ 19.253: € 23,43; € 19.254: € 23,47) blijft het € 23 (DISCREPANCIES.md #1)."

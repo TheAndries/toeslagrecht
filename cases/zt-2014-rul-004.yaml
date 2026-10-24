@@ -1,0 +1,18 @@
+id: zt-2014-rul-004
+toeslag: zorgtoeslag
+jaar: 2014
+bron:
+  type: ruling
+  publicatie: "Hof Amsterdam 25 juni 2019, ECLI:NL:GHAMS:2019:2243 (zaaknrs. 17/00278, 17/00279, 18/00129), feiten rechtbank 2014 (r.o. 2, aangehaald): 'In het jaar 2014 stond eiseres op hetzelfde adres ingeschreven als de ex-partner en hun beide kinderen.'; 'Op 6 januari 2017 is de definitieve berekening toeslagen over het jaar 2014 vastgesteld. De toeslagen zijn berekend op basis van de volgende toetsingsinkomens: eiseres: € 21.113 en [Y]: € 19.000. Op basis van deze toetsingsinkomens is de zorgtoeslag op nihil vastgesteld en is het kindgebonden budget op € 492 vastgesteld.' Het Hof stelt het inkomensgegeven 2014 van de ex-partner nader vast op € 9.860 (dictum), waarna de Dienst de toeslagen herziet (Awir art. 20); die herziening staat niet in de uitspraak. Volledige tekst via data.rechtspraak.nl/uitspraken/content?id=ECLI:NL:GHAMS:2019:2243"
+  url: https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:GHAMS:2019:2243
+  opgehaald: 2026-10-24
+verified: false
+invoer:
+  partner: true
+  partner_verzekerd: true
+  toetsingsinkomen_aanvrager: "40113"
+  toetsingsinkomen_partner: "0"
+  rendementsgrondslag: null
+verwacht:
+  tegemoetkoming: "0"
+opmerking: "De beslissing van de Dienst op de inkomens zoals zij toen vaststonden: gezamenlijk toetsingsinkomen € 21.113 + € 19.000 = € 40.113 met toeslagpartner (hetzelfde adres, samen kinderen; de Dienst rekende met beide inkomens), boven de inkomensgrens met partner uit de tekst van 2014, € 37.145 (syn-038): normpremie = 5,210% × € 19.253,376 + 9,118% × (€ 40.113 − € 19.253,376) = € 1.003,10 + € 1.901,98 = € 2.905,08 > 2 × € 1.329 → geen aanspraak, wat de Dienst besliste. De verdeling over aanvrager en partner doet er niet toe (Wzt art. 2 lid 2); het hele bedrag staat bij de aanvrager. Of de partner verzekerde was maakt bij dit inkomen niets uit. Met het door het Hof nader vastgestelde inkomensgegeven van de ex-partner (€ 9.860; gezamenlijk € 30.973) geeft de tekst € 586 (2 × € 1.329 − € 1.003,10 − € 1.068,60 = € 586,30) — geen beslissing van de Dienst, dus geen case; staat hier als wat de tekst zegt. Beslist DISCREPANCIES.md #1 niet. Wordt verified zodra een met naam genoemde mens de invoer met de uitspraak vergelijkt (CASES.md; ASKS.md 9)."

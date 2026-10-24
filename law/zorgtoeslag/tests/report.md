@@ -1,7 +1,87 @@
-# Zorgtoeslag — test report, generated 2026-10-23 by tools/build.py
+# Zorgtoeslag — test report, generated 2026-10-24 by tools/build.py
 
 Generated file; do not edit. Verified cases are tests (blocking); published and synthetic
 cases are checks (reported). Every failing check is a discrepancy in `DISCREPANCIES.md`.
+
+## zt-2014-rul-001 — PASS — check (ruling)
+
+Source: Hof Den Haag 28 maart 2017, ECLI:NL:GHDHA:2017:1067 (zaaknr. BK-16/00409), r.o. 3.1 en 3.3: 'Bij voorschotbeschikkingen van 27 december 2013 heeft de Belastingdienst/Toeslagen de aan belanghebbende toekomende zorgtoeslag en huurtoeslag voor het jaar 2014 voorlopig vastgesteld op € 865 respectievelijk € 2.456 (hierna: de voorschotten). De voorschotten zijn gebaseerd op een schatting aan de hand van inkomensgegevens uit het jaar 2013. Het geschatte toetsingsinkomen waarvan bij de berekening van de voorschotten is uitgegaan bedraagt € 17.333.' Een belastingzaak over het inkomensgegeven (toetsingsinkomen 2014 € 19.810, zie rul-002); het Hof bevestigt het inkomensgegeven. Volledige tekst via data.rechtspraak.nl/uitspraken/content?id=ECLI:NL:GHDHA:2017:1067
+
+| field | expected | encoding | match |
+|---|---|---|---|
+| tegemoetkoming | 865.00 | 865.00 (exact 865) | yes |
+
+Note: De eerste uitkomst van de Dienst Toeslagen voor 2014 in het dossier: een voorschot, bij een geschat toetsingsinkomen onder het drempelinkomen (€ 19.253,376), dus het maximum zonder partner uit de tekst: € 1.329 − 2,410% × € 19.253,376 = € 1.329 − € 464,01 = € 864,99 → € 865 (Awir art. 14 lid 4). De uitspraak noemt geen partner; het bedrag bewijst dat met éénmaal de standaardpremie is gerekend (met partner zou het voorschot € 1.655 zijn). Zelfde euro onder elke afronding van het drempelinkomen (DISCREPANCIES.md #1). Wordt verified zodra een met naam genoemde mens de invoer met de uitspraak vergelijkt (CASES.md; ASKS.md 9).
+
+## zt-2014-rul-002 — PASS — check (ruling)
+
+Source: Hof Den Haag 28 maart 2017, ECLI:NL:GHDHA:2017:1067 (zaaknr. BK-16/00409), r.o. 3.1 en 3.3: 'Bij beschikkingen van 14 augustus 2015 heeft de Belastingdienst/Toeslagen de aan belanghebbende toekomende zorgtoeslag en huurtoeslag voor het jaar 2014 definitief vastgesteld op € 814 respectievelijk € 1.513. Deze beschikkingen zijn gebaseerd op het toetsingsinkomen van het jaar 2014 van € 19.810.' Het toetsingsinkomen is het laatst bepaalde belastbare loon (geen aanslag IB over 2014; loongegevens r.o. 3.2 tellen op tot € 19.810); het Hof bevestigt het. Volledige tekst via data.rechtspraak.nl/uitspraken/content?id=ECLI:NL:GHDHA:2017:1067
+
+| field | expected | encoding | match |
+|---|---|---|---|
+| tegemoetkoming | 814.00 | 814.00 (exact 814) | yes |
+
+Note: Definitieve berekening 2014 zonder partner, € 557 boven het drempelinkomen. Uit de tekst: normpremie = 2,410% × € 19.253,376 + 9,118% × (€ 19.810 − € 19.253,376) = € 464,01 + € 50,75 = € 514,76; € 1.329 − € 514,76 = € 814,24 → € 814 (Awir art. 14 lid 4). De uitspraak noemt geen partner en geen vermogen; het bedrag bewijst éénmaal de standaardpremie (met partner: € 1.604). Met een afgerond drempelinkomen (€ 19.253 of € 19.254, DISCREPANCIES.md #1) komt hetzelfde hele bedrag uit (€ 814,21 / € 814,27). Wordt verified zodra een met naam genoemde mens de invoer met de uitspraak vergelijkt (CASES.md; ASKS.md 9).
+
+## zt-2014-rul-003 — PASS — check (ruling)
+
+Source: ABRvS 15 maart 2017, ECLI:NL:RVS:2017:659 (zaaknr. 201604395/1/A2), procesverloop en r.o. 1: 'Bij besluit van 3 juli 2015 heeft de Belastingdienst/Toeslagen de zorg- en huurtoeslag van [appellante] over 2014 definitief vastgesteld op onderscheidenlijk € 567,00 en nihil. Tevens is € 298,00 en € 3.272,00 aan te veel betaalde voorschotten zorg- en huurtoeslag teruggevorderd.'; 'de inspecteur [heeft] het verzamelinkomen van [appellante] in de aanslag inkomstenbelasting 2014 vastgesteld op € 22.518,00'. De Afdeling: een nabetaling van € 837,31 blijft voor de huurtoeslag op verzoek buiten beschouwing (Bht art. 2b), zodat het toetsingsinkomen voor de huurtoeslag € 21.680 is — zonder gevolg (de huurtoeslaggrens blijft overschreden); de rechtsgevolgen van het besluit blijven geheel in stand (dictum V). Volledige tekst via data.rechtspraak.nl/uitspraken/content?id=ECLI:NL:RVS:2017:659
+
+| field | expected | encoding | match |
+|---|---|---|---|
+| tegemoetkoming | 567.00 | 567.00 (exact 567) | yes |
+
+Note: Definitieve berekening 2014 zonder partner op het verzamelinkomen van de aanslag IB. Uit de tekst: normpremie = 2,410% × € 19.253,376 + 9,118% × (€ 22.518 − € 19.253,376) = € 464,01 + € 297,67 = € 761,67; € 1.329 − € 761,67 = € 567,33 → € 567 (Awir art. 14 lid 4). De uitspraak noemt geen partner; het bedrag bewijst éénmaal de standaardpremie (met partner: € 1.357). De uitzondering voor nabetalingen (Bht art. 2b) geldt alleen de huurtoeslag; de zorgtoeslag blijft op € 22.518 berekend en de Afdeling laat haar in stand. Het voorschot (geschat inkomen € 13.500) volgt uit € 567 + € 298 = € 865, het maximum uit de tekst — niet als case opgenomen, het bedrag staat niet zelf in de uitspraak. Zelfde hele bedrag met een afgerond drempelinkomen (DISCREPANCIES.md #1). Wordt verified zodra een met naam genoemde mens de invoer met de uitspraak vergelijkt (CASES.md; ASKS.md 9).
+
+## zt-2014-rul-004 — PASS — check (ruling)
+
+Source: Hof Amsterdam 25 juni 2019, ECLI:NL:GHAMS:2019:2243 (zaaknrs. 17/00278, 17/00279, 18/00129), feiten rechtbank 2014 (r.o. 2, aangehaald): 'In het jaar 2014 stond eiseres op hetzelfde adres ingeschreven als de ex-partner en hun beide kinderen.'; 'Op 6 januari 2017 is de definitieve berekening toeslagen over het jaar 2014 vastgesteld. De toeslagen zijn berekend op basis van de volgende toetsingsinkomens: eiseres: € 21.113 en [Y]: € 19.000. Op basis van deze toetsingsinkomens is de zorgtoeslag op nihil vastgesteld en is het kindgebonden budget op € 492 vastgesteld.' Het Hof stelt het inkomensgegeven 2014 van de ex-partner nader vast op € 9.860 (dictum), waarna de Dienst de toeslagen herziet (Awir art. 20); die herziening staat niet in de uitspraak. Volledige tekst via data.rechtspraak.nl/uitspraken/content?id=ECLI:NL:GHAMS:2019:2243
+
+| field | expected | encoding | match |
+|---|---|---|---|
+| tegemoetkoming | 0.00 | 0.00 (exact 0) | yes |
+
+Note: De beslissing van de Dienst op de inkomens zoals zij toen vaststonden: gezamenlijk toetsingsinkomen € 21.113 + € 19.000 = € 40.113 met toeslagpartner (hetzelfde adres, samen kinderen; de Dienst rekende met beide inkomens), boven de inkomensgrens met partner uit de tekst van 2014, € 37.145 (syn-038): normpremie = 5,210% × € 19.253,376 + 9,118% × (€ 40.113 − € 19.253,376) = € 1.003,10 + € 1.901,98 = € 2.905,08 > 2 × € 1.329 → geen aanspraak, wat de Dienst besliste. De verdeling over aanvrager en partner doet er niet toe (Wzt art. 2 lid 2); het hele bedrag staat bij de aanvrager. Of de partner verzekerde was maakt bij dit inkomen niets uit. Met het door het Hof nader vastgestelde inkomensgegeven van de ex-partner (€ 9.860; gezamenlijk € 30.973) geeft de tekst € 586 (2 × € 1.329 − € 1.003,10 − € 1.068,60 = € 586,30) — geen beslissing van de Dienst, dus geen case; staat hier als wat de tekst zegt. Beslist DISCREPANCIES.md #1 niet. Wordt verified zodra een met naam genoemde mens de invoer met de uitspraak vergelijkt (CASES.md; ASKS.md 9).
+
+## zt-2014-syn-036 — PASS — check (synthetic)
+
+Source: Berekend uit de tekst: Wzt art. 1 lid 1 onder f, art. 2 lid 1-3 (BWBR0018451, geldend van 01-01-2014), Awir art. 14 lid 4-5 (geldend van 01-01-2014); de inkomensgrens zonder partner op de laatste euro met recht. Geen publicatie van de Dienst voor 2014 gevonden (leaflet 2014: niet gevonden)
+
+| field | expected | encoding | match |
+|---|---|---|---|
+| tegemoetkoming | 24.00 | 24.00 (exact 24) | yes |
+
+Note: Inkomensgrens 2014 zonder toeslagpartner uit de tekst: normpremie = 2,410% × € 19.253,376 + 9,118% × (€ 28.482 − € 19.253,376) = € 464,01 + € 841,47 = € 1.305,47; € 1.329 − € 1.305,47 = € 23,53 (precies € 23,5277) → € 24 (Awir art. 14 lid 4), net toegekend (lid 5). Zie syn-037 voor de euro erboven. Met een afgerond drempelinkomen (€ 19.253: € 23,50; € 19.254: € 23,57; DISCREPANCIES.md #1) blijft het € 24 en blijft € 28.483 € 23 — 2014 is het eerste jaar in de reeks waarin de afronding van het drempelinkomen geen grens verschuift. De hoogste grens van de reeks 2014–2026 tot nu toe: het afbouwpercentage was 9,118% (2015: 13,400%). Het maximum 2014 zonder partner uit de tekst is € 865 (€ 864,99), het voorschot dat Hof Den Haag in ECLI:NL:GHDHA:2017:1067 noemt (zt-2014-rul-001). Wordt een published case zodra een publicatie van de Dienst voor 2014 de grens noemt.
+
+## zt-2014-syn-037 — PASS — check (synthetic)
+
+Source: Berekend uit de tekst: Wzt art. 1 lid 1 onder f, art. 2 lid 1-3 (BWBR0018451, geldend van 01-01-2014), Awir art. 14 lid 4-5 (geldend van 01-01-2014); de inkomensgrens zonder partner, de eerste euro zonder recht. Geen publicatie van de Dienst voor 2014 gevonden
+
+| field | expected | encoding | match |
+|---|---|---|---|
+| tegemoetkoming | 0.00 | 0.00 (exact 0) | yes |
+
+Note: De euro boven syn-036: € 1.329 − (€ 464,01 + € 841,56) = € 23,44 → € 23 < € 24 → geen aanspraak (Awir art. 14 lid 5). Met een afgerond drempelinkomen (€ 19.253: € 23,41; € 19.254: € 23,48) blijft het € 23: geen verschuiving (DISCREPANCIES.md #1).
+
+## zt-2014-syn-038 — PASS — check (synthetic)
+
+Source: Berekend uit de tekst: Wzt art. 1 lid 1 onder f, art. 2 lid 1-3 (BWBR0018451, geldend van 01-01-2014), Awir art. 14 lid 4-5 (geldend van 01-01-2014); de inkomensgrens met partner op de laatste euro met recht. Geen publicatie van de Dienst voor 2014 gevonden
+
+| field | expected | encoding | match |
+|---|---|---|---|
+| tegemoetkoming | 24.00 | 24.00 (exact 24) | yes |
+
+Note: Inkomensgrens 2014 met toeslagpartner uit de tekst: normpremie = 5,210% × € 19.253,376 + 9,118% × (€ 37.145 − € 19.253,376) = € 1.003,10 + € 1.631,36 = € 2.634,46; 2 × € 1.329 − € 2.634,46 = € 23,54 → € 24, net toegekend. Zie syn-039 voor de euro erboven. Met een afgerond drempelinkomen (€ 19.253: € 23,53; € 19.254: € 23,57) blijft het € 24 en blijft € 37.146 € 23: geen verschuiving (DISCREPANCIES.md #1). Het maximum 2014 met partner uit de tekst is € 1.655 (€ 1.654,90). De nihil-beslissing bij € 40.113 met partner (zt-2014-rul-004) ligt boven deze grens.
+
+## zt-2014-syn-039 — PASS — check (synthetic)
+
+Source: Berekend uit de tekst: Wzt art. 1 lid 1 onder f, art. 2 lid 1-3 (BWBR0018451, geldend van 01-01-2014), Awir art. 14 lid 4-5 (geldend van 01-01-2014); de inkomensgrens met partner, de eerste euro zonder recht. Geen publicatie van de Dienst voor 2014 gevonden
+
+| field | expected | encoding | match |
+|---|---|---|---|
+| tegemoetkoming | 0.00 | 0.00 (exact 0) | yes |
+
+Note: De euro boven syn-038: 2 × € 1.329 − (€ 1.003,10 + € 1.631,45) = € 23,45 → € 23 < € 24 → geen aanspraak (Awir art. 14 lid 5). Met een afgerond drempelinkomen (€ 19.253: € 23,43; € 19.254: € 23,47) blijft het € 23 (DISCREPANCIES.md #1).
 
 ## zt-2015-rul-001 — PASS — check (ruling)
 
@@ -2244,8 +2324,8 @@ Note: Laatste rij van de tabel, op het genoemde inkomen zelf ('en meer' sluit he
 
 ---
 
-Browser encoding (`site/zorgtoeslag-regels.js`, node v22.22.0): 219 cases compared with the Python encoding, 219 identical, 0 different.
+Browser encoding (`site/zorgtoeslag-regels.js`, node v22.22.0): 227 cases compared with the Python encoding, 227 identical, 0 different.
 
 ---
 
-Cases run: 219, passed: 199, failed: 20, skipped: 0. Verified cases: 0. Blocking failures: 0. Browser/Python differences: 0 (blocking: the two encodings must agree).
+Cases run: 227, passed: 207, failed: 20, skipped: 0. Verified cases: 0. Blocking failures: 0. Browser/Python differences: 0 (blocking: the two encodings must agree).

@@ -1,0 +1,18 @@
+id: zt-2014-syn-038
+toeslag: zorgtoeslag
+jaar: 2014
+bron:
+  type: synthetic
+  publicatie: "Berekend uit de tekst: Wzt art. 1 lid 1 onder f, art. 2 lid 1-3 (BWBR0018451, geldend van 01-01-2014), Awir art. 14 lid 4-5 (geldend van 01-01-2014); de inkomensgrens met partner op de laatste euro met recht. Geen publicatie van de Dienst voor 2014 gevonden"
+  url: https://wetten.overheid.nl/BWBR0018451/2014-01-01
+  opgehaald: 2026-10-24
+verified: false
+invoer:
+  partner: true
+  partner_verzekerd: true
+  toetsingsinkomen_aanvrager: "37145"
+  toetsingsinkomen_partner: "0"
+  rendementsgrondslag: null
+verwacht:
+  tegemoetkoming: "24"
+opmerking: "Inkomensgrens 2014 met toeslagpartner uit de tekst: normpremie = 5,210% × € 19.253,376 + 9,118% × (€ 37.145 − € 19.253,376) = € 1.003,10 + € 1.631,36 = € 2.634,46; 2 × € 1.329 − € 2.634,46 = € 23,54 → € 24, net toegekend. Zie syn-039 voor de euro erboven. Met een afgerond drempelinkomen (€ 19.253: € 23,53; € 19.254: € 23,57) blijft het € 24 en blijft € 37.146 € 23: geen verschuiving (DISCREPANCIES.md #1). Het maximum 2014 met partner uit de tekst is € 1.655 (€ 1.654,90). De nihil-beslissing bij € 40.113 met partner (zt-2014-rul-004) ligt boven deze grens."

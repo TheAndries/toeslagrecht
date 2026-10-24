@@ -1,7 +1,154 @@
-/* Gegenereerd door tools/build.py op 2026-10-23 uit law/zorgtoeslag/parameters/*.yaml en law/awir/parameters/*.yaml. Niet bewerken: de yaml-bestanden zijn de bron en dragen bij elk getal zijn artikel. Licentie: CC BY-SA 4.0 (LICENSE-DATA). */
+/* Gegenereerd door tools/build.py op 2026-10-24 uit law/zorgtoeslag/parameters/*.yaml en law/awir/parameters/*.yaml. Niet bewerken: de yaml-bestanden zijn de bron en dragen bij elk getal zijn artikel. Licentie: CC BY-SA 4.0 (LICENSE-DATA). */
 var PARAMETERS = {
- "gegenereerd": "2026-10-23",
+ "gegenereerd": "2026-10-24",
  "zorgtoeslag": {
+  "2014": {
+   "jaar": 2014,
+   "status": "draft",
+   "geraadpleegd": "2026-10-24",
+   "versie": "BWBR0018451, geldend van 01-01-2014 t/m 31-03-2014 (verbatim gelezen 2026-10-24); art. 1–5 gelijk in de versies van 01-04-2014 en 16-07-2014 op art. 4 en art. 5 lid 2 na",
+   "versie_opmerking": "Ontstaansbronnen per 01-01-2014 (wetstechnische informatie): Stcrt. 2013, 35607 (art. 2a lid 1: € 81.360); Stb. 2012, 627 samen met Stb. 2011, 620 (art. 2 lid 3: de percentages 2014). Versie 01-04-2014: Stb. 2013, 578 (inwerkingtreding Stb. 2014, 93), art. 5 lid 2. Versie 16-07-2014: Stb. 2014, 259 art. XV (art. 4, terugwerkend tot 01-01-2014). De tekst van 01-01-2013 verschilt van die van 01-01-2014 alleen in art. 2 lid 3 (2,195% / 4,695% / 8,713%) en art. 2a lid 1 (€ 80 000) — verbatim vergeleken 2026-10-24, art. 1 t/m 5. De tekst van 01-01-2015 verschilt van die van 16-07-2014 alleen in art. 2 lid 3 (2,395% / 5,265% / 13,400%) en art. 2a lid 1 (€ 82 093) — verbatim vergeleken 2026-10-23.",
+   "artikel_vermogenstoets": "Wzt art. 2a lid 1 (tekst 2014)",
+   "artikel_woonlandfactor": "Wzt art. 3 (tekst 2014)",
+   "artikel_maandbepaling": "Wzt art. 2 lid 6 (tekst 2014; sinds 01-01-2021 lid 5)",
+   "artikel_wml_onderdeel": "a",
+   "art4a_lid3_aanwezig": false,
+   "art4a_lid3_opmerking": "Het huidige art. 4a lid 3 (verzekerde aanvrager met een verdragsgerechtigde partner) is ingevoegd per 06-11-2024 (Stb. 2024, 291, art. XIX onder C). In 2014 regelde de tekst (art. 3) dat geval niet; de encoding geeft dan 'undetermined'.",
+   "art2_lid5_oud_aanwezig": true,
+   "art2_lid5_oud": {
+    "artikel": "Wet op de zorgtoeslag art. 2 lid 5 (tekst 2014; vervallen per 01-01-2021)",
+    "bron": "BWBR0018451, geldend van 01-01-2014 t/m 31-03-2014 (verbatim gelezen 2026-10-24; dezelfde tekst in de twee andere versies van 2014 en in 2015 t/m 2020). Vervallen bij Wet verbetering uitvoerbaarheid toeslagen, Stb. 2020, 543, art. III onder 2 (lid 6–8 vernummerd tot 5–7, onder 3)",
+    "url": "https://wetten.overheid.nl/BWBR0018451/2014-01-01",
+    "geldig_van": "2014-01-01",
+    "geldig_tot": "2014-12-31",
+    "tekst": "In afwijking van het eerste lid heeft een verzekerde met een partner die niet heeft voldaan aan de voor hem op grond van artikel 2 van de Zorgverzekeringswet geldende verplichting zich krachtens een zorgverzekering te verzekeren, geen aanspraak op een zorgtoeslag.",
+    "opmerking": "Invoer: partner_verzekeringsplicht_niet_nagekomen (ja/nee/onbekend). Of de partner verzekeringsplichtig was en die plicht niet nakwam (Zvw art. 2) codeert de encoding niet; het is invoer. Niet opgegeven: gerekend alsof nagekomen, met een noot."
+   },
+   "vermogenstoets_basis": "grondslag_sparen_en_beleggen",
+   "maand_afronding_opmerking": "Geen parameter maand_afronding_praktijk: voor 2014 is geen rekenvoorbeeld van de Dienst gelezen (de leaflet Berekening zorgtoeslag 2014 is op 2026-10-24 niet gevonden: tg0821z40fd, z42fd, z43fd en z44fd zijn een 404 en z41fd is de leaflet 2024; SOURCES.md). De encoding gebruikt de standaard 'naar_beneden' (DISCREPANCIES.md #5) en zegt dat in het resultaat; 2022 rondde rekenkundig (#8), dus 2014 is onbekend. Uitkomsten van de Dienst voor 2014 uit de rechtspraak, alle door de encoding gereproduceerd: voorschot € 865 bij een geschat toetsingsinkomen van € 17.333 en definitieve berekening € 814 bij € 19.810, zonder partner (cases/zt-2014-rul-001 en -002, Hof Den Haag ECLI:NL:GHDHA:2017:1067); definitieve berekening € 567 bij € 22.518 zonder partner (zt-2014-rul-003, ECLI:NL:RVS:2017:659); nihil bij een gezamenlijk toetsingsinkomen van € 40.113 met partner (zt-2014-rul-004, Hof Amsterdam ECLI:NL:GHAMS:2019:2243); en zonder inkomen: € 1.379 met partner (ECLI:NL:RVS:2018:2908), € 536 en daarna nihil bij € 31.166 zonder opgave van de huishouding (ECLI:NL:RVS:2018:334), nihil in Zweden met woonlandfactor (ECLI:NL:RVS:2018:3727); SOURCES.md §4.",
+   "standaardpremie": {
+    "waarde": "1329",
+    "artikel": "Wet op de zorgtoeslag art. 4 jo. Regeling vaststelling standaardpremie 2014, art. 1",
+    "bron": "Regeling van de Minister van Volksgezondheid, Welzijn en Sport van 6 december 2013, kenmerk 178078-114442-Z, Stcrt. 2013, 35060 (primaire tekst gelezen 2026-10-24); geconsolideerd BWBR0034337 (geldend van 01-01-2014; gevonden via de wetstechnische informatie van Wzt art. 4). Toelichting: berekende gemiddelde nominale premie 2014 € 1.101 (CPB, op basis van de werkelijke nominale premies 2014 'inclusief collectieve contracten' — 'Het meenemen van de kortingen van de collectieve contracten vormt een beleidswijziging', aangekondigd in de VWS-begroting 2014) plus geraamd gemiddeld bedrag verplicht eigen risico € 228 (alle verzekerden meegenomen 'in verband met de voorgenomen afschaffing van de uitkering ter compensatie van het verplicht eigen risico'). 2013: € 1.478 (Regeling vaststelling standaardpremie 2013, BWBR0032391, geconsolideerde tekst gelezen 2026-10-24; regeling van 4 december 2012). 2015: € 1.408 (Stcrt. 2014, 35190). Het maximum uit de tekst zonder partner, € 865 (€ 1.329 − 2,410% × € 19.253,376 = € 864,99), is het voorschot 2014 dat Hof Den Haag in ECLI:NL:GHDHA:2017:1067 noemt bij een geschat toetsingsinkomen van € 17.333 (cases/zt-2014-rul-001); in ECLI:NL:RVS:2017:659 volgt hetzelfde voorschot uit € 567 vastgesteld plus € 298 teruggevorderd (niet als case opgenomen: het bedrag staat niet zelf in de uitspraak)",
+    "url": "https://zoek.officielebekendmakingen.nl/stcrt-2013-35060.html",
+    "geldig_van": "2014-01-01",
+    "tekst": "De standaardpremie wordt voor het jaar 2014 vastgesteld op € 1329,–."
+   },
+   "wml_maandbedrag_januari": {
+    "waarde": "1485.60",
+    "artikel": "Wet minimumloon en minimumvakantiebijslag art. 8 lid 1 onder a, bedrag per 1 januari 2014 (in 2014 was het maandbedrag onderdeel a; sinds 01-01-2024 onderdeel b)",
+    "bron": "Regeling van de Minister van Sociale Zaken en Werkgelegenheid van 30 oktober 2013, 2013-0000134185, tot aanpassing van het wettelijk minimumloon per 1 januari 2014, Stcrt. 2013, 31007, art. 1 onder a: '€ 1.485,65' — gewijzigd vóór de inwerkingtreding bij Regeling van 13 november 2013, Stcrt. 2013, 32425, art. I: '€ 1.485,65' vervangen door € 1.485,60 (toelichting: bij de vaststelling was 'ten onrechte geen rekening gehouden met het negende lid van artikel 14' WML, afronding op het dichtstbijzijnde veelvoud van € 0,60); beide primaire teksten gelezen 2026-10-24. De geconsolideerde WML-tekst van 01-01-2014 (BWBR0002638, geldend t/m 30-06-2014) draagt het bedrag als redactionele noot bij art. 8 ('per 1 januari 2014: € 1.485,60'); de wetstechnische informatie noemt Stcrt. 2013, 32425 samen met Stcrt. 2013, 31007 als ontstaansbron. Per 1 juli 2013: € 1.477,80 (Stcrt. 2013, 11355); per 1 juli 2014: € 1.495,20 (Stcrt. 2014, 13936, gelezen 2026-10-24) — niet gebruikt, art. 1 onder f neemt januari",
+    "url": "https://zoek.officielebekendmakingen.nl/stcrt-2013-31007.html",
+    "geldig_van": "2014-01-01",
+    "tekst": "a. € 1.485,65;",
+    "tekst_opmerking": "Zoals vastgesteld bij Stcrt. 2013, 31007; bij Stcrt. 2013, 32425 vóór 1 januari 2014 gewijzigd in € 1.485,60, het bedrag dat gold en dat hier is gecodeerd."
+   },
+   "drempelinkomen_factor": {
+    "waarde": "108",
+    "eenheid": "procent",
+    "artikel": "Wet op de zorgtoeslag art. 1 lid 1 onder f",
+    "bron": "BWBR0018451, geldend van 01-01-2014 t/m 31-03-2014 (verbatim)",
+    "url": "https://wetten.overheid.nl/BWBR0018451/2014-01-01",
+    "tekst": "drempelinkomen: 108% van het twaalfvoud van het voor de maand januari van het berekeningsjaar geldende in artikel 8, eerste lid, onderdeel a, van de Wet minimumloon en minimumvakantiebijslag bedoelde bedrag per maand",
+    "opmerking": "108% × 12 × € 1.485,60 = € 19.253,376. Hoe de Dienst Toeslagen dit in 2014 'vastgesteld' heeft is niet gelezen (leaflet 2014 niet gevonden). De inkomensgrenzen uit de tekst staan in de cases zt-2014-syn-036..039 (laatste euro met recht, Awir art. 14 lid 4-5); een afgerond drempelinkomen (€ 19.253 of € 19.254, DISCREPANCIES.md #1) verschuift ze in 2014 niet."
+   },
+   "normpremie_percentage_drempel_zonder_partner": {
+    "waarde": "2.410",
+    "eenheid": "procent",
+    "artikel": "Wet op de zorgtoeslag art. 2 lid 3 (tekst 2014: 'voor een verzekerde zonder partner op 2,410% van het drempelinkomen')",
+    "bron": "BWBR0018451, geldend van 01-01-2014 t/m 31-03-2014 (verbatim; gelijk in de versies van 01-04-2014 en 16-07-2014). Vastgesteld bij Stb. 2012, 627 (besluit van 30 november 2012 tot wijziging van het Besluit percentages drempel- en toetsingsinkomen zorgtoeslag in verband met gewijzigde percentages met ingang van het berekeningsjaar 2013), art. I, rij 2014; nota van toelichting tabel 1 (rij 2014): oorspronkelijk 2,70%, na maatregel 2010 2,76%, na maatregel 2011 3,36%, Wul +0,25, compensatie verhoging verplicht eigen risico −0,60, koopkrachtreparatiepakket −0,60, 'na huidige maatregel' 2,41%; de rij 2015 van dit besluit (2,625%) is vóór haar ingang vervangen door Stb. 2014, 488 (2,395%); primaire tekst gelezen 2026-10-24. De tekst van 01-01-2013 (gelezen 2026-10-24): 2,195%",
+    "url": "https://wetten.overheid.nl/BWBR0018451/2014-01-01"
+   },
+   "normpremie_percentage_drempel_met_partner": {
+    "waarde": "5.210",
+    "eenheid": "procent",
+    "artikel": "Wet op de zorgtoeslag art. 2 lid 3 (tekst 2014: 'voor verzekerden met een partner vastgesteld op 5,210% van het drempelinkomen')",
+    "bron": "BWBR0018451, geldend van 01-01-2014 t/m 31-03-2014 (verbatim). Stb. 2012, 627, art. I, rij 2014; tabel 1 (rij 2014): oorspronkelijk 5,00%, na maatregel 2010 5,06%, na maatregel 2011 6,56%, Wul +0,25, compensatie eigen risico −1,20, koopkrachtreparatiepakket −0,40, 'na huidige maatregel' 5,21%; de rij 2015 (5,725%) vervangen door Stb. 2014, 488 (5,265%). De tekst van 01-01-2013 (gelezen 2026-10-24): 4,695%",
+    "url": "https://wetten.overheid.nl/BWBR0018451/2014-01-01"
+   },
+   "normpremie_percentage_boven_drempel": {
+    "waarde": "9.118",
+    "eenheid": "procent",
+    "artikel": "Wet op de zorgtoeslag art. 2 lid 3 (tekst 2014: 'vermeerderd met 9,118% van het toetsingsinkomen voor zover dat boven het drempelinkomen uitgaat', gelijk met en zonder partner)",
+    "bron": "BWBR0018451, geldend van 01-01-2014 t/m 31-03-2014 (verbatim); Stb. 2012, 627, art. I, rij 2014 (tabel 1, rij 2014: oorspronkelijk 5,00%, na maatregel 2010 5,12%, na maatregel 2011 6,245%, Wul +0,25, compensatie eigen risico +0,923, koopkrachtreparatiepakket +1,70, 'na huidige maatregel' 9,118%; toelichting: de Wul-opslag voorkomt dat het lagere toetsingsinkomen zonder werkgeversvergoeding IAB tot hogere zorgtoeslag leidt, de +0,923 voorkomt 'een forse toename van het aantal zorgtoeslaggerechtigden' door de € 115 hogere maximumzorgtoeslag, de +1,70 houdt het budgettaire beslag van het koopkrachtreparatiepakket gelijk; 'een daling in 2013 van het aantal huishoudens met een zorgtoeslag met 300.000'). De rij 2015 van dit besluit (9,523%) is vóór haar ingang vervangen door Stb. 2014, 488 (13,400%). De tekst van 01-01-2013 (gelezen 2026-10-24): 8,713%",
+    "url": "https://wetten.overheid.nl/BWBR0018451/2014-01-01"
+   },
+   "aandeel_partner_niet_verzekerd": {
+    "waarde": "50",
+    "eenheid": "procent",
+    "artikel": "Wet op de zorgtoeslag art. 2 lid 4",
+    "bron": "BWBR0018451, geldend van 01-01-2014 t/m 31-03-2014 (verbatim, zelfde tekst als 2015–2026). Gevolgd door lid 5 (oud), zie art2_lid5_oud",
+    "url": "https://wetten.overheid.nl/BWBR0018451/2014-01-01"
+   },
+   "heffingvrij_vermogen": {
+    "waarde": "21139",
+    "artikel": "Wet inkomstenbelasting 2001 art. 5.5 (tekst 2014); art. 5.2 lid 1 (grondslag sparen en beleggen = rendementsgrondslag op de peildatum voor zover boven het heffingvrije vermogen) en lid 2 (partners het gehele jaar: de gezamenlijke rendementsgrondslag voor zover boven het heffingvrije vermogen van de belastingplichtige en zijn partner)",
+    "bron": "BWBR0011353, geldend van 01-01-2014 t/m 05-01-2014, van 06-01-2014 t/m 18-07-2014 en van 19-07-2014 t/m 31-12-2014 (alle drie verbatim gelezen 2026-10-24: 'Het heffingvrije vermogen bedraagt € 21 139.'; art. 5.5 is het hele jaar gelijk). Gelijk aan 2013 (tekst van 01-01-2013 gelezen 2026-10-24: € 21 139): de Bijstellingsregeling directe belastingen 2014 (Stcrt. 2013, 35144) past art. 5.5 niet aan en zegt in haar toelichting dat op grond van artikel XXXIV van het Belastingplan 2014 'voor het jaar 2014 de artikelen 10.1 en 10.3, tweede lid, van de Wet IB 2001 geen toepassing' vinden, zodat de te indexeren bedragen 'voor het jaar 2014 niet geïndexeerd' zijn (het Belastingplan 2014, Stb., zelf niet gelezen). Nodig omdat Wzt art. 2a lid 1 (tekst 2014) op de grondslag sparen en beleggen rust; de encoding vraagt de rendementsgrondslag en trekt het heffingvrije vermogen af (éénmaal zonder partner, tweemaal met het hele jaar dezelfde partner). Effectieve grenzen 2014 op de rendementsgrondslag: € 102.499 / € 123.638. 2015: € 21.330 (Stcrt. 2014, 36639 art. I: 'In artikel 5.5 wordt € 21.139 vervangen door: € 21.330')",
+    "url": "https://wetten.overheid.nl/BWBR0011353/2014-01-01",
+    "tekst": "Het heffingvrije vermogen bedraagt € 21 139."
+   },
+   "vermogensgrens_zonder_partner": {
+    "waarde": "81360",
+    "artikel": "Wet op de zorgtoeslag art. 2a lid 1 (tekst 2014) (grondslag sparen en beleggen, art. 5.2 lid 1 Wet IB 2001, in het berekeningsjaar; vrijstelling art. 5.13 Wet IB 2001 telt niet)",
+    "bron": "BWBR0018451, geldend van 01-01-2014 t/m 31-03-2014 (verbatim). Regeling van de Minister van Volksgezondheid, Welzijn en Sport van 10 december 2013, kenmerk 178414-114506-Z, houdende wijziging van het bedrag vermogenstoets zorgtoeslag voor het berekeningsjaar 2014, Stcrt. 2013, 35607, art. I: '€ 80.000' telkens vervangen door '€ 81.360' (tabelcorrectiefactor 1,7%, Wzt art. 2a lid 2, 'een indexatie van € 1.360'; toelichting: 'Verzekerden met een vermogen boven het heffingvrije vermogen plus € 81.360 hebben geen recht op de zorgtoeslag'; primaire tekst gelezen 2026-10-24). De tekst van 01-01-2013 (gelezen 2026-10-24): € 80 000. 2015: € 82.093 (Stcrt. 2014, 32936)",
+    "url": "https://zoek.officielebekendmakingen.nl/stcrt-2013-35607.html",
+    "tekst": "In afwijking van artikel 7, derde lid, van de Algemene wet inkomensafhankelijke regelingen bestaat geen aanspraak op een zorgtoeslag indien de grondslag sparen en beleggen, bedoeld in artikel 5.2, eerste lid, van de Wet inkomstenbelasting 2001, van de belanghebbende in het berekeningsjaar meer bedraagt dan € 81.360, dan wel, ingeval de belanghebbende het gehele berekeningsjaar dezelfde partner heeft, de gezamenlijke grondslag sparen en beleggen, bedoeld in artikel 5.2, tweede lid, van de Wet inkomstenbelasting 2001, van de belanghebbende en zijn partner in het berekeningsjaar meer bedraagt dan € 81.360. Bij de bepaling van de grondslag, bedoeld in de vorige volzin, wordt geen rekening gehouden met de vrijstelling, bedoeld in artikel 5.13 van de Wet inkomstenbelasting 2001."
+   },
+   "vermogensgrens_met_partner": {
+    "waarde": "81360",
+    "artikel": "Wet op de zorgtoeslag art. 2a lid 1 (tekst 2014) (gezamenlijke grondslag sparen en beleggen, art. 5.2 lid 2 Wet IB 2001; alleen bij het gehele berekeningsjaar dezelfde partner; hetzelfde bedrag als zonder partner — het verschil zit in het tweemaal heffingvrije vermogen van de grondslag)",
+    "bron": "BWBR0018451, geldend van 01-01-2014 t/m 31-03-2014 (verbatim); Stcrt. 2013, 35607, art. I ('telkens')",
+    "url": "https://zoek.officielebekendmakingen.nl/stcrt-2013-35607.html"
+   },
+   "woonlandfactoren": {
+    "artikel": "Wet op de zorgtoeslag art. 3 lid 1-2 (tekst 2014) jo. Regeling zorgverzekering art. 6.3.1 en bijlage 4 (woonlandfactoren 2014)",
+    "bron": "Regeling van de Minister van Volksgezondheid, Welzijn en Sport van 26 november 2013, kenmerk 169401-113162-Z, houdende wijziging van de Regeling zorgverzekering in verband met het vaststellen van de woonlandfactoren voor het jaar 2014 ten behoeve van de gedifferentieerde berekening van de bijdrage voor verdragsgerechtigden, Stcrt. 2013, 33704, art. I (primaire tekst gelezen 2026-10-24; in werking 01-01-2014, art. II; toelichting: berekend door het College voor zorgverzekeringen, advies van 29 oktober 2013; de factoren 'gelden voor de bijdrage die verdragsgerechtigden in het jaar 2014 verschuldigd zijn en voor de berekening van de zorgtoeslag'); gelijk aan de geconsolideerde bijlage 4 van BWBR0018715, geldend van 01-01-2014 t/m 05-01-2014 én van 01-12-2014 t/m 08-12-2014 (beide verbatim gelezen 2026-10-24, 39 landen, alle 39 regels gelijk aan de Staatscourant-tabel en aan elkaar: de bijlage veranderde niet in de loop van 2014). Geen artikel II met een correctie met terugwerkende kracht in deze regeling; geen correctie van een factor voor 2014 gevonden in de regelingen voor 2015 t/m 2020 (Stcrt. 2014, 34233 corrigeerde Frankrijk 2012; Stcrt. 2017, 66088 Zweden 2017; Stcrt. 2019, 58198 Duitsland 2017–2019)",
+    "url": "https://zoek.officielebekendmakingen.nl/stcrt-2013-33704.html",
+    "geldig_van": "2014-01-01",
+    "opmerking": "Landcodes ISO 3166-1 alpha-2, toegevoegd door het project; de regeling noemt alleen de landnaam (Macedonië). Oude methode (verhouding van gemiddelde zorgkosten in één berekeningsjaar per land): één factor boven 1 (Noorwegen 1,3909; in 2013 ook Ierland 1,0176). De kolommen berekeningsjaar en zorgkosten uit de bijlage staan per land in het commentaar. België, Cyprus, Frankrijk, Griekenland, Luxemburg, Montenegro en Polen (berekeningsjaar 2011) en Marokko en Tunesië dragen in 2015 dezelfde factor (Stcrt. 2014, 34233).",
+    "landen": {
+     "BE": "0.6715",
+     "BA": "0.0611",
+     "BG": "0.0528",
+     "CY": "0.1669",
+     "DK": "0.9026",
+     "DE": "0.7078",
+     "EE": "0.1503",
+     "FI": "0.6071",
+     "FR": "0.7198",
+     "GR": "0.3590",
+     "HU": "0.1223",
+     "IE": "0.9268",
+     "IS": "0.6970",
+     "IT": "0.5298",
+     "CV": "0.0268",
+     "HR": "0.1789",
+     "LV": "0.0806",
+     "LI": "0.7914",
+     "LT": "0.1087",
+     "LU": "0.7408",
+     "MK": "0.0445",
+     "MT": "0.2793",
+     "MA": "0.0125",
+     "ME": "0.0757",
+     "NO": "1.3909",
+     "AT": "0.6055",
+     "PL": "0.1116",
+     "PT": "0.3415",
+     "RO": "0.0578",
+     "RS": "0.0746",
+     "SI": "0.2886",
+     "SK": "0.1842",
+     "ES": "0.4059",
+     "CZ": "0.2435",
+     "TN": "0.0216",
+     "TR": "0.0852",
+     "GB": "0.6305",
+     "SE": "0.7354",
+     "CH": "0.6265"
+    }
+   }
+  },
   "2015": {
    "jaar": 2015,
    "status": "draft",
@@ -1619,6 +1766,39 @@ var PARAMETERS = {
   }
  },
  "awir": {
+  "2014": {
+   "jaar": 2014,
+   "status": "draft",
+   "geraadpleegd": "2026-10-24",
+   "vermogenstoets_algemeen": {
+    "artikel": "Awir art. 7 lid 3 (tekst 2014): geen bedrag; de toets is of over het berekeningsjaar voordeel uit sparen en beleggen in aanmerking wordt genomen (grondslag sparen en beleggen > 0, dus rendementsgrondslag boven het heffingvrije vermogen), de vrijstelling van art. 5.13 Wet IB 2001 weggedacht",
+    "bron": "BWBR0018472, geldend van 01-01-2014 t/m 05-01-2014 (verbatim gelezen 2026-10-24; dezelfde tekst in de versie van 06-01-2014 en in 2015 t/m 2020); lid 5 (tekst 2014): niet in Nederland belastbaar voordeel uit sparen en beleggen telt mee. Vervangen per 01-01-2021 door de rendementsgrondslag-toets met bedragen (Stb. 2020, 546, art. III)",
+    "url": "https://wetten.overheid.nl/BWBR0018472/2014-01-01",
+    "tekst": "Indien in een inkomensafhankelijke regeling de aanspraak op een tegemoetkoming mede afhankelijk is gesteld van het vermogen, bestaat geen aanspraak op een tegemoetkoming, indien bij de belanghebbende of, indien de belanghebbende het gehele berekeningsjaar dezelfde partner heeft, zijn partner over het berekeningsjaar voordeel uit sparen en beleggen als bedoeld in artikel 5.2 van de Wet inkomstenbelasting 2001 in aanmerking wordt genomen, dan wel in aanmerking zou worden genomen indien geen rekening wordt gehouden met de vrijstelling, bedoeld in artikel 5.13 van die wet.",
+    "opmerking": "Geldt alleen voor regelingen zonder eigen grens; niet voor de zorgtoeslag (Wzt art. 2a). Geen waarde: de encoding gebruikt dit niet."
+   },
+   "medebewoner_vrijstelling_onder_23": {
+    "waarde": "4706",
+    "artikel": "Awir art. 7 lid 6",
+    "bron": "BWBR0018472, geldend van 01-01-2014 t/m 05-01-2014 (verbatim gelezen 2026-10-24: '€ 4.706'); Bijstellingsregeling directe belastingen 2014, Stcrt. 2013, 35144 (regeling van de Staatssecretaris van Financiën van 30 december 2013, nr. DB2013/569M), art. VI: 'In de Algemene wet inkomensafhankelijke regelingen wordt in artikel 7, zesde lid, ‘€ 4.627’ vervangen door: € 4.706.' (tabelcorrectiefactor 1,7; primaire tekst gelezen 2026-10-24); vervangen per 01-01-2015 door € 4.749 (Stcrt. 2014, 36639 art. VI onderdeel A)",
+    "url": "https://wetten.overheid.nl/BWBR0018472/2014-01-01"
+   },
+   "afronding_tegemoetkoming": {
+    "waarde": "1",
+    "eenheid": "euro",
+    "artikel": "Awir art. 14 lid 4",
+    "bron": "BWBR0018472, geldend van 01-01-2014 t/m 05-01-2014 (verbatim gelezen 2026-10-24); dezelfde tekst in de versie van 06-01-2014 en in 2015 t/m 2026",
+    "url": "https://wetten.overheid.nl/BWBR0018472/2014-01-01",
+    "tekst": "Het bedrag van de tegemoetkoming wordt rekenkundig afgerond op hele euro’s."
+   },
+   "minimum_tegemoetkoming": {
+    "waarde": "24",
+    "artikel": "Awir art. 14 lid 5",
+    "bron": "BWBR0018472, geldend van 01-01-2014 t/m 05-01-2014 (verbatim gelezen 2026-10-24)",
+    "url": "https://wetten.overheid.nl/BWBR0018472/2014-01-01",
+    "tekst": "Een tegemoetkoming wordt niet toegekend indien deze minder dan € 24 zou bedragen."
+   }
+  },
   "2015": {
    "jaar": 2015,
    "status": "draft",
