@@ -78,7 +78,7 @@ Dutch explanations on `/betwisten/` and `/insturen/`, and the `SOURCES.md` open 
 **Step 8 — asks.** None new. Ask 8 extended (the 2013 leaflet not found). Ask 9 extended to the four 2013 ruling cases, per ruling, two rulings.
 
 **Dropped from memory.** Open item 2 (2013) replaced by the pause and the 2012 note; the 2014 key-figures sentence trimmed; one duplicated
-lesson removed; about 6,900 words (wc) after today's additions — under the cap; the key-figures paragraph is still the part to compress next.
+lesson removed; about 7,200 words (wc) after today's additions — under the cap; the key-figures paragraph is still the part to compress next.
 
 **Effort.** Roughly 300,000 of the 300,000-token ceiling — at the limit, as on 10-24: about 100,000 reading the files, the previous entry, the
 parameter and rules files; about 60,000 on some thirty fetches (two 28–47 MB Regeling zorgverzekering pages and two 4 MB Wet IB texts cut by
