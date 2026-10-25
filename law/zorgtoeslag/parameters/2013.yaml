@@ -1,0 +1,168 @@
+# Zorgtoeslag — parameters berekeningsjaar 2013. Elk getal met zijn bron (CHARTER.md P1).
+# Bedragen in euro als string, zodat de code met Decimal rekent. Percentages als string, in procenten.
+# Artikelnummering van 2013 (gelijk aan 2014 t/m 05-11-2024): de vermogenstoets stond in art. 2a en de woonlandfactor in
+# art. 3; het huidige art. 4a lid 3 bestond nog niet (ingevoegd per 06-11-2024).
+# Structuur als 2014 t/m 2020: (1) art. 2 had acht leden; lid 5 (oud) ontzegde de zorgtoeslag aan een verzekerde met een partner
+# die zijn verzekeringsplicht (Zvw art. 2) niet nakwam; de maandbepaling stond in lid 6 (lid 5 vervallen en lid 6–8 vernummerd
+# per 01-01-2021, Stb. 2020, 543, art. III); (2) de vermogenstoets van art. 2a rustte op de *grondslag sparen en beleggen*
+# (Wet IB 2001 art. 5.2) met één bedrag, € 80.000; (3) art. 1 lid 1 onder f verwijst naar WML art. 8 lid 1 onderdeel *a*.
+# Eigen aan 2013 — het eerste jaar van drie dingen die de encoding draagt (wetstechnische informatie en de teksten van 01-01-2012
+# en 01-01-2013, art. 1 t/m 5 verbatim vergeleken 2026-10-25):
+# (a) de vermogenstoets: art. 2a is 'Nieuw' per 01-01-2013 (Wet van 5 april 2012 tot wijziging van de Wet op de zorgtoeslag, in
+#     verband met de introductie van een vermogenstoets, Stb. 2012, 204, kamerstukken 33024; in werking per Stb. 2012, 383, KB van
+#     11 augustus 2012), met € 80 000 in de wettekst zelf; dezelfde wet voegde aan art. 1 lid 2 toe 'op basis van het inkomen en het
+#     vermogen' (2012: 'De hoogte van de zorgtoeslag is afhankelijk van de draagkracht.'); Stb. 2012, 669 (Overige fiscale maatregelen
+#     2013, wet van 20 december 2012) art. XXIX voegde vóór de ingang de volzin over de vrijstelling van art. 5.13 Wet IB toe;
+# (b) het drempelinkomen als 108% × 12 × het WML-maandbedrag: de Wet uniformering loonbegrip (Stb. 2011, 288, in werking per
+#     Stb. 2012, 45) liet per 01-01-2013 uit art. 1 lid 1 onder f vervallen ', verminderd met het werknemersaandeel in de premie
+#     ingevolge artikel 25, tweede lid, van de Wet financiering sociale verzekeringen en vermeerderd met de vergoeding ingevolge
+#     artikel 46, eerste lid, van de Zorgverzekeringswet over dat loon' — in 2012 en eerder was het drempelinkomen dus géén vast
+#     percentage van het WML alleen; de encoding rekent 2012 niet;
+# (c) de percentages uit Stb. 2012, 627 (besluit van 30 november 2012), waarvan 2013 de eerste rij is: de Wul (+0,25 punt op alle
+#     drie), de compensatie van de verhoging van het verplicht eigen risico (−0,60 / −1,20 norm, +0,923 afbouw) en het
+#     koopkrachtreparatiepakket van het Begrotingsakkoord 2013 (−0,60 / −0,40 norm, +1,70 afbouw); 2012 was 2,930% / 5,530% / 5,435%.
+# Het heffingvrije vermogen van Wet IB art. 5.5 bleef in 2013 € 21.139 (gelijk aan 2012): art. XVIII van de Wet uitwerking fiscale
+# maatregelen Begrotingsakkoord 2013 (Stb. 2012, 321) liet art. 10.1 Wet IB voor 2013 buiten toepassing (toelichting Bijstellingsregeling
+# directe belastingen 2013, Stcrt. 2012, 26314). Eén tekstversie van de Wzt in 2013 (01-01 t/m 31-12-2013).
+jaar: 2013
+status: draft
+geraadpleegd: 2026-10-25
+versie: "BWBR0018451, geldend van 01-01-2013 t/m 31-12-2013 (verbatim gelezen 2026-10-24 en 2026-10-25); de enige tekstversie van 2013"
+versie_opmerking: "Ontstaansbronnen per 01-01-2013 (wetstechnische informatie, gelezen 2026-10-25): Stb. 2012, 204 (art. 1 lid 2 en art. 2a, inwerkingtreding Stb. 2012, 383); Stb. 2012, 669 (art. 2a lid 1, slotvolzin); Stb. 2012, 627 samen met Stb. 2011, 620 (art. 2 lid 3: de percentages 2013); Stb. 2011, 288 (art. 1 lid 1 onder f, inwerkingtreding Stb. 2012, 45). De tekst van 01-01-2012 verschilt van die van 01-01-2013 in art. 1 lid 1 onder f (de zinsnede over het werknemersaandeel Wfsv en de vergoeding Zvw art. 46), art. 1 lid 2, art. 2 lid 3 (2,930% / 5,530% / 5,435%) en het ontbreken van art. 2a — verbatim vergeleken 2026-10-25, art. 1 t/m 5. De tekst van 01-01-2014 verschilt van die van 2013 alleen in art. 2 lid 3 (2,410% / 5,210% / 9,118%) en art. 2a lid 1 (€ 81.360) — verbatim vergeleken 2026-10-24."
+artikel_vermogenstoets: "Wzt art. 2a lid 1 (tekst 2013)"
+artikel_woonlandfactor: "Wzt art. 3 (tekst 2013)"
+artikel_maandbepaling: "Wzt art. 2 lid 6 (tekst 2013; sinds 01-01-2021 lid 5)"
+artikel_wml_onderdeel: "a"
+art4a_lid3_aanwezig: false
+art4a_lid3_opmerking: "Het huidige art. 4a lid 3 (verzekerde aanvrager met een verdragsgerechtigde partner) is ingevoegd per 06-11-2024 (Stb. 2024, 291, art. XIX onder C). In 2013 regelde de tekst (art. 3) dat geval niet; de encoding geeft dan 'undetermined'."
+art2_lid5_oud_aanwezig: true
+art2_lid5_oud:
+  artikel: "Wet op de zorgtoeslag art. 2 lid 5 (tekst 2013; vervallen per 01-01-2021)"
+  bron: "BWBR0018451, geldend van 01-01-2013 t/m 31-12-2013 (verbatim gelezen 2026-10-25; dezelfde tekst in 2012 en in 2014 t/m 2020). Vervallen bij Wet verbetering uitvoerbaarheid toeslagen, Stb. 2020, 543, art. III onder 2 (lid 6–8 vernummerd tot 5–7, onder 3)"
+  url: https://wetten.overheid.nl/BWBR0018451/2013-01-01
+  geldig_van: 2013-01-01
+  geldig_tot: 2013-12-31
+  tekst: "In afwijking van het eerste lid heeft een verzekerde met een partner die niet heeft voldaan aan de voor hem op grond van artikel 2 van de Zorgverzekeringswet geldende verplichting zich krachtens een zorgverzekering te verzekeren, geen aanspraak op een zorgtoeslag."
+  opmerking: "Invoer: partner_verzekeringsplicht_niet_nagekomen (ja/nee/onbekend). Of de partner verzekeringsplichtig was en die plicht niet nakwam (Zvw art. 2) codeert de encoding niet; het is invoer. Niet opgegeven: gerekend alsof nagekomen, met een noot."
+vermogenstoets_basis: grondslag_sparen_en_beleggen
+maand_afronding_opmerking: "Geen parameter maand_afronding_praktijk: voor 2013 is geen rekenvoorbeeld van de Dienst gelezen (de leaflet Berekening zorgtoeslag 2013 is niet gevonden: tg0821z30fd, z33fd en z34fd zijn op 2026-10-25 een 404, z31fd was dat op 2026-10-11 en z32fd is de leaflet 2023; SOURCES.md). De encoding gebruikt de standaard 'naar_beneden' (DISCREPANCIES.md #5) en zegt dat in het resultaat; 2022 rondde rekenkundig (#8), dus 2013 is onbekend. Uitkomsten van de Dienst voor 2013 uit de rechtspraak: SOURCES.md §4 en de cases zt-2013-rul-*, voor zover gelezen."
+
+standaardpremie:
+  waarde: "1478"
+  artikel: "Wet op de zorgtoeslag art. 4 jo. Regeling vaststelling standaardpremie 2013, art. 1"
+  bron: "Regeling van de Minister van Volksgezondheid, Welzijn en Sport van 4 december 2012, kenmerk Z-3141539, houdende vaststelling van de standaardpremie 2013, Stcrt. 2012, 25514 (primaire tekst gelezen 2026-10-25; het Stcrt.-nummer uit de wetstechnische informatie van BWBR0032391); geconsolideerd BWBR0032391 (geldend van 01-01-2013; gevonden via de wetstechnische informatie van Wzt art. 4). Toelichting: berekende gemiddelde nominale premie 2013 € 1.281 (CPB, op basis van de werkelijke nominale premies 2013) plus het gemiddeld verplicht eigen risico € 197 van 'een verzekerde die geen recht heeft op compensatie van het verplicht eigen risico, dus een niet chronisch zieke' (de tekst van art. 4 van 2013 zonderde die verzekerden uit); 'Bij de vaststelling van de standaardpremie worden de kortingen op collectiviteitscontracten niet meegenomen' — in 2014 wél, als uitdrukkelijke beleidswijziging (Stcrt. 2013, 35060). 2012: niet gelezen (Regeling vaststelling standaardpremie 2012, BWBR0030719, genoemd op de informatiepagina van art. 4). 2014: € 1.329 (Stcrt. 2013, 35060). Maxima uit de tekst 2013: zonder partner € 1.060 (€ 1.478 − 2,195% × € 19.043,424 = € 1.059,997), met partner € 2.062 (€ 2.956 − 4,695% × € 19.043,424 = € 2.061,91)"
+  url: https://zoek.officielebekendmakingen.nl/stcrt-2012-25514.html
+  geldig_van: 2013-01-01
+  tekst: "De standaardpremie wordt voor het jaar 2013 vastgesteld op € 1478,–."
+
+wml_maandbedrag_januari:
+  waarde: "1469.40"
+  artikel: "Wet minimumloon en minimumvakantiebijslag art. 8 lid 1 onder a, bedrag per 1 januari 2013 (in 2013 was het maandbedrag onderdeel a; sinds 01-01-2024 onderdeel b)"
+  bron: "Regeling van de Staatssecretaris van Sociale Zaken en Werkgelegenheid van 12 oktober 2012, ASEA/SAS/2012/14610, tot aanpassing van het wettelijk minimumloon per 1 januari 2013, Stcrt. 2012, 21293, art. 1 onder a (primaire tekst gelezen 2026-10-25; toelichting: aanpassingspercentage na afronding 0,91%, 'Na wettelijke afronding bedraagt het wettelijk minimumloon per 1 januari 2013 € 1469,40 per maand'). De geconsolideerde WML-tekst van 01-01-2013 (BWBR0002638, geldend t/m 30-06-2013) drukt in art. 8 nog '€ 1264,80' af met het geldende bedrag als redactionele noot ('per 1 januari 2013: € 1469,40'); de wetstechnische informatie noemt Stcrt. 2012, 21293 als ontstaansbron per 01-01-2013. Het bedrag per 1 juli 2012 is niet gelezen. Per 1 juli 2013: € 1.477,80 (Stcrt. 2013, 11355, gelezen 2026-10-24) — niet gebruikt, art. 1 onder f neemt januari"
+  url: https://zoek.officielebekendmakingen.nl/stcrt-2012-21293.html
+  geldig_van: 2013-01-01
+  tekst: "a. € 1469,40;"
+
+drempelinkomen_factor:
+  waarde: "108"
+  eenheid: procent
+  artikel: "Wet op de zorgtoeslag art. 1 lid 1 onder f (tekst 2013, de eerste met deze definitie: Wet uniformering loonbegrip, Stb. 2011, 288, art. XXIV onder A)"
+  bron: "BWBR0018451, geldend van 01-01-2013 t/m 31-12-2013 (verbatim). Tot en met 2012 luidde onderdeel f '... bedoelde bedrag per maand, verminderd met het werknemersaandeel in de premie, bedoeld in artikel 25, tweede lid, van de Wet financiering sociale verzekeringen en vermeerderd met de vergoeding ingevolge artikel 46, eerste lid, van de Zorgverzekeringswet over dat loon' (tekst van 01-01-2012, gelezen 2026-10-25); de Wul liet die zinsnede vervallen (Stb. 2011, 288, gelezen 2026-10-25) en Stb. 2012, 627 compenseerde dat met +0,25 punt op de drie percentages"
+  url: https://wetten.overheid.nl/BWBR0018451/2013-01-01
+  tekst: "drempelinkomen: 108% van het twaalfvoud van het voor de maand januari van het berekeningsjaar geldende in artikel 8, eerste lid, onderdeel a, van de Wet minimumloon en minimumvakantiebijslag bedoelde bedrag per maand"
+  opmerking: "108% × 12 × € 1.469,40 = € 19.043,424. Hoe de Dienst Toeslagen dit in 2013 'vastgesteld' heeft is niet gelezen (leaflet 2013 niet gevonden). De inkomensgrenzen uit de tekst staan in de cases zt-2013-syn-040..043 (laatste euro met recht, Awir art. 14 lid 4-5): € 30.939 zonder en € 42.438 met partner; een afgerond drempelinkomen (€ 19.043 of € 19.044, DISCREPANCIES.md #1) verschuift ze in 2013 niet, net als in 2014."
+
+normpremie_percentage_drempel_zonder_partner:
+  waarde: "2.195"
+  eenheid: procent
+  artikel: "Wet op de zorgtoeslag art. 2 lid 3 (tekst 2013: 'voor een verzekerde zonder partner op 2,195% van het drempelinkomen')"
+  bron: "BWBR0018451, geldend van 01-01-2013 t/m 31-12-2013 (verbatim). Vastgesteld bij Stb. 2012, 627 (besluit van 30 november 2012 tot wijziging van het Besluit percentages drempel- en toetsingsinkomen zorgtoeslag in verband met gewijzigde percentages met ingang van het berekeningsjaar 2013), art. I, rij 2013 — de eerste rij van dat besluit; nota van toelichting tabel 1 (rij 2013): oorspronkelijk 2,70%, na maatregel 2010 2,745%, na maatregel 2011 3,145%, Wul +0,25, compensatie verhoging verplicht eigen risico −0,60, koopkrachtreparatiepakket −0,60, 'na huidige maatregel' 2,195%; primaire tekst gelezen 2026-10-24 en 2026-10-25. De tekst van 01-01-2012 (gelezen 2026-10-25): 2,930%"
+  url: https://wetten.overheid.nl/BWBR0018451/2013-01-01
+
+normpremie_percentage_drempel_met_partner:
+  waarde: "4.695"
+  eenheid: procent
+  artikel: "Wet op de zorgtoeslag art. 2 lid 3 (tekst 2013: 'voor verzekerden met een partner vastgesteld op 4,695% van het drempelinkomen')"
+  bron: "BWBR0018451, geldend van 01-01-2013 t/m 31-12-2013 (verbatim). Stb. 2012, 627, art. I, rij 2013; tabel 1 (rij 2013): oorspronkelijk 5,00%, na maatregel 2010 5,045%, na maatregel 2011 6,045%, Wul +0,25, compensatie eigen risico −1,20, koopkrachtreparatiepakket −0,40, 'na huidige maatregel' 4,695%. De tekst van 01-01-2012 (gelezen 2026-10-25): 5,530%"
+  url: https://wetten.overheid.nl/BWBR0018451/2013-01-01
+
+normpremie_percentage_boven_drempel:
+  waarde: "8.713"
+  eenheid: procent
+  artikel: "Wet op de zorgtoeslag art. 2 lid 3 (tekst 2013: 'vermeerderd met 8,713% van het toetsingsinkomen voor zover dat boven het drempelinkomen uitgaat', gelijk met en zonder partner)"
+  bron: "BWBR0018451, geldend van 01-01-2013 t/m 31-12-2013 (verbatim); Stb. 2012, 627, art. I, rij 2013 (toelichting: Wul +0,25, compensatie eigen risico +0,923, koopkrachtreparatiepakket +1,70 — samen +2,873 punt op het afbouwpercentage; de tussenrij 'na maatregel 2011' voor 2013 is uit de tabel niet leesbaar overgenomen en staat hier niet; 'een daling in 2013 van het aantal huishoudens met een zorgtoeslag met 300.000'). De tekst van 01-01-2012 (gelezen 2026-10-25): 5,435% — de sprong van 2013 (+3,278 punt) is naast die van 2015 (+4,282 punt, Stb. 2014, 488) de grootste van de reeks"
+  url: https://wetten.overheid.nl/BWBR0018451/2013-01-01
+
+aandeel_partner_niet_verzekerd:
+  waarde: "50"
+  eenheid: procent
+  artikel: "Wet op de zorgtoeslag art. 2 lid 4"
+  bron: "BWBR0018451, geldend van 01-01-2013 t/m 31-12-2013 (verbatim, zelfde tekst als 2012 en 2014–2026). Gevolgd door lid 5 (oud), zie art2_lid5_oud"
+  url: https://wetten.overheid.nl/BWBR0018451/2013-01-01
+
+heffingvrij_vermogen:
+  waarde: "21139"
+  artikel: "Wet inkomstenbelasting 2001 art. 5.5 (tekst 2013); art. 5.2 lid 1 (grondslag sparen en beleggen = rendementsgrondslag op de peildatum voor zover boven het heffingvrije vermogen) en lid 2 (partners het gehele jaar: de gezamenlijke rendementsgrondslag voor zover boven het heffingvrije vermogen van de belastingplichtige en zijn partner)"
+  bron: "BWBR0011353, geldend van 01-01-2013 t/m 14-01-2013 (verbatim gelezen 2026-10-24 en 2026-10-25: 'Het heffingvrije vermogen bedraagt € 21 139.'); gelijk aan de tekst van 01-01-2012 t/m 30-06-2012 (gelezen 2026-10-25: € 21 139) en aan die van 01-01-2014 (gelezen 2026-10-24). De Wet IB had in 2013 zestien tekstversies; de tussenliggende zijn niet gelezen — art. 5.5 wordt alleen per 1 januari bijgesteld, en de Bijstellingsregeling directe belastingen 2013 (Stcrt. 2012, 26314, gelezen 2026-10-25) past art. 5.5 niet aan en zegt waarom: 'Op grond van artikel XVIII van de Wet uitwerking fiscale maatregelen Begrotingsakkoord 2013 vinden voor het jaar 2013 de artikelen 10.1 en 10.3, tweede lid, van de Wet IB 2001 ... geen toepassing. De ingevolge die bepalingen te indexeren bedragen worden dus voor het jaar 2013 – in tegenstelling tot eerdere jaren – niet geïndexeerd' (die wet: Stb. 2012, 321, wet van 12 juli 2012; art. XVIII zelf niet gelezen). Nodig omdat Wzt art. 2a lid 1 (tekst 2013) op de grondslag sparen en beleggen rust; de encoding vraagt de rendementsgrondslag en trekt het heffingvrije vermogen af (éénmaal zonder partner, tweemaal met het hele jaar dezelfde partner). Effectieve grenzen 2013 op de rendementsgrondslag: € 101.139 / € 122.278. 2014: € 21.139, opnieuw niet geïndexeerd (Belastingplan 2014 art. XXXIV)"
+  url: https://wetten.overheid.nl/BWBR0011353/2013-01-01
+  tekst: "Het heffingvrije vermogen bedraagt € 21 139."
+
+vermogensgrens_zonder_partner:
+  waarde: "80000"
+  artikel: "Wet op de zorgtoeslag art. 2a lid 1 (tekst 2013) (grondslag sparen en beleggen, art. 5.2 lid 1 Wet IB 2001, in het berekeningsjaar; vrijstelling art. 5.13 Wet IB 2001 telt niet)"
+  bron: "BWBR0018451, geldend van 01-01-2013 t/m 31-12-2013 (verbatim). Het bedrag staat in de wet zelf: Wet van 5 april 2012 tot wijziging van de Wet op de zorgtoeslag, in verband met de introductie van een vermogenstoets, Stb. 2012, 204, art. I ('Na artikel 2 wordt een artikel ingevoegd, luidende: Artikel 2a ... meer bedraagt dan € 80 000'), in werking met ingang van 1 januari 2013 (Stb. 2012, 383, besluit van 11 augustus 2012); de slotvolzin over art. 5.13 toegevoegd door Stb. 2012, 669, art. XXIX (beide primaire teksten gelezen 2026-10-25). 2013 is het eerste jaar van de vermogenstoets: de wetstechnische informatie van art. 2a noemt Stb. 2012, 204 als 'Nieuw' en Stcrt. 2013, 35607 (€ 81.360 voor 2014) als eerste wijziging — voor 2013 is er geen indexatieregeling. Effectieve grens op de rendementsgrondslag: € 80.000 + € 21.139 = € 101.139"
+  url: https://zoek.officielebekendmakingen.nl/stb-2012-204.html
+  tekst: "In afwijking van artikel 7, derde lid, van de Algemene wet inkomensafhankelijke regelingen bestaat geen aanspraak op een zorgtoeslag indien de grondslag sparen en beleggen, bedoeld in artikel 5.2, eerste lid, van de Wet inkomstenbelasting 2001, van de belanghebbende in het berekeningsjaar meer bedraagt dan € 80 000, dan wel, ingeval de belanghebbende het gehele berekeningsjaar dezelfde partner heeft, de gezamenlijke grondslag sparen en beleggen, bedoeld in artikel 5.2, tweede lid, van de Wet inkomstenbelasting 2001, van de belanghebbende en zijn partner in het berekeningsjaar meer bedraagt dan € 80 000. Bij de bepaling van de grondslag, bedoeld in de vorige volzin, wordt geen rekening gehouden met de vrijstelling, bedoeld in artikel 5.13 van de Wet inkomstenbelasting 2001."
+
+vermogensgrens_met_partner:
+  waarde: "80000"
+  artikel: "Wet op de zorgtoeslag art. 2a lid 1 (tekst 2013) (gezamenlijke grondslag sparen en beleggen, art. 5.2 lid 2 Wet IB 2001; alleen bij het gehele berekeningsjaar dezelfde partner; hetzelfde bedrag als zonder partner — het verschil zit in het tweemaal heffingvrije vermogen van de grondslag)"
+  bron: "BWBR0018451, geldend van 01-01-2013 t/m 31-12-2013 (verbatim); Stb. 2012, 204, art. I. Effectieve grens op de gezamenlijke rendementsgrondslag: € 80.000 + 2 × € 21.139 = € 122.278"
+  url: https://zoek.officielebekendmakingen.nl/stb-2012-204.html
+
+woonlandfactoren:
+  artikel: "Wet op de zorgtoeslag art. 3 lid 1-2 (tekst 2013) jo. Regeling zorgverzekering art. 6.3.1 en bijlage 4 (woonlandfactoren 2013)"
+  bron: "Regeling van de Minister van Volksgezondheid, Welzijn en Sport van 29 november 2012, kenmerk Z-3139020, houdende wijziging van de Regeling zorgverzekering in verband met het vaststellen van de woonlandfactoren voor het jaar 2013 ten behoeve van de gedifferentieerde berekening van de bijdrage voor verdragsgerechtigden, Stcrt. 2012, 25177, art. I (primaire tekst gelezen 2026-10-25; in werking 01-01-2013, art. II; toelichting: berekend door het College voor zorgverzekeringen, advies van 16 oktober 2012); gelijk aan de geconsolideerde bijlage 4 van BWBR0018715, geldend van 01-01-2013 t/m 31-01-2013 én van 01-12-2013 t/m 05-12-2013 (beide verbatim gelezen 2026-10-25, 39 landen, alle 39 regels gelijk aan de Staatscourant-tabel en aan elkaar: de bijlage veranderde niet in de loop van 2013). Geen artikel met een correctie met terugwerkende kracht in deze regeling; geen correctie van een factor voor 2013 gevonden in de regelingen voor 2014 t/m 2020 (Stcrt. 2014, 34233 corrigeerde Frankrijk 2012; Stcrt. 2017, 66088 Zweden 2017; Stcrt. 2019, 58198 Duitsland 2017–2019)"
+  url: https://zoek.officielebekendmakingen.nl/stcrt-2012-25177.html
+  geldig_van: 2013-01-01
+  opmerking: "Landcodes ISO 3166-1 alpha-2, toegevoegd door het project; de regeling noemt alleen de landnaam (Macedonië). Oude methode (verhouding van gemiddelde zorgkosten in één berekeningsjaar per land): twee factoren boven 1 (Noorwegen 1,2666 en Ierland 1,0176, het laatste op een berekeningsjaar 2004). De kolommen berekeningsjaar en zorgkosten uit de bijlage staan per land in het commentaar. Hongarije, Kaapverdië, Macedonië, Marokko, Slovenië, Tunesië en Turkije dragen in 2014 dezelfde factor (Stcrt. 2013, 33704)."
+  landen:
+    BE: "0.6760"   # België (berekeningsjaar 2009: 2.205,28 / 3.262,21)
+    BA: "0.0592"   # Bosnië-Herzegovina (berekeningsjaar 2010: 202,28 / 3.418,65)
+    BG: "0.0419"   # Bulgarije (berekeningsjaar 2009: 136,59 / 3.262,21)
+    CY: "0.1700"   # Cyprus (berekeningsjaar 2009: 554,65 / 3.262,21)
+    DK: "0.7118"   # Denemarken (berekeningsjaar 2009: 2.322,16 / 3.262,21)
+    DE: "0.7077"   # Duitsland (berekeningsjaar 2010: 2.419,40 / 3.418,65)
+    EE: "0.1553"   # Estland (berekeningsjaar 2009: 506,70 / 3.262,21)
+    FI: "0.5776"   # Finland (berekeningsjaar 2010: 1.974,52 / 3.418,65)
+    FR: "0.7241"   # Frankrijk (berekeningsjaar 2010: 2.475,61 / 3.418,65)
+    GR: "0.4253"   # Griekenland (berekeningsjaar 2010: 1.453,93 / 3.418,65)
+    HU: "0.1223"   # Hongarije (berekeningsjaar 2009: 398,91 / 3.262,21)
+    IE: "1.0176"   # Ierland (berekeningsjaar 2004: 2.747,78 / 2.700,19)
+    IS: "0.7489"   # IJsland (berekeningsjaar 2010: 2.560,32 / 3.418,65)
+    IT: "0.5386"   # Italië (berekeningsjaar 2010: 1.841,29 / 3.418,65)
+    CV: "0.0268"   # Kaapverdië (berekeningsjaar 2009: 87,51 / 3.262,21)
+    HR: "0.1831"   # Kroatië (berekeningsjaar 2010: 625,87 / 3.418,65)
+    LV: "0.1086"   # Letland (berekeningsjaar 2008: 336,56 / 3.099,98)
+    LI: "0.7295"   # Liechtenstein (berekeningsjaar 2010: 2.493,76 / 3.418,65)
+    LT: "0.1112"   # Litouwen (berekeningsjaar 2009: 362,87 / 3.262,21)
+    LU: "0.7585"   # Luxemburg (berekeningsjaar 2010: 2.593,12 / 3.418,65)
+    MK: "0.0445"   # Macedonië (berekeningsjaar 2010: 152,21 / 3.418,65)
+    MT: "0.2177"   # Malta (berekeningsjaar 2007: 629,21 / 2.890,21)
+    MA: "0.0125"   # Marokko (berekeningsjaar 2002: 30,56 / 2.448,29)
+    ME: "0.0778"   # Montenegro (berekeningsjaar 2008: 241,11 / 3.099,98)
+    "NO": "1.2666"   # Noorwegen (berekeningsjaar 2010: 4.330,23 / 3.418,65)
+    AT: "0.6039"   # Oostenrijk (berekeningsjaar 2010: 2.064,40 / 3.418,65)
+    PL: "0.1089"   # Polen (berekeningsjaar 2009: 355,39 / 3.262,21)
+    PT: "0.3180"   # Portugal (berekeningsjaar 2009: 1.037,30 / 3.262,21)
+    RO: "0.0437"   # Roemenië (berekeningsjaar 2005: 128,34 / 2.939,58)
+    RS: "0.0713"   # Servië (berekeningsjaar 2010: 243,85 / 3.418,65)
+    SI: "0.2886"   # Slovenië (berekeningsjaar 2010: 986,46 / 3.418,65)
+    SK: "0.1915"   # Slowakije (berekeningsjaar 2010: 654,54 / 3.418,65)
+    ES: "0.4043"   # Spanje (berekeningsjaar 2010: 1.382,09 / 3.418,65)
+    CZ: "0.2392"   # Tsjechië (berekeningsjaar 2010: 817,76 / 3.418,65)
+    TN: "0.0216"   # Tunesië (berekeningsjaar 2006: 62,02 / 2.874,25)
+    TR: "0.0852"   # Turkije (berekeningsjaar 2007: 246,17 / 2.890,21)
+    GB: "0.6013"   # Verenigd Koninkrijk (berekeningsjaar 2009: 1.961,54 / 3.262,21)
+    SE: "0.6845"   # Zweden (berekeningsjaar 2009: 2.233,13 / 3.262,21)
+    CH: "0.5677"   # Zwitserland (berekeningsjaar 2010: 1.940,80 / 3.418,65)

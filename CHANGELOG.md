@@ -2,6 +2,99 @@
 
 Newest first. What was done, decided, and got wrong.
 
+## 2026-10-25 — sixteenth run: 2013 encoded from primary texts — the first year of the vermogenstoets and of the encoded drempelinkomen formula; four Dienst outcomes for 2013 from case law; the heffingvrij vermogen frozen in 2013 too; history paused at 2013
+
+Sixteenth run of routine `trig_012xyD5r5rxFDCjfHbZ58Kib`. Model as configured for the session: `claude-fable-5-1`, the same as the
+previous entry; no handover note needed. The checkout arrived detached at a current `origin/main` (`76f71b6`, the previous run's commit;
+`git fetch` confirmed it). The routine fired the day after the previous run: no new gap. `git log -3 --stat` shows no owner commit since 10-24.
+
+**Step 1 — asks marked done.** None since 10-24. Asks 4, 6, 8, 9 and 10 stay open as recorded; 8 and 9 extended today (step 8).
+
+**Step 2 — the inbox.** `INBOX.md` is empty and nothing arrived outside it. No case, dispute, review or owner note to handle.
+
+**Step 3.** No open motion.
+
+**Step 4 — done (item 2 of `memory.md`: 2013, the next year of history; about thirty fetches in four parallel batches, two web searches, three
+rulings read).**
+- *Zorgtoeslag 2013 encoded from the primary texts*, `parameters/2013.yaml` and `awir/parameters/2013.yaml`, status `draft`, each number with its
+  article, instrument and quoted text: standaardpremie € 1.478 (Stcrt. 2012, 25514, kenmerk Z-3141539: € 1.281 premie + € 197 eigen risico of a
+  verzekerde without compensatie, 'de kortingen op collectiviteitscontracten niet meegenomen' — the method the 2014 regeling changed as a
+  beleidswijziging, so the 2013→2014 fall is now explained from both sides); WML januari 2013 € 1.469,40 (Stcrt. 2012, 21293) → drempelinkomen
+  € 19.043,424; percentages 2,195% / 4,695% / 8,713% (Wzt art. 2 lid 3, text of 01-01-2013; Stb. 2012, 627 art. I, its first row, decomposed in
+  the parameter file from tabel 1 — 2012 was 2,930% / 5,530% / 5,435%, text of 01-01-2012 read); vermogensgrens € 80.000 in the act itself;
+  heffingvrij vermogen € 21.139 → effective € 101.139 / € 122.278; 39 woonlandfactoren (Stcrt. 2012, 25177, identical to the consolidated bijlage 4
+  of 01-01-2013 and 01-12-2013 on all 39 lines; two factors above 1, Noorwegen 1,2666 and Ierland 1,0176); Awir art. 7 lid 6 € 4.627 (Stcrt.
+  2012, 26314 art. VII, addressed to 'het vijfde lid' of the 2012 numbering) and art. 14 lid 4–5 unchanged across the Awir's two 2013 versions
+  (01-01 and 01-12-2013, diffed). The Wzt had one version in 2013. No code change: the 2020 switches cover 2013.
+- *Three firsts, dated.* The diff of 01-01-2012 against 01-01-2013 (art. 1–5) shows that 2013 is (a) the first year of the vermogenstoets — art. 2a
+  is 'Nieuw' per Stb. 2012, 204 (wet van 5 april 2012, kamerstukken 33024, in force by Stb. 2012, 383), with the slotvolzin on Wet IB art. 5.13
+  added before the entry into force by Stb. 2012, 669 art. XXIX, and art. 1 lid 2 gained 'op basis van het inkomen en het vermogen'; (b) **the first
+  year of the drempelinkomen as the encoding computes it**: the Wet uniformering loonbegrip (Stb. 2011, 288, art. XXIV onder A, in force by Stb.
+  2012, 45) struck from art. 1 onder f the clause 'verminderd met het werknemersaandeel in de premie ... Wfsv en vermeerderd met de vergoeding
+  ingevolge artikel 46 ... Zvw over dat loon' — so for 2012 and earlier rule `zt-2026-art1-1f` does not compute the drempelinkomen, and Stb. 2012,
+  627's '+0,25 Wul' row is the compensation; (c) the first row of the percentages besluit the series rests on through 2014. Each is a
+  `CHANGES.md` row with its instrument.
+- *The heffingvrij vermogen was frozen in 2013 as well.* Wet IB art. 5.5 reads € 21 139 at 01-01-2012, 01-01-2013 and 01-01-2014; the
+  Bijstellingsregeling 2013 (Stcrt. 2012, 26314) says why for 2013: art. XVIII of the Wet uitwerking fiscale maatregelen Begrotingsakkoord 2013
+  (Stb. 2012, 321) set art. 10.1 Wet IB aside, 'in tegenstelling tot eerdere jaren'. Two freezes in a row, two different acts; both now in
+  `CHANGES.md` as rows with no change. The sixteen intermediate 2013 versions of the Wet IB were not read (written as such).
+- *Four Dienst outcomes for 2013 with their incomes, from two rulings* (a web search for 2013 zorgtoeslag rulings; the texts read through
+  WebFetch because the shell was refused for several turns, see below): ECLI:NL:RVS:2017:662 — vaststelling € 2.062 at a gezamenlijk
+  toetsingsinkomen of € 18.035 met partner (the text's maximum met partner, € 2.061,91) and its herziening to € 493 at € 35.469 + € 1.576 →
+  **`zt-2013-rul-001`, `-002`**; ECLI:NL:RVS:2016:3324 — 'huur- en zorgtoeslag ... € 3.175,00 en ... € 1.060,00' at € 2.144 zonder partner (€ 1.060
+  is the zorgtoeslag by word order and by arithmetic: the text's maximum zonder partner, € 1.059,997) and its herziening to nihil at € 33.683 →
+  **`zt-2013-rul-003`, `-004`**. All four reproduced through `build.run_case`. The € 1.612 reclaimed in the first ruling is not € 2.062 − € 493;
+  recorded as what the ruling says, not explained, not stored as input. ECLI:NL:RVS:2018:3859 (nihil, then € 445, no income) in `SOURCES.md` §4.
+  2013 now has as many Dienst outcomes as 2014 — both years had none two days ago.
+- *Four synthetic cases*, `zt-2013-syn-040..043`: the ceilings from the text, € 30.939 zonder and € 42.438 met partner — the highest of the series
+  2013–2026 — each with the euro above. A drempelinkomen rounded to € 19.043 or € 19.044 moves neither (the shift 1,7–2,8 cents against a
+  distance of at least 1 cent from € 23,50 on both sides); 2013 is the second such year after 2014. Noted in `DISCREPANCIES.md` #1 (unchanged).
+- *Check:* 235 cases, 215 pass, 20 fail (the twenty of 10-20, every one logged), 0 blocking; both encodings agree on 235. Site rebuilt: 288 pages,
+  2013 in the form, `/wet/2013/`, eight new case pages.
+- *The record's files:* `CHANGES.md` — eight rows for 2013 (art. 2a new, art. 1 onder f, percentages, standaardpremie, WML, bijlage 4, Awir
+  art. 7, art. 5.5 unchanged) and two 2014 old columns completed (standaardpremie 2013 and woonlandfactoren 2013 now from their Stcrt. texts).
+  `SOURCES.md` — twelve §1 rows, the leaflet 2013 as not found (`z30`, `z33`, `z34` 404; `z31` on 10-11; `z32` is 2023), three §4 rows, open item 4
+  rewritten for 2012. `rules.md`, `cases/README.md`, `README.md`, `DISCREPANCIES.md` #1, `ASKS.md` 8 and 9.
+
+**History paused at 2013 — the operator's sequencing decision (method, `BOARD.md`).** 2013 is the earliest year the present rules can
+compute: before it the drempelinkomen depends on the Wfsv werknemersaandeel and the Zvw art. 46 vergoeding over the WML, which needs a new
+version of `zt-2026-art1-1f` with its own two parameters per year, and the vermogenstoets did not exist. `PLAN.md` already places 'history back to
+the Awir's start where sources allow' in Phase 4, so no scope motion is needed and the plan is not rewritten. The next runs therefore return to
+the items the daily history displaced: Dienst outcomes from case law for the years that have none (2017, 2021, 2022, 2024, 2025, 2026), the B1
+Dutch explanations on `/betwisten/` and `/insturen/`, and the `SOURCES.md` open items. Pre-2013 history waits for Phase 4 or a board wish.
+
+**What was wrong and why.**
+- *The shell was refused for five turns.* Mid-run the Bash tool returned no safety verdict (a transient failure of the harness, not a judgment);
+  the rulings were read through WebFetch instead (it quotes at most 125 characters per sentence — enough for amounts and incomes, which is why the
+  case files quote fragments), the files were written with the file tools, and the check ran once the shell came back. Nothing was lost; the
+  lesson is in `memory.md`.
+- *A placeholder nearly stayed.* The 2013 parameter file was written with 'art. [over de Wzt]' for the Wul's article number before that number
+  was read (art. XXIV onder A); replaced the same run. The rule stands: an article number is read or marked 'not read' — a bracket is neither.
+- *The afbouw's 2013 intermediate row.* The stripped text of Stb. 2012, 627's tabel 1 dropped rows; the 'na maatregel 2011' value for the 2013
+  afbouw could not be read cleanly and is written as not read (the three components, +0,25 / +0,923 / +1,70, are). The normpercentage rows were
+  read and add up (3,145 + 0,25 − 0,60 − 0,60 = 2,195; 6,045 + 0,25 − 1,20 − 0,40 = 4,695).
+- Nothing dropped from scope. Items 3 and 4 of memory not started as such beyond today's two rulings.
+
+**Step 8 — asks.** None new. Ask 8 extended (the 2013 leaflet not found). Ask 9 extended to the four 2013 ruling cases, per ruling, two rulings.
+
+**Dropped from memory.** Open item 2 (2013) replaced by the pause and the 2012 note; the 2014 key-figures sentence trimmed; one duplicated
+lesson removed; about 6,900 words (wc) after today's additions — under the cap; the key-figures paragraph is still the part to compress next.
+
+**Effort.** Roughly 300,000 of the 300,000-token ceiling — at the limit, as on 10-24: about 100,000 reading the files, the previous entry, the
+parameter and rules files; about 60,000 on some thirty fetches (two 28–47 MB Regeling zorgverzekering pages and two 4 MB Wet IB texts cut by
+script), two searches and three rulings; about 140,000 writing and checking the two parameter files, the eight cases, the rows in `CHANGES.md`
+and `SOURCES.md`, the notes, the memory and this entry — the shell refusals cost several retries.
+
+**Record under the ten-year rule.** This run added to the record: the law of 2013 as it stood, dated and sourced — every parameter with its
+instrument and quoted text; the dated finding that 2013 is the first year of the vermogenstoets (Stb. 2012, 204, in force by Stb. 2012, 383, the
+slotvolzin by Stb. 2012, 669) and the first year in which the drempelinkomen is 108% × 12 × the WML alone (Stb. 2011, 288), with the 2012 text of
+both articles quoted; the dated finding that the standaardpremie 2013 excluded the collectiviteitskortingen that 2014 included; the dated finding
+that the heffingvrij vermogen was frozen in 2013 by Stb. 2012, 321 as it was in 2014 by the Belastingplan 2014; the Awir art. 7 renumbering of
+01-01-2013 and its three instruments; the 2013 woonlandfactor table with its CVZ advice date and the finding that it did not change within the
+year; the first four Dienst outcomes for 2013 with their incomes (€ 2.062 at € 18.035, € 493 at € 37.045, € 1.060 at € 2.144, nihil at € 33.683) and
+one more amount, each traced to its ruling; and the 2013 income ceilings from the text with the finding that the rounding of the drempelinkomen
+moves neither. The encoding of 2013 (no code changed), the cases' arithmetic and the site build are regenerable and are not counted.
+
 ## 2026-10-24 — fifteenth run: 2014 encoded from primary texts, the first four Dienst outcomes for 2014 from case law, the heffingvrij vermogen frozen in 2014, the first year where the drempelinkomen rounding decides nothing
 
 Fifteenth run of routine `trig_012xyD5r5rxFDCjfHbZ58Kib`. Model as configured for the session: `claude-fable-5-1`, the same as the

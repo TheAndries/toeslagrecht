@@ -1,0 +1,18 @@
+id: zt-2013-rul-002
+toeslag: zorgtoeslag
+jaar: 2013
+bron:
+  type: ruling
+  publicatie: "ABRvS 15 maart 2017, ECLI:NL:RVS:2017:662 (zaaknr. 201603050/1/A2), r.o. 1: bij besluit van 13 maart 2015 heeft de Belastingdienst/Toeslagen 'de vastgestelde zorgtoeslag van [appellant] over 2013 herzien en vastgesteld op € 493,00', 'op basis van deze door de belastinginspecteur vastgestelde verzamelinkomens' van de aanvrager en zijn toeslagpartner, in de aanslagen inkomstenbelasting 2013 'vastgesteld op onderscheidenlijk € 35.469,00 en € 1.576,00' ('Het verzamelinkomen van [appellant] omvat mede de door hem in 2013 ontvangen afkoopsommen van pensioenaanspraken.'); 'Tevens is € 1.612,00 aan te veel betaalde zorgtoeslag teruggevorderd.' De Afdeling laat de herziening in stand: de Awir kent geen hardheidsclausule en de Wzt geen grondslag om afkoopsommen buiten het toetsingsinkomen te laten. Volledige tekst via data.rechtspraak.nl/uitspraken/content?id=ECLI:NL:RVS:2017:662"
+  url: https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RVS:2017:662
+  opgehaald: 2026-10-25
+verified: false
+invoer:
+  partner: true
+  partner_verzekerd: true
+  toetsingsinkomen_aanvrager: "35469"
+  toetsingsinkomen_partner: "1576"
+  rendementsgrondslag: null
+verwacht:
+  tegemoetkoming: "493"
+opmerking: "De herziening 2013 van de Dienst (13-03-2015) op de verzamelinkomens uit de aanslagen: gezamenlijk € 35.469 + € 1.576 = € 37.045 met toeslagpartner. Uit de tekst: normpremie = 4,695% × € 19.043,424 + 8,713% × (€ 37.045 − € 19.043,424) = € 894,09 + € 1.568,48 = € 2.462,57; 2 × € 1.478 − € 2.462,57 = € 493,43 → € 493 (Awir art. 14 lid 4) — wat de Dienst besliste. Het teruggevorderde bedrag in de uitspraak (€ 1.612) is niet het verschil tussen het voorschot van € 2.062 (rul-001) en € 493 (€ 1.569); de uitspraak verklaart het verschil niet en het project speculeert niet; het is geen invoer van deze case. Met een afgerond drempelinkomen (€ 19.043: € 493,41; € 19.044: € 493,45) ook € 493 — beslist #1 niet. Wordt verified zodra een met naam genoemde mens de invoer met de uitspraak vergelijkt (CASES.md; ASKS.md 9)."

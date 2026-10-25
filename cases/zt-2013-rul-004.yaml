@@ -1,0 +1,18 @@
+id: zt-2013-rul-004
+toeslag: zorgtoeslag
+jaar: 2013
+bron:
+  type: ruling
+  publicatie: "ABRvS 14 december 2016, ECLI:NL:RVS:2016:3324 (zaaknr. 201601124/1/A2), r.o. 1–2: in de aanslag inkomstenbelasting 2013 van 11 april 2015 'is het verzamelinkomen vastgesteld op een bedrag van € 33.683,00' (een WWB-uitkering en een in 2013 in een schenking omgezette leenbijstand); 'Op basis van het verzamelinkomen van € 33.683,00 heeft de Belastingdienst/Toeslagen de definitieve vaststelling herzien' — bij besluit van 15 mei 2015 de zorg- en huurtoeslag 2013 'herzien en vastgesteld op nihil'. De Afdeling: de regelgeving voor de zorgtoeslag biedt geen grondslag om een inkomensbestanddeel buiten beschouwing te laten (r.o. 3.2). Volledige tekst via data.rechtspraak.nl/uitspraken/content?id=ECLI:NL:RVS:2016:3324"
+  url: https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RVS:2016:3324
+  opgehaald: 2026-10-25
+verified: false
+invoer:
+  partner: false
+  partner_verzekerd: null
+  toetsingsinkomen_aanvrager: "33683"
+  toetsingsinkomen_partner: "0"
+  rendementsgrondslag: null
+verwacht:
+  tegemoetkoming: "0"
+opmerking: "De herziening 2013 van de Dienst (15-05-2015) op het verzamelinkomen uit de aanslag: € 33.683 zonder toeslagpartner (geen partner genoemd), boven de inkomensgrens zonder partner uit de tekst van 2013, € 30.939 (syn-040): normpremie = 2,195% × € 19.043,424 + 8,713% × (€ 33.683 − € 19.043,424) = € 418,00 + € 1.275,54 = € 1.693,54 > € 1.478 → geen aanspraak, wat de Dienst besliste. Nihil onderscheidt niet tussen de afrondingsmodellen van #1. Wordt verified zodra een met naam genoemde mens de invoer met de uitspraak vergelijkt (CASES.md; ASKS.md 9)."

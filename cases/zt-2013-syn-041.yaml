@@ -1,0 +1,18 @@
+id: zt-2013-syn-041
+toeslag: zorgtoeslag
+jaar: 2013
+bron:
+  type: synthetic
+  publicatie: "Berekend uit de tekst: Wzt art. 1 lid 1 onder f, art. 2 lid 1-3 (BWBR0018451, geldend van 01-01-2013), Awir art. 14 lid 4-5 (geldend van 01-01-2013); de eerste euro zonder recht, zonder partner. Geen publicatie van de Dienst voor 2013 gevonden"
+  url: https://wetten.overheid.nl/BWBR0018451/2013-01-01
+  opgehaald: 2026-10-25
+verified: false
+invoer:
+  partner: false
+  partner_verzekerd: null
+  toetsingsinkomen_aanvrager: "30940"
+  toetsingsinkomen_partner: "0"
+  rendementsgrondslag: null
+verwacht:
+  tegemoetkoming: "0"
+opmerking: "De euro boven de grens van syn-040: € 1.478 − (2,195% × € 19.043,424 + 8,713% × (€ 30.940 − € 19.043,424)) = € 23,45 → € 23 (Awir art. 14 lid 4) → niet toegekend (lid 5). Met een afgerond drempelinkomen (€ 19.043: € 23,42; € 19.044: € 23,49) eveneens € 23."

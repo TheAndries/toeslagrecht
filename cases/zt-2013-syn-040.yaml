@@ -1,0 +1,18 @@
+id: zt-2013-syn-040
+toeslag: zorgtoeslag
+jaar: 2013
+bron:
+  type: synthetic
+  publicatie: "Berekend uit de tekst: Wzt art. 1 lid 1 onder f, art. 2 lid 1-3 (BWBR0018451, geldend van 01-01-2013), Awir art. 14 lid 4-5 (geldend van 01-01-2013); de inkomensgrens zonder partner op de laatste euro met recht. Geen publicatie van de Dienst voor 2013 gevonden (leaflet 2013: niet gevonden)"
+  url: https://wetten.overheid.nl/BWBR0018451/2013-01-01
+  opgehaald: 2026-10-25
+verified: false
+invoer:
+  partner: false
+  partner_verzekerd: null
+  toetsingsinkomen_aanvrager: "30939"
+  toetsingsinkomen_partner: "0"
+  rendementsgrondslag: null
+verwacht:
+  tegemoetkoming: "24"
+opmerking: "Inkomensgrens 2013 zonder toeslagpartner uit de tekst: normpremie = 2,195% × € 19.043,424 + 8,713% × (€ 30.939 − € 19.043,424) = € 418,00 + € 1.036,46 = € 1.454,46; € 1.478 − € 1.454,46 = € 23,54 (precies € 23,5353) → € 24 (Awir art. 14 lid 4), net toegekend (lid 5). Zie syn-041 voor de euro erboven. Met een afgerond drempelinkomen (€ 19.043: € 23,51; € 19.044: € 23,57; DISCREPANCIES.md #1) blijft het € 24 en blijft € 30.940 € 23 — zoals 2014 een jaar waarin de afronding van het drempelinkomen geen grens verschuift. De hoogste grens van de reeks 2013–2026: het afbouwpercentage was 8,713% (2014: 9,118%; 2015: 13,400%). Wordt een published case zodra een publicatie van de Dienst voor 2013 de grens noemt."

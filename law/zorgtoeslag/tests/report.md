@@ -1,7 +1,87 @@
-# Zorgtoeslag — test report, generated 2026-10-24 by tools/build.py
+# Zorgtoeslag — test report, generated 2026-10-25 by tools/build.py
 
 Generated file; do not edit. Verified cases are tests (blocking); published and synthetic
 cases are checks (reported). Every failing check is a discrepancy in `DISCREPANCIES.md`.
+
+## zt-2013-rul-001 — PASS — check (ruling)
+
+Source: ABRvS 15 maart 2017, ECLI:NL:RVS:2017:662 (zaaknr. 201603050/1/A2), r.o. 1: '[appellant] heeft over 2013 een voorschot zorgtoeslag ontvangen van € 2.062,00.' Bij besluit van 3 oktober 2014 heeft de Belastingdienst/Toeslagen 'de zorgtoeslag van [appellant] over 2013 vastgesteld op € 2.062,00', op 'een gezamenlijk toetsingsinkomen van [appellant] en zijn toeslagpartner van € 18.035,00'. Volledige tekst via data.rechtspraak.nl/uitspraken/content?id=ECLI:NL:RVS:2017:662
+
+| field | expected | encoding | match |
+|---|---|---|---|
+| tegemoetkoming | 2062.00 | 2062.00 (exact 2062) | yes |
+
+Note: De eerste vaststelling 2013 van de Dienst (03-10-2014) op het gezamenlijke toetsingsinkomen zoals het toen vaststond: € 18.035 met toeslagpartner, onder het drempelinkomen 2013 (€ 19.043,424), dus het maximum met partner uit de tekst: 2 × € 1.478 − 4,695% × € 19.043,424 = € 2.956 − € 894,09 = € 2.061,91 → € 2.062 (Awir art. 14 lid 4). Het voorschot was hetzelfde bedrag. De verdeling over aanvrager en partner is niet gegeven en doet er niet toe (Wzt art. 2 lid 2); het hele bedrag staat bij de aanvrager. Dat de partner verzekerde was blijkt uit het bedrag (2 × standaardpremie). Beslist DISCREPANCIES.md #1 niet (onder het drempelinkomen). Zie rul-002 voor de herziening in dezelfde uitspraak. Wordt verified zodra een met naam genoemde mens de invoer met de uitspraak vergelijkt (CASES.md; ASKS.md 9).
+
+## zt-2013-rul-002 — PASS — check (ruling)
+
+Source: ABRvS 15 maart 2017, ECLI:NL:RVS:2017:662 (zaaknr. 201603050/1/A2), r.o. 1: bij besluit van 13 maart 2015 heeft de Belastingdienst/Toeslagen 'de vastgestelde zorgtoeslag van [appellant] over 2013 herzien en vastgesteld op € 493,00', 'op basis van deze door de belastinginspecteur vastgestelde verzamelinkomens' van de aanvrager en zijn toeslagpartner, in de aanslagen inkomstenbelasting 2013 'vastgesteld op onderscheidenlijk € 35.469,00 en € 1.576,00' ('Het verzamelinkomen van [appellant] omvat mede de door hem in 2013 ontvangen afkoopsommen van pensioenaanspraken.'); 'Tevens is € 1.612,00 aan te veel betaalde zorgtoeslag teruggevorderd.' De Afdeling laat de herziening in stand: de Awir kent geen hardheidsclausule en de Wzt geen grondslag om afkoopsommen buiten het toetsingsinkomen te laten. Volledige tekst via data.rechtspraak.nl/uitspraken/content?id=ECLI:NL:RVS:2017:662
+
+| field | expected | encoding | match |
+|---|---|---|---|
+| tegemoetkoming | 493.00 | 493.00 (exact 493) | yes |
+
+Note: De herziening 2013 van de Dienst (13-03-2015) op de verzamelinkomens uit de aanslagen: gezamenlijk € 35.469 + € 1.576 = € 37.045 met toeslagpartner. Uit de tekst: normpremie = 4,695% × € 19.043,424 + 8,713% × (€ 37.045 − € 19.043,424) = € 894,09 + € 1.568,48 = € 2.462,57; 2 × € 1.478 − € 2.462,57 = € 493,43 → € 493 (Awir art. 14 lid 4) — wat de Dienst besliste. Het teruggevorderde bedrag in de uitspraak (€ 1.612) is niet het verschil tussen het voorschot van € 2.062 (rul-001) en € 493 (€ 1.569); de uitspraak verklaart het verschil niet en het project speculeert niet; het is geen invoer van deze case. Met een afgerond drempelinkomen (€ 19.043: € 493,41; € 19.044: € 493,45) ook € 493 — beslist #1 niet. Wordt verified zodra een met naam genoemde mens de invoer met de uitspraak vergelijkt (CASES.md; ASKS.md 9).
+
+## zt-2013-rul-003 — PASS — check (ruling)
+
+Source: ABRvS 14 december 2016, ECLI:NL:RVS:2016:3324 (zaaknr. 201601124/1/A2), r.o. 1: de Belastingdienst/Toeslagen heeft 'de huur- en zorgtoeslag van [appellante] definitief vastgesteld op een bedrag van € 3.175,00 en een bedrag van € 1.060,00' en is daarbij 'uitgegaan van een toetsingsinkomen van [appellante] van € 2.144,00'. De uitspraak noemt geen partner (wel twee kinderen, kindgebonden budget). Volledige tekst via data.rechtspraak.nl/uitspraken/content?id=ECLI:NL:RVS:2016:3324
+
+| field | expected | encoding | match |
+|---|---|---|---|
+| tegemoetkoming | 1060.00 | 1060.00 (exact 1060) | yes |
+
+Note: De definitieve vaststelling 2013 van de Dienst op het toetsingsinkomen zoals het toen vaststond: € 2.144 zonder toeslagpartner (geen partner genoemd), onder het drempelinkomen, dus het maximum zonder partner uit de tekst: € 1.478 − 2,195% × € 19.043,424 = € 1.478 − € 418,00 = € 1.059,997 → € 1.060 (Awir art. 14 lid 4). De uitspraak noemt de twee bedragen in de volgorde 'huur- en zorgtoeslag' zonder ze afzonderlijk te benoemen; dat € 1.060 de zorgtoeslag is volgt uit die volgorde én uit de rekensom (€ 3.175 kan geen zorgtoeslag 2013 zijn: het maximum met partner is € 2.062). Beslist DISCREPANCIES.md #1 niet (onder het drempelinkomen). Zie rul-004 voor de herziening in dezelfde uitspraak. Wordt verified zodra een met naam genoemde mens de invoer met de uitspraak vergelijkt (CASES.md; ASKS.md 9).
+
+## zt-2013-rul-004 — PASS — check (ruling)
+
+Source: ABRvS 14 december 2016, ECLI:NL:RVS:2016:3324 (zaaknr. 201601124/1/A2), r.o. 1–2: in de aanslag inkomstenbelasting 2013 van 11 april 2015 'is het verzamelinkomen vastgesteld op een bedrag van € 33.683,00' (een WWB-uitkering en een in 2013 in een schenking omgezette leenbijstand); 'Op basis van het verzamelinkomen van € 33.683,00 heeft de Belastingdienst/Toeslagen de definitieve vaststelling herzien' — bij besluit van 15 mei 2015 de zorg- en huurtoeslag 2013 'herzien en vastgesteld op nihil'. De Afdeling: de regelgeving voor de zorgtoeslag biedt geen grondslag om een inkomensbestanddeel buiten beschouwing te laten (r.o. 3.2). Volledige tekst via data.rechtspraak.nl/uitspraken/content?id=ECLI:NL:RVS:2016:3324
+
+| field | expected | encoding | match |
+|---|---|---|---|
+| tegemoetkoming | 0.00 | 0.00 (exact 0) | yes |
+
+Note: De herziening 2013 van de Dienst (15-05-2015) op het verzamelinkomen uit de aanslag: € 33.683 zonder toeslagpartner (geen partner genoemd), boven de inkomensgrens zonder partner uit de tekst van 2013, € 30.939 (syn-040): normpremie = 2,195% × € 19.043,424 + 8,713% × (€ 33.683 − € 19.043,424) = € 418,00 + € 1.275,54 = € 1.693,54 > € 1.478 → geen aanspraak, wat de Dienst besliste. Nihil onderscheidt niet tussen de afrondingsmodellen van #1. Wordt verified zodra een met naam genoemde mens de invoer met de uitspraak vergelijkt (CASES.md; ASKS.md 9).
+
+## zt-2013-syn-040 — PASS — check (synthetic)
+
+Source: Berekend uit de tekst: Wzt art. 1 lid 1 onder f, art. 2 lid 1-3 (BWBR0018451, geldend van 01-01-2013), Awir art. 14 lid 4-5 (geldend van 01-01-2013); de inkomensgrens zonder partner op de laatste euro met recht. Geen publicatie van de Dienst voor 2013 gevonden (leaflet 2013: niet gevonden)
+
+| field | expected | encoding | match |
+|---|---|---|---|
+| tegemoetkoming | 24.00 | 24.00 (exact 24) | yes |
+
+Note: Inkomensgrens 2013 zonder toeslagpartner uit de tekst: normpremie = 2,195% × € 19.043,424 + 8,713% × (€ 30.939 − € 19.043,424) = € 418,00 + € 1.036,46 = € 1.454,46; € 1.478 − € 1.454,46 = € 23,54 (precies € 23,5353) → € 24 (Awir art. 14 lid 4), net toegekend (lid 5). Zie syn-041 voor de euro erboven. Met een afgerond drempelinkomen (€ 19.043: € 23,51; € 19.044: € 23,57; DISCREPANCIES.md #1) blijft het € 24 en blijft € 30.940 € 23 — zoals 2014 een jaar waarin de afronding van het drempelinkomen geen grens verschuift. De hoogste grens van de reeks 2013–2026: het afbouwpercentage was 8,713% (2014: 9,118%; 2015: 13,400%). Wordt een published case zodra een publicatie van de Dienst voor 2013 de grens noemt.
+
+## zt-2013-syn-041 — PASS — check (synthetic)
+
+Source: Berekend uit de tekst: Wzt art. 1 lid 1 onder f, art. 2 lid 1-3 (BWBR0018451, geldend van 01-01-2013), Awir art. 14 lid 4-5 (geldend van 01-01-2013); de eerste euro zonder recht, zonder partner. Geen publicatie van de Dienst voor 2013 gevonden
+
+| field | expected | encoding | match |
+|---|---|---|---|
+| tegemoetkoming | 0.00 | 0.00 (exact 0) | yes |
+
+Note: De euro boven de grens van syn-040: € 1.478 − (2,195% × € 19.043,424 + 8,713% × (€ 30.940 − € 19.043,424)) = € 23,45 → € 23 (Awir art. 14 lid 4) → niet toegekend (lid 5). Met een afgerond drempelinkomen (€ 19.043: € 23,42; € 19.044: € 23,49) eveneens € 23.
+
+## zt-2013-syn-042 — PASS — check (synthetic)
+
+Source: Berekend uit de tekst: Wzt art. 1 lid 1 onder f, art. 2 lid 1-3 (BWBR0018451, geldend van 01-01-2013), Awir art. 14 lid 4-5 (geldend van 01-01-2013); de inkomensgrens met partner op de laatste euro met recht. Geen publicatie van de Dienst voor 2013 gevonden
+
+| field | expected | encoding | match |
+|---|---|---|---|
+| tegemoetkoming | 24.00 | 24.00 (exact 24) | yes |
+
+Note: Inkomensgrens 2013 met toeslagpartner uit de tekst (gezamenlijk toetsingsinkomen): normpremie = 4,695% × € 19.043,424 + 8,713% × (€ 42.438 − € 19.043,424) = € 894,09 + € 2.038,37 = € 2.932,46; 2 × € 1.478 − € 2.932,46 = € 23,54 (precies € 23,5418) → € 24, net toegekend. Zie syn-043 voor de euro erboven. Met een afgerond drempelinkomen (€ 19.043: € 23,52; € 19.044: € 23,56) blijft het € 24 en blijft € 42.439 € 23 (#1 verschuift in 2013 geen grens). Het maximum 2013 met partner uit de tekst is € 2.062 (€ 2.061,91).
+
+## zt-2013-syn-043 — PASS — check (synthetic)
+
+Source: Berekend uit de tekst: Wzt art. 1 lid 1 onder f, art. 2 lid 1-3 (BWBR0018451, geldend van 01-01-2013), Awir art. 14 lid 4-5 (geldend van 01-01-2013); de eerste euro zonder recht, met partner. Geen publicatie van de Dienst voor 2013 gevonden
+
+| field | expected | encoding | match |
+|---|---|---|---|
+| tegemoetkoming | 0.00 | 0.00 (exact 0) | yes |
+
+Note: De euro boven de grens van syn-042: 2 × € 1.478 − (4,695% × € 19.043,424 + 8,713% × (€ 42.439 − € 19.043,424)) = € 23,45 → € 23 → niet toegekend (Awir art. 14 lid 4-5). Met een afgerond drempelinkomen (€ 19.043: € 23,44; € 19.044: € 23,48) eveneens € 23.
 
 ## zt-2014-rul-001 — PASS — check (ruling)
 
@@ -2324,8 +2404,8 @@ Note: Laatste rij van de tabel, op het genoemde inkomen zelf ('en meer' sluit he
 
 ---
 
-Browser encoding (`site/zorgtoeslag-regels.js`, node v22.22.0): 227 cases compared with the Python encoding, 227 identical, 0 different.
+Browser encoding (`site/zorgtoeslag-regels.js`, node v22.22.0): 235 cases compared with the Python encoding, 235 identical, 0 different.
 
 ---
 
-Cases run: 227, passed: 207, failed: 20, skipped: 0. Verified cases: 0. Blocking failures: 0. Browser/Python differences: 0 (blocking: the two encodings must agree).
+Cases run: 235, passed: 215, failed: 20, skipped: 0. Verified cases: 0. Blocking failures: 0. Browser/Python differences: 0 (blocking: the two encodings must agree).

@@ -1,0 +1,18 @@
+id: zt-2013-rul-001
+toeslag: zorgtoeslag
+jaar: 2013
+bron:
+  type: ruling
+  publicatie: "ABRvS 15 maart 2017, ECLI:NL:RVS:2017:662 (zaaknr. 201603050/1/A2), r.o. 1: '[appellant] heeft over 2013 een voorschot zorgtoeslag ontvangen van € 2.062,00.' Bij besluit van 3 oktober 2014 heeft de Belastingdienst/Toeslagen 'de zorgtoeslag van [appellant] over 2013 vastgesteld op € 2.062,00', op 'een gezamenlijk toetsingsinkomen van [appellant] en zijn toeslagpartner van € 18.035,00'. Volledige tekst via data.rechtspraak.nl/uitspraken/content?id=ECLI:NL:RVS:2017:662"
+  url: https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RVS:2017:662
+  opgehaald: 2026-10-25
+verified: false
+invoer:
+  partner: true
+  partner_verzekerd: true
+  toetsingsinkomen_aanvrager: "18035"
+  toetsingsinkomen_partner: "0"
+  rendementsgrondslag: null
+verwacht:
+  tegemoetkoming: "2062"
+opmerking: "De eerste vaststelling 2013 van de Dienst (03-10-2014) op het gezamenlijke toetsingsinkomen zoals het toen vaststond: € 18.035 met toeslagpartner, onder het drempelinkomen 2013 (€ 19.043,424), dus het maximum met partner uit de tekst: 2 × € 1.478 − 4,695% × € 19.043,424 = € 2.956 − € 894,09 = € 2.061,91 → € 2.062 (Awir art. 14 lid 4). Het voorschot was hetzelfde bedrag. De verdeling over aanvrager en partner is niet gegeven en doet er niet toe (Wzt art. 2 lid 2); het hele bedrag staat bij de aanvrager. Dat de partner verzekerde was blijkt uit het bedrag (2 × standaardpremie). Beslist DISCREPANCIES.md #1 niet (onder het drempelinkomen). Zie rul-002 voor de herziening in dezelfde uitspraak. Wordt verified zodra een met naam genoemde mens de invoer met de uitspraak vergelijkt (CASES.md; ASKS.md 9)."

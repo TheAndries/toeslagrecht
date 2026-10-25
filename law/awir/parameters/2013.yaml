@@ -1,0 +1,39 @@
+# Awir — parameters berekeningsjaar 2013. Elk getal met zijn bron (CHARTER.md P1).
+# Twee tekstversies van de Awir in 2013 (wetstechnische informatie, gelezen 2026-10-25): 01-01 t/m 30-11-2013 en 01-12 t/m 31-12-2013
+# (Stb. 2011, 640, in werking per Stb. 2013, 468); art. 7 en art. 14 zijn in beide versies verbatim gelijk (vergeleken 2026-10-25).
+# Per 01-01-2013 veranderde art. 7 wel, door drie instrumenten: Stb. 2012, 669 (Overige fiscale maatregelen 2013) art. XVII onder A
+# voegde een nieuw lid 5 in (het in het niet in Nederland belastbare inkomen begrepen voordeel uit sparen en beleggen telt mee) en
+# vernummerde lid 5 en 6 tot 6 en 7; Stb. 2012, 321 (Wet uitwerking fiscale maatregelen Begrotingsakkoord 2013) art. XIV verving in
+# lid 3 en 4 'vrijstellingen bedoeld in afdeling 5.3 en 5.3A' door 'vrijstelling, bedoeld in artikel 5.13'; Stcrt. 2012, 26314
+# (Bijstellingsregeling directe belastingen 2013) art. VII verhoogde het bedrag van (toen) lid 5 van € 4.527 naar € 4.627.
+jaar: 2013
+status: draft
+geraadpleegd: 2026-10-25
+
+vermogenstoets_algemeen:
+  artikel: "Awir art. 7 lid 3 (tekst 2013): geen bedrag; de toets is of over het berekeningsjaar voordeel uit sparen en beleggen in aanmerking wordt genomen (grondslag sparen en beleggen > 0, dus rendementsgrondslag boven het heffingvrije vermogen), de vrijstelling van art. 5.13 Wet IB 2001 weggedacht"
+  bron: "BWBR0018472, geldend van 01-01-2013 t/m 30-11-2013 (verbatim gelezen 2026-10-25; dezelfde tekst in de versie van 01-12-2013 en in 2014 t/m 2020); 'vrijstelling, bedoeld in artikel 5.13' sinds 01-01-2013 (Stb. 2012, 321, art. XIV, primaire tekst gelezen 2026-10-25; tot en met 2012: 'vrijstellingen bedoeld in afdeling 5.3 en 5.3A'); lid 5 (tekst 2013, nieuw per 01-01-2013, Stb. 2012, 669 art. XVII onder A, primaire tekst gelezen 2026-10-25): niet in Nederland belastbaar voordeel uit sparen en beleggen telt mee. Vervangen per 01-01-2021 door de rendementsgrondslag-toets met bedragen (Stb. 2020, 546)"
+  url: https://wetten.overheid.nl/BWBR0018472/2013-01-01
+  tekst: "Indien in een inkomensafhankelijke regeling de aanspraak op een tegemoetkoming mede afhankelijk is gesteld van het vermogen, bestaat geen aanspraak op een tegemoetkoming, indien bij de belanghebbende of, indien de belanghebbende het gehele berekeningsjaar dezelfde partner heeft, zijn partner over het berekeningsjaar voordeel uit sparen en beleggen als bedoeld in artikel 5.2 van de Wet inkomstenbelasting 2001 in aanmerking wordt genomen, dan wel in aanmerking zou worden genomen indien geen rekening wordt gehouden met de vrijstelling, bedoeld in artikel 5.13 van die wet."
+  opmerking: "Geldt alleen voor regelingen zonder eigen grens; niet voor de zorgtoeslag (Wzt art. 2a, nieuw in 2013). Geen waarde: de encoding gebruikt dit niet."
+
+medebewoner_vrijstelling_onder_23:
+  waarde: "4627"
+  artikel: "Awir art. 7 lid 6 (tekst 2013; tot en met 2012 lid 5)"
+  bron: "BWBR0018472, geldend van 01-01-2013 t/m 30-11-2013 (verbatim gelezen 2026-10-25: '€ 4627'); Bijstellingsregeling directe belastingen 2013, Stcrt. 2012, 26314, art. VII: 'In de Algemene wet inkomensafhankelijke regelingen wordt in artikel 7, vijfde lid, ‘€ 4527’ vervangen door: € 4627.' (primaire tekst gelezen 2026-10-25; de regeling noemt het vijfde lid, het lid van de tekst van 2012 — gelezen 2026-10-25, geldend van 01-01-2012 t/m 30-06-2012: '€ 4527' in lid 5; Stb. 2012, 669 vernummerde het per dezelfde datum tot lid 6). 2014: € 4.706 (Stcrt. 2013, 35144 art. VI)"
+  url: https://wetten.overheid.nl/BWBR0018472/2013-01-01
+
+afronding_tegemoetkoming:
+  waarde: "1"
+  eenheid: euro
+  artikel: "Awir art. 14 lid 4"
+  bron: "BWBR0018472, geldend van 01-01-2013 t/m 30-11-2013 (verbatim gelezen 2026-10-25); dezelfde tekst in de versie van 01-12-2013 en in 2014 t/m 2026"
+  url: https://wetten.overheid.nl/BWBR0018472/2013-01-01
+  tekst: "Het bedrag van de tegemoetkoming wordt rekenkundig afgerond op hele euro’s."
+
+minimum_tegemoetkoming:
+  waarde: "24"
+  artikel: "Awir art. 14 lid 5"
+  bron: "BWBR0018472, geldend van 01-01-2013 t/m 30-11-2013 (verbatim gelezen 2026-10-25)"
+  url: https://wetten.overheid.nl/BWBR0018472/2013-01-01
+  tekst: "Een tegemoetkoming wordt niet toegekend indien deze minder dan € 24 zou bedragen."
