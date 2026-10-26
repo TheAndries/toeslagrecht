@@ -74,6 +74,10 @@ follow-up searches, eleven rulings fetched from `data.rechtspraak.nl` and read, 
   the run came from the 2017 search (2016/2017, 2019 and 2014 rulings) and from following the 2022 snippet to its ECLI through the
   rechtbank's zaaknummer when the Afdeling's own zaaknummer search failed. Both routes recorded in `memory.md` item 4; 2021, 2024, 2025
   and 2026 still have no Dienst outcome.
+- *`tools/render.py` shows a whole-file diff for an 18-line change.* The file had CRLF line endings (from the design branch); the edit was
+  written back with LF, so git shows all 1,086 lines changed (`git diff --ignore-all-space`: 18 insertions, 3 deletions). Noticed after the
+  push from the commit's stat. Left as LF — every other source file is LF and mixed endings would be worse — and recorded here so the
+  history is read right. Lesson in `memory.md`: check `file` on a source before rewriting it with a script.
 - Nothing dropped from scope. `PLAN.md` unchanged: the strategy holds (Checkpoint 1 waits on the owner; huurtoeslag not before that; history
   paused at 2013 as argued 10-25); no checkpoint has a date to miss.
 
