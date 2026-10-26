@@ -1,0 +1,19 @@
+id: zt-2017-rul-002
+toeslag: zorgtoeslag
+jaar: 2017
+bron:
+  type: ruling
+  publicatie: "ABRvS 4 december 2019, ECLI:NL:RVS:2019:4069 (zaaknr. 201901677/1/A2), r.o. 1 en 2: de Dienst heeft de zorgtoeslag 2017 'definitief vastgesteld op een lager bedrag dan de ontvangen voorschotten' omdat '[persoon] over de maand januari 2017 als de toeslagpartner van [appellante] moet worden aangemerkt' (tot 11 januari 2017 op hetzelfde adres, in 2016 ook toeslagpartner); 'Het gezamenlijke toetsingsinkomen van [appellante] en [persoon] over 2017 bedraagt € 35.410,00, waardoor [appellante] over de maand januari 2017 geen aanspraak heeft op huurtoeslag en zorgtoeslag'. R.o. 5.2–5.3: Awir art. 5 (wijziging na de eerste van de maand telt vanaf de volgende maand) en art. 7 lid 1 jo. art. 8 lid 1: het jaarinkomen van de partner telt voor die maand mee, 'geen ruimte de draagkracht van [persoon] per maand te bepalen'. Hoger beroep ongegrond"
+  url: https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RVS:2019:4069
+  opgehaald: 2026-10-26
+verified: false
+invoer:
+  partner: true
+  partner_verzekerd: true
+  toetsingsinkomen_aanvrager: "35410"
+  toetsingsinkomen_partner: "0"
+  rendementsgrondslag: null
+  maanden_aanspraak: 1
+verwacht:
+  tegemoetkoming: "0"
+opmerking: "Eén maand van 2017 (januari) met een toeslagpartner: de Dienst telde voor die maand het hele jaarinkomen van de partner mee (gezamenlijk € 35.410) en kwam voor januari op geen aanspraak; de Afdeling bevestigt dat Awir art. 7 lid 1 en art. 8 lid 1 geen maandelijkse draagkracht kennen. De encoding rekent met maanden_aanspraak: 1 en het gezamenlijke jaarinkomen en geeft nihil (de grens met partner ligt onder € 35.410, zie zt-2017-syn-026/-027). De verdeling van het inkomen over beide partners noemt de uitspraak niet; alles staat bij de aanvrager, wat voor Wzt art. 2 lid 2 niet uitmaakt. De elf maanden zonder partner (februari–december) zijn geen case: de uitspraak noemt het eigen inkomen van de aanvrager niet, alleen het jaartotaal van de zorgtoeslag 2017 (€ 978, procesverloop). Twee situaties in één jaar (Awir art. 5) zijn als zodanig niet gecodeerd; deze case is de maand met partner apart. Wordt 'verified' op dezelfde voet als de andere ruling-cases (ASKS.md 9)."

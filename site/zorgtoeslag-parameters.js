@@ -1,6 +1,6 @@
-/* Gegenereerd door tools/build.py op 2026-10-25 uit law/zorgtoeslag/parameters/*.yaml en law/awir/parameters/*.yaml. Niet bewerken: de yaml-bestanden zijn de bron en dragen bij elk getal zijn artikel. Licentie: CC BY-SA 4.0 (LICENSE-DATA). */
+/* Gegenereerd door tools/build.py op 2026-10-26 uit law/zorgtoeslag/parameters/*.yaml en law/awir/parameters/*.yaml. Niet bewerken: de yaml-bestanden zijn de bron en dragen bij elk getal zijn artikel. Licentie: CC BY-SA 4.0 (LICENSE-DATA). */
 var PARAMETERS = {
- "gegenereerd": "2026-10-25",
+ "gegenereerd": "2026-10-26",
  "zorgtoeslag": {
   "2013": {
    "jaar": 2013,
@@ -2307,8 +2307,8 @@ var PARAMETERS = {
    "vermogensgrens_algemeen_met_partner": {
     "waarde": "73904",
     "artikel": "Awir art. 7 lid 3",
-    "bron": "Stcrt. 2024, 38492, art. V onder A ('€ 73.904' vervangen door '€ 74.790' per 01-01-2025); het bedrag 2024 is uit die vervanging afgeleid en in de geconsolideerde tekst van 01-01-2024 (art. 7 lid 3, tweede zin) niet apart nagelezen",
-    "url": "https://zoek.officielebekendmakingen.nl/stcrt-2024-38492.html"
+    "bron": "BWBR0018472, geldend van 01-01-2024 t/m 05-11-2024, art. 7 lid 3, tweede zin (verbatim gelezen 2026-10-26: 'een gezamenlijke rendementsgrondslag als bedoeld in artikel 5.3 van de Wet inkomstenbelasting 2001 hebben van meer dan € 73.904'); vervangen per 01-01-2025 door € 74.790 (Stcrt. 2024, 38492, art. V onder A), waaruit het bedrag tot 2026-10-26 was afgeleid",
+    "url": "https://wetten.overheid.nl/BWBR0018472/2024-01-01"
    },
    "medebewoner_vrijstelling_onder_23": {
     "waarde": "5970",

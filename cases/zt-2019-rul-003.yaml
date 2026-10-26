@@ -1,0 +1,18 @@
+id: zt-2019-rul-003
+toeslag: zorgtoeslag
+jaar: 2019
+bron:
+  type: ruling
+  publicatie: "ABRvS 17 augustus 2022, ECLI:NL:RVS:2022:2396 (zaaknr. 202106083/1/A2), r.o. 1: 'Bij besluit van 27 december 2018 heeft de Belastingdienst/Toeslagen het voorschot op de zorgtoeslag van [appellant] voor 2019 berekend op € 0,00. Op 25 oktober 2019 geeft [appellant] door dat zijn geschatte inkomen over 2019 € 5.063,00 bedraagt. Bij besluit van 21 november 2019 heeft de Belastingdienst/Toeslagen het voorschot op de zorgtoeslag voor 2019 berekend op € 2.314,00.'"
+  url: https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RVS:2022:2396
+  opgehaald: 2026-10-26
+verified: false
+invoer:
+  partner: true
+  partner_verzekerd: true
+  toetsingsinkomen_aanvrager: "5063"
+  toetsingsinkomen_partner: "0"
+  rendementsgrondslag: null
+verwacht:
+  tegemoetkoming: "2314"
+opmerking: "Voorschot 2019 op een geschat inkomen van € 5.063, onder het drempelinkomen (€ 20.940,768), dus het maximum. De uitspraak noemt geen partner; het bedrag bewijst er een: € 2.314 is het maximum MET partner uit de tekst van 2019 (normpremie 4,315% × € 20.940,768 = € 903,59; 2 × € 1.609 − € 903,59 = € 2.314,41 → € 2.314, Awir art. 14 lid 4; via build.run_case), terwijl het maximum zonder partner € 1.189 is (€ 1.609 − 2,005% × € 20.940,768 = € 1.189,14; vgl. het voorschot in ECLI:NL:RVS:2023:3385). Hetzelfde maximum met partner staat als voorschot in zt-2019-rul-001 (€ 2.314 op € 13.314). Het later definitief op nihil berekenen wegens het vermogen staat in zt-2019-rul-004. Wordt 'verified' op dezelfde voet (ASKS.md 9)."

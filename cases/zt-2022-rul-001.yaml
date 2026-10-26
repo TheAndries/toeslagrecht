@@ -1,0 +1,18 @@
+id: zt-2022-rul-001
+toeslag: zorgtoeslag
+jaar: 2022
+bron:
+  type: ruling
+  publicatie: "ABRvS 9 oktober 2024, ECLI:NL:RVS:2024:4094 (zaaknr. 202400646/1/A2), r.o. 1: 'De Belastingdienst/Toeslagen heeft bij besluit van 28 december 2021 aan [appellant] een voorschot zorgtoeslag over 2022 verleend van € 1.336,-. De hoogte van het voorschot is gebaseerd op een geschat toetsingsinkomen over 2022 van € 3.628,-.'"
+  url: https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RVS:2024:4094
+  opgehaald: 2026-10-26
+verified: false
+invoer:
+  partner: false
+  partner_verzekerd: null
+  toetsingsinkomen_aanvrager: "3628"
+  toetsingsinkomen_partner: "0"
+  rendementsgrondslag: null
+verwacht:
+  tegemoetkoming: "1336"
+opmerking: "Eerste uitkomst van de Dienst voor 2022 in het corpus, en de eerste 2022-case die niet uit de folder van de Dienst komt: een voorschot op een geschat inkomen van € 3.628, onder het drempelinkomen (€ 22.356), dus het maximum zonder partner uit de tekst van 2022: normpremie 1,848% × € 22.356 = € 413,14; € 1.749 − € 413,14 = € 1.335,86 → € 1.336 (Awir art. 14 lid 4; via build.run_case). De uitspraak noemt geen partner; het bedrag bewijst er geen (met een verzekerde partner zou het € 2.553 zijn). Het herziene voorschot op nihil staat in zt-2022-rul-002. Wordt 'verified' op dezelfde voet (ASKS.md 9)."

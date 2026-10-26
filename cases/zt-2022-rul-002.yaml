@@ -1,0 +1,18 @@
+id: zt-2022-rul-002
+toeslag: zorgtoeslag
+jaar: 2022
+bron:
+  type: ruling
+  publicatie: "ABRvS 9 oktober 2024, ECLI:NL:RVS:2024:4094 (zaaknr. 202400646/1/A2), r.o. 1: 'Op 15 september 2022 heeft [appellant] aan de Belastingdienst/Toeslagen doorgegeven dat zijn geschatte toetsingsinkomen over 2022 € 47.000,- bedraagt. [appellant] heeft daarbij naar eigen zeggen rekening gehouden met een nabetaling van het UWV van bruto € 31.102,13. De dienst heeft op basis van dit geschatte toetsingsinkomen bij het besluit van 21 oktober 2022 het voorschot zorgtoeslag over 2022 herzien en vastgesteld op nihil'. Het beroep tegen de terugvordering van € 1.112 (Rechtbank Noord-Nederland 21 december 2023, ECLI:NL:RBNNE:2023:5325) en het hoger beroep zijn ongegrond: de nabetaling telt als inkomen van 2022"
+  url: https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RVS:2024:4094
+  opgehaald: 2026-10-26
+verified: false
+invoer:
+  partner: false
+  partner_verzekerd: null
+  toetsingsinkomen_aanvrager: "47000"
+  toetsingsinkomen_partner: "0"
+  rendementsgrondslag: null
+verwacht:
+  tegemoetkoming: "0"
+opmerking: "Herzien voorschot 2022 op nihil bij een geschat inkomen van € 47.000, ver boven de inkomensgrens zonder partner van 2022 (zie zt-2022-pub-006/-007). Een nabetaling van het UWV over 2017–2022 telt volgens Afdeling en rechtbank geheel mee in het jaar van uitbetaling: de Wzt en de Awir kennen, anders dan de huurtoeslag (Bht art. 2b), geen bepaling om een nabetaling buiten beschouwing te laten. Het teruggevorderde voorschot (€ 1.112, uitbetaald tot oktober) is geen invoer. Zelfde aanvrager als zt-2022-rul-001. Wordt 'verified' op dezelfde voet (ASKS.md 9)."

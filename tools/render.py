@@ -1013,10 +1013,13 @@ class Site:
             self.out(f"verschillen/{n}/index.html", page(f"Verschil #{n}", "\n".join(b), rel2, "Dossier", self.site_status))
 
     # ---- 5 Betwisten, 6 Insturen
-    def protocol(self, path: str, src: str, title: str, lead: str, template: str, uitleg: str) -> None:
+    def protocol(self, path: str, src: str, title: str, lead: str, template: str, uitleg: str, kort: list[str]) -> None:
         rel = "../"
         text = strip_title((ROOT / src).read_text(encoding="utf-8"))
         b = [f'<h1>{esc(title)}</h1>', f'<p class="lead">{lead}</p>',
+             '<h2>In het kort</h2>', '<ol>', *[f'<li>{esc(s)}</li>' for s in kort], '</ol>',
+             '<p class="klein">Dit is een samenvatting in gewoon Nederlands. De Engelse tekst hieronder is de tekst die geldt.</p>',
+             '<h2>Het protocol</h2>',
              '<div class="prose">', md(text, rel, shift=0), '</div>',
              '<h2>De tekst om te sturen</h2>', f'<p>{uitleg}</p>',
              f'<label class="veld-label" for="tekst">Uw tekst</label>',
@@ -1030,7 +1033,13 @@ class Site:
                     "Name (real name; role or affiliation if you wish):\n")
         self.protocol("betwisten/index.html", "DISPUTES.md", "Iets betwisten",
                       "Iedereen mag een regel betwisten, onder eigen naam en met een bron. Het protocol hieronder is in het Engels, zoals het dossier het bijhoudt.",
-                      template, "Kopieer de tekst, vul de vijf punten in en stuur die naar het project. Hoe u het project bereikt, staat op de pagina Over.")
+                      template, "Kopieer de tekst, vul de vijf punten in en stuur die naar het project. Hoe u het project bereikt, staat op de pagina Over.",
+                      ["U noemt de regel die u betwist, met het nummer dat op de pagina van die regel staat.",
+                       "U schrijft wat er volgens u anders moet, zo precies mogelijk, en u noemt minstens één bron: een wetsartikel, een beleidsregel, een uitspraak (ECLI) of een beschikking zonder naam.",
+                       "U doet dit onder uw eigen naam. Zonder naam of zonder bron wordt uw tekst niet geplaatst.",
+                       "Het project zet uw tekst op de pagina van de regel, met uw naam en de datum. Die pagina blijft bestaan.",
+                       "Het project antwoordt één keer, meestal binnen drie dagen: het geeft u gelijk en past de regel aan, of het legt uit waarom de regel blijft, met de tekst van de wet.",
+                       "U mag één keer reageren. Daarna heet de regel ‘betwist’ en laat de site beide lezingen zien, tot een tweede deskundige, met naam, een kant kiest."])
 
     def insturen(self) -> None:
         template = ("toeslag:\njaar:\ninvoer:\n  partner:\n  toetsingsinkomen_aanvrager:\n  toetsingsinkomen_partner:\n  partner_verzekerd:\n  rendementsgrondslag:\n"
@@ -1038,7 +1047,13 @@ class Site:
                     "\nLaat weg: naam, BSN, adres, naam van de partner, kenmerk, geboortedatum.\n")
         self.protocol("insturen/index.html", "CASES.md", "Een echte beschikking insturen, anoniem",
                       "Laat weg: uw naam, uw BSN, uw adres, de naam van uw partner, het kenmerk van de brief en uw geboortedatum. Het protocol hieronder is in het Engels, zoals het dossier het bijhoudt.",
-                      template, "Kopieer de tekst, vul de bedragen van uw beschikking in en stuur die naar het project. Hoe u het project bereikt, staat op de pagina Over.")
+                      template, "Kopieer de tekst, vul de bedragen van uw beschikking in en stuur die naar het project. Hoe u het project bereikt, staat op de pagina Over.",
+                      ["U stuurt de cijfers van een echte beschikking van Dienst Toeslagen: het jaar, of u een toeslagpartner had, de inkomens, het vermogen als dat meetelde, en de bedragen op de brief.",
+                       "Niet uw naam, BSN of adres, niet de naam van uw partner, niet het kenmerk van de brief en niet uw geboortedatum. Een zaak die niet veilig anoniem kan, wordt niet bewaard.",
+                       "Uw naam en hoe u te bereiken bent geeft u apart, zodat het project u kan antwoorden. Die komen nooit in het dossier en nooit op de site.",
+                       "Het project rekent uw situatie na met de regels op deze site. Klopt het, dan wordt uw zaak een van de voorbeelden waar de regels tegen getest worden.",
+                       "Klopt het niet, dan wordt het verschil opgeschreven en onderzocht. Dat is precies waar het dossier voor is.",
+                       "Uw zaak wordt gepubliceerd onder een vrije licentie (CC BY-SA), zonder iets dat naar u verwijst."])
 
     # ---- 7 Over
     def over(self) -> None:

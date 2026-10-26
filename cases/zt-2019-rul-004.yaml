@@ -1,0 +1,19 @@
+id: zt-2019-rul-004
+toeslag: zorgtoeslag
+jaar: 2019
+bron:
+  type: ruling
+  publicatie: "ABRvS 17 augustus 2022, ECLI:NL:RVS:2022:2396 (zaaknr. 202106083/1/A2), r.o. 1 en 4.2: 'Op 16 september 2020 ontvangt de Belastingdienst/Toeslagen een melding van de Basisregistratie inkomen dat het inkomen van [appellant] voor 2019 is vastgesteld op € 3.665,00, de grondslag sparen en beleggen op € 106.904,00 en het voordeel uit sparen en beleggen op € 2.948,00. Vanwege de te hoge grondslag sparen en beleggen heeft de Belastingdienst/Toeslagen bij het besluit van 6 november 2020 ... de zorgtoeslag voor 2019 definitief op nihil berekend en een bedrag van € 2.323,00 teruggevorderd.' 'Uit de Basisregistratie inkomen blijkt dat het vermogen van [appellant] over 2019 na aftrek van het heffingvrij vermogen is berekend op € 106.904,00. De rechtbank heeft daarbij terecht overwogen dat op grond van artikel 2a, eerste lid, van de Wet op de zorgtoeslag - zoals dit artikel op 1 januari 2019 luidde - geen aanspraak op zorgtoeslag bestaat als de grondslag sparen en beleggen in het berekeningsjaar meer bedraagt dan € 84.416,00.' Hoger beroep ongegrond"
+  url: https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RVS:2022:2396
+  opgehaald: 2026-10-26
+verified: false
+invoer:
+  partner: true
+  partner_verzekerd: true
+  hele_jaar_dezelfde_partner: null
+  toetsingsinkomen_aanvrager: "3665"
+  toetsingsinkomen_partner: "0"
+  rendementsgrondslag: "167624"
+verwacht:
+  tegemoetkoming: "0"
+opmerking: "Eerste uitkomst van de Dienst op de VERMOGENSTOETS in het corpus: zorgtoeslag 2019 definitief nihil omdat de grondslag sparen en beleggen (€ 106.904) boven de € 84.416 van Wzt art. 2a lid 1 (tekst 2019) lag, bij een inkomen van € 3.665. De uitspraak noemt de grondslag ná aftrek van het heffingvrij vermogen (Wet IB 2001 art. 5.2); de encoding vraagt de rendementsgrondslag en trekt het heffingvrije vermogen van 2019 (€ 30.360, art. 5.5) zelf af — tweemaal bij het hele jaar dezelfde partner (art. 5.2 lid 2), wat zij bij een partner zonder tegenbericht aanneemt. De invoer € 167.624 is daarom GERECONSTRUEERD: € 106.904 + 2 × € 30.360, zodat de encoding op precies de grondslag van de uitspraak uitkomt; zonder partner zou het € 137.264 zijn (+ 1 × € 30.360). De uitkomst hangt daar niet van af: € 106.904 ligt boven € 84.416 onder elke lezing. Dat er een partner was, noemt de uitspraak niet; het voorschot van hetzelfde jaar (zt-2019-rul-003, € 2.314 = het maximum met partner) bewijst het. Het teruggevorderde bedrag (€ 2.323) is € 9 meer dan het voorschot van € 2.314; de uitspraak verklaart dat niet en het is geen invoer. Wordt 'verified' op dezelfde voet (ASKS.md 9)."

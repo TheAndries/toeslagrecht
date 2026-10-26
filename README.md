@@ -23,7 +23,7 @@ a dispute — or it has not done the project.
 
 **Phase:** 0 → 1. The pipeline exists (`tools/build.py`: `law/` + `cases/` → tests → `site/`); the
 zorgtoeslag rules for 2026 back to 2013 are encoded as `draft` with their articles (`law/zorgtoeslag/`);
-173 published cases, forty-four synthetic ones and eighteen from case law (zorgtoeslag 2013, 2014, 2015, 2016, 2019, 2020 and 2023, by ECLI) are checks, none verified yet; the discrepancy log has ten
+173 published cases, forty-four synthetic ones and twenty-six from case law (zorgtoeslag 2013, 2014, 2015, 2016, 2017, 2019, 2020, 2022 and 2023, by ECLI) are checks, none verified yet; the discrepancy log has ten
 entries; `law/CHANGES.md` records the amendments 2013 → 2014 → 2015 → 2016 → 2017 → 2018 → 2019 → … → 2026; the checker
 (`site/zorgtoeslag.html`) follows the owner's layout decision of 2026-10-09 and awaits Checkpoint 1 (Ask 6). See `PLAN.md` and `CHANGELOG.md`.
 

@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Voorbeeld zt-2019-rul-004 — toeslagrecht</title>
+<link rel="stylesheet" href="../../../static/tokens.css">
+<link rel="stylesheet" href="../../../static/site.css">
+</head>
+<body>
+<a class="skip" href="#inhoud">Naar de inhoud</a>
+<header class="kop">
+  <div class="kop-in">
+    <a class="woordmerk" href="../../../index.html">toeslagrecht</a>
+    <nav aria-label="Menu"><ul class="menu"><li><a href="../../../index.html">Narekenen</a></li><li><a href="../../../dossier/index.html" aria-current="page">Dossier</a></li><li><a href="../../../wet/index.html">Wet</a></li><li><a href="../../../over/index.html">Over</a></li></ul></nav>
+  </div>
+</header>
+<main id="inhoud" class="pagina">
+<h1>Voorbeeld zt-2019-rul-004</h1>
+<p class="statusregel">zorgtoeslag · 2019 · bron: <code>ruling</code> · niet geverifieerd</p>
+<h2>De bron</h2>
+<p>ABRvS 17 augustus 2022, ECLI:NL:RVS:2022:2396 (zaaknr. 202106083/1/A2), r.o. 1 en 4.2: 'Op 16 september 2020 ontvangt de Belastingdienst/Toeslagen een melding van de Basisregistratie inkomen dat het inkomen van [appellant] voor 2019 is vastgesteld op € 3.665,00, de grondslag sparen en beleggen op € 106.904,00 en het voordeel uit sparen en beleggen op € 2.948,00. Vanwege de te hoge grondslag sparen en beleggen heeft de Belastingdienst/Toeslagen bij het besluit van 6 november 2020 ... de zorgtoeslag voor 2019 definitief op nihil berekend en een bedrag van € 2.323,00 teruggevorderd.' 'Uit de Basisregistratie inkomen blijkt dat het vermogen van [appellant] over 2019 na aftrek van het heffingvrij vermogen is berekend op € 106.904,00. De rechtbank heeft daarbij terecht overwogen dat op grond van artikel 2a, eerste lid, van de Wet op de zorgtoeslag - zoals dit artikel op 1 januari 2019 luidde - geen aanspraak op zorgtoeslag bestaat als de grondslag sparen en beleggen in het berekeningsjaar meer bedraagt dan € 84.416,00.' Hoger beroep ongegrond</p>
+<p><a href="https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RVS:2022:2396">https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RVS:2022:2396</a> (opgehaald 2026-10-26)</p>
+<h2>Wat is ingevuld</h2><dl class="feiten">
+<dt>partner</dt><dd>True</dd>
+<dt>partner_verzekerd</dt><dd>True</dd>
+<dt>hele_jaar_dezelfde_partner</dt><dd>—</dd>
+<dt>toetsingsinkomen_aanvrager</dt><dd>3665</dd>
+<dt>toetsingsinkomen_partner</dt><dd>0</dd>
+<dt>rendementsgrondslag</dt><dd>167624</dd>
+</dl>
+<h2>Verwacht en berekend</h2>
+<div class="prose"><table><thead><tr><th>Veld</th><th>Verwacht (bron)</th><th>Berekend (wettekst)</th><th>Gelijk</th></tr></thead><tbody>
+<tr><td data-h="Veld"><code>tegemoetkoming</code></td><td data-h="Verwacht (bron)" class="getal">0.00</td><td data-h="Berekend (wettekst)" class="getal">0.00 (exact 0)</td><td data-h="Gelijk">ja</td></tr>
+</tbody></table></div>
+<p>Eerste uitkomst van de Dienst op de VERMOGENSTOETS in het corpus: zorgtoeslag 2019 definitief nihil omdat de grondslag sparen en beleggen (€ 106.904) boven de € 84.416 van Wzt art. 2a lid 1 (tekst 2019) lag, bij een inkomen van € 3.665. De uitspraak noemt de grondslag ná aftrek van het heffingvrij vermogen (Wet IB 2001 art. 5.2); de encoding vraagt de rendementsgrondslag en trekt het heffingvrije vermogen van 2019 (€ 30.360, art. 5.5) zelf af — tweemaal bij het hele jaar dezelfde partner (art. 5.2 lid 2), wat zij bij een partner zonder tegenbericht aanneemt. De invoer € 167.624 is daarom GERECONSTRUEERD: € 106.904 + 2 × € 30.360, zodat de encoding op precies de grondslag van de uitspraak uitkomt; zonder partner zou het € 137.264 zijn (+ 1 × € 30.360). De uitkomst hangt daar niet van af: € 106.904 ligt boven € 84.416 onder elke lezing. Dat er een partner was, noemt de uitspraak niet; het voorschot van hetzelfde jaar (zt-2019-rul-003, € 2.314 = het maximum met partner) bewijst het. Het teruggevorderde bedrag (€ 2.323) is € 9 meer dan het voorschot van € 2.314; de uitspraak verklaart dat niet en het is geen invoer. Wordt 'verified' op dezelfde voet (ASKS.md 9).</p>
+<h2>Stap voor stap, volgens de wettekst</h2>
+<section class="uitkomst"><p class="bedrag-intro">Naar de letter van de wet krijgt u in 2019</p><p class="bedrag">€ 0 <span class="per-jaar">per jaar</span></p><p>Uw vermogen op 1 januari is hoger dan de grens van dat jaar. Dan is er volgens de wet het hele jaar geen zorgtoeslag.</p><p class="eerlijk">Dit is wat de wet zegt voor wat u invulde. Het is geen advies en geen aanvraag; aanvragen doet u op <a href="https://www.toeslagen.nl">toeslagen.nl</a>.</p><p class="statusregel">Alle regels in deze berekening: <span class="status">draft</span>.</p><ol class="stappen"><li class="stap"><p class="stap-zin"><span class="stap-nr" aria-hidden="true">1</span><span>Uw toetsingsinkomen en dat van uw partner tellen samen. <span class="getal">Uitkomst: € 3.665,00.</span></span></p><p class="kantlijn"><a href="../../../dossier/awir/awir-2026-art7-1/index.html">Awir art. 7 lid 1</a> · <span class="status">draft</span><span class="rekensom">3665 + 0</span></p></li><li class="stap"><p class="stap-zin"><span class="stap-nr" aria-hidden="true">2</span><span>Is het vermogen op 1 januari boven de grens, dan is er het hele jaar geen zorgtoeslag. <span class="getal">Uitkomst: boven de grens: geen zorgtoeslag.</span></span></p><p class="kantlijn"><a href="../../../dossier/zorgtoeslag/zt-2026-art3-1/index.html">Wzt art. 2a lid 1 (tekst 2019) (BWBR0018451, geldend van 01-01-2019 t/m 31-12-2019 (verbatim gelezen 2026-10-18))</a> · <span class="status">draft</span><span class="rekensom">Gezamenlijke grondslag sparen en beleggen 167624 − 2 × heffingvrij vermogen 30360 (Wet IB 2001 art. 5.2 lid 2, art. 5.5) = 106904 &gt; € 84416: geen aanspraak.</span></p></li></ol></section>
+</main>
+<footer class="voet">
+  <div class="pagina">
+    <p>toeslagrecht · de toeslagenwet als rekenregels die u zelf kunt nalopen</p>
+    <p>Elke regel heeft de status <span class="status">draft</span>: door niemand met vakkennis nagelezen. Geen enkele case is geverifieerd aan een echte beschikking.</p>
+    <p class="voet-links"><a href="../../../dossier/index.html">Dossier</a> · <a href="../../../betwisten/index.html">Iets betwisten</a> · <a href="../../../insturen/index.html">Een beschikking insturen</a> · <a href="../../../over/index.html">Over</a> · <a href="https://github.com/TheAndries/toeslagrecht">Bron</a> (MIT / CC BY-SA 4.0) · Gebouwd 2026-10-26</p>
+  </div>
+</footer>
+</body>
+</html>

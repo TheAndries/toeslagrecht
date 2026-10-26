@@ -1,0 +1,18 @@
+id: zt-2020-rul-004
+toeslag: zorgtoeslag
+jaar: 2020
+bron:
+  type: ruling
+  publicatie: "ABRvS 18 december 2024, ECLI:NL:RVS:2024:5262 (zaaknr. 202303472/1/A2), procesverloop en r.o. 1: 'Bij besluit van 31 juli 2021 heeft de Belastingdienst/Toeslagen de zorg- en huurtoeslag van [appellante] over het jaar 2020 definitief vastgesteld op € 722,- onderscheidenlijk nihil. Daarnaast zijn de te veel betaalde voorschotten van € 529,- aan zorgtoeslag en € 2.653,- aan huurtoeslag teruggevorderd.' 'De voorschotten zijn gebaseerd op een geschat toetsingsinkomen van € 16.815,-. De Belastingdienst/Toeslagen heeft op 10 juni 2021 een melding uit de Basisregistratie Inkomen ontvangen dat het verzamelinkomen van [appellante] over 2020 € 25.328,- bedroeg' (met daarin een beëindigingsvergoeding van € 5.884,11 en € 1.781,59 PBL en vakantie-uren). R.o. 3.2: geen grondslag om inkomensbestanddelen buiten beschouwing te laten (ECLI:NL:RVS:2017:659). Hoger beroep ongegrond"
+  url: https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RVS:2024:5262
+  opgehaald: 2026-10-26
+verified: false
+invoer:
+  partner: false
+  partner_verzekerd: null
+  toetsingsinkomen_aanvrager: "25328"
+  toetsingsinkomen_partner: "0"
+  rendementsgrondslag: null
+verwacht:
+  tegemoetkoming: "722"
+opmerking: "Definitieve vaststelling 2020 van € 722 op een toetsingsinkomen van € 25.328. De uitspraak noemt geen partner; het bedrag bewijst er geen: de tekst van 2020 geeft zonder partner € 721,73 → € 722 (Awir art. 14 lid 4) en met een verzekerde partner € 1.869. De voorschotten op een geschat inkomen van € 16.815 (onder het drempelinkomen) zouden volgens de tekst € 1.250 zijn geweest (het maximum zonder partner, vgl. zt-2020-rul-002); € 722 + de teruggevorderde € 529 is € 1.251 — een euro meer, wat de uitspraak niet verklaart; het voorschotbedrag staat niet in de tekst en is geen case. Vierde uitkomst van de Dienst voor 2020 met inkomen. Wordt 'verified' op dezelfde voet (ASKS.md 9)."
