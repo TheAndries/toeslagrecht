@@ -1,0 +1,18 @@
+id: zt-2019-rul-007
+toeslag: zorgtoeslag
+jaar: 2019
+bron:
+  type: ruling
+  publicatie: "Rechtbank Noord-Holland 7 maart 2024, ECLI:NL:RBNHO:2024:2245 (zaaknr. AWB 23/3141), r.o. 1: 'Bij de primaire besluiten is de definitief berekende zorgtoeslag van eiser over de jaren 2019 en 2020 verlaagd van respectievelijk € 1.189 en € 1.250 naar nihil. Hierbij is door verweerder voor het jaar 2019 uitgegaan van een geschat jaarinkomen van eiser van € 36.428 en voor het jaar 2020 van € 41.466.' R.o. 4: 'Op 14 november 2022 is de inspecteur bij uitspraken op bezwaar tegemoet gekomen aan de bezwaren van eiser en is het geregistreerde inkomen voor 2019 en 2020 vastgesteld op respectievelijk € 18.214 en € 20.733. Hiermee is de definitieve berekening van eisers zorgtoeslag voor 2019 en 2020 aangepast en vastgesteld op respectievelijk € 1.189 en € 1.250.' Beroep (over de vergoeding van bezwaarkosten) ongegrond"
+  url: https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RBNHO:2024:2245
+  opgehaald: 2026-10-27
+verified: false
+invoer:
+  partner: false
+  partner_verzekerd: null
+  toetsingsinkomen_aanvrager: "18214"
+  toetsingsinkomen_partner: "0"
+  rendementsgrondslag: null
+verwacht:
+  tegemoetkoming: "1189"
+opmerking: "Definitieve berekening 2019 van € 1.189 op het door de inspecteur na bezwaar vastgestelde inkomen van € 18.214, onder het drempelinkomen (€ 20.940,768): het maximum zonder partner uit de tekst van 2019, € 1.609 − 2,005% × € 20.940,768 = € 1.189,14 → € 1.189 (Awir art. 14 lid 4; via build.run_case). De uitspraak noemt geen partner; het bedrag bewijst er geen (met een verzekerde partner zou het € 2.314 zijn). Dezelfde aanvrager, hetzelfde jaar, op het eerder geregistreerde inkomen: zt-2019-rul-008 (nihil); 2020: zt-2020-rul-005 en -006. Wordt 'verified' op dezelfde voet (ASKS.md 9)."

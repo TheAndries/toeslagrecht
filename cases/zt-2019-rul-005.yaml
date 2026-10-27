@@ -1,0 +1,18 @@
+id: zt-2019-rul-005
+toeslag: zorgtoeslag
+jaar: 2019
+bron:
+  type: ruling
+  publicatie: "Rechtbank Gelderland 10 maart 2022, ECLI:NL:RBGEL:2022:1259 (zaaknr. AWB 20/5717), r.o. 2: 'Eiser heeft over 2019 voorschotten zorgtoeslag ontvangen van € 1.093 en voorschotten huurtoeslag van € 1.632. Bij de bepaling van de hoogte van de voorschotten is verweerder uitgegaan van een geschat jaarinkomen van € 21.655. Op 11 juni 2020 heeft verweerder informatie uit de Basisregistratie Inkomen (BRI) ontvangen, waaruit blijkt dat het inkomen van eiser in het jaar 2019 € 22.779 bedroeg. Op basis van dat inkomen heeft verweerder in het besluit van 7 augustus 2020 de zorgtoeslag over 2019 definitief vastgesteld op € 941 en de huurtoeslag op € 0.' R.o. 3: 'Eiser erkent dat zijn inkomen over 2019 € 22.779 bedroeg.' Beroep gegrond op de evenredigheid van de terugvordering (beperkt tot € 79, de overschrijding van de huurtoeslaggrens); de herziening zelf 'niet in geschil'"
+  url: https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RBGEL:2022:1259
+  opgehaald: 2026-10-27
+verified: false
+invoer:
+  partner: false
+  partner_verzekerd: null
+  toetsingsinkomen_aanvrager: "21655"
+  toetsingsinkomen_partner: "0"
+  rendementsgrondslag: null
+verwacht:
+  tegemoetkoming: "1093"
+opmerking: "Voorschot zorgtoeslag 2019 van € 1.093 op een geschat jaarinkomen van € 21.655. De uitspraak noemt geen partner; de bedragen bewijzen er geen: de tekst van 2019 geeft zonder partner € 1.092,57 → € 1.093 (Awir art. 14 lid 4; via build.run_case) en met een verzekerde partner € 2.218. De uitspraak noemt het inkomen 'jaarinkomen', niet toetsingsinkomen; de herziening op het BRI-inkomen (zt-2019-rul-006) laat zien dat het als toetsingsinkomen is gebruikt. Vijfde uitkomst van de Dienst voor 2019 met inkomen, de eerste uit een rechtbankuitspraak. Wordt 'verified' op dezelfde voet (ASKS.md 9)."

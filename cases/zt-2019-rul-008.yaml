@@ -1,0 +1,18 @@
+id: zt-2019-rul-008
+toeslag: zorgtoeslag
+jaar: 2019
+bron:
+  type: ruling
+  publicatie: "Rechtbank Noord-Holland 7 maart 2024, ECLI:NL:RBNHO:2024:2245 (zaaknr. AWB 23/3141), r.o. 1: 'Bij de primaire besluiten is de definitief berekende zorgtoeslag van eiser over de jaren 2019 en 2020 verlaagd van respectievelijk € 1.189 en € 1.250 naar nihil. Hierbij is door verweerder voor het jaar 2019 uitgegaan van een geschat jaarinkomen van eiser van € 36.428 en voor het jaar 2020 van € 41.466.' R.o. 4: 'Op 14 november 2022 is de inspecteur bij uitspraken op bezwaar tegemoet gekomen aan de bezwaren van eiser en is het geregistreerde inkomen voor 2019 en 2020 vastgesteld op respectievelijk € 18.214 en € 20.733. Hiermee is de definitieve berekening van eisers zorgtoeslag voor 2019 en 2020 aangepast en vastgesteld op respectievelijk € 1.189 en € 1.250.' Beroep (over de vergoeding van bezwaarkosten) ongegrond"
+  url: https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RBNHO:2024:2245
+  opgehaald: 2026-10-27
+verified: false
+invoer:
+  partner: false
+  partner_verzekerd: null
+  toetsingsinkomen_aanvrager: "36428"
+  toetsingsinkomen_partner: "0"
+  rendementsgrondslag: null
+verwacht:
+  tegemoetkoming: "0"
+opmerking: "Zorgtoeslag 2019 definitief op nihil gesteld op een geregistreerd inkomen van € 36.428 (door de uitspraak 'geschat jaarinkomen' genoemd; later door de inspecteur verlaagd tot € 18.214, zie zt-2019-rul-007). Zonder partner ligt € 36.428 boven de inkomensgrens van de tekst van 2019 (€ 29.562) → nihil. Dat er geen partner was, volgt uit het bedrag van € 1.189 op het gecorrigeerde inkomen (het maximum zonder partner); met een verzekerde partner zou de tekst bij € 36.428 nog € 221 geven. De uitspraak gaat over de vergoeding van bezwaarkosten, niet over de hoogte van de toeslag; de bedragen zijn de feiten die de rechtbank vaststelt. Wordt 'verified' op dezelfde voet (ASKS.md 9)."

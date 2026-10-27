@@ -1,0 +1,18 @@
+id: zt-2018-rul-001
+toeslag: zorgtoeslag
+jaar: 2018
+bron:
+  type: ruling
+  publicatie: "Rechtbank Midden-Nederland 5 februari 2021, ECLI:NL:RBMNE:2021:668 (zaaknr. UTR 20/725), overwegingen (feiten): 'Het voorschot voor de zorgtoeslag bedroeg € 1.061 en voor het kindgebonden budget was dat € 1.599. Daarbij ging verweerder uit van een (geschat) gezamenlijk inkomen in 2018 van eiseres en haar echtgenoot van € 28.304. Daarna is bij verweerder bekend geworden dat het gezamenlijke inkomen van eiseres en haar echtgenoot in 2018 een stuk hoger lag, namelijk € 37.125. Omdat het gezamenlijke inkomen boven de maximale inkomensgrens van € 35.996 komt, hebben eiseres en haar echtgenoot geen recht meer op zorgtoeslag. Als gevolg hiervan moeten eiseres en haar echtgenoot € 1.661 terugbetalen' (zorgtoeslag en kindgebonden budget samen). Beroep ongegrond"
+  url: https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RBMNE:2021:668
+  opgehaald: 2026-10-27
+verified: false
+invoer:
+  partner: true
+  partner_verzekerd: true
+  toetsingsinkomen_aanvrager: "28304"
+  toetsingsinkomen_partner: "0"
+  rendementsgrondslag: null
+verwacht:
+  tegemoetkoming: "1061"
+opmerking: "EERSTE uitkomst van de Dienst voor 2018 met inkomen in het corpus: een voorschot zorgtoeslag 2018 van € 1.061 voor een paar toeslagpartners op een geschat gezamenlijk inkomen van € 28.304. De uitspraak splitst het inkomen niet over de partners; de encoding telt op, dus staat het geheel bij de aanvrager. De tekst van 2018 geeft met een verzekerde partner 2 × € 1.546 − (4,750% × € 20.450,88 + 13,490% × (€ 28.304 − € 20.450,88)) = € 1.061,20 → € 1.061 (Awir art. 14 lid 4; via build.run_case). De definitieve vaststelling op nihil op € 37.125 staat in zt-2018-rul-002. Wordt 'verified' op dezelfde voet (ASKS.md 9)."

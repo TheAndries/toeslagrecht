@@ -1,0 +1,18 @@
+id: zt-2019-rul-006
+toeslag: zorgtoeslag
+jaar: 2019
+bron:
+  type: ruling
+  publicatie: "Rechtbank Gelderland 10 maart 2022, ECLI:NL:RBGEL:2022:1259 (zaaknr. AWB 20/5717), r.o. 2: 'Eiser heeft over 2019 voorschotten zorgtoeslag ontvangen van € 1.093 en voorschotten huurtoeslag van € 1.632. Bij de bepaling van de hoogte van de voorschotten is verweerder uitgegaan van een geschat jaarinkomen van € 21.655. Op 11 juni 2020 heeft verweerder informatie uit de Basisregistratie Inkomen (BRI) ontvangen, waaruit blijkt dat het inkomen van eiser in het jaar 2019 € 22.779 bedroeg. Op basis van dat inkomen heeft verweerder in het besluit van 7 augustus 2020 de zorgtoeslag over 2019 definitief vastgesteld op € 941 en de huurtoeslag op € 0.' R.o. 3: 'Eiser erkent dat zijn inkomen over 2019 € 22.779 bedroeg.' Beroep gegrond op de evenredigheid van de terugvordering (beperkt tot € 79, de overschrijding van de huurtoeslaggrens); de herziening zelf 'niet in geschil'"
+  url: https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RBGEL:2022:1259
+  opgehaald: 2026-10-27
+verified: false
+invoer:
+  partner: false
+  partner_verzekerd: null
+  toetsingsinkomen_aanvrager: "22779"
+  toetsingsinkomen_partner: "0"
+  rendementsgrondslag: null
+verwacht:
+  tegemoetkoming: "941"
+opmerking: "Definitieve vaststelling 2019 van € 941 op het BRI-inkomen van € 22.779, door eiser erkend. Zonder partner geeft de tekst van 2019 € 940,61 → € 941 (Awir art. 14 lid 4); met een verzekerde partner zou het € 2.066 zijn. Het verschil met het voorschot (zt-2019-rul-005), € 152, is precies wat de uitspraak als teruggevorderde zorgtoeslag noemt. De rechtbank beperkte de terugvordering tot € 79 vanwege de evenredigheid (de huurtoeslaggrens was met € 79 overschreden); de hoogte van de zorgtoeslag zelf was niet in geschil. Wordt 'verified' op dezelfde voet (ASKS.md 9)."

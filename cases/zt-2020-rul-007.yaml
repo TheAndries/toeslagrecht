@@ -1,0 +1,18 @@
+id: zt-2020-rul-007
+toeslag: zorgtoeslag
+jaar: 2020
+bron:
+  type: ruling
+  publicatie: "ABRvS 30 augustus 2023, ECLI:NL:RVS:2023:3323 (zaaknr. 202206014/1/A2), r.o. 1: 'Bij besluit van 27 december 2019 heeft de Belastingdienst/Toeslagen aan [appellant] een voorschot zorgtoeslag over 2020 toegekend van € 1.250,00. Bij de berekening van het voorschot is uitgegaan van een geschat toetsingsinkomen van € 0,00. In het besluit van 31 juli 2021 heeft de Belastingdienst/Toeslagen de zorgtoeslag van [appellant] over 2020 vastgesteld op € 0,00 en een bedrag van € 1.254,00 van hem teruggevorderd. Reden hiervan is dat de Belastingdienst/Toeslagen van de Basisregistratie Inkomen (BRI) een melding heeft ontvangen dat de grondslag sparen en beleggen van [appellant] over 2020 € 99.000,00 is.' R.o. 3 (de rechtbank, bevestigd): 'Omdat er geen aanspraak op zorgtoeslag in 2020 bestond als de grondslag sparen en beleggen meer was dan € 85.767,00 en de Belastingdienst/Toeslagen uit mocht gaan van de in de BRI opgenomen grondslag sparen en beleggen van € 99.000,00 heeft de Belastingdienst/Toeslagen de zorgtoeslag van [appellant] over 2020 terecht op nihil vastgesteld'. Hoger beroep ongegrond"
+  url: https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RVS:2023:3323
+  opgehaald: 2026-10-27
+verified: false
+invoer:
+  partner: false
+  partner_verzekerd: null
+  toetsingsinkomen_aanvrager: "0"
+  toetsingsinkomen_partner: "0"
+  rendementsgrondslag: null
+verwacht:
+  tegemoetkoming: "1250"
+opmerking: "Voorschot zorgtoeslag 2020 van € 1.250 op een geschat toetsingsinkomen van € 0: het maximum zonder partner uit de tekst van 2020, € 1.642 − 1,830% × € 21.430,656 = € 1.249,82 → € 1.250 (Awir art. 14 lid 4; via build.run_case). De uitspraak noemt geen toeslagpartner (r.o. 2: de huisgenote is 'geen partner in de zorgtoeslag'); het bedrag bevestigt dat (met een verzekerde partner zou het € 2.397 zijn). De definitieve vaststelling op nihil wegens het vermogen staat in zt-2020-rul-008. Het teruggevorderde bedrag (€ 1.254) is € 4 meer dan het voorschot; de uitspraak verklaart dat niet en het is geen invoer. Wordt 'verified' op dezelfde voet (ASKS.md 9)."

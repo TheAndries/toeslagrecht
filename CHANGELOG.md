@@ -2,6 +2,99 @@
 
 Newest first. What was done, decided, and got wrong.
 
+## 2026-10-27 — eighteenth run: seventeen Dienst outcomes from nine rulings through the rechtspraak.nl open-data feed — the first for 2018 and 2021, a second vermogenstoets decision, a 2018 figure on the drempelinkomen rounding, and discrepancy #11 opened on a 2021 voorschot
+
+Eighteenth run of routine `trig_012xyD5r5rxFDCjfHbZ58Kib`. Model as configured for the session: `claude-fable-5-1`, the same as the
+previous entry; no handover note needed. The checkout arrived on `main` at a current `origin/main` (`211564e`, the previous run's second
+commit; `git fetch` confirmed it). The routine fired the day after the previous run: no new gap. `git log -4 --stat` shows no owner commit
+since 10-26.
+
+**Step 1 — asks marked done.** None since 10-26. Asks 4, 6, 8, 9 and 10 stay open as recorded; 9 extended today (step 8).
+
+**Step 2 — the inbox.** `INBOX.md` is empty and nothing arrived outside it. No case, dispute, review or owner note to handle.
+
+**Step 3.** No open motion.
+
+**Step 4 — done (item 4 of `memory.md`: Dienst outcomes from case law for the years that had none. Three web searches for 2021/2024/2025
+rulings and three zaaknummer searches, all fruitless; then a new route — the rechtspraak.nl open-data feed — swept 2021–2026 in the
+background; fourteen rulings fetched and read in full, eleven recorded.)**
+- *The route.* The web search found nothing for 2021 again (as on 10-26) and the zaaknummer searches returned unrelated pages; the search
+  API of `uitspraken.rechtspraak.nl` answers 403. The open-data feed `data.rechtspraak.nl/uitspraken/zoeken` does not: with a date range,
+  the bestuursrecht subject and `return=DOC` it lists every ruling of the period with its inhoudsindicatie. Swept week by week from
+  2021-01-01 to today (about 300 requests, ten minutes, no tokens), it gave 259 rulings mentioning zorgtoeslag; each full text was then
+  fetched from `data.rechtspraak.nl/uitspraken/content` and grepped for sentences with an amount and the toeslagjaar. Thirty-four carry a
+  2021, 2024, 2025 or 2026 outcome. Nine rulings were read today; the rest are listed in `law/SOURCES.md` open item 7 for the next runs.
+- *Seventeen `ruling` cases from nine rulings, sixteen reproduced by the encoding through `build.run_case` before the file was written,
+  one not.* **2018 — the first Dienst outcomes with an income:** Rechtbank Midden-Nederland 05-02-2021, ECLI:NL:RBMNE:2021:668: a couple's
+  voorschot of € 1.061 at a geschat gezamenlijk inkomen of € 28.304 (the text: € 1.061,20) and nihil at € 37.125 → `zt-2018-rul-001`, `-002`;
+  the rechtbank quotes the Dienst's 'maximale inkomensgrens van € 35.996' — see #1 below. **2019:** Rechtbank Gelderland 10-03-2022,
+  ECLI:NL:RBGEL:2022:1259: voorschot € 1.093 at € 21.655, definitief € 941 at € 22.779, zonder partner by the amounts → `zt-2019-rul-005`,
+  `-006`; Rechtbank Noord-Holland 07-03-2024, ECLI:NL:RBNHO:2024:2245: one aanvrager's 2019 and 2020 set to nihil at registered incomes of
+  € 36.428 and € 41.466 and then to € 1.189 and € 1.250 (the maxima zonder partner) at the inspecteur's corrected € 18.214 and € 20.733 →
+  `zt-2019-rul-007`, `-008`, `zt-2020-rul-005`, `-006`. **2020:** ABRvS 30-08-2023, ECLI:NL:RVS:2023:3323: voorschot € 1.250 at a geschat
+  toetsingsinkomen of € 0, then nihil because the BRI grondslag sparen en beleggen, € 99.000, exceeded the € 85.767 of Wzt art. 2a (text
+  2020) — **the record's second decision on the vermogenstoets**, input reconstructed as € 99.000 + € 30.846 and said so, as on 10-26 →
+  `zt-2020-rul-007`, `-008`; Rechtbank Rotterdam 20-10-2021, ECLI:NL:RBROT:2021:10386: a couple's voorschot of € 1.238 at € 21.980 + € 8.000
+  (the text: € 1.238,33) → `zt-2020-rul-009`. **2021 — the first Dienst outcomes at all** (2021 had only the four synthetic ceiling cases):
+  Rechtbank Den Haag 01-12-2023, ECLI:NL:RBDHA:2023:19139, confirmed by ABRvS 20-11-2024, ECLI:NL:RVS:2024:4751: voorschot € 1.287 at
+  € 9.439 and definitief € 54 at € 30.913 (an AOW-nabetaling over 2019–2021 counted in 2021; the text: € 54,07) → `zt-2021-rul-001`, `-002`
+  — the first 2021 point on the afbouw line; Rechtbank Zeeland-West-Brabant 29-10-2024, ECLI:NL:RBZWB:2024:7431: € 1.287 at € 12.242 and
+  nihil at € 44.615 → `-003`, `-004`; Rechtbank Noord-Nederland 27-02-2024, ECLI:NL:RBNNE:2024:632: herzien € 487 at € 27.725 — the text
+  gives € 486,9987, two tenths of a cent from the rounding edge, and the Dienst lands on the same euro → `-005`; and **a voorschot of
+  € 1.289 at € 14.766, which the text does not give** (its maximum zonder partner is € 1.286,86 → € 1.287) → `-006`, see #11.
+- *Discrepancy #11 opened, `open`.* The € 1.289 is two euro above the text's 2021 maximum. What is known is in the entry: four other 2021
+  voorschotten below the drempelinkomen in today's rulings are € 1.287; a partner does not explain it (€ 2.487); the same ruling's revised
+  amount matches the text to the euro; the ruling gives neither the date of the voorschot nor its parameters. Classification waits on an
+  investigation (a later voorschot date; other parameters than the final ones) — it is not guessed. The case carries `discrepantie: 11`
+  and is reported as a failure, not blocking.
+- *#1, a 2018 figure.* The Dienst's inkomensgrens met partner for 2018, € 35.996 as the rechtbank quotes it, equals the text's ceiling with
+  the unrounded drempelinkomen (€ 20.450,88) or one rounded up (€ 20.451); a drempelinkomen rounded down (€ 20.450) would give € 35.995
+  (`zt-2018-syn-022`/`-023`, written 10-19 for exactly this test). So in 2018 the Dienst did not round down — the first year before 2023 with
+  a Dienst figure on the question. Added to #1 as a dated note; status unchanged.
+- *Five rulings read, no case:* ECLI:NL:RBMNE:2023:7512 (2021: incomes € 13.157 and € 24.931, € 422 reclaimed, no amount stated — € 865
+  would be derived, and the text gives € 866; worth a re-read), ECLI:NL:RBOVE:2021:1460 (2017 split by a partner's departure — Awir art. 5,
+  not encoded), ECLI:NL:RBDHA:2021:2394 (2019 part-year partner, no incomes), and the two summaries without usable figures. All in
+  `SOURCES.md` §4.
+- *Check:* 260 cases, 239 pass, 21 fail (the twenty of 10-20 plus `zt-2021-rul-006`, every one logged), 0 blocking; both encodings agree on
+  260. Site rebuilt: seventeen new case pages, `/verschillen/11/`.
+- *The record's files:* seventeen case files; `DISCREPANCIES.md` (#11, #1 note); `SOURCES.md` (eleven §4 rows, open item 7 with the unread
+  hits and the route); `cases/README.md` and `README.md` (forty-three ruling cases; 2018 and 2021 join the years with a Dienst outcome);
+  `ASKS.md` 9.
+
+**What was wrong and why.**
+- *Three zaaknummer web searches returned nothing* and the year searches for 2021/2024/2025 gave only known rulings — about 15,000 tokens
+  spent before the feed route was tried. The feed should have been tried on 10-26, when memory already recorded that the `zoeken` API
+  existed and 'returned 0 for a creator/date/subject query': that query was malformed, the API works. Lesson in `memory.md` item 4.
+- *The digest script crashed on its first run:* one inhoudsindicatie in the feed contained a newline, so a continuation line was read as an
+  ECLI. Fixed by skipping lines not starting with `ECLI:`; the script re-runs idempotently.
+- *An explanation of #11 almost entered the log.* The first thought was that a December-2020 voorschot might rest on provisional
+  parameters; that is a guess about the Dienst's method, which the project does not record (`CASES.md`). The entry says 'to investigate'.
+- *Fourteen rulings were fetched and only nine read to the end*; the five with 2024 outcomes (`SOURCES.md` item 7) were left for the next
+  run because the ceiling was near — 2024, 2025 and 2026 still have no Dienst outcome.
+- Nothing dropped from scope. `PLAN.md` unchanged: the strategy holds (Checkpoint 1 waits on the owner; huurtoeslag not before that;
+  history paused at 2013); no checkpoint has a date to miss.
+
+**Step 8 — asks.** None new. Ask 9 extended to the seventeen new ruling cases, per ruling, nine rulings; the owner's confirmation of
+ECLI:NL:RBNNE:2024:632's figures is the one that matters most (#11).
+
+**Dropped from memory.** Open item 4 rewritten around the feed route (the three older routes kept in one sentence); the cases paragraph's
+10-26 detail kept, today's added. About 7,460 words (wc) after today's additions — under the cap; the key-figures paragraph is still the
+part to compress next.
+
+**Effort.** Roughly 290,000 of the 300,000-token ceiling: about 95,000 reading the files, the previous three entries, memory and the
+pipeline; about 60,000 on the searches, the feed, fourteen rulings and the computations; about 135,000 writing and checking the seventeen
+cases, #11, the `SOURCES.md` rows, the memory edits and this entry. The sweep itself cost no tokens; reading its hits is what the next runs
+spend on.
+
+**Record under the ten-year rule.** This run added to the record: seventeen Dienst outcomes with their incomes, each traced to its ruling
+and reproduced from the year's text except one — the first for 2018 (€ 1.061 at € 28.304 and nihil at € 37.125, met partner) and the first
+six for 2021 (€ 1.287 at € 9.439 and € 12.242, € 54 at € 30.913, € 487 at € 27.725, nihil at € 44.615, and € 1.289 at € 14.766); the second
+decision on the vermogenstoets (2020, nihil at a grondslag sparen en beleggen of € 99.000); four 2019 and three more 2020 outcomes; the
+dated finding that the Dienst's 2018 inkomensgrens met partner was € 35.996, so the 2018 drempelinkomen was not rounded down; discrepancy
+#11, a 2021 voorschot two euro above the text, with what is known; the dated finding that the Afdeling counts an AOW-nabetaling in the
+year paid for 2021 as it did for 2022; and eleven rulings recorded so no later run reads them again. The sweep scripts and the site build
+are regenerable and are not counted.
+
 ## 2026-10-26 — seventeenth run: eight Dienst outcomes from five rulings — the first on the vermogenstoets, the first for 2017 and the first for 2022 outside a leaflet; the protocol pages get a plain-Dutch summary; Awir 2024 art. 7 lid 3 read in the consolidated text
 
 Seventeenth run of routine `trig_012xyD5r5rxFDCjfHbZ58Kib`. Model as configured for the session: `claude-fable-5-1`, the same as the

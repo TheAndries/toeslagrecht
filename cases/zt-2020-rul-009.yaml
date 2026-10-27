@@ -1,0 +1,18 @@
+id: zt-2020-rul-009
+toeslag: zorgtoeslag
+jaar: 2020
+bron:
+  type: ruling
+  publicatie: "Rechtbank Rotterdam 20 oktober 2021, ECLI:NL:RBROT:2021:10386 (zaaknr. ROT 21/1133), r.o. 2.2: 'Bij besluit van eveneens 29 december 2020 is aan de partner van eiseres een voorschot zorgtoeslag over 2020 van € 1.238,- toegekend. Bij besluit van 10 mei 2021 is het voorschot zorgtoeslag over 2020 voor de partner van eiseres vastgesteld op € 1.834,-.' R.o. 3.1: de Dienst merkt de echtgenoot over 1 januari tot en met 31 december 2020 als toeslagpartner aan; 'Bij de berekening wordt rekening gehouden met haar inkomen van € 8.000,- en het inkomen van haar toeslagpartner van € 21.980,-, waardoor het geschatte toetsingsinkomen wordt vastgesteld op € 29.980,-.' Beroep gegrond (nieuwe berekening van de voorschotten van eiseres en haar partner opgedragen)"
+  url: https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RBROT:2021:10386
+  opgehaald: 2026-10-27
+verified: false
+invoer:
+  partner: true
+  partner_verzekerd: true
+  toetsingsinkomen_aanvrager: "21980"
+  toetsingsinkomen_partner: "8000"
+  rendementsgrondslag: null
+verwacht:
+  tegemoetkoming: "1238"
+opmerking: "Voorschot zorgtoeslag 2020 van € 1.238 voor een paar toeslagpartners op een geschat gezamenlijk toetsingsinkomen van € 29.980 (€ 21.980 + € 8.000; de aanvrager is de echtgenoot, aan wie het voorschot is toegekend, de encoding telt de twee inkomens op). De tekst van 2020 geeft met een verzekerde partner 2 × € 1.642 − (4,140% × € 21.430,656 + 13,550% × (€ 29.980 − € 21.430,656)) = € 1.238,33 → € 1.238 (Awir art. 14 lid 4; via build.run_case). Het voorschot van eiseres zelf (€ 1.250, het maximum zonder partner, toegekend vóór het partnerschap met terugwerkende kracht werd aangenomen) noemt de uitspraak zonder het inkomen waarop het rustte; de latere vaststelling van het voorschot van de partner op € 1.834 (10 mei 2021) noemt geen inkomen. Beide zijn daarom geen case. De rechtbank droeg een nieuwe berekening op; het bedrag hier is wat de Dienst op 29 december 2020 op deze inkomens berekende. Wordt 'verified' op dezelfde voet (ASKS.md 9)."

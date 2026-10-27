@@ -1,0 +1,18 @@
+id: zt-2021-rul-005
+toeslag: zorgtoeslag
+jaar: 2021
+bron:
+  type: ruling
+  publicatie: "Rechtbank Noord-Nederland 27 februari 2024, ECLI:NL:RBNNE:2024:632 (zaaknr. LEE 23/961), r.o. 1.1 en 5: 'Verweerder heeft bij besluit van 9 juni 2022 de hoogte van de zorgtoeslag 2021 herzien op een bedrag van € 487,00.' 'Eiser heeft over het jaar 2021 een voorschot van € 1.289,00 aan zorgtoeslag ontvangen op basis van een geschat inkomen van € 14.766,00. Op 25 mei 2022 heeft verweerder vanuit de Basisregistratie Inkomensgegevens (BRI) een melding gekregen dat het inkomen van eiser voor het jaar 2021 € 27.725,00 bedraagt. Verweerder heeft op basis daarvan de eerder toegekende zorgtoeslag herzien op € 487,00.' (Een afgekocht klein pensioen telde mee.) Beroep ongegrond"
+  url: https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RBNNE:2024:632
+  opgehaald: 2026-10-27
+verified: false
+invoer:
+  partner: false
+  partner_verzekerd: null
+  toetsingsinkomen_aanvrager: "27725"
+  toetsingsinkomen_partner: "0"
+  rendementsgrondslag: null
+verwacht:
+  tegemoetkoming: "487"
+opmerking: "Herziene voorschotbeschikking 2021 van € 487 op een BRI-inkomen van € 27.725. De tekst van 2021 geeft zonder partner € 1.705 − (1,915% × € 21.835,008 + 13,580% × (€ 27.725 − € 21.835,008)) = € 486,9987 → € 487 (Awir art. 14 lid 4; via build.run_case) — op twee tienden van een cent van de afrondingsgrens, en de Dienst komt op hetzelfde hele bedrag. De uitspraak noemt geen partner; het bedrag bewijst er geen (met een verzekerde partner zou het € 1.687 zijn). Het eerdere voorschot van hetzelfde jaar, € 1.289 op € 14.766, staat in zt-2021-rul-006 en wordt door de tekst NIET gereproduceerd (DISCREPANCIES.md #11). Wordt 'verified' op dezelfde voet (ASKS.md 9)."

@@ -1,0 +1,18 @@
+id: zt-2018-rul-002
+toeslag: zorgtoeslag
+jaar: 2018
+bron:
+  type: ruling
+  publicatie: "Rechtbank Midden-Nederland 5 februari 2021, ECLI:NL:RBMNE:2021:668 (zaaknr. UTR 20/725), overwegingen (feiten): 'Het voorschot voor de zorgtoeslag bedroeg € 1.061 en voor het kindgebonden budget was dat € 1.599. Daarbij ging verweerder uit van een (geschat) gezamenlijk inkomen in 2018 van eiseres en haar echtgenoot van € 28.304. Daarna is bij verweerder bekend geworden dat het gezamenlijke inkomen van eiseres en haar echtgenoot in 2018 een stuk hoger lag, namelijk € 37.125. Omdat het gezamenlijke inkomen boven de maximale inkomensgrens van € 35.996 komt, hebben eiseres en haar echtgenoot geen recht meer op zorgtoeslag. Als gevolg hiervan moeten eiseres en haar echtgenoot € 1.661 terugbetalen' (zorgtoeslag en kindgebonden budget samen). Beroep ongegrond"
+  url: https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RBMNE:2021:668
+  opgehaald: 2026-10-27
+verified: false
+invoer:
+  partner: true
+  partner_verzekerd: true
+  toetsingsinkomen_aanvrager: "37125"
+  toetsingsinkomen_partner: "0"
+  rendementsgrondslag: null
+verwacht:
+  tegemoetkoming: "0"
+opmerking: "Zorgtoeslag 2018 definitief nihil voor een paar toeslagpartners op een gezamenlijk inkomen van € 37.125, boven de inkomensgrens met partner. De uitspraak noemt die grens: 'de maximale inkomensgrens van € 35.996'. Dat is precies de grens die de tekst van 2018 geeft met het onafgeronde drempelinkomen (€ 20.450,88; zie zt-2018-syn-022/-023): bij € 35.996 nog € 23,55 → € 24, bij € 35.997 € 23,41 → nihil (Awir art. 14 lid 4–5). Een naar beneden afgerond drempelinkomen (€ 20.450) zou de grens op € 35.995 leggen; de Dienst heeft het drempelinkomen voor 2018 dus niet naar beneden afgerond (DISCREPANCIES.md #1). € 37.125 ligt boven elke lezing van de grens, zodat deze uitkomst zelf #1 niet beslist; de grens die de uitspraak noemt doet dat wel. Wordt 'verified' op dezelfde voet (ASKS.md 9)."

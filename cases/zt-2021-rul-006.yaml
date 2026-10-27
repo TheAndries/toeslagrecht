@@ -1,0 +1,19 @@
+id: zt-2021-rul-006
+toeslag: zorgtoeslag
+jaar: 2021
+bron:
+  type: ruling
+  publicatie: "Rechtbank Noord-Nederland 27 februari 2024, ECLI:NL:RBNNE:2024:632 (zaaknr. LEE 23/961), r.o. 1.1 en 5: 'Verweerder heeft bij besluit van 9 juni 2022 de hoogte van de zorgtoeslag 2021 herzien op een bedrag van € 487,00.' 'Eiser heeft over het jaar 2021 een voorschot van € 1.289,00 aan zorgtoeslag ontvangen op basis van een geschat inkomen van € 14.766,00. Op 25 mei 2022 heeft verweerder vanuit de Basisregistratie Inkomensgegevens (BRI) een melding gekregen dat het inkomen van eiser voor het jaar 2021 € 27.725,00 bedraagt. Verweerder heeft op basis daarvan de eerder toegekende zorgtoeslag herzien op € 487,00.' (Een afgekocht klein pensioen telde mee.) Beroep ongegrond"
+  url: https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RBNNE:2024:632
+  opgehaald: 2026-10-27
+verified: false
+discrepantie: 11
+invoer:
+  partner: false
+  partner_verzekerd: null
+  toetsingsinkomen_aanvrager: "14766"
+  toetsingsinkomen_partner: "0"
+  rendementsgrondslag: null
+verwacht:
+  tegemoetkoming: "1289"
+opmerking: "Voorschot zorgtoeslag 2021 van € 1.289 op een geschat inkomen van € 14.766, onder het drempelinkomen. De tekst van 2021 geeft zonder partner het maximum € 1.705 − 1,915% × € 21.835,008 = € 1.286,86 → € 1.287 (Awir art. 14 lid 4; via build.run_case), twee euro minder dan de Dienst. Met een verzekerde partner zou het € 2.487 zijn, dus een partner verklaart het verschil niet. De uitspraak noemt het bedrag één keer, als voorschot 'over het jaar 2021 ontvangen', en zegt niet wanneer het is toegekend of op welke parameters het rustte. Vier andere voorschotten 2021 in het corpus op een inkomen onder het drempelinkomen zijn wél € 1.287 (zt-2021-rul-001, -003, en de voorschotten van 28 december 2020 in ECLI:NL:RBDHA:2024:23678 en ECLI:NL:RBNHO:2024:3591, nog niet als case opgenomen). Gelogd als DISCREPANCIES.md #11, status open; de case houdt het bedrag van de uitspraak, de encoding het bedrag van de tekst. Wordt 'verified' op dezelfde voet (ASKS.md 9)."
