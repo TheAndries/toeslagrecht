@@ -1,0 +1,18 @@
+id: zt-2015-rul-002
+toeslag: zorgtoeslag
+jaar: 2015
+bron:
+  type: ruling
+  publicatie: "ABRvS 9 mei 2018, ECLI:NL:RVS:2018:1514, procesverloop en r.o. 2: 'Bij besluit van 11 november 2016 heeft de Belastingdienst/Toeslagen de huurtoeslag van [appellant] voor het jaar 2015 definitief vastgesteld op nihil en de zorgtoeslag van [appellant] over het jaar 2015 definitief vastgesteld op een bedrag van € 495,00.' 'De Belastingdienst/Toeslagen is bij de definitieve berekening van de zorgtoeslag voor het jaar 2015 terecht uitgegaan van het door de inspecteur van de Belastingdienst vastgestelde verzamelinkomen van [appellant] van € 22.797,00, aldus de rechtbank.'"
+  url: https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RVS:2018:1514
+  opgehaald: 2026-10-28
+verified: false
+invoer:
+  partner: false
+  partner_verzekerd: null
+  toetsingsinkomen_aanvrager: "22797"
+  toetsingsinkomen_partner: "0"
+  rendementsgrondslag: null
+verwacht:
+  tegemoetkoming: "495"
+opmerking: "Definitieve vaststelling 2015 van 11 november 2016, € 495, op het verzamelinkomen van € 22.797. De tekst van 2015: € 1.408 − (2,395% × € 19.463,328 + 13,400% × (€ 22.797 − € 19.463,328)) = € 495,14 → € 495 (via build.run_case). De uitspraak noemt geen partner; het bedrag bewijst er geen (met een verzekerde partner zou het € 1.345 zijn). Wordt 'verified' op dezelfde voet (ASKS.md 9)."

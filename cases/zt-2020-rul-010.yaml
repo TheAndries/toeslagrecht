@@ -1,0 +1,18 @@
+id: zt-2020-rul-010
+toeslag: zorgtoeslag
+jaar: 2020
+bron:
+  type: ruling
+  publicatie: "Rechtbank Oost-Brabant 20 maart 2025, ECLI:NL:RBOBR:2025:1536 (zaaknr. 24/71), r.o. 2: 'Voor wat betreft toeslagjaar 2020 heeft verweerder eiseres in eerste instantie bij besluit van 27 december 2019 een voorschot zorgtoeslag verleend van € 1.250,-. Dit is gebaseerd op een geschat toetsingsinkomen van eiseres van € 3.439,-.' Beroep gegrond (de terugvordering)"
+  url: https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RBOBR:2025:1536
+  opgehaald: 2026-10-28
+verified: false
+invoer:
+  partner: false
+  partner_verzekerd: null
+  toetsingsinkomen_aanvrager: "3439"
+  toetsingsinkomen_partner: "0"
+  rendementsgrondslag: null
+verwacht:
+  tegemoetkoming: "1250"
+opmerking: "Voorschot zorgtoeslag 2020 van 27 december 2019, € 1.250, op een geschat toetsingsinkomen van € 3.439, zonder partner (het toeslagpartnerschap over 2020 werd pas in 2021, met terugwerkende kracht, aangenomen; zie zt-2020-rul-011). De tekst van 2020 geeft zonder partner het maximum € 1.642 − 1,830% × € 21.430,656 = € 1.249,82 → € 1.250 (Awir art. 14 lid 4; via build.run_case). Wordt 'verified' op dezelfde voet (ASKS.md 9)."

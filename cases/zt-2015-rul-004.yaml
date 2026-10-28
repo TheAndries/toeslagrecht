@@ -1,0 +1,18 @@
+id: zt-2015-rul-004
+toeslag: zorgtoeslag
+jaar: 2015
+bron:
+  type: ruling
+  publicatie: "ABRvS 28 februari 2018, ECLI:NL:RVS:2018:664 (zaaknr. 201705229/1/A2), procesverloop en r.o. 1: 'Bij besluit van 30 september 2016 heeft de Belastingdienst/Toeslagen de zorgtoeslag en het kindgebonden budget van [appellante] voor het jaar 2015 vastgesteld op nihil' '[persoon] als toeslagpartner van [appellante] moet worden aangemerkt, omdat zij beiden op hetzelfde adres staan ingeschreven in de BRP. Het gezamenlijke toetsingsinkomen komt daarmee op € 58.340,00, hetgeen ertoe leidt dat de zorgtoeslag en het kindgebonden budget over 2015 op nihil moeten worden vastgesteld.'"
+  url: https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RVS:2018:664
+  opgehaald: 2026-10-28
+verified: false
+invoer:
+  partner: true
+  partner_verzekerd: true
+  toetsingsinkomen_aanvrager: "58340"
+  toetsingsinkomen_partner: "0"
+  rendementsgrondslag: null
+verwacht:
+  tegemoetkoming: "0"
+opmerking: "Definitieve vaststelling 2015 van 30 september 2016: nihil op een gezamenlijk toetsingsinkomen van € 58.340, met toeslagpartner (Awir art. 3 lid 2 onder a: hetzelfde adres, vijf kinderen uit de relatie). De verdeling van het inkomen is niet gegeven; de case voert het geheel in bij de aanvrager, wat voor de uitkomst niet uitmaakt. De tekst van 2015 geeft nihil: de grens met partner is € 32.655 (via build.run_case). Het voorschot van 21 april 2015, € 1.791, rustte op een inkomen dat de uitspraak niet noemt. Wordt 'verified' op dezelfde voet (ASKS.md 9)."

@@ -1,0 +1,18 @@
+id: zt-2015-rul-003
+toeslag: zorgtoeslag
+jaar: 2015
+bron:
+  type: ruling
+  publicatie: "Rechtbank Den Haag 16 maart 2018, ECLI:NL:RBDHA:2018:3299, feiten en overwegingen: 'Bij beschikking van 9 september 2016 is de zorgtoeslag voor het jaar 2015 definitief berekend op € 580.' 'Met dagtekening 28 juli 2017 is aan eiser een definitieve aanslag inkomstenbelasting en premies volksverzekeringen (IB/PVV) voor het jaar 2015 opgelegd naar een verzamelinkomen van € 27.104.' 'Vast staat dat bij een verzamelinkomen van € 27.104 voor het jaar 2015 geen recht bestaat op zorgtoeslag'"
+  url: https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RBDHA:2018:3299
+  opgehaald: 2026-10-28
+verified: false
+invoer:
+  partner: false
+  partner_verzekerd: null
+  toetsingsinkomen_aanvrager: "27104"
+  toetsingsinkomen_partner: "0"
+  rendementsgrondslag: null
+verwacht:
+  tegemoetkoming: "0"
+opmerking: "Herziene vaststelling 2015: nihil op een verzamelinkomen van € 27.104. De uitspraak noemt geen partner; zonder partner geeft de tekst van 2015 nihil (de grens is € 26.316; via build.run_case), met een verzekerde partner zou zij een bedrag geven, dus de uitkomst past alleen bij de lezing zonder partner. De eerdere € 580 rustte op een inkomen dat de uitspraak niet noemt; niet opgenomen. Wordt 'verified' op dezelfde voet (ASKS.md 9)."

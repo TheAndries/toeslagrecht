@@ -1,0 +1,18 @@
+id: zt-2014-rul-007
+toeslag: zorgtoeslag
+jaar: 2014
+bron:
+  type: ruling
+  publicatie: "ABRvS 9 januari 2019, ECLI:NL:RVS:2019:51, procesverloop en r.o. 3: 'Bij besluit van 4 november 2016 heeft de Belastingdienst/Toeslagen de zorgtoeslag van [appellant] over het jaar 2014 definitief vastgesteld op nihil en de huurtoeslag van [appellant] over het jaar 2014 definitief vastgesteld op een bedrag van € 1.573,00.' 'Nu niet in geschil is dat de Belastingdienst/Toeslagen het recht van [appellant] op huur- en zorgtoeslag voor het jaar 2014 heeft vastgesteld op basis van het door de inspecteur vastgestelde belastbare inkomen van € 40.775,00'"
+  url: https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RVS:2019:51
+  opgehaald: 2026-10-28
+verified: false
+invoer:
+  partner: false
+  partner_verzekerd: null
+  toetsingsinkomen_aanvrager: "40775"
+  toetsingsinkomen_partner: "0"
+  rendementsgrondslag: null
+verwacht:
+  tegemoetkoming: "0"
+opmerking: "Definitieve vaststelling 2014 van 4 november 2016: zorgtoeslag nihil op het door de inspecteur vastgestelde inkomen van € 40.775 (de aanvrager stelde dat het € 17.324 was; de Afdeling: de Dienst volgt de inspecteur). De uitspraak noemt geen partner; de tekst van 2014 geeft nihil met en zonder partner (grenzen € 28.482 / € 37.145; via build.run_case). Wordt 'verified' op dezelfde voet (ASKS.md 9)."

@@ -1,0 +1,18 @@
+id: zt-2016-rul-003
+toeslag: zorgtoeslag
+jaar: 2016
+bron:
+  type: ruling
+  publicatie: "ABRvS 14 oktober 2020, ECLI:NL:RVS:2020:2416, r.o. 1 en 4: 'De dienst heeft bij besluit van 4 augustus 2017 de huurtoeslag en zorgtoeslag over 2016 definitief berekend en op nihil gesteld, omdat het toetsingsinkomen van [appellant] van € 29.027,00 hoger is dan de inkomensgrenzen voor huurtoeslag en zorgtoeslag in 2016.' 'Verder is niet in geschil dat [appellant] een transitievergoeding van € 6.000,00 heeft ontvangen en dat het toetsingsinkomen € 29.027,00 is.'"
+  url: https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RVS:2020:2416
+  opgehaald: 2026-10-28
+verified: false
+invoer:
+  partner: false
+  partner_verzekerd: null
+  toetsingsinkomen_aanvrager: "29027"
+  toetsingsinkomen_partner: "0"
+  rendementsgrondslag: null
+verwacht:
+  tegemoetkoming: "0"
+opmerking: "Definitieve berekening 2016 van 4 augustus 2017: zorgtoeslag nihil op een toetsingsinkomen van € 29.027 (een transitievergoeding van € 6.000 telde mee; de Afdeling: geen bijzonder inkomen). De uitspraak noemt geen partner; zonder partner geeft de tekst van 2016 nihil (de grens is € 27.013; via build.run_case). Wordt 'verified' op dezelfde voet (ASKS.md 9)."

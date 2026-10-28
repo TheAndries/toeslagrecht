@@ -1,0 +1,18 @@
+id: zt-2024-rul-002
+toeslag: zorgtoeslag
+jaar: 2024
+bron:
+  type: ruling
+  publicatie: "Rechtbank Midden-Nederland 17 september 2025, ECLI:NL:RBMNE:2025:4925 (zaaknr. UTR 25/2434), r.o. 4: 'Eiser en zijn toeslagpartner wonen sinds 2021 in [land]. ... Dienst Toeslagen heeft op 3 oktober 2023 het berekeningsinkomen over het jaar 2024 voor eiser en zijn toeslagpartner geschat op € 21.441,- respectievelijk € 821,-. Aan eiser is daarna een voorschot van € 0,- verleend. Op 23 april 2024 heeft Dienst Toeslagen het voorschot over het jaar 2024 herzien naar € 2.833,-. Dienst Toeslagen heeft daarbij - naar eigen zeggen - abusievelijk geen gebruik gemaakt van de van toepassing zijnde woonlandfactor. Op 12 juni 2024 heeft Dienst Toeslagen daarom het voorschot over het jaar 2024 herzien naar € 0,- en een bedrag van € 1.416,- van eiser teruggevorderd.' Beroep ongegrond"
+  url: https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RBMNE:2025:4925
+  opgehaald: 2026-10-28
+verified: false
+invoer:
+  partner: true
+  partner_verzekerd: true
+  toetsingsinkomen_aanvrager: "21441"
+  toetsingsinkomen_partner: "821"
+  rendementsgrondslag: null
+verwacht:
+  tegemoetkoming: "2833"
+opmerking: "Herzien voorschot 2024 van 23 april 2024, € 2.833, op een geschat gezamenlijk inkomen van € 21.441 + € 821 = € 22.262, door de Dienst berekend zonder woonlandfactor, naar eigen zeggen abusievelijk: het paar woont buiten Nederland en de factor hoorde te worden toegepast. De case legt vast wat de Dienst bij die beschikking berekende, met de invoer die hij toen gebruikte (beiden als verzekerde). De tekst van 2024 geeft bij die invoer hetzelfde: 2 × € 1.987 − 4,256% × € 26.819,424 = € 2.832,57 → € 2.833 (Awir art. 14 lid 4; via build.run_case), het maximum met partner van 2024, want het inkomen ligt onder het drempelinkomen. De latere uitkomst, € 0 na toepassing van de woonlandfactor (12 juni 2024, definitief gehandhaafd 28 februari 2025), is niet na te rekenen: de uitspraak anonimiseert het woonland. Uit de tekst volgt alleen dat de factor lager dan 0,2932 was (daarboven zou 2 × € 1.987 × factor − € 1.141,43 ten minste € 23,50 zijn en afgerond € 24, Awir art. 14 lid 4–5). Het teruggevorderde bedrag, € 1.416, is niet het hele voorschot; de uitspraak verklaart dat niet. Wordt 'verified' op dezelfde voet (ASKS.md 9)."

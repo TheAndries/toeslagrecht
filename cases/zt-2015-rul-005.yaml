@@ -1,0 +1,18 @@
+id: zt-2015-rul-005
+toeslag: zorgtoeslag
+jaar: 2015
+bron:
+  type: ruling
+  publicatie: "ABRvS 17 januari 2018, ECLI:NL:RVS:2018:133 (zaaknr. 201704714/1/A2), procesverloop en r.o. 1–2: 'Bij besluit van 30 september 2016 heeft de Belastingdienst/Toeslagen de zorgtoeslag van [appellant sub 1] over 2015 definitief vastgesteld op nihil' '[appellant sub 2] is de toeslagpartner van [appellant sub 1].' 'In de aanslag inkomstenbelasting van [appellant sub 1] en [appellant sub 2] over 2015 is dit bedrag meegerekend en is het verzamelinkomen vastgesteld op een bedrag van € 35.695,00. Op basis van dat verzamelinkomen heeft de Belastingdienst/Toeslagen bij besluit van 30 september 2016 voor 2015 de zorgtoeslag ... definitief berekend en vastgesteld'"
+  url: https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RVS:2018:133
+  opgehaald: 2026-10-28
+verified: false
+invoer:
+  partner: true
+  partner_verzekerd: true
+  toetsingsinkomen_aanvrager: "35695"
+  toetsingsinkomen_partner: "0"
+  rendementsgrondslag: null
+verwacht:
+  tegemoetkoming: "0"
+opmerking: "Definitieve vaststelling 2015 van 30 september 2016: nihil op een gezamenlijk verzamelinkomen van € 35.695, met toeslagpartner (een Bbz-lening die in 2015 een schenking werd telde mee; de Afdeling: terecht). De verdeling is niet gegeven; alles bij de aanvrager ingevoerd, zonder gevolg voor de uitkomst. De tekst van 2015 geeft nihil: de grens met partner is € 32.655 (via build.run_case). Het voorschot rustte op € 25.905; het bedrag ervan noemt de uitspraak niet. Wordt 'verified' op dezelfde voet (ASKS.md 9)."

@@ -1,0 +1,18 @@
+id: zt-2020-rul-011
+toeslag: zorgtoeslag
+jaar: 2020
+bron:
+  type: ruling
+  publicatie: "Rechtbank Oost-Brabant 20 maart 2025, ECLI:NL:RBOBR:2025:1536 (zaaknr. 24/71), r.o. 3, 5 en 7: 'Eiseres is op 21 oktober 2020 een notarieel samenlevingscontract aangegaan met haar partner ... Vervolgens heeft verweerder in de brief van 4 februari 2021 eiseres laten weten dat hij eiseres en [naam] als toeslagpartners aanmerkt, en dat – als gevolg hiervan – de zorgtoeslag zal worden herberekend. Dit is vervolgens gebeurd bij besluit van 13 maart 2021. Hierbij is het voorschot zorgtoeslag 2021 van eiseres en [naam] vastgesteld op € 1.786,-. Dit voorschot is gebaseerd op een geschat gezamenlijk toetsingsinkomen van € 25.939,-.' 'de voorschotten zorgtoeslag over 2021 als gevolg hiervan teruggevorderd tot een bedrag van € 1.805,- (inclusief € 19,- rente)' 'Volgens de destijds geldende wet wordt [naam] gedurende het gehele jaar aangemerkt als toeslagpartner, omdat eiseres en [naam] bij aanvang van 2020 al op hetzelfde adres stonden ingeschreven in de BRP.' Beroep gegrond (de terugvordering)"
+  url: https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RBOBR:2025:1536
+  opgehaald: 2026-10-28
+verified: false
+invoer:
+  partner: true
+  partner_verzekerd: true
+  toetsingsinkomen_aanvrager: "25939"
+  toetsingsinkomen_partner: "0"
+  rendementsgrondslag: null
+verwacht:
+  tegemoetkoming: "1786"
+opmerking: "Herzien voorschot van 13 maart 2021, € 1.786, voor het paar op een geschat gezamenlijk toetsingsinkomen van € 25.939, nadat het toeslagpartnerschap over heel 2020 was aangenomen (Awir art. 3 zoals het tot 1 januari 2021 luidde). De uitspraak schrijft op deze plaats 'voorschot zorgtoeslag 2021'; de case neemt 2020, om vier redenen: de zaak gaat alleen over de zorgtoeslag 2020 (r.o. 1, 5, 7); r.o. 5 noemt dezelfde terugvordering 'over 2021' waar het procesverloop 'over 2020' schrijft; het teruggevorderde bedrag, € 1.805 inclusief € 19 rente, is € 1.786 + € 19, dus het hele voorschot 2020; en het bedrag is met de tekst van 2020 op de euro na te rekenen, 2 × € 1.642 − (4,140% × € 21.430,656 + 13,550% × (€ 25.939 − € 21.430,656)) = € 1.785,89 → € 1.786 (Awir art. 14 lid 4; via build.run_case), terwijl de tekst van 2021 bij dit inkomen € 1.930 geeft. Dat is een lezing van de uitspraak door de operator; wie de case verifieert (ASKS.md 9), toetst ook die lezing. Partner verzekerd aangenomen: het bedrag bewijst twee standaardpremies. De verdeling van het gezamenlijke inkomen is niet gegeven en doet er voor de uitkomst niet toe."

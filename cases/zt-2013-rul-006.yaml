@@ -1,0 +1,18 @@
+id: zt-2013-rul-006
+toeslag: zorgtoeslag
+jaar: 2013
+bron:
+  type: ruling
+  publicatie: "Rechtbank Noord-Holland 7 april 2020, ECLI:NL:RBNHO:2020:2696, feiten: 'Het verzamelinkomen is daarbij verhoogd met de betalingen van het UWV (€ 1.786,21) en [A] (€ 5.000) naar € 19.708.' 'Met dagtekening 11 september 2015 is, naar aanleiding van de vermindering ib/pvv 2013, de definitieve berekening zorgtoeslag voor het jaar 2013 herzien naar € 1.002. Hierbij is uitgegaan van een toetsingsinkomen van € 19.708.'"
+  url: https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RBNHO:2020:2696
+  opgehaald: 2026-10-28
+verified: false
+invoer:
+  partner: false
+  partner_verzekerd: null
+  toetsingsinkomen_aanvrager: "19708"
+  toetsingsinkomen_partner: "0"
+  rendementsgrondslag: null
+verwacht:
+  tegemoetkoming: "1002"
+opmerking: "Herziene definitieve berekening 2013 van 11 september 2015, € 1.002, op een toetsingsinkomen van € 19.708 (een nabetaling en een UWV-uitkering telden mee). De tekst van 2013: € 1.478 − (2,195% × € 19.043,424 + 8,713% × (€ 19.708 − € 19.043,424)) = € 1.002,10 → € 1.002 (via build.run_case). Zonder partner, zie zt-2013-rul-005. Wordt 'verified' op dezelfde voet (ASKS.md 9)."

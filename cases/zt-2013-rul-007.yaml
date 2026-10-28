@@ -1,0 +1,18 @@
+id: zt-2013-rul-007
+toeslag: zorgtoeslag
+jaar: 2013
+bron:
+  type: ruling
+  publicatie: "ABRvS 5 oktober 2016, ECLI:NL:RVS:2016:2600 (zaaknr. 201509080/1/A2 niet gecontroleerd; zie de deeplink), r.o. 1 en 2: 'Hierbij is de dienst ervan uitgegaan dat [appellante] geen toeslagpartner heeft.' 'De Belastingdienst/Toeslagen heeft de echtgenoot op 4 september 2014 als toeslagpartner van [appellante] aangemerkt.' 'Bij besluit van 20 november 2014 heeft de Belastingdienst/Toeslagen het voorschot zorgtoeslag herzien naar nihil, omdat uit de Basisregistratie Inkomen is gebleken dat de echtgenoot van [appellante] in 2013 een inkomen van € 41.275,00 genoot, waarmee hun gezamenlijke inkomen in dat jaar € 62.145,00 bedroeg, hetgeen te hoog was'"
+  url: https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RVS:2016:2600
+  opgehaald: 2026-10-28
+verified: false
+invoer:
+  partner: true
+  partner_verzekerd: true
+  toetsingsinkomen_aanvrager: "20870"
+  toetsingsinkomen_partner: "41275"
+  rendementsgrondslag: null
+verwacht:
+  tegemoetkoming: "0"
+opmerking: "Voorschot 2013 herzien naar nihil (20 november 2014) op een gezamenlijk inkomen van € 62.145, met echtgenoot als toeslagpartner (Awir art. 3 jo. AWR art. 5a). Het eigen inkomen van de aanvrager is afgeleid: € 62.145 − € 41.275 = € 20.870; de uitkomst hangt er niet van af. De tekst van 2013 geeft nihil: de inkomensgrens met partner is € 42.438 (via build.run_case). Wordt 'verified' op dezelfde voet (ASKS.md 9)."

@@ -1,0 +1,18 @@
+id: zt-2014-rul-006
+toeslag: zorgtoeslag
+jaar: 2014
+bron:
+  type: ruling
+  publicatie: "ABRvS 24 oktober 2018, ECLI:NL:RVS:2018:3454, procesverloop en r.o. 1: 'Bij het besluit van 26 mei 2017, gehandhaafd bij het besluit van 19 juni 2017, heeft de dienst de zorgtoeslag over 2014 definitief vastgesteld op € 699,00. Aan dat besluit heeft de Belastingdienst/Toeslagen ten grondslag gelegd dat volgens de basisregistratie inkomen (hierna: BRI) het inkomen van [appellant] in 2014 € 21.073,00 bedroeg.'"
+  url: https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RVS:2018:3454
+  opgehaald: 2026-10-28
+verified: false
+invoer:
+  partner: false
+  partner_verzekerd: null
+  toetsingsinkomen_aanvrager: "21073"
+  toetsingsinkomen_partner: "0"
+  rendementsgrondslag: null
+verwacht:
+  tegemoetkoming: "699"
+opmerking: "Definitieve vaststelling 2014 van 26 mei 2017, € 699, op het BRI-inkomen van € 21.073. De tekst van 2014: € 1.329 − (2,410% × € 19.253,376 + 9,118% × (€ 21.073 − € 19.253,376)) = € 699,08 → € 699 (via build.run_case). Zonder partner, zie zt-2014-rul-005. Wordt 'verified' op dezelfde voet (ASKS.md 9)."

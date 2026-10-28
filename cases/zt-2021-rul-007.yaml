@@ -1,0 +1,18 @@
+id: zt-2021-rul-007
+toeslag: zorgtoeslag
+jaar: 2021
+bron:
+  type: ruling
+  publicatie: "Rechtbank Den Haag 10 december 2024, ECLI:NL:RBDHA:2024:23678 (zaaknr. 23/7085), r.o. 2: 'Met dagtekening van 28 december 2020 is op basis van een geschat inkomen van € 17.848 aan [naam] voor het jaar 2021 € 1.287 aan zorgtoeslag en € 4.289 aan huurtoeslag verleend.' 'Met dagtekening van 23 juni 2021 heeft verweerder aan [naam] medegedeeld dat haar toeslagen voor het jaar 2021 opnieuw zijn berekend, omdat haar inkomen opnieuw is geschat op € 19.162. De zorgtoeslag blijft € 1.287.' 'Met de definitieve berekening van 2 september 2022 is de zorgtoeslag vastgesteld op € 1.287 ... Hierbij is uitgegaan van een jaarinkomen van € 19.233.' Beroep ongegrond"
+  url: https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RBDHA:2024:23678
+  opgehaald: 2026-10-28
+verified: false
+invoer:
+  partner: false
+  partner_verzekerd: null
+  toetsingsinkomen_aanvrager: "17848"
+  toetsingsinkomen_partner: "0"
+  rendementsgrondslag: null
+verwacht:
+  tegemoetkoming: "1287"
+opmerking: "Voorschot zorgtoeslag 2021 van 28 december 2020, € 1.287, op een geschat inkomen van € 17.848, onder het drempelinkomen; de herziening van 23 juni 2021 (inkomen € 19.162) en de definitieve berekening van 2 september 2022 (€ 19.233) geven hetzelfde bedrag en zijn niet apart opgenomen. De tekst van 2021 geeft zonder partner het maximum € 1.705 − 1,915% × € 21.835,008 = € 1.286,86 → € 1.287 (Awir art. 14 lid 4; via build.run_case). De uitspraak noemt geen partner (de aanvrager is overleden; de erfgenamen procederen); het bedrag bewijst er geen (met een verzekerde partner € 2.487). Een voorschot van dezelfde dagtekening als de andere voorschotten 2021 in het corpus, op het bedrag van de tekst; relevant voor DISCREPANCIES.md #11 (€ 1.289 in ECLI:NL:RBNNE:2024:632). Wordt 'verified' op dezelfde voet (ASKS.md 9)."

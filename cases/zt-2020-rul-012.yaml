@@ -1,0 +1,18 @@
+id: zt-2020-rul-012
+toeslag: zorgtoeslag
+jaar: 2020
+bron:
+  type: ruling
+  publicatie: "Rechtbank Oost-Brabant 20 maart 2025, ECLI:NL:RBOBR:2025:1536 (zaaknr. 24/71), r.o. 4–5: 'op 26 mei 2021 bericht ontvangen vanuit de Basisregistratie Inkomen (BRI) dat het verzamelinkomen van eiseres is vastgesteld op € 20.286,- en dat van [naam] op € 25.185,-.' 'Hierbij is de zorgtoeslag van eiseres over 2020 definitief vastgesteld op € 0,- ... Deze definitieve vaststelling is gebaseerd op een gezamenlijk toetsingsinkomen van € 45.471,-.' Beroep gegrond (de terugvordering)"
+  url: https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RBOBR:2025:1536
+  opgehaald: 2026-10-28
+verified: false
+invoer:
+  partner: true
+  partner_verzekerd: true
+  toetsingsinkomen_aanvrager: "20286"
+  toetsingsinkomen_partner: "25185"
+  rendementsgrondslag: null
+verwacht:
+  tegemoetkoming: "0"
+opmerking: "Definitieve vaststelling 2020 van 9 oktober 2021: nihil op een gezamenlijk toetsingsinkomen van € 20.286 + € 25.185 = € 45.471, met partner over heel 2020 (Awir art. 3 oud; de rechtbank: sinds 1 januari 2021, Stb. 2020, 518, ontstaat toeslagpartnerschap niet meer met terugwerkende kracht over het hele jaar, en zij matigde daarom de terugvordering op evenredigheid; de hoogte zelf stond niet ter discussie). De tekst van 2020 geeft nihil: de inkomensgrens met partner uit de tekst is € 38.945 (via build.run_case). Het teruggevorderde bedrag, € 1.805 inclusief € 19 rente, is het voorschot van zt-2020-rul-011 plus rente. Wordt 'verified' op dezelfde voet (ASKS.md 9)."

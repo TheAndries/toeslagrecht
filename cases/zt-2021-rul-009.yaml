@@ -1,0 +1,18 @@
+id: zt-2021-rul-009
+toeslag: zorgtoeslag
+jaar: 2021
+bron:
+  type: ruling
+  publicatie: "Rechtbank Noord-Holland 4 april 2024, ECLI:NL:RBNHO:2024:3591 (zaaknr. HAA 23/4258), procesverloop en r.o. 1–2: 'Bij beschikkingen met dagtekening 28 december 2020 is aan eiseres een voorschot huurtoeslag en een voorschot zorgtoeslag 2021 verleend van respectievelijk € 1.644 en € 1.221. Bij beschikking met dagtekening 21 oktober 2021 is het voorschot huurtoeslag en het voorschot zorgtoeslag 2021 herzien naar respectievelijk € 2.922 en € 1.287.' 'Eiseres heeft in het jaar 2021 geen toeslagpartner.' 'Eiseres heeft op 14 september 2021 voor het jaar 2021 een (geschat) toetsingsinkomen aan verweerder doorgegeven van € 18.500.' Beroep ongegrond"
+  url: https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RBNHO:2024:3591
+  opgehaald: 2026-10-28
+verified: false
+invoer:
+  partner: false
+  partner_verzekerd: null
+  toetsingsinkomen_aanvrager: "18500"
+  toetsingsinkomen_partner: "0"
+  rendementsgrondslag: null
+verwacht:
+  tegemoetkoming: "1287"
+opmerking: "Herzien voorschot 2021 van 21 oktober 2021, € 1.287, op het door de aanvrager op 14 september 2021 doorgegeven geschatte inkomen van € 18.500, onder het drempelinkomen. De tekst van 2021 geeft zonder partner het maximum € 1.286,86 → € 1.287 (via build.run_case). De uitspraak zegt uitdrukkelijk dat er in 2021 geen toeslagpartner was. Het eerdere voorschot van 28 december 2020, € 1.221, rustte op een inkomen dat de uitspraak niet noemt; niet opgenomen. Wordt 'verified' op dezelfde voet (ASKS.md 9)."

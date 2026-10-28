@@ -1,0 +1,18 @@
+id: zt-2014-rul-005
+toeslag: zorgtoeslag
+jaar: 2014
+bron:
+  type: ruling
+  publicatie: "ABRvS 24 oktober 2018, ECLI:NL:RVS:2018:3454 (zaaknr. 201800577/1/A2 niet gecontroleerd; zie de deeplink), r.o. 1: 'Bij besluit van 27 december 2013 heeft de Belastingdienst/Toeslagen aan [appellant] een voorschot zorgtoeslag toegekend van € 865,00, op grond van een geschat geïndexeerd toetsingsinkomen van € 14.591,00.'"
+  url: https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RVS:2018:3454
+  opgehaald: 2026-10-28
+verified: false
+invoer:
+  partner: false
+  partner_verzekerd: null
+  toetsingsinkomen_aanvrager: "14591"
+  toetsingsinkomen_partner: "0"
+  rendementsgrondslag: null
+verwacht:
+  tegemoetkoming: "865"
+opmerking: "Voorschot 2014 van 27 december 2013, € 865, op een geschat geïndexeerd toetsingsinkomen van € 14.591, onder het drempelinkomen: het maximum zonder partner van de tekst van 2014, € 1.329 − 2,410% × € 19.253,376 = € 864,99 → € 865 (via build.run_case). De uitspraak noemt geen partner; het bedrag bewijst er geen. Wordt 'verified' op dezelfde voet (ASKS.md 9)."

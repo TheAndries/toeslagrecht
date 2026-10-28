@@ -1,0 +1,18 @@
+id: zt-2013-rul-005
+toeslag: zorgtoeslag
+jaar: 2013
+bron:
+  type: ruling
+  publicatie: "Rechtbank Noord-Holland 7 april 2020, ECLI:NL:RBNHO:2020:2696, feiten: 'Met dagtekening 3 mei 2014 is aan eiseres een aanslag inkomstenbelasting en premie volksverzekeringen (hierna: ib/pvv) voor het jaar 2013 opgelegd naar een verzamelinkomen van € 12.922.' 'Met dagtekening 25 juli 2014 is, naar aanleiding van de aanslag ib/pvv 2013, de definitieve berekening zorgtoeslag vastgesteld op € 1.060. Hierbij is uitgegaan van een toetsingsinkomen van € 12.922.'"
+  url: https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RBNHO:2020:2696
+  opgehaald: 2026-10-28
+verified: false
+invoer:
+  partner: false
+  partner_verzekerd: null
+  toetsingsinkomen_aanvrager: "12922"
+  toetsingsinkomen_partner: "0"
+  rendementsgrondslag: null
+verwacht:
+  tegemoetkoming: "1060"
+opmerking: "Definitieve berekening 2013 van 25 juli 2014, € 1.060, op een toetsingsinkomen van € 12.922, onder het drempelinkomen: het maximum zonder partner van de tekst van 2013, € 1.478 − 2,195% × € 19.043,424 = € 1.059,997 → € 1.060 (Awir art. 14 lid 4; via build.run_case). De uitspraak noemt geen partner; het bedrag bewijst er geen. Gevonden via de open-data-sweep van 2026-10-28 (uitspraken 2015–2020). Wordt 'verified' op dezelfde voet (ASKS.md 9)."

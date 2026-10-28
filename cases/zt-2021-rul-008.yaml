@@ -1,0 +1,18 @@
+id: zt-2021-rul-008
+toeslag: zorgtoeslag
+jaar: 2021
+bron:
+  type: ruling
+  publicatie: "Rechtbank Den Haag 10 december 2024, ECLI:NL:RBDHA:2024:23678 (zaaknr. 23/7085), procesverloop en r.o. 2: 'Met het primaire besluit van 14 juli 2023 heeft verweerder de zorg- en huurtoeslag over het jaar 2021 herzien en definitief berekend. De zorgtoeslag is vastgesteld op € 1.091 en de huurtoeslag op € 2.456. Daarbij is bepaald dat € 204 aan zorgtoeslag en € 1.599 aan huurtoeslag wordt teruggevorderd.' 'Wijlen [naam] haar jaarinkomen voor 2021 is vastgesteld op € 23.280. De definitief berekende zorgtoeslag wordt aangepast naar € 1.091.' Beroep ongegrond"
+  url: https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RBDHA:2024:23678
+  opgehaald: 2026-10-28
+verified: false
+invoer:
+  partner: false
+  partner_verzekerd: null
+  toetsingsinkomen_aanvrager: "23280"
+  toetsingsinkomen_partner: "0"
+  rendementsgrondslag: null
+verwacht:
+  tegemoetkoming: "1091"
+opmerking: "Herziene definitieve berekening 2021 van 14 juli 2023, € 1.091, op het door de inspecteur vastgestelde inkomen van € 23.280 (de rechtbank: de Dienst moet dat inkomensgegeven volgen). De tekst van 2021: € 1.705 − (1,915% × € 21.835,008 + 13,580% × (€ 23.280 − € 21.835,008)) = € 1.090,63 → € 1.091 (Awir art. 14 lid 4; via build.run_case). € 1.287 − € 1.091 = € 196; de uitspraak noemt € 204 teruggevorderd en verklaart dat verschil niet. Zonder partner, zie zt-2021-rul-007. Wordt 'verified' op dezelfde voet (ASKS.md 9)."

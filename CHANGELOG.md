@@ -2,6 +2,128 @@
 
 Newest first. What was done, decided, and got wrong.
 
+## 2026-10-28 — nineteenth run: twenty-two Dienst outcomes from fourteen rulings — the first for 2024, the first two decisions that apply a woonlandfactor to a stated income, the first decided by the € 24 minimum, and twelve for 2013–2016 from a second sweep of decisions dated 2015–2020; the 10-27 sweep's hits all read
+
+Nineteenth run of routine `trig_012xyD5r5rxFDCjfHbZ58Kib`. Model as configured for the session: `claude-fable-5-1`, the same as the
+previous entry; no handover note needed. The checkout arrived detached at `fb47a19` (the previous run's commit) with a stale local
+`origin/main` (`211564e`); `git fetch origin main` moved it to `fb47a19`, so nothing was missed. The routine fired the day after the
+previous run: no new gap. `git log -3 --stat` shows no owner commit since 10-27.
+
+**Step 1 — asks marked done.** None since 10-27. Asks 4, 6, 8, 9 and 10 stay open as recorded; 9 extended today (step 8).
+
+**Step 2 — the inbox.** `INBOX.md` is empty and nothing arrived outside it. No case, dispute, review or owner note to handle.
+
+**Step 3.** No open motion.
+
+**Step 4 — done (item 4 of `memory.md`: the sixteen rulings the open-data sweep of 10-27 had listed with a 2021, 2024, 2025 or 2026
+amount, all fetched from `data.rechtspraak.nl` in one batch and read — the three with 2024 amounts in full, the rest through a digest
+of their amount sentences and the facts around them; then item 3's one remaining check.)**
+- *Ten `ruling` cases from five rulings, every one reproduced by the encoding through `build.run_case` before the file was written.*
+  **2024 — the first Dienst outcome, and the first two decisions in the record that apply a woonlandfactor to a stated income:**
+  Rechtbank Midden-Nederland 26-09-2024, ECLI:NL:RBMNE:2024:5552, a verdragsgerechtigd couple in Polen. The rechtbank quotes the
+  Dienst's computation step by step: for 2022 the standaardpremie for two, € 3.498, × the woonlandfactor 0,1829 = € 640, against a
+  normpremie of € 955 (4,225% over the drempelinkomen 'vastgesteld op € 22.356' plus 13,61% over the € 77 above it) at a toetsingsinkomen
+  of € 22.433 → nihil; for 2024 € 3.974 × 0,1613 = € 641 against € 1.790 (4,256% of € 26.819 plus 13,67% of € 4.746) at € 31.565 → nihil.
+  The text gives € 639,78 against € 955,02 and € 641,01 against € 1.790,16: the same euros, nihil both years → **`zt-2022-rul-003`,
+  `zt-2024-rul-001`**. The factors the Dienst applied are the ones `parameters/2022.yaml` and `2024.yaml` carry from the Staatscourant —
+  the first confirmation in practice of a woonlandfactor other than België's. Rechtbank Midden-Nederland 17-09-2025,
+  ECLI:NL:RBMNE:2025:4925: a couple abroad (the country anonymised) with geschat € 21.441 + € 821; the Dienst's voorschot of 23-04-2024,
+  € 2.833, computed 'abusievelijk' without the woonlandfactor, is the text's maximum met partner for 2024 (€ 2.832,57) →
+  **`zt-2024-rul-002`**, stored with the inputs the Dienst used and saying what the Dienst said about them; the later € 0 with the
+  factor cannot be checked without the country (the text only says the factor was below 0,2932). **2021:** Rechtbank Den Haag
+  10-12-2024, ECLI:NL:RBDHA:2024:23678: a voorschot of 28-12-2020, € 1.287 at € 17.848 (unchanged at € 19.162 and € 19.233), and the
+  herziene definitieve berekening € 1.091 at the inspecteur's € 23.280 → **`zt-2021-rul-007`, `-008`**; Rechtbank Noord-Holland
+  04-04-2024, ECLI:NL:RBNHO:2024:3591: a herzien voorschot of 21-10-2021, € 1.287 at a self-reported € 18.500, and the definitieve
+  berekening € 600 at the BRI income € 26.894, a levenslooptegoed of € 6.899 counted → **`zt-2021-rul-009`, `-010`** (the text:
+  € 1.286,86 and € 599,85). **2020:** Rechtbank Oost-Brabant 20-03-2025, ECLI:NL:RBOBR:2025:1536: a voorschot of 27-12-2019, € 1.250 at
+  € 3.439; after a samenlevingscontract of 21-10-2020 the partnership taken over the whole of 2020 (Awir art. 3 as it stood: the same
+  BRP address at the start of the year) and the voorschot herzien on 13-03-2021 to € 1.786 at a gezamenlijk € 25.939; the definitieve
+  vaststelling nihil at € 20.286 + € 25.185 → **`zt-2020-rul-010`, `-011`, `-012`** (the text: € 1.249,82; € 1.785,89; nihil above the
+  ceiling of € 38.945).
+- *One reading, stated as such.* The Oost-Brabant ruling calls the € 1.786 a 'voorschot zorgtoeslag 2021'. The case takes 2020 and says
+  why in its own text: the case concerns only the zorgtoeslag 2020; the same ruling calls the 2020 terugvordering 'over 2021' in one
+  place and 'over 2020' in another; the amount reclaimed, € 1.805 'inclusief € 19 rente', is € 1.786 + € 19; and the 2020 text gives
+  € 1.786 to the euro where the 2021 text gives € 1.930. The case notes that this is the operator's reading and that the verifier
+  (Ask 9) tests it too. Had it been stored as 2021 it would have been a discrepancy; it is not one.
+- *Eleven rulings read, no case,* each with its figures in `SOURCES.md` §4 so no later run reads them again. Two carry findings worth
+  the record: Rechtbank Midden-Nederland 03-02-2022, ECLI:NL:RBMNE:2022:486 — **the first decision in the record on Wzt art. 2 lid 4**,
+  the 50% rule: a partner whose verblijfsrecht was established on 19-11-2021 and who insured on 30-11-2021 was no verzekerde for January
+  through November, so for those months the aanvrager got 'vijftig procent van het bedrag aan zorgtoeslag dat hij zou krijgen als hij en
+  zijn toeslagpartner allebei verzekerde zouden zijn' — applied per month; no income stated. Rechtbank Noord-Nederland 16-02-2024,
+  ECLI:NL:RBNNE:2024:631 — two toeslagpartners each with their own 2020 and 2021 amounts (€ 73; € 0 and € 218) at incomes whose sum is far
+  above the ceiling; the ruling does not say for which months they were partners, so the whole-year text cannot be compared and the
+  case is not stored. The others: a 2024 stopzetting at an indexed € 143.932 (ECLI:NL:RBDHA:2025:10771, Awir art. 15 lid 5 — a
+  stopzetting, not a berekening); 2021 amounts without incomes (ECLI:NL:RVS:2023:2768, ECLI:NL:RBAMS:2023:7745, ECLI:NL:RBMNE:2025:3860,
+  ECLI:NL:RVS:2025:1273 with its first instance ECLI:NL:RBAMS:2023:1466); two late applications with incomes but no amount
+  (ECLI:NL:RBZWB:2024:5649, ECLI:NL:RBLIM:2024:5915); and ECLI:NL:RBMNE:2023:7512 re-read: neither amount is stated, the € 422 reclaimed
+  against the text's € 1.287 − € 866 = € 421 is noted, derived amounts are not stored.
+- *#11 and #1, dated notes.* Two of the € 1.287 voorschotten that #11 cited from unread rulings are now cases (`zt-2021-rul-007`,
+  `-009`); every dated 2021 voorschot below the drempelinkomen in the record is € 1.287 except the € 1.289 — #11 stays `open`, the
+  ruling gives it no date and no parameters. #1 gains the Dienst's drempelinkomen as quoted from a *decision* rather than a leaflet:
+  'vastgesteld op € 22.356' for 2022 (exact) and € 26.819 for 2024 (down, as the leaflet); status unchanged.
+- *Item 3's last check:* `/betwisten/` and `/insturen/` rendered in headless Chromium (Playwright, node): both show the six-point
+  'In het kort' and the line that the English text applies; no console errors. Item closed in memory.
+- *The second sweep, run and read the same day.* Decisions dated 2015-01-01 → 2020-12-31 swept week by week in the background (about
+  six minutes, no tokens): 217 rulings mention zorgtoeslag; all 217 texts fetched and filtered for sentences that pair an amount with
+  'zorgtoeslag' and an income word — 24 rulings. Nine of them gave **twelve more cases, all reproduced before writing**: 2013
+  `zt-2013-rul-005`/`-006` (€ 1.060 at € 12.922 and € 1.002 at € 19.708, Rechtbank Noord-Holland 07-04-2020, ECLI:NL:RBNHO:2020:2696),
+  `-007` (nihil at a gezamenlijk € 62.145 once the echtgenoot counted as partner, ABRvS 05-10-2016, ECLI:NL:RVS:2016:2600) and **`-008`
+  (nihil at € 31.028, ABRvS 07-03-2018, ECLI:NL:RVS:2018:768 — the text gives € 15,78, below the € 24 of Awir art. 14 lid 5: the first
+  case in the record decided by the minimum)**; 2014 `zt-2014-rul-005`/`-006` (a voorschot of € 865 at € 14.591 and € 699 at € 21.073,
+  ABRvS 24-10-2018, ECLI:NL:RVS:2018:3454) and `-007` (nihil at the inspecteur's € 40.775, ABRvS 09-01-2019, ECLI:NL:RVS:2019:51); 2015
+  `zt-2015-rul-002` (€ 495 at € 22.797, ABRvS 09-05-2018, ECLI:NL:RVS:2018:1514), `-003` (nihil at € 27.104, Rechtbank Den Haag
+  16-03-2018, ECLI:NL:RBDHA:2018:3299), `-004` and `-005` (nihil at € 58.340 and € 35.695 met partner, ABRvS 28-02-2018,
+  ECLI:NL:RVS:2018:664, and 17-01-2018, ECLI:NL:RVS:2018:133); 2016 `zt-2016-rul-003` (nihil at € 29.027, a transitievergoeding counted,
+  ABRvS 14-10-2020, ECLI:NL:RVS:2020:2416). Seven more were read in part and are listed in `SOURCES.md` §4 for the next run — among
+  them two on the 2013 vermogenstoets (ECLI:NL:RBNNE:2017:986: nihil on a grondslag above € 80.000 from a € 303.000 schadevergoeding,
+  the grondslag not stated; ECLI:NL:RVS:2020:1415: the Afdeling on Awir art. 7 lid 3 jo. Wzt art. 2a) and one that needs the full text
+  before anything is logged (ECLI:NL:RBMNE:2020:4351: 2017 nihil at € 26.121, where the 2017 text gives an amount zonder partner).
+  The 193 texts without such a sentence pair are the next cheap pass with a looser filter.
+- *Check:* 282 cases, 261 pass, 21 fail (the twenty of 10-20 plus `zt-2021-rul-006`, every one logged), 0 blocking; both encodings
+  agree on 282. Site rebuilt: 336 pages, twenty-two new case pages.
+- *The record's files:* twenty-two case files; `DISCREPANCIES.md` (#11, #1 notes); `SOURCES.md` (twenty-five §4 rows, open item 7
+  rewritten twice); `cases/README.md` and `README.md` (sixty-five ruling cases; 2024 joins the years with a Dienst outcome; the README's discrepancy
+  count corrected from ten to eleven — it had not been updated on 10-27); `ASKS.md` 9.
+
+**What was wrong and why.**
+- *The README said the log had ten entries since 10-27, when #11 made it eleven.* A count in prose that the previous run did not read
+  back after adding an entry; fixed today. The same rule as for numbers: a count is read off the file or not written.
+- *The `€ 1.786` nearly became discrepancy #12.* Taken at the ruling's word ('voorschot zorgtoeslag 2021') the amount is € 144 off the
+  2021 text; the first arithmetic was done with 2021 parameters and the entry was half-planned before the facts paragraph was read in
+  full and the 2020 computation tried. Lesson in `memory.md`: a ruling can misname a year; check the ruling's own arithmetic and scope
+  before logging.
+- *Memory went over the cap by the first edit* (7,958 words after today's additions); the 2017–2019 key-figure passages were compressed
+  to headline figures (7,520 words). The remaining long paragraphs are 2020–2026, next in line.
+- Nothing dropped from scope. `PLAN.md` unchanged: the strategy holds (Checkpoint 1 waits on the owner; huurtoeslag not before that;
+  history paused at 2013); no checkpoint has a date to miss.
+
+**Step 8 — asks.** None new. Ask 9 extended to the twenty-two new ruling cases, per ruling, fourteen rulings; the readings to check
+are named there (the Polen inputs; the 2020 year of the € 1.786; the € 24 minimum in `zt-2013-rul-008`).
+
+**Dropped from memory.** The 2019, 2018 and 2017 key-figure passages compressed (instrument-by-instrument detail that lives in the
+parameter files and `CHANGES.md`); open item 3 closed; open item 4 rewritten around the sweep's state and the two sweeps still to do.
+7,520 words (wc).
+
+**Effort.** Roughly 250,000 of the 300,000-token ceiling: about 95,000 reading the files, the previous three entries, memory and the
+pipeline; about 60,000 fetching and reading twenty-five rulings (three in full, the rest through their amount sentences) and computing
+the candidates; about 80,000 writing and checking the twenty-two cases, the twenty-five `SOURCES.md` rows, the notes, the memory edits
+and this entry; the rest on the Chromium check, the sweep scripts and two builds. The second sweep and its digest cost no tokens; its
+reading did.
+
+**Record under the ten-year rule.** This run added to the record: ten Dienst outcomes with their incomes, each traced to its ruling and
+reproduced from the year's text — the first for 2024 (nihil at € 31.565 for a verdragsgerechtigd couple in Polen, with the Dienst's
+own arithmetic quoted) and the first two decisions in which the Dienst applies a woonlandfactor to a stated income (Polen 0,1829 in
+2022, 0,1613 in 2024, the parameter files' figures confirmed in practice); a 2024 voorschot of € 2.833 at € 22.262 that the Dienst
+computed without the factor; four 2021 outcomes (€ 1.287 at € 17.848 and € 18.500, € 1.091 at € 23.280, € 600 at € 26.894) and three
+2020 outcomes (€ 1.250 at € 3.439, € 1.786 at € 25.939 met partner, nihil at € 45.471); twelve outcomes for 2013–2016 from
+decisions of 2016–2020 (among them € 1.060 and € 1.002 for 2013, € 865 and € 699 for 2014, € 495 for 2015, and the nihil at € 31.028
+for 2013 that the text reaches only through the € 24 minimum of Awir art. 14 lid 5); the dated finding that the Dienst applies
+Wzt art. 2 lid 4 per month to a partner without established verblijfsrecht (ECLI:NL:RBMNE:2022:486); the dated finding that the
+Dienst's drempelinkomen figures in decisions are € 22.356 for 2022 and € 26.819 for 2024; the dated facts that a levenslooptegoed
+counts in the year paid (two rulings) and that toeslagpartnerschap was retroactive over the whole year until Awir art. 3 changed on
+01-01-2021 (Stb. 2020, 518), as the Dienst applied it for 2020; and twenty-five rulings recorded so no later run reads them again. The
+sweep scripts and the site build are regenerable and are not counted.
+
 ## 2026-10-27 — eighteenth run: seventeen Dienst outcomes from nine rulings through the rechtspraak.nl open-data feed — the first for 2018 and 2021, a second vermogenstoets decision, a 2018 figure on the drempelinkomen rounding, and discrepancy #11 opened on a 2021 voorschot
 
 Eighteenth run of routine `trig_012xyD5r5rxFDCjfHbZ58Kib`. Model as configured for the session: `claude-fable-5-1`, the same as the
