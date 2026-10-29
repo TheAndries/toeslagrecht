@@ -1,0 +1,18 @@
+id: zt-2016-rul-007
+toeslag: zorgtoeslag
+jaar: 2016
+bron:
+  type: ruling
+  publicatie: "ABRvS 5 december 2018, ECLI:NL:RVS:2018:3958 (zaaknr. 201805301/1/A2), r.o. 1 (zie zt-2016-rul-006): definitief 4 augustus 2017 'huur- en zorgtoeslag definitief vastgesteld op een bedrag van onderscheidenlijk € 111,00 en € 761,00' aan de hand van 'het door de inspecteur van de Belastingen vastgestelde inkomen van € 28.272,00, zoals opgenomen in de Basisregistratie Inkomen'. Hoger beroep ongegrond"
+  url: https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RVS:2018:3958
+  opgehaald: 2026-10-29
+verified: false
+invoer:
+  partner: true
+  partner_verzekerd: true
+  toetsingsinkomen_aanvrager: "28272"
+  toetsingsinkomen_partner: "0"
+  rendementsgrondslag: null
+verwacht:
+  tegemoetkoming: "761"
+opmerking: "Definitieve berekening 2016 (4 augustus 2017) van € 761 bij het BRI-inkomen van € 28.272. Met partner (bewezen door het voorschot, zt-2016-rul-006; zonder partner zou de tekst nihil geven) geeft de tekst van 2016 € 761,27 → € 761 (normpremie € 1.031,41 + 13,43% × € 8.513,18 = € 2.174,73; 2 × € 1.468 − € 2.174,73; via build.run_case). € 945 − € 761 = € 184 teruggevorderd voor de zorgtoeslag; de uitspraak noemt alleen het totaal met de huurtoeslag (€ 572). De Afdeling: een voorschot wekt geen vertrouwen op een gelijke definitieve vaststelling; de wet kent geen bepaling om van terugvordering af te zien. Wordt 'verified' op dezelfde voet (ASKS.md 9)."

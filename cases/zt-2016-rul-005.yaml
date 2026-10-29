@@ -1,0 +1,18 @@
+id: zt-2016-rul-005
+toeslag: zorgtoeslag
+jaar: 2016
+bron:
+  type: ruling
+  publicatie: "Rechtbank Zeeland-West-Brabant 10 april 2018, ECLI:NL:RBZWB:2018:2319 (zaaknr. BRE 17/6534 HUUR), procesverloop en r.o. 4: 'Bij besluit van 7 juli 2017 (primair besluit) heeft Belastingdienst/Toeslagen de zorgtoeslag over 2016 definitief vastgesteld op € 439,- en aangegeven dat eiser € 406,- moet terugbetalen.' 'In het geval van eiser is het toetsingsinkomen volgens de definitieve aanslag inkomstenbelasting 2016 vastgesteld op een bedrag van € 15.070,-,-. Ten aanzien van zijn toeslagpartner is het toetsingsinkomen vastgesteld op een bedrag van € 16.604,-. Het gezamenlijke toetsingsinkomen bedraagt derhalve € 30.674,-.' 'Nu het toetsingsinkomen voor eiser en zijn toeslagpartner is vastgesteld op € 30.670,- heeft Belastingdienst/Toeslagen terecht aangegeven dat eiser geen recht heeft op huurtoeslag ... Verder heeft Belastingdienst/Toeslagen het recht op zorgtoeslag op basis van het toetsingsinkomen terecht vastgesteld op € 439,-.' Beroep ongegrond"
+  url: https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RBZWB:2018:2319
+  opgehaald: 2026-10-29
+verified: false
+invoer:
+  partner: true
+  partner_verzekerd: true
+  toetsingsinkomen_aanvrager: "30670"
+  toetsingsinkomen_partner: "0"
+  rendementsgrondslag: null
+verwacht:
+  tegemoetkoming: "439"
+opmerking: "Definitieve berekening 2016 (7 juli 2017), met partner: € 439. De uitspraak noemt drie inkomensbedragen die niet kloppen met elkaar: € 15.070 + € 16.604 = € 31.674 (niet de genoemde € 30.674), en in de conclusie € 30.670. De tekst van 2016 geeft bij een gezamenlijk toetsingsinkomen van € 30.670 precies € 439 (normpremie 5,22% × € 19.758,816 + 13,43% × € 10.911,18 = € 2.496,78; 2 × € 1.468 − € 2.496,78 = € 439,22 → € 439, via build.run_case) en bij € 31.674 € 304. De case voert daarom € 30.670 in als gezamenlijk toetsingsinkomen (partner € 0), de lezing dat de Dienst met € 30.670 rekende en een van de twee deelbedragen in de uitspraak verschreven is; dat is de lezing van de operator, en de verifieerder toetst haar. De huurtoeslag 2016 nihil boven de inkomensgrens van € 30.050 is geen onderdeel van deze case. Wordt 'verified' op dezelfde voet (ASKS.md 9)."

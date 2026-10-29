@@ -1,0 +1,18 @@
+id: zt-2016-rul-006
+toeslag: zorgtoeslag
+jaar: 2016
+bron:
+  type: ruling
+  publicatie: "ABRvS 5 december 2018, ECLI:NL:RVS:2018:3958 (zaaknr. 201805301/1/A2), r.o. 1: '[appellant] heeft in 2016 voorschotten huurtoeslag ten bedrage van € 499,00 en voorschotten zorgtoeslag ten bedrage van € 945,00 ontvangen. De Belastingdienst/Toeslagen heeft de hoogte van de voorschotten gebaseerd op een geschat inkomen van € 26.901,00. Bij het besluit van 4 augustus 2017, zoals gehandhaafd bij het besluit van 10 november 2017, heeft de dienst de huur- en zorgtoeslag definitief vastgesteld op een bedrag van onderscheidenlijk € 111,00 en € 761,00 ... De bedragen van de vastgestelde toeslagen heeft de dienst bepaald aan de hand van het door de inspecteur van de Belastingen vastgestelde inkomen van € 28.272,00, zoals opgenomen in de Basisregistratie Inkomen.' Hoger beroep ongegrond"
+  url: https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RVS:2018:3958
+  opgehaald: 2026-10-29
+verified: false
+invoer:
+  partner: true
+  partner_verzekerd: true
+  toetsingsinkomen_aanvrager: "26901"
+  toetsingsinkomen_partner: "0"
+  rendementsgrondslag: null
+verwacht:
+  tegemoetkoming: "945"
+opmerking: "Voorschot 2016 van € 945 op een geschat inkomen van € 26.901. De uitspraak noemt geen partner, maar het bedrag bewijst er een: de tekst van 2016 geeft zonder partner € 39 en met partner € 945,39 → € 945 (normpremie 5,22% × € 19.758,816 + 13,43% × € 7.142,18 = € 1.990,61; 2 × € 1.468 − € 1.990,61; via build.run_case). Het inkomen is ingevoerd als gezamenlijk toetsingsinkomen (partner € 0). Zie zt-2016-rul-007 voor de definitieve berekening. Wordt 'verified' op dezelfde voet (ASKS.md 9)."

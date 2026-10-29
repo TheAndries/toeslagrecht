@@ -1,0 +1,18 @@
+id: zt-2016-rul-004
+toeslag: zorgtoeslag
+jaar: 2016
+bron:
+  type: ruling
+  publicatie: "Rechtbank Den Haag 5 februari 2021, ECLI:NL:RBDHA:2021:2781 (zaaknrs. SGR 19/7423 en SGR 20/3372; bevestigd ABRvS ECLI:NL:RVS:2021:2830), r.o. 4–6, 12, 13, 15: 'Bij beschikking van 28 december 2015 is aan eiseres voor het jaar 2016 een voorschot zorgtoeslag toegekend van € 998.' 'Op 11 oktober 2019 ontvangt verweerder een melding vanuit de BRI waaruit blijkt dat de inspecteur heeft vastgesteld dat in 2016 voor eiseres sprake is van een bedrag grondslag sparen en beleggen van € 479.973.' 'Bij beschikking van 15 november 2019 is de zorgtoeslag 2016 definitief berekend op nihil, en is bepaald dat eiseres € 1.902 moet terugbetalen.' '... in het berekeningsjaar 2016 meer bedraagt dan € 82.504.' 'Niet in geschil is dat bij een grondslag sparen en beleggen van € 391.765 voor het jaar 2015 respectievelijk € 479.973 voor het jaar 2016 geen recht bestaat op zorgtoeslag'. 'Verweerder heeft de definitieve berekeningen zorgtoeslag 2015 en 2016 terecht vastgesteld op nihil.'"
+  url: https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RBDHA:2021:2781
+  opgehaald: 2026-10-29
+verified: false
+invoer:
+  partner: false
+  partner_verzekerd: null
+  toetsingsinkomen_aanvrager: "0"
+  toetsingsinkomen_partner: "0"
+  rendementsgrondslag: "504410"
+verwacht:
+  tegemoetkoming: "0"
+opmerking: "Definitieve berekening 2016 (15 november 2019): nihil omdat de grondslag sparen en beleggen (€ 479.973, BRI) boven de € 82.504 van Wzt art. 2a lid 1 (tekst 2016) lag — de eerste uitkomst van de Dienst op de vermogenstoets voor 2016. De uitspraak noemt de grondslag ná aftrek van het heffingvrije vermogen (Wet IB 2001 art. 5.2); de encoding vraagt de rendementsgrondslag en trekt het heffingvrije vermogen 2016 (€ 24.437, art. 5.5) zelf af. De invoer € 504.410 is daarom GERECONSTRUEERD: € 479.973 + € 24.437, zonder partner. Dat er geen partner was, noemt de uitspraak niet ('eiseres'); het voorschot van € 998 (28 december 2015) is het maximum zonder partner van de tekst 2016 (€ 997,74) en bewijst het; met partner blijft de uitkomst nihil. Het toetsingsinkomen staat niet in de uitspraak; het is hier € 0 ingevuld omdat de vermogenstoets vóór de inkomenstoets gaat en nihil geeft bij elk inkomen. De verifieerder toetst beide lezingen. Het voorschot zelf is geen case: zijn inkomen staat niet in de uitspraak. Het teruggevorderde bedrag (€ 1.902) is veel meer dan het voorschot van € 998; de uitspraak verklaart dat niet en het is geen invoer. Zie zt-2015-rul-006 voor dezelfde aanvrager over 2015. Wordt 'verified' op dezelfde voet (ASKS.md 9)."

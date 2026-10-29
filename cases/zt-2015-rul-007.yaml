@@ -1,0 +1,18 @@
+id: zt-2015-rul-007
+toeslag: zorgtoeslag
+jaar: 2015
+bron:
+  type: ruling
+  publicatie: "ABRvS 9 augustus 2017, ECLI:NL:RVS:2017:2138 (zaaknr. 201605226/1/A2), r.o. 4: 'Bij besluit van 21 maart 2015 zijn voor het berekeningsjaar 2015 voorschotten zorgtoeslag en kindgebonden budget toegekend tot een bedrag van € 942,00, respectievelijk € 4.082,00. Aan deze berekening ligt een geschat toetsingsinkomen van [appellante] van € 443,00 ten grondslag.'"
+  url: https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RVS:2017:2138
+  opgehaald: 2026-10-29
+verified: false
+invoer:
+  partner: false
+  partner_verzekerd: null
+  toetsingsinkomen_aanvrager: "443"
+  toetsingsinkomen_partner: "0"
+  rendementsgrondslag: null
+verwacht:
+  tegemoetkoming: "942"
+opmerking: "Voorschot 2015 (21 maart 2015) van € 942 op een geschat toetsingsinkomen van € 443, zonder partner: het maximum van de tekst van 2015 (€ 1.408 − 5,265% × € 19.463,328 = € 941,85 → € 942, via build.run_case). Daarna heeft de Dienst het voorschot op nihil gezet omdat een medebewoner van 1 januari tot 4 oktober 2015 als toeslagpartner gold (Awir art. 3 lid 2 onder e); diens inkomen staat niet in de uitspraak en een deel van het jaar is niet als één situatie te berekenen (Awir art. 5, niet gecodeerd), dus die nihil is geen case. Wordt 'verified' op dezelfde voet (ASKS.md 9)."

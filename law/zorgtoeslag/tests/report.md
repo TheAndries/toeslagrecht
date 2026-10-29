@@ -1,4 +1,4 @@
-# Zorgtoeslag — test report, generated 2026-10-28 by tools/build.py
+# Zorgtoeslag — test report, generated 2026-10-29 by tools/build.py
 
 Generated file; do not edit. Verified cases are tests (blocking); published and synthetic
 cases are checks (reported). Every failing check is a discrepancy in `DISCREPANCIES.md`.
@@ -193,6 +193,16 @@ Source: ABRvS 9 januari 2019, ECLI:NL:RVS:2019:51, procesverloop en r.o. 3: 'Bij
 
 Note: Definitieve vaststelling 2014 van 4 november 2016: zorgtoeslag nihil op het door de inspecteur vastgestelde inkomen van € 40.775 (de aanvrager stelde dat het € 17.324 was; de Afdeling: de Dienst volgt de inspecteur). De uitspraak noemt geen partner; de tekst van 2014 geeft nihil met en zonder partner (grenzen € 28.482 / € 37.145; via build.run_case). Wordt 'verified' op dezelfde voet (ASKS.md 9).
 
+## zt-2014-rul-008 — PASS — check (ruling)
+
+Source: ABRvS 31 januari 2018, ECLI:NL:RVS:2018:317 (zaaknr. 201703168/1/A2), r.o. 1: '[appellant sub 2] heeft in 2014 voorschotten zorg- en huurtoeslag ontvangen. ... De hoogte van de voorschotten in dat besluit is gebaseerd op een geschat toetsingsinkomen van [appellant sub 2] over 2014 van € 16.052,00. Bij het besluit van 20 augustus 2015 heeft de Belastingdienst/Toeslagen de zorg- en huurtoeslag van [appellant sub 2] definitief vastgesteld op respectievelijk € 82,00 en nihil. Dit besluit is gebaseerd op een vastgesteld toetsingsinkomen van € 27.840,00.'
+
+| field | expected | encoding | match |
+|---|---|---|---|
+| tegemoetkoming | 82.00 | 82.00 (exact 82) | yes |
+
+Note: Definitieve berekening 2014 (20 augustus 2015): € 82 bij een vastgesteld toetsingsinkomen van € 27.840, zonder partner (met partner zou de tekst € 872 geven; de uitspraak noemt geen partner). De tekst van 2014 geeft € 82,07 → € 82 (normpremie 2,41% × € 19.253,376 + 9,118% × € 8.586,62 = € 1.246,93; € 1.329 − € 1.246,93; via build.run_case). Het voorschot op het geschatte € 16.052 staat niet als bedrag in de uitspraak, dus geen case; een nabetaling van de vroegere werkgever telde mee in het toetsingsinkomen (in hoger beroep alleen de huurtoeslag in geschil). Wordt 'verified' op dezelfde voet (ASKS.md 9).
+
 ## zt-2014-syn-036 — PASS — check (synthetic)
 
 Source: Berekend uit de tekst: Wzt art. 1 lid 1 onder f, art. 2 lid 1-3 (BWBR0018451, geldend van 01-01-2014), Awir art. 14 lid 4-5 (geldend van 01-01-2014); de inkomensgrens zonder partner op de laatste euro met recht. Geen publicatie van de Dienst voor 2014 gevonden (leaflet 2014: niet gevonden)
@@ -283,6 +293,36 @@ Source: ABRvS 17 januari 2018, ECLI:NL:RVS:2018:133 (zaaknr. 201704714/1/A2), pr
 
 Note: Definitieve vaststelling 2015 van 30 september 2016: nihil op een gezamenlijk verzamelinkomen van € 35.695, met toeslagpartner (een Bbz-lening die in 2015 een schenking werd telde mee; de Afdeling: terecht). De verdeling is niet gegeven; alles bij de aanvrager ingevoerd, zonder gevolg voor de uitkomst. De tekst van 2015 geeft nihil: de grens met partner is € 32.655 (via build.run_case). Het voorschot rustte op € 25.905; het bedrag ervan noemt de uitspraak niet. Wordt 'verified' op dezelfde voet (ASKS.md 9).
 
+## zt-2015-rul-006 — PASS — check (ruling)
+
+Source: Rechtbank Den Haag 5 februari 2021, ECLI:NL:RBDHA:2021:2781 (zaaknrs. SGR 19/7423 en SGR 20/3372; bevestigd ABRvS ECLI:NL:RVS:2021:2830), r.o. 1–3, 12, 13, 15: 'Bij beschikking van 27 december 2014 is aan eiseres voor het jaar 2015 een voorschot zorgtoeslag toegekend van € 942.' 'Op 31 juli 2019 ontvangt verweerder een melding vanuit de Basisregistratie Inkomen (BRI) waaruit blijkt dat de inspecteur heeft vastgesteld dat in 2015 voor eiseres sprake is van een bedrag grondslag sparen en beleggen van € 391.765.' 'Bij beschikking van 6 september 2019 is de zorgtoeslag 2015 definitief berekend op nihil, en is bepaald dat eiseres € 1.061 moet terugbetalen.' 'In artikel 2a, eerste lid, van de Wzt is ... bepaald dat geen aanspraak bestaat op zorgtoeslag indien de grondslag sparen en beleggen van de aanvrager, zoals dat blijkt uit de BRI, in het berekeningsjaar 2015 meer bedraagt dan € 82.093 en in het berekeningsjaar 2016 meer bedraagt dan € 82.504.' 'Niet in geschil is dat bij een grondslag sparen en beleggen van € 391.765 voor het jaar 2015 respectievelijk € 479.973 voor het jaar 2016 geen recht bestaat op zorgtoeslag'. 'Verweerder heeft de definitieve berekeningen zorgtoeslag 2015 en 2016 terecht vastgesteld op nihil.'
+
+| field | expected | encoding | match |
+|---|---|---|---|
+| tegemoetkoming | 0.00 | 0.00 (exact 0) | yes |
+
+Note: Definitieve berekening 2015 (6 september 2019): nihil omdat de grondslag sparen en beleggen (€ 391.765, BRI) boven de € 82.093 van Wzt art. 2a lid 1 (tekst 2015) lag — de derde uitkomst van de Dienst op de vermogenstoets in het corpus, en de eerste voor 2015. De uitspraak noemt de grondslag ná aftrek van het heffingvrije vermogen (Wet IB 2001 art. 5.2); de encoding vraagt de rendementsgrondslag en trekt het heffingvrije vermogen 2015 (€ 21.330, art. 5.5) zelf af. De invoer € 413.095 is daarom GERECONSTRUEERD: € 391.765 + € 21.330, zonder partner. Dat er geen partner was, noemt de uitspraak niet ('eiseres'); het voorschot van € 942 (27 december 2014) is het maximum zonder partner van de tekst 2015 (€ 941,85) en bewijst het; met partner zou de encoding tweemaal € 21.330 aftrekken en de uitkomst blijft nihil. Het toetsingsinkomen staat niet in de uitspraak; het is hier € 0 ingevuld omdat de vermogenstoets vóór de inkomenstoets gaat en nihil geeft bij elk inkomen (art. 2a lid 1: 'geen aanspraak'). De verifieerder toetst beide lezingen. Het voorschot zelf is geen case: zijn inkomen staat niet in de uitspraak. Het teruggevorderde bedrag (€ 1.061) is meer dan het voorschot van € 942; de uitspraak verklaart dat niet en het is geen invoer. De rechtbank: de Dienst mag niet afwijken van het inkomensgegeven in de BRI (Awir art. 2 lid 1 onder o, art. 8 lid 1) en hoeft een bezwaar tegen de aanslag IB niet af te wachten; wordt dat bezwaar gegrond, dan herziet hij ambtshalve (Awir art. 20 lid 1). Wordt 'verified' op dezelfde voet (ASKS.md 9).
+
+## zt-2015-rul-007 — PASS — check (ruling)
+
+Source: ABRvS 9 augustus 2017, ECLI:NL:RVS:2017:2138 (zaaknr. 201605226/1/A2), r.o. 4: 'Bij besluit van 21 maart 2015 zijn voor het berekeningsjaar 2015 voorschotten zorgtoeslag en kindgebonden budget toegekend tot een bedrag van € 942,00, respectievelijk € 4.082,00. Aan deze berekening ligt een geschat toetsingsinkomen van [appellante] van € 443,00 ten grondslag.'
+
+| field | expected | encoding | match |
+|---|---|---|---|
+| tegemoetkoming | 942.00 | 942.00 (exact 942) | yes |
+
+Note: Voorschot 2015 (21 maart 2015) van € 942 op een geschat toetsingsinkomen van € 443, zonder partner: het maximum van de tekst van 2015 (€ 1.408 − 5,265% × € 19.463,328 = € 941,85 → € 942, via build.run_case). Daarna heeft de Dienst het voorschot op nihil gezet omdat een medebewoner van 1 januari tot 4 oktober 2015 als toeslagpartner gold (Awir art. 3 lid 2 onder e); diens inkomen staat niet in de uitspraak en een deel van het jaar is niet als één situatie te berekenen (Awir art. 5, niet gecodeerd), dus die nihil is geen case. Wordt 'verified' op dezelfde voet (ASKS.md 9).
+
+## zt-2015-rul-008 — PASS — check (ruling)
+
+Source: ABRvS 15 november 2017, ECLI:NL:RVS:2017:3139 (zaaknr. 201605802/1/A2), r.o. 2: 'De Belastingdienst/Toeslagen had [appellante] bij besluit van 27 december 2014 een voorschot zorgtoeslag van € 942,00 toegekend en bij besluit van 21 september 2015 een voorschot kindgebonden budget van € 3.062,00. De hoogte van deze voorschotten was gebaseerd op een toetsingsinkomen van [appellante] van € 2.655,00.'
+
+| field | expected | encoding | match |
+|---|---|---|---|
+| tegemoetkoming | 942.00 | 942.00 (exact 942) | yes |
+
+Note: Voorschot 2015 (27 december 2014) van € 942 op een toetsingsinkomen van € 2.655, zonder partner: het maximum van de tekst van 2015 (€ 941,85 → € 942, via build.run_case). De latere herziening (21 oktober 2015) naar nihil bij een gezamenlijk toetsingsinkomen van € 17.736 met een medebewoner als toeslagpartner vanaf de geboorte van een kind op 21 maart 2015 is geen case: de tekst geeft bij € 17.736 met partner € 1.791 voor een heel jaar, maar de uitspraak zegt niet of de partner verzekerd was (Wzt art. 2 lid 5, tekst 2015) of rechtmatig verbleef (Awir art. 9) en de situatie veranderde binnen het jaar (Awir art. 5, niet gecodeerd); een uitkomst die van niet-genoemde invoer afhangt wordt niet opgeslagen en niet als verschil gelogd (law/SOURCES.md §4). Wordt 'verified' op dezelfde voet (ASKS.md 9).
+
 ## zt-2015-syn-032 — PASS — check (synthetic)
 
 Source: Berekend uit de tekst: Wzt art. 1 lid 1 onder f, art. 2 lid 1-3 (BWBR0018451, geldend van 01-01-2015 t/m 31-12-2015), Awir art. 14 lid 4-5 (geldend van 01-01-2015); de inkomensgrens zonder partner op de laatste euro met recht. Geen publicatie van de Dienst voor 2015 gevonden (leaflet 2015: niet gevonden)
@@ -353,6 +393,46 @@ Source: ABRvS 14 oktober 2020, ECLI:NL:RVS:2020:2416, r.o. 1 en 4: 'De dienst he
 
 Note: Definitieve berekening 2016 van 4 augustus 2017: zorgtoeslag nihil op een toetsingsinkomen van € 29.027 (een transitievergoeding van € 6.000 telde mee; de Afdeling: geen bijzonder inkomen). De uitspraak noemt geen partner; zonder partner geeft de tekst van 2016 nihil (de grens is € 27.013; via build.run_case). Wordt 'verified' op dezelfde voet (ASKS.md 9).
 
+## zt-2016-rul-004 — PASS — check (ruling)
+
+Source: Rechtbank Den Haag 5 februari 2021, ECLI:NL:RBDHA:2021:2781 (zaaknrs. SGR 19/7423 en SGR 20/3372; bevestigd ABRvS ECLI:NL:RVS:2021:2830), r.o. 4–6, 12, 13, 15: 'Bij beschikking van 28 december 2015 is aan eiseres voor het jaar 2016 een voorschot zorgtoeslag toegekend van € 998.' 'Op 11 oktober 2019 ontvangt verweerder een melding vanuit de BRI waaruit blijkt dat de inspecteur heeft vastgesteld dat in 2016 voor eiseres sprake is van een bedrag grondslag sparen en beleggen van € 479.973.' 'Bij beschikking van 15 november 2019 is de zorgtoeslag 2016 definitief berekend op nihil, en is bepaald dat eiseres € 1.902 moet terugbetalen.' '... in het berekeningsjaar 2016 meer bedraagt dan € 82.504.' 'Niet in geschil is dat bij een grondslag sparen en beleggen van € 391.765 voor het jaar 2015 respectievelijk € 479.973 voor het jaar 2016 geen recht bestaat op zorgtoeslag'. 'Verweerder heeft de definitieve berekeningen zorgtoeslag 2015 en 2016 terecht vastgesteld op nihil.'
+
+| field | expected | encoding | match |
+|---|---|---|---|
+| tegemoetkoming | 0.00 | 0.00 (exact 0) | yes |
+
+Note: Definitieve berekening 2016 (15 november 2019): nihil omdat de grondslag sparen en beleggen (€ 479.973, BRI) boven de € 82.504 van Wzt art. 2a lid 1 (tekst 2016) lag — de eerste uitkomst van de Dienst op de vermogenstoets voor 2016. De uitspraak noemt de grondslag ná aftrek van het heffingvrije vermogen (Wet IB 2001 art. 5.2); de encoding vraagt de rendementsgrondslag en trekt het heffingvrije vermogen 2016 (€ 24.437, art. 5.5) zelf af. De invoer € 504.410 is daarom GERECONSTRUEERD: € 479.973 + € 24.437, zonder partner. Dat er geen partner was, noemt de uitspraak niet ('eiseres'); het voorschot van € 998 (28 december 2015) is het maximum zonder partner van de tekst 2016 (€ 997,74) en bewijst het; met partner blijft de uitkomst nihil. Het toetsingsinkomen staat niet in de uitspraak; het is hier € 0 ingevuld omdat de vermogenstoets vóór de inkomenstoets gaat en nihil geeft bij elk inkomen. De verifieerder toetst beide lezingen. Het voorschot zelf is geen case: zijn inkomen staat niet in de uitspraak. Het teruggevorderde bedrag (€ 1.902) is veel meer dan het voorschot van € 998; de uitspraak verklaart dat niet en het is geen invoer. Zie zt-2015-rul-006 voor dezelfde aanvrager over 2015. Wordt 'verified' op dezelfde voet (ASKS.md 9).
+
+## zt-2016-rul-005 — PASS — check (ruling)
+
+Source: Rechtbank Zeeland-West-Brabant 10 april 2018, ECLI:NL:RBZWB:2018:2319 (zaaknr. BRE 17/6534 HUUR), procesverloop en r.o. 4: 'Bij besluit van 7 juli 2017 (primair besluit) heeft Belastingdienst/Toeslagen de zorgtoeslag over 2016 definitief vastgesteld op € 439,- en aangegeven dat eiser € 406,- moet terugbetalen.' 'In het geval van eiser is het toetsingsinkomen volgens de definitieve aanslag inkomstenbelasting 2016 vastgesteld op een bedrag van € 15.070,-,-. Ten aanzien van zijn toeslagpartner is het toetsingsinkomen vastgesteld op een bedrag van € 16.604,-. Het gezamenlijke toetsingsinkomen bedraagt derhalve € 30.674,-.' 'Nu het toetsingsinkomen voor eiser en zijn toeslagpartner is vastgesteld op € 30.670,- heeft Belastingdienst/Toeslagen terecht aangegeven dat eiser geen recht heeft op huurtoeslag ... Verder heeft Belastingdienst/Toeslagen het recht op zorgtoeslag op basis van het toetsingsinkomen terecht vastgesteld op € 439,-.' Beroep ongegrond
+
+| field | expected | encoding | match |
+|---|---|---|---|
+| tegemoetkoming | 439.00 | 439.00 (exact 439) | yes |
+
+Note: Definitieve berekening 2016 (7 juli 2017), met partner: € 439. De uitspraak noemt drie inkomensbedragen die niet kloppen met elkaar: € 15.070 + € 16.604 = € 31.674 (niet de genoemde € 30.674), en in de conclusie € 30.670. De tekst van 2016 geeft bij een gezamenlijk toetsingsinkomen van € 30.670 precies € 439 (normpremie 5,22% × € 19.758,816 + 13,43% × € 10.911,18 = € 2.496,78; 2 × € 1.468 − € 2.496,78 = € 439,22 → € 439, via build.run_case) en bij € 31.674 € 304. De case voert daarom € 30.670 in als gezamenlijk toetsingsinkomen (partner € 0), de lezing dat de Dienst met € 30.670 rekende en een van de twee deelbedragen in de uitspraak verschreven is; dat is de lezing van de operator, en de verifieerder toetst haar. De huurtoeslag 2016 nihil boven de inkomensgrens van € 30.050 is geen onderdeel van deze case. Wordt 'verified' op dezelfde voet (ASKS.md 9).
+
+## zt-2016-rul-006 — PASS — check (ruling)
+
+Source: ABRvS 5 december 2018, ECLI:NL:RVS:2018:3958 (zaaknr. 201805301/1/A2), r.o. 1: '[appellant] heeft in 2016 voorschotten huurtoeslag ten bedrage van € 499,00 en voorschotten zorgtoeslag ten bedrage van € 945,00 ontvangen. De Belastingdienst/Toeslagen heeft de hoogte van de voorschotten gebaseerd op een geschat inkomen van € 26.901,00. Bij het besluit van 4 augustus 2017, zoals gehandhaafd bij het besluit van 10 november 2017, heeft de dienst de huur- en zorgtoeslag definitief vastgesteld op een bedrag van onderscheidenlijk € 111,00 en € 761,00 ... De bedragen van de vastgestelde toeslagen heeft de dienst bepaald aan de hand van het door de inspecteur van de Belastingen vastgestelde inkomen van € 28.272,00, zoals opgenomen in de Basisregistratie Inkomen.' Hoger beroep ongegrond
+
+| field | expected | encoding | match |
+|---|---|---|---|
+| tegemoetkoming | 945.00 | 945.00 (exact 945) | yes |
+
+Note: Voorschot 2016 van € 945 op een geschat inkomen van € 26.901. De uitspraak noemt geen partner, maar het bedrag bewijst er een: de tekst van 2016 geeft zonder partner € 39 en met partner € 945,39 → € 945 (normpremie 5,22% × € 19.758,816 + 13,43% × € 7.142,18 = € 1.990,61; 2 × € 1.468 − € 1.990,61; via build.run_case). Het inkomen is ingevoerd als gezamenlijk toetsingsinkomen (partner € 0). Zie zt-2016-rul-007 voor de definitieve berekening. Wordt 'verified' op dezelfde voet (ASKS.md 9).
+
+## zt-2016-rul-007 — PASS — check (ruling)
+
+Source: ABRvS 5 december 2018, ECLI:NL:RVS:2018:3958 (zaaknr. 201805301/1/A2), r.o. 1 (zie zt-2016-rul-006): definitief 4 augustus 2017 'huur- en zorgtoeslag definitief vastgesteld op een bedrag van onderscheidenlijk € 111,00 en € 761,00' aan de hand van 'het door de inspecteur van de Belastingen vastgestelde inkomen van € 28.272,00, zoals opgenomen in de Basisregistratie Inkomen'. Hoger beroep ongegrond
+
+| field | expected | encoding | match |
+|---|---|---|---|
+| tegemoetkoming | 761.00 | 761.00 (exact 761) | yes |
+
+Note: Definitieve berekening 2016 (4 augustus 2017) van € 761 bij het BRI-inkomen van € 28.272. Met partner (bewezen door het voorschot, zt-2016-rul-006; zonder partner zou de tekst nihil geven) geeft de tekst van 2016 € 761,27 → € 761 (normpremie € 1.031,41 + 13,43% × € 8.513,18 = € 2.174,73; 2 × € 1.468 − € 2.174,73; via build.run_case). € 945 − € 761 = € 184 teruggevorderd voor de zorgtoeslag; de uitspraak noemt alleen het totaal met de huurtoeslag (€ 572). De Afdeling: een voorschot wekt geen vertrouwen op een gelijke definitieve vaststelling; de wet kent geen bepaling om van terugvordering af te zien. Wordt 'verified' op dezelfde voet (ASKS.md 9).
+
 ## zt-2016-syn-028 — PASS — check (synthetic)
 
 Source: Berekend uit de tekst: Wzt art. 1 lid 1 onder f, art. 2 lid 1-3 (BWBR0018451, geldend van 01-01-2016 t/m 31-12-2016), Awir art. 14 lid 4-5 (geldend van 01-01-2016); de inkomensgrens zonder partner op de laatste euro met recht. Geen publicatie van de Dienst voor 2016 gevonden (leaflet 2016: niet gevonden)
@@ -412,6 +492,16 @@ Source: ABRvS 4 december 2019, ECLI:NL:RVS:2019:4069 (zaaknr. 201901677/1/A2), r
 | tegemoetkoming | 0.00 | 0.00 (exact 0) | yes |
 
 Note: Eén maand van 2017 (januari) met een toeslagpartner: de Dienst telde voor die maand het hele jaarinkomen van de partner mee (gezamenlijk € 35.410) en kwam voor januari op geen aanspraak; de Afdeling bevestigt dat Awir art. 7 lid 1 en art. 8 lid 1 geen maandelijkse draagkracht kennen. De encoding rekent met maanden_aanspraak: 1 en het gezamenlijke jaarinkomen en geeft nihil (de grens met partner ligt onder € 35.410, zie zt-2017-syn-026/-027). De verdeling van het inkomen over beide partners noemt de uitspraak niet; alles staat bij de aanvrager, wat voor Wzt art. 2 lid 2 niet uitmaakt. De elf maanden zonder partner (februari–december) zijn geen case: de uitspraak noemt het eigen inkomen van de aanvrager niet, alleen het jaartotaal van de zorgtoeslag 2017 (€ 978, procesverloop). Twee situaties in één jaar (Awir art. 5) zijn als zodanig niet gecodeerd; deze case is de maand met partner apart. Wordt 'verified' op dezelfde voet als de andere ruling-cases (ASKS.md 9).
+
+## zt-2017-rul-003 — PASS — check (ruling)
+
+Source: Rechtbank Midden-Nederland 29 september 2020, ECLI:NL:RBMNE:2020:4351 (zaaknrs. UTR 19/5139 en 19/5285), procesverloop en r.o. 6, 9: '[eiser], te [woonplaats], Duitsland'; 'Bij besluit van 19 juli 2019 (het primaire besluit II) heeft verweerder het recht op zorgtoeslag van eiser voor het jaar 2017 definitief vastgesteld op nihil (€ 0,-) en het te veel uitbetaalde voorschot, inclusief rente, van € 681,- teruggevorderd.' 'Verweerder heeft terecht aan de hand van het door eiser geschatte toetsingsinkomen van € 23.170,- het voorschot zorgtoeslag voor 2017 berekend. ... De rechtbank stelt vast dat de inspecteur van de belastingdienst het verzamelinkomen 2017 van eiser heeft vastgesteld op € 26.121,-. Voor de definitieve berekening over 2017 is verweerder terecht uitgegaan van dit toetsingsinkomen.' 'De rechtbank is van oordeel dat verweerder terecht pas bij de definitieve berekening van zorgtoeslag over 2017 rekening heeft gehouden met de woonlandfactor. Vaststaat dat verweerder op 6 april 2018 de melding van het CAK heeft ontvangen dat eiser met ingang van 3 april 2011 zorgverzekerd is op grond van artikel 69 van de Zorgverzekeringswet.' Beroep ongegrond
+
+| field | expected | encoding | match |
+|---|---|---|---|
+| tegemoetkoming | 0.00 | 0.00 (exact 0) | yes |
+
+Note: Definitieve berekening 2017 (19 juli 2019): nihil voor een verdragsgerechtigde (Zvw art. 69) in Duitsland bij een toetsingsinkomen van € 26.121, met toepassing van de woonlandfactor. De tekst van 2017 geeft hetzelfde, maar langs een smalle weg: standaardpremie € 1.530 × woonlandfactor Duitsland 0,8372 (Wzt art. 3 lid 1–2, tekst 2017; Regeling zorgverzekering bijlage 4, Stcrt. 2016, 61016) = € 1.280,92; normpremie 2,305% × € 20.108,736 + 13,46% × € 6.012,26 = € 1.272,76 (art. 2 lid 3); aanspraak € 8,16 → afgerond € 8 (Awir art. 14 lid 4) → minder dan € 24, dus niet toegekend (Awir art. 14 lid 5) — via build.run_case. Na zt-2013-rul-008 de tweede beslissing in het corpus die het minimum van € 24 beslist, en de eerste in combinatie met een woonlandfactor. Met de voor de verdragsbijdrage teruggezette factor 0,7532 (Stcrt. 2019, 58198 art. II, 'zonder effect op de zorgtoeslag') zou de aanspraak negatief zijn: nihil onder beide factoren. Zonder woonlandfactor zou de tekst € 257 geven: de factor verklaart de nihil, niet het inkomen. De uitspraak noemt geen partner; met een verdragsgerechtigde partner zou de tekst € 985 geven, dus de case leest 'zonder partner' en de verifieerder toetst die lezing. Het voorschot op het geschatte € 23.170 is zonder factor berekend (r.o. 9); zijn bedrag staat niet in de uitspraak (€ 681 teruggevorderd 'inclusief rente'), dus geen case. Eerste uitkomst van de Dienst in het corpus met de Duitse factor op een genoemd inkomen. Wordt 'verified' op dezelfde voet (ASKS.md 9).
 
 ## zt-2017-syn-024 — PASS — check (synthetic)
 
@@ -592,6 +682,16 @@ Source: Rechtbank Noord-Holland 7 maart 2024, ECLI:NL:RBNHO:2024:2245 (zaaknr. A
 | tegemoetkoming | 0.00 | 0.00 (exact 0) | yes |
 
 Note: Zorgtoeslag 2019 definitief op nihil gesteld op een geregistreerd inkomen van € 36.428 (door de uitspraak 'geschat jaarinkomen' genoemd; later door de inspecteur verlaagd tot € 18.214, zie zt-2019-rul-007). Zonder partner ligt € 36.428 boven de inkomensgrens van de tekst van 2019 (€ 29.562) → nihil. Dat er geen partner was, volgt uit het bedrag van € 1.189 op het gecorrigeerde inkomen (het maximum zonder partner); met een verzekerde partner zou de tekst bij € 36.428 nog € 221 geven. De uitspraak gaat over de vergoeding van bezwaarkosten, niet over de hoogte van de toeslag; de bedragen zijn de feiten die de rechtbank vaststelt. Wordt 'verified' op dezelfde voet (ASKS.md 9).
+
+## zt-2019-rul-009 — PASS — check (ruling)
+
+Source: Rechtbank Midden-Nederland 6 november 2020, ECLI:NL:RBMNE:2020:5266 (zaaknr. UTR 20/1764), r.o. 2 en 4: 'Op 27 oktober 2019 heeft verweerder een melding van eiseres ontvangen waarmee zij haar geschatte toetsingsinkomen over 2019 heeft gewijzigd naar € 25.000,-. De wijziging van het geschatte toetsingsinkomen heeft geleid tot het primaire besluit, waarbij verweerder het voorschot huur- en zorgtoeslag voor 2019 heeft aangepast.' 'De rechtbank is van oordeel dat verweerder terecht voor 2019 zorgtoeslag op € 640,- en de huurtoeslag op nihil heeft vastgesteld. Verweerder heeft terecht aan de hand van het door eiseres geschatte toetsingsinkomen van € 25.000,- het voorschot huur- en zorgtoeslag berekend.' Beroep ongegrond
+
+| field | expected | encoding | match |
+|---|---|---|---|
+| tegemoetkoming | 640.00 | 640.00 (exact 640) | yes |
+
+Note: Herzien voorschot 2019 op het gewijzigde geschatte toetsingsinkomen van € 25.000: € 640 voor het hele jaar. De tekst van 2019 geeft hetzelfde: normpremie 2,005% × € 20.940,768 + 13,52% × € 4.059,23 = € 968,67; € 1.609 − € 968,67 = € 640,33 → € 640 (via build.run_case). De uitspraak noemt geen partner; met partner zou de tekst € 1.745 geven, dus 'zonder partner' volgt uit het bedrag. De rechtbank: het voorschot volgt het geschatte jaarinkomen (Awir art. 16), ook als het inkomen pas vanaf oktober steeg; de maanden januari–september worden niet apart berekend. Wordt 'verified' op dezelfde voet (ASKS.md 9).
 
 ## zt-2019-syn-016 — PASS — check (synthetic)
 
@@ -2874,8 +2974,8 @@ Note: Laatste rij van de tabel, op het genoemde inkomen zelf ('en meer' sluit he
 
 ---
 
-Browser encoding (`site/zorgtoeslag-regels.js`, node v22.22.0): 282 cases compared with the Python encoding, 282 identical, 0 different.
+Browser encoding (`site/zorgtoeslag-regels.js`, node v22.22.0): 292 cases compared with the Python encoding, 292 identical, 0 different.
 
 ---
 
-Cases run: 282, passed: 261, failed: 21, skipped: 0. Verified cases: 0. Blocking failures: 0. Browser/Python differences: 0 (blocking: the two encodings must agree).
+Cases run: 292, passed: 271, failed: 21, skipped: 0. Verified cases: 0. Blocking failures: 0. Browser/Python differences: 0 (blocking: the two encodings must agree).

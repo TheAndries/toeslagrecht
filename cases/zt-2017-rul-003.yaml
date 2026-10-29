@@ -1,0 +1,20 @@
+id: zt-2017-rul-003
+toeslag: zorgtoeslag
+jaar: 2017
+bron:
+  type: ruling
+  publicatie: "Rechtbank Midden-Nederland 29 september 2020, ECLI:NL:RBMNE:2020:4351 (zaaknrs. UTR 19/5139 en 19/5285), procesverloop en r.o. 6, 9: '[eiser], te [woonplaats], Duitsland'; 'Bij besluit van 19 juli 2019 (het primaire besluit II) heeft verweerder het recht op zorgtoeslag van eiser voor het jaar 2017 definitief vastgesteld op nihil (€ 0,-) en het te veel uitbetaalde voorschot, inclusief rente, van € 681,- teruggevorderd.' 'Verweerder heeft terecht aan de hand van het door eiser geschatte toetsingsinkomen van € 23.170,- het voorschot zorgtoeslag voor 2017 berekend. ... De rechtbank stelt vast dat de inspecteur van de belastingdienst het verzamelinkomen 2017 van eiser heeft vastgesteld op € 26.121,-. Voor de definitieve berekening over 2017 is verweerder terecht uitgegaan van dit toetsingsinkomen.' 'De rechtbank is van oordeel dat verweerder terecht pas bij de definitieve berekening van zorgtoeslag over 2017 rekening heeft gehouden met de woonlandfactor. Vaststaat dat verweerder op 6 april 2018 de melding van het CAK heeft ontvangen dat eiser met ingang van 3 april 2011 zorgverzekerd is op grond van artikel 69 van de Zorgverzekeringswet.' Beroep ongegrond"
+  url: https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RBMNE:2020:4351
+  opgehaald: 2026-10-29
+verified: false
+invoer:
+  partner: false
+  partner_verzekerd: null
+  aanvrager_verdragsgerechtigd: true
+  woonland: "DE"
+  toetsingsinkomen_aanvrager: "26121"
+  toetsingsinkomen_partner: "0"
+  rendementsgrondslag: null
+verwacht:
+  tegemoetkoming: "0"
+opmerking: "Definitieve berekening 2017 (19 juli 2019): nihil voor een verdragsgerechtigde (Zvw art. 69) in Duitsland bij een toetsingsinkomen van € 26.121, met toepassing van de woonlandfactor. De tekst van 2017 geeft hetzelfde, maar langs een smalle weg: standaardpremie € 1.530 × woonlandfactor Duitsland 0,8372 (Wzt art. 3 lid 1–2, tekst 2017; Regeling zorgverzekering bijlage 4, Stcrt. 2016, 61016) = € 1.280,92; normpremie 2,305% × € 20.108,736 + 13,46% × € 6.012,26 = € 1.272,76 (art. 2 lid 3); aanspraak € 8,16 → afgerond € 8 (Awir art. 14 lid 4) → minder dan € 24, dus niet toegekend (Awir art. 14 lid 5) — via build.run_case. Na zt-2013-rul-008 de tweede beslissing in het corpus die het minimum van € 24 beslist, en de eerste in combinatie met een woonlandfactor. Met de voor de verdragsbijdrage teruggezette factor 0,7532 (Stcrt. 2019, 58198 art. II, 'zonder effect op de zorgtoeslag') zou de aanspraak negatief zijn: nihil onder beide factoren. Zonder woonlandfactor zou de tekst € 257 geven: de factor verklaart de nihil, niet het inkomen. De uitspraak noemt geen partner; met een verdragsgerechtigde partner zou de tekst € 985 geven, dus de case leest 'zonder partner' en de verifieerder toetst die lezing. Het voorschot op het geschatte € 23.170 is zonder factor berekend (r.o. 9); zijn bedrag staat niet in de uitspraak (€ 681 teruggevorderd 'inclusief rente'), dus geen case. Eerste uitkomst van de Dienst in het corpus met de Duitse factor op een genoemd inkomen. Wordt 'verified' op dezelfde voet (ASKS.md 9)."

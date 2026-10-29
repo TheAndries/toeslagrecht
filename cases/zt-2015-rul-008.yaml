@@ -1,0 +1,18 @@
+id: zt-2015-rul-008
+toeslag: zorgtoeslag
+jaar: 2015
+bron:
+  type: ruling
+  publicatie: "ABRvS 15 november 2017, ECLI:NL:RVS:2017:3139 (zaaknr. 201605802/1/A2), r.o. 2: 'De Belastingdienst/Toeslagen had [appellante] bij besluit van 27 december 2014 een voorschot zorgtoeslag van € 942,00 toegekend en bij besluit van 21 september 2015 een voorschot kindgebonden budget van € 3.062,00. De hoogte van deze voorschotten was gebaseerd op een toetsingsinkomen van [appellante] van € 2.655,00.'"
+  url: https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RVS:2017:3139
+  opgehaald: 2026-10-29
+verified: false
+invoer:
+  partner: false
+  partner_verzekerd: null
+  toetsingsinkomen_aanvrager: "2655"
+  toetsingsinkomen_partner: "0"
+  rendementsgrondslag: null
+verwacht:
+  tegemoetkoming: "942"
+opmerking: "Voorschot 2015 (27 december 2014) van € 942 op een toetsingsinkomen van € 2.655, zonder partner: het maximum van de tekst van 2015 (€ 941,85 → € 942, via build.run_case). De latere herziening (21 oktober 2015) naar nihil bij een gezamenlijk toetsingsinkomen van € 17.736 met een medebewoner als toeslagpartner vanaf de geboorte van een kind op 21 maart 2015 is geen case: de tekst geeft bij € 17.736 met partner € 1.791 voor een heel jaar, maar de uitspraak zegt niet of de partner verzekerd was (Wzt art. 2 lid 5, tekst 2015) of rechtmatig verbleef (Awir art. 9) en de situatie veranderde binnen het jaar (Awir art. 5, niet gecodeerd); een uitkomst die van niet-genoemde invoer afhangt wordt niet opgeslagen en niet als verschil gelogd (law/SOURCES.md §4). Wordt 'verified' op dezelfde voet (ASKS.md 9)."

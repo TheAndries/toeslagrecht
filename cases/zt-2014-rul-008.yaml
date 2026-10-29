@@ -1,0 +1,18 @@
+id: zt-2014-rul-008
+toeslag: zorgtoeslag
+jaar: 2014
+bron:
+  type: ruling
+  publicatie: "ABRvS 31 januari 2018, ECLI:NL:RVS:2018:317 (zaaknr. 201703168/1/A2), r.o. 1: '[appellant sub 2] heeft in 2014 voorschotten zorg- en huurtoeslag ontvangen. ... De hoogte van de voorschotten in dat besluit is gebaseerd op een geschat toetsingsinkomen van [appellant sub 2] over 2014 van € 16.052,00. Bij het besluit van 20 augustus 2015 heeft de Belastingdienst/Toeslagen de zorg- en huurtoeslag van [appellant sub 2] definitief vastgesteld op respectievelijk € 82,00 en nihil. Dit besluit is gebaseerd op een vastgesteld toetsingsinkomen van € 27.840,00.'"
+  url: https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RVS:2018:317
+  opgehaald: 2026-10-29
+verified: false
+invoer:
+  partner: false
+  partner_verzekerd: null
+  toetsingsinkomen_aanvrager: "27840"
+  toetsingsinkomen_partner: "0"
+  rendementsgrondslag: null
+verwacht:
+  tegemoetkoming: "82"
+opmerking: "Definitieve berekening 2014 (20 augustus 2015): € 82 bij een vastgesteld toetsingsinkomen van € 27.840, zonder partner (met partner zou de tekst € 872 geven; de uitspraak noemt geen partner). De tekst van 2014 geeft € 82,07 → € 82 (normpremie 2,41% × € 19.253,376 + 9,118% × € 8.586,62 = € 1.246,93; € 1.329 − € 1.246,93; via build.run_case). Het voorschot op het geschatte € 16.052 staat niet als bedrag in de uitspraak, dus geen case; een nabetaling van de vroegere werkgever telde mee in het toetsingsinkomen (in hoger beroep alleen de huurtoeslag in geschil). Wordt 'verified' op dezelfde voet (ASKS.md 9)."

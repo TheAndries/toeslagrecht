@@ -1,0 +1,18 @@
+id: zt-2015-rul-006
+toeslag: zorgtoeslag
+jaar: 2015
+bron:
+  type: ruling
+  publicatie: "Rechtbank Den Haag 5 februari 2021, ECLI:NL:RBDHA:2021:2781 (zaaknrs. SGR 19/7423 en SGR 20/3372; bevestigd ABRvS ECLI:NL:RVS:2021:2830), r.o. 1–3, 12, 13, 15: 'Bij beschikking van 27 december 2014 is aan eiseres voor het jaar 2015 een voorschot zorgtoeslag toegekend van € 942.' 'Op 31 juli 2019 ontvangt verweerder een melding vanuit de Basisregistratie Inkomen (BRI) waaruit blijkt dat de inspecteur heeft vastgesteld dat in 2015 voor eiseres sprake is van een bedrag grondslag sparen en beleggen van € 391.765.' 'Bij beschikking van 6 september 2019 is de zorgtoeslag 2015 definitief berekend op nihil, en is bepaald dat eiseres € 1.061 moet terugbetalen.' 'In artikel 2a, eerste lid, van de Wzt is ... bepaald dat geen aanspraak bestaat op zorgtoeslag indien de grondslag sparen en beleggen van de aanvrager, zoals dat blijkt uit de BRI, in het berekeningsjaar 2015 meer bedraagt dan € 82.093 en in het berekeningsjaar 2016 meer bedraagt dan € 82.504.' 'Niet in geschil is dat bij een grondslag sparen en beleggen van € 391.765 voor het jaar 2015 respectievelijk € 479.973 voor het jaar 2016 geen recht bestaat op zorgtoeslag'. 'Verweerder heeft de definitieve berekeningen zorgtoeslag 2015 en 2016 terecht vastgesteld op nihil.'"
+  url: https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RBDHA:2021:2781
+  opgehaald: 2026-10-29
+verified: false
+invoer:
+  partner: false
+  partner_verzekerd: null
+  toetsingsinkomen_aanvrager: "0"
+  toetsingsinkomen_partner: "0"
+  rendementsgrondslag: "413095"
+verwacht:
+  tegemoetkoming: "0"
+opmerking: "Definitieve berekening 2015 (6 september 2019): nihil omdat de grondslag sparen en beleggen (€ 391.765, BRI) boven de € 82.093 van Wzt art. 2a lid 1 (tekst 2015) lag — de derde uitkomst van de Dienst op de vermogenstoets in het corpus, en de eerste voor 2015. De uitspraak noemt de grondslag ná aftrek van het heffingvrije vermogen (Wet IB 2001 art. 5.2); de encoding vraagt de rendementsgrondslag en trekt het heffingvrije vermogen 2015 (€ 21.330, art. 5.5) zelf af. De invoer € 413.095 is daarom GERECONSTRUEERD: € 391.765 + € 21.330, zonder partner. Dat er geen partner was, noemt de uitspraak niet ('eiseres'); het voorschot van € 942 (27 december 2014) is het maximum zonder partner van de tekst 2015 (€ 941,85) en bewijst het; met partner zou de encoding tweemaal € 21.330 aftrekken en de uitkomst blijft nihil. Het toetsingsinkomen staat niet in de uitspraak; het is hier € 0 ingevuld omdat de vermogenstoets vóór de inkomenstoets gaat en nihil geeft bij elk inkomen (art. 2a lid 1: 'geen aanspraak'). De verifieerder toetst beide lezingen. Het voorschot zelf is geen case: zijn inkomen staat niet in de uitspraak. Het teruggevorderde bedrag (€ 1.061) is meer dan het voorschot van € 942; de uitspraak verklaart dat niet en het is geen invoer. De rechtbank: de Dienst mag niet afwijken van het inkomensgegeven in de BRI (Awir art. 2 lid 1 onder o, art. 8 lid 1) en hoeft een bezwaar tegen de aanslag IB niet af te wachten; wordt dat bezwaar gegrond, dan herziet hij ambtshalve (Awir art. 20 lid 1). Wordt 'verified' op dezelfde voet (ASKS.md 9)."
