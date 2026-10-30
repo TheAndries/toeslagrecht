@@ -1,0 +1,18 @@
+id: zt-2019-rul-012
+toeslag: zorgtoeslag
+jaar: 2019
+bron:
+  type: ruling
+  publicatie: "Rechtbank Limburg 24 februari 2022, ECLI:NL:RBLIM:2022:1586 (zaaknr. ROE 21/243), citaten uit de uitspraak: 'Bij besluit van 6 november 2020 (het primaire besluit) heeft verweerder de zorgtoeslag van eiser over het jaar 2019 definitief berekend op een bedrag van € 1.770,- en de teveel betaalde zorgtoeslag ten bedrage van € 544,- (exclusief € 2,- rente) van eiser teruggevorderd.' 'Verweerder heeft de zorgtoeslag berekend op basis van een toetsingsinkomen in 2019 van € 24.971,-.' 'Verweerder stelt zich in het verweerschrift van 9 juni 2021 op het standpunt dat het recht op zorgtoeslag terecht is gebaseerd op de in de Basisregistratie Inkomen (Bri) vastgelegde inkomensgegevens van eiser en zijn toeslagpartner in 2019 van in totaal € 24.971.'"
+  url: https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RBLIM:2022:1586
+  opgehaald: 2026-10-30
+verified: false
+invoer:
+  partner: true
+  partner_verzekerd: true
+  toetsingsinkomen_aanvrager: "24971"
+  toetsingsinkomen_partner: "0"
+  rendementsgrondslag: null
+verwacht:
+  tegemoetkoming: "1770"
+opmerking: "Definitieve berekening 2019 (6 november 2020): € 1.770 bij een gezamenlijk toetsingsinkomen van eiser en zijn toeslagpartner van in totaal € 24.971 (BRI), waarin een nabetaling bijstand over 2018 meetelt. De tekst van 2019: 2 × € 1.609 − (4,315% × € 20.940,768 + 13,520% × € 4.030,232) = € 1.769,52 → € 1.770 (Awir art. 14 lid 4). Het gezamenlijke inkomen is als inkomen van de aanvrager ingevoerd (partner € 0); de uitsplitsing staat niet in de uitspraak. De rechtbank liet de berekening staan en zag alleen van de terugvordering van € 544 af (bijzondere omstandigheden); dat raakt de tegemoetkoming niet. Wordt 'verified' op dezelfde voet (ASKS.md 9)."

@@ -1,0 +1,18 @@
+id: zt-2018-rul-004
+toeslag: zorgtoeslag
+jaar: 2018
+bron:
+  type: ruling
+  publicatie: "ABRvS 7 december 2022, ECLI:NL:RVS:2022:3588 (zaaknr. 202106167/1/A2), citaten uit de uitspraak: 'Bij besluit van 22 januari 2018 heeft de Belastingdienst/Toeslagen de voorschotten zorgtoeslag, kindgebonden budget en huurtoeslag voor [appellante] over 2018 vastgesteld op respectievelijk € 1.139,00, € 5.543,00 en € 4.045,00.' 'Bij het besluit van 9 augustus 2019 heeft de Belastingdienst/Toeslagen de zorgtoeslag, het kindgebonden budget en de huurtoeslag voor [appellante] over 2018 opnieuw berekend en definitief vastgesteld op onderscheidenlijk € 0,00, € 2.945,00 en € 0,00.' 'De dienst heeft de bedragen van de zorgtoeslag en het kindgebonden budget gebaseerd op een toetsingsinkomen van [appellante] van € 58.936,00 en heeft het bedrag van de huurtoeslag gebaseerd op een gezamenlijk toetsingsinkomen van [appellante] en haar thuiswonende kind van in totaal € 76.729,00.'"
+  url: https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RVS:2022:3588
+  opgehaald: 2026-10-30
+verified: false
+invoer:
+  partner: false
+  partner_verzekerd: null
+  toetsingsinkomen_aanvrager: "58936"
+  toetsingsinkomen_partner: "0"
+  rendementsgrondslag: null
+verwacht:
+  tegemoetkoming: "0"
+opmerking: "Definitieve vaststelling 2018 (9 augustus 2019): nihil bij een toetsingsinkomen van € 58.936, zonder partner (de uitspraak rekent voor de zorgtoeslag met het eigen inkomen van appellante; het thuiswonende kind telt alleen voor de huurtoeslag mee als medebewoner). De tekst van 2018 geeft nihil boven € 28.720 zonder partner en boven € 35.996 met partner. Het voorschot van € 1.139 (22 januari 2018) is het maximum zonder partner van de tekst 2018 (€ 1.139,03), maar zijn geschatte inkomen staat niet in de uitspraak: geen case. Wordt 'verified' op dezelfde voet (ASKS.md 9)."

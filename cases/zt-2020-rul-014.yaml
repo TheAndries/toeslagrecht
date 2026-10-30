@@ -1,0 +1,18 @@
+id: zt-2020-rul-014
+toeslag: zorgtoeslag
+jaar: 2020
+bron:
+  type: ruling
+  publicatie: "Rechtbank Amsterdam 20 september 2021, ECLI:NL:RBAMS:2021:7868 (zaaknr. AMS 20/6939), citaten uit de uitspraak: 'Op 31 augustus 2020 heef [eiser] een gewijzigd verzamelinkomen doorgegeven van € 29.077,-.' 'Daarom heeft de B/T met het primaire besluit II de huur- en zorgtoeslag voor het jaar 2020 herzien op € 436,- aan huurtoeslag en € 214,- aan zorgtoeslag en het teveel betaalde voorschot van € 4.684,- van [eiser] teruggevorderd.'"
+  url: https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RBAMS:2021:7868
+  opgehaald: 2026-10-30
+verified: false
+invoer:
+  partner: false
+  partner_verzekerd: null
+  toetsingsinkomen_aanvrager: "29077"
+  toetsingsinkomen_partner: "0"
+  rendementsgrondslag: null
+verwacht:
+  tegemoetkoming: "214"
+opmerking: "Herzien voorschot 2020 (23 september 2020): € 214 bij een door eiser zelf doorgegeven verzamelinkomen van € 29.077, zonder partner. De tekst van 2020: € 1.642 − (1,830% × € 21.430,656 + 13,550% × € 7.646,344) = € 213,74 → € 214 (Awir art. 14 lid 4). De rechtbank: zolang de toeslag niet definitief is, mag de Dienst het voorschot op de eigen opgave baseren (Awir art. 16). Wordt 'verified' op dezelfde voet (ASKS.md 9)."

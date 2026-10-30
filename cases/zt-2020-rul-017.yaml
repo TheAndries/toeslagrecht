@@ -1,0 +1,18 @@
+id: zt-2020-rul-017
+toeslag: zorgtoeslag
+jaar: 2020
+bron:
+  type: ruling
+  publicatie: "Rechtbank Midden-Nederland 15 december 2021, ECLI:NL:RBMNE:2021:6118 (zaaknr. UTR - 21/2520 en UTR - 21/2521), citaten uit de uitspraak: 'Voor het jaar 2020 heeft verweerder aan eisers ieder afzonderlijk een voorschot zorgtoeslag verleend van € 1.250,-.' 'Daarbij is verweerder uitgegaan van een geschat toetsingsinkomen van eiseres van € 19.100,- en van eiser van'"
+  url: https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RBMNE:2021:6118
+  opgehaald: 2026-10-30
+verified: false
+invoer:
+  partner: false
+  partner_verzekerd: null
+  toetsingsinkomen_aanvrager: "19100"
+  toetsingsinkomen_partner: "0"
+  rendementsgrondslag: null
+verwacht:
+  tegemoetkoming: "1250"
+opmerking: "Voorschot 2020 van eiseres, toegekend voordat het partnerschap bekend was: € 1.250 bij een geschat toetsingsinkomen van € 19.100, zonder partner — het maximum zonder partner van de tekst 2020 (€ 1.249,82). Eiser kreeg afzonderlijk eveneens € 1.250; zijn geschatte inkomen is in de gepubliceerde tekst afgebroken en niet opgenomen. Het herziene voorschot met partner: zt-2020-rul-016. Wordt 'verified' op dezelfde voet (ASKS.md 9)."

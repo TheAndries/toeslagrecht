@@ -1,0 +1,18 @@
+id: zt-2018-rul-005
+toeslag: zorgtoeslag
+jaar: 2018
+bron:
+  type: ruling
+  publicatie: "Rechtbank Midden-Nederland 14 juni 2021, ECLI:NL:RBMNE:2021:2494 (zaaknr. UTR 20/3703), citaten uit de uitspraak: 'Eiser heeft voor 2018 een voorschot zorgtoeslag ontvangen van € 1.656,-.' '1 mei 2018 heeft verweerder het recht op zorgtoeslag definitief berekend en vastgesteld op nihil.' 'Dat heeft verweerder zo gedaan, omdat het gezamenlijke toetsingsinkomen van eiser en zijn echtgenote € 39.574,- bedraagt en dan bestaat er geen recht op zorgtoeslag.' 'Dit betekent dat eiser en zijn echtgenote voor het jaar 2018 vanaf 1 november 2018 niet meer als toeslagpartners worden aangemerkt.' 'De zorgtoeslag voor 2018 is door verweerder daarom opnieuw berekend en bij besluit van 6 maart 2021 vastgesteld op € 170,-.'"
+  url: https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RBMNE:2021:2494
+  opgehaald: 2026-10-30
+verified: false
+invoer:
+  partner: true
+  partner_verzekerd: true
+  toetsingsinkomen_aanvrager: "39574"
+  toetsingsinkomen_partner: "0"
+  rendementsgrondslag: null
+verwacht:
+  tegemoetkoming: "0"
+opmerking: "Definitieve vaststelling 2018 (1 mei 2020, gehandhaafd 4 september 2020): nihil bij een gezamenlijk toetsingsinkomen van € 39.574 met de echtgenote als toeslagpartner voor het hele jaar (tekst 2018: inkomensgrens met partner € 35.996). Opgenomen met de invoer van dát besluit: de Dienst nam hangende beroep (6 maart 2021) een ander standpunt in — het partnerschap eindigde per 1 november 2018 — en berekende € 170; dat is een wijziging in het jaar (Awir art. 5), niet gecodeerd, geen case. Het gezamenlijke inkomen is als inkomen van de aanvrager ingevoerd (partner € 0, verzekering niet in geschil); de uitsplitsing staat niet in de uitspraak. Het voorschot van € 1.656 heeft geen genoemd inkomen en is geen case; € 1.711 teruggevorderd. Wordt 'verified' op dezelfde voet (ASKS.md 9)."

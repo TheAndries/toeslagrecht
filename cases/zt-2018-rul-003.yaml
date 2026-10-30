@@ -1,0 +1,18 @@
+id: zt-2018-rul-003
+toeslag: zorgtoeslag
+jaar: 2018
+bron:
+  type: ruling
+  publicatie: "ABRvS 13 oktober 2021, ECLI:NL:RVS:2021:2281 (zaaknr. 202006813/1/A2), citaten uit de uitspraak: 'Aan het besluit van 9 augustus 2019, gehandhaafd bij het besluit van 4 november 2019, heeft de Belastingdienst/Toeslagen ten grondslag gelegd dat het toetsingsinkomen van [appellant] € 25.598,00 bedraagt, waardoor het recht op zorgtoeslag € 445,00 is.' 'Ook voert [appellant] aan dat hij in eerste instantie geen zorgtoeslag over 2015, 2016 en 2017 heeft ontvangen en dat het in 2018 ontvangen bedrag van € 536,00 achterstallige zorgtoeslag over die jaren is.'"
+  url: https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RVS:2021:2281
+  opgehaald: 2026-10-30
+verified: false
+invoer:
+  partner: false
+  partner_verzekerd: null
+  toetsingsinkomen_aanvrager: "25598"
+  toetsingsinkomen_partner: "0"
+  rendementsgrondslag: null
+verwacht:
+  tegemoetkoming: "445"
+opmerking: "Definitieve vaststelling 2018 (9 augustus 2019): € 445 bij een toetsingsinkomen van € 25.598, zonder partner (de uitspraak noemt geen partner; met partner zou de tekst € 1.426 geven). De tekst van 2018: € 1.546 − (1,990% × € 20.450,88 + 13,490% × € 5.147,12) = € 444,68 → € 445 (Awir art. 14 lid 4). De eerste uitkomst van de Dienst voor 2018 op de afbouwlijn zonder partner in het corpus. € 91 teruggevorderd; het voorschot (€ 536, dat appellant achterstallige toeslag over 2015–2017 noemt) heeft geen genoemd inkomen en is geen case. Wordt 'verified' op dezelfde voet (ASKS.md 9)."

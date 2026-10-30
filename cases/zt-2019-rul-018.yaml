@@ -1,0 +1,18 @@
+id: zt-2019-rul-018
+toeslag: zorgtoeslag
+jaar: 2019
+bron:
+  type: ruling
+  publicatie: "ABRvS 24 mei 2023, ECLI:NL:RVS:2023:2013 (zaaknr. 202101123/1/A2), citaten uit de uitspraak: 'Bij besluit van 21 augustus 2019 heeft de Belastingdienst/Toeslagen de aan [appellant] over het berekeningsjaar 2019 toegekende voorschotten zorgtoeslag en huurtoeslag herzien en op nihil gesteld.' 'Daarbij is de dienst, voor wat betreft het recht van [appellant] op zorgtoeslag, uitgegaan van een geschat jaarinkomen van € 42.000,00 van zijn toeslagpartner, [toeslagpartner], en een geschat jaarinkomen van € 15.822,- van hemzelf.' 'Dit gezamenlijke toetsingsinkomen van € 57.822,00 is hoger dan de voor zorgtoeslag in 2019 geldende inkomensgrenzen.'"
+  url: https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RVS:2023:2013
+  opgehaald: 2026-10-30
+verified: false
+invoer:
+  partner: true
+  partner_verzekerd: true
+  toetsingsinkomen_aanvrager: "15822"
+  toetsingsinkomen_partner: "42000"
+  rendementsgrondslag: null
+verwacht:
+  tegemoetkoming: "0"
+opmerking: "Herzien voorschot 2019 (21 augustus 2019, gehandhaafd 30 december 2019): nihil bij een geschat jaarinkomen van € 15.822 voor appellant en € 42.000 voor zijn toeslagpartner, gezamenlijk € 57.822 (tekst 2019: inkomensgrens met partner € 37.885). De verzekering van de partner is niet in geschil. Wordt 'verified' op dezelfde voet (ASKS.md 9)."

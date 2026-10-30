@@ -1,0 +1,18 @@
+id: zt-2022-rul-008
+toeslag: zorgtoeslag
+jaar: 2022
+bron:
+  type: ruling
+  publicatie: "Rechtbank Noord-Nederland 10 juni 2025, ECLI:NL:RBNNE:2025:3192 (zaaknr. LEE 24/2861), citaten uit de uitspraak: 'Op 28 december 2021 heeft verweerder aan eiseres een voorschot zorgtoeslag verleend van € 1.910,00 op basis van een geschat gezamenlijk inkomen van € 27.082,00.'"
+  url: https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RBNNE:2025:3192
+  opgehaald: 2026-10-30
+verified: false
+invoer:
+  partner: true
+  partner_verzekerd: true
+  toetsingsinkomen_aanvrager: "27082"
+  toetsingsinkomen_partner: "0"
+  rendementsgrondslag: null
+verwacht:
+  tegemoetkoming: "1910"
+opmerking: "Voorschot 2022 (28 december 2021): € 1.910 bij een geschat gezamenlijk inkomen van € 27.082, met partner. De tekst van 2022: 2 × € 1.749 − (4,225% × € 22.356 + 13,610% × € 4.726) = € 1.910,25 → € 1.910 (Awir art. 14 lid 4). Het gezamenlijke inkomen is als inkomen van de aanvrager ingevoerd (partner € 0). De definitieve berekening (14 juni 2024, € 335) heeft geen genoemd inkomen en is geen case. Wordt 'verified' op dezelfde voet (ASKS.md 9)."

@@ -1,0 +1,18 @@
+id: zt-2019-rul-011
+toeslag: zorgtoeslag
+jaar: 2019
+bron:
+  type: ruling
+  publicatie: "Rechtbank Den Haag 24 januari 2022, ECLI:NL:RBDHA:2022:782 (zaaknr. 21/41 en 22/331), citaten uit de uitspraak: 'Op 16 juni 2021 heeft verweerder van de BRI een melding ontvangen waarin het inkomen van eiseres voor het jaar 2019 is bepaald op € 19.712.' 'Bij beschikkingen van 26 oktober 2021 (de herziene beslissingen) heeft verweerder de definitief berekende huurtoeslag en zorgtoeslag voor het berekeningsjaar 2019 herzien naar € 2.966 respectievelijk € 1.189.' 'Bij de herziening van de zorgtoeslag is uitgegaan van een toetsingsinkomen van € 19.712.'"
+  url: https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RBDHA:2022:782
+  opgehaald: 2026-10-30
+verified: false
+invoer:
+  partner: false
+  partner_verzekerd: null
+  toetsingsinkomen_aanvrager: "19712"
+  toetsingsinkomen_partner: "0"
+  rendementsgrondslag: null
+verwacht:
+  tegemoetkoming: "1189"
+opmerking: "Herziene definitieve berekening 2019 (26 oktober 2021): € 1.189 bij een toetsingsinkomen van € 19.712, zonder partner — het maximum zonder partner van de tekst 2019 (€ 1.189,14), want het inkomen ligt onder het drempelinkomen van € 20.940,768. De rechtbank: de Dienst mag niet afwijken van het in de BRI geregistreerde inkomen (Awir art. 7 lid 1, art. 8 lid 1; herziening Awir art. 20). Eerdere berekening op € 24.100: zt-2019-rul-010. Wordt 'verified' op dezelfde voet (ASKS.md 9)."

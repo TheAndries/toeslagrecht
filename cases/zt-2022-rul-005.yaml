@@ -1,0 +1,18 @@
+id: zt-2022-rul-005
+toeslag: zorgtoeslag
+jaar: 2022
+bron:
+  type: ruling
+  publicatie: "Rechtbank Den Haag 20 juni 2024, ECLI:NL:RBDHA:2024:10408 (zaaknr. SGR 23/6791), citaten uit de uitspraak: 'Het inkomen van eiser is bepaald op € 16.513,- en dat van zijn van partner op € 12.264,-.' 'Op grond van deze gewijzigde inkomensgegevens, heeft verweerder de zorgtoeslag van eiser bij het primaire besluit van 11 augustus 2023 vastgesteld op € 1.680,-.'"
+  url: https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RBDHA:2024:10408
+  opgehaald: 2026-10-30
+verified: false
+invoer:
+  partner: true
+  partner_verzekerd: true
+  toetsingsinkomen_aanvrager: "16513"
+  toetsingsinkomen_partner: "12264"
+  rendementsgrondslag: null
+verwacht:
+  tegemoetkoming: "1680"
+opmerking: "Definitieve vaststelling 2022 (11 augustus 2023): € 1.680 bij de door de inspecteur vastgestelde inkomens van € 16.513 (eiser) en € 12.264 (partner), gezamenlijk € 28.777. De tekst van 2022: 2 × € 1.749 − (4,225% × € 22.356 + 13,610% × € 6.421) = € 1.679,56 → € 1.680 (Awir art. 14 lid 4). € 710 teruggevorderd; de rechtbank: de Dienst volgt het inkomen van de inspecteur (Awir art. 7 lid 1) en hoeft de juistheid daarvan niet te onderzoeken. Wordt 'verified' op dezelfde voet (ASKS.md 9)."

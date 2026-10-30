@@ -1,0 +1,18 @@
+id: zt-2023-rul-004
+toeslag: zorgtoeslag
+jaar: 2023
+bron:
+  type: ruling
+  publicatie: "Rechtbank Gelderland 24 februari 2025, ECLI:NL:RBGEL:2025:1418 (zaaknr. AWB - 24/2616), citaten uit de uitspraak: 'Bij besluit van 24 mei 2023 is aan eiseres een voorschot zorgtoeslag toegekend van € 1.595, aan kindgebonden budget van € 5.360 (herzien) en aan huurtoeslag van € 1.572 (op basis van een toetsingsinkomen van € 27.000).'"
+  url: https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RBGEL:2025:1418
+  opgehaald: 2026-10-30
+verified: false
+invoer:
+  partner: false
+  partner_verzekerd: null
+  toetsingsinkomen_aanvrager: "27000"
+  toetsingsinkomen_partner: "0"
+  rendementsgrondslag: null
+verwacht:
+  tegemoetkoming: "1595"
+opmerking: "Voorschot 2023 (24 mei 2023): € 1.595 bij een geschat toetsingsinkomen van € 27.000, zonder partner ('eiseres', geen partner genoemd; het kindgebonden budget zegt niets over een partner). De tekst van 2023: € 1.889 − (0,123% × € 25.069,824 + 13,640% × € 1.930,176) = € 1.594,89 → € 1.595 (Awir art. 14 lid 4). Het hoger beroep, ABRvS 25 maart 2026, ECLI:NL:RVS:2026:1753, noemt hetzelfde geschatte inkomen. Het latere voorschot van € 777 (5 januari 2024) heeft geen genoemd inkomen en is geen case. Wordt 'verified' op dezelfde voet (ASKS.md 9)."

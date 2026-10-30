@@ -1,0 +1,18 @@
+id: zt-2019-rul-020
+toeslag: zorgtoeslag
+jaar: 2019
+bron:
+  type: ruling
+  publicatie: "Rechtbank Zeeland-West-Brabant 9 januari 2026, ECLI:NL:RBZWB:2026:60 (zaaknr. BRE 21/2894 HUUR en BRE 22/3072 ZORG), citaten uit de uitspraak: 'Aan eiser zijn, na diverse herzieningen, voorschotten huurtoeslag van € 2.992,- en zorgtoeslag van € 2.314,- toegekend voor het jaar 2019.' 'Het voorschot zorgtoeslag is gebaseerd op een geschat inkomen van eiser van € 9.565,- en van zijn toeslagpartner van € 0,-.'"
+  url: https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RBZWB:2026:60
+  opgehaald: 2026-10-30
+verified: false
+invoer:
+  partner: true
+  partner_verzekerd: true
+  toetsingsinkomen_aanvrager: "9565"
+  toetsingsinkomen_partner: "0"
+  rendementsgrondslag: null
+verwacht:
+  tegemoetkoming: "2314"
+opmerking: "Voorschot 2019 (na herzieningen): € 2.314 bij een geschat inkomen van € 9.565 voor eiser en € 0 voor zijn toeslagpartner — het maximum met partner van de tekst 2019 (€ 2.314,41). De definitieve berekening van dezelfde uitspraak (9 maart 2022, € 1.169 bij BRI-inkomens van € 11.169 en € 0) geeft de tekst voor een heel jaar niet (€ 2.314); de uitspraak noemt een zoon als medebewoner en meldingen over drie personen, maar geen maanden of andere invoer — niet opgenomen, wel in law/SOURCES.md §4. Hoger beroep: ABRvS 2 oktober 2026, ECLI:NL:RVS:2026:5933. Wordt 'verified' op dezelfde voet (ASKS.md 9)."

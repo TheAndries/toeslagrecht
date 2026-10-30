@@ -1,0 +1,18 @@
+id: zt-2013-rul-009
+toeslag: zorgtoeslag
+jaar: 2013
+bron:
+  type: ruling
+  publicatie: "ABRvS 28 oktober 2015, ECLI:NL:RVS:2015:3282 (zaaknr. 201505333/1/A2; bevestigt Rechtbank Rotterdam 2 juni 2015, zaaknr. 14/7833), procesverloop en r.o. 2–3.1: 'Bij besluit van 12 september 2014 heeft de Belastingdienst/Toeslagen de zorgtoeslag van [appellant] over 2013 definitief vastgesteld op nihil en € 1.068,00 teruggevorderd.' '[appellant] heeft over 2013 een voorschot zorgtoeslag van € 1.060,00 ontvangen.' 'Volgens de dienst bedroeg het vermogen van [appellant] op 1 januari 2013 € 97.904,00, zijnde spaartegoeden ter waarde van € 101.043,00 en groene beleggingen ter waarde van € 18.000,00, verminderd met een bedrag van € 21.139,00 heffingsvrij vermogen. Wegens dit vermogen en het bepaalde in artikel 2a, eerste lid, van de Wzt, heeft [appellant] geen aanspraak op zorgtoeslag over 2013, aldus de dienst.' 'De rechtbank en de Belastingdienst/Toeslagen hebben artikel 2a, eerste lid, van de Wzt dan ook juist uitgelegd door ervan uit te gaan dat bij de beoordeling of aanspraak op zorgtoeslag bestaat groene beleggingen bij bepaling van het vermogen dienen te worden meegeteld.' Hoger beroep ongegrond"
+  url: https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RVS:2015:3282
+  opgehaald: 2026-10-30
+verified: false
+invoer:
+  partner: false
+  partner_verzekerd: null
+  toetsingsinkomen_aanvrager: "0"
+  toetsingsinkomen_partner: "0"
+  rendementsgrondslag: "119043"
+verwacht:
+  tegemoetkoming: "0"
+opmerking: "Definitieve vaststelling 2013 (12 september 2014): nihil omdat de grondslag sparen en beleggen boven de € 80.000 van Wzt art. 2a lid 1 (tekst 2013) lag — de vijfde uitkomst van de Dienst op de vermogenstoets in het corpus en de eerste voor 2013, het eerste jaar van die toets (Stb. 2012, 204). Anders dan in de andere vermogenscases is de invoer hier niet gereconstrueerd: de uitspraak noemt de bestanddelen van de rendementsgrondslag zelf (spaartegoeden € 101.043 + groene beleggingen € 18.000 = € 119.043) en het heffingvrije vermogen dat de Dienst aftrok (€ 21.139, Wet IB 2001 art. 5.5, tekst 2013 — hetzelfde bedrag als in parameters/2013.yaml). De encoding trekt dat bedrag eenmaal af (zonder partner) en komt op dezelfde € 97.904 > € 80.000 → geen aanspraak. Dat er geen partner was, zegt de uitspraak niet met zoveel woorden; de Dienst trok het heffingvrije vermogen éénmaal af en het voorschot van € 1.060 is het maximum zonder partner van de tekst 2013 (€ 1.059,997), wat beide die lezing dragen. Het toetsingsinkomen staat niet in de uitspraak; het is hier € 0 ingevuld omdat de vermogenstoets vóór de inkomenstoets gaat en bij elk inkomen nihil geeft (art. 2a lid 1: 'geen aanspraak'), zoals in zt-2015-rul-006 en zt-2016-rul-004. De verifieerder toetst beide lezingen. Het voorschot zelf is geen case: zijn inkomen staat niet in de uitspraak. Het teruggevorderde bedrag (€ 1.068) is het voorschot plus € 8 heffingsrente, zo zegt de uitspraak. De Afdeling (r.o. 3.1): de vrijstelling voor groene beleggingen (Wet IB 2001 art. 5.13) telt niet mee bij de grondslag voor de zorgtoeslag — dat staat in art. 2a lid 1 zelf — en dat is geen willekeur. Wordt 'verified' op dezelfde voet (ASKS.md 9)."

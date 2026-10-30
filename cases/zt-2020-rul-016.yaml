@@ -1,0 +1,18 @@
+id: zt-2020-rul-016
+toeslag: zorgtoeslag
+jaar: 2020
+bron:
+  type: ruling
+  publicatie: "Rechtbank Midden-Nederland 15 december 2021, ECLI:NL:RBMNE:2021:6118 (zaaknr. UTR - 21/2520 en UTR - 21/2521), citaten uit de uitspraak: 'Voor het jaar 2020 heeft verweerder aan eisers ieder afzonderlijk een voorschot zorgtoeslag verleend van € 1.250,-.' 'Het voorschot zorgtoeslag van eisers voor het jaar 2020 is opnieuw berekend en vastgesteld op € 0,- op grond van het geschatte verzamelinkomen van eisers van € 39.694,-.' 'Verweerder heeft zich terecht op het standpunt gesteld dat op grond van het dwingend recht het toeslagpartnerschap van eisers volgens artikel 3, derde lid, van de Awir dan ingaat per 1 januari 2020.' 'Dit betekent dat uit de van toepassing zijnde wettelijke bepaling volgt dat verweerder eisers terecht als toeslagpartners voor het gehele jaar 2020 heeft aangemerkt.'"
+  url: https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RBMNE:2021:6118
+  opgehaald: 2026-10-30
+verified: false
+invoer:
+  partner: true
+  partner_verzekerd: true
+  toetsingsinkomen_aanvrager: "39694"
+  toetsingsinkomen_partner: "0"
+  rendementsgrondslag: null
+verwacht:
+  tegemoetkoming: "0"
+opmerking: "Herzien voorschot 2020 (13 maart 2021): nihil bij een geschat gezamenlijk verzamelinkomen van € 39.694, nadat eisers door een samenlevingscontract van 30 oktober 2020 met terugwerkende kracht tot 1 januari 2020 toeslagpartners werden (Awir art. 3 lid 3, tekst 2020 — dezelfde regel als in zt-2020-rul-011/-012; gewijzigd per 1 januari 2021). Tekst 2020: inkomensgrens met partner € 38.945 → nihil. De rechtbank liet de berekening staan en vernietigde alleen de terugvordering over 1 januari–30 oktober 2020 (belangenafweging); dat raakt de tegemoetkoming niet. Het gezamenlijke inkomen is als inkomen van de aanvrager ingevoerd (partner € 0); eiseres' deel (€ 19.100) is zt-2020-rul-017, het deel van eiser is in de tekst afgebroken. Wordt 'verified' op dezelfde voet (ASKS.md 9)."

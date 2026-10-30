@@ -1,0 +1,18 @@
+id: zt-2020-rul-013
+toeslag: zorgtoeslag
+jaar: 2020
+bron:
+  type: ruling
+  publicatie: "Rechtbank Amsterdam 20 september 2021, ECLI:NL:RBAMS:2021:7868 (zaaknr. AMS 20/6939), citaten uit de uitspraak: 'De hoogte van de huur- en zorgtoeslag voor het jaar 2020 is met een voorschotbeschikking van 27 december 2019 vastgesteld op € 4.084,- aan huurtoeslag en € 1.250,- aan zorgtoeslag op basis van een verzamelinkomen van € 17.443,-.'"
+  url: https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RBAMS:2021:7868
+  opgehaald: 2026-10-30
+verified: false
+invoer:
+  partner: false
+  partner_verzekerd: null
+  toetsingsinkomen_aanvrager: "17443"
+  toetsingsinkomen_partner: "0"
+  rendementsgrondslag: null
+verwacht:
+  tegemoetkoming: "1250"
+opmerking: "Voorschot 2020 (27 december 2019): € 1.250 bij een verzamelinkomen van € 17.443, zonder partner ('[eiser]', alleen zijn eigen inkomen) — het maximum zonder partner van de tekst 2020 (€ 1.249,82). De 2019-bedragen van dezelfde uitspraak (€ 1.090 bij € 17.000 en € 835 bij € 22.995) geeft de tekst voor een heel jaar niet; beide zijn precies 11/12 van de jaarbedragen van de tekst (€ 1.189 en € 911), maar de uitspraak noemt geen maanden: niet opgenomen, wel in law/SOURCES.md §4. Wordt 'verified' op dezelfde voet (ASKS.md 9)."

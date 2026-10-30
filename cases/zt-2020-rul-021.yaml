@@ -1,0 +1,18 @@
+id: zt-2020-rul-021
+toeslag: zorgtoeslag
+jaar: 2020
+bron:
+  type: ruling
+  publicatie: "Rechtbank Noord-Holland 17 juni 2025, ECLI:NL:RBNHO:2025:6621 (zaaknr. ALK 23/730 en ALK 23/731), citaten uit de uitspraak: 'Bij wijze van voorschot is aan eiseres voor het jaar 2020 zorgtoeslag toegekend van € 2.356 en huurtoeslag toegekend van € 4.116.' 'Verweerder heeft de huur- en zorgtoeslag van eiseres over 2020 vastgesteld op nihil, uitgaande van een gezamenlijk (toetsings-)inkomen dat bestaat uit de som van het inkomen van eiseres (€ 21.153) en het inkomen van de echtgenoot van eiseres (€ 38.244, samen is dat € 59.391).' 'In deze beslissingen is tevens bepaald dat eiseres de bij wijze van voorschot toegekende bedragen aan zorgtoeslag (€ 2.360) en huurtoeslag (€ 4.166) moet terugbetalen.'"
+  url: https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RBNHO:2025:6621
+  opgehaald: 2026-10-30
+verified: false
+invoer:
+  partner: true
+  partner_verzekerd: true
+  toetsingsinkomen_aanvrager: "21153"
+  toetsingsinkomen_partner: "38244"
+  rendementsgrondslag: null
+verwacht:
+  tegemoetkoming: "0"
+opmerking: "Definitieve vaststelling 2020: nihil bij een gezamenlijk toetsingsinkomen van € 21.153 (eiseres) + € 38.244 (echtgenoot, met een UWV-nabetaling van € 37.439 over 2016–2020 in het jaar van betaling), samen € 59.391 (tekst 2020: inkomensgrens met partner € 38.945). Het voorschot (€ 2.356, teruggevorderd als € 2.360) heeft geen genoemd inkomen en is geen case. Zusterzaak van de echtgenoot: ECLI:NL:RBNHO:2025:6620 (kindgebonden budget). Wordt 'verified' op dezelfde voet (ASKS.md 9)."

@@ -1,0 +1,18 @@
+id: zt-2019-rul-010
+toeslag: zorgtoeslag
+jaar: 2019
+bron:
+  type: ruling
+  publicatie: "Rechtbank Den Haag 24 januari 2022, ECLI:NL:RBDHA:2022:782 (zaaknr. 21/41 en 22/331), citaten uit de uitspraak: 'Bij BIP I zijn de huurtoeslag en de zorgtoeslag van eiseres over het berekeningsjaar 2019 definitief berekend op € 0 respectievelijk € 762.' 'Bij de berekening van de hoogte van de toeslagen is uitgegaan van een toetsingsinkomen van eiseres van € 24.100.' 'Bij beschikkingen van 31 december 2020 heeft verweerder, met inachtneming van de beslissingen op bezwaar, de definitief berekende huurtoeslag voor het berekeningsjaar 2019 herzien naar € 1.534 en de definitieve berekening zorgtoeslag gehandhaafd op € 762.'"
+  url: https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RBDHA:2022:782
+  opgehaald: 2026-10-30
+verified: false
+invoer:
+  partner: false
+  partner_verzekerd: null
+  toetsingsinkomen_aanvrager: "24100"
+  toetsingsinkomen_partner: "0"
+  rendementsgrondslag: null
+verwacht:
+  tegemoetkoming: "762"
+opmerking: "Definitieve berekening 2019 (gehandhaafd bij beschikking van 31 december 2020): € 762 bij een toetsingsinkomen van € 24.100, zonder partner ('eiseres', geen partner genoemd). De tekst van 2019: € 1.609 − (2,005% × € 20.940,768 + 13,520% × € 3.159,232) = € 762,01 → € 762 (Awir art. 14 lid 4). Later herzien op het lagere BRI-inkomen: zt-2019-rul-011. Wordt 'verified' op dezelfde voet (ASKS.md 9)."

@@ -1,0 +1,18 @@
+id: zt-2019-rul-017
+toeslag: zorgtoeslag
+jaar: 2019
+bron:
+  type: ruling
+  publicatie: "ABRvS 30 november 2022, ECLI:NL:RVS:2022:3484 (zaaknr. 202104598/1/A2), citaten uit de uitspraak: 'de dienst) [wederpartij] onder meer een voorschot zorgtoeslag, kindgebonden budget en huurtoeslag voor 2019 toegekend van onderscheidenlijk € 2.314,-, € 2.155,- en € 2.291,-.' 'Bij dit besluit is de dienst uitgegaan van een geschat inkomen van € 18.561,- van de toeslagpartner van [wederpartij], [partner] en een geschat inkomen van € 0,- van [wederpartij] zelf.'"
+  url: https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RVS:2022:3484
+  opgehaald: 2026-10-30
+verified: false
+invoer:
+  partner: true
+  partner_verzekerd: true
+  toetsingsinkomen_aanvrager: "0"
+  toetsingsinkomen_partner: "18561"
+  rendementsgrondslag: null
+verwacht:
+  tegemoetkoming: "2314"
+opmerking: "Voorschot 2019 (toegekend eind 2018): € 2.314 bij een geschat inkomen van € 0 voor wederpartij en € 18.561 voor haar toeslagpartner — het maximum met partner van de tekst 2019 (€ 2.314,41), want het gezamenlijke inkomen ligt onder het drempelinkomen van € 20.940,768. De latere bedragen zijn geen case: het herziene voorschot van € 1.564 (21 mei 2019) heeft geen genoemd inkomen; de definitieve vaststelling van € 1.247 (30 juni 2020) rekent met de partner tot en met 30 april 2019 (partner € 21.504 geregistreerd, wederpartij € 6.477 voor het hele jaar) — Awir art. 5, niet gecodeerd; per maand gerekend geeft de tekst 4/12 × € 1.362,57 + 8/12 × € 1.189,14 = € 1.246,95 → € 1.247 (berekening van de operator, in law/SOURCES.md §4). Wordt 'verified' op dezelfde voet (ASKS.md 9)."

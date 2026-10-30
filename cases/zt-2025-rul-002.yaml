@@ -1,0 +1,18 @@
+id: zt-2025-rul-002
+toeslag: zorgtoeslag
+jaar: 2025
+bron:
+  type: ruling
+  publicatie: "Rechtbank Den Haag 24 april 2026, ECLI:NL:RBDHA:2026:9882 (zaaknr. 25/2227), citaten uit de uitspraak: 'Als gevolg van een inkomenswijziging van € 39.100,- naar € 70.000,- is het eerder aan eiser toegekende voorschot zorgtoeslag voor 2025 herzien van € 108,- naar € 0,-.' 'Omdat eiser geen recht meer heeft op een voorschot zorgtoeslag voor 2025 heeft verweerder dit voorschot teruggevorderd.' 'Tussen partijen is niet in geschil dat eiser geen recht meer heeft op een voorschot zorgtoeslag voor 2025.'"
+  url: https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RBDHA:2026:9882
+  opgehaald: 2026-10-30
+verified: false
+invoer:
+  partner: false
+  partner_verzekerd: null
+  toetsingsinkomen_aanvrager: "70000"
+  toetsingsinkomen_partner: "0"
+  rendementsgrondslag: null
+verwacht:
+  tegemoetkoming: "0"
+opmerking: "Herzien voorschot 2025 (22 januari 2025): nihil na een inkomenswijziging naar € 70.000, zonder partner (tekst 2025: inkomensgrens zonder partner € 39.719). Niet in geschil; het geschil ging over de terugvordering van het eerste maandbedrag (Awir art. 26a niet naar analogie toepasbaar). Wordt 'verified' op dezelfde voet (ASKS.md 9)."

@@ -1,0 +1,18 @@
+id: zt-2019-rul-014
+toeslag: zorgtoeslag
+jaar: 2019
+bron:
+  type: ruling
+  publicatie: "Rechtbank Limburg 31 oktober 2022, ECLI:NL:RBLIM:2022:8438 (zaaknr. ROE 20/3521), citaten uit de uitspraak: 'Bij besluit van 11 september 2020 (het primaire besluit) heeft verweerder zowel de zorgtoeslag als de huurtoeslag van eiser over 2019 definitief vastgesteld op € 0,- en de daardoor ten onrechte ontvangen zorgtoeslag van € 793,- en huurtoeslag van € 2.219,- van eiser teruggevorderd.' 'Verweerder heeft de zorgtoeslag 2019 en de huurtoeslag 2019 op € 0,- vastgesteld, omdat eiser in 2019 een inkomen had van € 67.044,- en dus een inkomen dat ligt boven de inkomensgrenzen voor de zorgtoeslag en de huurtoeslag.'"
+  url: https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RBLIM:2022:8438
+  opgehaald: 2026-10-30
+verified: false
+invoer:
+  partner: false
+  partner_verzekerd: null
+  toetsingsinkomen_aanvrager: "67044"
+  toetsingsinkomen_partner: "0"
+  rendementsgrondslag: null
+verwacht:
+  tegemoetkoming: "0"
+opmerking: "Definitieve vaststelling 2019 (11 september 2020): nihil bij een inkomen van € 67.044. De uitspraak noemt geen partner; de case voert zonder partner in. De tekst van 2019 geeft nihil boven € 29.562 zonder partner en boven € 37.885 met partner, dus de lezing doet er voor de uitkomst niet toe. € 793 zorgtoeslag teruggevorderd (het voorschot; zijn geschatte inkomen staat niet in de uitspraak). Wordt 'verified' op dezelfde voet (ASKS.md 9)."

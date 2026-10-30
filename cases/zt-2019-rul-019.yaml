@@ -1,0 +1,18 @@
+id: zt-2019-rul-019
+toeslag: zorgtoeslag
+jaar: 2019
+bron:
+  type: ruling
+  publicatie: "ABRvS 29 november 2023, ECLI:NL:RVS:2023:4399 (zaaknr. 202203560/1/A2), citaten uit de uitspraak: 'Bij de berekening van het recht op zorgtoeslag over het jaar 2019 is de dienst daarmee uitgegaan van een gezamenlijk toetsingsinkomen van [wederpartij] en zijn [toeslagpartner] van € 30.818,00.' 'Bij het besluit van 7 augustus 2020 heeft de Belastingdienst/Toeslagen het recht van [wederpartij] op zorgtoeslag over het jaar 2019 definitief vastgesteld op € 979,00 en het te veel betaalde voorschot van € 588,00 van hem teruggevorderd.'"
+  url: https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RVS:2023:4399
+  opgehaald: 2026-10-30
+verified: false
+invoer:
+  partner: true
+  partner_verzekerd: true
+  toetsingsinkomen_aanvrager: "30818"
+  toetsingsinkomen_partner: "0"
+  rendementsgrondslag: null
+verwacht:
+  tegemoetkoming: "979"
+opmerking: "Definitieve vaststelling 2019 (7 augustus 2020): € 979 bij een gezamenlijk toetsingsinkomen van wederpartij en zijn toeslagpartner van € 30.818, waarin een met de inspecteur afgesproken 'fictieve uitkering' van € 7.329 meetelt. De tekst van 2019: 2 × € 1.609 − (4,315% × € 20.940,768 + 13,520% × € 9.877,232) = € 979,00 → € 979 (Awir art. 14 lid 4). Het gezamenlijke inkomen is als inkomen van de aanvrager ingevoerd (partner € 0). € 588 teruggevorderd; het voorschot (€ 1.567 zou volgen, afgeleid) staat niet in de uitspraak. Wordt 'verified' op dezelfde voet (ASKS.md 9)."

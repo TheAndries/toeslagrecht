@@ -1,0 +1,18 @@
+id: zt-2016-rul-008
+toeslag: zorgtoeslag
+jaar: 2016
+bron:
+  type: ruling
+  publicatie: "ABRvS 2 augustus 2023, ECLI:NL:RVS:2023:2951 (zaaknr. 202207176/1/A2), citaten uit de uitspraak: 'Bij besluit van 21 september 2016 heeft de Belastingdienst/Toeslagen het voorschot zorgtoeslag van [appellant] over het toeslagjaar 2016 vastgesteld op € 998,00.' 'Op 9 april 2020 is aan de Belastingdienst/Toeslagen door de Basisregistratie inkomensgegevens gemeld dat het inkomen van [appellant] over 2016 € 27.946,00 bedraagt.' 'Daarnaast heeft [appellant] een grondslag van sparen en beleggen van € 249.562,00 en een voordeel uit sparen en beleggen van € 9.982,00.' 'Op basis hiervan heeft de Belastingdienst/Toeslagen bij besluit van 1 mei 2020 het recht van [appellant] op zorgtoeslag over 2016 definitief vastgesteld op nihil.'"
+  url: https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RVS:2023:2951
+  opgehaald: 2026-10-30
+verified: false
+invoer:
+  partner: false
+  partner_verzekerd: null
+  toetsingsinkomen_aanvrager: "27946"
+  toetsingsinkomen_partner: "0"
+  rendementsgrondslag: "273999"
+verwacht:
+  tegemoetkoming: "0"
+opmerking: "Definitieve vaststelling 2016 (1 mei 2020): nihil. De Afdeling noemt het BRI-inkomen (€ 27.946), de grondslag sparen en beleggen (€ 249.562) en het voordeel uit sparen en beleggen (€ 9.982) en zegt dat de Dienst 'op basis hiervan' nihil vaststelde. De grondslag ligt boven de € 82.504 van Wzt art. 2a lid 1 (tekst 2016) — de zesde uitkomst van de Dienst op de vermogenstoets in het corpus — en het inkomen ligt boven de inkomensgrens zonder partner van de tekst 2016 (€ 27.013): de tekst geeft op elk van beide gronden nihil, zodat deze case niet onderscheidt welke grond de Dienst woog. De invoer is GERECONSTRUEERD zoals in zt-2015-rul-006: grondslag € 249.562 + heffingvrij vermogen 2016 € 24.437 (Wet IB 2001 art. 5.5) = € 273.999, zonder partner; dat er geen partner was, zegt de uitspraak niet, maar het voorschot van € 998 (21 september 2016) is het maximum zonder partner van de tekst 2016 (€ 997,74). Het voorschot zelf is geen case: zijn inkomen staat niet in de uitspraak. € 926 teruggevorderd, minder dan het voorschot van € 998; de uitspraak verklaart dat niet. De FSV-registratie en de inkomensvaststelling waren het geschil, niet de berekening. Wordt 'verified' op dezelfde voet (ASKS.md 9)."

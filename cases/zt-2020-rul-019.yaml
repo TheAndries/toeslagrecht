@@ -1,0 +1,18 @@
+id: zt-2020-rul-019
+toeslag: zorgtoeslag
+jaar: 2020
+bron:
+  type: ruling
+  publicatie: "Rechtbank Amsterdam 23 maart 2023, ECLI:NL:RBAMS:2023:1604 (zaaknr. AMS 22/3980), citaten uit de uitspraak: 'Met een besluit van 27 december 2019 heeft eiseres voor het jaar 2020 voorschotten huur- en zorgtoeslag ontvangen.' 'Verweerder heeft aan eiseres een bedrag van € 1.250,- aan zorgtoeslag en een bedrag van € 3.798,- aan huurtoeslag toegekend.' 'Het voorschot huur- en zorgtoeslag is door verweerder berekend met een geschat jaarinkomen van € 16.712,-.'"
+  url: https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RBAMS:2023:1604
+  opgehaald: 2026-10-30
+verified: false
+invoer:
+  partner: false
+  partner_verzekerd: null
+  toetsingsinkomen_aanvrager: "16712"
+  toetsingsinkomen_partner: "0"
+  rendementsgrondslag: null
+verwacht:
+  tegemoetkoming: "1250"
+opmerking: "Voorschot 2020 (27 december 2019): € 1.250 bij een geschat jaarinkomen van € 16.712, zonder partner ('eiseres', geen partner genoemd) — het maximum zonder partner van de tekst 2020 (€ 1.249,82). De definitieve berekening van dezelfde uitspraak: zt-2020-rul-020 (DISCREPANCIES.md #12). Wordt 'verified' op dezelfde voet (ASKS.md 9)."

@@ -1,0 +1,18 @@
+id: zt-2019-rul-015
+toeslag: zorgtoeslag
+jaar: 2019
+bron:
+  type: ruling
+  publicatie: "Rechtbank Midden-Nederland 3 juni 2021, ECLI:NL:RBMNE:2021:2358 (zaaknr. UTR 20/3952), citaten uit de uitspraak: 'Verweerder heeft aan eiser bij beschikking van 27 december 2018 een voorschot voor zorgtoeslag toegekend voor 2019 van € 1.189,- op basis van een geschat toetsingsinkomen van € 2.267,-.' 'Het bedrag van het voorschot voor de zorgtoeslag voor 2019 bedraagt € 2.033,-, op basis van een geschat jaarinkomen van eiser van € 2.267,- voor de periode van 1 januari 2019 tot en met 31 maart 2019 en een gezamenlijk geschat jaarinkomen van eiser en zijn toeslagpartner van € 6.265,- voor de periode van 1 april 2019 tot en met 31 december 2019.' 'Het recht op zorgtoeslag over 2019 is door het hogere inkomen van eiser en zijn toeslagpartner omlaag gegaan en bedraagt € 1.069,- zodat eiser € 964,- moet terugbetalen.'"
+  url: https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RBMNE:2021:2358
+  opgehaald: 2026-10-30
+verified: false
+invoer:
+  partner: false
+  partner_verzekerd: null
+  toetsingsinkomen_aanvrager: "2267"
+  toetsingsinkomen_partner: "0"
+  rendementsgrondslag: null
+verwacht:
+  tegemoetkoming: "1189"
+opmerking: "Voorschot 2019 (27 december 2018): € 1.189 bij een geschat toetsingsinkomen van € 2.267, zonder partner — het maximum zonder partner van de tekst 2019 (€ 1.189,14). De twee latere bedragen van dezelfde uitspraak zijn geen case: het voorschot van € 2.033 en de definitieve berekening van € 1.069 rekenen met een toeslagpartner vanaf 1 april 2019 (Awir art. 5, wijziging in het jaar, niet gecodeerd). Wordt 'verified' op dezelfde voet (ASKS.md 9)."

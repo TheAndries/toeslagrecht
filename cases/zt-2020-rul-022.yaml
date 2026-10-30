@@ -1,0 +1,18 @@
+id: zt-2020-rul-022
+toeslag: zorgtoeslag
+jaar: 2020
+bron:
+  type: ruling
+  publicatie: "ABRvS 8 augustus 2025, ECLI:NL:RVS:2025:3957 (zaaknr. 202405796/1/A2), citaten uit de uitspraak: 'Bij de berekening van de definitieve zorgtoeslag over 2020 heeft de Dienst Toeslagen betrokken dat uit gegevens van de Basisregistratie inkomen is gebleken dat [appellant] in 2020 een geregistreerd inkomen had van € 18.316,00, een geregistreerd vermogen van € 132.516,00 en een voordeel uit sparen en beleggen van € 3.800,00.' 'Omdat het vermogen hoger is dan de vermogensgrens van € 116.613,00, heeft de Dienst Toeslagen de zorgtoeslag op nihil vastgesteld.'"
+  url: https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RVS:2025:3957
+  opgehaald: 2026-10-30
+verified: false
+invoer:
+  partner: false
+  partner_verzekerd: null
+  toetsingsinkomen_aanvrager: "18316"
+  toetsingsinkomen_partner: "0"
+  rendementsgrondslag: "132516"
+verwacht:
+  tegemoetkoming: "0"
+opmerking: "Herziene definitieve vaststelling 2020 (4 maart 2023): nihil bij een geregistreerd inkomen van € 18.316 en een geregistreerd vermogen van € 132.516 — de zevende uitkomst van de Dienst op de vermogenstoets in het corpus en de eerste waarvan de rendementsgrondslag zelf in de uitspraak staat, niet gereconstrueerd. De Dienst noemt de vermogensgrens 2020 '€ 116.613': dat is de grens van Wzt art. 2a lid 1 (tekst 2020) op de grondslag sparen en beleggen, € 85.767, plus het heffingvrije vermogen 2020 van € 30.846 (Wet IB 2001 art. 5.5) — precies de omrekening die de encoding maakt en die law/CHANGES.md voor 2020→2021 beschrijft. Zonder partner gelezen ('[appellant]', één keer heffingvrij vermogen in de grens van de Dienst); zonder het vermogen zou de tekst € 1.250 geven. € 1.333 teruggevorderd. Wordt 'verified' op dezelfde voet (ASKS.md 9)."

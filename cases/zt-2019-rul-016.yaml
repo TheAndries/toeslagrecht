@@ -1,0 +1,18 @@
+id: zt-2019-rul-016
+toeslag: zorgtoeslag
+jaar: 2019
+bron:
+  type: ruling
+  publicatie: "Rechtbank Noord-Holland 1 december 2022, ECLI:NL:RBNHO:2022:12023 (zaaknr. AWB - 21/4936), citaten uit de uitspraak: 'Met dagtekening 27 december 2018 is aan eiseres een voorschot zorgtoeslag 2019 toegekend van € 1.189, gebaseerd op een geschat inkomen van € 15.807.'"
+  url: https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RBNHO:2022:12023
+  opgehaald: 2026-10-30
+verified: false
+invoer:
+  partner: false
+  partner_verzekerd: null
+  toetsingsinkomen_aanvrager: "15807"
+  toetsingsinkomen_partner: "0"
+  rendementsgrondslag: null
+verwacht:
+  tegemoetkoming: "1189"
+opmerking: "Voorschot 2019 (27 december 2018): € 1.189 bij een geschat inkomen van € 15.807, zonder partner — het maximum zonder partner van de tekst 2019 (€ 1.189,14). De latere bedragen (€ 99, € 678, definitief € 678) zijn geen case: de nicht van eiseres was toeslagpartner van 1 februari 2019 tot en met 31 december 2019 en tot 1 oktober 2019 niet verzekerd, zodat de Dienst per maand rekende met Wzt art. 2 lid 4 (50%) en Awir art. 5 — wijzigingen in het jaar, niet gecodeerd; de inkomens van die berekening staan niet in de uitspraak. Wordt 'verified' op dezelfde voet (ASKS.md 9)."

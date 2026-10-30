@@ -1,0 +1,18 @@
+id: zt-2019-rul-013
+toeslag: zorgtoeslag
+jaar: 2019
+bron:
+  type: ruling
+  publicatie: "Rechtbank Limburg 27 oktober 2022, ECLI:NL:RBLIM:2022:8373 (zaaknr. ROE 21/861), citaten uit de uitspraak: 'Verweerder heeft de zorgtoeslag over 2019 berekend op basis van een gezamenlijk toetsingsinkomen van eiser en zijn echtgenote in 2019 van € 34.891,-.' 'Uitgaande van dit toetsingsinkomen heeft eiser over het jaar 2019 recht op € 428,- zorgtoeslag.'"
+  url: https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RBLIM:2022:8373
+  opgehaald: 2026-10-30
+verified: false
+invoer:
+  partner: true
+  partner_verzekerd: true
+  toetsingsinkomen_aanvrager: "34891"
+  toetsingsinkomen_partner: "0"
+  rendementsgrondslag: null
+verwacht:
+  tegemoetkoming: "428"
+opmerking: "Definitieve berekening 2019: € 428 bij een gezamenlijk toetsingsinkomen van eiser en zijn echtgenote van € 34.891, waarin een nabetaling Wajong van het UWV meetelt. De tekst van 2019: 2 × € 1.609 − (4,315% × € 20.940,768 + 13,520% × € 13.950,232) = € 428,33 → € 428 (Awir art. 14 lid 4). Het gezamenlijke inkomen is als inkomen van de aanvrager ingevoerd (partner € 0). € 1.904 teruggevorderd; het voorschot zelf (€ 2.332 zou volgen, een afgeleid bedrag) staat niet in de uitspraak en is geen case. Wordt 'verified' op dezelfde voet (ASKS.md 9)."
