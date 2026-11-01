@@ -1,0 +1,20 @@
+id: zt-2017-rul-006
+toeslag: zorgtoeslag
+jaar: 2017
+bron:
+  type: ruling
+  publicatie: "Rechtbank Midden-Nederland 20 oktober 2023, ECLI:NL:RBMNE:2023:6045 (zaaknrs. UTR 22/5958 en UTR 22/5962), citaten uit de uitspraak: 'Zij woont in België en ontvangt inkomen zowel in Nederland als in het buitenland.' 'Bij besluit van 5 augustus 2022 heeft verweerder het recht van eiseres op zorgtoeslag over 2017 opnieuw definitief vastgesteld op € 0,- en het teveel betaalde voorschot van € 1.183,- van haar teruggevorderd.' 'Bij de berekening is verweerder uitgegaan van een geregistreerd jaarinkomen van € 31.484,-.' 'Dit jaarinkomen bestaat uit een verzamelinkomen van € 32.945 en een Niet in Nederland belastbaar inkomen (NiNbi) van - € 1.461,-.'"
+  url: https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RBMNE:2023:6045
+  opgehaald: 2026-11-01
+verified: false
+invoer:
+  partner: false
+  partner_verzekerd: null
+  toetsingsinkomen_aanvrager: "31484"
+  toetsingsinkomen_partner: "0"
+  rendementsgrondslag: null
+  aanvrager_verdragsgerechtigd: true
+  woonland: "BE"
+verwacht:
+  tegemoetkoming: "0"
+opmerking: "Herziene definitieve berekening 2017 (5 augustus 2022): nihil bij een geregistreerd jaarinkomen van € 31.484 (verzamelinkomen € 32.945 plus een NiNbi van − € 1.461, Awir art. 8 lid 3) voor een aanvrager die in België woont. Gelezen als verdragsgerechtigde met woonlandfactor België, omdat de Dienst het bedrag over 2018 van dezelfde aanvrager (zt-2018-rul-006) alleen met die factor op de euro bereikt; voor 2017 zelf noemt de uitspraak de factor niet. De uitkomst hangt niet van die lezing af: met factor 0,7029 (Regeling zorgverzekering bijlage 4, Stcrt. 2016, 61016) is de standaardpremie € 1.075,44 en zonder factor € 1.530, en de normpremie 2,305% × € 20.108,736 + 13,46% × € 11.375,264 = € 1.994,62 ligt boven beide (Wzt art. 2 lid 3, tekst 2017): nihil onder beide lezingen; de inkomensgrens zonder partner van de tekst is € 27.857. Zonder partner gelezen ('eiseres', geen partner genoemd). De eerdere beslissing van 3 mei 2021, € 1.029 bij een jaarinkomen van € 18.807, is geen case: de tekst geeft daar € 612 met factor en € 1.066 zonder, en de uitspraak zegt niet of de factor toen gold of hoeveel maanden de beschikking betrof (law/SOURCES.md §4). Wordt 'verified' op dezelfde voet (ASKS.md 9)."

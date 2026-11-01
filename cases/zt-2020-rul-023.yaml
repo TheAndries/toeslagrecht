@@ -1,0 +1,18 @@
+id: zt-2020-rul-023
+toeslag: zorgtoeslag
+jaar: 2020
+bron:
+  type: ruling
+  publicatie: "Rechtbank Midden-Nederland 21 mei 2025, ECLI:NL:RBMNE:2025:2428 (zaaknr. UTR 24/4587), citaten uit de uitspraak: 'Aan eiser is voor het jaar 2020 een voorschot verleend van € 1250,- aan zorgtoeslag.' 'Daarbij is Dienst Toeslagen uitgegaan van een geschat toetsingsinkomen van € -2.380,-.'"
+  url: https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RBMNE:2025:2428
+  opgehaald: 2026-11-01
+verified: false
+invoer:
+  partner: false
+  partner_verzekerd: null
+  toetsingsinkomen_aanvrager: "-2380"
+  toetsingsinkomen_partner: "0"
+  rendementsgrondslag: null
+verwacht:
+  tegemoetkoming: "1250"
+opmerking: "Voorschot 2020: € 1.250 bij een geschat toetsingsinkomen van − € 2.380, zonder partner ('eiser', geen partner genoemd). Het eerste negatieve toetsingsinkomen in het corpus. De tekst van 2020: het inkomen ligt onder het drempelinkomen van € 21.430,656, dus de normpremie is 1,830% × € 21.430,656 = € 392,18 (Wzt art. 2 lid 3, tekst 2020) en de aanspraak € 1.642 − € 392,18 = € 1.249,82 → € 1.250 (Awir art. 14 lid 4): het maximum zonder partner, dat de encoding ook bij een negatief inkomen geeft. De definitieve berekening en de herziening van dezelfde uitspraak: zt-2020-rul-024/-025. Wordt 'verified' op dezelfde voet (ASKS.md 9)."

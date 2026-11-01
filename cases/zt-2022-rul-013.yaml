@@ -1,0 +1,18 @@
+id: zt-2022-rul-013
+toeslag: zorgtoeslag
+jaar: 2022
+bron:
+  type: ruling
+  publicatie: "Rechtbank Den Haag 19 december 2025, ECLI:NL:RBDHA:2025:24337 (zaaknr. SGR 24/9186), citaten uit de uitspraak: '1.1 Met het primaire besluit van 6 september 2024 heeft verweerder het recht van eiseres op zorgtoeslag definitief vastgesteld op een bedrag van € 681 en een bedrag van € 610 van haar teruggevorderd.' 'Aan eiseres is in eerste instantie zorgtoeslag voor het jaar 2022 toegekend op basis van een toetsingsinkomen van € 22.883.' 'Op 17 juli 2024 heeft verweerder vanuit de Basisregistratie Inkomensgegevens (BRI) een melding ontvangen dat het inkomen van eiseres voor het jaar 2022 € 27.167 bedraagt.' 'Verweerder heeft op basis daarvan de definitief berekende zorgtoeslag herzien en de teveel ontvangen zorgtoeslag over 2022 teruggevorderd.'"
+  url: https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RBDHA:2025:24337
+  opgehaald: 2026-11-01
+verified: false
+invoer:
+  partner: false
+  partner_verzekerd: null
+  toetsingsinkomen_aanvrager: "27167"
+  toetsingsinkomen_partner: "0"
+  rendementsgrondslag: null
+verwacht:
+  tegemoetkoming: "681"
+opmerking: "Herziene definitieve berekening 2022 (6 september 2024): € 681 bij een door de BRI gemeld inkomen van € 27.167, zonder partner ('eiseres', geen partner genoemd). De tekst van 2022: € 1.749 − (1,848% × € 22.356 + 13,610% × € 4.811) = € 1.749 − € 1.067,92 = € 681,08 → € 681 (Awir art. 14 lid 4). De eerdere toekenning op een toetsingsinkomen van € 22.883 noemt geen bedrag (€ 610 teruggevorderd; de tekst zou daar € 1.264 geven) en is geen case. Wordt 'verified' op dezelfde voet (ASKS.md 9)."

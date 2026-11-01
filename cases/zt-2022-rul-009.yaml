@@ -1,0 +1,18 @@
+id: zt-2022-rul-009
+toeslag: zorgtoeslag
+jaar: 2022
+bron:
+  type: ruling
+  publicatie: "Rechtbank Den Haag 5 november 2024, ECLI:NL:RBDHA:2024:23394 (zaaknr. SGR 23/7402), citaten uit de uitspraak: 'Met dagtekening van 28 december 2021 is aan eiser voor het jaar 2022 een voorschot zorgtoeslag toegekend van € 1.336 en huurtoeslag van € 3.725.' 'Bij het vaststellen van deze voorschotten is verweerder uitgegaan van een jaarinkomen over 2022 van € 9.950.'"
+  url: https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RBDHA:2024:23394
+  opgehaald: 2026-11-01
+verified: false
+invoer:
+  partner: false
+  partner_verzekerd: null
+  toetsingsinkomen_aanvrager: "9950"
+  toetsingsinkomen_partner: "0"
+  rendementsgrondslag: null
+verwacht:
+  tegemoetkoming: "1336"
+opmerking: "Voorschot 2022 (28 december 2021): € 1.336 bij een geschat jaarinkomen van € 9.950, zonder partner ('eiser', geen partner genoemd). De tekst van 2022: het inkomen ligt onder het drempelinkomen van € 22.356, normpremie 1,848% × € 22.356 = € 413,14, aanspraak € 1.749 − € 413,14 = € 1.335,86 → € 1.336 (Awir art. 14 lid 4). Dezelfde uitspraak geeft drie latere bedragen op genoemde inkomens: zt-2022-rul-010/-011/-012. Wordt 'verified' op dezelfde voet (ASKS.md 9)."

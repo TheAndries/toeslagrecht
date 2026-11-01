@@ -1,0 +1,18 @@
+id: zt-2024-rul-005
+toeslag: zorgtoeslag
+jaar: 2024
+bron:
+  type: ruling
+  publicatie: "Rechtbank Zeeland-West-Brabant 27 mei 2026, ECLI:NL:RBZWB:2026:5027 (zaaknr. BRE 25/5946), citaten uit de uitspraak: 'Er is uitgegaan van een geschat inkomen in 2024 van € 33.005,-.' 'Voor het jaar 2024 heeft eiser een voorschot zorgtoeslag van € 637,- ontvangen, terwijl zijn recht is berekend op € 34,-.'"
+  url: https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RBZWB:2026:5027
+  opgehaald: 2026-11-01
+verified: false
+invoer:
+  partner: false
+  partner_verzekerd: null
+  toetsingsinkomen_aanvrager: "33005"
+  toetsingsinkomen_partner: "0"
+  rendementsgrondslag: null
+verwacht:
+  tegemoetkoming: "637"
+opmerking: "Voorschot 2024: € 637 bij een geschat inkomen van € 33.005, zonder partner ('eiser', geen partner genoemd). De tekst van 2024: € 1.987 − (1,879% × € 26.819,424 + 13,670% × € 6.185,576) = € 1.987 − € 1.349,51 = € 637,49 → € 637 (Awir art. 14 lid 4). De definitieve berekening van dezelfde uitspraak: zt-2024-rul-006. Wordt 'verified' op dezelfde voet (ASKS.md 9)."

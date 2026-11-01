@@ -1,0 +1,18 @@
+id: zt-2022-rul-010
+toeslag: zorgtoeslag
+jaar: 2022
+bron:
+  type: ruling
+  publicatie: "Rechtbank Den Haag 5 november 2024, ECLI:NL:RBDHA:2024:23394 (zaaknr. SGR 23/7402), citaten uit de uitspraak: 'Vervolgens heeft eiser op 21 april 2022 aangegeven dat zijn jaarinkomen wijzigt naar € 22.859.' 'Deze wijziging heeft geleid tot een herziene voorschotbeschikking voor het jaar 2022 met dagtekening van 24 mei 2022, waarin het voorschot zorgtoeslag is gewijzigd naar € 1.267 en het voorschot huurtoeslag naar € 2.048.'"
+  url: https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RBDHA:2024:23394
+  opgehaald: 2026-11-01
+verified: false
+invoer:
+  partner: false
+  partner_verzekerd: null
+  toetsingsinkomen_aanvrager: "22859"
+  toetsingsinkomen_partner: "0"
+  rendementsgrondslag: null
+verwacht:
+  tegemoetkoming: "1267"
+opmerking: "Herzien voorschot 2022 (24 mei 2022): € 1.267 bij een door eiser opgegeven jaarinkomen van € 22.859, zonder partner. De tekst van 2022: € 1.749 − (1,848% × € 22.356 + 13,610% × € 503) = € 1.749 − € 481,60 = € 1.267,40 → € 1.267 (Awir art. 14 lid 4). Reeks van dezelfde uitspraak: zt-2022-rul-009..012. Wordt 'verified' op dezelfde voet (ASKS.md 9)."

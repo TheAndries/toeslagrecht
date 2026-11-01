@@ -1,0 +1,18 @@
+id: zt-2024-rul-003
+toeslag: zorgtoeslag
+jaar: 2024
+bron:
+  type: ruling
+  publicatie: "Rechtbank Rotterdam 9 juni 2026, ECLI:NL:RBROT:2026:7307 (zaaknr. ROT 25/8409), citaten uit de uitspraak: 'Bij de aanvraag voor zorgtoeslag heeft eiser zijn inkomen in 2024 geschat op € 30.000,- en dat van zijn echtgenote op € 30.000,- negatief.' 'Met het besluit van 4 juli 2025 heeft de Dienst Toeslagen de hoogte van het recht op zorgtoeslag voor het jaar 2024 vastgesteld op € 0,-, waardoor eiser € 2.833,- moet terugbetalen.'"
+  url: https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RBROT:2026:7307
+  opgehaald: 2026-11-01
+verified: false
+invoer:
+  partner: true
+  partner_verzekerd: true
+  toetsingsinkomen_aanvrager: "30000"
+  toetsingsinkomen_partner: "-30000"
+  rendementsgrondslag: null
+verwacht:
+  tegemoetkoming: "2833"
+opmerking: "Voorschot 2024: € 2.833, waarbij eiser zijn inkomen op € 30.000 schatte en dat van zijn echtgenote op € 30.000 negatief — gezamenlijk € 0. Het bedrag van het voorschot staat in de uitspraak als het teruggevorderde bedrag na de vaststelling op nihil (€ 2.833) en is gelijk aan het maximum met partner van de tekst van 2024: 2 × € 1.987 − 4,256% × € 26.819,424 = € 3.974 − € 1.141,43 = € 2.832,57 → € 2.833 (Awir art. 14 lid 4), hetzelfde bedrag als zt-2024-rul-002. Het eerste negatieve partnerinkomen in het corpus; de encoding telt beide inkomens op (Awir art. 7 lid 1) en komt onder het drempelinkomen uit. De definitieve berekening: zt-2024-rul-004. Wordt 'verified' op dezelfde voet (ASKS.md 9)."

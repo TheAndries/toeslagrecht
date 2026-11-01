@@ -1,0 +1,19 @@
+id: zt-2022-rul-016
+toeslag: zorgtoeslag
+jaar: 2022
+bron:
+  type: ruling
+  publicatie: "Rechtbank Zeeland-West-Brabant 18 februari 2025, ECLI:NL:RBZWB:2025:877 (zaaknr. BRE 24/2758), citaten uit de uitspraak: 'Met het besluit van 15 september 2023 (primair besluit) heeft de Dienst Toeslagen eisers zorgtoeslag over het jaar 2022 definitief berekend op € 561,- en het te veel verstrekte voorschot van € 781,- teruggevorderd.' 'Het inkomen wordt vastgesteld op € 28.053,-.' 'Daaropvolgend heeft de Dienst Toeslagen bij het primaire besluit de zorgtoeslag voor het jaar 2022 opnieuw berekend op € 561,- en een bedrag van € 781,- teruggevorderd.'"
+  url: https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RBZWB:2025:877
+  opgehaald: 2026-11-01
+verified: false
+invoer:
+  partner: false
+  partner_verzekerd: null
+  toetsingsinkomen_aanvrager: "28053"
+  toetsingsinkomen_partner: "0"
+  rendementsgrondslag: null
+verwacht:
+  tegemoetkoming: "561"
+discrepantie: 14
+opmerking: "Definitieve berekening 2022 (15 september 2023): € 561 bij een door de inspecteur vastgesteld toetsingsinkomen van € 28.053, zonder partner. De tekst van 2022 geeft € 560: normpremie 1,848% × € 22.356 + 13,610% × € 5.697 = € 1.188,500580 (Wzt art. 2 lid 3), aanspraak € 1.749 − € 1.188,500580 = € 560,499420, rekenkundig afgerond € 560 (Awir art. 14 lid 4). Het bedrag van de Dienst volgt als de normpremie eerst op hele centen wordt gezet (€ 1.188,50): € 1.749 − € 1.188,50 = € 560,50 → € 561. Geen artikel bepaalt een afronding van de normpremie; de tekst rondt één keer af, aan het eind. Het verschil van één euro is DISCREPANCIES.md #14; de case houdt het bedrag van de beschikking, de encoding dat van de tekst. Het terugvorderingsbedrag € 781 = € 1.336 − € 561 past bij € 561. Deze case is er een waar de verifieerder vooral de twee bedragen controleert. Wordt 'verified' op dezelfde voet (ASKS.md 9)."

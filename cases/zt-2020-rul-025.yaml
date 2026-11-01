@@ -1,0 +1,18 @@
+id: zt-2020-rul-025
+toeslag: zorgtoeslag
+jaar: 2020
+bron:
+  type: ruling
+  publicatie: "Rechtbank Midden-Nederland 21 mei 2025, ECLI:NL:RBMNE:2025:2428 (zaaknr. UTR 24/4587), citaten uit de uitspraak: 'De inspecteur heeft het toetsingsinkomen herzien naar € 13.142,- en de grondslag sparen en beleggen naar € 392.758,-.' 'Als gevolg hiervan heeft Dienst Toeslagen met het primaire besluit van 1 maart 2024 de definitieve berekening van de zorgtoeslag over 2020 herzien naar € 0,-.'"
+  url: https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RBMNE:2025:2428
+  opgehaald: 2026-11-01
+verified: false
+invoer:
+  partner: false
+  partner_verzekerd: null
+  toetsingsinkomen_aanvrager: "13142"
+  toetsingsinkomen_partner: "0"
+  rendementsgrondslag: "423604"
+verwacht:
+  tegemoetkoming: "0"
+opmerking: "Herziene definitieve berekening 2020 (1 maart 2024): nihil nadat de inspecteur het toetsingsinkomen herzag naar € 13.142 en de grondslag sparen en beleggen naar € 392.758, boven de grens van € 85.767 (Wzt art. 2a lid 1, tekst 2020). Invoer gereconstrueerd als € 392.758 + € 30.846 = € 423.604 (zie zt-2020-rul-024); elke grondslag boven de grens geeft nihil. Zonder het vermogen zou de tekst € 1.250 geven: het vermogen beslist, niet het inkomen. € 1.383 teruggevorderd, waarvan € 133 rente. De achtste uitkomst van de Dienst op de vermogenstoets in het corpus. Wordt 'verified' op dezelfde voet (ASKS.md 9)."

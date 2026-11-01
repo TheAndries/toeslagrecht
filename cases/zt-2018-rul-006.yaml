@@ -1,0 +1,20 @@
+id: zt-2018-rul-006
+toeslag: zorgtoeslag
+jaar: 2018
+bron:
+  type: ruling
+  publicatie: "Rechtbank Midden-Nederland 20 oktober 2023, ECLI:NL:RBMNE:2023:6045 (zaaknrs. UTR 22/5958 en UTR 22/5962), citaten uit de uitspraak: 'Zij woont in België en ontvangt inkomen zowel in Nederland als in het buitenland.' 'De rechtbank stelt vast dat verweerder hangende dit beroep met het besluit van 13 januari 2023 het recht op zorgtoeslag van eiseres over 2018 opnieuw heeft herzien en op € 705,- heeft vastgesteld.' 'Bij deze berekening is verweerder uitgegaan van een toetsingsinkomen van € 1.609, bestaande uit een BRI inkomen van € 0 en een NiNbi inkomen van € 1.609,-.'"
+  url: https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RBMNE:2023:6045
+  opgehaald: 2026-11-01
+verified: false
+invoer:
+  partner: false
+  partner_verzekerd: null
+  toetsingsinkomen_aanvrager: "1609"
+  toetsingsinkomen_partner: "0"
+  rendementsgrondslag: null
+  aanvrager_verdragsgerechtigd: true
+  woonland: "BE"
+verwacht:
+  tegemoetkoming: "705"
+opmerking: "Herziene definitieve berekening 2018 (13 januari 2023): € 705 bij een toetsingsinkomen van € 1.609 (BRI-inkomen € 0 plus een NiNbi van € 1.609, Awir art. 8 lid 3) voor een aanvrager die in België woont. De tekst van 2018 bereikt dit bedrag alleen met de woonlandfactor voor België: standaardpremie € 1.546 (Stcrt. 2017, 68107) × 0,7193 (Wzt art. 3 lid 1–2, tekst 2018; Regeling zorgverzekering bijlage 4, Stcrt. 2017, 66088) = € 1.112,04; normpremie 1,990% × € 20.450,88 = € 406,97 (het inkomen ligt onder het drempelinkomen); aanspraak € 705,07 → € 705 (Awir art. 14 lid 4). Zonder factor zou de tekst € 1.139 geven. De derde uitkomst van de Dienst in het corpus met een woonlandfactor op een genoemd inkomen (na Duitsland 2017, zt-2017-rul-003/-004/-005), de eerste met de Belgische factor en de eerste voor 2018. De uitspraak noemt de factor niet met name; de verifieerder toetst de lezing 'verdragsgerechtigd, woonland België' aan 'Zij woont in België'. Zonder partner gelezen. Wordt 'verified' op dezelfde voet (ASKS.md 9)."

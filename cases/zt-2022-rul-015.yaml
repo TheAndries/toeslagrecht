@@ -1,0 +1,18 @@
+id: zt-2022-rul-015
+toeslag: zorgtoeslag
+jaar: 2022
+bron:
+  type: ruling
+  publicatie: "Rechtbank Zeeland-West-Brabant 18 februari 2025, ECLI:NL:RBZWB:2025:877 (zaaknr. BRE 24/2758), citaten uit de uitspraak: 'Aan eiser is een voorschot zorgtoeslag van € 1.336,- toegekend voor het jaar 2022.' 'Dit voorschot is gebaseerd op een geschat inkomen van € 7.919,-.'"
+  url: https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RBZWB:2025:877
+  opgehaald: 2026-11-01
+verified: false
+invoer:
+  partner: false
+  partner_verzekerd: null
+  toetsingsinkomen_aanvrager: "7919"
+  toetsingsinkomen_partner: "0"
+  rendementsgrondslag: null
+verwacht:
+  tegemoetkoming: "1336"
+opmerking: "Voorschot 2022: € 1.336 bij een geschat inkomen van € 7.919, zonder partner ('eiser', geen partner genoemd). De tekst van 2022: het inkomen ligt onder het drempelinkomen van € 22.356, dus het maximum € 1.749 − 1,848% × € 22.356 = € 1.335,86 → € 1.336 (Awir art. 14 lid 4). De definitieve berekening van dezelfde uitspraak: zt-2022-rul-016 (DISCREPANCIES.md #14). Wordt 'verified' op dezelfde voet (ASKS.md 9)."

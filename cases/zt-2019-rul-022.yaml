@@ -1,0 +1,18 @@
+id: zt-2019-rul-022
+toeslag: zorgtoeslag
+jaar: 2019
+bron:
+  type: ruling
+  publicatie: "ABRvS 20 november 2024, ECLI:NL:RVS:2024:4736 (zaaknr. 202306893/1/A2), citaten uit de uitspraak: '[gemachtigde] is de toeslagpartner van [appellante].' 'Aan het besluit van 5 augustus 2022 is ten grondslag gelegd dat [gemachtigde] in het toeslagjaar 2019 onder meer een zogenoemd Niet in Nederland belastbaar inkomen (hierna: NiNbi) van € 75.806,00 had en dat het (gezamenlijke) toetsingsinkomen daardoor hoger is dan het maximale inkomen dat voor dat jaar aanspraak geeft op zorgtoeslag.'"
+  url: https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RVS:2024:4736
+  opgehaald: 2026-11-01
+verified: false
+invoer:
+  partner: true
+  partner_verzekerd: true
+  toetsingsinkomen_aanvrager: "0"
+  toetsingsinkomen_partner: "75806"
+  rendementsgrondslag: null
+verwacht:
+  tegemoetkoming: "0"
+opmerking: "Definitieve berekening 2019 (5 augustus 2022): nihil omdat de toeslagpartner van appellante in 2019 'onder meer' een niet in Nederland belastbaar inkomen van € 75.806 had (een pensioen van de Europese Commissie, Awir art. 8 lid 3), waardoor het gezamenlijke toetsingsinkomen boven de inkomensgrens lag. Het eigen inkomen van appellante en het overige inkomen van de partner staan niet in de uitspraak; ingevoerd € 0 en € 75.806. De uitkomst hangt daar niet van af: de tekst van 2019 met partner geeft nihil boven € 37.885, en elk extra inkomen houdt nihil. Of de partner Zvw-verzekerd was, zegt de uitspraak niet (partner_verzekerd: true ingevoerd); bij dit inkomen geeft de tekst nihil onder beide lezingen. Wordt 'verified' op dezelfde voet (ASKS.md 9)."

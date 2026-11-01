@@ -1,0 +1,18 @@
+id: zt-2024-rul-006
+toeslag: zorgtoeslag
+jaar: 2024
+bron:
+  type: ruling
+  publicatie: "Rechtbank Zeeland-West-Brabant 27 mei 2026, ECLI:NL:RBZWB:2026:5027 (zaaknr. BRE 25/5946), citaten uit de uitspraak: 'Met het besluit van 8 augustus 2025 heeft de Dienst Toeslagen eisers zorgtoeslag over het jaar 2024 definitief berekend op € 34,- en het te veel verstrekte voorschot zorgtoeslag van € 605,- teruggevorderd.' 'Uit informatie van de Basisregistratie Inkomen (BRI) blijkt het definitieve inkomen in dat jaar € 37.419,- te zijn.' 'Het recht op zorgtoeslag voor 2024 bedraagt € 34,- voor het gehele jaar, wat resulteert in een totale terugvordering van € 605,-.'"
+  url: https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RBZWB:2026:5027
+  opgehaald: 2026-11-01
+verified: false
+invoer:
+  partner: false
+  partner_verzekerd: null
+  toetsingsinkomen_aanvrager: "37419"
+  toetsingsinkomen_partner: "0"
+  rendementsgrondslag: null
+verwacht:
+  tegemoetkoming: "34"
+opmerking: "Definitieve berekening 2024 (8 augustus 2025): € 34 'voor het gehele jaar' bij een definitief inkomen van € 37.419, zonder partner. De tekst van 2024: € 1.987 − (1,879% × € 26.819,424 + 13,670% × € 10.599,576) = € 1.987 − € 1.952,90 = € 34,10 → € 34 (Awir art. 14 lid 4), boven het minimum van € 24 (lid 5). Het laagste toegekende bedrag voor 2024 in het corpus, op € 77 onder de inkomensgrens zonder partner van de tekst (€ 37.496). € 605 teruggevorderd, inclusief € 2 rente. Wordt 'verified' op dezelfde voet (ASKS.md 9)."

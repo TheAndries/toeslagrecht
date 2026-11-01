@@ -1,0 +1,18 @@
+id: zt-2020-rul-024
+toeslag: zorgtoeslag
+jaar: 2020
+bron:
+  type: ruling
+  publicatie: "Rechtbank Midden-Nederland 21 mei 2025, ECLI:NL:RBMNE:2025:2428 (zaaknr. UTR 24/4587), citaten uit de uitspraak: 'Op 15 februari 2023 heeft Dienst Toeslagen een melding ontvangen vanuit de Basisregistratie Inkomen (BRI) waaruit blijkt dat de inspecteur voor de inkomensbelasting (de inspecteur) het toetsingsinkomen heeft vastgesteld op € -5.855,- en de grondslag sparen en beleggen op € 30.777,-.' 'Op 1 april 2023 heeft Dienst Toeslagen de zorgtoeslag definitief vastgesteld op € 1.250,-.'"
+  url: https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RBMNE:2025:2428
+  opgehaald: 2026-11-01
+verified: false
+invoer:
+  partner: false
+  partner_verzekerd: null
+  toetsingsinkomen_aanvrager: "-5855"
+  toetsingsinkomen_partner: "0"
+  rendementsgrondslag: "61623"
+verwacht:
+  tegemoetkoming: "1250"
+opmerking: "Definitieve berekening 2020 (1 april 2023): € 1.250 bij een door de inspecteur vastgesteld toetsingsinkomen van − € 5.855 en een grondslag sparen en beleggen van € 30.777. De tekst van 2020: de grondslag blijft onder de grens van € 85.767 (Wzt art. 2a lid 1, tekst 2020; Stcrt. 2019, 61842), het inkomen onder het drempelinkomen, dus het maximum € 1.642 − € 392,18 = € 1.249,82 → € 1.250. De uitspraak noemt de grondslag ná het heffingvrije vermogen; de encoding trekt dat voor 2020 (€ 30.846, Wet IB 2001 art. 5.5) zelf af, dus de invoer is gereconstrueerd als € 30.777 + € 30.846 = € 61.623; de uitkomst hangt daar niet van af. Het voorschot en de herziening: zt-2020-rul-023/-025. Wordt 'verified' op dezelfde voet (ASKS.md 9)."

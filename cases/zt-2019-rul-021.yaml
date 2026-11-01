@@ -1,0 +1,18 @@
+id: zt-2019-rul-021
+toeslag: zorgtoeslag
+jaar: 2019
+bron:
+  type: ruling
+  publicatie: "Rechtbank Zeeland-West-Brabant 9 januari 2026, ECLI:NL:RBZWB:2026:60 (zaaknrs. BRE 21/2894 en 22/3072), citaten uit de uitspraak: 'Op 26 januari 2022 heeft de Dienst Toeslagen een melding ontvangen vanuit de BRI dat het inkomen van eiser in 2019 € 29.413,- bedraagt.' 'Op 2 februari 2022 heeft de Dienst Toeslagen een melding ontvangen vanuit de BRI dat zijn toeslagpartner in 2019 geen inkomen heeft ontvangen.' 'Naar aanleiding van deze inkomensgegevens heeft de Dienst Toeslagen met het primaire besluit II de zorgtoeslag voor het jaar 2019 definitief berekend op € 1.169,- en € 1.210,- teruggevorderd.'"
+  url: https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RBZWB:2026:60
+  opgehaald: 2026-11-01
+verified: false
+invoer:
+  partner: true
+  partner_verzekerd: true
+  toetsingsinkomen_aanvrager: "29413"
+  toetsingsinkomen_partner: "0"
+  rendementsgrondslag: null
+verwacht:
+  tegemoetkoming: "1169"
+opmerking: "Definitieve berekening 2019 (9 maart 2022): € 1.169 bij een inkomen van eiser van € 29.413 en geen inkomen van zijn toeslagpartner, zoals de BRI die op 26 januari en 2 februari 2022 meldde. De tekst van 2019 met partner: 2 × € 1.609 − (4,315% × € 20.940,768 + 13,52% × € 8.472,232) = € 3.218 − € 2.049,04 = € 1.168,96 → € 1.169 (Awir art. 14 lid 4). Een eerdere BRI-melding (17 maart 2021) stelde het inkomen van eiser op € 11.169 en dat van de partner op € 219; de beslissing van 9 maart 2022 volgt op de latere meldingen, zoals r.o. 3.2 zegt. De zoon als medebewoner telt voor de huurtoeslag, niet voor de zorgtoeslag (Awir art. 7 lid 1: partner). Het voorschot van dezelfde uitspraak is zt-2019-rul-020. Wordt 'verified' op dezelfde voet (ASKS.md 9)."
