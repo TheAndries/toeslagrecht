@@ -1,0 +1,19 @@
+id: zt-2021-pub-003
+toeslag: zorgtoeslag
+jaar: 2021
+bron:
+  type: published
+  publicatie: "Dienst Toeslagen, Handboek Toeslagen, versie 2026.3 (publicatiedatum 20 oktober 2026), hoofdstuk 21 Zorgtoeslag, paragraaf 1.5.1 Inkomen: 'Deze berekening leidt tot de volgende inkomensgrenzen over de afgelopen jaren: Maximum inkomen 2021 — Zonder partner € 31.138 — Met partner € 39.979'; paragraaf 1.6.3: 'Drempelinkomen 2021 € 21.835'; paragraaf 1.6.1: 'Standaardpremie 2021 € 1.705'; paragraaf 1.6.2: 2021 1,915% / 4,225% / 13,580%"
+  url: https://handboek.toeslagen.nl/htsn/21-zorgtoeslag-zorgtoeslag/
+  opgehaald: 2026-11-02
+verified: false
+invoer:
+  partner: true
+  toetsingsinkomen_aanvrager: "39979"
+  toetsingsinkomen_partner: "0"
+  partner_verzekerd: true
+  rendementsgrondslag: null
+  hele_jaar_dezelfde_partner: true
+verwacht:
+  tegemoetkoming: "24"
+opmerking: "Eerste publicatie van de Dienst Toeslagen met cijfers voor 2021 in het corpus (de brochure Berekening zorgtoeslag 2021 is alleen uit de zoekindex bekend, ASKS.md 8); zt-2021-syn-004..007 berekenden deze grenzen op 2026-10-13 uit de tekst. Op de gepubliceerde grens met partner, € 39.979: de tekst geeft 2 × € 1.705 − (4,225% × € 21.835,008 + 13,580% × € 18.143,992) = € 23,52 → € 24 → toegekend. Gezamenlijk inkomen bij de aanvrager ingevoerd, partner € 0."

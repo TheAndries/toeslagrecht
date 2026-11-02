@@ -1,0 +1,21 @@
+id: zt-2024-pub-008
+toeslag: zorgtoeslag
+jaar: 2024
+bron:
+  type: published
+  publicatie: "Dienst Toeslagen, Handboek Toeslagen, versie 2026.3 (publicatiedatum 20 oktober 2026), hoofdstuk 21 Zorgtoeslag, paragraaf 1.6.4 Voorbeelden berekening, Voorbeeld 2024: 'Een aanvrager met een partner die niet verzekeringsplichtig is. Ze hebben een gezamenlijk toetsingsinkomen van € 43.000. Normpremie = € 26.819 x 4,256% + (€ 43.000 - € 26.819) x 13,670% = € 3.353,35934. Zorgtoeslag = € 1.987 x 2 - € 3.353,35934 = € 620,640666 / 2 = € 310,32 per jaar. De uitkomst wordt vervolgens gehalveerd omdat de partner niet verzekeringsplichtig is.'"
+  url: https://handboek.toeslagen.nl/htsn/21-zorgtoeslag-zorgtoeslag/
+  opgehaald: 2026-11-02
+verified: false
+invoer:
+  partner: true
+  toetsingsinkomen_aanvrager: "43000"
+  toetsingsinkomen_partner: "0"
+  partner_verzekerd: false
+  rendementsgrondslag: null
+  hele_jaar_dezelfde_partner: true
+verwacht:
+  aanspraak_jaar: "310.32"
+  tegemoetkoming: "310"
+discrepantie: 1
+opmerking: "Wzt art. 2 lid 4 (partner geen verzekerde: de helft). De Dienst rekent met het drempelinkomen 'vastgesteld op' € 26.819 (naar beneden, DISCREPANCIES.md #1); de tekst geeft € 26.819,424 → normpremie € 3.353,3194, (€ 3.974 − € 3.353,3194) / 2 = € 310,3403 → € 310,34. De centen verschillen (#1); het hele bedrag van Awir art. 14 lid 4 is in beide gevallen € 310. Het gezamenlijke inkomen is bij de aanvrager ingevoerd, partner € 0; de uitkomst hangt er niet van af. Eerste gepubliceerd voorbeeld van de Dienst voor art. 2 lid 4 in het corpus."

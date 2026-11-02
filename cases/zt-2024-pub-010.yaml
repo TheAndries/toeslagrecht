@@ -1,0 +1,20 @@
+id: zt-2024-pub-010
+toeslag: zorgtoeslag
+jaar: 2024
+bron:
+  type: published
+  publicatie: "Dienst Toeslagen, Informatieblad Zorgtoeslag 2024 (TG 721 - 1Z41PL), December 2023, 'Hoeveel krijgt u?': 'Bent u alleen, dan krijgt u maximaal € 123 per maand. Hebt u een toeslagpartner, dan krijgt u maximaal € 236 per maand.'"
+  url: https://download.belastingdienst.nl/toeslagen/docs/informatieblad_zorgtoeslag_tg7211z41pl.pdf
+  opgehaald: 2026-11-02
+verified: false
+invoer:
+  partner: true
+  toetsingsinkomen_aanvrager: "10000"
+  toetsingsinkomen_partner: "0"
+  partner_verzekerd: true
+  rendementsgrondslag: null
+  hele_jaar_dezelfde_partner: true
+verwacht:
+  tegemoetkoming: "2833"
+  aanspraak_maand_afgerond_praktijk: 236
+opmerking: "Maximum met toeslagpartner 2024: de tekst geeft € 2833 per jaar (Awir art. 14 lid 4); € 2833 / 12 = € 236.08, door de Dienst gepubliceerd als € 236 per maand — naar beneden afgerond. Inkomen € 10.000 bij de aanvrager, partner € 0, onder het drempelinkomen."

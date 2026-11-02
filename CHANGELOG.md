@@ -2,6 +2,108 @@
 
 Newest first. What was done, decided, and got wrong.
 
+## 2026-11-02 — twenty-third run: the Dienst's own publications read for the first time beyond the leaflets — the Handboek Toeslagen, the Toeslagenkaart 2020 and the informatiebladen 2022–2026 — twenty-nine new cases, the first Dienst figures for 2020 and 2021, the drempelinkomen rounding of 2020, 2021 and 2017, and two new discrepancies: #15 (the Dienst's two 2022 monthly roundings) and #16 (a text read three ways: the Dienst, the Afdeling and the legislator)
+
+Twenty-third run of routine `trig_012xyD5r5rxFDCjfHbZ58Kib`. Model as configured for the session: `claude-fable-5-1`, the same as the previous
+entry; no handover note needed. The checkout arrived detached at `7675bfc` (the previous run's commit); `git fetch origin main` confirmed
+`origin/main` is the same commit. The routine fired the day after the previous run: no gap. `git log -3 --stat` shows no owner commit.
+
+**Step 1 — asks marked done.** None since 11-01. Asks 4, 6, 8, 9 and 10 stay open; 8 annotated and 9 extended today (step 8).
+
+**Step 2 — the inbox.** `INBOX.md` is empty and nothing arrived outside it. No case, dispute, review or owner note to handle.
+
+**Step 3.** No open motion.
+
+**Step 4 — done (memory item 6 as planned, which turned into something better).** The plan for this run was Nibud and Rijksoverheid worked
+examples. Nibud publishes none (its tool is interactive) and Rijksoverheid's pages give only the current maximum; but a search for them
+surfaced three kinds of Dienst publication the record did not have, all on servers the routine can reach.
+- *The Handboek Toeslagen* (`handboek.toeslagen.nl/htsn/`, versie 2026.3, publicatiedatum 20 oktober 2026) — the Dienst's public handbook,
+  chaptered, with a version log. Hoofdstuk 21 (zorgtoeslag) states the Dienst's own drempelinkomens 2021–2026, inkomensgrenzen, standaardpremies,
+  percentages and vermogensgrenzen (every grens equal to the encoded text), three worked examples, and in §1.6.5 a table of the woonlandfactor
+  method per partnerschapssituatie with the Dienst's account of two Raad van State rulings it lost. Hoofdstuk 16 §1.2.2 restates Awir art. 14
+  lid 4 and nothing in hoofdstuk 15 or 16 says how a monthly amount is rounded — the first time the Dienst's own handbook has been read for
+  `SOURCES.md` open item 1, with a negative result. Cases: `zt-2022-pub-008` (met partner € 39.000 → € 288,21, cents equal because 2022's
+  drempelinkomen is exact), `zt-2023-pub-008` (€ 25.000 → € 1.858,16), `zt-2024-pub-008` (a partner who is not verzekeringsplichtig, Wzt art.
+  2 lid 4, € 43.000 → € 310,32 against the text's € 310,34: cents, #1 — the first published example of lid 4 in the corpus), and the 2021
+  grenzen on the boundary euro, `zt-2021-pub-001..004` (€ 31.138 / € 39.979, as the text; the Dienst's drempelinkomen € 21.835 moves nothing).
+- *The Toeslagenkaart 2020* (`toeslagenkaart_2019_tg7101z01pl.pdf` — the filename carries the year of issue): the first Dienst publication for
+  2020 in the record. Grenzen € 30.481 / € 38.945, maxima € 1.250 / € 2.397, vermogen € 116.613 / € 147.459 with the derivation the encoding
+  uses (€ 85.767 + the heffingvrij vermogen). **€ 30.481 is the euro where the text gives € 23,50 → nothing and a drempelinkomen rounded up to
+  € 21.431 gives € 24** — exactly what `zt-2020-syn-009` wrote on 10-14 would become a discrepancy if a Dienst publication ever put the grens
+  there. `zt-2020-pub-001` carries it (fails, explained by #1); `-002..-010` the other boundary euros, the maxima and the vermogensgrenzen (all
+  pass). Toeslagenkaarten 2022–2026 read as well: every figure equals the leaflets; no case needed. Kaarten for 2021 and for 2019 and earlier
+  were not found under 27 edition codes.
+- *The informatiebladen 2022–2026* (`informatieblad_zorgtoeslag_tg7211z<Y><E>pl.pdf`): the maximum per month per year, ten cases
+  (`zt-2022-pub-009/-010` … `zt-2026-pub-013/-014`). Nine pass: the Dienst divides the whole-euro year amount by twelve and rounds down, in
+  2024, 2025 and 2026 against a fraction of ,58–,92 that arithmetic rounding would carry up (#5 confirmed for four more years). One fails:
+  **2022 met partner, € 2.553 / 12 = € 212,75, published as € 212** — where the encoding gives € 213, because the 2022 leaflet's
+  rekenvoorbeeld 2 rounds € 44,89 up to € 45 and #8 set 2022 to rekenkundig on that one example. **Discrepancy #15 opened, `open`:** two
+  publications of the same Dienst for the same year, two methods; the parameter stays (it reproduces the leaflet), the informatieblad's figure
+  is kept as a case that fails, and the entry says what decides it: a 2022 beschikking or monthly table with a fraction of ,50 or more.
+  *Why not `government`:* there is no text on a monthly amount at all. *Why not `encoding`:* the model reproduces one of the two publications
+  and cannot reproduce both. *Why not `withdrawn`:* neither figure is a data error.
+- *Two rulings found through the Handboek, not the feed:* ABRvS 26 mei 2021, ECLI:NL:RVS:2021:1071 and :1072 — one appellant, a verzekerde in
+  the Netherlands with a verdragsgerechtigde partner in Marokko (woonlandfactor 0,0125). The Dienst: € 1.530 + € 1.530 × 0,0125 − normpremie
+  met partner € 1.016,51 = € 532,62 → € 533 (2017); € 1.546 + € 19,33 − € 971,42 = € 593,91 → € 594 (voorschot 2018). The Afdeling: the Dienst
+  wrongly added the two premies; on the memorie van toelichting (30 918 nr. 3) the verzekerde has the maximum zonder partner, € 88 and € 94 per
+  month, and the partner an own aanspraak. The Handboek: the legislator (Kamerstukken II 2022/23, 36 357, nr. 3, p. 20) said that the article
+  that passage explained never entered into force and inserted art. 4a lid 3 per 06-11-2024 without changing the computation. The encoding
+  returns `undetermined` for this situation in every year before 06-11-2024 — a decision taken when 2017 was encoded, because art. 3 oud
+  named the partner *of* a verdragsgerechtigde and not the verdragsgerechtigde partner of a verzekerde. Cases `zt-2017-rul-007` and
+  `zt-2018-rul-008` carry the Dienst's amounts (the income is not stated; the quoted normpremie has no afbouw part, so any income up to the
+  drempelinkomen gives the same; entered as € 0 like `zt-2013-rul-009`). **Discrepancy #16 opened and classified `law`:** the text does not
+  determine the outcome, three readings are recorded (the Dienst's, which the text as the Dienst reads it and the 2024 lid 3 reproduce to the
+  euro; the Afdeling's; the legislator's), and the rule already returns `undetermined` — the definition of `law` in `CASES.md`, with no code
+  change. *Why not `government`:* the Dienst's decision follows one defensible reading, later confirmed by the legislator. *Why not `encoding`:*
+  nothing in the 2017–2018 text picks a reading. What re-argues it is named: the Kamerstuk itself and the Afdeling's later line (`SOURCES.md`
+  open item 8). The two rulings also yield the Dienst's monthly maxima 2017 and 2018 (€ 88, € 94: floor, #5) and a 2017 normpremie on a
+  drempelinkomen rounded up to € 20.109 (#1).
+- *#1's series* now reads 2016 down, 2017 up, 2018 not down, 2020 up, 2021 € 21.835, 2022 exact, 2023 up, 2024 down, 2025 up, 2026 up: every
+  year but 2016 and 2026 is what arithmetic rounding to the euro gives. Written into #1 as what the figures show, not as a rule — no text
+  names one, and the Handboek, which prints the figures, prints no rule either.
+- *Check:* 379 cases, 350 pass, 29 fail (every one logged: the twenty of 10-20, #11–#14, and today's five), 0 blocking; both encodings agree
+  on 379. Site rebuilt: twenty-nine case pages, `/verschillen/15/` and `/verschillen/16/`.
+- *The record's files:* twenty-nine case files; `DISCREPANCIES.md` (#15, #16; addenda to #1, #3, #5, #8); `SOURCES.md` (four §3 rows, one §4
+  row, open items 1, 2, 5, 6 annotated, item 8 added); `cases/README.md`, `README.md` (200 published, 135 ruling, sixteen discrepancies);
+  `ASKS.md` 8 and 9.
+
+**What was wrong and why.**
+- *The check could not read #1's status.* `build.py` matched a status cell only when the status word stood alone; #1's cell has carried a
+  note after the word since 10-08, so the first case to carry `discrepantie: 1` (today) was reported as unexplained. The regex now allows a
+  note after the status word; nothing else changed. Three weeks unnoticed because no earlier case carried the field for #1 — lesson in memory:
+  when a convention is added, run it against every existing entry once.
+- *The digest of the feed sweeps dropped two rulings that were inside the sweep* (dated 26-05-2021, 'zorgtoeslag' in the inhoudsindicatie)
+  because their amounts stand beside a normpremie and a woonlandfactor, not an income word. The Handboek's cross-reference found them. A
+  second digest pass for 'woonlandfactor|normpremie|standaardpremie' sentences over the 582 swept texts is now memory item 4.
+- *A search index listed the 2021 leaflet's URL* as if it existed; curl says 404, as on 10-13. Checked before anything was written.
+- *The case-writing script asserted that no file existed and stopped halfway* when rerun after a typo; made idempotent. No effect on the record.
+- Nothing dropped from scope. `PLAN.md` unchanged: the strategy holds (Checkpoint 1 waits on the owner; huurtoeslag not before that; history
+  paused at 2013); no checkpoint has a date to miss. One sequencing change, in memory: the Handboek's references (Kamerstukken 36 357 nr. 3,
+  the Afdeling's later line), the second digest pass and the unread Handboek chapters go before `SOURCES.md` items 1, 2, 5 and 6.
+
+**Step 8 — asks.** None new. Ask 9 extended to the two new ruling cases (one ruling pair, #16); Ask 8 annotated: the 2021 drempelinkomen and
+grenzen and the 2020 figures arrived without the owner, the leaflets' rekenvoorbeelden still only through him.
+
+**Dropped from memory.** The 11-01 case passage compressed to ids and ECLIs (details in the case files and §4); the duplicate `pkill` lesson
+and two 10-24 lessons folded into one; memory item 6 (Nibud/Rijksoverheid) closed with the reason. Four lessons and the new routes added.
+7,973 words (wc).
+
+**Effort.** Roughly 260,000 of the 300,000-token ceiling: about 95,000 reading the files, memory, the previous entries and the pipeline;
+about 60,000 searching, fetching and reading the Handboek chapters, eleven PDFs and two rulings (the 27 × 15 toeslagenkaart probes cost
+tokens only in their listing); about 85,000 writing and checking the twenty-nine cases, #15 and #16, the addenda, the source rows, the
+memory edits and this entry; the rest on two checks and the build. The fetches themselves cost no tokens.
+
+**Record under the ten-year rule.** This run added to the record: the Dienst's own stated drempelinkomens for 2021 (€ 21.835, new) and
+2020 (through its grens € 30.481, rounded up) and its 2017 normpremie on a rounded-up drempelinkomen — three more dated points in #1's series,
+with the observation that all but 2016 and 2026 fit arithmetic rounding; the first Dienst publication for 2020 (grenzen, maxima,
+vermogensgrenzen, ten cases) and the first for 2021 (four cases); three worked examples from the Dienst's handbook, one of them the first
+published application of Wzt art. 2 lid 4; the Dienst's monthly maxima for 2017, 2018 and 2022–2026 with the finding that all are rounded
+down except one 2022 figure, and discrepancy #15 recording the Dienst's two 2022 methods side by side; two Dienst outcomes for a verzekerde
+with a verdragsgerechtigde partner (€ 533, € 594) with the Afdeling's contrary ruling and the legislator's later answer, as discrepancy #16
+(`law`) — a text read three ways, documented with all three sources; the dated negative finding that the Dienst's handbook contains no
+monthly rounding rule; and the handbook, six toeslagenkaarten and five informatiebladen recorded with their codes, dates and URLs so that no
+later run looks for them again. The helpers, the regex fix and the site build are regenerable and are not counted.
+
 ## 2026-11-01 — twenty-second run: twenty-two Dienst outcomes from twelve rulings, every one read in full — the first outcome with the Belgian woonlandfactor, the first negative toetsingsinkomens, vermogenstoets decisions for 2013, 2018, 2022 and 2023 with the Dienst's grenzen matching the text, and discrepancy #14 (€ 561 against € 560,4994); the 'to read' list of 10-30 cleared; the feed's publication lag found
 
 Twenty-second run of routine `trig_012xyD5r5rxFDCjfHbZ58Kib`. Model as configured for the session: `claude-fable-5-1`, the same as the

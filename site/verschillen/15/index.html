@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Verschil #15 — toeslagrecht</title>
+<link rel="stylesheet" href="../../static/tokens.css">
+<link rel="stylesheet" href="../../static/site.css">
+</head>
+<body>
+<a class="skip" href="#inhoud">Naar de inhoud</a>
+<header class="kop">
+  <div class="kop-in">
+    <a class="woordmerk" href="../../index.html">toeslagrecht</a>
+    <nav aria-label="Menu"><ul class="menu"><li><a href="../../index.html">Narekenen</a></li><li><a href="../../dossier/index.html" aria-current="page">Dossier</a></li><li><a href="../../wet/index.html">Wet</a></li><li><a href="../../over/index.html">Over</a></li></ul></nav>
+  </div>
+</header>
+<main id="inhoud" class="pagina">
+<h1>Verschil #15</h1>
+<p class="statusregel">2026-11-02 · zorgtoeslag / 2022 · status <code>open</code></p>
+<p class="klein">De tekst hieronder is in het Engels, zoals het logboek het bijhoudt.</p>
+<blockquote class="citaat"><p>Wzt art. 2 lid 1 (BWBR0018451, geldend van 01-01-2026).</p><footer><a href="../../dossier/zorgtoeslag/zt-2026-art2-1/index.html">aanspraak</a> · <code>zt-2026-art2-1</code> · <span class="status">draft</span></footer></blockquote>
+<dl class="feiten">
+<dt>Date</dt><dd>2026-11-02</dd>
+<dt>Case</dt><dd><code>zt-2022-pub-010</code> (maximum met toeslagpartner 2022, per maand)</dd>
+<dt>Toeslag / year</dt><dd>zorgtoeslag / 2022</dd>
+<dt>Encoding outcome</dt><dd>€ 213 per month: the practice model for 2022 rounds the month arithmetically (<code>maand_afronding_praktijk: rekenkundig</code> in <code>parameters/2022.yaml</code>, set on 2026-10-12 for #8 because the Dienst's <em>Berekening zorgtoeslag 2022</em> prints '€ 44,89 (na afronding € 45)'); the year amount met partner is € 2.553 (text and Dienst), € 2.553 / 12 = € 212,75 → € 213</dd>
+<dt>Government outcome</dt><dd>€ 212 per month: Dienst Toeslagen, <em>Informatieblad Zorgtoeslag 2022</em> (TG 721 - 1Z21PL, December 2021): 'Bent u alleen, dan krijgt u maximaal € 111 per maand. Hebt u een toeslagpartner, dan krijgt u maximaal € 212 per maand.' — € 212,75 rounded <em>down</em>. The same Dienst's leaflet for the same year rounds € 44,89 <em>up</em>. The informatiebladen 2023–2026 (same series) all round down (€ 265,17 → € 265; € 236,08 → € 236; € 250,83 → € 250; € 246,92 → € 246), as do the 2025 and 2026 tables (#5)</dd>
+<dt>Rule(s)</dt><dd><code>zt-2026-art2-1</code> practice output <code>aanspraak_maand_afgerond_praktijk</code> (not law: no article sets a monthly amount or its rounding, <code>law/SOURCES.md</code> open item 1; Awir art. 14 lid 4 rounds the tegemoetkoming for the year)</dd>
+<dt>Status</dt><dd><code>open</code></dd>
+<dt>Classification argued in</dt><dd><code>CHANGELOG.md</code> 2026-11-02. Two publications of the Dienst for 2022 with two methods: one example rounds up, the informatieblad rounds down; the model can reproduce one of them. The parameter stays as set (it reproduces the leaflet's rekenvoorbeeld 2, <code>zt-2022-pub-002</code>, and would otherwise fail that case under #8); this case keeps the informatieblad's € 212 and fails, explained here. What settles it: a 2022 voorschotbeschikking or the Dienst's 2022 monthly table — one figure with a fraction of ,50 or more decides which method the Dienst applied in payment. Until then the 2022 monthly figure is the least certain output of the checker, and the result page already labels every monthly figure as the Dienst's practice, not law</dd>
+</dl>
+</main>
+<footer class="voet">
+  <div class="pagina">
+    <p>toeslagrecht · de toeslagenwet als rekenregels die u zelf kunt nalopen</p>
+    <p>Elke regel heeft de status <span class="status">draft</span>: door niemand met vakkennis nagelezen. Geen enkele case is geverifieerd aan een echte beschikking.</p>
+    <p class="voet-links"><a href="../../dossier/index.html">Dossier</a> · <a href="../../betwisten/index.html">Iets betwisten</a> · <a href="../../insturen/index.html">Een beschikking insturen</a> · <a href="../../over/index.html">Over</a> · <a href="https://github.com/TheAndries/toeslagrecht">Bron</a> (MIT / CC BY-SA 4.0) · Gebouwd 2026-11-02</p>
+  </div>
+</footer>
+</body>
+</html>

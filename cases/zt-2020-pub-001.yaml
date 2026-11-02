@@ -1,0 +1,17 @@
+id: zt-2020-pub-001
+toeslag: zorgtoeslag
+jaar: 2020
+bron:
+  type: published
+  publicatie: "Dienst Toeslagen, Toeslagenkaart 2020 (TG 710 - 1Z01PL), 'Zorgtoeslag — Maximaal inkomen: Alleenstaande € 30.481; Aanvrager met toeslagpartner € 38.945. Maximale toeslag: Alleenstaande € 1.250 per jaar; Aanvrager met toeslagpartner € 2.397 per jaar.' 'Vermogensvrijstelling voor zorgtoeslag en kindgebonden budget: Voor zorgtoeslag en kindgebonden budget telt u bij het maximaal vermogen nog een extra vrijstelling op van € 85.767. In de tabel ziet u hoeveel vermogen de aanvrager maximaal mag hebben op 1 januari 2020. Alleenstaande € 116.613; Aanvrager met toeslagpartner € 147.459.'"
+  url: https://download.belastingdienst.nl/toeslagen/docs/toeslagenkaart_2019_tg7101z01pl.pdf
+  opgehaald: 2026-11-02
+verified: false
+invoer:
+  partner: false
+  toetsingsinkomen_aanvrager: "30481"
+  rendementsgrondslag: null
+verwacht:
+  tegemoetkoming: "24"
+discrepantie: 1
+opmerking: "De Toeslagenkaart 2020 is de eerste publicatie van de Dienst Toeslagen voor 2020 in het corpus (de brochure Berekening zorgtoeslag 2020 is niet gevonden, SOURCES.md §3). Op de gepubliceerde grens zonder partner, € 30.481: de tekst geeft € 1.642 − (1,830% × € 21.430,656 + 13,550% × € 9.050,344) = € 23,50 → € 23 → niet toegekend (Awir art. 14 lid 5); met het drempelinkomen op hele euro's afgerond (€ 21.431) geeft dezelfde formule € 23,54 → € 24 → toegekend. De grens van de Dienst ligt dus op een euro waar de tekst niets meer geeft: het drempelinkomen 2020 is door de Dienst naar boven afgerond, zoals zt-2020-syn-009 op 2026-10-14 voorspelde. DISCREPANCIES.md #1 (government)."

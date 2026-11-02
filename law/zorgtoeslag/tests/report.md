@@ -1,4 +1,4 @@
-# Zorgtoeslag — test report, generated 2026-11-01 by tools/build.py
+# Zorgtoeslag — test report, generated 2026-11-02 by tools/build.py
 
 Generated file; do not edit. Verified cases are tests (blocking); published and synthetic
 cases are checks (reported). Every failing check is a discrepancy in `DISCREPANCIES.md`.
@@ -563,6 +563,16 @@ Source: Rechtbank Midden-Nederland 20 oktober 2023, ECLI:NL:RBMNE:2023:6045 (zaa
 
 Note: Herziene definitieve berekening 2017 (5 augustus 2022): nihil bij een geregistreerd jaarinkomen van € 31.484 (verzamelinkomen € 32.945 plus een NiNbi van − € 1.461, Awir art. 8 lid 3) voor een aanvrager die in België woont. Gelezen als verdragsgerechtigde met woonlandfactor België, omdat de Dienst het bedrag over 2018 van dezelfde aanvrager (zt-2018-rul-006) alleen met die factor op de euro bereikt; voor 2017 zelf noemt de uitspraak de factor niet. De uitkomst hangt niet van die lezing af: met factor 0,7029 (Regeling zorgverzekering bijlage 4, Stcrt. 2016, 61016) is de standaardpremie € 1.075,44 en zonder factor € 1.530, en de normpremie 2,305% × € 20.108,736 + 13,46% × € 11.375,264 = € 1.994,62 ligt boven beide (Wzt art. 2 lid 3, tekst 2017): nihil onder beide lezingen; de inkomensgrens zonder partner van de tekst is € 27.857. Zonder partner gelezen ('eiseres', geen partner genoemd). De eerdere beslissing van 3 mei 2021, € 1.029 bij een jaarinkomen van € 18.807, is geen case: de tekst geeft daar € 612 met factor en € 1.066 zonder, en de uitspraak zegt niet of de factor toen gold of hoeveel maanden de beschikking betrof (law/SOURCES.md §4). Wordt 'verified' op dezelfde voet (ASKS.md 9).
 
+## zt-2017-rul-007 — FAIL — explained by DISCREPANCIES.md #16 (law) — check (ruling)
+
+Source: Afdeling bestuursrechtspraak van de Raad van State 26 mei 2021, ECLI:NL:RVS:2021:1072 (201908492/1/A2), ook ECLI:NL:RVS:2021:1071 (201907402/1/A2, dezelfde appellant), procesverloop en r.o. 5: 'Bij besluit van 31 december 2018 heeft de Belastingdienst/Toeslagen de zorgtoeslag van [appellant] over 2017 definitief vastgesteld op € 533,00'; 'De woonlandfactor voor Marokko is 0,0125 in 2017 en 2018.'; 'De Belastingdienst/Toeslagen heeft de zorgtoeslag waarop [appellant] en zijn partner aanspraak kunnen maken vastgesteld door bij de standaardpremie ten behoeve van [appellant] (€ 1.530,00 voor 2017 en € 1.546,00 voor 2018) de standaardpremie vermenigvuldigd met de woonlandfactor voor Marokko voor zijn in dat land wonende partner (€ 19,125 voor 2017 en € 19,33 voor 2018) op te tellen. Het aldus verkregen totaalbedrag (€ 1.549,125 voor 2017 en € 1.565,33 voor 2018) is vervolgens verminderd met de normpremie voor verzekerden met een partner (€ 1.016,51 voor 2017 en € 971,42 voor 2018). Het verschil bedraagt in 2017 € 532,62 en in 2018 € 593,91.'; 'Als [appellant] alleenstaand zou zijn geweest had hij in 2017 en 2018 aanspraak kunnen maken op de maximale zorgtoeslag van € 88,00 respectievelijk € 94,00 per maand.' De Afdeling: 'Gelet hierop heeft de Belastingdienst/Toeslagen ten onrechte de standaardpremies van [appellant] en zijn partner bij elkaar opgeteld en de normpremie daarop in mindering gebracht.' '[appellant] heeft recht op de maximale zorgtoeslag van € 88,00 per maand in 2017 en € 94,00 per maand in 2018.' Hoger beroep gegrond, zelf afgedaan
+
+| field | expected | encoding | match |
+|---|---|---|---|
+| tegemoetkoming | 533.00 | — | NO |
+
+Note: Een in Nederland wonende verzekerde met een in Marokko wonende verdragsgerechtigde partner (Zvw art. 69; woonlandfactor Marokko 0,0125). De uitspraak noemt geen toetsingsinkomen; de door de Dienst toegepaste normpremie met partner (€ 1.016,51) is het normpercentage over het drempelinkomen alleen, zodat het gezamenlijke toetsingsinkomen niet boven het drempelinkomen lag; de case voert € 0 in — elk inkomen tot het drempelinkomen geeft dezelfde uitkomst. Verwacht is het bedrag van de Dienst: € 1.530 + € 1.530 × 0,0125 − normpremie = € 532,62 → € 533 (Awir art. 14 lid 4; via build.run_case nagerekend met partner_verdragsgerechtigd en woonland MA: de encoding geeft voor dit geval 'undetermined', omdat Wzt art. 3 (tekst 2017) de partner van een verdragsgerechtigde regelt en niet de verdragsgerechtigde partner van een verzekerde; het huidige art. 4a lid 3 is ingevoegd per 06-11-2024). De Afdeling kwam tot een andere uitkomst dan de Dienst én dan de tekst zoals de Dienst die leest: op grond van de memorie van toelichting (Kamerstukken II 2006/07, 30 918, nr. 3) heeft de verzekerde zelf recht op het maximum zonder partner, € 88 per maand, en de partner afzonderlijk een aanspraak met de woonlandfactor. Het Handboek Toeslagen (hoofdstuk 21 §1.6.5) zegt daarover dat de wetgever (Kamerstukken II 2022/23, 36 357, nr. 3, blz. 20) heeft aangegeven dat het wetsartikel dat die passage toelichtte nooit in werking is getreden en dat art. 4a per 06-11-2024 is verduidelijkt zonder de berekening te wijzigen. Drie lezingen van één tekst: DISCREPANCIES.md #16 (law). De normpremie van de Dienst, € 1.016,51 = 5,055% × € 20.109: het drempelinkomen 2017 (tekst € 20.108,736) naar boven afgerond (DISCREPANCIES.md #1; de tekst geeft € 1.016,50 en € 532,63 → eveneens € 533). Het door de Afdeling aangehaalde maximum zonder partner 2017, € 88 per maand, is € 1.066 / 12 = € 88,83 naar beneden afgerond (#5): het eerste maandcijfer van de Dienst voor 2017 in het corpus.
+
 ## zt-2017-syn-024 — PASS — check (synthetic)
 
 Source: Berekend uit de tekst: Wzt art. 1 lid 1 onder f, art. 2 lid 1-3 (BWBR0018451, geldend van 01-01-2017 t/m 30-06-2017; gelijk in de versie van 01-07-2017), Awir art. 14 lid 4-5 (geldend van 01-01-2017); de inkomensgrens zonder partner op de laatste euro met recht. Geen publicatie van de Dienst voor 2017 gevonden (leaflet 2017: 404)
@@ -672,6 +682,16 @@ Source: Rechtbank Den Haag 11 maart 2025, ECLI:NL:RBDHA:2025:3512 (zaaknrs. SGR 
 | tegemoetkoming | 0.00 | 0.00 (exact 0) | yes |
 
 Note: Herziene definitieve berekening 2018 (6 mei 2022): nihil omdat de grondslag sparen en beleggen van eiseres over 2018 volgens de BRI € 408.832 bedroeg, boven de grens van € 83.415 (Wzt art. 2a lid 1, tekst 2018; Stcrt. 2017, 65628) die de uitspraak zelf noemt — de grens van de Dienst is die van de tekst. De uitspraak noemt de grondslag ná het heffingvrije vermogen; de encoding trekt voor 2018 het heffingvrije vermogen (€ 30.000, Wet IB 2001 art. 5.5) zelf af, dus de invoer is gereconstrueerd als € 408.832 + € 30.000 = € 438.832 (zonder partner gelezen). De uitkomst hangt niet van die reconstructie af. Het inkomen staat niet in de uitspraak; ingevoerd € 0, zonder gevolg voor de uitkomst. Het jaar 2013 van dezelfde uitspraak: zt-2013-rul-010. Wordt 'verified' op dezelfde voet (ASKS.md 9).
+
+## zt-2018-rul-008 — FAIL — explained by DISCREPANCIES.md #16 (law) — check (ruling)
+
+Source: Afdeling bestuursrechtspraak van de Raad van State 26 mei 2021, ECLI:NL:RVS:2021:1072 (201908492/1/A2), ook ECLI:NL:RVS:2021:1071 (201907402/1/A2, dezelfde appellant), procesverloop: 'Bij besluit van 21 november 2018 heeft de Belastingdienst/Toeslagen het voorschot zorgtoeslag van [appellant] over 2018 herzien en vastgesteld op € 594,00.' (ECLI:NL:RVS:2021:1071: 'Bij besluit van 21 augustus 2018 ... voor het jaar 2018 vastgesteld op € 594,00'; later, 15 maart 2019, gewijzigd op € 725,00 — niet herleidbaar, niet opgenomen); 'De woonlandfactor voor Marokko is 0,0125 in 2017 en 2018.'; 'De Belastingdienst/Toeslagen heeft de zorgtoeslag waarop [appellant] en zijn partner aanspraak kunnen maken vastgesteld door bij de standaardpremie ten behoeve van [appellant] (€ 1.530,00 voor 2017 en € 1.546,00 voor 2018) de standaardpremie vermenigvuldigd met de woonlandfactor voor Marokko voor zijn in dat land wonende partner (€ 19,125 voor 2017 en € 19,33 voor 2018) op te tellen. Het aldus verkregen totaalbedrag (€ 1.549,125 voor 2017 en € 1.565,33 voor 2018) is vervolgens verminderd met de normpremie voor verzekerden met een partner (€ 1.016,51 voor 2017 en € 971,42 voor 2018). Het verschil bedraagt in 2017 € 532,62 en in 2018 € 593,91.'; 'Als [appellant] alleenstaand zou zijn geweest had hij in 2017 en 2018 aanspraak kunnen maken op de maximale zorgtoeslag van € 88,00 respectievelijk € 94,00 per maand.' De Afdeling: 'Gelet hierop heeft de Belastingdienst/Toeslagen ten onrechte de standaardpremies van [appellant] en zijn partner bij elkaar opgeteld en de normpremie daarop in mindering gebracht.' '[appellant] heeft recht op de maximale zorgtoeslag van € 88,00 per maand in 2017 en € 94,00 per maand in 2018.' Hoger beroep gegrond, zelf afgedaan
+
+| field | expected | encoding | match |
+|---|---|---|---|
+| tegemoetkoming | 594.00 | — | NO |
+
+Note: Een in Nederland wonende verzekerde met een in Marokko wonende verdragsgerechtigde partner (Zvw art. 69; woonlandfactor Marokko 0,0125). De uitspraak noemt geen toetsingsinkomen; de door de Dienst toegepaste normpremie met partner (€ 971,42) is het normpercentage over het drempelinkomen alleen, zodat het gezamenlijke toetsingsinkomen niet boven het drempelinkomen lag; de case voert € 0 in — elk inkomen tot het drempelinkomen geeft dezelfde uitkomst. Verwacht is het bedrag van de Dienst: € 1.546 + € 1.546 × 0,0125 − normpremie = € 593,91 → € 594 (Awir art. 14 lid 4; via build.run_case nagerekend met partner_verdragsgerechtigd en woonland MA: de encoding geeft voor dit geval 'undetermined', omdat Wzt art. 3 (tekst 2018) de partner van een verdragsgerechtigde regelt en niet de verdragsgerechtigde partner van een verzekerde; het huidige art. 4a lid 3 is ingevoegd per 06-11-2024). De Afdeling kwam tot een andere uitkomst dan de Dienst én dan de tekst zoals de Dienst die leest: op grond van de memorie van toelichting (Kamerstukken II 2006/07, 30 918, nr. 3) heeft de verzekerde zelf recht op het maximum zonder partner, € 94 per maand, en de partner afzonderlijk een aanspraak met de woonlandfactor. Het Handboek Toeslagen (hoofdstuk 21 §1.6.5) zegt daarover dat de wetgever (Kamerstukken II 2022/23, 36 357, nr. 3, blz. 20) heeft aangegeven dat het wetsartikel dat die passage toelichtte nooit in werking is getreden en dat art. 4a per 06-11-2024 is verduidelijkt zonder de berekening te wijzigen. Drie lezingen van één tekst: DISCREPANCIES.md #16 (law). Het voorschot 2018 van € 594 is het jaarbedrag met de partner voor het hele jaar (€ 593,91 → € 594); de normpremie € 971,42 = 4,750% × € 20.450,88, gelijk aan de tekst. In ECLI:NL:RVS:2021:1071 gaat het om de maanden januari tot en met juli 2018; het later gewijzigde voorschot (€ 725) is niet herleidbaar en niet opgenomen. Het door de Afdeling aangehaalde maximum zonder partner 2018, € 94 per maand, is € 1.139 / 12 = € 94,92 naar beneden afgerond (#5): het eerste maandcijfer van de Dienst voor 2018 in het corpus.
 
 ## zt-2018-syn-020 — PASS — check (synthetic)
 
@@ -972,6 +992,107 @@ Source: Door de operator geconstrueerd op 2026-10-18 uit de tekst van 2019 (Wzt 
 | tegemoetkoming | 0.00 | 0.00 (exact 0) | yes |
 
 Note: Eén euro boven de grens met toeslagpartner: € 23,41 → € 23, niet toegekend (Awir art. 14 lid 5). Met € 20.941 als drempelinkomen: € 23,43 → € 23; geen verschuiving.
+
+## zt-2020-pub-001 — FAIL — explained by DISCREPANCIES.md #1 (government) — check (published)
+
+Source: Dienst Toeslagen, Toeslagenkaart 2020 (TG 710 - 1Z01PL), 'Zorgtoeslag — Maximaal inkomen: Alleenstaande € 30.481; Aanvrager met toeslagpartner € 38.945. Maximale toeslag: Alleenstaande € 1.250 per jaar; Aanvrager met toeslagpartner € 2.397 per jaar.' 'Vermogensvrijstelling voor zorgtoeslag en kindgebonden budget: Voor zorgtoeslag en kindgebonden budget telt u bij het maximaal vermogen nog een extra vrijstelling op van € 85.767. In de tabel ziet u hoeveel vermogen de aanvrager maximaal mag hebben op 1 januari 2020. Alleenstaande € 116.613; Aanvrager met toeslagpartner € 147.459.'
+
+| field | expected | encoding | match |
+|---|---|---|---|
+| tegemoetkoming | 24.00 | 0.00 (exact 0) | NO |
+
+Note: De Toeslagenkaart 2020 is de eerste publicatie van de Dienst Toeslagen voor 2020 in het corpus (de brochure Berekening zorgtoeslag 2020 is niet gevonden, SOURCES.md §3). Op de gepubliceerde grens zonder partner, € 30.481: de tekst geeft € 1.642 − (1,830% × € 21.430,656 + 13,550% × € 9.050,344) = € 23,50 → € 23 → niet toegekend (Awir art. 14 lid 5); met het drempelinkomen op hele euro's afgerond (€ 21.431) geeft dezelfde formule € 23,54 → € 24 → toegekend. De grens van de Dienst ligt dus op een euro waar de tekst niets meer geeft: het drempelinkomen 2020 is door de Dienst naar boven afgerond, zoals zt-2020-syn-009 op 2026-10-14 voorspelde. DISCREPANCIES.md #1 (government).
+
+## zt-2020-pub-002 — PASS — check (published)
+
+Source: Dienst Toeslagen, Toeslagenkaart 2020 (TG 710 - 1Z01PL), 'Zorgtoeslag — Maximaal inkomen: Alleenstaande € 30.481; Aanvrager met toeslagpartner € 38.945. Maximale toeslag: Alleenstaande € 1.250 per jaar; Aanvrager met toeslagpartner € 2.397 per jaar.' 'Vermogensvrijstelling voor zorgtoeslag en kindgebonden budget: Voor zorgtoeslag en kindgebonden budget telt u bij het maximaal vermogen nog een extra vrijstelling op van € 85.767. In de tabel ziet u hoeveel vermogen de aanvrager maximaal mag hebben op 1 januari 2020. Alleenstaande € 116.613; Aanvrager met toeslagpartner € 147.459.'
+
+| field | expected | encoding | match |
+|---|---|---|---|
+| tegemoetkoming | 0.00 | 0.00 (exact 0) | yes |
+
+Note: De Toeslagenkaart 2020 is de eerste publicatie van de Dienst Toeslagen voor 2020 in het corpus (de brochure Berekening zorgtoeslag 2020 is niet gevonden, SOURCES.md §3). Eén euro boven de gepubliceerde grens zonder partner: tekst € 23,36 → € 23 → niet toegekend (Awir art. 14 lid 4–5); met het afgeronde drempelinkomen € 23,41 → € 23 → eveneens niet toegekend. Beide methoden geven nihil.
+
+## zt-2020-pub-003 — PASS — check (published)
+
+Source: Dienst Toeslagen, Toeslagenkaart 2020 (TG 710 - 1Z01PL), 'Zorgtoeslag — Maximaal inkomen: Alleenstaande € 30.481; Aanvrager met toeslagpartner € 38.945. Maximale toeslag: Alleenstaande € 1.250 per jaar; Aanvrager met toeslagpartner € 2.397 per jaar.' 'Vermogensvrijstelling voor zorgtoeslag en kindgebonden budget: Voor zorgtoeslag en kindgebonden budget telt u bij het maximaal vermogen nog een extra vrijstelling op van € 85.767. In de tabel ziet u hoeveel vermogen de aanvrager maximaal mag hebben op 1 januari 2020. Alleenstaande € 116.613; Aanvrager met toeslagpartner € 147.459.'
+
+| field | expected | encoding | match |
+|---|---|---|---|
+| tegemoetkoming | 24.00 | 24.00 (exact 24) | yes |
+
+Note: De Toeslagenkaart 2020 is de eerste publicatie van de Dienst Toeslagen voor 2020 in het corpus (de brochure Berekening zorgtoeslag 2020 is niet gevonden, SOURCES.md §3). Op de gepubliceerde grens met toeslagpartner, € 38.945: de tekst geeft 2 × € 1.642 − (4,140% × € 21.430,656 + 13,550% × € 17.514,344) = € 23,58 → € 24 → toegekend (Awir art. 14 lid 4–5). Met het afgeronde drempelinkomen € 21.431: € 23,61 → € 24. Hier verandert de afronding van het drempelinkomen de grens niet. Gezamenlijk inkomen bij de aanvrager ingevoerd, partner € 0.
+
+## zt-2020-pub-004 — PASS — check (published)
+
+Source: Dienst Toeslagen, Toeslagenkaart 2020 (TG 710 - 1Z01PL), 'Zorgtoeslag — Maximaal inkomen: Alleenstaande € 30.481; Aanvrager met toeslagpartner € 38.945. Maximale toeslag: Alleenstaande € 1.250 per jaar; Aanvrager met toeslagpartner € 2.397 per jaar.' 'Vermogensvrijstelling voor zorgtoeslag en kindgebonden budget: Voor zorgtoeslag en kindgebonden budget telt u bij het maximaal vermogen nog een extra vrijstelling op van € 85.767. In de tabel ziet u hoeveel vermogen de aanvrager maximaal mag hebben op 1 januari 2020. Alleenstaande € 116.613; Aanvrager met toeslagpartner € 147.459.'
+
+| field | expected | encoding | match |
+|---|---|---|---|
+| tegemoetkoming | 0.00 | 0.00 (exact 0) | yes |
+
+Note: De Toeslagenkaart 2020 is de eerste publicatie van de Dienst Toeslagen voor 2020 in het corpus (de brochure Berekening zorgtoeslag 2020 is niet gevonden, SOURCES.md §3). Eén euro boven de gepubliceerde grens met toeslagpartner: tekst € 23,44 → € 23 → niet toegekend; met het afgeronde drempelinkomen € 23,48 → € 23 → niet toegekend.
+
+## zt-2020-pub-005 — PASS — check (published)
+
+Source: Dienst Toeslagen, Toeslagenkaart 2020 (TG 710 - 1Z01PL), 'Zorgtoeslag — Maximaal inkomen: Alleenstaande € 30.481; Aanvrager met toeslagpartner € 38.945. Maximale toeslag: Alleenstaande € 1.250 per jaar; Aanvrager met toeslagpartner € 2.397 per jaar.' 'Vermogensvrijstelling voor zorgtoeslag en kindgebonden budget: Voor zorgtoeslag en kindgebonden budget telt u bij het maximaal vermogen nog een extra vrijstelling op van € 85.767. In de tabel ziet u hoeveel vermogen de aanvrager maximaal mag hebben op 1 januari 2020. Alleenstaande € 116.613; Aanvrager met toeslagpartner € 147.459.'
+
+| field | expected | encoding | match |
+|---|---|---|---|
+| tegemoetkoming | 1250.00 | 1250.00 (exact 1250) | yes |
+| aanspraak_maand_afgerond_praktijk | 104 | 104 | yes |
+
+Note: De Toeslagenkaart 2020 is de eerste publicatie van de Dienst Toeslagen voor 2020 in het corpus (de brochure Berekening zorgtoeslag 2020 is niet gevonden, SOURCES.md §3). Maximale zorgtoeslag 2020 zonder partner, door de Dienst gepubliceerd als € 1.250 per jaar; de tekst geeft € 1.642 − 1,830% × € 21.430,656 = € 1.249,82 → € 1.250 (Awir art. 14 lid 4). Het maandbedrag (€ 104) is niet gepubliceerd en is de praktijkmodellering van de encoding (DISCREPANCIES.md #5); € 1.250 / 12 = € 104,17, zodat beide afrondingsmethoden € 104 geven. Inkomen € 10.000, onder het drempelinkomen.
+
+## zt-2020-pub-006 — PASS — check (published)
+
+Source: Dienst Toeslagen, Toeslagenkaart 2020 (TG 710 - 1Z01PL), 'Zorgtoeslag — Maximaal inkomen: Alleenstaande € 30.481; Aanvrager met toeslagpartner € 38.945. Maximale toeslag: Alleenstaande € 1.250 per jaar; Aanvrager met toeslagpartner € 2.397 per jaar.' 'Vermogensvrijstelling voor zorgtoeslag en kindgebonden budget: Voor zorgtoeslag en kindgebonden budget telt u bij het maximaal vermogen nog een extra vrijstelling op van € 85.767. In de tabel ziet u hoeveel vermogen de aanvrager maximaal mag hebben op 1 januari 2020. Alleenstaande € 116.613; Aanvrager met toeslagpartner € 147.459.'
+
+| field | expected | encoding | match |
+|---|---|---|---|
+| tegemoetkoming | 2397.00 | 2397.00 (exact 2397) | yes |
+
+Note: De Toeslagenkaart 2020 is de eerste publicatie van de Dienst Toeslagen voor 2020 in het corpus (de brochure Berekening zorgtoeslag 2020 is niet gevonden, SOURCES.md §3). Maximale zorgtoeslag 2020 met toeslagpartner, door de Dienst gepubliceerd als € 2.397 per jaar; de tekst geeft 2 × € 1.642 − 4,140% × € 21.430,656 = € 2.396,77 → € 2.397 (Awir art. 14 lid 4). Inkomen € 10.000 bij de aanvrager, partner € 0, onder het drempelinkomen.
+
+## zt-2020-pub-007 — PASS — check (published)
+
+Source: Dienst Toeslagen, Toeslagenkaart 2020 (TG 710 - 1Z01PL), 'Zorgtoeslag — Maximaal inkomen: Alleenstaande € 30.481; Aanvrager met toeslagpartner € 38.945. Maximale toeslag: Alleenstaande € 1.250 per jaar; Aanvrager met toeslagpartner € 2.397 per jaar.' 'Vermogensvrijstelling voor zorgtoeslag en kindgebonden budget: Voor zorgtoeslag en kindgebonden budget telt u bij het maximaal vermogen nog een extra vrijstelling op van € 85.767. In de tabel ziet u hoeveel vermogen de aanvrager maximaal mag hebben op 1 januari 2020. Alleenstaande € 116.613; Aanvrager met toeslagpartner € 147.459.'
+
+| field | expected | encoding | match |
+|---|---|---|---|
+| tegemoetkoming | 1250.00 | 1250.00 (exact 1250) | yes |
+
+Note: Vermogenstoets 2020 (Wzt art. 2a, tekst 2020): geen zorgtoeslag als de grondslag sparen en beleggen (Wet IB 2001 art. 5.2: rendementsgrondslag minus heffingvrij vermogen) meer bedraagt dan € 85.767 (Stcrt. 2019, 61842). De Dienst publiceert de grens als rendementsgrondslag: € 85.767 + € 30.846 heffingvrij vermogen = € 116.613 (zonder partner), + 2 × € 30.846 = € 147.459 (met partner) — gelijk aan de tekst (SOURCES.md; memory 10-14). De encoding neemt de rendementsgrondslag als invoer en trekt het heffingvrij vermogen zelf af. Op de gepubliceerde grens zonder partner (€ 116.613): grondslag € 85.767, niet méér dan € 85.767 → recht; inkomen € 10.000 → het maximum € 1.250.
+
+## zt-2020-pub-008 — PASS — check (published)
+
+Source: Dienst Toeslagen, Toeslagenkaart 2020 (TG 710 - 1Z01PL), 'Zorgtoeslag — Maximaal inkomen: Alleenstaande € 30.481; Aanvrager met toeslagpartner € 38.945. Maximale toeslag: Alleenstaande € 1.250 per jaar; Aanvrager met toeslagpartner € 2.397 per jaar.' 'Vermogensvrijstelling voor zorgtoeslag en kindgebonden budget: Voor zorgtoeslag en kindgebonden budget telt u bij het maximaal vermogen nog een extra vrijstelling op van € 85.767. In de tabel ziet u hoeveel vermogen de aanvrager maximaal mag hebben op 1 januari 2020. Alleenstaande € 116.613; Aanvrager met toeslagpartner € 147.459.'
+
+| field | expected | encoding | match |
+|---|---|---|---|
+| tegemoetkoming | 0.00 | 0.00 (exact 0) | yes |
+
+Note: Vermogenstoets 2020 (Wzt art. 2a, tekst 2020): geen zorgtoeslag als de grondslag sparen en beleggen (Wet IB 2001 art. 5.2: rendementsgrondslag minus heffingvrij vermogen) meer bedraagt dan € 85.767 (Stcrt. 2019, 61842). De Dienst publiceert de grens als rendementsgrondslag: € 85.767 + € 30.846 heffingvrij vermogen = € 116.613 (zonder partner), + 2 × € 30.846 = € 147.459 (met partner) — gelijk aan de tekst (SOURCES.md; memory 10-14). De encoding neemt de rendementsgrondslag als invoer en trekt het heffingvrij vermogen zelf af. Eén euro boven de gepubliceerde grens zonder partner: grondslag € 85.768 > € 85.767 → geen zorgtoeslag.
+
+## zt-2020-pub-009 — PASS — check (published)
+
+Source: Dienst Toeslagen, Toeslagenkaart 2020 (TG 710 - 1Z01PL), 'Zorgtoeslag — Maximaal inkomen: Alleenstaande € 30.481; Aanvrager met toeslagpartner € 38.945. Maximale toeslag: Alleenstaande € 1.250 per jaar; Aanvrager met toeslagpartner € 2.397 per jaar.' 'Vermogensvrijstelling voor zorgtoeslag en kindgebonden budget: Voor zorgtoeslag en kindgebonden budget telt u bij het maximaal vermogen nog een extra vrijstelling op van € 85.767. In de tabel ziet u hoeveel vermogen de aanvrager maximaal mag hebben op 1 januari 2020. Alleenstaande € 116.613; Aanvrager met toeslagpartner € 147.459.'
+
+| field | expected | encoding | match |
+|---|---|---|---|
+| tegemoetkoming | 2397.00 | 2397.00 (exact 2397) | yes |
+
+Note: Vermogenstoets 2020 (Wzt art. 2a, tekst 2020): geen zorgtoeslag als de grondslag sparen en beleggen (Wet IB 2001 art. 5.2: rendementsgrondslag minus heffingvrij vermogen) meer bedraagt dan € 85.767 (Stcrt. 2019, 61842). De Dienst publiceert de grens als rendementsgrondslag: € 85.767 + € 30.846 heffingvrij vermogen = € 116.613 (zonder partner), + 2 × € 30.846 = € 147.459 (met partner) — gelijk aan de tekst (SOURCES.md; memory 10-14). De encoding neemt de rendementsgrondslag als invoer en trekt het heffingvrij vermogen zelf af. Op de gepubliceerde grens met toeslagpartner (€ 147.459, hele jaar dezelfde partner, Wet IB 2001 art. 5.2 lid 2): grondslag € 85.767 → recht; inkomen € 10.000 → het maximum € 2.397.
+
+## zt-2020-pub-010 — PASS — check (published)
+
+Source: Dienst Toeslagen, Toeslagenkaart 2020 (TG 710 - 1Z01PL), 'Zorgtoeslag — Maximaal inkomen: Alleenstaande € 30.481; Aanvrager met toeslagpartner € 38.945. Maximale toeslag: Alleenstaande € 1.250 per jaar; Aanvrager met toeslagpartner € 2.397 per jaar.' 'Vermogensvrijstelling voor zorgtoeslag en kindgebonden budget: Voor zorgtoeslag en kindgebonden budget telt u bij het maximaal vermogen nog een extra vrijstelling op van € 85.767. In de tabel ziet u hoeveel vermogen de aanvrager maximaal mag hebben op 1 januari 2020. Alleenstaande € 116.613; Aanvrager met toeslagpartner € 147.459.'
+
+| field | expected | encoding | match |
+|---|---|---|---|
+| tegemoetkoming | 0.00 | 0.00 (exact 0) | yes |
+
+Note: Vermogenstoets 2020 (Wzt art. 2a, tekst 2020): geen zorgtoeslag als de grondslag sparen en beleggen (Wet IB 2001 art. 5.2: rendementsgrondslag minus heffingvrij vermogen) meer bedraagt dan € 85.767 (Stcrt. 2019, 61842). De Dienst publiceert de grens als rendementsgrondslag: € 85.767 + € 30.846 heffingvrij vermogen = € 116.613 (zonder partner), + 2 × € 30.846 = € 147.459 (met partner) — gelijk aan de tekst (SOURCES.md; memory 10-14). De encoding neemt de rendementsgrondslag als invoer en trekt het heffingvrij vermogen zelf af. Eén euro boven de gepubliceerde grens met toeslagpartner: grondslag € 85.768 > € 85.767 → geen zorgtoeslag.
 
 ## zt-2020-rul-001 — PASS — check (ruling)
 
@@ -1307,6 +1428,46 @@ Source: Door de operator geconstrueerd op 2026-10-14 uit de tekst van 2020 (Wzt 
 
 Note: Met het hele jaar dezelfde partner: gezamenlijke rendementsgrondslag € 147.460 − 2 × € 30.846 = € 85.768 > € 85.767: geen aanspraak (bij € 147.459 wel). € 147.459 is precies de gezamenlijke grens die Stb. 2020, 546 per 2021 invoerde.
 
+## zt-2021-pub-001 — PASS — check (published)
+
+Source: Dienst Toeslagen, Handboek Toeslagen, versie 2026.3 (publicatiedatum 20 oktober 2026), hoofdstuk 21 Zorgtoeslag, paragraaf 1.5.1 Inkomen: 'Deze berekening leidt tot de volgende inkomensgrenzen over de afgelopen jaren: Maximum inkomen 2021 — Zonder partner € 31.138 — Met partner € 39.979'; paragraaf 1.6.3: 'Drempelinkomen 2021 € 21.835'; paragraaf 1.6.1: 'Standaardpremie 2021 € 1.705'; paragraaf 1.6.2: 2021 1,915% / 4,225% / 13,580%
+
+| field | expected | encoding | match |
+|---|---|---|---|
+| tegemoetkoming | 24.00 | 24.00 (exact 24) | yes |
+
+Note: Eerste publicatie van de Dienst Toeslagen met cijfers voor 2021 in het corpus (de brochure Berekening zorgtoeslag 2021 is alleen uit de zoekindex bekend, ASKS.md 8); zt-2021-syn-004..007 berekenden deze grenzen op 2026-10-13 uit de tekst. Op de gepubliceerde grens zonder partner, € 31.138: de tekst geeft € 1.705 − (1,915% × € 21.835,008 + 13,580% × € 9.302,992) = € 23,51 → € 24 → toegekend (Awir art. 14 lid 4–5). Met het drempelinkomen van de Dienst (€ 21.835, de tekst afgerond): € 23,51 → € 24. De grens is in 2021 niet afrondingsgevoelig.
+
+## zt-2021-pub-002 — PASS — check (published)
+
+Source: Dienst Toeslagen, Handboek Toeslagen, versie 2026.3 (publicatiedatum 20 oktober 2026), hoofdstuk 21 Zorgtoeslag, paragraaf 1.5.1 Inkomen: 'Deze berekening leidt tot de volgende inkomensgrenzen over de afgelopen jaren: Maximum inkomen 2021 — Zonder partner € 31.138 — Met partner € 39.979'; paragraaf 1.6.3: 'Drempelinkomen 2021 € 21.835'; paragraaf 1.6.1: 'Standaardpremie 2021 € 1.705'; paragraaf 1.6.2: 2021 1,915% / 4,225% / 13,580%
+
+| field | expected | encoding | match |
+|---|---|---|---|
+| tegemoetkoming | 0.00 | 0.00 (exact 0) | yes |
+
+Note: Eerste publicatie van de Dienst Toeslagen met cijfers voor 2021 in het corpus (de brochure Berekening zorgtoeslag 2021 is alleen uit de zoekindex bekend, ASKS.md 8); zt-2021-syn-004..007 berekenden deze grenzen op 2026-10-13 uit de tekst. Eén euro boven de gepubliceerde grens zonder partner: € 23,38 → € 23 → niet toegekend (Awir art. 14 lid 5), met en zonder afronding van het drempelinkomen.
+
+## zt-2021-pub-003 — PASS — check (published)
+
+Source: Dienst Toeslagen, Handboek Toeslagen, versie 2026.3 (publicatiedatum 20 oktober 2026), hoofdstuk 21 Zorgtoeslag, paragraaf 1.5.1 Inkomen: 'Deze berekening leidt tot de volgende inkomensgrenzen over de afgelopen jaren: Maximum inkomen 2021 — Zonder partner € 31.138 — Met partner € 39.979'; paragraaf 1.6.3: 'Drempelinkomen 2021 € 21.835'; paragraaf 1.6.1: 'Standaardpremie 2021 € 1.705'; paragraaf 1.6.2: 2021 1,915% / 4,225% / 13,580%
+
+| field | expected | encoding | match |
+|---|---|---|---|
+| tegemoetkoming | 24.00 | 24.00 (exact 24) | yes |
+
+Note: Eerste publicatie van de Dienst Toeslagen met cijfers voor 2021 in het corpus (de brochure Berekening zorgtoeslag 2021 is alleen uit de zoekindex bekend, ASKS.md 8); zt-2021-syn-004..007 berekenden deze grenzen op 2026-10-13 uit de tekst. Op de gepubliceerde grens met partner, € 39.979: de tekst geeft 2 × € 1.705 − (4,225% × € 21.835,008 + 13,580% × € 18.143,992) = € 23,52 → € 24 → toegekend. Gezamenlijk inkomen bij de aanvrager ingevoerd, partner € 0.
+
+## zt-2021-pub-004 — PASS — check (published)
+
+Source: Dienst Toeslagen, Handboek Toeslagen, versie 2026.3 (publicatiedatum 20 oktober 2026), hoofdstuk 21 Zorgtoeslag, paragraaf 1.5.1 Inkomen: 'Deze berekening leidt tot de volgende inkomensgrenzen over de afgelopen jaren: Maximum inkomen 2021 — Zonder partner € 31.138 — Met partner € 39.979'; paragraaf 1.6.3: 'Drempelinkomen 2021 € 21.835'; paragraaf 1.6.1: 'Standaardpremie 2021 € 1.705'; paragraaf 1.6.2: 2021 1,915% / 4,225% / 13,580%
+
+| field | expected | encoding | match |
+|---|---|---|---|
+| tegemoetkoming | 0.00 | 0.00 (exact 0) | yes |
+
+Note: Eerste publicatie van de Dienst Toeslagen met cijfers voor 2021 in het corpus (de brochure Berekening zorgtoeslag 2021 is alleen uit de zoekindex bekend, ASKS.md 8); zt-2021-syn-004..007 berekenden deze grenzen op 2026-10-13 uit de tekst. Eén euro boven de gepubliceerde grens met partner: € 23,38 → € 23 → niet toegekend (Awir art. 14 lid 5).
+
 ## zt-2021-rul-001 — PASS — check (ruling)
 
 Source: Rechtbank Den Haag 1 december 2023, ECLI:NL:RBDHA:2023:19139 (zaaknr. 23/3134), r.o. 3: 'Voor 2021 heeft eiser een voorschot op zijn zorgtoeslag ontvangen van € 1.287,-. Dit voorschot is gebaseerd op een draagkrachtberekening die uitging van een toetsingsinkomen van € 9.439,-.' Bevestigd in hoger beroep: ABRvS 20 november 2024, ECLI:NL:RVS:2024:4751 (zaaknr. 202307817/1/A2)
@@ -1526,6 +1687,40 @@ Source: Dienst Toeslagen, Berekening zorgtoeslag 2022 (TG 082 - 1Z21FD, januari 
 | tegemoetkoming | 0.00 | 0.00 (exact 0) | yes |
 
 Note: Eén euro boven de grens: aanspraak € 23,50 (exact 23,4961) → € 23 → niet toegekend.
+
+## zt-2022-pub-008 — PASS — check (published)
+
+Source: Dienst Toeslagen, Handboek Toeslagen, versie 2026.3 (publicatiedatum 20 oktober 2026), hoofdstuk 21 Zorgtoeslag, paragraaf 1.6.4 Voorbeelden berekening, Voorbeeld 2022: 'Een aanvrager met partner en een gezamenlijk toetsingsinkomen van € 39.000. Normpremie = € 22.356 x 4,225% + (€ 39.000 - € 22.356) x 13,610% = € 3.209,7894. Zorgtoeslag = € 1.749 x 2 - € 3.209,7894 = € 288,21 per jaar.'
+
+| field | expected | encoding | match |
+|---|---|---|---|
+| normpremie | 3209.79 | 3209.79 (exact 3209.789400000) | yes |
+| aanspraak_jaar | 288.21 | 288.21 (exact 288.210600000) | yes |
+| tegemoetkoming | 288.00 | 288.00 (exact 288) | yes |
+
+Note: Het Handboek legt het gezamenlijke inkomen niet uit over de partners; de case voert het in bij de aanvrager, partner € 0 — de uitkomst hangt er niet van af (Wzt art. 2 lid 2: gezamenlijk toetsingsinkomen). Het drempelinkomen 2022 is in de tekst precies € 22.356 (108% × 12 × € 1.725,00), zodat de Dienst en de tekst hier op de cent gelijk uitkomen. Het Handboek noemt geen afgerond jaarbedrag en geen maandbedrag; € 288 volgt uit Awir art. 14 lid 4.
+
+## zt-2022-pub-009 — PASS — check (published)
+
+Source: Dienst Toeslagen, Informatieblad Zorgtoeslag 2022 (TG 721 - 1Z21PL), December 2021, 'Hoeveel krijgt u?': 'Bent u alleen, dan krijgt u maximaal € 111 per maand. Hebt u een toeslagpartner, dan krijgt u maximaal € 212 per maand.'
+
+| field | expected | encoding | match |
+|---|---|---|---|
+| tegemoetkoming | 1336.00 | 1336.00 (exact 1336) | yes |
+| aanspraak_maand_afgerond_praktijk | 111 | 111 | yes |
+
+Note: Maximum zonder partner 2022: de tekst geeft € 1336 per jaar (Awir art. 14 lid 4); € 1336 / 12 = € 111.33, door de Dienst gepubliceerd als € 111 per maand — naar beneden afgerond. Het maandbedrag staat niet in de wet (SOURCES.md open item 1); de encoding modelleert de praktijk van de Dienst (DISCREPANCIES.md #5). Inkomen hier € 10.000, onder het drempelinkomen; elk inkomen tot het drempelinkomen geeft hetzelfde.
+
+## zt-2022-pub-010 — FAIL — check (published)
+
+Source: Dienst Toeslagen, Informatieblad Zorgtoeslag 2022 (TG 721 - 1Z21PL), December 2021, 'Hoeveel krijgt u?': 'Bent u alleen, dan krijgt u maximaal € 111 per maand. Hebt u een toeslagpartner, dan krijgt u maximaal € 212 per maand.'
+
+| field | expected | encoding | match |
+|---|---|---|---|
+| tegemoetkoming | 2553.00 | 2553.00 (exact 2553) | yes |
+| aanspraak_maand_afgerond_praktijk | 212 | 213 | NO |
+
+Note: Maximum met toeslagpartner 2022: de tekst geeft € 2553 per jaar (Awir art. 14 lid 4); € 2553 / 12 = € 212.75, door de Dienst gepubliceerd als € 212 per maand — naar beneden afgerond. Inkomen € 10.000 bij de aanvrager, partner € 0, onder het drempelinkomen. De encoding geeft voor 2022 € 213: de brochure Berekening zorgtoeslag 2022 rondt in rekenvoorbeeld 2 het maandbedrag rekenkundig af (€ 44,89 → € 45, DISCREPANCIES.md #8) en daarop rust de jaarparameter maand_afronding_praktijk: rekenkundig; dit informatieblad van dezelfde Dienst voor hetzelfde jaar rondt € 212,75 naar beneden af. Twee publicaties, twee methoden: DISCREPANCIES.md #15.
 
 ## zt-2022-rul-001 — PASS — check (ruling)
 
@@ -1767,6 +1962,40 @@ Source: Dienst Toeslagen, Berekening zorgtoeslag 2023, stap 2: geen recht boven 
 
 Note: Eén euro boven de grens met partner: geen recht (Awir art. 14 lid 5).
 
+## zt-2023-pub-008 — PASS — check (published)
+
+Source: Dienst Toeslagen, Handboek Toeslagen, versie 2026.3 (publicatiedatum 20 oktober 2026), hoofdstuk 21 Zorgtoeslag, paragraaf 1.6.4 Voorbeelden berekening, Voorbeeld 2023: 'Een aanvrager zonder partner met een toetsingsinkomen van € 25.000. Normpremie = € 25.070 x 0,123% = € 30,8361. Zorgtoeslag = € 1.889 - € 30,8361 = € 1.858,16 per jaar. Het toetsingsinkomen is lager dan het drempelinkomen, dus het tweede deel van de berekening van de normpremie is niet van toepassing.'
+
+| field | expected | encoding | match |
+|---|---|---|---|
+| normpremie | 30.84 | 30.84 (exact 30.835883520) | yes |
+| aanspraak_jaar | 1858.16 | 1858.16 (exact 1858.164116480) | yes |
+| tegemoetkoming | 1858.00 | 1858.00 (exact 1858) | yes |
+
+Note: De Dienst rekent met het drempelinkomen 'vastgesteld op' € 25.070 (DISCREPANCIES.md #1); de tekst geeft € 25.069,824 → normpremie € 30,8359 en aanspraak € 1.858,1641. Op de cent gelijk: € 30,84 en € 1.858,16. Dit is tevens de maximale zorgtoeslag 2023 zonder partner (€ 1.858, Awir art. 14 lid 4).
+
+## zt-2023-pub-009 — PASS — check (published)
+
+Source: Dienst Toeslagen, Informatieblad Zorgtoeslag 2023 (TG 721 - 1Z32PL), December 2022, 'Hoeveel krijgt u?': 'Bent u alleen, dan krijgt u maximaal € 154 per maand. Hebt u een toeslagpartner, dan krijgt u maximaal € 265 per maand.'
+
+| field | expected | encoding | match |
+|---|---|---|---|
+| tegemoetkoming | 1858.00 | 1858.00 (exact 1858) | yes |
+| aanspraak_maand_afgerond_praktijk | 154 | 154 | yes |
+
+Note: Maximum zonder partner 2023: de tekst geeft € 1858 per jaar (Awir art. 14 lid 4); € 1858 / 12 = € 154.83, door de Dienst gepubliceerd als € 154 per maand — naar beneden afgerond. Het maandbedrag staat niet in de wet (SOURCES.md open item 1); de encoding modelleert de praktijk van de Dienst (DISCREPANCIES.md #5). Inkomen hier € 10.000, onder het drempelinkomen; elk inkomen tot het drempelinkomen geeft hetzelfde.
+
+## zt-2023-pub-010 — PASS — check (published)
+
+Source: Dienst Toeslagen, Informatieblad Zorgtoeslag 2023 (TG 721 - 1Z32PL), December 2022, 'Hoeveel krijgt u?': 'Bent u alleen, dan krijgt u maximaal € 154 per maand. Hebt u een toeslagpartner, dan krijgt u maximaal € 265 per maand.'
+
+| field | expected | encoding | match |
+|---|---|---|---|
+| tegemoetkoming | 3182.00 | 3182.00 (exact 3182) | yes |
+| aanspraak_maand_afgerond_praktijk | 265 | 265 | yes |
+
+Note: Maximum met toeslagpartner 2023: de tekst geeft € 3182 per jaar (Awir art. 14 lid 4); € 3182 / 12 = € 265.17, door de Dienst gepubliceerd als € 265 per maand — naar beneden afgerond. Inkomen € 10.000 bij de aanvrager, partner € 0, onder het drempelinkomen.
+
 ## zt-2023-rul-001 — PASS — check (ruling)
 
 Source: Rechtbank Midden-Nederland 2 juni 2026, ECLI:NL:RBMNE:2026:4437 (zaaknr. UTR 25/6130), r.o. 10: 'Op 28 december 2022 heeft Dienst Toeslagen het voorschot voor zorgtoeslag vastgesteld op € 1.858,-. [...] Dienst Toeslagen is bij het berekenen van deze voorschotten uitgegaan van eisers jaarinkomen van € 11.204,-.' Een voorschot (Awir art. 16) voor het hele jaar, verleend vóór het jaar begon; de uitspraak noemt geen partner
@@ -1897,6 +2126,39 @@ Source: Dienst Toeslagen, Berekening zorgtoeslag 2024, stap 2: 'Uw klant heeft g
 
 Note: Eén euro boven de grens met partner: geen recht.
 
+## zt-2024-pub-008 — FAIL — explained by DISCREPANCIES.md #1 (government) — check (published)
+
+Source: Dienst Toeslagen, Handboek Toeslagen, versie 2026.3 (publicatiedatum 20 oktober 2026), hoofdstuk 21 Zorgtoeslag, paragraaf 1.6.4 Voorbeelden berekening, Voorbeeld 2024: 'Een aanvrager met een partner die niet verzekeringsplichtig is. Ze hebben een gezamenlijk toetsingsinkomen van € 43.000. Normpremie = € 26.819 x 4,256% + (€ 43.000 - € 26.819) x 13,670% = € 3.353,35934. Zorgtoeslag = € 1.987 x 2 - € 3.353,35934 = € 620,640666 / 2 = € 310,32 per jaar. De uitkomst wordt vervolgens gehalveerd omdat de partner niet verzekeringsplichtig is.'
+
+| field | expected | encoding | match |
+|---|---|---|---|
+| aanspraak_jaar | 310.32 | 310.34 (exact 310.3402876800) | NO |
+| tegemoetkoming | 310.00 | 310.00 (exact 310) | yes |
+
+Note: Wzt art. 2 lid 4 (partner geen verzekerde: de helft). De Dienst rekent met het drempelinkomen 'vastgesteld op' € 26.819 (naar beneden, DISCREPANCIES.md #1); de tekst geeft € 26.819,424 → normpremie € 3.353,3194, (€ 3.974 − € 3.353,3194) / 2 = € 310,3403 → € 310,34. De centen verschillen (#1); het hele bedrag van Awir art. 14 lid 4 is in beide gevallen € 310. Het gezamenlijke inkomen is bij de aanvrager ingevoerd, partner € 0; de uitkomst hangt er niet van af. Eerste gepubliceerd voorbeeld van de Dienst voor art. 2 lid 4 in het corpus.
+
+## zt-2024-pub-009 — PASS — check (published)
+
+Source: Dienst Toeslagen, Informatieblad Zorgtoeslag 2024 (TG 721 - 1Z41PL), December 2023, 'Hoeveel krijgt u?': 'Bent u alleen, dan krijgt u maximaal € 123 per maand. Hebt u een toeslagpartner, dan krijgt u maximaal € 236 per maand.'
+
+| field | expected | encoding | match |
+|---|---|---|---|
+| tegemoetkoming | 1483.00 | 1483.00 (exact 1483) | yes |
+| aanspraak_maand_afgerond_praktijk | 123 | 123 | yes |
+
+Note: Maximum zonder partner 2024: de tekst geeft € 1483 per jaar (Awir art. 14 lid 4); € 1483 / 12 = € 123.58, door de Dienst gepubliceerd als € 123 per maand — naar beneden afgerond. Het maandbedrag staat niet in de wet (SOURCES.md open item 1); de encoding modelleert de praktijk van de Dienst (DISCREPANCIES.md #5). Inkomen hier € 10.000, onder het drempelinkomen; elk inkomen tot het drempelinkomen geeft hetzelfde.
+
+## zt-2024-pub-010 — PASS — check (published)
+
+Source: Dienst Toeslagen, Informatieblad Zorgtoeslag 2024 (TG 721 - 1Z41PL), December 2023, 'Hoeveel krijgt u?': 'Bent u alleen, dan krijgt u maximaal € 123 per maand. Hebt u een toeslagpartner, dan krijgt u maximaal € 236 per maand.'
+
+| field | expected | encoding | match |
+|---|---|---|---|
+| tegemoetkoming | 2833.00 | 2833.00 (exact 2833) | yes |
+| aanspraak_maand_afgerond_praktijk | 236 | 236 | yes |
+
+Note: Maximum met toeslagpartner 2024: de tekst geeft € 2833 per jaar (Awir art. 14 lid 4); € 2833 / 12 = € 236.08, door de Dienst gepubliceerd als € 236 per maand — naar beneden afgerond. Inkomen € 10.000 bij de aanvrager, partner € 0, onder het drempelinkomen.
+
 ## zt-2024-rul-001 — PASS — check (ruling)
 
 Source: Rechtbank Midden-Nederland 26 september 2024, ECLI:NL:RBMNE:2024:5552 (zaaknrs. UTR 23/4153 en UTR 24/4548), r.o. 17–19: 'Voor het recht op zorgtoeslag over 2024 is de rekensom hetzelfde maar zijn de getallen anders. De standaardpremie voor dat jaar voor twee personen is op € 3.974 gesteld, de woonlandfactor voor Polen is 0,1613 en het drempelinkomen € 26.819.' 'Dienst Toeslagen heeft over 2024 gerekend met een toetsingsinkomen van € 31.565.' 'De rekensom over 2024 komt op een standaardpremie van € 641 en een normpremie van € 1.790, wat betekent dat ook dat jaar de normpremie hoger is dan de standaardpremie. Ook over 2024 heeft eiser dus geen recht op zorgtoeslag.' Voetnoten: '€ 3.974 maal 0,1613'; '4,256 % van € 26.819 plus 13,67 % van € 4.746'. Beroep ongegrond
@@ -2015,6 +2277,28 @@ Source: Dienst Toeslagen, Berekening zorgtoeslag 2025, stap 2: geen recht boven 
 | tegemoetkoming | 0.00 | 0.00 (exact 0) | yes |
 
 Note: Een euro boven de grens 2025: € 23,37 → € 23 → niet toegekend (Awir art. 14 lid 5).
+
+## zt-2025-pub-006 — PASS — check (published)
+
+Source: Dienst Toeslagen, Informatieblad Zorgtoeslag 2025 (TG 721 - 1Z51PL), Januari 2025, 'Hoeveel krijgt u?': 'Bent u alleen, dan krijgt u maximaal € 131 per maand. Hebt u een toeslagpartner, dan krijgt u maximaal € 250 per maand.'
+
+| field | expected | encoding | match |
+|---|---|---|---|
+| tegemoetkoming | 1573.00 | 1573.00 (exact 1573) | yes |
+| aanspraak_maand_afgerond_praktijk | 131 | 131 | yes |
+
+Note: Maximum zonder partner 2025: de tekst geeft € 1573 per jaar (Awir art. 14 lid 4); € 1573 / 12 = € 131.08, door de Dienst gepubliceerd als € 131 per maand — naar beneden afgerond. Het maandbedrag staat niet in de wet (SOURCES.md open item 1); de encoding modelleert de praktijk van de Dienst (DISCREPANCIES.md #5). Inkomen hier € 10.000, onder het drempelinkomen; elk inkomen tot het drempelinkomen geeft hetzelfde.
+
+## zt-2025-pub-007 — PASS — check (published)
+
+Source: Dienst Toeslagen, Informatieblad Zorgtoeslag 2025 (TG 721 - 1Z51PL), Januari 2025, 'Hoeveel krijgt u?': 'Bent u alleen, dan krijgt u maximaal € 131 per maand. Hebt u een toeslagpartner, dan krijgt u maximaal € 250 per maand.'
+
+| field | expected | encoding | match |
+|---|---|---|---|
+| tegemoetkoming | 3010.00 | 3010.00 (exact 3010) | yes |
+| aanspraak_maand_afgerond_praktijk | 250 | 250 | yes |
+
+Note: Maximum met toeslagpartner 2025: de tekst geeft € 3010 per jaar (Awir art. 14 lid 4); € 3010 / 12 = € 250.83, door de Dienst gepubliceerd als € 250 per maand — naar beneden afgerond. Inkomen € 10.000 bij de aanvrager, partner € 0, onder het drempelinkomen.
 
 ## zt-2025-rul-001 — PASS — check (ruling)
 
@@ -2870,6 +3154,28 @@ Source: Belastingdienst, 'Hoeveel inkomen mag ik hebben voor zorgtoeslag?': met 
 
 Note: Tegenhanger van zt-2026-pub-011. Zie DISCREPANCIES.md #2.
 
+## zt-2026-pub-013 — PASS — check (published)
+
+Source: Dienst Toeslagen, Informatieblad Zorgtoeslag 2026 (TG 721 - 1Z61PL), Januari 2026, 'Hoeveel krijgt u?': 'Bent u alleen, dan krijgt u maximaal € 129 per maand. Hebt u een toeslagpartner, dan krijgen jullie samen maximaal € 246 per maand.'
+
+| field | expected | encoding | match |
+|---|---|---|---|
+| tegemoetkoming | 1550.00 | 1550.00 (exact 1550) | yes |
+| aanspraak_maand_afgerond_praktijk | 129 | 129 | yes |
+
+Note: Maximum zonder partner 2026: de tekst geeft € 1550 per jaar (Awir art. 14 lid 4); € 1550 / 12 = € 129.17, door de Dienst gepubliceerd als € 129 per maand — naar beneden afgerond. Het maandbedrag staat niet in de wet (SOURCES.md open item 1); de encoding modelleert de praktijk van de Dienst (DISCREPANCIES.md #5). Inkomen hier € 10.000, onder het drempelinkomen; elk inkomen tot het drempelinkomen geeft hetzelfde.
+
+## zt-2026-pub-014 — PASS — check (published)
+
+Source: Dienst Toeslagen, Informatieblad Zorgtoeslag 2026 (TG 721 - 1Z61PL), Januari 2026, 'Hoeveel krijgt u?': 'Bent u alleen, dan krijgt u maximaal € 129 per maand. Hebt u een toeslagpartner, dan krijgen jullie samen maximaal € 246 per maand.'
+
+| field | expected | encoding | match |
+|---|---|---|---|
+| tegemoetkoming | 2963.00 | 2963.00 (exact 2963) | yes |
+| aanspraak_maand_afgerond_praktijk | 246 | 246 | yes |
+
+Note: Maximum met toeslagpartner 2026: de tekst geeft € 2963 per jaar (Awir art. 14 lid 4); € 2963 / 12 = € 246.92, door de Dienst gepubliceerd als € 246 per maand — naar beneden afgerond. Inkomen € 10.000 bij de aanvrager, partner € 0, onder het drempelinkomen.
+
 ## zt-2026-syn-001 — FAIL — check (synthetic)
 
 Source: Geconstrueerd door de operator naar de formule in Dienst Toeslagen, Berekening zorgtoeslag 2026, stap 5: 'Uw klant is een verzekerde en de toeslagpartner is geen verdragsgerechtigde en geen verzekerde: (standaardpremie + standaardpremie x woonlandfactor - normpremie) x 50%'. Verwachte uitkomst = die formule met woonlandfactor België 0,8165; geen door de Dienst gepubliceerd getal.
@@ -3554,8 +3860,8 @@ Note: Laatste rij van de tabel, op het genoemde inkomen zelf ('en meer' sluit he
 
 ---
 
-Browser encoding (`site/zorgtoeslag-regels.js`, node v22.23.4): 350 cases compared with the Python encoding, 350 identical, 0 different.
+Browser encoding (`site/zorgtoeslag-regels.js`, node v22.23.4): 379 cases compared with the Python encoding, 379 identical, 0 different.
 
 ---
 
-Cases run: 350, passed: 326, failed: 24, skipped: 0. Verified cases: 0. Blocking failures: 0. Browser/Python differences: 0 (blocking: the two encodings must agree).
+Cases run: 379, passed: 350, failed: 29, skipped: 0. Verified cases: 0. Blocking failures: 0. Browser/Python differences: 0 (blocking: the two encodings must agree).

@@ -1,0 +1,21 @@
+id: zt-2022-pub-008
+toeslag: zorgtoeslag
+jaar: 2022
+bron:
+  type: published
+  publicatie: "Dienst Toeslagen, Handboek Toeslagen, versie 2026.3 (publicatiedatum 20 oktober 2026), hoofdstuk 21 Zorgtoeslag, paragraaf 1.6.4 Voorbeelden berekening, Voorbeeld 2022: 'Een aanvrager met partner en een gezamenlijk toetsingsinkomen van € 39.000. Normpremie = € 22.356 x 4,225% + (€ 39.000 - € 22.356) x 13,610% = € 3.209,7894. Zorgtoeslag = € 1.749 x 2 - € 3.209,7894 = € 288,21 per jaar.'"
+  url: https://handboek.toeslagen.nl/htsn/21-zorgtoeslag-zorgtoeslag/
+  opgehaald: 2026-11-02
+verified: false
+invoer:
+  partner: true
+  toetsingsinkomen_aanvrager: "39000"
+  toetsingsinkomen_partner: "0"
+  partner_verzekerd: true
+  rendementsgrondslag: null
+  hele_jaar_dezelfde_partner: true
+verwacht:
+  normpremie: "3209.79"
+  aanspraak_jaar: "288.21"
+  tegemoetkoming: "288"
+opmerking: "Het Handboek legt het gezamenlijke inkomen niet uit over de partners; de case voert het in bij de aanvrager, partner € 0 — de uitkomst hangt er niet van af (Wzt art. 2 lid 2: gezamenlijk toetsingsinkomen). Het drempelinkomen 2022 is in de tekst precies € 22.356 (108% × 12 × € 1.725,00), zodat de Dienst en de tekst hier op de cent gelijk uitkomen. Het Handboek noemt geen afgerond jaarbedrag en geen maandbedrag; € 288 volgt uit Awir art. 14 lid 4."

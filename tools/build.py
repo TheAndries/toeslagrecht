@@ -220,7 +220,7 @@ def discrepancy_status(nummer: int) -> str | None:
     """The status of entry `nummer` in DISCREPANCIES.md, read from its table row (the log is the authority)."""
     for line in (ROOT / "DISCREPANCIES.md").read_text(encoding="utf-8").splitlines():
         if line.startswith(f"| {nummer} |"):
-            m = re.search(r"\| `(open|encoding|government|law|withdrawn)` \|", line)
+            m = re.search(r"\| `(open|encoding|government|law|withdrawn)`[^|]*\|", line)
             return m.group(1) if m else None
     return None
 

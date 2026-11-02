@@ -1,0 +1,23 @@
+id: zt-2018-rul-008
+toeslag: zorgtoeslag
+jaar: 2018
+bron:
+  type: ruling
+  publicatie: "Afdeling bestuursrechtspraak van de Raad van State 26 mei 2021, ECLI:NL:RVS:2021:1072 (201908492/1/A2), ook ECLI:NL:RVS:2021:1071 (201907402/1/A2, dezelfde appellant), procesverloop: 'Bij besluit van 21 november 2018 heeft de Belastingdienst/Toeslagen het voorschot zorgtoeslag van [appellant] over 2018 herzien en vastgesteld op € 594,00.' (ECLI:NL:RVS:2021:1071: 'Bij besluit van 21 augustus 2018 ... voor het jaar 2018 vastgesteld op € 594,00'; later, 15 maart 2019, gewijzigd op € 725,00 — niet herleidbaar, niet opgenomen); 'De woonlandfactor voor Marokko is 0,0125 in 2017 en 2018.'; 'De Belastingdienst/Toeslagen heeft de zorgtoeslag waarop [appellant] en zijn partner aanspraak kunnen maken vastgesteld door bij de standaardpremie ten behoeve van [appellant] (€ 1.530,00 voor 2017 en € 1.546,00 voor 2018) de standaardpremie vermenigvuldigd met de woonlandfactor voor Marokko voor zijn in dat land wonende partner (€ 19,125 voor 2017 en € 19,33 voor 2018) op te tellen. Het aldus verkregen totaalbedrag (€ 1.549,125 voor 2017 en € 1.565,33 voor 2018) is vervolgens verminderd met de normpremie voor verzekerden met een partner (€ 1.016,51 voor 2017 en € 971,42 voor 2018). Het verschil bedraagt in 2017 € 532,62 en in 2018 € 593,91.'; 'Als [appellant] alleenstaand zou zijn geweest had hij in 2017 en 2018 aanspraak kunnen maken op de maximale zorgtoeslag van € 88,00 respectievelijk € 94,00 per maand.' De Afdeling: 'Gelet hierop heeft de Belastingdienst/Toeslagen ten onrechte de standaardpremies van [appellant] en zijn partner bij elkaar opgeteld en de normpremie daarop in mindering gebracht.' '[appellant] heeft recht op de maximale zorgtoeslag van € 88,00 per maand in 2017 en € 94,00 per maand in 2018.' Hoger beroep gegrond, zelf afgedaan"
+  url: https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RVS:2021:1072
+  opgehaald: 2026-11-02
+verified: false
+invoer:
+  partner: true
+  partner_verzekerd: false
+  aanvrager_verdragsgerechtigd: false
+  partner_verdragsgerechtigd: true
+  woonland: "MA"
+  toetsingsinkomen_aanvrager: "0"
+  toetsingsinkomen_partner: "0"
+  rendementsgrondslag: null
+  hele_jaar_dezelfde_partner: true
+verwacht:
+  tegemoetkoming: "594"
+discrepantie: 16
+opmerking: "Een in Nederland wonende verzekerde met een in Marokko wonende verdragsgerechtigde partner (Zvw art. 69; woonlandfactor Marokko 0,0125). De uitspraak noemt geen toetsingsinkomen; de door de Dienst toegepaste normpremie met partner (€ 971,42) is het normpercentage over het drempelinkomen alleen, zodat het gezamenlijke toetsingsinkomen niet boven het drempelinkomen lag; de case voert € 0 in — elk inkomen tot het drempelinkomen geeft dezelfde uitkomst. Verwacht is het bedrag van de Dienst: € 1.546 + € 1.546 × 0,0125 − normpremie = € 593,91 → € 594 (Awir art. 14 lid 4; via build.run_case nagerekend met partner_verdragsgerechtigd en woonland MA: de encoding geeft voor dit geval 'undetermined', omdat Wzt art. 3 (tekst 2018) de partner van een verdragsgerechtigde regelt en niet de verdragsgerechtigde partner van een verzekerde; het huidige art. 4a lid 3 is ingevoegd per 06-11-2024). De Afdeling kwam tot een andere uitkomst dan de Dienst én dan de tekst zoals de Dienst die leest: op grond van de memorie van toelichting (Kamerstukken II 2006/07, 30 918, nr. 3) heeft de verzekerde zelf recht op het maximum zonder partner, € 94 per maand, en de partner afzonderlijk een aanspraak met de woonlandfactor. Het Handboek Toeslagen (hoofdstuk 21 §1.6.5) zegt daarover dat de wetgever (Kamerstukken II 2022/23, 36 357, nr. 3, blz. 20) heeft aangegeven dat het wetsartikel dat die passage toelichtte nooit in werking is getreden en dat art. 4a per 06-11-2024 is verduidelijkt zonder de berekening te wijzigen. Drie lezingen van één tekst: DISCREPANCIES.md #16 (law). Het voorschot 2018 van € 594 is het jaarbedrag met de partner voor het hele jaar (€ 593,91 → € 594); de normpremie € 971,42 = 4,750% × € 20.450,88, gelijk aan de tekst. In ECLI:NL:RVS:2021:1071 gaat het om de maanden januari tot en met juli 2018; het later gewijzigde voorschot (€ 725) is niet herleidbaar en niet opgenomen. Het door de Afdeling aangehaalde maximum zonder partner 2018, € 94 per maand, is € 1.139 / 12 = € 94,92 naar beneden afgerond (#5): het eerste maandcijfer van de Dienst voor 2018 in het corpus."

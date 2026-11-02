@@ -1,0 +1,19 @@
+id: zt-2020-pub-010
+toeslag: zorgtoeslag
+jaar: 2020
+bron:
+  type: published
+  publicatie: "Dienst Toeslagen, Toeslagenkaart 2020 (TG 710 - 1Z01PL), 'Zorgtoeslag — Maximaal inkomen: Alleenstaande € 30.481; Aanvrager met toeslagpartner € 38.945. Maximale toeslag: Alleenstaande € 1.250 per jaar; Aanvrager met toeslagpartner € 2.397 per jaar.' 'Vermogensvrijstelling voor zorgtoeslag en kindgebonden budget: Voor zorgtoeslag en kindgebonden budget telt u bij het maximaal vermogen nog een extra vrijstelling op van € 85.767. In de tabel ziet u hoeveel vermogen de aanvrager maximaal mag hebben op 1 januari 2020. Alleenstaande € 116.613; Aanvrager met toeslagpartner € 147.459.'"
+  url: https://download.belastingdienst.nl/toeslagen/docs/toeslagenkaart_2019_tg7101z01pl.pdf
+  opgehaald: 2026-11-02
+verified: false
+invoer:
+  partner: true
+  toetsingsinkomen_aanvrager: "10000"
+  toetsingsinkomen_partner: "0"
+  partner_verzekerd: true
+  rendementsgrondslag: "147460"
+  hele_jaar_dezelfde_partner: true
+verwacht:
+  tegemoetkoming: "0"
+opmerking: "Vermogenstoets 2020 (Wzt art. 2a, tekst 2020): geen zorgtoeslag als de grondslag sparen en beleggen (Wet IB 2001 art. 5.2: rendementsgrondslag minus heffingvrij vermogen) meer bedraagt dan € 85.767 (Stcrt. 2019, 61842). De Dienst publiceert de grens als rendementsgrondslag: € 85.767 + € 30.846 heffingvrij vermogen = € 116.613 (zonder partner), + 2 × € 30.846 = € 147.459 (met partner) — gelijk aan de tekst (SOURCES.md; memory 10-14). De encoding neemt de rendementsgrondslag als invoer en trekt het heffingvrij vermogen zelf af. Eén euro boven de gepubliceerde grens met toeslagpartner: grondslag € 85.768 > € 85.767 → geen zorgtoeslag."
