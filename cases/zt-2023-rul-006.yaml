@@ -1,0 +1,22 @@
+id: zt-2023-rul-006
+toeslag: zorgtoeslag
+jaar: 2023
+bron:
+  type: ruling
+  publicatie: "Rechtbank Midden-Nederland 6 februari 2024, ECLI:NL:RBMNE:2024:900 (UTR 23/4068), inhoudsindicatie: 'De Belastingdienst/teoslagen heeft bij de berekening van het voorschot zorgtoeslag 2023 van eiser terecht de woonlandfactor toegepast.'; r.o. 1: 'Eiser heeft beroep ingesteld tegen het besluit van 17 juli 2023 op zijn bezwaar (het bestreden besluit), omdat hij het niet eens is met de berekening van het voorschot van zijn zorgtoeslag voor 2023 van € 174,-.'; feiten: 'Op 2 maart 2023 heeft verweerder een melding ontvangen van het CAK dat eiser per 3 juli 2012 is aangemeld als verdragsgerechtigde. Omdat eiser via het CAK zorgverzekerd is en AOW ontvangt, moet verweerder bij de berekening van de zorgtoeslag van eiser rekening houden met de zorgkosten in Roemenië.' 'In de Regeling Zorgverzekering is de woonlandfactor voor Roemenië voor 2023 vastgesteld op 0,1085.'; r.o. 14: 'Verweerder heeft in de brief van 24 november 2023 medegedeeld dat na onderzoek is gebleken dat het partnerschap van eiser bekend was bij Belastingdienst/Toeslagen, maar niet correct is verwerkt in het Toeslagen Verstrekkingen Systeem. Hierdoor is de echtgenote van eiser ten onrechte niet aangemerkt als toeslagpartner voor de zorgtoeslag. Verweerder heeft verder medegedeeld dat als de echtgenote wordt aangemerkt bij de berekening van de zorgtoeslag voor 2023, het recht op zorgtoeslag voor 2023 van eiser nihil zou zijn.'; r.o. 16: 'De berekening die verweerder daarbij heeft gegeven luidt als volgt: Normpremie = 2,378% x drempelinkomen + 13,64% (gezamenlijk toetsingsnormen – drempelinkomen). Deze formule geeft als uitkomst: (2,378% x € 25.070 = € 596,1646) + 13,64% (€ 22.222 - € 25.070 = € 0,-). De normpremie is dan € 596,1645. Voor een aanvrager met een toeslagpartner die geen verdragsgerechtigde en geen verzekerde is geldt de volgende formule: Zorgtoeslag is (2 x standaardpremie x woonlandfactor – normpremie) x 50%. Ingevuld met de geldende bedragen is dat (€ 3.778 x 0,1085 =) € 409,913 - € 596,1645 = € 0,-.' (voetnoot van de rechtbank: '2 x € 1.889,-. De uitkomst is -€ 186,25 * 50% = -€ 93,13. Dit is een negatief bedrag, dat wordt afgerond naar nihil.'); r.o. 18: 'De rechtbank stelt vast dat de onder punt 16 weergegeven berekening van verweerder van eisers zorgtoeslag 2023 in overeenstemming is met de wettelijk regeling.'; r.o. 19: 'Eiser is door de vaststelling op € 174,- niet in zijn financiële belangen benadeeld, aangezien dit bedrag hoger is dan het bedrag waarop eiser eigenlijk recht had (te weten € 0,-).'; r.o. 21: 'De rechtbank is daarom van oordeel dat verweerder bij de berekening van het voorschot zorgtoeslag 2023 van eiser terecht de woonlandfactor heeft toegepast.'"
+  url: https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RBMNE:2024:900
+  opgehaald: 2026-11-03
+verified: false
+invoer:
+  partner: false
+  partner_verzekerd: true
+  aanvrager_verdragsgerechtigd: true
+  partner_verdragsgerechtigd: false
+  woonland: "RO"
+  toetsingsinkomen_aanvrager: "22222"
+  toetsingsinkomen_partner: "0"
+  rendementsgrondslag: null
+  hele_jaar_dezelfde_partner: true
+verwacht:
+  tegemoetkoming: "174"
+opmerking: "Een verdragsgerechtigde (CAK-melding per 3 juli 2012) met AOW, woonland Roemenië (woonlandfactor 2023 0,1085, Stcrt. 2022, 29339 zoals gerectificeerd bij Stcrt. 2022, 32002; de uitspraak noemt 0,1085). Verwacht is het voorschot 2023 zoals de Dienst het vaststelde: € 174, berekend zonder de echtgenote, die door een fout in het systeem van de Dienst niet als toeslagpartner was verwerkt (r.o. 14); de rechtbank liet het voorschot in stand omdat eiser er niet door benadeeld was (r.o. 19). De tekst zonder partner: € 1.889 (Stcrt. 2022, 32017) × 0,1085 = € 204,96 (Wzt art. 3 lid 1, tekst 2023; nu art. 4a lid 1) − normpremie 0,123% × € 25.069,824 = € 30,84 → € 174,12 → € 174 (Awir art. 14 lid 4) — via build.run_case nagerekend; de Dienst rekent met het drempelinkomen afgerond op € 25.070 (#1), dezelfde hele euro. De uitspraak noemt alleen het gezamenlijke toetsingsinkomen € 22.222 (r.o. 16); de case voert het geheel bij de aanvrager in — onder het drempelinkomen maakt de verdeling niets uit. Een uitkomst van de Dienst voor de invoer die hij gebruikte (zonder partner), zoals ook zt-2017-rul-005 zo is opgenomen; de berekening mét partner is zt-2023-rul-007."

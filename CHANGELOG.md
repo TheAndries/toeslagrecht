@@ -2,6 +2,98 @@
 
 Newest first. What was done, decided, and got wrong.
 
+## 2026-11-03 — twenty-fourth run: discrepancy #16 read at its sources — the legislator's own account in Kamerstukken II 2022/23, 36 357, nr. 3, the 2007 passage the Afdeling relied on, the 2009 example behind lid 4, the first instance — and, from a second pass over the feed sweep, the Dienst's own switch to the Afdeling's reading in July 2021 (ECLI:NL:RVS:2021:2619); six new ruling cases; the Handboek's chapter on income read for the negative toetsingsinkomens
+
+Twenty-fourth run of routine `trig_012xyD5r5rxFDCjfHbZ58Kib`. Model as configured for the session: `claude-fable-5-1`, the same as the previous
+entry; no handover note needed. The checkout arrived detached at `c17151c` (the previous run's commit); `git fetch origin main` confirmed
+`origin/main` is the same commit; `git log -3 --stat` shows no owner commit. The routine fired the day after the previous run: no gap.
+
+**Step 1 — asks marked done.** None since 11-02. Asks 4, 6, 8, 9 and 10 stay open; 9 extended today (step 8).
+
+**Step 2 — the inbox.** `INBOX.md` is empty and nothing arrived outside it. No case, dispute, review or owner note to handle.
+
+**Step 3.** No open motion.
+
+**Step 4 — done (memory item 5 (a), (b) and (c), in that order).**
+- *The sources behind #16, read themselves.* Kamerstukken II 2022/23, 36 357, nr. 3 (memorie van toelichting Verzamelwet VWS 2023, 16-05-2023),
+  artikel XIX onderdelen B en C with its notes 17–19, read in full (`law/SOURCES.md` section 1, verbatim): the Afdeling 'sprak uit dat de
+  gezamenlijke toeslag diende te worden bepaald door voor beide partners afzonderlijk een toeslag te berekenen en deze bij elkaar op te tellen',
+  on a passage of 30 918 nr. 3 whose article 'is echter nooit in werking getreden' (noot 17: art. 3 lid 1–2 replaced it per 01-01-2007); the
+  regering's formula — '(standaardpremie verzekerde + standaardpremie partner) – normpremie' with the woonlandfactor on the partner's premie —
+  is the Dienst's computation in `zt-2017-rul-007`/`zt-2018-rul-008` to the euro; the lower result 'is bij het opstellen van de Wzt bewust
+  gekozen'; the Afdeling's method 'vindt de regering niet wenselijk'; noot 18 says what the Afdeling's own text does not: it took the
+  alleenstaande percentages and 'waarschijnlijk' the gezamenlijk toetsingsinkomen. The passage itself (Kamerstukken II 2006/07, 30 918, nr. 3,
+  under 'Verhoudingsgetal') says 'De zorgtoeslagen worden bij elkaar opgeteld en door twee gedeeld' — which is not what the Afdeling awarded
+  (the whole maximum zonder partner); under the passage's own words the couple would get 2017 € 1.066 / 2 = € 533 (the Dienst's figure, by
+  arithmetic coincidence) and 2018 € 1.139 / 2 = € 570, computed through the encoding's maxima. Kamerstukken II 2008/09, 31 905, nr. 3
+  (noot 19) gives the ratio of the present lid 4 with a worked example (gezin A/B/C, Spanje 0,3588): a *verdragsgerechtigde* with a partner
+  who is neither, nothing on a verzekerde aanvrager (#3 addendum). The first instance, Rechtbank Amsterdam 27 augustus 2019,
+  ECLI:NL:RBAMS:2019:6265: the sum method was not contested there; the rechtbank faulted only art. 2 lid 4 for augustus 2018 and held the
+  woonlandfactor 'niet kennelijk onredelijk'; the € 725 of 15-03-2019 is a year in three periods, not a case. All in #16 as an addendum,
+  classification unchanged (`law`): the 2017–2018 text still names no rule; the 2023 toelichting itself says the systematiek had to be
+  'geëxpliciteerd'. The rule page `zt-2026-art4a` now says why it returns `undetermined` before 06-11-2024, with the Kamerstuk.
+- *The second digest pass* (memory item 4): the feed re-swept over 2013-01-01 → 2026-11-03 in the background (723 weeks, about 45 minutes,
+  582 rulings mentioning zorgtoeslag — the same 582 as on 10-30: nothing newly published) and every text digested for '€' beside
+  woonlandfactor|normpremie|standaardpremie and for woonlandfactor beside partner. Five new rulings with hits; two with outcomes.
+  **ABRvS 24 november 2021, ECLI:NL:RVS:2021:2619** answers open item 8's question from the Dienst's side: another verzekerde in the Netherlands
+  with an echtgenote in Marokko 'meeverzekerd via het Centraal Administratiekantoor'; voorschotten 2018 € 594 and 2019 € 736, both reproduced
+  to the euro by the sum method with the Marokko factors 0,0125 and 0,0193 at an income up to the drempelinkomen; then 'twee nieuwe besluiten
+  … naar aanleiding van' ECLI:NL:RVS:2021:1071 en 1072 on 22-07-2021: € 94 per maand 2018 (€ 1.139) and € 99 per maand 2019 (€ 1.189) — the
+  maxima zonder partner, the Afdeling's reading, applied by the Dienst itself two months after those rulings and three years before the
+  legislator restored the sum method. Four cases, all `discrepantie: 16`: `zt-2018-rul-009`/`-010`, `zt-2019-rul-023`/`-024`.
+  **Rechtbank Midden-Nederland 6 februari 2024, ECLI:NL:RBMNE:2024:900:** a verdragsgerechtigde in Roemenië (0,1085), voorschot 2023 € 174
+  computed without his echtgenote (a system error of the Dienst), and the Dienst's letter computing the toeslag with her — 'geen
+  verdragsgerechtigde en geen verzekerde' — by the leaflet's formula onder c to nihil at a gezamenlijk toetsingsinkomen of € 22.222, which the
+  rechtbank called 'in overeenstemming met de wettelijk regeling'. `zt-2023-rul-006` (€ 174) and `zt-2023-rul-007` (nihil) both pass; the second
+  is a court-reviewed computation, not a beschikking, and says so. For #3 it is the first court-reviewed application of formula c, for a
+  verdragsgerechtigde aanvrager where text and formula agree; a verzekerde aanvrager remains undecided. ECLI:NL:RBMNE:2025:2868 (a 2022
+  definitieve berekening with the factor applied after years without it) has no figures; the CRvB, a belastingkamer and a bewind ruling were
+  noise — all in section 4 or open item 7.
+- *The Handboek Toeslagen, chapters 12, 6 and 4* (memory item 5 (c)): hoofdstuk 12 §1.2.1.1.4 — 'Het negatief inkomen telt daarbij gewoon mee in
+  het jaar waarin daarvan sprake was' — the Dienst's own statement of what the encoding does with the negative toetsingsinkomens of
+  `zt-2020-rul-023..025` and `zt-2022-rul-003`; §1.2.3.1 the fictief € 0 under Awir art. 14 lid 3; hoofdstuk 6 the Awir art. 5 month rule;
+  hoofdstuk 4 nothing on rounding. Recorded in section 3 and in `zt-2020-rul-023`.
+- *Check:* 385 cases, 352 pass, 33 fail (the 29 of 11-02 plus the four #16 cases of today, every one explained), 0 blocking; both encodings
+  agree on 385. Site rebuilt: six case pages, `/verschillen/3/` and `/verschillen/16/`.
+- *The record's files:* six case files; three case files annotated (`zt-2017-rul-007`, `zt-2018-rul-008`, `zt-2020-rul-023`); `DISCREPANCIES.md`
+  (#16 twice, #3 twice); `SOURCES.md` (three Kamerstukken in section 1, one Handboek row in section 3, four rulings in section 4, open item 8
+  rewritten); `rules.md` (`zt-2026-art4a`); `cases/README.md`, `README.md`; `ASKS.md` 9.
+
+**What was wrong and why.**
+- *The digest of 10-30 and 11-01 missed ECLI:NL:RVS:2021:2619 for five weeks* although it was in the sweep: its amounts stand beside
+  'per maand' and 'woonlandfactor', not an income word. The lesson of 11-02 (write the filter from the article's inputs) was applied today and
+  found it in one pass. Lesson kept in memory.
+- *The text fetcher built a URL from an unvalidated id* and curl rejected two malformed ones; the fetcher now matches each id against the ECLI
+  pattern. No effect on the record.
+- *One quotation was first paraphrased inside quotation marks* ('beoogt geen substantiële beleidswijzigingen' for 'met de voorgestelde
+  wijzigingen geen substantiële beleidswijzigingen worden beoogd') and corrected before the check. Quotes are copied, never retyped.
+- Nothing dropped from scope. `PLAN.md` unchanged: Checkpoint 1 waits on the owner, huurtoeslag not before it, history paused at 2013; no
+  checkpoint has a date to miss. Sequencing in memory: the feed route is exhausted under both filters until the January 2027 sweep; next are
+  the remainder of open item 8, the Handboek's version log and `SOURCES.md` items 1, 2, 5, 6.
+
+**Step 8 — asks.** None new. Ask 9 extended to the six new ruling cases (two rulings), with the note that `zt-2023-rul-007` rests on a
+court-reviewed letter, for the owner to accept or not.
+
+**Dropped from memory.** The 2016–2013 key-figure listing compressed to landmarks (every figure is in the parameter files and `CHANGES.md`);
+the 2013–2016 ruling-case descriptions compressed to ids; the 11-02 case passage compressed to ids; the stale Chromium path and two short
+lessons removed; three lessons and the new state added. 7978 words (wc).
+
+**Effort.** Roughly 275,000 of the 300,000-token ceiling: about 90,000 reading the files, memory, the previous entries and the pipeline;
+about 45,000 reading the three Kamerstukken, four rulings and three Handboek chapters (the sweep and the fetches ran in the background and
+cost no tokens; the digest listed five rulings); about 110,000 writing and checking six cases, the addenda, the source rows, the memory
+edits and this entry; the rest on two checks and the build.
+
+**Record under the ten-year rule.** This run added to the record: the legislator's own account of discrepancy #16 in its words — the sum
+formula as the systematiek of the Wzt, the Afdeling's article 'nooit in werking getreden', the reason for the lower amount, and noot 18 on
+how the Afdeling computed — together with the 2007 passage the Afdeling read (and the fourth arithmetic that passage literally describes),
+the 2009 example that is the ratio of lid 4, and the first-instance ruling; the finding, from a ruling the feed had held since 10-30, that
+the Dienst itself applied the Afdeling's reading in definitieve berekeningen of 22-07-2021 (€ 1.139, € 1.189) after voorschotten by the sum
+method (€ 594, € 736) — so that #16 now documents three dated positions of the government on one text: before May 2021, from July 2021, and
+from November 2024; the first court-reviewed application of the Dienst's formula c (2023, Roemenië, nihil) for #3; six Dienst outcomes with
+their inputs and readings; the Dienst's handbook statement that a negative income counts as such, beside the four cases that turn on it;
+and the dated negative result that the feed published nothing new between 10-30 and 11-03. The scripts, the fetcher fix and the site build
+are regenerable and are not counted.
+
 ## 2026-11-02 — twenty-third run: the Dienst's own publications read for the first time beyond the leaflets — the Handboek Toeslagen, the Toeslagenkaart 2020 and the informatiebladen 2022–2026 — twenty-nine new cases, the first Dienst figures for 2020 and 2021, the drempelinkomen rounding of 2020, 2021 and 2017, and two new discrepancies: #15 (the Dienst's two 2022 monthly roundings) and #16 (a text read three ways: the Dienst, the Afdeling and the legislator)
 
 Twenty-third run of routine `trig_012xyD5r5rxFDCjfHbZ58Kib`. Model as configured for the session: `claude-fable-5-1`, the same as the previous

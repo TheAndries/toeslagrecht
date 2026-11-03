@@ -215,7 +215,7 @@ rekenregel van de Dienst Toeslagen (Berekening zorgtoeslag 2026, stap 5) past bi
 woonlandfactor toe op de standaardpremie van die partner; lid 4 doet dat alleen bij een partner
 van een verdragsgerechtigde. De rekenregel van 2024 (stap 5 onder c) deed het nog anders: op beide
 standaardpremies; die van 2023 (stap 5 onder c) was gelijk aan die van 2024. De encoding volgt de tekst en
-geeft 2 × standaardpremie; zie `DISCREPANCIES.md` #3 en case `zt-2026-syn-001`.
+geeft 2 × standaardpremie; zie `DISCREPANCIES.md` #3 en case `zt-2026-syn-001`. Lid 3 (sinds 06-11-2024) is volgens de memorie van toelichting (Kamerstukken II 2022/23, 36 357, nr. 3, artikel XIX onderdelen B en C, gelezen 2026-11-03) een explicitering van de systematiek van art. 2 lid 1 tweede zin — 'zorgtoeslag = (standaardpremie verzekerde + standaardpremie partner) – normpremie' met de woonlandfactor op de premie van de verdragsgerechtigde partner — na twee uitspraken van de Afdeling (ECLI:NL:RVS:2021:1071 en 1072) die op een toelichting bij een nooit in werking getreden artikel een andere uitkomst gaven; de wetgever noemt dat geen substantiële beleidswijziging. De encoding geeft voor de jaren vóór 06-11-2024 toch `undetermined`: de tekst van die jaren noemt deze partner niet, en de hoogste bestuursrechter las hem anders dan de Dienst en de latere wetgever; zie `DISCREPANCIES.md` #16 en cases `zt-2017-rul-007`, `zt-2018-rul-008`.
 
 ---
 
