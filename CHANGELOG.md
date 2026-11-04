@@ -2,6 +2,97 @@
 
 Newest first. What was done, decided, and got wrong.
 
+## 2026-11-04 — twenty-fifth run: the law behind discrepancy #16 read at its roots — Stb. 2009, 486 (the wet of 31 905) and Zorgverzekeringswet art. 69 at every version 2013–2026; the feed re-swept for the article's own words (no outcome hides behind them); the first 2027 instrument, the minimumloon of January 2027, read in primary and the 2027 drempelinkomen computed; the Handboek's version log checked
+
+Twenty-fifth run of routine `trig_012xyD5r5rxFDCjfHbZ58Kib`. Model as configured for the session: `claude-fable-5-1`, the same as the previous
+entry; no handover note needed. The checkout arrived detached at `9f6d55d` (the previous run's commit); `git fetch origin main` confirmed
+`origin/main` is the same commit; `git log -3 --stat` shows no owner commit. The routine fired the day after the previous run: no gap.
+
+**Step 1 — asks marked done.** None since 11-03. Asks 4, 6, 8, 9 and 10 stay open; none extended today (no new ruling case).
+
+**Step 2 — the inbox.** `INBOX.md` is empty and nothing arrived outside it. No case, dispute, review or owner note to handle.
+
+**Step 3.** No open motion.
+
+**Step 4 — done (memory item 5 (a) and (d) item 2, and the 2027 watch that item 5 did not yet have).**
+- *The wet of 31 905, found and read.* The Wzt's own version history (informatie page) lists the version of 27-11-2009 with **Stb. 2009, 486**
+  as Ontstaansbron and Inwerkingtredingsbron; the Staatsblad text (uitgegeven 26-11-2009, in force the day after, art. IV; histnoot 'Kamerstuk
+  31 905') is now in `law/SOURCES.md` section 1 with artikel I verbatim: 'Aan artikel 3 van de Wet op de zorgtoeslag wordt een derde lid
+  toegevoegd, luidende: 3. De standaardpremie voor een partner van een persoon als bedoeld in artikel 69 van de Zorgverzekeringswet wordt
+  overeenkomstig het eerste lid vastgesteld, tenzij deze partner een persoon is als bedoeld in artikel 1, onderdeel f, van de
+  Zorgverzekeringswet.' That is the rule now in art. 4a lid 4 — the partner *of* a verdragsgerechtigde — and the only partner the Wzt named from
+  2009 to 05-11-2024; the verzekerde's verdragsgerechtigde partner of #16 is not in the 2009 wet either. The row of 11-03 that said the Stb. was
+  'not read this run' now names it; #16 and `rules.md` (`zt-2026-art4a`) carry the finding.
+- *Zvw art. 69 by version* (`SOURCES.md` open item 2). The article's own informatie page says 'Er zijn geen wijzigingen' and lists no versions —
+  so the whole act was fetched at fifteen version start dates (01-01 of 2013 through 2026 and 06-11-2024; every one a valid version, 1,1–1,3 MB
+  each, no tokens) and art. 69 cut from each and diffed. Lid 1, the definition the Wzt points to, is the same sentence in every year; only the
+  orgaan changed (College zorgverzekeringen → Zorginstituut 2015 → CAK 2017) and, in 2019, the name of the verordening. The link to the Wzt — the
+  part of the bijdrage 'voor de toepassing van de Wet op de zorgtoeslag als premie voor een zorgverzekering' — stood in lid 2 through 2017 and in
+  lid 4 onder b since 01-01-2018. New per 01-01-2018 and relevant to the encoding: lid 3 puts the woonlandfactor's ratio ('verhouding tussen de
+  gemiddelde uitgaven voor zorg … in het woonland … en … in Nederland') in the wet itself, where before 2018 it stood only in the Regeling
+  zorgverzekering art. 6.3.1; lid 5 makes the bijdrage of a gezinslid of 18 or older payable by the person from whom its right derives — the
+  echtgenote 'meeverzekerd via het CAK' of #16's cases is herself a persoon bedoeld in lid 1. Per 06-11-2024 the boete-leden vervallen and the
+  later leden renumbered; lid 1–6 unchanged. All verbatim in section 1; the plain-Dutch 'Discretie' paragraph of `zt-2026-art4a` cites the leden
+  by version. The instruments behind the 2015, 2017, 2018 and 2019 changes are listed on the act's informatie page by footnote number only and are
+  written as 'not identified'.
+- *The first instance of ECLI:NL:RVS:2021:2619* (open item 8): ECLI:NL:RBAMS:2020:1244 has no published text — the open-data record is 2.230 bytes
+  of metadata (27-02-2020, 'Hoger beroep: ECLI:NL:RVS:2021:2619, (Gedeeltelijke) vernietiging en zelf afgedaan'). Section 4 says so, so no run
+  looks again.
+- *The feed re-swept with the article's own words* (the lesson of 11-02/11-03 taken one step further): 2013-01-01 → 2026-11-04, 723 weeks, every
+  rechtsgebied, in the background (~50 minutes), keeping entries whose title or inhoudsindicatie carries zorgtoeslag **or** woonlandfactor,
+  verdragsgerechtigd, verdragsbijdrage or buitenlandbijdrage. Zorgtoeslag: 582 rulings, as on 10-30 and 11-03 — nothing newly published. The
+  other words: 241 rulings not in the record; all 241 texts fetched, 15 mention zorgtoeslag in the body (the CRvB and rechtbanken on the
+  buitenlandbijdrage itself, a belastingkamer), none beside an amount or a woonlandfactor sentence. A dated negative result for open item 8: no
+  Dienst zorgtoeslag outcome for a verdragsgerechtigde hides behind a ruling that does not say 'zorgtoeslag' in its inhoudsindicatie.
+- *2027, the first instrument.* The minimumloon of January 2027 is set: Regeling van de Minister van SZW van 29 oktober 2026, nr. 2026-0000391146,
+  art. 1 onder b, **€ 2.385,00** (onder a € 15,29 per uur), in force 01-01-2027. Not yet in the Staatscourant (the text says it 'zal … in de
+  Staatscourant worden geplaatst'; two searches of zoek.officielebekendmakingen.nl found no number) but published in primary on open.overheid.nl,
+  reached through the 'bekendmaking' link of an AWVN bericht of 30-10-2026; read as PDF, quoted verbatim in section 1 and in `CHANGES.md`
+  (effective 2027-01-01, 'not yet (future)', like the 2027 percentages row of 10-08). **Drempelinkomen 2027 under Wzt art. 1 lid 1 onder f:
+  108% × 12 × € 2.385,00 = € 30.909,60 exactly** — a whole number of cents, so for 2027, as for 2022, the Dienst's rounding of the drempelinkomen
+  (#1) cannot arise. The standaardpremie 2027, the vermogensgrenzen, the woonlandfactoren and the Awir amounts are not yet published (the
+  standaardpremie searched: nothing); 2027 is not encoded until all are, because a parameter file adds the year to the checker.
+- *The Handboek's version log* (memory item 5 (b)): versie 2026.3 of 20 oktober 2026 is still the latest (2026.0 of 05-01, 2026.1 of 07-05, 2026.2
+  of 18-05); the source row records the check.
+- *Check:* 385 cases, 352 pass, 33 fail (every one logged, unchanged since 11-03), 0 blocking; both encodings agree on 385. No case changed. Site
+  rebuilt (the rule page `zt-2026-art4a`, `/verschillen/16/`, `/wet/wijzigingen/`, `/wet/bronnen/`).
+- *The record's files:* `SOURCES.md` (three section-1 rows — Stb. 2009, 486; Zvw art. 69 by version; the WML 2027 regeling — the 31 905 row
+  completed, the Handboek row dated, one section-4 row, open items 2 and 8); `CHANGES.md` (2027 WML row); `DISCREPANCIES.md` (#16 addendum);
+  `rules.md` (`zt-2026-art4a`); `memory.md`.
+
+**What was wrong and why.**
+- *The article's informatie page misled for one fetch:* `/Artikel69/informatie` answered 'Er zijn geen wijzigingen' for an article amended at
+  least five times since 2013. The whole-act route (fetch every version start date, cut the article, diff) worked at once and is the lesson.
+- *The first cut of art. 69 took the table-of-contents heading, not the body* (110 KB for 2013–2017, 'not found' for 2018 on): the body heading
+  carries a trailing space. Caught by the lengths before anything was written; the second cut was checked against the lid numbering.
+- *The sweep ran ~50 minutes rather than 45:* the 2022–2026 weeks hold 1,300–1,500 entries and need two pages each. Started in the first
+  minutes, it cost no tokens; the fetch and digest scripts were rewritten from memory's description in minutes, as on 10-30 and 11-03.
+- Nothing dropped from scope. `PLAN.md` unchanged: Checkpoint 1 waits on the owner, huurtoeslag not before it, history paused at 2013; no
+  checkpoint has a date to miss. Sequencing in memory (item 5) rewritten: the 2027 instruments watch; the Awir art. 5 within-year extension of
+  `zt-2026-art2-5` as the next method decision (it turns two rulings already in section 4 into cases); the Regeling zorgverzekering art. 6.3.1
+  by version; the Handboek monthly; the download server in late January; items 1, 5, 6. Open item 8's remainder has no route left but January.
+
+**Step 8 — asks.** None new; nothing today needs the owner. Ask 9 not extended (no new ruling case).
+
+**Dropped from memory.** Four older lessons (the backgrounded `cd` chain, the parallel-curl `mkdir` race, the Wayback CDX note, the bracketed
+placeholder) — each covered by a later, broader lesson or no longer bites; the #16 open-points sentence replaced by today's state; item 5
+rewritten. Three lessons and the 2027 paragraph added. 7,882 words (wc).
+
+**Effort.** Roughly 250,000 of the 300,000-token ceiling: about 95,000 reading the files, memory, the previous entries and the pipeline; about
+55,000 fetching and reading the Stb., the Wzt and Zvw version pages, fifteen cuts of art. 69 with their diffs, the WML regeling, the Handboek
+log and the digest of the sweep (the sweep, the 241 fetches and the fifteen act fetches ran as curl and cost no tokens); about 80,000 writing
+and checking the source rows, the addenda, the memory edits and this entry; the rest on the check and the build.
+
+**Record under the ten-year rule.** This run added to the record: the wet of 31 905 identified and quoted — Stb. 2009, 486, in force 27-11-2009,
+the article that put the partner of a verdragsgerechtigde into the Wzt — so that #16 now shows that neither the 2009 wet nor the 2017–2018 text
+named the verzekerde's verdragsgerechtigde partner; Zorgverzekeringswet art. 69, the definition every woonlandfactor case rests on, as it stood
+at fifteen dates from 2013 to 2026, with the finding that the definition itself never changed and that the woonlandfactor's ratio entered the
+wet on 01-01-2018; the dated negative result that no further Dienst outcome for a verdragsgerechtigde is hidden in the feed behind the
+article's own words (241 rulings fetched and read for it), and that the first instance of ECLI:NL:RVS:2021:2619 has no published text; the
+first instrument of 2027 in primary — the minimumloon of January 2027, € 2.385,00, with the 2027 drempelinkomen of € 30.909,60 and the
+observation that it is exact; and the dated check that the Dienst's handbook has not changed since 20-10-2026. The scripts and the site build
+are regenerable and are not counted.
+
 ## 2026-11-03 — twenty-fourth run: discrepancy #16 read at its sources — the legislator's own account in Kamerstukken II 2022/23, 36 357, nr. 3, the 2007 passage the Afdeling relied on, the 2009 example behind lid 4, the first instance — and, from a second pass over the feed sweep, the Dienst's own switch to the Afdeling's reading in July 2021 (ECLI:NL:RVS:2021:2619); six new ruling cases; the Handboek's chapter on income read for the negative toetsingsinkomens
 
 Twenty-fourth run of routine `trig_012xyD5r5rxFDCjfHbZ58Kib`. Model as configured for the session: `claude-fable-5-1`, the same as the previous
