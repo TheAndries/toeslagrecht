@@ -403,6 +403,18 @@ def amount_block(u, jaar: int, rel: str) -> str:
     elif u.tegemoetkoming is None:
         h.append(f'<p class="bedrag-intro">Naar de letter van de wet krijgt u in {jaar}</p><p class="bedrag">niet bepaald door de wet</p>')
         h.append(f'<p>Voor deze situatie zegt de wettekst van {jaar} niet wat de uitkomst is. Hieronder staat waar de tekst ophoudt.</p>')
+    elif getattr(u, "perioden", None):
+        # Awir art. 5: more situations in one year; every situation computed as a whole year, then its months' share
+        zelfde = u.tegemoetkoming_praktijk_deeljaar == u.tegemoetkoming
+        delen = "; ".join(f'situatie {p["situatie"]} ({p["maanden"]} maanden, {"met" if p["partner"] else "zonder"} partner): '
+                          f'{eur(p["aanspraak_jaar"])} over een heel jaar, {p["maanden"]}/12 daarvan is {eur(p["aanspraak_periode"])}'
+                          for p in u.perioden)
+        h.append(f'<p class="bedrag-intro">Naar de letter van de wet krijgt u in {jaar}, met een verandering in het jaar,</p>'
+                 f'<p class="bedrag">{eur(u.tegemoetkoming, False)} <span class="per-jaar">over {u.maanden_aanspraak} maanden</span></p>')
+        h.append(f'<p class="klein">Elke situatie is eerst als heel jaar berekend en telt voor haar maanden mee (Awir art. 5, Wzt art. 2 lid 5): '
+                 f'{delen}. Samen {eur(u.aanspraak_periode)}, afgerond op hele euro’s (Awir art. 14 lid 4). Dienst Toeslagen rondt eerst elk '
+                 f'jaarbedrag af en komt op {eur(u.tegemoetkoming_praktijk_deeljaar, False)}'
+                 + (', hetzelfde bedrag.' if zelfde else ', één euro anders; waar die volgorde in de wet staat, hebben wij niet gevonden.') + '</p>')
     elif getattr(u, "maanden_aanspraak", 12) < 12:
         m = u.maanden_aanspraak
         zelfde = u.tegemoetkoming_praktijk_deeljaar == u.tegemoetkoming
@@ -869,6 +881,12 @@ class Site:
             b.append(f'<p><a href="{esc(c["bron"]["url"])}">{esc(c["bron"]["url"])}</a> (opgehaald {esc(str(c["bron"].get("opgehaald", "")))})</p>')
         b.append('<h2>Wat is ingevuld</h2><dl class="feiten">')
         for k, v in inv.items():
+            if k == "perioden" and isinstance(v, list):
+                # a year in which the situation changed (Awir art. 5): one block per situation, in the order of the year
+                for i, per in enumerate(v, 1):
+                    b.append(f'<dt>situatie {i}</dt><dd>' + "; ".join(
+                        f'{esc(kk)}: {esc("—" if vv is None else str(vv))}' for kk, vv in per.items()) + '</dd>')
+                continue
             b.append(f'<dt>{esc(k)}</dt><dd>{esc("—" if v is None else str(v))}</dd>')
         b.append('</dl>')
         res = self.results.get(c["id"])

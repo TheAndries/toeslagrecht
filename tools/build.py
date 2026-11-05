@@ -77,21 +77,32 @@ def cents(v: Decimal) -> Decimal:
 def run_case(c: dict, rules) -> dict:
     inv = c["invoer"]
     par = load_params(c["toeslag"], c["jaar"])
-    u = rules.bereken(
-        jaar=c["jaar"], par=par,
-        toetsingsinkomen_aanvrager=dec(inv["toetsingsinkomen_aanvrager"]),
-        partner=bool(inv.get("partner")),
-        toetsingsinkomen_partner=dec(inv.get("toetsingsinkomen_partner")),
-        partner_verzekerd=inv.get("partner_verzekerd"),
-        rendementsgrondslag=dec(inv.get("rendementsgrondslag")),
-        hele_jaar_dezelfde_partner=inv.get("hele_jaar_dezelfde_partner"),
-        awir=load_awir(c["jaar"]),
-        aanvrager_verdragsgerechtigd=bool(inv.get("aanvrager_verdragsgerechtigd")),
-        partner_verdragsgerechtigd=inv.get("partner_verdragsgerechtigd"),
-        woonland=inv.get("woonland"),
-        partner_verzekeringsplicht_niet_nagekomen=inv.get("partner_verzekeringsplicht_niet_nagekomen"),
-        maanden_aanspraak=inv.get("maanden_aanspraak"),
-    )
+    if inv.get("perioden"):
+        # a year in which the situation changed (Awir art. 5): one situation per entry, in the order of the year
+        perioden = []
+        for p in inv["perioden"]:
+            q = dict(p)
+            for k in ("toetsingsinkomen_aanvrager", "toetsingsinkomen_partner", "rendementsgrondslag"):
+                if k in q:
+                    q[k] = dec(q[k])
+            perioden.append(q)
+        u = rules.bereken_perioden(jaar=c["jaar"], par=par, perioden=perioden, awir=load_awir(c["jaar"]))
+    else:
+        u = rules.bereken(
+            jaar=c["jaar"], par=par,
+            toetsingsinkomen_aanvrager=dec(inv["toetsingsinkomen_aanvrager"]),
+            partner=bool(inv.get("partner")),
+            toetsingsinkomen_partner=dec(inv.get("toetsingsinkomen_partner")),
+            partner_verzekerd=inv.get("partner_verzekerd"),
+            rendementsgrondslag=dec(inv.get("rendementsgrondslag")),
+            hele_jaar_dezelfde_partner=inv.get("hele_jaar_dezelfde_partner"),
+            awir=load_awir(c["jaar"]),
+            aanvrager_verdragsgerechtigd=bool(inv.get("aanvrager_verdragsgerechtigd")),
+            partner_verdragsgerechtigd=inv.get("partner_verdragsgerechtigd"),
+            woonland=inv.get("woonland"),
+            partner_verzekeringsplicht_niet_nagekomen=inv.get("partner_verzekeringsplicht_niet_nagekomen"),
+            maanden_aanspraak=inv.get("maanden_aanspraak"),
+        )
     got = {
         "normpremie": next((s.uitkomst for s in u.stappen if s.regel == "zt-2026-art2-2"), None),
         "standaardpremie_totaal": next((s.uitkomst for s in u.stappen if s.regel == "zt-2026-art4a"), None),

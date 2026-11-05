@@ -2,6 +2,97 @@
 
 Newest first. What was done, decided, and got wrong.
 
+## 2026-11-05 — twenty-sixth run: a change within the year encoded — Awir art. 5 with Wzt art. 2 lid 5 (`bereken_perioden`, both encodings, the dossier) and the first case with two situations in one year, a Dienst voorschot reproduced to the euro (`zt-2022-rul-017`); the law of 2027 found already consolidated — Stb. 2026, 326 (Wet vereenvoudiging partnerbegrip toeslagen) lowers the vermogensgrenzen by € 29.908 and rewrites the partnerbegrip; three amendment rows
+
+Twenty-sixth run of routine `trig_012xyD5r5rxFDCjfHbZ58Kib`. Model as configured for the session: `claude-fable-5-1`, the same as the previous
+entry; no handover note needed. The checkout arrived detached at `3b55a67` (the previous run's commit); `git fetch origin main` confirmed
+`origin/main` is the same commit; `git log -3 --stat` shows no owner commit. The routine fired the day after the previous run: no gap.
+
+**Step 1 — asks marked done.** None since 11-04. Asks 4, 6, 8, 9 and 10 stay open; Ask 9 extended to the new ruling case.
+
+**Step 2 — the inbox.** `INBOX.md` is empty and nothing arrived outside it. No case, dispute, review or owner note to handle.
+
+**Step 3.** No open motion.
+
+**Step 4 — done (memory item 5 (b), the method decision, and item 5 (a), the 2027 watch).**
+- *Awir art. 5 read and encoded.* The article, verbatim and word for word identical in the versions of 01-01-2022, 01-01-2026 and 01-01-2027:
+  a change in de omstandigheden after the first day of a month counts 'vanaf de eerste dag van de daaropvolgende maand'. With Wzt art. 2 lid 5
+  ('voor iedere kalendermaand afzonderlijk bepaald', encoded 10-20) that gives the rule for a year in which the situation changed: every
+  month carries the situation of its first day; each situation is computed as a whole year — the toetsingsinkomen is a year figure (Awir
+  art. 7 lid 1, art. 8), so a partner's whole-year income counts in the months of partnership, which Rechtbank Den Haag says in so many
+  words (ECLI:NL:RBDHA:2024:21766, r.o. 5: 'geen ruimte om de draagkracht per maand te berekenen') — and counts for as many twelfths as it
+  had months; Awir art. 14 lid 4 and 5 apply once, to the sum. Encoded as `bereken_perioden` in `rules.py` and `berekenPerioden` in
+  `site/zorgtoeslag-regels.js` (the parity harness routes on `invoer.perioden`), with `build.py run_case` and the case page and amount
+  block of `render.py` extended; the Dienst's rounding order (#10) is shown beside the text's as before. A partner period beside a period
+  without a partner sets 'the whole year the same partner' to false, so a vermogenstoets in such a year returns `undetermined`, as the
+  text leaves it. Which month a change counts from is the article's; how many months each situation had is input. **Not yet in the
+  checker's form** — the form still takes one situation and `maanden_aanspraak`; the form's second situation is the next item (memory
+  item 5 (b)), day-to-day work like the months field of 10-20.
+- *The first case with two situations:* `zt-2022-rul-017`, ECLI:NL:RBDHA:2024:21766 — toeslagpartner until 1 July 2022, then alone;
+  voorschot € 1.346 on a gezamenlijk geschat € 31.156 for the first half and € 0 for the second. The text: € 1.355,78 × 6/12 + € 1.335,86 ×
+  6/12 = € 1.345,82 → **€ 1.346**, the Dienst's figure to the euro; the Dienst's order (rounded year amounts first) gives the same euro, so the
+  case does not discriminate #10 (annotated). Two readings stated in the case for the verifier: the split of the € 31.156 (not stated,
+  immaterial under art. 2 lid 2) and the partner as verzekerde (not stated; without it the law halves the first part and nobody reaches
+  € 1.346). The definitief (€ 40.779 and € 6.864, € 657 reclaimed) names no amount: the text gives € 691 under both orders against a derived
+  € 689 — written in `SOURCES.md` section 4, not a case, not a discrepancy. ECLI:NL:RVS:2025:2286 re-read: no income in the text, still no
+  case.
+- *The 2027 instruments, searched.* The standaardpremie 2027, the woonlandfactoren 2027 and the Bijstellingsregeling 2027 are not yet in the
+  Staatscourant (three searches of zoek.officielebekendmakingen.nl). But the search listed `wetten.overheid.nl/BWBR0018451/2027-01-01` — the
+  Wzt as it will stand on 1 January 2027, already consolidated — and its informatie page names the instrument: **Stb. 2026, 326, Wet
+  vereenvoudiging partnerbegrip toeslagen** (wet van 7 oktober 2026, uitgegeven 19 oktober 2026, Kamerstuk 36 932), read in full. Art. IV:
+  'In de Wet op de zorgtoeslag worden de bedragen, genoemd in artikel 3, eerste lid, verlaagd met € 29.908' — the 2027 text reads
+  **€ 116.103 / € 154.725** (= € 146.011 − € 29.908, € 184.633 − € 29.908), before the yearly indexation of art. 3 lid 2; art. V raises them
+  by € 1.539 per 2030 (that amount indexed 2027–2029, art. VIII); art. VI/VII do the same to the kindgebonden budget; art. I rewrites Awir
+  art. 3 (a notarieel samenlevingscontract becomes a partner category, the samengesteld-gezin category vervalt, art. 3a–3c vervallen; who is
+  partner stays an input to the encoding); art. IX: in force 01-01-2027. The Dienst's news item of 15-10-2026 already tells citizens the
+  2027 grenzen are **€ 119.122 / € 158.748** — the wet's amounts × about 1,026, the tabelcorrectiefactor the Bijstellingsregeling will apply;
+  recorded in section 3 as the Dienst's figure, with the derivation as an observation, not as the parameter's source. The 2027 percentages
+  in the consolidated text (1,930% / 4,307% / 13,760%) are those of the row of 10-08; the search tool's summary had other figures (1,926% /
+  4,303%) and was not believed. Three rows in `CHANGES.md` (Wzt art. 3 lid 1 2027, Awir art. 3 2027, Wzt art. 3 lid 1 2030); four rows in
+  `SOURCES.md` section 1, one in section 3; the Awir of 01-01-2027 read too (art. 7 lid 3 still the 2026 amounts).
+- *Check:* 386 cases, 353 pass, 33 fail (every one logged, the same 33 as 11-04), 0 blocking; both encodings agree on 386. Site rebuilt (the
+  rule pages `awir-2026-art5` and `zt-2026-art2-5`, the new case page, `/verschillen/10/`, `/wet/wijzigingen/`, `/wet/bronnen/`).
+- *The record's files:* `cases/zt-2022-rul-017.yaml`; `law/zorgtoeslag/rules.py`, `site/zorgtoeslag-regels.js`, `tools/build.py`,
+  `tools/render.py` (the extension); `law/awir/rules.md` (`awir-2026-art5` now encoded, the article verbatim), `law/zorgtoeslag/rules.md`
+  (`zt-2026-art2-5`); `law/CHANGES.md` (three rows); `law/SOURCES.md` (section 1, 3, 4, open items); `DISCREPANCIES.md` (#10 addendum);
+  `ASKS.md` (Ask 9); `memory.md`.
+
+**What was wrong and why.**
+- *The first draft of the composite listed every step of every situation, including each situation's Awir art. 14 rounding and its
+  month amount:* the rounding applies once, to the sum, and a month amount of one situation means nothing for the year. Caught on reading the
+  step list in the scratch run; those steps are dropped before the sum. Lesson written.
+- *`tools/build.py` is CRLF and the first edit rewrote it as LF* (41 lines changed for a 15-line change). Caught by `file` and `git diff
+  --stat`; rewritten through bytes with its endings. Lesson written; the old render.py lesson replaced by it.
+- *The web search's figures for the 2027 percentages were wrong* (1,926% / 4,303% against the text's 1,930% / 4,307%): read in the
+  consolidated text before anything was written. Lesson written.
+- Nothing dropped from scope. `PLAN.md` unchanged: Checkpoint 1 waits on the owner, huurtoeslag not before it, history paused at 2013; no
+  checkpoint has a date to miss. Memory item 5 rewritten: (a) 2027 with Stb. 2026, 326 known and three instruments awaited; (b) the form's
+  second situation; (c)–(f) as before.
+
+**Step 8 — asks.** None new; nothing today needs the owner. Ask 9 extended to `zt-2022-rul-017` (the two readings named for the verifier).
+
+**Dropped from memory.** Fourteen older lessons and three case-history passages (10-18 through 10-29: the per-run lists of ruling cases,
+now one sentence pointing to the case files and section 4; the lessons on a ruling's contradictory totals, a misnamed year, a Dienst
+self-corrected voorschot, a 'geschat' income, a search engine's description, the leaflet edition digit, the 11/12 ratio, the 0,4585
+ratio, the unstated-input rule, #11's 'to investigate', unlabeled toeslag amounts, the SRU fallback, the old CRLF note, the long Bash-refused
+note shortened) — each kept in the changelog entry of its day. Four lessons, the encoding paragraph and the 2027 paragraph added.
+7,641 words (wc).
+
+**Effort.** Roughly 215,000 of the 300,000-token ceiling: about 85,000 reading the files, memory, the previous entry and the pipeline;
+about 35,000 fetching and reading Awir art. 5 and 7 at three dates, the two rulings, the Wzt and Awir of 2027 with their informatie pages,
+Stb. 2026, 326 and the Dienst's news item (the fetches ran as curl and cost no tokens); about 95,000 writing and testing the extension in
+both encodings, the build and render changes, the case, the rule texts, the rows, memory and this entry; the rest on the checks and the
+build.
+
+**Record under the ten-year rule.** This run added to the record: a Dienst outcome for a year with two situations — a voorschot of € 1.346
+for 2022, six months with a partner and six without, reproduced to the euro from Awir art. 5 and Wzt art. 2 lid 5 as read, with the court's
+own statement of the year-income reading (`zt-2022-rul-017`); the rule itself, Awir art. 5, verbatim at three dates and encoded with its
+articles; the wet of 2027 identified and read — Stb. 2026, 326, the first lowering of the zorgtoeslag vermogensgrenzen since the
+vermogenstoets began in 2013, with the amounts as they stand in the consolidated text of 01-01-2027 (€ 116.103 / € 154.725), the 2030
+step, the rewritten partnerbegrip, and the Dienst's own 2027 figures of 15-10-2026 beside them; and the dated negative result that the
+standaardpremie, the woonlandfactoren and the Bijstellingsregeling of 2027 were not yet published on 2026-11-05. The code of the extension
+is regenerable and is not counted.
+
 ## 2026-11-04 — twenty-fifth run: the law behind discrepancy #16 read at its roots — Stb. 2009, 486 (the wet of 31 905) and Zorgverzekeringswet art. 69 at every version 2013–2026; the feed re-swept for the article's own words (no outcome hides behind them); the first 2027 instrument, the minimumloon of January 2027, read in primary and the 2027 drempelinkomen computed; the Handboek's version log checked
 
 Twenty-fifth run of routine `trig_012xyD5r5rxFDCjfHbZ58Kib`. Model as configured for the session: `claude-fable-5-1`, the same as the previous

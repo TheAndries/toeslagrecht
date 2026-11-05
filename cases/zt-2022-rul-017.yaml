@@ -1,0 +1,23 @@
+id: zt-2022-rul-017
+toeslag: zorgtoeslag
+jaar: 2022
+bron:
+  type: ruling
+  publicatie: "Rechtbank Den Haag 11 december 2024, ECLI:NL:RBDHA:2024:21766 (zaaknr. SGR 23/8428), r.o. 2 en 3: 'Eiseres en [naam] , tevens de gemachtigde van eiseres, waren tot 1 juli 2022 (toeslag)partners. In de periode van 1 juli 2022 tot en met 31 december 2022 had eiseres geen toeslagpartner.' / 'Voor 2022 heeft eiseres een voorschot op haar zorgtoeslag ontvangen van € 1.346,-. Dit voorschot is voor de periode van 1 januari 2022 tot en met 30 juni 3022 gebaseerd op een gezamenlijk geschat toetsingsinkomen van € 31.156,-. Voor de periode van 1 juli 2022 tot en met 31 december 2022 is het voorschot gebaseerd op een geschat inkomen van eiseres van € 0,-.' ('3022' staat zo in de uitspraak.) Een voorschot (Awir art. 16) over een jaar met twee situaties: zes maanden met partner, zes maanden zonder (Awir art. 5, Wzt art. 2 lid 5)"
+  url: https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RBDHA:2024:21766
+  opgehaald: 2026-11-01
+verified: false
+invoer:
+  perioden:
+    - maanden: 6
+      partner: true
+      partner_verzekerd: true
+      toetsingsinkomen_aanvrager: "0"
+      toetsingsinkomen_partner: "31156"
+    - maanden: 6
+      partner: false
+      toetsingsinkomen_aanvrager: "0"
+  rendementsgrondslag: null
+verwacht:
+  tegemoetkoming: "1346"
+opmerking: "Het eerste voorbeeld met twee situaties in één jaar (sinds 2026-11-05 gecodeerd: rules.py bereken_perioden, awir-2026-art5). De uitspraak noemt voor de eerste helft alleen het gezamenlijke geschatte toetsingsinkomen (€ 31.156); hoe het over beiden verdeeld was, staat er niet en maakt voor Wzt art. 2 lid 2 (het gezamenlijke inkomen telt) niet uit — hier als € 0 + € 31.156 ingevuld, de verdeling is de lezing van de operator. Dat de partner verzekerde was (Wzt art. 2 lid 4), zegt de uitspraak niet; zonder dat halveert de wet het eerste deel en komt niemand op € 1.346 — aangenomen, en zo te toetsen. De tekst: met partner € 1.355,78 per jaar → 6/12 = € 677,89; zonder partner op € 0 € 1.335,86 → € 667,93; samen € 1.345,82 → € 1.346, op de euro het voorschot van de Dienst. De Dienst rondt eerst de jaarbedragen af (DISCREPANCIES.md #10): € 1.356 × 6/12 + € 1.336 × 6/12 = € 678 + € 668 = € 1.346, hetzelfde; dit voorbeeld onderscheidt de twee volgordes dus niet. De definitieve berekening van 04-08-2023 (r.o. 3: € 40.779 = € 6.864 + € 33.915 voor januari t/m juni, € 6.864 voor juli t/m december; € 657 teruggevorderd) noemt haar eigen bedrag niet; de tekst geeft daarvoor € 23,04 + € 667,93 = € 690,97 → € 691 (de Dienst-volgorde eveneens € 691), waar € 1.346 − € 657 = € 689 zou volgen — een afgeleid bedrag, geen uitkomst in de uitspraak, dus geen tweede voorbeeld en geen verschil in het logboek; wel genoteerd in SOURCES.md §4. R.o. 5 en 6 bevestigen de lezing van Awir art. 7 en 8 die de encoding volgt: het toetsingsinkomen is een jaarbedrag, ook van de partner over de maanden van het partnerschap ('geen ruimte om de draagkracht per maand te berekenen'). Wordt 'verified' op dezelfde voet als de andere ruling-voorbeelden (ASKS.md 9)."

@@ -40,12 +40,26 @@ beslist dit niet; u geeft het op.
 
 ## awir-2026-art5 — wijziging in de maand
 
-**Artikel:** Awir art. 5: een wijziging in de omstandigheden of de leeftijd die zich na de
-eerste dag van een maand voordoet, telt vanaf de eerste dag van de volgende maand.
+**Artikel:** Awir art. 5 (BWBR0018472): "Voor de toepassing van deze wet en de daarop berustende bepalingen alsmede
+voor de toepassing van inkomensafhankelijke regelingen, wordt een wijziging in de omstandigheden en van de leeftijd
+van de belanghebbende, de partner of een medebewoner die zich voordoet na de eerste dag van de maand, in aanmerking
+genomen vanaf de eerste dag van de daaropvolgende maand." (verbatim gelezen 2026-11-05 in de versies geldend van
+01-01-2022, 01-01-2026 en 01-01-2027: woordelijk gelijk.)
 **Status:** draft.
 **Gewoon Nederlands:** Verandert er iets halverwege een maand, dan geldt dat pas vanaf de
-maand erna.
-**Code:** nog niet gecodeerd; de encoding rekent alleen een onveranderd jaar.
+maand erna. Had u een deel van het jaar een partner, dan telt elke maand met de situatie van de eerste dag van die
+maand.
+**Code (sinds 2026-11-05):** `bereken_perioden(jaar, par, perioden, awir)` in `../zorgtoeslag/rules.py` en
+`berekenPerioden` in `site/zorgtoeslag-regels.js`. Invoer `perioden`: de situaties van het jaar in volgorde, elk met
+`maanden` (1–12, samen hoogstens 12) en de gewone invoer van één situatie. Welke maand de eerste van een nieuwe
+situatie is, bepaalt dit artikel (de maand ná de verandering); het aantal maanden per situatie is invoer, de
+encoding telt geen datums. Elke situatie wordt eerst als heel jaar berekend — het toetsingsinkomen is een jaarbedrag
+(art. 7 lid 1, art. 8), dus het hele jaarinkomen van een partner telt in de maanden van het partnerschap, zoals
+Rechtbank Den Haag 11-12-2024, ECLI:NL:RBDHA:2024:21766, r.o. 5 ('geen ruimte om de draagkracht per maand te
+berekenen') het zegt — en telt dan voor zoveel twaalfden mee als zij maanden had (Wzt art. 2 lid 5,
+`../zorgtoeslag/rules.md` `zt-2026-art2-5`). Art. 14 lid 4 en 5 gelden één keer, op de som. Eerste voorbeeld:
+`zt-2022-rul-017` (zes maanden met, zes zonder partner: € 677,89 + € 667,93 = € 1.345,82 → € 1.346, het voorschot van
+de Dienst op de euro). Nog niet in het formulier van de checker; wel in het dossier.
 
 ## awir-2026-art14-4 — afronding van de tegemoetkoming
 

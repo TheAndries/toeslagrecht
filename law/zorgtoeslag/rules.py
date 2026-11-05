@@ -51,6 +51,7 @@ class Uitkomst:
     aanspraak_maand_afgerond_praktijk: int | None = None  # how Dienst Toeslagen rounds, not law
     vermogen: str = "niet_getoetst"
     onbepaald: list[str] = field(default_factory=list)   # 'undetermined' items with article
+    perioden: list[dict] = field(default_factory=list)   # bereken_perioden: one summary per situation (Awir art. 5)
 
     def als_dict(self) -> dict:
         def s(v):
@@ -67,6 +68,7 @@ class Uitkomst:
             "aanspraak_maand_afgerond_praktijk": self.aanspraak_maand_afgerond_praktijk,
             "vermogen": self.vermogen,
             "onbepaald": list(self.onbepaald),
+            "perioden": [{k: (s(v) if isinstance(v, Decimal) else v) for k, v in p.items()} for p in self.perioden],
             "stappen": [
                 {"regel": x.regel, "artikel": x.artikel, "omschrijving": x.omschrijving,
                  "berekening": x.berekening, "uitkomst": s(x.uitkomst), "status": x.status}
@@ -381,4 +383,119 @@ def bereken(jaar: int, par: dict, toetsingsinkomen_aanvrager: Decimal, partner: 
                            "maandbedrag; Dienst Toeslagen deelt in haar tabellen het afgeronde jaarbedrag door twaalf en "
                            "rondt naar beneden af op hele euro's (grondslag niet gevonden in Awir, Wzt of "
                            "Uitvoeringsregeling Awir).")
+    return u
+
+
+# Inputs of one situation, as bereken() takes them (every key optional except toetsingsinkomen_aanvrager and partner).
+SITUATIE_INVOER = ("toetsingsinkomen_aanvrager", "partner", "toetsingsinkomen_partner", "partner_verzekerd",
+                   "rendementsgrondslag", "hele_jaar_dezelfde_partner", "aanvrager_verdragsgerechtigd",
+                   "partner_verdragsgerechtigd", "woonland", "partner_verzekeringsplicht_niet_nagekomen")
+
+
+def bereken_perioden(jaar: int, par: dict, perioden: list[dict], awir: dict | None = None) -> Uitkomst:
+    """awir-2026-art5 with zt-2026-art2-5 — one calendar year in which the situation changed: a partner for part
+    of the year, or two incomes situations. `perioden` is a list of situations in the order of the year, each a
+    dict with `maanden` (1–12) and the inputs of bereken() (SITUATIE_INVOER); the months sum to at most 12
+    (months without aanspraak are simply absent).
+
+    The text: Wzt art. 2 lid 5 determines the aanspraak 'voor iedere kalendermaand afzonderlijk'; Awir art. 5
+    counts a change in de omstandigheden 'vanaf de eerste dag van de daaropvolgende maand' — so each month
+    carries the situation as it stood on its first day, and which month is the first of a new situation is
+    input. For every situation the whole-year amount is computed as if it had held all year (Awir art. 7 lid 1:
+    the toetsingsinkomen is a year figure, Awir art. 8, so the partner's whole-year income counts in the months
+    of partnership — ECLI:NL:RBDHA:2024:21766, r.o. 5 and 6), and the aanspraak over the year is the sum of the
+    situations' month-shares. Awir art. 14 lid 4 (rounding) and lid 5 (minimum) apply once, to that sum: the
+    text rounds 'het bedrag van de tegemoetkoming', not a situation's share. The Dienst's order of rounding
+    (DISCREPANCIES.md #10: the year amount first) is shown as practice in `tegemoetkoming_praktijk_deeljaar`,
+    computed as the sum of the rounded year amounts' shares, rounded once; whether the Dienst rounds each share
+    separately no case has yet shown (the one case, `zt-2022-rul-017`, gives the same euro under both)."""
+    if not perioden or len(perioden) < 2:
+        raise ValueError("bereken_perioden wil ten minste twee situaties; één situatie gaat door bereken()")
+    maanden = [int(p.get("maanden") or 0) for p in perioden]
+    if any(m < 1 for m in maanden) or sum(maanden) > 12:
+        raise ValueError("elke situatie 1 t/m 12 maanden en samen hoogstens 12")
+    awir = awir or {}
+    art_maand = par.get("artikel_maandbepaling", "Wzt art. 2 lid 5")
+    artv = par.get("versie") or par.get("_versie") or f"BWBR0018451, geldend van 01-01-{jaar}"
+    u = Uitkomst(jaar=jaar)
+    u.maanden_aanspraak = sum(maanden)
+    partners = [bool(p.get("partner")) for p in perioden]
+    u.stappen.append(Stap("awir-2026-art5", "Awir art. 5; " + art_maand,
+                          f"Uw situatie veranderde in {jaar}: de zorgtoeslag wordt per kalendermaand bepaald, en een "
+                          f"verandering telt vanaf de eerste dag van de maand erna. Elke situatie wordt eerst als heel "
+                          f"jaar berekend en telt dan voor haar maanden mee.",
+                          " + ".join(f"situatie {i + 1}: {m} maanden" for i, m in enumerate(maanden)), D(sum(maanden))))
+    som = D(0)
+    som_praktijk = D(0)
+    onbepaald_totaal = False
+    for i, (p, m) in enumerate(zip(perioden, maanden), 1):
+        kw = {k: p.get(k) for k in SITUATIE_INVOER if k in p}
+        kw["partner"] = bool(p.get("partner"))
+        kw["toetsingsinkomen_aanvrager"] = D(str(p.get("toetsingsinkomen_aanvrager", "0")))
+        if kw.get("toetsingsinkomen_partner") is not None:
+            kw["toetsingsinkomen_partner"] = D(str(kw["toetsingsinkomen_partner"]))
+        if kw.get("rendementsgrondslag") is not None:
+            kw["rendementsgrondslag"] = D(str(kw["rendementsgrondslag"]))
+        if kw["partner"] and kw.get("hele_jaar_dezelfde_partner") is None and not all(partners):
+            kw["hele_jaar_dezelfde_partner"] = False   # a fact of the input: the partner was not there all year
+        ui = bereken(jaar, par, awir=awir, maanden_aanspraak=None, **kw)
+        kop = f"Situatie {i} ({m} maanden, {'met' if kw['partner'] else 'zonder'} partner): "
+        for s_ in ui.stappen:
+            # the rounding and the minimum apply once, to the sum (below); the month amount has no meaning here
+            if s_.regel in ("awir-2026-art14-4", "awir-2026-art14-5") or s_.omschrijving.startswith("Per kalendermaand"):
+                continue
+            u.stappen.append(Stap(s_.regel, s_.artikel, kop + s_.omschrijving, s_.berekening, s_.uitkomst, s_.status))
+        for n in ui.onbepaald:
+            if not n.startswith("afronding maandbedrag"):
+                u.onbepaald.append(f"situatie {i}: {n}")
+        if ui.vermogen == "geen_aanspraak":
+            u.vermogen = "geen_aanspraak"
+        elif ui.vermogen == "undetermined" and u.vermogen != "geen_aanspraak":
+            u.vermogen = "undetermined"
+        elif ui.vermogen == "aanspraak" and u.vermogen == "niet_getoetst":
+            u.vermogen = "aanspraak"
+        if ui.aanspraak_jaar is None or ui.tegemoetkoming is None:
+            onbepaald_totaal = True
+            u.perioden.append({"situatie": i, "maanden": m, "partner": kw["partner"], "aanspraak_jaar": None,
+                               "aanspraak_periode": None})
+            continue
+        deel = ui.aanspraak_jaar * D(m) / D(12)
+        u.stappen.append(Stap("zt-2026-art2-5", f"{art_maand} ({artv})",
+                              f"Situatie {i}: {m} twaalfde van het jaarbedrag van die situatie.",
+                              f"{t(ui.aanspraak_jaar)} × {m}/12", deel))
+        u.perioden.append({"situatie": i, "maanden": m, "partner": kw["partner"], "aanspraak_jaar": ui.aanspraak_jaar,
+                           "aanspraak_periode": deel})
+        som += deel
+        som_praktijk += (ui.tegemoetkoming_jaar if ui.tegemoetkoming_jaar is not None else ui.aanspraak_jaar) * D(m) / D(12)
+    if u.vermogen == "geen_aanspraak":
+        u.aanspraak_jaar = D(0); u.aanspraak_periode = D(0); u.tegemoetkoming = D(0); u.tegemoetkoming_jaar = D(0)
+        u.aanspraak_maand = D(0); u.aanspraak_maand_afgerond_praktijk = 0
+        return u
+    if onbepaald_totaal:
+        return u
+    u.stappen.append(Stap("zt-2026-art2-5", f"{art_maand} ({artv})",
+                          "De aanspraak over het jaar: de delen van de situaties bij elkaar.",
+                          " + ".join(t(p["aanspraak_periode"]) for p in u.perioden), som))
+    u.aanspraak_periode = som
+    if awir.get("minimum_tegemoetkoming"):
+        afgerond, toegekend = rond_tegemoetkoming(som, awir)
+        u.stappen.append(Stap("awir-2026-art14-4", awir["afronding_tegemoetkoming"]["artikel"],
+                              "Het bedrag van de zorgtoeslag wordt afgerond op hele euro's.",
+                              f"{t(som)} → afgerond", afgerond))
+        minimum = awir["minimum_tegemoetkoming"]["waarde"]
+        u.stappen.append(Stap("awir-2026-art14-5", awir["minimum_tegemoetkoming"]["artikel"],
+                              f"Is de zorgtoeslag minder dan € {minimum} per jaar, dan wordt zij niet toegekend.",
+                              (f"{t(afgerond)} < {minimum}: niet toegekend" if toegekend == 0 and afgerond > 0
+                               else f"{t(afgerond)} ≥ {minimum}" if afgerond > 0 else "0"), toegekend))
+        u.tegemoetkoming = toegekend
+        praktijk = som_praktijk.quantize(D(1), rounding=ROUND_HALF_UP)
+        u.tegemoetkoming_praktijk_deeljaar = praktijk
+        u.onbepaald.append(f"meer situaties in één jaar: de wet bepaalt de aanspraak per kalendermaand ({art_maand}), telt "
+                           f"een verandering vanaf de maand erna (Awir art. 5) en rondt het bedrag van de tegemoetkoming af "
+                           f"(Awir art. 14 lid 4); zij zegt niet dat elk jaarbedrag eerst wordt afgerond. Dienst Toeslagen "
+                           f"rekent vanuit afgeronde jaarbedragen (DISCREPANCIES.md #10): {t(som_praktijk)} → € {t(praktijk)}; "
+                           f"de tekst gewoon gelezen geeft € {t(toegekend)}" +
+                           (" — hetzelfde bedrag." if praktijk == toegekend else ". Het verschil is € 1 (DISCREPANCIES.md #10)."))
+    else:
+        u.onbepaald.append("Awir art. 14 lid 4-5 (afronding, minimumbedrag): geen Awir-parameters geladen; niet toegepast.")
     return u

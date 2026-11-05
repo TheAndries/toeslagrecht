@@ -1,4 +1,4 @@
-# Zorgtoeslag — test report, generated 2026-11-04 by tools/build.py
+# Zorgtoeslag — test report, generated 2026-11-05 by tools/build.py
 
 Generated file; do not edit. Verified cases are tests (blocking); published and synthetic
 cases are checks (reported). Every failing check is a discrepancy in `DISCREPANCIES.md`.
@@ -1921,6 +1921,16 @@ Source: Rechtbank Zeeland-West-Brabant 18 februari 2025, ECLI:NL:RBZWB:2025:877 
 | tegemoetkoming | 561.00 | 560.00 (exact 560) | NO |
 
 Note: Definitieve berekening 2022 (15 september 2023): € 561 bij een door de inspecteur vastgesteld toetsingsinkomen van € 28.053, zonder partner. De tekst van 2022 geeft € 560: normpremie 1,848% × € 22.356 + 13,610% × € 5.697 = € 1.188,500580 (Wzt art. 2 lid 3), aanspraak € 1.749 − € 1.188,500580 = € 560,499420, rekenkundig afgerond € 560 (Awir art. 14 lid 4). Het bedrag van de Dienst volgt als de normpremie eerst op hele centen wordt gezet (€ 1.188,50): € 1.749 − € 1.188,50 = € 560,50 → € 561. Geen artikel bepaalt een afronding van de normpremie; de tekst rondt één keer af, aan het eind. Het verschil van één euro is DISCREPANCIES.md #14; de case houdt het bedrag van de beschikking, de encoding dat van de tekst. Het terugvorderingsbedrag € 781 = € 1.336 − € 561 past bij € 561. Deze case is er een waar de verifieerder vooral de twee bedragen controleert. Wordt 'verified' op dezelfde voet (ASKS.md 9).
+
+## zt-2022-rul-017 — PASS — check (ruling)
+
+Source: Rechtbank Den Haag 11 december 2024, ECLI:NL:RBDHA:2024:21766 (zaaknr. SGR 23/8428), r.o. 2 en 3: 'Eiseres en [naam] , tevens de gemachtigde van eiseres, waren tot 1 juli 2022 (toeslag)partners. In de periode van 1 juli 2022 tot en met 31 december 2022 had eiseres geen toeslagpartner.' / 'Voor 2022 heeft eiseres een voorschot op haar zorgtoeslag ontvangen van € 1.346,-. Dit voorschot is voor de periode van 1 januari 2022 tot en met 30 juni 3022 gebaseerd op een gezamenlijk geschat toetsingsinkomen van € 31.156,-. Voor de periode van 1 juli 2022 tot en met 31 december 2022 is het voorschot gebaseerd op een geschat inkomen van eiseres van € 0,-.' ('3022' staat zo in de uitspraak.) Een voorschot (Awir art. 16) over een jaar met twee situaties: zes maanden met partner, zes maanden zonder (Awir art. 5, Wzt art. 2 lid 5)
+
+| field | expected | encoding | match |
+|---|---|---|---|
+| tegemoetkoming | 1346.00 | 1346.00 (exact 1346) | yes |
+
+Note: Het eerste voorbeeld met twee situaties in één jaar (sinds 2026-11-05 gecodeerd: rules.py bereken_perioden, awir-2026-art5). De uitspraak noemt voor de eerste helft alleen het gezamenlijke geschatte toetsingsinkomen (€ 31.156); hoe het over beiden verdeeld was, staat er niet en maakt voor Wzt art. 2 lid 2 (het gezamenlijke inkomen telt) niet uit — hier als € 0 + € 31.156 ingevuld, de verdeling is de lezing van de operator. Dat de partner verzekerde was (Wzt art. 2 lid 4), zegt de uitspraak niet; zonder dat halveert de wet het eerste deel en komt niemand op € 1.346 — aangenomen, en zo te toetsen. De tekst: met partner € 1.355,78 per jaar → 6/12 = € 677,89; zonder partner op € 0 € 1.335,86 → € 667,93; samen € 1.345,82 → € 1.346, op de euro het voorschot van de Dienst. De Dienst rondt eerst de jaarbedragen af (DISCREPANCIES.md #10): € 1.356 × 6/12 + € 1.336 × 6/12 = € 678 + € 668 = € 1.346, hetzelfde; dit voorbeeld onderscheidt de twee volgordes dus niet. De definitieve berekening van 04-08-2023 (r.o. 3: € 40.779 = € 6.864 + € 33.915 voor januari t/m juni, € 6.864 voor juli t/m december; € 657 teruggevorderd) noemt haar eigen bedrag niet; de tekst geeft daarvoor € 23,04 + € 667,93 = € 690,97 → € 691 (de Dienst-volgorde eveneens € 691), waar € 1.346 − € 657 = € 689 zou volgen — een afgeleid bedrag, geen uitkomst in de uitspraak, dus geen tweede voorbeeld en geen verschil in het logboek; wel genoteerd in SOURCES.md §4. R.o. 5 en 6 bevestigen de lezing van Awir art. 7 en 8 die de encoding volgt: het toetsingsinkomen is een jaarbedrag, ook van de partner over de maanden van het partnerschap ('geen ruimte om de draagkracht per maand te berekenen'). Wordt 'verified' op dezelfde voet als de andere ruling-voorbeelden (ASKS.md 9).
 
 ## zt-2023-pub-001 — FAIL — check (published)
 
@@ -3920,8 +3930,8 @@ Note: Laatste rij van de tabel, op het genoemde inkomen zelf ('en meer' sluit he
 
 ---
 
-Browser encoding (`site/zorgtoeslag-regels.js`, node v22.23.4): 385 cases compared with the Python encoding, 385 identical, 0 different.
+Browser encoding (`site/zorgtoeslag-regels.js`, node v22.23.4): 386 cases compared with the Python encoding, 386 identical, 0 different.
 
 ---
 
-Cases run: 385, passed: 352, failed: 33, skipped: 0. Verified cases: 0. Blocking failures: 0. Browser/Python differences: 0 (blocking: the two encodings must agree).
+Cases run: 386, passed: 353, failed: 33, skipped: 0. Verified cases: 0. Blocking failures: 0. Browser/Python differences: 0 (blocking: the two encodings must agree).

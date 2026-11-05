@@ -110,6 +110,13 @@ dan krijgt u zoveel twaalfden van het jaarbedrag als u maanden met recht had.
 onafgerond, en daarop pas Awir art. 14 lid 4 (afronding) en lid 5 (minimum) → `tegemoetkoming`. Het hele-jaarbedrag
 blijft apart beschikbaar (`tegemoetkoming_jaar`). Welke maand meetelt (de maand waarin iemand verzekerde wordt of ophoudt
 dat te zijn), bepaalt de tekst niet: het aantal is invoer en de checker zegt dat.
+**Meer situaties in één jaar (sinds 2026-11-05):** veranderde de situatie in het jaar (een partner een deel van het
+jaar), dan bepaalt dit lid de aanspraak per kalendermaand en Awir art. 5 (`../awir/rules.md` `awir-2026-art5`) vanaf
+welke maand de nieuwe situatie telt. `bereken_perioden` rekent elke situatie als heel jaar, neemt daarvan zoveel
+twaalfden als zij maanden had, telt de delen op en past daarop Awir art. 14 lid 4 en 5 toe. De Dienst-volgorde
+(#10: eerst de jaarbedragen afronden) staat ernaast als `tegemoetkoming_praktijk_deeljaar` (afgeronde jaarbedragen ×
+maanden/12, opgeteld, eenmaal afgerond); of de Dienst elk deel apart afrondt, laat nog geen voorbeeld zien — in
+`zt-2022-rul-017` (ECLI:NL:RBDHA:2024:21766) geven beide volgordes € 1.346.
 **Volgorde van afronden (niet door de tekst bepaald; de encoding volgt de tekst gewoon gelezen):** de tekst rondt het
 bedrag van de tegemoetkoming af (Awir art. 14 lid 4) en zegt nergens dat het jaarbedrag eerst wordt afgerond voordat het in
 twaalfden gaat. De Dienst Toeslagen doet dat wel: zij neemt het afgeronde jaarbedrag, vermenigvuldigt met maanden/12 en rondt
