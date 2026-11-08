@@ -2,6 +2,84 @@
 
 Newest first. What was done, decided, and got wrong.
 
+## 2026-11-08 — twenty-seventh run: the first 2027 instrument in the Staatscourant — the woonlandfactoren 2027 (Stcrt. 2026, 37141: 41 countries, Andorra and San Marino new, Ierland at the cap) read and recorded; the checker's form now takes a change within the year (two situations, Awir art. 5), tested in Chromium against the Dienst's € 1.346; two more silent days (11-06, 11-07) on Ask 10
+
+Twenty-seventh run of routine `trig_012xyD5r5rxFDCjfHbZ58Kib`. Model as configured for the session: `claude-fable-5-1`, the same as the previous
+entry; no handover note needed. The checkout arrived on `main` at `00cfb34` (the previous run's commit); `git fetch origin main` confirmed
+`origin/main` is the same commit; `git log -3 --stat` shows no owner commit. **The routine left no trace on 2026-11-06 and 2026-11-07**: the
+previous entry is 11-05, this run is 11-08, nothing in between. As on 10-18, the operator cannot see from inside a run whether the routine did
+not fire or a run failed before committing; Ask 10 is extended to the two dates (five silent days in a month).
+
+**Step 1 — asks marked done.** None since 11-05. Asks 4, 6, 8, 9 and 10 stay open; Ask 9 not extended (no new ruling case); Ask 10 extended.
+
+**Step 2 — the inbox.** `INBOX.md` is empty and nothing arrived outside it. No case, dispute, review or owner note to handle.
+
+**Step 3.** No open motion.
+
+**Step 4 — done (memory item 5 (a), the 2027 watch, and item 5 (b), the form).**
+- *The woonlandfactoren 2027, found and read.* The Staatscourant's own search answers curl with 'Ongeldig verzoek', so the number came from a web
+  search and the document page was then read directly: **Stcrt. 2026, 37141** — Regeling van de Minister van VWS van 26 oktober 2026, kenmerk
+  4524102-1104541-Z, 'gelet op artikel 69, derde lid, van de Zorgverzekeringswet en artikel 4a, tweede lid, van de Wet op de zorgtoeslag',
+  published 29/30-10-2026, in force 01-01-2027 (art. III). Art. I replaces bijlage 4 of the Regeling zorgverzekering with **41 countries**: the
+  39 of 2026 plus, for the first time, Andorra (0,4753) and San Marino (0,6586), whose entry into force 'is nog niet bekend op het moment van
+  publicatie' (noot 1; the toelichting: the 2023 association agreement will apply Vo. 883/2004 to them). Art. II says, as every year, that the
+  zorgtoeslag's verhoudingsgetallen are these same figures. Against 2026 (`parameters/2026.yaml`): 24 up, 8 down, 7 unchanged at the cap of
+  1,0000; Ierland reaches the cap (0,9789 → 1,0000), België 0,8165 → 0,8248, Duitsland stays 1,0000, Kroatië falls most (0,3201 → 0,2542),
+  Frankrijk 0,8304 → 0,8148, Polen 0,1940 → 0,2332, Marokko 0,0212 → 0,0235. The toelichting states the method — the 2024 ratio of publicly
+  financed health expenditure per inhabitant (SHA data through the CBS), a three-year average over the factors for 2025–2027, a cap at 1 — and
+  gives the per-country inputs in two tables (not transcribed). The whole table is in `law/SOURCES.md` section 1 (every figure read off the
+  Staatscourant text by script, compared by script, none retyped); a row in `law/CHANGES.md` (effective 2027-01-01, 'not yet (future)'). Still
+  not published on 2026-11-08: the standaardpremie 2027 and the Bijstellingsregeling 2027 (two searches each; secondary sites quote a VWS
+  estimate of € 2.277 for the standaardpremie, which is not a source). 2027 is not encoded until both are in, as before.
+- *The form takes a change within the year.* `bereken_perioden` has been in both encodings and the dossier since 11-05; today the checker's form
+  reaches it (`tools/render.py`, the form and its script; day-to-day work, as the months field of 10-20). Inside the 'Meer situaties' fold: 'Kreeg
+  u in de loop van het jaar een toeslagpartner, of eindigde uw partnerschap?' (nee/ja), with a help text that names Wzt art. 2 lid 5 and Awir
+  art. 5 and says that a change of income alone needs nothing (the toetsingsinkomen is a year figure, Awir art. 7); then the months of the first
+  situation from January (1–11, and fewer than the months with aanspraak), the second situation's partner, that partner's year income and
+  insurance. The year inputs — the applicant's income, the vermogen on 1 January, the woonland questions — hold for both situations and the
+  help says so; the fold's two partner questions now show when either situation has a partner. The submit builds the two situations and calls
+  `berekenPerioden`; the result block mirrors the dossier's (each situation as a whole year, its twelfths, the sum, Awir art. 14 once, the
+  Dienst's rounding order beside it, #10). Tested in headless Chromium (node Playwright; the Python package is not installed here) on the built
+  page with the network cut after first load: the inputs of `zt-2022-rul-017` give **€ 1.346 over 12 maanden**, the Dienst's voorschot; both
+  halves with a partner at € 31.156 give € 1.356 (the whole-year amount); the first half without and the second with a partner gives € 1.346
+  again; back to one situation € 1.336; the three error paths (no months and no choice → two sentences and focus on the months field; 12
+  months; 8 months of 6) each say what to do; a vermogen with a change computes with the vermogenstoets undetermined where the text leaves it;
+  axe-core 4.10.2 (WCAG 2.0/2.1/2.2 A and AA) 0 violations on the page with the fold open and the result shown; no horizontal scroll at 320 px;
+  focus moves to the result. The fold's summary was shortened after a screenshot showed it at four lines on a phone. The specimen
+  `narekenen-a.html` still shows one situation (its fold is closed; the new fields are hidden until the question is answered).
+- *Check:* 386 cases, 353 pass, 33 fail (every one logged, the same 33 as 11-05), 0 blocking; both encodings agree on 386. Site rebuilt (the
+  form on `/` and `/zorgtoeslag.html`, `/wet/wijzigingen/`, `/wet/bronnen/`, the dated footers).
+- *The record's files:* `law/SOURCES.md` (one section-1 row, the table); `law/CHANGES.md` (one row); `ASKS.md` (Ask 10); `tools/render.py`;
+  `memory.md`.
+
+**What was wrong and why.**
+- *The first parse of the Staatscourant table was empty:* the page's table of contents repeats 'ARTIKEL II' before the table, so the cut ended
+  before it began. Caught at once (0 rows); the cut now starts the search for the end marker after the start marker. Nothing was written from it.
+- *A console error after going offline turned out to be the result's serif font*, requested only when the result renders — pre-existing since the
+  design of 10-20 (seven requests on first load, the eighth for the serif on the result), not the new code; the result falls back to the system
+  serif offline. Written as an observation in memory, not changed: a preload is a design choice (one more request on first load) and the
+  owner's.
+- *The fold's summary ran to four lines at 390 px:* seen in the screenshot, shortened to one clause more than before.
+- Nothing dropped from scope. `PLAN.md` unchanged: Checkpoint 1 waits on the owner, huurtoeslag not before it, history paused at 2013; no
+  checkpoint has a date to miss. Memory item 5 rewritten: (a) 2027 with the woonlandfactoren in and two instruments awaited; (b) done; (c)–(f) as
+  before.
+
+**Step 8 — asks.** Ask 10 extended to 11-06 and 11-07. Nothing else needs the owner.
+
+**Dropped from memory.** Nothing dropped; the encoded-list paragraph, the 2027 paragraph, item 5 and three lessons rewritten or added.
+7,833 words (wc).
+
+**Effort.** Roughly 170,000 of the 300,000-token ceiling: about 90,000 reading the files, memory, the previous entries and the pipeline's form
+code; about 15,000 on the searches and the Staatscourant text (the fetch ran as curl); about 55,000 writing and testing the form extension,
+the browser test and its two runs, the rows, memory and this entry; the rest on the checks and the builds.
+
+**Record under the ten-year rule.** This run added to the record: the woonlandfactoren of 2027 as the Staatscourant publishes them —
+Stcrt. 2026, 37141, 41 countries, the first appearance of Andorra and San Marino in bijlage 4, Ierland's arrival at the cap, every factor
+compared with 2026 — the first of the four 2027 zorgtoeslag instruments to appear and the one the routine's earlier searches (11-04, 11-05)
+had not yet found; the dated negative result that the standaardpremie 2027 and the Bijstellingsregeling 2027 were still unpublished on
+2026-11-08; and the dated fact that the routine left no trace on 11-06 and 11-07. The form extension and the browser test are regenerable
+and are not counted.
+
 ## 2026-11-05 — twenty-sixth run: a change within the year encoded — Awir art. 5 with Wzt art. 2 lid 5 (`bereken_perioden`, both encodings, the dossier) and the first case with two situations in one year, a Dienst voorschot reproduced to the euro (`zt-2022-rul-017`); the law of 2027 found already consolidated — Stb. 2026, 326 (Wet vereenvoudiging partnerbegrip toeslagen) lowers the vermogensgrenzen by € 29.908 and rewrites the partnerbegrip; three amendment rows
 
 Twenty-sixth run of routine `trig_012xyD5r5rxFDCjfHbZ58Kib`. Model as configured for the session: `claude-fable-5-1`, the same as the previous

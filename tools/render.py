@@ -550,9 +550,36 @@ class Site:
   <div class="euro"><span class="euro-teken" aria-hidden="true">€</span><input class="invoer" id="rg" name="rendementsgrondslag" type="text" inputmode="numeric" autocomplete="off" aria-describedby="h-rg"{val("rendementsgrondslag")}></div>
 </div>
 
-<details class="meer" id="meer"{" open" if (avg or pvg or hj is False or (f.get("maanden_aanspraak") not in (None, 12))) else ""}>
-  <summary>Meer situaties: niet het hele jaar dezelfde partner, of wonen buiten Nederland</summary>
-  <div class="veld alleen-partner"{"" if partner else " hidden"}><fieldset>
+<details class="meer" id="meer"{" open" if (avg or pvg or hj is False or f.get("perioden") or (f.get("maanden_aanspraak") not in (None, 12))) else ""}>
+  <summary>Meer situaties: een partner voor een deel van het jaar, of wonen buiten Nederland</summary>
+  <div class="veld" id="veld-verandering"><fieldset>
+    <legend class="veld-label">Kreeg u in de loop van het jaar een toeslagpartner, of eindigde uw partnerschap?</legend>
+    <p class="hulp" id="h-verandering">Dan had u in dat jaar twee situaties. De wet bepaalt de zorgtoeslag per kalendermaand (Wzt art. 2 lid 5). Een verandering telt vanaf de maand erna (Awir art. 5). Elke situatie wordt eerst als heel jaar berekend en telt dan mee voor haar maanden. Veranderde alleen uw inkomen, dan hoeft dit niet: het toetsingsinkomen is een jaarbedrag (Awir art. 7).</p>
+    <div class="keuze">{radio("verandering", "nee", "Nee", True)}{radio("verandering", "ja", "Ja", False)}</div>
+  </fieldset></div>
+  <div class="veld alleen-verandering" id="veld-m1" hidden>
+    <label class="veld-label" for="m1">Hoeveel maanden duurde de eerste situatie, vanaf januari?</label>
+    <p class="hulp" id="h-m1">De eerste situatie is wat u hierboven bij vraag 2 invulde. Veranderde die na de eerste dag van een maand, dan hoort die maand nog bij de eerste situatie. Bijvoorbeeld: partner tot 1 juli, dan 6.</p>
+    <p class="fout" id="f-m1" hidden></p>
+    <input class="invoer" id="m1" name="maanden_eerste_situatie" type="text" inputmode="numeric" autocomplete="off" aria-describedby="h-m1">
+  </div>
+  <div class="veld alleen-verandering" id="veld-partner2" hidden><fieldset>
+    <legend class="veld-label">Had u in de tweede situatie een toeslagpartner?</legend>
+    <p class="fout" id="f-partner2" hidden></p>
+    <div class="keuze">{radio("partner2", "ja", "Ja", False)}{radio("partner2", "nee", "Nee", False)}</div>
+  </fieldset></div>
+  <div class="veld alleen-verandering alleen-partner2" id="veld-tip2" hidden>
+    <label class="veld-label" for="tip2">Het toetsingsinkomen van die partner, in hele euro's</label>
+    <p class="hulp" id="h-tip2">Het hele jaarbedrag, net als bij vraag 2a; de wet rekent het inkomen niet per maand. Laat het leeg als die partner geen inkomen had.</p>
+    <p class="fout" id="f-tip2" hidden></p>
+    <div class="euro"><span class="euro-teken" aria-hidden="true">€</span><input class="invoer" id="tip2" name="toetsingsinkomen_partner_2" type="text" inputmode="numeric" autocomplete="off" aria-describedby="h-tip2"></div>
+  </div>
+  <div class="veld alleen-verandering alleen-partner2" id="veld-pv2" hidden><fieldset>
+    <legend class="veld-label">Is die partner in Nederland verzekerd voor zorg?</legend>
+    <p class="hulp">De vragen hieronder over wonen buiten Nederland gelden voor beide situaties.</p>
+    <div class="keuze">{radio("partner_verzekerd_2", "ja", "Ja", True)}{radio("partner_verzekerd_2", "nee", "Nee", False)}{radio("partner_verzekerd_2", "onbekend", "Weet ik niet", False)}</div>
+  </fieldset></div>
+  <div class="veld alleen-partner ook-partner2"{"" if partner else " hidden"}><fieldset>
     <legend class="veld-label">Had u het hele jaar dezelfde toeslagpartner?</legend>
     <div class="keuze">{radio("hele_jaar_dezelfde_partner", "ja", "Ja", hj is not False)}{radio("hele_jaar_dezelfde_partner", "nee", "Nee", hj is False)}</div>
   </fieldset></div>
@@ -561,7 +588,7 @@ class Site:
     <p class="hulp">De wet noemt u dan een verdragsgerechtigde (Zvw art. 69). Uw standaardpremie wordt dan vermenigvuldigd met de woonlandfactor van uw land.</p>
     <div class="keuze">{radio("aanvrager_verdragsgerechtigd", "nee", "Nee", not avg)}{radio("aanvrager_verdragsgerechtigd", "ja", "Ja", bool(avg))}</div>
   </fieldset></div>
-  <div class="veld alleen-partner"{"" if partner else " hidden"}><fieldset>
+  <div class="veld alleen-partner ook-partner2"{"" if partner else " hidden"}><fieldset>
     <legend class="veld-label">Geldt dat voor uw partner?</legend>
     <div class="keuze">{radio("partner_verdragsgerechtigd", "nee", "Nee", not pvg)}{radio("partner_verdragsgerechtigd", "ja", "Ja", bool(pvg))}</div>
   </fieldset></div>
@@ -614,8 +641,17 @@ class Site:
     var j = radio("jaar"); if (j) document.getElementById("vraag-jaar").textContent = j;
     var p = radio("partner") === "ja";
     var par = PARAMETERS.zorgtoeslag[Number(j)] || {{}};
-    form.querySelectorAll(".alleen-partner").forEach(function (el) {{ el.hidden = !p; }});
+    var ver = radio("verandering") === "ja";
+    var p2 = ver && radio("partner2") === "ja";
+    form.querySelectorAll(".alleen-partner").forEach(function (el) {{ el.hidden = !(p || (p2 && el.classList.contains("ook-partner2"))); }});
     form.querySelectorAll(".alleen-lid5oud").forEach(function (el) {{ el.hidden = !(p && par.art2_lid5_oud_aanwezig); }});
+    form.querySelectorAll(".alleen-verandering").forEach(function (el) {{ el.hidden = !ver || (el.classList.contains("alleen-partner2") && !p2); }});
+  }}
+  function eersteSituatie(totaal) {{
+    var raw = document.getElementById("m1").value.trim();
+    if (!/^\d{{1,2}}$/.test(raw) || Number(raw) < 1 || Number(raw) > 11) return {{ fout: "Vul het aantal maanden van de eerste situatie in als een getal van 1 tot en met 11." }};
+    if (Number(raw) >= totaal) return {{ fout: "De eerste situatie duurde " + raw + " maanden, maar u had maar " + totaal + " maanden recht op zorgtoeslag. Dan blijft er geen maand over voor de tweede situatie." }};
+    return {{ waarde: Number(raw) }};
   }}
   function maanden() {{
     var raw = document.getElementById("maanden").value.trim();
@@ -640,10 +676,11 @@ class Site:
       else veld.querySelectorAll("input").forEach(function (r) {{ r.removeAttribute("aria-invalid"); r.removeAttribute("aria-describedby"); }});
     }}
   }}
-  ["ti", "tip", "rg", "woonland", "maanden"].forEach(function (id) {{
-    document.getElementById(id).addEventListener("input", function () {{ zetFout(id, ""); }});
+  ["ti", "tip", "rg", "woonland", "maanden", "m1", "tip2"].forEach(function (id) {{
+    document.getElementById(id).addEventListener("input", function () {{ zetFout(id, ""); if (id === "maanden") zetFout("m1", ""); }});
   }});
   form.querySelectorAll('input[name="partner"]').forEach(function (r) {{ r.addEventListener("change", function () {{ zetFout("partner", ""); }}); }});
+  form.querySelectorAll('input[name="partner2"]').forEach(function (r) {{ r.addEventListener("change", function () {{ zetFout("partner2", ""); }}); }});
 
   function getal(id, verplicht, naam) {{
     var raw = document.getElementById(id).value.trim().replace(/\\./g, "").replace(/\\s/g, "").replace(/,.*$/, "");
@@ -661,6 +698,16 @@ class Site:
     }} else if (u.tegemoetkoming === null) {{
       h.push('<p class="bedrag-intro">Naar de letter van de wet krijgt u in ' + jaar + '</p><p class="bedrag">niet bepaald door de wet</p>');
       h.push('<p>Voor deze situatie zegt de wettekst van ' + jaar + ' niet wat de uitkomst is. Hieronder staat waar de tekst ophoudt.</p>');
+    }} else if (u.perioden && u.perioden.length) {{
+      var zelfde = u.tegemoetkoming_praktijk_deeljaar === u.tegemoetkoming;
+      var delen = u.perioden.map(function (p) {{
+        return 'situatie ' + p.situatie + ' (' + p.maanden + ' maanden, ' + (p.partner ? 'met' : 'zonder') + ' partner): ' + bedrag(p.aanspraak_jaar) +
+          ' over een heel jaar, ' + p.maanden + '/12 daarvan is ' + bedrag(p.aanspraak_periode);
+      }}).join('; ');
+      h.push('<p class="bedrag-intro">Naar de letter van de wet krijgt u in ' + jaar + ', met een verandering in het jaar,</p><p class="bedrag">' + bedrag(u.tegemoetkoming, false) + ' <span class="per-jaar">over ' + u.maanden_aanspraak + ' maanden</span></p>');
+      h.push('<p class="klein">Elke situatie is eerst als heel jaar berekend en telt voor haar maanden mee (Awir art. 5, Wzt art. 2 lid 5): ' + delen +
+        '. Samen ' + bedrag(u.aanspraak_periode) + ', afgerond op hele euro’s (Awir art. 14 lid 4). Dienst Toeslagen rondt eerst elk jaarbedrag af en komt op ' +
+        bedrag(u.tegemoetkoming_praktijk_deeljaar, false) + (zelfde ? ', hetzelfde bedrag.' : ', één euro anders; waar die volgorde in de wet staat, hebben wij niet gevonden.') + '</p>');
     }} else if (u.maanden_aanspraak < 12) {{
       h.push('<p class="bedrag-intro">Naar de letter van de wet krijgt u over ' + u.maanden_aanspraak + ' maanden van ' + jaar + '</p><p class="bedrag">' + bedrag(u.tegemoetkoming, false) + ' <span class="per-jaar">over die maanden</span></p>');
       h.push('<p class="klein">Berekend ' + bedrag(u.aanspraak_jaar) + ' over het hele jaar; ' + u.maanden_aanspraak + '/12 daarvan is ' + bedrag(u.aanspraak_periode) +
@@ -698,7 +745,7 @@ class Site:
     ev.preventDefault();
     var eerste = null;
     function fout(id, tekst) {{ zetFout(id, tekst); if (!eerste) eerste = id; }}
-    ["ti", "tip", "rg", "woonland", "maanden", "partner"].forEach(function (id) {{ zetFout(id, ""); }});
+    ["ti", "tip", "rg", "woonland", "maanden", "partner", "m1", "partner2", "tip2"].forEach(function (id) {{ zetFout(id, ""); }});
     var ti = getal("ti", true, "uw toetsingsinkomen"); if (ti.fout) fout("ti", ti.fout);
     var partnerKeuze = radio("partner");
     if (partnerKeuze === null) fout("partner", "Kies Ja of Nee.");
@@ -706,6 +753,16 @@ class Site:
     var tip = partner ? getal("tip", false, "het inkomen van uw partner") : {{ waarde: null }}; if (tip.fout) fout("tip", tip.fout);
     var rg = getal("rg", false, "uw vermogen"); if (rg.fout) fout("rg", rg.fout);
     var mnd = maanden(); if (mnd.fout) {{ document.getElementById("meer").open = true; fout("maanden", mnd.fout); }}
+    var ver = radio("verandering") === "ja";
+    var m1 = {{ waarde: null }}, partner2 = false, tip2 = {{ waarde: null }};
+    if (ver) {{
+      document.getElementById("meer").open = true;
+      m1 = eersteSituatie(mnd.waarde || 12); if (m1.fout) fout("m1", m1.fout);
+      var keuze2 = radio("partner2");
+      if (keuze2 === null) fout("partner2", "Kies Ja of Nee voor de tweede situatie.");
+      partner2 = keuze2 === "ja";
+      tip2 = partner2 ? getal("tip2", false, "het inkomen van die partner") : {{ waarde: null }}; if (tip2.fout) fout("tip2", tip2.fout);
+    }}
     var inv = {{
       jaar: radio("jaar"),
       partner: partner,
@@ -731,7 +788,24 @@ class Site:
       return;
     }}
     try {{
-      render(Z.bereken(inv, PARAMETERS), inv);
+      if (ver) {{
+        // Awir art. 5: two situations in one year; the year inputs (income, vermogen, woonland) are the same in both,
+        // the partner and the partner's fields differ. berekenPerioden computes each as a whole year and sums the months' shares.
+        var eerste_ = Object.assign({{}}, inv, {{ maanden: m1.waarde }});
+        var tweede_ = Object.assign({{}}, inv, {{
+          maanden: inv.maanden_aanspraak - m1.waarde,
+          partner: partner2,
+          toetsingsinkomen_partner: partner2 ? tip2.waarde : null,
+          partner_verzekerd: partner2 ? jaNee(radio("partner_verzekerd_2")) : null,
+          hele_jaar_dezelfde_partner: (partner2 && partner) ? inv.hele_jaar_dezelfde_partner : null,
+          partner_verdragsgerechtigd: partner2 ? radio("partner_verdragsgerechtigd") === "ja" : null,
+          partner_verzekeringsplicht_niet_nagekomen: partner2 ? jaNee(radio("partner_verzekeringsplicht_niet_nagekomen")) : null
+        }});
+        delete eerste_.maanden_aanspraak; delete tweede_.maanden_aanspraak;
+        render(Z.berekenPerioden({{ jaar: inv.jaar, perioden: [eerste_, tweede_] }}, PARAMETERS), inv);
+      }} else {{
+        render(Z.bereken(inv, PARAMETERS), inv);
+      }}
     }} catch (e) {{
       zetFout("ti", "Er ging iets mis bij het rekenen: " + (e.message || String(e)));
       out.hidden = true;
