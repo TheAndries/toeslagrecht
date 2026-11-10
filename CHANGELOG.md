@@ -2,6 +2,96 @@
 
 Newest first. What was done, decided, and got wrong.
 
+## 2026-11-10 — twenty-eighth run: open item 2 closed — the Regeling zorgverzekering art. 6.3.1 read at fourteen version dates 2013–2026 (the premie-fictie for the Wzt, one unchanged sentence; the woonlandfactor's ratio and the 2018 move of bijlage 4 into the article) and the five instruments behind Zorgverzekeringswet art. 69's versions of 2014–2019 identified and quoted from the Staatsblad; the standaardpremie and Bijstellingsregeling 2027 still unpublished; a sixth silent day (11-09) on Ask 10
+
+Twenty-eighth run of routine `trig_012xyD5r5rxFDCjfHbZ58Kib`. Model as configured for the session: `claude-fable-5-1`, the same as the previous
+entry; no handover note needed. The checkout arrived detached at `2dfa62f` (the previous run's commit) with a stale local `origin/main`
+(`00cfb34`); `git fetch origin main` brought it to `2dfa62f`; `git log -3 --stat` shows no owner commit. **The routine left no trace on
+2026-11-09**: the previous entry is 11-08, this run is 11-10. Ask 10 is extended to that date (six silent days since 10-15).
+
+**Step 1 — asks marked done.** None since 11-08. Asks 4, 6, 8, 9 and 10 stay open; Ask 9 not extended (no new ruling case); Ask 10 extended.
+
+**Step 2 — the inbox.** `INBOX.md` is empty and nothing arrived outside it. No case, dispute, review or owner note to handle.
+
+**Step 3.** No open motion.
+
+**Step 4 — done (memory item 5 (c), the remainder of `SOURCES.md` open item 2, and item 5 (a), the 2027 watch).**
+- *The Regeling zorgverzekering art. 6.3.1 by version.* The regeling was fetched whole at 01-01 of every year 2013 through 2026 (fourteen
+  fetches of 24–47 MB, curl in the background, no tokens; its informatie page is a 404), art. 6.3.1 with 6.3.1a and 6.3.1b cut from each
+  by script and diffed year against year. The 2013 text is in `law/SOURCES.md` section 1 verbatim: lid 1 (the bijdrage = the grondslag × the
+  ratio of average care spending in the woonland and in the Netherlands), lid 2 (the grondslag: an inkomensafhankelijke bijdrage as under
+  Zvw par. 5.2, one as the AWBZ premie, and 'c. … een bijdrage per maand overeenkomende met eentwaalfde van het bedrag van de geraamde
+  gemiddelde premie voor een verzekerde voor een zorgverzekering in het berekeningsjaar, bedoeld in artikel 4 van de Wet op de zorgtoeslag
+  (hierna: nominale deel)'), and **lid 4: 'Voor de toepassing van de Wet op de zorgtoeslag wordt het in het tweede lid bedoelde nominale
+  deel, als premie voor een zorgverzekering beschouwd'** — the 'deel van de bijdrage' that Zvw art. 69 (lid 2 to 2017, lid 4 onder b since
+  2018) leaves to the regeling, and the same sentence in all fourteen years. Wzt art. 4a lid 1–2 (art. 3 oud) says the same thing from the
+  other side: standaardpremie × woonlandfactor. What changed: 2014 added art. 6.3.1a (bijdrageplichtige, hoofdbijdrageplichtige, gezinslid)
+  and 6.3.1b ('De voor een gezinslid van een verzekeringsplichtige verschuldigde bijdrage … wordt door het College zorgverzekeringen geheven
+  en geïnd bij de verzekeringsplichtige'); 2015 AWBZ → Wlz and the orgaan; 2017 the orgaan again; **2018 — Stcrt. 2017, 66088 art. I
+  onderdeel A**, the woonlandfactoren-2018 regeling already in the record, rewrote lid 1 to match the new Zvw art. 69 lid 3 and replaced
+  lid 9, which until then said the ratio 'wordt per land vastgesteld en met een toelichting over de wijze van berekening jaarlijks uiterlijk
+  in november in de Staatscourant gepubliceerd', by 'Het verhoudingsgetal, bedoeld in het eerste lid, wordt per land genoemd in bijlage 4
+  bij deze regeling' (its toelichting quoted); 2025 brought the lid numbers of 2018 into lid 1, 2 and 5 (instrument not identified — the
+  2025 factoren regeling only replaces the bijlage). 2016, 2019–2024 and 2026 are identical to the year before. The instruments behind the
+  2014, 2015, 2017 and 2025 changes are written as not identified. The gezinslid provision of 2014 is an addendum to #16 (the regeling knew
+  the verzekerde's gezinslid four years before Zvw art. 69 lid 5 and ten before Wzt art. 4a lid 3, and still says nothing about how the
+  two toeslagen combine); `rules.md` (`zt-2026-art4a`, Discretie) now cites lid 4 and the instruments.
+- *The instruments behind Zvw art. 69's versions.* The whole-act informatie page (114 version entries) lists instruments per date but not
+  the articles each amends, and its footnote markers are about terugwerkende kracht. So the seventeen Staatsblad instruments it lists for
+  01-01-2015, 01-01-2017, 01-01-2018 and 01-01-2019 and three of the seven for 2014 were fetched (one parallel curl) and each grepped for
+  'artikel 69'. Five amend it, quoted verbatim in section 1 with their inwerkingtredingsbesluiten: **Stb. 2013, 560** art. II onderdeel I
+  (Veegwet VWS 2013; 15-02-2014, Stb. 2014, 62 — lid 2 and 4 'eerste, twaalfde en dertiende lid'); **Stb. 2013, 578** art. II onderdeel Q
+  (01-04-2014, Stb. 2014, 93 — College zorgverzekeringen → Zorginstituut, the orgaan change the 2015 text showed); **Stb. 2016, 173** art. I
+  onderdeel P (01-01-2017, Stb. 2016, 442 — Zorginstituut → CAK); **Stb. 2017, 99** art. I onderdeel C in the wording of its art. IVb
+  (01-01-2018, Stb. 2017, 208 — the samenloop clause that applied because the CAK wet entered first; this is the wet that put the
+  woonlandfactor's ratio in lid 3, the Wzt premie-fictie in lid 4 onder b and the gezinslid's bijdrage in lid 5); **Stb. 2018, 356** art.
+  XVII onderdeel D (01-01-2019, Stb. 2018, 454, which names the onderdeel — the verordening's name and a new lid 19). Two of the other
+  texts hit on an art. 69 of another act (Stb. 2018, 38: the Beginselenwet verpleging ter beschikking gestelden; Stb. 2011, 288: the Wet
+  werk en bijstand) and were read far enough to say so; thirteen have no hit. Open item 2 is closed: the definition stays input, the law
+  behind it is now in the record by instrument.
+- *The 2027 instruments, searched again.* Two searches for the standaardpremie 2027 and two for the Bijstellingsregeling 2027: neither is
+  published; the search finds only 2026's Stcrt. 2025, 40022 and 40487. The WML 2027 regeling (nr. 2026-0000391146) still has no
+  Staatscourant number the search can find. The standaardpremie regelingen of 2024, 2025 and 2026 appeared on 27-11, 28-11 and 25-11; the
+  next search is the run of 2026-11-24. Recorded as a dated row in section 1.
+- *Check:* 386 cases, 353 pass, 33 fail (every one logged, the same 33 as 11-08), 0 blocking; both encodings agree on 386. Site rebuilt
+  (the rule page `zt-2026-art4a`, `/verschillen/16/`, `/wet/bronnen/`, the dated footers); the three pages grepped for the new text after
+  the build.
+- *The record's files:* `law/SOURCES.md` (three section-1 rows, open item 2); `law/zorgtoeslag/rules.md` (`zt-2026-art4a`);
+  `DISCREPANCIES.md` (#16 addendum); `ASKS.md` (Ask 10); `memory.md`.
+
+**What was wrong and why.**
+- *The first cut of art. 6.3.1 found nothing in any year:* the regex took the table-of-contents heading ('Artikel 6.3.1' followed by
+  'Artikel 6.3.2'), not the body heading, which is followed by 'Toon relaties in LiDO'. Caught at once (fourteen 'not found'); the same
+  mistake as the art. 69 cut of 11-04 in another form. Lesson written.
+- *The version-history page was read first as if it named the articles:* its 'Heeft betrekking op Artikel 69' lines are footnotes about
+  retroactive effect, and no onderdeel links exist in the HTML. One script and one look cost; the Staatsblad route then answered in one
+  parallel fetch. Lesson written.
+- *Two counts in the first draft of the Zvw row were wrong* ('nineteen instruments … and the seven for 2014': the list had a duplicate and
+  only three of the 2014 entries were fetched; 'the other fourteen': fifteen texts, thirteen without a hit). Corrected before the build by
+  counting the files on disk. The rule holds: a count is a number.
+- Nothing dropped from scope. `PLAN.md` unchanged: Checkpoint 1 waits on the owner, huurtoeslag not before it, history paused at 2013; no
+  checkpoint has a date to miss. Memory item 5 rewritten: (c) done, with its lower-value remainder named; (g) added for the weeks until the
+  2027 instruments arrive.
+
+**Step 8 — asks.** Ask 10 extended to 11-09. Nothing else needs the owner.
+
+**Dropped from memory.** Six older lessons (Bash refused for several turns; a leaflet's second edition; `build.run_case`'s `verwacht` key; a
+letter quoted in a ruling; scratchpad scripts with asserts; `*/` in a JS block comment) — each kept in the changelog entry of its day or no
+longer bites. Two lessons added; the 2027 paragraph, Ask 10 and item 5 rewritten. 7,947 words (wc).
+
+**Effort.** Roughly 230,000 of the 300,000-token ceiling: about 95,000 reading the files, memory, the previous entries and the pipeline's
+state; about 40,000 on the version-history page, the Staatsblad passages, the art. 6.3.1 diffs and the searches (the fetches ran as curl
+and cost no tokens); about 80,000 writing the rows, the addenda, memory and this entry; the rest on the check and the build.
+
+**Record under the ten-year rule.** This run added to the record: the Regeling zorgverzekering art. 6.3.1 as it stood at fourteen dates
+from 2013 to 2026 — the regeling that says which part of a verdragsgerechtigde's bijdrage counts as premie for the zorgtoeslag, with the
+finding that that sentence never changed, the 2013 wording of the ratio and of the Staatscourant publication rule, and the instrument and
+toelichting that moved the woonlandfactoren into bijlage 4 per 2018; the five Staatsblad instruments behind Zorgverzekeringswet art. 69's
+versions of 2014, 2017, 2018 and 2019, each quoted with its inwerkingtredingsbesluit, among them the wet that put the woonlandfactor's
+ratio into the wet (Stb. 2017, 99, in the samenloop wording that applied); the 2014 gezinslid provision as an addendum to #16; and the dated
+negative result that the standaardpremie 2027 and the Bijstellingsregeling 2027 were still unpublished on 2026-11-10, with the dates the
+three previous standaardpremie regelingen appeared. The scripts and the site build are regenerable and are not counted.
+
 ## 2026-11-08 — twenty-seventh run: the first 2027 instrument in the Staatscourant — the woonlandfactoren 2027 (Stcrt. 2026, 37141: 41 countries, Andorra and San Marino new, Ierland at the cap) read and recorded; the checker's form now takes a change within the year (two situations, Awir art. 5), tested in Chromium against the Dienst's € 1.346; two more silent days (11-06, 11-07) on Ask 10
 
 Twenty-seventh run of routine `trig_012xyD5r5rxFDCjfHbZ58Kib`. Model as configured for the session: `claude-fable-5-1`, the same as the previous
