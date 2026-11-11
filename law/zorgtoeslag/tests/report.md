@@ -1,4 +1,4 @@
-# Zorgtoeslag — test report, generated 2026-11-10 by tools/build.py
+# Zorgtoeslag — test report, generated 2026-11-11 by tools/build.py
 
 Generated file; do not edit. Verified cases are tests (blocking); published and synthetic
 cases are checks (reported). Every failing check is a discrepancy in `DISCREPANCIES.md`.

@@ -2,6 +2,96 @@
 
 Newest first. What was done, decided, and got wrong.
 
+## 2026-11-11 — twenty-ninth run: the Wet op de zorgtoeslag read at all twenty version dates 2013–2027 and every lid the encoding rests on quoted verbatim on its rule page with the years it was word for word the same; a consolidation error found in the 2024 texts (art. 2 lid 6 pointing at itself — no instrument made it); the record's date for the new definition of verzekerde corrected from 06-11-2024 to 01-01-2025 (Stb. 2024, 383); three Raad van State advices with their nota's van toelichting read — the reason behind the 2026 percentages besluit, the derivation of the 2027 € 29.908, the eigen risico 2027 bill; the 2027 instruments still unpublished
+
+Twenty-ninth run of routine `trig_012xyD5r5rxFDCjfHbZ58Kib`. Model as configured for the session: `claude-fable-5-1`, the same as the previous
+entry; no handover note needed. The checkout arrived detached at `408cf73` (the previous run's commit); `git fetch origin main` confirmed
+`origin/main` is the same commit; `git log -3 --stat` shows no owner commit. The routine fired the day after the previous run: no gap.
+
+**Step 1 — asks marked done.** None since 11-10. Asks 4, 6, 8, 9 and 10 stay open; Ask 9 not extended (no new ruling case); Ask 10 not
+extended (no new silent day).
+
+**Step 2 — the inbox.** `INBOX.md` is empty and nothing arrived outside it. No case, dispute, review or owner note to handle.
+
+**Step 3.** No open motion.
+
+**Step 4 — done (memory item 5 (g), the law on the rule pages, and item 5 (a), the 2027 watch).**
+- *The Wzt at twenty version dates.* The wetstechnische informatie of the whole act lists every version; art. 1 through 4a were fetched
+  at each start date from 01-01-2013 to 01-01-2027 (twenty texts, curl in parallel, no tokens), cut by script and diffed pair by pair.
+  What the diff says is now in `law/SOURCES.md` section 1 and, lid by lid, in `law/zorgtoeslag/rules.md` under a new **Tekst** field on
+  every rule — the rule pages of the dossier quote the law itself for the first time (`DESIGN.md` P9: 'From any rule: the law text'):
+  art. 2 lid 1, 2 and 4 and art. 4a lid 1, 2 and 4 (art. 3 oud lid 1–3) are word for word the same in all twenty versions; lid 3 of art. 2
+  changes only its three figures, always on 1 January; art. 1 onder f changed once (2024), onder c three times, onder e and art. 4 on
+  01-07-2017, art. 4 again on 16-07-2014; art. 2a lid 1 was reworded once (2021) and its lid 5 has been there since 2013; the versions of
+  01-04-2014 and 19-03-2020 touch nothing in art. 1–4a. The 2013 wording of the vermogenstoets is quoted beside the 2026 one.
+- *A consolidation error, not law.* The texts of 01-01-2024 and 06-11-2024 read in art. 2 lid 6 'omtrent het bepaalde in het zesde lid' —
+  lid 6 itself — where 2021–2023 and 2025–2027 read 'vijfde lid'. `SOURCES.md` had noted the self-reference on 10-09 as a curiosity. Today the
+  four instruments behind those two versions were read for it (Stb. 2022, 472; Stb. 2023, 168 art. XXXI; Stb. 2023, 498 art. XIII; Stb. 2024,
+  291 art. XIX): none touches lid 6, and Stb. 2020, 543 art. III onder 3 had set the reference to 'het vijfde lid' per 01-01-2021 in so many
+  words. So the wet said 'vijfde lid' throughout and wetten.overheid.nl's 2024 consolidation is wrong; written as such in `SOURCES.md`
+  (the twenty-version row, open item 1) and on the rule page `zt-2026-art2-5`.
+- *The date of the new definition of verzekerde corrected.* `CHANGES.md`'s row of 2024-11-06 (written 10-09 from a diff of the 2024
+  texts) also placed the new art. 1 lid 1 onder c (the Zvw art. 68b lid 5 person; 'artikel 24, eerste of derde lid') and art. 5 lid 3–4 on
+  06-11-2024. The twenty-version diff shows onder c changing between the texts of 06-11-2024 and 01-01-2025. Stb. 2024, 291 art. XIX read in
+  full: onderdelen A (onder c) and D (art. 5); Stb. 2024, 322 (23-10-2024) put only onderdelen B and C and art. XX in force on 06-11-2024;
+  **Stb. 2024, 383** (02-12-2024, read today) put onderdelen A and D in force on 01-01-2025, together with Zvw art. 68b. The old row is
+  corrected with a note, a new row of 2025-01-01 carries both texts verbatim, `SOURCES.md` open item 2 and `rules.md` (Niet gecodeerd) say
+  the right date. Nothing in the encoding changes: who is verzekerde is input.
+- *Three Raad van State publications found by the 2027 searches.* The two searches for the standaardpremie 2027 and the Bijstellingsregeling
+  2027 (still unpublished; the dated row in `SOURCES.md` extended) returned nine Staatscourant numbers unknown to the record; all nine were
+  curled and their heads read. Six are off-topic (Wubo/Wuv premie-toeslag 2026; WNT bezoldigingsmaximum 2027; forfaitaire
+  rendementspercentages box 3 2025; peiljaarverlegging eigen bijdrage Wlz/Wmo; Regeling langdurige zorg; an NZa beleidsregel). Three are
+  record, each a row in section 1: **Stcrt. 2025, 42977** — the Afdeling's advice (no remarks) and the nota van toelichting of the besluit
+  that became Stb. 2025, 412: the 2026–2040 normpercentages were raised by 0,001 to 0,005 point as 'dekking' for excluding nabetalingen van
+  uitkeringen from the toetsingsinkomen ('minder dan € 1,50 lagere zorgtoeslag op jaarbasis'), with table 2 giving the schema before and
+  after — the 2027 row stood at 1,926% / 4,303% and became 1,930% / 4,307%, which also explains the figures the 11-05 search summary had
+  offered (the superseded row, not an error); **Stcrt. 2026, 15655** — the Afdeling's advice of 04-03-2026 on the Wet vereenvoudiging
+  partnerbegrip toeslagen (Stb. 2026, 326) and the memorie van toelichting, whose noot 55 derives the 2027 lowering of the vermogensgrenzen:
+  '€ 29.065 * 1,029 = € 29.908' (decided at prijspeil 2025, indexed with the tabelcorrectiefactor 2026) and '€ 1.496 * 1.029 = € 1.539' for
+  2030, the Afdeling advising to reconsider the level of the grenzen more fundamentally; **Stcrt. 2026, 20489** — the Afdeling's advice of
+  29-04-2026 on the bill raising the verplicht eigen risico per 2027 to € 455 (re-indexation after the bevriezing plus € 60; Kamerstuk 36 943
+  per a web search, status not found), which the standaardpremie 2027 will carry. The `CHANGES.md` rows of 2026-01-01 (percentages
+  revised) and 2027-01-01 (percentages; art. 3 lid 1) are annotated with the reasons and the derivation.
+- *Check:* 386 cases, 353 pass, 33 fail (every one logged, the same 33 as 11-10), 0 blocking; both encodings agree on 386. Site rebuilt
+  (445 pages: the seven rule pages with their **Tekst** sections, `/wet/wijzigingen/`, `/wet/bronnen/`, the dated footers); each rule page
+  grepped for the new section after the build.
+- *The record's files:* `law/zorgtoeslag/rules.md` (Tekst on seven rules, the lid 6 note, Niet gecodeerd); `law/CHANGES.md` (the row of
+  2024-11-06 corrected, a new row of 2025-01-01, three rows annotated); `law/SOURCES.md` (five section-1 rows, the 2027 row, open items 1
+  and 2); `memory.md`.
+
+**What was wrong and why.**
+- *The record dated the new onder c a year early* (row of 2024-11-06, written 10-09): that run diffed only the two 2024 texts and read Stb.
+  2024, 291 without its second inwerkingtredingsbesluit. Found today by the twenty-version diff, which places the change after 06-11-2024;
+  Stb. 2024, 383 then named the date. Corrected in three files; lesson written: date an onderdeel from the besluit that names it.
+- *The first cut of the Stcrt. documents printed the site's navigation instead of the title* for five of nine (the sed range was tuned to the
+  first document's layout). Caught at once; the titles were taken with a grep for 'Regeling van' / 'Besluit van' instead. Nothing written from
+  the wrong lines.
+- *A background `curl` in a compound command with `cd` lost its working directory* (the second fetch of Stb. 2020, 543 and the Kamerstuk
+  wrote nowhere); redone with absolute paths. Cost one call; the Kamerstuk was then not needed.
+- Nothing dropped from scope. `PLAN.md` unchanged: Checkpoint 1 waits on the owner, huurtoeslag not before it, history paused at 2013; no
+  checkpoint has a date to miss. Memory item 5 rewritten: (g) done for the Wzt, the same method open for the Awir; (h) added.
+
+**Step 8 — asks.** None new; nothing today needs the owner. Ask 10 not extended.
+
+**Dropped from memory.** Twelve older lessons (the pipeline-sentence rule of 10-20, the recalled article reference of 10-19, reading a
+parameter file back, `importlib`, the idempotent sweep, the 500 page of wetten.nl, the half-cent margin of #14, the BRI melding of 11-01, the
+serif font of 11-08, the metadata-only ruling of 11-04, the Chromium path, `pdftotext -layout`) — each kept in the changelog entry of its day or in
+`SOURCES.md`. Three lessons added; item 5 (g) and (h) and the 2027 paragraph rewritten. 7,965 words (wc).
+
+**Effort.** Roughly 175,000 of the 300,000-token ceiling: about 95,000 reading the files, memory, the previous entries and the pipeline's
+state; about 35,000 on the twenty-version diff, the Staatsblad and Staatscourant passages and the two searches (the fetches ran as curl and
+cost no tokens); about 40,000 writing the Tekst fields, the rows, the corrections, memory and this entry; the rest on the check and the build.
+
+**Record under the ten-year rule.** This run added to the record: the Wet op de zorgtoeslag's art. 1 through 4a as they stood at twenty
+dates from 2013 to 2027, compared lid by lid, with the finding of which leden never changed in fifteen years and the exact dates of every
+change in the others, quoted verbatim on the rule pages; the dated finding that the consolidated texts of 2024 on wetten.overheid.nl carry
+an error in art. 2 lid 6 that no instrument made, with the instrument that set the right wording (Stb. 2020, 543 art. III onder 3); the
+correction of the record's own date for the new definition of verzekerde, with Stb. 2024, 383 read and quoted; the legislator's reasons
+behind two instruments already in the record — the 2026 percentages besluit (cover for excluding nabetalingen from the toetsingsinkomen,
+with the schema before and after) and the 2027 lowering of the vermogensgrenzen (€ 29.065 × 1,029), each with the Afdeling's advice; the
+eigen risico 2027 bill as the Afdeling read it; and the dated negative result that the standaardpremie 2027 and the Bijstellingsregeling
+2027 were still unpublished on 2026-11-11. The scripts and the site build are regenerable and are not counted.
+
 ## 2026-11-10 — twenty-eighth run: open item 2 closed — the Regeling zorgverzekering art. 6.3.1 read at fourteen version dates 2013–2026 (the premie-fictie for the Wzt, one unchanged sentence; the woonlandfactor's ratio and the 2018 move of bijlage 4 into the article) and the five instruments behind Zorgverzekeringswet art. 69's versions of 2014–2019 identified and quoted from the Staatsblad; the standaardpremie and Bijstellingsregeling 2027 still unpublished; a sixth silent day (11-09) on Ask 10
 
 Twenty-eighth run of routine `trig_012xyD5r5rxFDCjfHbZ58Kib`. Model as configured for the session: `claude-fable-5-1`, the same as the previous
