@@ -1,6 +1,6 @@
-/* Gegenereerd door tools/build.py op 2026-11-11 uit law/zorgtoeslag/parameters/*.yaml en law/awir/parameters/*.yaml. Niet bewerken: de yaml-bestanden zijn de bron en dragen bij elk getal zijn artikel. Licentie: CC BY-SA 4.0 (LICENSE-DATA). */
+/* Gegenereerd door tools/build.py op 2026-11-12 uit law/zorgtoeslag/parameters/*.yaml en law/awir/parameters/*.yaml. Niet bewerken: de yaml-bestanden zijn de bron en dragen bij elk getal zijn artikel. Licentie: CC BY-SA 4.0 (LICENSE-DATA). */
 var PARAMETERS = {
- "gegenereerd": "2026-11-11",
+ "gegenereerd": "2026-11-12",
  "zorgtoeslag": {
   "2013": {
    "jaar": 2013,

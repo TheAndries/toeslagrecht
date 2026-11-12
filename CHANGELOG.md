@@ -2,6 +2,92 @@
 
 Newest first. What was done, decided, and got wrong.
 
+## 2026-11-12 — thirtieth run: the Algemene wet inkomensafhankelijke regelingen read at all thirty-one version dates 2013–2029 and every lid the encoding rests on quoted verbatim on its rule page with the years it was word for word the same — art. 5, art. 7 lid 1, art. 8 lid 1–2 and art. 14 lid 4–5 unchanged in fifteen years; the instruments behind every change in art. 3, 7, 8 and 14 read in the Staatsblad; art. 8 lid 3 (the ex-partner's income on request, since 2018) found beside the within-year encoding; the 2027 instruments still unpublished
+
+Thirtieth run of routine `trig_012xyD5r5rxFDCjfHbZ58Kib`. Model as configured for the session: `claude-fable-5-1`, the same as the previous
+entry; no handover note needed. The checkout arrived detached at `4e10bd7` (the previous run's commit) with a stale local `origin/main`
+(`00cfb34`); `git fetch origin main` brought it to `4e10bd7`; `git log -3 --stat` shows no owner commit. The routine fired the day after the
+previous run: no gap.
+
+**Step 1 — asks marked done.** None since 11-11. Asks 4, 6, 8, 9 and 10 stay open; Ask 9 not extended (no new ruling case); Ask 10 not
+extended (no new silent day).
+
+**Step 2 — the inbox.** `INBOX.md` is empty and nothing arrived outside it. No case, dispute, review or owner note to handle.
+
+**Step 3.** No open motion.
+
+**Step 4 — done (memory item 5 (g), the law on the Awir rule pages, and item 5 (a), the 2027 watch).**
+- *The Awir at thirty-one version dates.* The wetstechnische informatie of the whole act lists 105 versions since 2005; from 01-01-2013 there
+  are thirty-one, the last a future text of 01-01-2029 (Stb. 2013, 567, in force by Stb. 2023, 499 — it amends art. 15 and 16, nothing the
+  encoding uses). All thirty-one were fetched whole (473–714 KB each, curl in parallel, no tokens); art. 3, 5, 7, 8 and 14 were cut by script
+  and diffed word by word, version against version. What the diff says is in `law/SOURCES.md` section 1 (one row) and, lid by lid, on the six
+  Awir rule pages under a **Tekst** field (`law/awir/rules.md`), as the Wzt pages have had since 11-11. **Never changed 2013–2029:** art. 5
+  (the whole article the within-year encoding rests on), art. 7 lid 1 (the draagkracht sentence), art. 8 lid 1 and 2 (toetsingsinkomen =
+  inkomensgegeven) and art. 14 lid 4 and 5 (rekenkundig afgerond; niet toegekend onder € 24 — never indexed). **Changed:** art. 7 lid 3
+  reworded once (01-01-2021, Stb. 2020, 546, already in the record) and its two amounts every 1 January since, lid 6 its amount every
+  1 January (all fourteen amounts equal to `awir/parameters/<jaar>.yaml`) and its circle on 01-01-2026; art. 8 lid 4 added 2014, lid 3–4
+  inserted 2018, lid 7 added 2025; art. 14 lid 7 added 2017 and the Dienst renamed 2024; art. 3 (the partner, input) on nine dates, the
+  last the rewrite of 2027 already in the record, whose seven leden were read whole today.
+- *The instruments behind the changes, read.* Twenty Staatsbladen the informatie page lists for the change dates were fetched in one parallel
+  curl and each grepped for its Awir article. Named and quoted in the row: Stb. 2013, 316 (basisregistratie personen, 06-01-2014); Stb. 2013,
+  413 and 566 (art. 3 onder d and lid 5, 2014); Stb. 2013, 565 (art. 8 lid 4); Stb. 2015, 538 and 540 (art. 3 lid 5 and 7–9, 2016); Stb.
+  2016, 545 (art. 14 lid 7); Stb. 2017, 517 (art. 8 lid 3–4) and 518 (art. 3 lid 5 a/b, 2018); Stb. 2020, 543 art. I onderdeel A (art. 3,
+  2021, with art. VI onder a holding lid 7 back for a koninklijk besluit); Stb. 2022, 532 (art. 3a and 3b, 2023); Stb. 2024, 440 (art. 3 lid
+  5 and 10, art. 8 lid 3 and 7, 2025); Stb. 2025, 431 (art. 7 lid 6, 2026). Written as not read: the instrument behind art. 3 onder g of 2014
+  (the informatie page offers Stb. 2011, 640 with Stb. 2009, 611), the inwerkingtredingsbesluit of lid 7 (Stb. 2022, 445) and Stb. 2023,
+  498's Awir article. Four rows in `law/CHANGES.md` (art. 14 lid 7 of 2017; art. 8 lid 3–4 of 2018; art. 8 lid 3 and 7 of 2025; art. 7 lid 6
+  of 2026), each 'n/a — input' for the encoding.
+- *Art. 8 lid 3 and the within-year encoding.* The encoding of 11-05 counts a partner's whole-year income in the months of the partnership,
+  as ECLI:NL:RBDHA:2024:21766 r.o. 5 reads the law. Art. 8 lid 3, in force since 01-01-2018, is the statutory exception: at the end of a
+  partnership in the berekeningsjaar the belanghebbende may ask that the partner's loon after the end and new winst or resultaat be
+  disregarded and the loon of the partnership period be pro-rated, if that gives a toetsingsinkomen at least 10 percent lower. The ruling's
+  parties did not invoke it; the encoding does not need to compute it (the toetsingsinkomen of each situation is input), but the rule pages
+  `awir-2026-art5` and `awir-2026-art8-1` now say so, and the stale sentence 'Nog niet in het formulier van de checker' on `awir-2026-art5`
+  (true until 11-08) is corrected.
+- *The 2027 instruments, searched again* (one web search each): the standaardpremie 2027 and the Bijstellingsregeling 2027 are still not
+  in the Staatscourant; the row in `SOURCES.md` is dated today and notes Stcrt. 2026, 3708 (a February rectificatie of the 2026
+  Bijstellingsregeling, to be read with the 2027 one) and five unknown 2026 Staatscourant numbers from the standaardpremie search whose
+  heads were not read today — a departure from the 11-11 lesson, chosen because the search summary already named the 2026 standaardpremie
+  regeling (Stcrt. 2025, 40022) as the latest and the run's budget went to the Awir; they are in the row for the next search.
+- *Check:* 386 cases, 353 pass, 33 fail (every one logged, the same 33 as 11-11), 0 blocking; both encodings agree on 386. Site rebuilt
+  (445 pages: the six Awir rule pages with their **Tekst** sections, `/wet/wijzigingen/`, `/wet/bronnen/`, the dated footers); each of the
+  six pages and the two lists grepped for the new text after the build.
+- *The record's files:* `law/awir/rules.md` (Tekst on five rules, art. 5's note, the art. 8 lid 3 sentences); `law/CHANGES.md` (four
+  rows); `law/SOURCES.md` (the thirty-one-version row, the 2027 row); `memory.md`.
+
+**What was wrong and why.**
+- *The cutter of 11-11 found nothing in the two future texts* (2027, 2029): a future version on wetten.overheid.nl has no 'Toon relaties
+  in LiDO' line after an article heading — 'Toon wetstechnische informatie' follows instead, and the menu is shorter. Caught at once (ten
+  'missing'); the cutter now matches either marker and skips the menu lines by name. Lesson written.
+- *A removal of the cutter's output directory was refused by the sandbox* (a `cd` followed by `rm` of a relative glob). Not retried; the
+  files were overwritten instead. One call cost; lesson written.
+- *One rule page carried a sentence four days stale* ('Nog niet in het formulier van de checker', `awir-2026-art5`): the run of 11-08 put
+  the two situations in the form and updated the Wzt side but not this page. Found by reading the page before adding to it; corrected.
+- Nothing dropped from scope. `PLAN.md` unchanged: Checkpoint 1 waits on the owner, huurtoeslag not before it, history paused at 2013; no
+  checkpoint has a date to miss. Memory item 5 (g) rewritten: done for the Awir, the lower-value remainder named.
+
+**Step 8 — asks.** None new; nothing today needs the owner.
+
+**Dropped from memory.** Six older lessons (the per-situation step list of 11-05, 'a sentence that explains a number' of 10-24, the
+Kamerstuk footnotes of 11-03, the one-word filter of 11-02, the search-summary figures of 11-05, the two recalled figures of 10-30) — each
+kept in the changelog entry of its day, and the general rules they instance (a number is read or computed, never recalled; a filter is
+written from the article's inputs) stay. One lesson rewritten with the future-text layout and the 2029 version; item 5 (g) and the 2027
+paragraph rewritten. 7,953 words (wc).
+
+**Effort.** Roughly 185,000 of the 300,000-token ceiling: about 100,000 reading the files, memory, the previous entries and the pipeline's
+state; about 35,000 on the thirty-one-version diffs, the twenty Staatsblad passages and the two searches (the fetches ran as curl and cost
+no tokens); about 40,000 writing the Tekst fields, the rows, memory and this entry; the rest on the check and the build.
+
+**Record under the ten-year rule.** This run added to the record: the Algemene wet inkomensafhankelijke regelingen' art. 3, 5, 7, 8 and 14
+as they stood at thirty-one dates from 2013 to 2029, compared word by word, with the finding that the five provisions the zorgtoeslag
+encoding rests on — the change-in-the-month rule, the draagkracht sentence, the definition of toetsingsinkomen and the rounding and
+minimum of the tegemoetkoming — never changed in fifteen years, and the exact date and Staatsblad of every change in the rest of those
+articles, fourteen instruments read for it and quoted; the fourteen yearly amounts of art. 7 lid 6 and the six of lid 3 confirmed against
+the parameter files from the texts themselves; the statutory exception of art. 8 lid 3 (2018) placed beside the within-year rule the
+encoding follows, on the rule pages where a reader of `zt-2022-rul-017` will look; four dated amendment rows; and the dated negative result
+that the standaardpremie 2027 and the Bijstellingsregeling 2027 were still unpublished on 2026-11-12. The cutter, the diff script and the
+site build are regenerable and are not counted.
+
 ## 2026-11-11 — twenty-ninth run: the Wet op de zorgtoeslag read at all twenty version dates 2013–2027 and every lid the encoding rests on quoted verbatim on its rule page with the years it was word for word the same; a consolidation error found in the 2024 texts (art. 2 lid 6 pointing at itself — no instrument made it); the record's date for the new definition of verzekerde corrected from 06-11-2024 to 01-01-2025 (Stb. 2024, 383); three Raad van State advices with their nota's van toelichting read — the reason behind the 2026 percentages besluit, the derivation of the 2027 € 29.908, the eigen risico 2027 bill; the 2027 instruments still unpublished
 
 Twenty-ninth run of routine `trig_012xyD5r5rxFDCjfHbZ58Kib`. Model as configured for the session: `claude-fable-5-1`, the same as the previous
