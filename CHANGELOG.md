@@ -2,6 +2,98 @@
 
 Newest first. What was done, decided, and got wrong.
 
+## 2026-11-13 — thirty-first run: the Besluit percentages drempel- en toetsingsinkomen zorgtoeslag read whole — all thirteen besluiten 2011–2025 as published, every row of every schema 2012–2040 chained besluit by besluit and checked against the parameter files; the afbouwpercentage untouched since 2014, the normpercentages revised by every besluit, 2014 and 2024 without a besluit, 2021 changed by a wet outside the Besluit; wetten.nl's consolidation of the Besluit shown incomplete (no versions for 2013 and 2015, a shell until 2020, the never-applied 2021 row still shown); a new record page `/wet/percentages/`; the 2027 instruments still unpublished
+
+Thirty-first run of routine `trig_012xyD5r5rxFDCjfHbZ58Kib`. Model as configured for the session: `claude-fable-5-1`, the same as the previous
+entry; no handover note needed. The checkout arrived detached at `1870a52` (the previous run's commit) with a stale local `origin/main`
+(`00cfb34`); `git fetch origin main` brought it to `1870a52`; `git log -3 --stat` shows no owner commit. The routine fired the day after
+the previous run: no gap.
+
+**Step 1 — asks marked done.** None since 11-12. Asks 4, 6, 8, 9 and 10 stay open; Ask 9 not extended (no new ruling case); Ask 10 not
+extended (no new silent day).
+
+**Step 2 — the inbox.** `INBOX.md` is empty and nothing arrived outside it. No case, dispute, review or owner note to handle.
+
+**Step 3.** No open motion.
+
+**Step 4 — done (memory item 5 (g), the last item of the version-history series; item 5 (h), the unknown Staatscourant numbers; item
+5 (a), the 2027 watch).**
+- *Why the Besluit percentages.* The Wzt, the Awir and the Regeling zorgverzekering have been read at every version (11-10 through 11-12).
+  The one text the normpremie rests on that had not been read whole is the algemene maatregel van bestuur that sets the three percentages
+  of Wzt art. 2 lid 3 for every berekeningsjaar to 2040. Its besluiten were in the record one by one (SOURCES.md rows of 10-08 through
+  10-25), each with its first rows; what no row gave was the chain — how each year's percentages were first written and then revised,
+  besluit after besluit, before the year came.
+- *The thirteen besluiten, read as published.* Stb. 2011, 620 (the besluit of 6 december 2011 that created the Besluit, read today for the
+  first time: schema 2012–2040, in force 01-01-2012, Stb. 2010, 714 withdrawn), Stb. 2012, 627, 2014, 488, 2015, 472, 2016, 469, 2017, 436,
+  2018, 431, 2019, 386, 2020, 452, 2021, 574, 2022, 472, 2024, 351 and 2025, 412 were fetched from officielebekendmakingen.nl in one parallel
+  curl; art. I of each was cut by script (a year line followed by four percentage lines; exactly one table per besluit, from its first year
+  to 2040; 29 down to 15 rows) and the rows chained per year. Stb. 2020, 543 art. III onder 1 was read for the one change made in the Wzt
+  text itself ("4,195%" → "4,225%", "1,885%" → "1,915%" for 2021). The same script compared every value in force 2013–2026 with
+  `parameters/<jaar>.yaml`: fourteen years, fourteen matches.
+- *What the chain shows.* (1) The afbouwpercentage has been the same schema since Stb. 2014, 488 (13,400% in 2015, +0,030 a year,
+  14,150% in 2040): eleven later besluiten changed not one value of that column. (2) The two drempel percentages were revised by every
+  besluit — the 2026 row eleven times, from 3,740% / 7,240% (2011) to 1,912% / 4,289%. (3) 2014 and 2024 had no besluit; the earlier
+  schema's row took effect as written. (4) 2021's row in the Besluit (1,885% / 4,195%) never applied: a wet changed the Wzt text before
+  1 January. All in `law/zorgtoeslag/percentages.md` (the instruments table, the per-year chain 2012–2040, the findings), rendered as
+  `/wet/percentages/` (`tools/render.py`: one mapping, one contents entry, one page) and linked from the rule page `zt-2026-art2-2`
+  (**Geschiedenis van de percentages**, `law/zorgtoeslag/rules.md`).
+- *The consolidated Besluit on wetten.overheid.nl (BWBR0030989) at every 1 January 2012–2027.* Sixteen fetches: 2013, 2014, 2015, 2024
+  and 2027 return the 'Fout' page (no version). 2024 and 2027 are right (no besluit); **2013 and 2015 are not**: Stb. 2012, 627 and
+  Stb. 2014, 488 each replaced art. 1 whole, yet the wijzigingenoverzicht lists only Stb. 2011, 620 and the besluiten from 01-12-2015 on.
+  The versions 01-01-2012 and 01-01-2016 through 01-01-2020 show art. 1 only as '[Red: Wijzigt de Wet op de zorgtoeslag.]', no schema;
+  from 01-01-2021 the schema is shown — with, for 2021, the row the wet replaced. A reader of the consolidated Besluit gets no percentages
+  for 2012–2020 and wrong ones for 2021; the Wzt text on wetten.nl is right every year (the parameter files were read from it, 10-08
+  through 10-25). Written as an observation in `SOURCES.md` (section 1, one row) and on the new page.
+- *The eleven unknown Staatscourant numbers* (five left unread on 11-12, six from today's two searches) read by their heads, as the
+  11-11 lesson asks: all off-topic (a Wlz/Wmo peiljaar regeling, four NZa macrobeheersinstrument regelingen 2027, a loonbelasting
+  regeling, an Awb regeling, a September 2025 Rzv amendment on voorwaardelijk toegelaten zorg and eigen bijdragen) except Stcrt. 2025,
+  19830 — a June 2025 amendment of the Uitvoeringsregeling Awir adding a vermogenstoetsuitzondering for certain letselschadevergoedingen,
+  which concerns an input of the encoding (the rendementsgrondslag after the Awir art. 7 lid 4 exceptions), noted in the 2027 row, not
+  read further.
+- *The 2027 instruments, searched again* (one web search each): the standaardpremie 2027 and the regeling for the Wzt art. 3 amounts are
+  not in the Staatscourant. Learned from the record's own 2026 row while searching: the 2026 vermogensgrenzen came by a separate VWS
+  regeling dated 04-11-2025 (Stcrt. 2025, 38110), not by the Bijstellingsregeling, so the 2027 one may appear any day — the next runs
+  search it by name. The Dienst's news item of 15-10-2026 on the 2027 partnerbegrip (*Regels voor toeslagpartners eenvoudiger vanaf
+  1 januari 2027*) was read and quoted in section 3 of `SOURCES.md`: the Dienst's own list of who is a toeslagpartner from 2027 under
+  Awir art. 3 as rewritten by Stb. 2026, 326; no amounts.
+- *Check:* 386 cases, 353 pass, 33 fail (every one logged, the same 33 as 11-12), 0 blocking; both encodings agree on 386. Site rebuilt
+  (446 pages: the new `/wet/percentages/`, its entry on `/wet/`, the link on `zt-2026-art2-2`, `/wet/bronnen/`, the dated footers); the
+  new page checked after the build: 42 table rows, the thirteen Staatsblad links, the one GitHub link in the footer only (no
+  repository-relative link fell through to a GitHub URL).
+- *The record's files:* `law/zorgtoeslag/percentages.md` (new); `law/zorgtoeslag/rules.md` (one field); `law/SOURCES.md` (two rows, the
+  2027 row extended); `tools/render.py`; `memory.md`.
+
+**What was wrong and why.**
+- *The first version of the parser found no table in twelve of thirteen besluiten:* it anchored on the first line reading 'ARTIKEL I',
+  which on officielebekendmakingen.nl is the table of contents, not the article. Caught at once (zero rows); the parser now takes every
+  year-plus-four-percentages run in the text and groups them into tables, and each besluit turned out to hold exactly one. Two calls cost.
+- *Two small errors in the matrix script* (a parameter key guessed as `toetsingsinkomen` where the files say `boven_drempel`; JSON turning
+  year keys into strings). Both caught by the interpreter, three calls in all; nothing reached the record.
+- *Yesterday's entry left five Staatscourant heads unread against the 11-11 lesson*; read today (all off-topic). The lesson is now worded
+  'grep and curl the heads' in memory item 5 (h).
+- Nothing dropped from scope. `PLAN.md` unchanged: Checkpoint 1 waits on the owner, huurtoeslag not before it, history paused at 2013; no
+  checkpoint has a date to miss.
+
+**Step 8 — asks.** None new; nothing today needs the owner.
+
+**Dropped from memory.** Three lessons (the search-index 404 of 11-02 and the status-cell regex of 11-02, both kept in that day's entry and
+instanced by rules that stay; the sandbox `rm` note of 11-12). One lesson added (the consolidated wijzigingsbesluit), item 5 (g) rewritten
+as done, item 5 (h) extended, the 2027 paragraph rewritten with the vermogenstoets regeling to watch; the running history of Ask 9's extensions (ten dated clauses, 10-19 through 11-05) condensed to one clause, because the full texts are in `ASKS.md` — the first draft of today's memory stood at 8,089 words and this brought it under the cap. 7,992 words (wc).
+
+**Effort.** Roughly 230,000 of the 300,000-token ceiling: about 110,000 reading the files, memory, the previous entries and the pipeline's
+state; about 45,000 on the thirteen besluiten, the sixteen consolidated versions, the eleven Staatscourant heads, the two searches and the
+Dienst's page (the fetches ran as curl and cost no tokens; the parsing was scripted); about 50,000 writing the page, the rows, the renderer
+change, memory and this entry; the rest on the check, the build and the fixes above.
+
+**Record under the ten-year rule.** This run added to the record: the complete revision history of the percentages of Wzt art. 2 lid 3 —
+every row for every berekeningsjaar 2012–2040 as each of the thirteen besluiten of 2011–2025 wrote it, chained in Staatsblad order, with
+the one change a wet made outside the Besluit, and the finding that the afbouwpercentage schema has not been touched since the besluit of
+1 december 2014 while the drempel percentages were rewritten by every besluit; the first reading of Stb. 2011, 620, the besluit that
+created the Besluit; the dated observation that wetten.overheid.nl's consolidation of the Besluit has no versions for 2013 and 2015, no
+schema before 2021 and a superseded 2021 row; the Dienst's own published list of who is a toeslagpartner from 2027; and the dated negative
+result that the standaardpremie 2027 and the vermogensgrens regeling 2027 were still unpublished on 2026-11-13. The parser, the chain
+script and the site build are regenerable and are not counted.
+
 ## 2026-11-12 — thirtieth run: the Algemene wet inkomensafhankelijke regelingen read at all thirty-one version dates 2013–2029 and every lid the encoding rests on quoted verbatim on its rule page with the years it was word for word the same — art. 5, art. 7 lid 1, art. 8 lid 1–2 and art. 14 lid 4–5 unchanged in fifteen years; the instruments behind every change in art. 3, 7, 8 and 14 read in the Staatsblad; art. 8 lid 3 (the ex-partner's income on request, since 2018) found beside the within-year encoding; the 2027 instruments still unpublished
 
 Thirtieth run of routine `trig_012xyD5r5rxFDCjfHbZ58Kib`. Model as configured for the session: `claude-fable-5-1`, the same as the previous

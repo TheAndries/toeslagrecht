@@ -28,6 +28,7 @@ SITE_FOR = {
     "CASES.md": "insturen/index.html",
     "law/CHANGES.md": "wet/wijzigingen/index.html",
     "law/SOURCES.md": "wet/bronnen/index.html",
+    "law/zorgtoeslag/percentages.md": "wet/percentages/index.html",
     "law/zorgtoeslag/rules.md": "dossier/zorgtoeslag/index.html",
     "law/awir/rules.md": "dossier/awir/index.html",
     "law/zorgtoeslag/tests/report.md": "dossier/voorbeelden/index.html",
@@ -994,7 +995,8 @@ class Site:
              contents(ents),
              '<h2>Verder</h2>',
              contents([(f"{rel}wet/wijzigingen/index.html", "De wijzigingen in de wet, per datum", f"{len(self.ch_rows)} wijzigingen"),
-                       (f"{rel}wet/bronnen/index.html", "Elke tekst die is gelezen, met datum", "")])]
+                       (f"{rel}wet/bronnen/index.html", "Elke tekst die is gelezen, met datum", ""),
+                       (f"{rel}wet/percentages/index.html", "De percentages van de normpremie 2012–2040, besluit voor besluit", "")])]
         self.out("wet/index.html", page("De wet, per jaar", "\n".join(b), rel, "Wet", self.site_status))
         for j in self.jaren:
             self.year_page(j)
@@ -1006,6 +1008,9 @@ class Site:
         self.out("wet/wijzigingen/index.html", page("De wijzigingen in de wet", "\n".join(b), rel2, "Wet", self.site_status))
         b = ['<h1>De bronnen</h1>', '<div class="prose">', md(strip_title((ROOT / "law" / "SOURCES.md").read_text(encoding="utf-8")), rel2, shift=0), '</div>']
         self.out("wet/bronnen/index.html", page("De bronnen", "\n".join(b), rel2, "Wet", self.site_status))
+        b = ['<h1>De percentages van de normpremie</h1>', '<div class="prose">',
+             md(strip_title((ROOT / "law" / "zorgtoeslag" / "percentages.md").read_text(encoding="utf-8")), rel2, shift=0), '</div>']
+        self.out("wet/percentages/index.html", page("De percentages van de normpremie", "\n".join(b), rel2, "Wet", self.site_status))
 
     def year_page(self, j: int) -> None:
         rel = "../../"
